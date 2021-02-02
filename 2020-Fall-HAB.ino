@@ -1,6 +1,3 @@
-//#include <SoftwareSerial.h>
-//#include "TinyGPS++.h"
-
 #include "config.h"
 #include "debugutils.h"
 #include "hardwareutils.h"
@@ -23,16 +20,12 @@ static uint16_t APRS_PERIOD = 300;
 #endif
 
 #ifdef STATUS_ENABLE
-    #include "Status.h"
+    #include "src/STATUS/Status.h"
 	Status status;
 #endif
 
 #ifdef APRS_ENABLE
-<<<<<<< b8d481473798a934419974e2b3cad4b5272d3a02
-    #include "APRS/APRS.h"
-=======
     #include "src/APRS/APRS.h"
->>>>>>> Project Restructure Part 1
 #endif
 
 #include "src/SD_Card/SD_card.h"

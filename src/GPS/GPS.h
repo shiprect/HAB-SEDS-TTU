@@ -1,5 +1,5 @@
-#ifndef GPS_H
-#define GPS_H
+#ifndef __GPS_H__
+#define __GPS_H__
 
 #include <Arduino.h>
 #include <SoftwareSerial.h>

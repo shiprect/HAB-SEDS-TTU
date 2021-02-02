@@ -1,5 +1,5 @@
-#ifndef HARDWAREUTILS_H
-#define HARDWAREUTILS_H
+#ifndef __HARDWAREUTILS_H__
+#define __HARDWAREUTILS_H__
 
 #define TRUE 1
 #define FALSE 0
