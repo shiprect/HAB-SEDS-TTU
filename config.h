@@ -3,17 +3,19 @@
 
 
 // --------------------------------------------------------------------------
-// Hardware Configuration
+// Module Configuration
 // ----------------------------------------------------------------------
 
 #define GPS_ENABLE
-//#define APRS_ENABLE
+#define APRS_ENABLE
 //#define RTTY_ENABLE
-#define BMP_ENABLE
+//#define BMP_ENABLE
+#define LED_ENABLE
 //#define ACCEL_ENABLE
 //#define SD_ENABLE
 //#define STATUS_ENABLE
 //#define SERVO_ENABLE
+//#define RTTY_ENABLE
 
 // --------------------------------------------------------------------------
 // Debug Functionality
@@ -23,7 +25,7 @@
 //#define AFSK_DEBUG          // AFSK (modulation) output
 //#define APRS_DEBUG_APRS          // APRS transmit profile
 //#define AX25_DEBUG          // AX.25 frame dump
-#define DEBUG_GPS_BASIC     // Basic GPS printing      
+//#define DEBUG_GPS_BASIC     // Basic GPS printing      
 //#define GPS_ADV_DEBUG       // GPS sentence dump and checksum validation
 //#define BMP_DEBUG           // BMP logging for debug
 //#define RESET_DEBUG         // AVR reset
@@ -31,31 +33,40 @@
 //#define SERVO_DEBUG	//not written yet
 
 // --------------------------------------------------------------------------
-// wiring config
+// Board Configuration
 // --------------------------------------------------------------------------
 
-#define PTT_PIN 24          //APRS Push to talk pin
-#define APRS_DATA_PIN A21   //DAC pin, must be A20 or A21
+#ifdef LED_ENABLE
+	#define RED_LED 2
+	#define GREEN_LED 3
+#endif
 
-//#define RTTY_DATA_PIN A22
-//#define RADIOEN 32
+#ifdef APRS_ENABLE
+	#define PTT_PIN 24          //APRS Push to talk pin
+	#define APRS_DATA_PIN A21   //DAC pin, must be A20 or A21
+#endif
 
-#define RED_LED 2
-#define GREEN_LED 3
-
-#define SERVO_PIN 6
-#define SERVO_START_POS 0
-#define SERVO_END_POS 100
-#define SERVO_PERIOD 60
+#ifdef RTTY_ENABLE
+	#define RTTY_DATA_PIN A22
+	#define RADIOEN 32
+#endif
 
 
-//#define ACCEL_SDA 39
-//#define ACCEL_SCL 38
+const uint8_t SERVO_PIN = 6;
+const uint8_t SERVO_START_POS = 0;
+const uint8_t SERVO_END_POS = 100;
+const uint16_t SERVO_PERIOD = 60;
 
+#ifdef ACCEL_ENABLE
+	#define ACCEL_SDA 39
+	#define ACCEL_SCL 38
+#endif
 
 // --------------------------------------------------------------------------
 // APRS config
 // --------------------------------------------------------------------------
+
+const uint16_t APRS_PERIOD = 300;
 
 // Set your callsign and SSID here. Common values for the SSID are
 // (from http://zlhams.wikidot.com/aprs-ssidguide):

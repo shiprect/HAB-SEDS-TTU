@@ -11,6 +11,91 @@
 #include "../utilities/utilities.h"
 
 
+
+class APRS {
+    private:
+	
+        bool ValidAPRS;
+        
+
+    public:
+        APRS () {};
+        ~APRS() {};
+
+        void APRS_Setup(const uint16_t preambleFlags,   // number of preambleFlags to send, must be at least 1 to frame packet
+						const uint8_t pttPin,           // Use PTT pin, 0 = do not use PTT
+						const uint16_t pttDelay,        // ms to wait after PTT to transmit
+						const uint32_t toneLength,
+						const uint32_t silenceLength    // Emit sub-audio tone before packet to trigger VOX
+						);
+        void APRS_Update();
+        
+        bool IsValidAPRS();
+        
+        void APRS_Transmit();
+};
+
+extern APRS aprs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 #define MAXSENDBUFFER 500 // Used to allocate a static buffer on the stack to build the AX25 buffer
 
 static unsigned long transmission_timer = 0;
@@ -35,7 +120,8 @@ void send_APRS(float altitude);
 void check_APRS(float altitude, uint16_t APRS_PERIOD);
 
 void test_broadcastLocation(float altitude);
-                
+ */
+ 
 /*
 TODO: APRS messaging types
 1 - Lat/Long Position Report Format — without Timestamp
@@ -49,7 +135,7 @@ TODO: APRS messaging types
 9 - Maidenhead Locater Beacon
 */
 
-
+/*
 void APRS_Send_with_String( const PathAddress * const paths,
                 const int nPaths,
                 const uint8_t dayOfMonth,
@@ -138,6 +224,6 @@ void APRS_Send_gpstime(const PathAddress * const paths, const int nPaths,
     const uint16_t heading, // degrees
     const float speed, const char symbolTableIndicator, const char symbol,
     const char * const comment);
-
+*/
 
 #endif

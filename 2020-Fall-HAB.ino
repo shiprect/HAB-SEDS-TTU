@@ -1,7 +1,7 @@
 #include "config.h"
 #include "src/utilities/utilities.h"
 
-static uint16_t APRS_PERIOD = 300;
+
 
 #ifdef BMP_ENABLE
     #include "src/BMP/BMP.hpp"
@@ -25,6 +25,7 @@ static uint16_t APRS_PERIOD = 300;
 
 #ifdef APRS_ENABLE
     #include "src/APRS/APRS.hpp"
+	APRS aprs;
 #endif
 
 #ifdef SD_ENABLE
@@ -34,21 +35,22 @@ static uint16_t APRS_PERIOD = 300;
 
 void setup()
 {
-	pinMode(RED_LED, OUTPUT);
-    pinMode(GREEN_LED, OUTPUT);
-    delay(750);
-    LED_ON(RED_LED);
-    LED_ON(GREEN_LED);
-    delay(750);
-    LED_OFF(RED_LED);
-    LED_OFF(GREEN_LED);
-	
+	#ifdef LED_ENABLE
+		pinMode(RED_LED, OUTPUT);
+		pinMode(GREEN_LED, OUTPUT);
+		delay(750);
+		LED_ON(RED_LED);
+		LED_ON(GREEN_LED);
+		delay(750);
+		LED_OFF(RED_LED);
+		LED_OFF(GREEN_LED);
+	#endif
 	
 	DEBUG_UART.begin(230400);
 	delay(750);
 	
 	#ifdef GPS_ENABLE
-      delay(75);
+		delay(75);
         gps.GPS_Setup();
         delay(75);
 	#endif
@@ -73,7 +75,7 @@ void setup()
 	delay(750);
   
 	#ifdef APRS_ENABLE
-		APRS_Setup( 50,      // number of preamble flags to send
+		aprs.APRS_Setup( 50,      // number of preamble flags to send
 					PTT_PIN, // Use PTT pin
 					100,     // ms to wait after PTT to transmit
 					0, 0     // No VOX tone
@@ -86,8 +88,10 @@ void setup()
 	
 		if(!sd_card.IsValidSD()) {
 			while(1) {
-				LED_TOGGLE(GREEN_LED);
-				LED_TOGGLE(RED_LED);
+				#ifdef LED_ENABLE
+					LED_TOGGLE(GREEN_LED);
+					LED_TOGGLE(RED_LED);
+				#endif
 				delay(1000);
 			}
 		}
@@ -97,8 +101,6 @@ void setup()
 }
 
 
-//##########################bring leather gloves####################################
-// 10 meter resolution for gps, consider 100 meter resolution for when traveling
 void loop()
 {  
 	#ifdef BMP_ENABLE 
@@ -110,40 +112,26 @@ void loop()
 	#endif
 	
 	#ifdef SERVO_ENABLE
-		//CutServo.Servo_Status(ON);
 		CutServo.Servo_Update();
-		//DEBUG_PRINT(F("Servo Loop"));
 	#endif
   
 	#ifdef APRS_ENABLE
-		if(millis() < 1000000) {
-			APRS_PERIOD = 60;
-		} else if(status.IsLanded()) {
-			APRS_PERIOD = 300;
-		}
-		else {
-			APRS_PERIOD = 523;
-		}
-		LED_ON(GREEN_LED);
-		check_APRS(gps.GetAltitude(), APRS_PERIOD);
-		LED_OFF(GREEN_LED);
-	#else
-		LED_TOGGLE(GREEN_LED);
-		LED_TOGGLE(RED_LED);
+		// if(millis() < 1000000) {
+			// APRS_PERIOD = 60;
+		// } else if(status.IsLanded()) {
+			// APRS_PERIOD = 300;
+		// }
+		// else {
+			// APRS_PERIOD = 523;
+		// }
+		// LED_ON(GREEN_LED);
+		// check_APRS(gps.GetAltitude(), APRS_PERIOD);
+		// LED_OFF(GREEN_LED);
 	#endif
 	
 	#ifdef STATUS_ENABLE
 		status.CheckStatus();
 		status.CheckServo();
-		/*if(status.IsRising()) {
-			
-		} else if (status.IsFalling()) {
-			
-		} else if(status.IsLanded()) {
-			
-		} else {
-			
-		}*/
 	#endif
 	
 	#ifdef SD_ENABLE

@@ -1,5 +1,72 @@
 #include "APRS.hpp"
 
+
+#define MAXSENDBUFFER 500 // Used to allocate a static buffer on the stack to build the AX25 buffer
+
+static unsigned long transmission_timer = 0;
+
+
+struct PathAddress
+{
+    const char *callsign;
+    uint8_t ssid;
+};
+
+uint16_t preambleFlags;
+
+
+void APRS::APRS_Setup(const uint16_t p_preambleFlags, const uint8_t pttPin,          \
+                const uint16_t pttDelay, const uint32_t toneLength,            \
+                const uint32_t silenceLength) {
+    
+    preambleFlags = p_preambleFlags;
+    afsk_setup(pttPin, pttDelay, toneLength, silenceLength);
+  
+    // Do not start until we get a valid time reference -- for slotted transmissions.
+    transmission_timer = millis() + (1000L * APRS_SLOT);
+	
+	ValidAPRS = TRUE;
+}
+
+
+void APRS::APRS_Update() {
+    
+}
+
+
+bool APRS::IsValidAPRS() {
+    return ValidAPRS;
+}
+
+void APRS::APRS_Transmit() {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
 uint16_t preambleFlags;
 
 
@@ -58,21 +125,21 @@ void test_broadcastLocation(float altitude) {
   
 
     // For debugging print out the path
-    /*Serial.print("APRS(");
-    Serial.print(nAddresses);
-    Serial.print("): ");
-    for (int i=0; i < nAddresses; i++) {
-        Serial.print(addresses[i].callsign);
-        Serial.print('-');
-        Serial.print(addresses[i].ssid);
-        if (i < nAddresses-1) {
-            Serial.print(',');
-        }
-    }
-    Serial.print(' ');
-    Serial.print(SYMBOL_TABLE);
-    Serial.print(SYMBOL_CHAR);
-    Serial.println();*/
+    //Serial.print("APRS(");
+    //Serial.print(nAddresses);
+    // Serial.print("): ");
+    // for (int i=0; i < nAddresses; i++) {
+        // Serial.print(addresses[i].callsign);
+        // Serial.print('-');
+        // Serial.print(addresses[i].ssid);
+        // if (i < nAddresses-1) {
+            // Serial.print(',');
+        // }
+    // }
+    // Serial.print(' ');
+    // Serial.print(SYMBOL_TABLE);
+    // Serial.print(SYMBOL_CHAR);
+    // Serial.println();
 
     uint8_t dayOfMonth = gps.GetDay();
     uint8_t hour = gps.GetHour();
@@ -117,9 +184,6 @@ void test_broadcastLocation(float altitude) {
     const char* const lat_string = "";
     const char* const lon_string = "";
     
-	/*
-	Bits in packet 961: 4,99,99,[APRS  0KN4JLK;WIDE2 1⸮/049999z36.1717/-85.514O099/000/A=001143testކ]
-	*/
 	
     APRS_Send_with_String(addresses,
               nAddresses,
@@ -135,19 +199,6 @@ void test_broadcastLocation(float altitude) {
               SYMBOL_CHAR,
               comment);
               
-    /*APRS_Send(addresses,
-              nAddresses,
-              dayOfMonth,
-              hour,
-              min,
-              lat,
-              lon, // degrees
-              altitude, // meters
-              heading,
-              speed,
-              SYMBOL_TABLE,
-              SYMBOL_CHAR,
-              comment);*/
 
     delay(50);         
               
@@ -247,8 +298,8 @@ void send_APRS(float altitude) {
 
 char *ax25_base91enc(char *s, uint8_t n, uint32_t v)
 {
-    /* Creates a Base-91 representation of the value in v in the string */
-    /* pointed to by s, n-characters long. String length should be n+1. */
+    // Creates a Base-91 representation of the value in v in the string
+    // pointed to by s, n-characters long. String length should be n+1.
     for(s += n, *s = '\0'; n; n--) {
         *(--s) = v % 91 + 33;
         v /= 91;
@@ -511,60 +562,59 @@ void APRS_Send_modified(const PathAddress * const paths, const int nPaths,
 
     logBuffer(buf, ax25_getPacketSize(), dayOfMonth, hour, min);
 }
+*/
 
 
 
+////Exported functions
+// void APRS_Send()
+// {
+  // char temp[12];                   // Temperature (int/ext)
+  // const struct s_address addresses[] = { 
+    // {D_CALLSIGN, D_CALLSIGN_ID},  // Destination callsign
+    // {S_CALLSIGN, S_CALLSIGN_ID},  // Source callsign (-11 = balloon, -9 = car)
+// #ifdef DIGI_PATH1
+    // {DIGI_PATH1, DIGI_PATH1_TTL}, // Digi1 (first digi in the chain)
+// #endif
+// #ifdef DIGI_PATH2
+    // {DIGI_PATH2, DIGI_PATH2_TTL}, // Digi2 (second digi in the chain)
+// #endif
+  // };
+
+  // ax25_send_header(addresses, sizeof(addresses)/sizeof(s_address));
+  // ax25_send_byte('/');                // Report w/ timestamp, no APRS messaging. $ = NMEA raw data
+  ////ax25_send_string("021709z");     // 021709z = 2nd day of the month, 17:09 zulu (UTC/GMT)
+  // ax25_send_string(gps_time);         // 170915 = 17h:09m:15s zulu (not allowed in Status Reports)
+  // ax25_send_byte('h');
+  // ax25_send_string(gps_aprs_lat);     // Lat: 38deg and 22.20 min (.20 are NOT seconds, but 1/100th of minutes)
+  // ax25_send_byte('/');                // Symbol table
+  // ax25_send_string(gps_aprs_lon);     // Lon: 000deg and 25.80 min
+  // ax25_send_byte('O');                // Symbol: O=balloon, -=QTH
+  // snprintf(temp, 4, "%03d", (int)(gps_course + 0.5)); 
+  // ax25_send_string(temp);             // Course (degrees)
+  // ax25_send_byte('/');                // and
+  // snprintf(temp, 4, "%03d", (int)(gps_speed + 0.5));
+  // ax25_send_string(temp);             // speed (knots)
+  // ax25_send_string("/A=");            // Altitude (feet). Goes anywhere in the comment area
+  // snprintf(temp, 7, "%06ld", (long)(meters_to_feet(gps_altitude) + 0.5));
+  // ax25_send_string(temp);
+  // ax25_send_string("/Ti=");
+  // snprintf(temp, 6, "%d", sensors_int_lm60());
+  // ax25_send_string(temp);
+  // ax25_send_string("/Te=");
+  // snprintf(temp, 6, "%d", sensors_ext_lm60());
+  // ax25_send_string(temp);
+  // ax25_send_string("/V=");
+  // snprintf(temp, 6, "%d", sensors_vin());
+  // ax25_send_string(temp);
+  // ax25_send_byte(' ');
+  // ax25_send_string(APRS_COMMENT);     // Comment
+  // ax25_send_footer();
+
+  // ax25_flush_frame();                 // Tell the modem to go
+// }
 
 /*
-// Exported functions
-void APRS_Send()
-{
-  char temp[12];                   // Temperature (int/ext)
-  const struct s_address addresses[] = { 
-    {D_CALLSIGN, D_CALLSIGN_ID},  // Destination callsign
-    {S_CALLSIGN, S_CALLSIGN_ID},  // Source callsign (-11 = balloon, -9 = car)
-#ifdef DIGI_PATH1
-    {DIGI_PATH1, DIGI_PATH1_TTL}, // Digi1 (first digi in the chain)
-#endif
-#ifdef DIGI_PATH2
-    {DIGI_PATH2, DIGI_PATH2_TTL}, // Digi2 (second digi in the chain)
-#endif
-  };
-
-  ax25_send_header(addresses, sizeof(addresses)/sizeof(s_address));
-  ax25_send_byte('/');                // Report w/ timestamp, no APRS messaging. $ = NMEA raw data
-  // ax25_send_string("021709z");     // 021709z = 2nd day of the month, 17:09 zulu (UTC/GMT)
-  ax25_send_string(gps_time);         // 170915 = 17h:09m:15s zulu (not allowed in Status Reports)
-  ax25_send_byte('h');
-  ax25_send_string(gps_aprs_lat);     // Lat: 38deg and 22.20 min (.20 are NOT seconds, but 1/100th of minutes)
-  ax25_send_byte('/');                // Symbol table
-  ax25_send_string(gps_aprs_lon);     // Lon: 000deg and 25.80 min
-  ax25_send_byte('O');                // Symbol: O=balloon, -=QTH
-  snprintf(temp, 4, "%03d", (int)(gps_course + 0.5)); 
-  ax25_send_string(temp);             // Course (degrees)
-  ax25_send_byte('/');                // and
-  snprintf(temp, 4, "%03d", (int)(gps_speed + 0.5));
-  ax25_send_string(temp);             // speed (knots)
-  ax25_send_string("/A=");            // Altitude (feet). Goes anywhere in the comment area
-  snprintf(temp, 7, "%06ld", (long)(meters_to_feet(gps_altitude) + 0.5));
-  ax25_send_string(temp);
-  ax25_send_string("/Ti=");
-  snprintf(temp, 6, "%d", sensors_int_lm60());
-  ax25_send_string(temp);
-  ax25_send_string("/Te=");
-  snprintf(temp, 6, "%d", sensors_ext_lm60());
-  ax25_send_string(temp);
-  ax25_send_string("/V=");
-  snprintf(temp, 6, "%d", sensors_vin());
-  ax25_send_string(temp);
-  ax25_send_byte(' ');
-  ax25_send_string(APRS_COMMENT);     // Comment
-  ax25_send_footer();
-
-  ax25_flush_frame();                 // Tell the modem to go
-}*/
-
-
 void APRS_Send_gps1(const PathAddress * const paths, const int nPaths,
     const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min, const uint8_t sec,
     const float lat,
@@ -706,3 +756,4 @@ void APRS_Send_gpstime(const PathAddress * const paths, const int nPaths,
 
     logBuffer(buf, ax25_getPacketSize(), dayOfMonth, hour, min);
 }
+*/
