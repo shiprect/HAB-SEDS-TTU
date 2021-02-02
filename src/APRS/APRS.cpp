@@ -1,4 +1,4 @@
-#include "APRS.h"
+#include "APRS.hpp"
 
 uint16_t preambleFlags;
 

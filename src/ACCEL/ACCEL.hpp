@@ -1,5 +1,5 @@
-#ifndef ACCEL_H
-#define ACCEL_H
+#ifndef __ACCEL_H__
+#define __ACCEL_H__
 
 
 #include <Arduino.h>
@@ -13,8 +13,7 @@
 #define SCK A5 // Serial Clock -> SPC on LIS331 r
 
 #include "../../config.h"
-#include "../../debugutils.h"
-#include "../../hardwareutils.h"
+#include "../utilities/utilities.h"
 
 #define SCALE 0.0007324; // approximate scale factor for full range (+/-24g)
 // scale factor: +/-24g = 48G range. 2^16 bits. 48/65536 = 0.0007324

@@ -1,5 +1,5 @@
-#ifndef CONFIG_H
-#define CONFIG_H
+#ifndef __CONFIG_H__
+#define __CONFIG_H__
 
 
 // --------------------------------------------------------------------------
@@ -7,23 +7,23 @@
 // ----------------------------------------------------------------------
 
 #define GPS_ENABLE
-#define APRS_ENABLE
+//#define APRS_ENABLE
 //#define RTTY_ENABLE
 #define BMP_ENABLE
 //#define ACCEL_ENABLE
-#define SD_ENABLE
-#define STATUS_ENABLE
-#define SERVO_ENABLE
+//#define SD_ENABLE
+//#define STATUS_ENABLE
+//#define SERVO_ENABLE
 
 // --------------------------------------------------------------------------
 // Debug Functionality
 // --------------------------------------------------------------------------
 
-//#define DEBUG               // General Debug
+#define DEBUG               // General Debug
 //#define AFSK_DEBUG          // AFSK (modulation) output
 //#define APRS_DEBUG_APRS          // APRS transmit profile
 //#define AX25_DEBUG          // AX.25 frame dump
-//#define DEBUG_GPS_BASIC     // Basic GPS printing      
+#define DEBUG_GPS_BASIC     // Basic GPS printing      
 //#define GPS_ADV_DEBUG       // GPS sentence dump and checksum validation
 //#define BMP_DEBUG           // BMP logging for debug
 //#define RESET_DEBUG         // AVR reset

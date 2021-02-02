@@ -2,15 +2,14 @@
 #define __STATUS_H__
 
 
-#include "../BMP/BMP.h"
-#include "../GPS/GPS.h"
-//#include "accel.h"
-#include "../SD_Card/SD_card.h"
-#include "../SERVO/Servo.h"
+#include "../BMP/BMP.hpp"
+#include "../GPS/GPS.hpp"
+//#include "accel.hpp"
+//#include "../SD_Card/SD_card.hpp"
+#include "../SERVO/Servo.hpp"
 
 #include "../../config.h"
-#include "../../debugutils.h"
-#include "../../hardwareutils.h"
+#include "../utilities/utilities.h"
 
 //#define lift_check_T 50
 //#define burn_check_T 50

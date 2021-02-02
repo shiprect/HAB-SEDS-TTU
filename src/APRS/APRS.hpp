@@ -5,11 +5,10 @@
 
 #include "afsk.h"
 #include "ax25.h"
-#include "../GPS/GPS.h"
+#include "../GPS/GPS.hpp"
 
 #include "../../config.h"
-#include "../../debugutils.h"
-#include "../../hardwareutils.h"
+#include "../utilities/utilities.h"
 
 
 #define MAXSENDBUFFER 500 // Used to allocate a static buffer on the stack to build the AX25 buffer

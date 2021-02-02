@@ -1,4 +1,4 @@
-#include "GPS.h"
+#include "GPS.hpp"
 
 
 GPS::GPS() : GPSModule (GPS_TX_PIN_TO_TEENSY, GPS_RX_PIN_TO_TEENSY){

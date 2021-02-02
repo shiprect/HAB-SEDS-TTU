@@ -1,3 +1,6 @@
+#ifndef __PROGMEMSIN_H__
+#define __PROGMEMSIN_H__
+
 // The scale of the second sin table
 #define TABLE2_SCALE 1.0f
 
@@ -275,3 +278,6 @@ uint16_t afsk_sine_table2[129] = {
   SINSCALE(4095),
 
 };
+
+
+#endif

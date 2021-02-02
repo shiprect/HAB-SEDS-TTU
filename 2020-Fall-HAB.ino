@@ -1,35 +1,36 @@
 #include "config.h"
-#include "debugutils.h"
-#include "hardwareutils.h"
+#include "src/utilities/utilities.h"
 
 static uint16_t APRS_PERIOD = 300;
 
 #ifdef BMP_ENABLE
-    #include "src/BMP/BMP.h"
+    #include "src/BMP/BMP.hpp"
     BMP bmp;
 #endif
 
 #ifdef GPS_ENABLE
-    #include "src/GPS/GPS.h"
+    #include "src/GPS/GPS.hpp"
     GPS gps;
 #endif
 
 #ifdef SERVO_ENABLE
-    #include "src/SERVO/Servo.h"
+    #include "src/SERVO/Servo.hpp"
 	Servo CutServo;
 #endif
 
 #ifdef STATUS_ENABLE
-    #include "src/STATUS/Status.h"
+    #include "src/STATUS/Status.hpp"
 	Status status;
 #endif
 
 #ifdef APRS_ENABLE
-    #include "src/APRS/APRS.h"
+    #include "src/APRS/APRS.hpp"
 #endif
 
-#include "src/SD_Card/SD_card.h"
-SD_card sd_card;
+#ifdef SD_ENABLE
+	#include "src/SD_Card/SD_card.hpp"
+	SD_card sd_card;
+#endif
 
 void setup()
 {
@@ -80,15 +81,18 @@ void setup()
 		delay(75);
 	#endif
   
-	sd_card.SD_Setup();
+	#ifdef SD_ENABLE
+		sd_card.SD_Setup();
 	
-	if(!sd_card.IsValidSD()) {
-		while(1) {
-			LED_TOGGLE(GREEN_LED);
-			LED_TOGGLE(RED_LED);
-			delay(1000);
+		if(!sd_card.IsValidSD()) {
+			while(1) {
+				LED_TOGGLE(GREEN_LED);
+				LED_TOGGLE(RED_LED);
+				delay(1000);
+			}
 		}
-	}
+	#endif
+	
 	DEBUG_PRINT(F("Main Setup successful"));
 }
 
@@ -142,5 +146,7 @@ void loop()
 		}*/
 	#endif
 	
-	sd_card.SD_Record();
+	#ifdef SD_ENABLE
+		sd_card.SD_Record();
+	#endif
 }

@@ -6,7 +6,7 @@
 #include "TinyGPS++.h"
 
 #include "../../config.h"
-#include "../../debugutils.h"
+#include "../utilities/utilities.h"
 
 
 class GPS

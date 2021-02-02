@@ -1,4 +1,4 @@
-#include "BMP.h"
+#include "BMP.hpp"
 
 
 void BMP::BMP_Setup() {

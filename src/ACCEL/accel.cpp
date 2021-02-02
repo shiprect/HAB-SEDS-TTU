@@ -1,6 +1,5 @@
+#include "ACCEL.hpp"
 
-
-#include "accel.h"
 
 void ACCEL::ACCEL_Setup()
 {
