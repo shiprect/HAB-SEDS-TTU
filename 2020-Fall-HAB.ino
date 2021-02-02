@@ -28,7 +28,7 @@ static uint16_t APRS_PERIOD = 300;
 #endif
 
 #ifdef APRS_ENABLE
-    #include "APRS.h"
+    #include "APRS/APRS.h"
 #endif
 
 #include "SD_card.h"

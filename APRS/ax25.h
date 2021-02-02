@@ -1,5 +1,5 @@
-#ifndef __AX25_H__
-#define __AX25_H__
+#ifndef AX25_H
+#define AX25_H
 
 #include <stdint.h>
 

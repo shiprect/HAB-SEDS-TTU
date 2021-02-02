@@ -1,5 +1,5 @@
-#ifndef __BMP_H__
-#define __BMP_H__
+#ifndef BMP_H
+#define BMP_H
 
 #include <Arduino.h>
 #include <SPI.h>

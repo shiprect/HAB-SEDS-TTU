@@ -1,5 +1,5 @@
-#ifndef __SERVO_H__
-#define __SERVO_H__
+#ifndef SERVO_H
+#define SERVO_H
 
 
 #include <Arduino.h>

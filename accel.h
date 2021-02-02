@@ -1,5 +1,5 @@
-#ifndef __ACCEL_H__
-#define __ACCEL_H__
+#ifndef ACCEL_H
+#define ACCEL_H
 
 
 #include <Arduino.h>

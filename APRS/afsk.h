@@ -1,5 +1,5 @@
-#ifndef __AFSK_H__
-#define __AFSK_H__
+#ifndef AFSK_H
+#define AFSK_H
 
 #include <stdint.h>
 

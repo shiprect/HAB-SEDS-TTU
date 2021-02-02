@@ -1,5 +1,5 @@
-#ifndef _STATUS_H_
-#define _STATUS_H_
+#ifndef STATUS_H
+#define STATUS_H
 
 
 #include "BMP.h"

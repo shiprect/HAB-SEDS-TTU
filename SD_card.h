@@ -1,5 +1,5 @@
-#ifndef __SD_CARD_H__
-#define __SD_CARD_H__
+#ifndef SD_CARD_H
+#define SD_CARD_H
 
 #include <Arduino.h>
 #include <SD.h>

@@ -1,5 +1,5 @@
-#ifndef __APRS_H__
-#define __APRS_H__
+#ifndef APRS_H
+#define APRS_H
 
 #include <Arduino.h>
 
