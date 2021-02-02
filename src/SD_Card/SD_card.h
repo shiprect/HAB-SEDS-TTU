@@ -5,13 +5,13 @@
 #include <SD.h>
 #include <SPI.h>
 
-#include "config.h"
-#include "debugutils.h"
-#include "hardwareutils.h"
+#include "../../config.h"
+#include "../../debugutils.h"
+#include "../../hardwareutils.h"
 
-#include "BMP.h"
-#include "GPS.h"
-#include "Status.h"
+#include "../BMP/BMP.h"
+#include "../GPS/GPS.h"
+#include "../../Status.h"
 
 const int ChipSelectPin = BUILTIN_SDCARD;
 

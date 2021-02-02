@@ -17,8 +17,8 @@
 /* Update by K. Townsend (Adafruit Industries) for lighter typedefs, and
  * extended sensor support to include color, voltage and current */
  
-#ifndef _ADAFRUIT_SENSOR_H
-#define _ADAFRUIT_SENSOR_H
+#ifndef __ADAFRUIT_SENSOR_H__
+#define __ADAFRUIT_SENSOR_H__
 
 #ifndef ARDUINO
     #include <stdint.h>

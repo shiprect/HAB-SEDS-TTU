@@ -6,9 +6,9 @@
 #include <PWMServo.h>
 
 
-#include "config.h"
-#include "debugutils.h"
-#include "hardwareutils.h"
+#include "../../config.h"
+#include "../../debugutils.h"
+#include "../../hardwareutils.h"
 
 
 

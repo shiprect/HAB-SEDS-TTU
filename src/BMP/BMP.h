@@ -7,9 +7,9 @@
 
 #include "Adafruit_BMP085_U.h"
 
-#include "config.h"
-#include "debugutils.h"
-#include "hardwareutils.h"
+#include "../../config.h"
+#include "../../debugutils.h"
+#include "../../hardwareutils.h"
 
 
 class BMP {

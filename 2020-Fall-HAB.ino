@@ -8,17 +8,17 @@
 static uint16_t APRS_PERIOD = 300;
 
 #ifdef BMP_ENABLE
-    #include "BMP.h"
+    #include "src/BMP/BMP.h"
     BMP bmp;
 #endif
 
 #ifdef GPS_ENABLE
-    #include "GPS.h"
+    #include "src/GPS/GPS.h"
     GPS gps;
 #endif
 
 #ifdef SERVO_ENABLE
-    #include "Servo.h"
+    #include "src/SERVO/Servo.h"
 	Servo CutServo;
 #endif
 
@@ -28,10 +28,14 @@ static uint16_t APRS_PERIOD = 300;
 #endif
 
 #ifdef APRS_ENABLE
+<<<<<<< b8d481473798a934419974e2b3cad4b5272d3a02
     #include "APRS/APRS.h"
+=======
+    #include "src/APRS/APRS.h"
+>>>>>>> Project Restructure Part 1
 #endif
 
-#include "SD_card.h"
+#include "src/SD_Card/SD_card.h"
 SD_card sd_card;
 
 void setup()
