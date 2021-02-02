@@ -1,21 +1,16 @@
-<<<<<<< b8d481473798a934419974e2b3cad4b5272d3a02
-#ifndef STATUS_H
-#define STATUS_H
-=======
 #ifndef __STATUS_H__
 #define __STATUS_H__
->>>>>>> Project Restructure Part 1
 
 
-#include "src/BMP/BMP.h"
-#include "src/GPS/GPS.h"
+#include "../BMP/BMP.h"
+#include "../GPS/GPS.h"
 //#include "accel.h"
-#include "src/SD_Card/SD_card.h"
-#include "src/SERVO/Servo.h"
+#include "../SD_Card/SD_card.h"
+#include "../SERVO/Servo.h"
 
-#include "config.h"
-#include "debugutils.h"
-#include "hardwareutils.h"
+#include "../../config.h"
+#include "../../debugutils.h"
+#include "../../hardwareutils.h"
 
 //#define lift_check_T 50
 //#define burn_check_T 50

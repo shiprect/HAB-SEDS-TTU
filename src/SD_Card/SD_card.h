@@ -1,5 +1,5 @@
-#ifndef SD_CARD_H
-#define SD_CARD_H
+#ifndef __SD_CARD_H__
+#define __SD_CARD_H__
 
 #include <Arduino.h>
 #include <SD.h>
@@ -11,7 +11,7 @@
 
 #include "../BMP/BMP.h"
 #include "../GPS/GPS.h"
-#include "../../Status.h"
+#include "../STATUS/Status.h"
 
 const int ChipSelectPin = BUILTIN_SDCARD;
 
