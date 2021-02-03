@@ -1,4 +1,4 @@
-#include "config.h"
+#include "ProjectConfig.hpp"
 #include "src/utilities/utilities.h"
 
 
@@ -116,17 +116,7 @@ void loop()
 	#endif
   
 	#ifdef APRS_ENABLE
-		// if(millis() < 1000000) {
-			// APRS_PERIOD = 60;
-		// } else if(status.IsLanded()) {
-			// APRS_PERIOD = 300;
-		// }
-		// else {
-			// APRS_PERIOD = 523;
-		// }
-		// LED_ON(GREEN_LED);
-		// check_APRS(gps.GetAltitude(), APRS_PERIOD);
-		// LED_OFF(GREEN_LED);
+		aprs.APRS_Update();
 	#endif
 	
 	#ifdef STATUS_ENABLE

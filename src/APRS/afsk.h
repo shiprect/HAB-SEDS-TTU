@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#include "../../config.h"
+#include "../../ProjectConfig.hpp"
 
 
 // Exported functions

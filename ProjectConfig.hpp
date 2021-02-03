@@ -7,7 +7,7 @@
 // ----------------------------------------------------------------------
 
 #define GPS_ENABLE
-#define APRS_ENABLE
+#define APRS_ENABLE	//fix compilation failing when this is commented
 //#define RTTY_ENABLE
 //#define BMP_ENABLE
 #define LED_ENABLE
@@ -16,6 +16,7 @@
 //#define STATUS_ENABLE
 //#define SERVO_ENABLE
 //#define RTTY_ENABLE
+
 
 // --------------------------------------------------------------------------
 // Debug Functionality
@@ -29,8 +30,9 @@
 //#define GPS_ADV_DEBUG       // GPS sentence dump and checksum validation
 //#define BMP_DEBUG           // BMP logging for debug
 //#define RESET_DEBUG         // AVR reset
-//#define RTTY_DEBUG
+//#define RTTY_DEBUG	//not written yet
 //#define SERVO_DEBUG	//not written yet
+
 
 // --------------------------------------------------------------------------
 // Board Configuration
@@ -66,7 +68,7 @@ const uint16_t SERVO_PERIOD = 60;
 // APRS config
 // --------------------------------------------------------------------------
 
-const uint16_t APRS_PERIOD = 300;
+static uint16_t APRS_PERIOD = 300;	///fix this
 
 // Set your callsign and SSID here. Common values for the SSID are
 // (from http://zlhams.wikidot.com/aprs-ssidguide):

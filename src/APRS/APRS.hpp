@@ -7,8 +7,17 @@
 #include "ax25.h"
 #include "../GPS/GPS.hpp"
 
-#include "../../config.h"
+#include "../../ProjectConfig.hpp"
 #include "../utilities/utilities.h"
+#include "../Status/Status.hpp"
+
+
+//TODO::add this to the class
+struct PathAddress
+{
+    const char *callsign;
+    uint8_t ssid;
+};
 
 
 
@@ -17,12 +26,23 @@ class APRS {
 	
         bool ValidAPRS;
         
-
+		void APRS_Send_with_String(const PathAddress * const paths, const int nPaths,
+										const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min,
+										const char* const lat_string,
+										const char* const lon_string, // degrees
+										const float altitude, // meters
+										const uint16_t heading, // degrees
+										const float speed, const char symbolTableIndicator, const char symbol,
+										const char * const comment);
+		void logBuffer(const uint8_t * const buf, const int bitsSent,
+			const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min);
+			
+			
     public:
         APRS () {};
         ~APRS() {};
 
-        void APRS_Setup(const uint16_t preambleFlags,   // number of preambleFlags to send, must be at least 1 to frame packet
+        void APRS_Setup(const uint16_t p_preambleFlags,   // number of preambleFlags to send, must be at least 1 to frame packet
 						const uint8_t pttPin,           // Use PTT pin, 0 = do not use PTT
 						const uint16_t pttDelay,        // ms to wait after PTT to transmit
 						const uint32_t toneLength,

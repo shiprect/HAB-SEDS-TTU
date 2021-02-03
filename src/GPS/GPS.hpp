@@ -5,7 +5,7 @@
 #include <SoftwareSerial.h>
 #include "TinyGPS++.h"
 
-#include "../../config.h"
+#include "../../ProjectConfig.hpp"
 #include "../utilities/utilities.h"
 
 

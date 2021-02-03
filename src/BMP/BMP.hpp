@@ -7,7 +7,7 @@
 
 #include "Adafruit_BMP085_U.h"
 
-#include "../../config.h"
+#include "../../ProjectConfig.hpp"
 #include "../utilities/utilities.h"
 
 

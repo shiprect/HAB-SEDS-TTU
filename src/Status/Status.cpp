@@ -66,6 +66,14 @@ void Status::CheckStatus() {
 	CheckRising();
 	CheckFalling();
 	CheckLanded();
+	
+	CheckAPRS();
+}
+
+void Status::CheckAPRS() {
+	
+	    
+	
 }
 
 bool Status::IsValidBMP() {

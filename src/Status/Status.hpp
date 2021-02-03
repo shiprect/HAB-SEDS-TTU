@@ -8,7 +8,7 @@
 //#include "../SD_Card/SD_card.hpp"
 #include "../SERVO/Servo.hpp"
 
-#include "../../config.h"
+#include "../../ProjectConfig.hpp"
 #include "../utilities/utilities.h"
 
 //#define lift_check_T 50
@@ -39,6 +39,8 @@ class Status {
         void CheckRising();
         void CheckFalling();
 		void CheckLanded();
+		
+		void CheckAPRS();
 
     public:
         Status() {};

@@ -3,7 +3,15 @@
 
 #include <stdint.h>
 
-struct PathAddress;
+
+
+#include "APRS.hpp"
+
+
+
+
+
+struct PathAddress; //should this be extern; used from aprs.hpp
 
 
 void ax25_initBuffer(uint8_t * buf, const int bufSize);
