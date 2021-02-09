@@ -1,4 +1,4 @@
-#include "SD_card.h"
+#include "SD_card.hpp"
 
 ///order
 //bmp
@@ -16,6 +16,9 @@ void SD_card::SD_Setup() {
 
     dataFile = SD.open("data.csv",FILE_WRITE);
     if(dataFile) {
+		dataFile.print(F("BMP Sea Level Pressure: "));
+        dataFile.print(bmp.GetBaselinePressure());
+        dataFile.print(F("\n"));
         
         //BMP Temp(#1), Pressure(#2), Altitude(#3), MaxAltitude(#4)
         dataFile.print(F("Temperature(C), Pressure(Pa), Altitude(m), MaxAltitude(m), "));
@@ -27,11 +30,7 @@ void SD_card::SD_Setup() {
         dataFile.print(F("Latitude, Longitude, gpsAltitude, Course, Speed, Satellites, Full_Latitude, Full_Longitude, Date, Day, Hour, Minute, Second, ")); 
 		
          //Status Liftoff(#21), Burnout(#22), Falling(#23), ValidBMP(#24), ValidSD(#25)
-        dataFile.print(F("ValidBMP, ValidSD, IsRising, IsFalling, IsLanded, , IsServerOn, WhatIsStatus"));
-
-        dataFile.print(F("BMP Sea Level Pressure: "));
-        dataFile.print(bmp.GetBaselinePressure());
-        dataFile.print(F("\n"));
+        dataFile.print(F("ValidBMP, ValidSD, IsRising, IsFalling, IsLanded, IsServerOn\n"));
 		
         dataFile.close();
     }
@@ -137,8 +136,6 @@ void SD_card::SD_Record() {
             dataFile.print(",");
             //Print #25
             dataFile.print(status.IsLanded());
-            dataFile.print(",");
-			dataFile.print(status.WhatIsStatus());
             dataFile.print(",");
         
             dataFile.print("\n");

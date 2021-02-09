@@ -5,7 +5,7 @@
 #include <SoftwareSerial.h>
 #include "TinyGPS++.h"
 
-#include "../../config.h"
+#include "../../ProjectConfig.hpp"
 #include "../utilities/utilities.h"
 
 
@@ -14,6 +14,9 @@ class GPS
     private:
         TinyGPSPlus tinyGPS;
         SoftwareSerial GPSModule;
+		
+		double MaxAltitude = 0;
+		
         bool valid_pos = false;
     
         void GPS_Debug();
@@ -29,6 +32,7 @@ class GPS
         int AgeLocation();
 
         double GetAltitude();
+		double GetMaxAltitude();
         double GetCourse();
         double GetSpeed();
         float GetLatitude();

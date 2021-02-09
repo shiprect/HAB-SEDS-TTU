@@ -3,59 +3,100 @@
 
 
 // --------------------------------------------------------------------------
-// Hardware Configuration
-// ----------------------------------------------------------------------
+// Module Configuration
+// --------------------------------------------------------------------------
 
 #define GPS_ENABLE
-//#define APRS_ENABLE
-//#define RTTY_ENABLE
+#define APRS_ENABLE	//fix compilation failing when this is commented
 #define BMP_ENABLE
+#define LED_ENABLE
 //#define ACCEL_ENABLE
-//#define SD_ENABLE
-//#define STATUS_ENABLE
-//#define SERVO_ENABLE
+#define SD_ENABLE
+#define STATUS_ENABLE
+#define SERVO_ENABLE
+//#define RTTY_ENABLE
+
+
+// --------------------------------------------------------------------------
+// Board Configuration
+// --------------------------------------------------------------------------
+
+#ifdef LED_ENABLE
+	#define RED_LED 2
+	#define GREEN_LED 3
+#endif
+
+#ifdef APRS_ENABLE
+	#define PTT_PIN 24          //APRS Push to talk pin
+	#define APRS_DATA_PIN A21   //DAC pin, must be A20 or A21
+#endif
+
+#ifdef RTTY_ENABLE
+	#define RTTY_DATA_PIN A22
+	#define RADIOEN 32
+#endif
+
+
+const uint8_t SERVO_PIN = 6;
+const uint8_t SERVO_START_POS = 0;
+const uint8_t SERVO_END_POS = 100;
+const uint16_t SERVO_PERIOD = 60;
+
+#ifdef ACCEL_ENABLE
+	#define ACCEL_SDA 39
+	#define ACCEL_SCL 38
+#endif
+
+
+// --------------------------------------------------------------------------
+// Flight Profile
+// ----------------------------------------------------------------------
+
+const uint16_t SERVO_CUT_ALT = 28000;						// Give desired cut altitude in meters
+const uint32_t SERVO_CUT_TIMEOUT = 5400;						// Give desired timeout in seconds
+
 
 // --------------------------------------------------------------------------
 // Debug Functionality
 // --------------------------------------------------------------------------
 
-#define DEBUG               // General Debug
+//#define DEBUG               // General Debug
 //#define AFSK_DEBUG          // AFSK (modulation) output
 //#define APRS_DEBUG_APRS          // APRS transmit profile
 //#define AX25_DEBUG          // AX.25 frame dump
-#define DEBUG_GPS_BASIC     // Basic GPS printing      
+//#define DEBUG_GPS_BASIC     // Basic GPS printing      
 //#define GPS_ADV_DEBUG       // GPS sentence dump and checksum validation
 //#define BMP_DEBUG           // BMP logging for debug
 //#define RESET_DEBUG         // AVR reset
-//#define RTTY_DEBUG
+//#define RTTY_DEBUG	//not written yet
 //#define SERVO_DEBUG	//not written yet
 
+
 // --------------------------------------------------------------------------
-// wiring config
+// 
 // --------------------------------------------------------------------------
 
-#define PTT_PIN 24          //APRS Push to talk pin
-#define APRS_DATA_PIN A21   //DAC pin, must be A20 or A21
-
-//#define RTTY_DATA_PIN A22
-//#define RADIOEN 32
-
-#define RED_LED 2
-#define GREEN_LED 3
-
-#define SERVO_PIN 6
-#define SERVO_START_POS 0
-#define SERVO_END_POS 100
-#define SERVO_PERIOD 60
 
 
-//#define ACCEL_SDA 39
-//#define ACCEL_SCL 38
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // --------------------------------------------------------------------------
 // APRS config
 // --------------------------------------------------------------------------
+
+//static uint16_t APRS_PERIOD = 300;	///fix this
 
 // Set your callsign and SSID here. Common values for the SSID are
 // (from http://zlhams.wikidot.com/aprs-ssidguide):
@@ -79,7 +120,7 @@
 // APRS comment: this goes in the comment portion of the APRS message. You
 // might want to keep this short. The longer the packet, the more vulnerable
 // it is to noise. 
-const char * const comment = "SEDSTTU";
+const char * const comment = "";//"SEDSTTU";
 
 
 // APRS packets are slotted so that multiple trackers can be used without

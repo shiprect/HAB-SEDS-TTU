@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 #include "ax25.h"
-#include "APRS.h"
+
 
 
 // MODULE GLOBALS

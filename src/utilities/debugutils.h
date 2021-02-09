@@ -1,5 +1,5 @@
-#ifndef DEBUGUTILS_H
-#define DEBUGUTILS_H
+#ifndef __DEBUGUTILS_H__
+#define __DEBUGUTILS_H__
 
 
 #define DEBUG_UART Serial

@@ -12,7 +12,7 @@
 #define MISO A4 // MasterInSlaveOut -> SDO
 #define SCK A5 // Serial Clock -> SPC on LIS331 r
 
-#include "../../config.h"
+#include "../../ProjectConfig.hpp"
 #include "../utilities/utilities.h"
 
 #define SCALE 0.0007324; // approximate scale factor for full range (+/-24g)
