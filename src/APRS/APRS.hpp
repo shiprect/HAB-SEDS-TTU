@@ -25,11 +25,13 @@ class APRS {
     private:
 	
         bool ValidAPRS;
+		
+		uint16_t APRS_PERIOD = 300;
         
 		void APRS_Send_with_String(const PathAddress * const paths, const int nPaths,
 										const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min,
-										const char* const lat_string,
-										const char* const lon_string, // degrees
+										const float lat,
+										const float lon,
 										const float altitude, // meters
 										const uint16_t heading, // degrees
 										const float speed, const char symbolTableIndicator, const char symbol,

@@ -9,6 +9,41 @@ static unsigned long transmission_timer = 0;
 
 uint16_t preambleFlags;
 
+////////////////////
+// Convert latitude from a float to a string
+void latToStr(char * const s, const int size, float lat)
+{
+	char hemisphere = 'N';
+	if (lat < 0) {
+		lat = -lat;
+		hemisphere = 'S';
+	}
+	const int deg = (int) lat;
+	lat = (lat - (float) deg) * 60.0f;
+	const int min = (int) lat;
+	lat = (lat - (float) min) * 100.0f;
+	const int minTenths = (int) (lat + 0.5); // Round the tenths
+	snprintf(s, size, "%02d%02d.%02d%c", deg, min, minTenths, hemisphere);
+}
+
+
+// Convert longitude from a float to a string
+void lonToStr(char * const s, const int size, float lon)
+{
+	char hemisphere = 'E';
+	if (lon < 0) {
+		lon = -lon;
+		hemisphere = 'W';
+	}
+	const int deg = (int) lon;
+	lon = (lon - (float) deg) * 60.0f;
+	const int min = (int) lon;
+	lon = (lon - (float) min) * 100.0f;
+	const int minTenths = (int) (lon + 0.5); // Round the tenths
+	snprintf(s, size, "%03d%02d.%02d%c", deg, min, minTenths, hemisphere);
+}
+/////////////////
+
 
 void APRS::APRS_Setup(	const uint16_t p_preambleFlags,	  // number of preambleFlags to send, must be at least 1 to frame packet
 						const uint8_t pttPin,			// Use PTT pin, 0 = do not use PTT
@@ -29,20 +64,14 @@ void APRS::APRS_Setup(	const uint16_t p_preambleFlags,	  // number of preambleFl
 
 void APRS::APRS_Update() {
 	
-	if(millis() < 1000000) {
-		APRS_PERIOD = 60;
+	if(!status.IsLaunched()) {
+		APRS_PERIOD = 120;
 	//} else if(status.IsLanded()) {
 	//	APRS_PERIOD = 300;
 	}
 	else {
-		APRS_PERIOD = 523;
+		APRS_PERIOD = 563;
 	}
-		// LED_ON(GREEN_LED);
-		//APRS_Update(APRS_PERIOD);
-		// LED_OFF(GREEN_LED);
-		
-		
-		//APRS_Transmit()
 		
 	static unsigned long MessageDelay = 0;	//takes account of delayed APRS messages due to GPS signal loss
 	
@@ -129,8 +158,8 @@ void APRS::APRS_Transmit() {
 	uint8_t hour = gps.GetHour();
 	uint8_t min = gps.GetMinute();
 	uint8_t sec = gps.GetSecond();
-	float lat = gps.GetFull_Latitude();
-	float lon = gps.GetFull_Longitude();
+	float lat = gps.GetLatitude();
+	float lon = gps.GetLongitude();
 	//float altitude = gps.GetAltitude();
 	uint16_t heading = 00;
 	float speed = gps.GetSpeed();
@@ -141,7 +170,7 @@ void APRS::APRS_Transmit() {
 	//DEBUG_PRINT(gps.GetFull_Latitude());
 	//DEBUG_PRINT(gps.GetFull_Longitude());
 
-	float num_whole = gps.GetLatitude();
+/* 	float num_whole = gps.GetLatitude();
 	int intpart = (int)num_whole;
 	float num_dec = gps.GetFull_Latitude();
 	int decpart = int(num_dec);
@@ -163,22 +192,27 @@ void APRS::APRS_Transmit() {
 	char lon_pos [40];
 	snprintf(lon_pos, 8, "%i.%i", intpart, decpart);
 	DEBUG_PRINT(F("\nAPRS Longitude:"));
-	DEBUG_PRINT(lon_pos);
+	DEBUG_PRINT(lon_pos); */
 	
 	//const char* const lat_string = "";
 	//const char* const lon_string = "";
 	
-	//float lat_pos = gps.GetLatitude();
-	//float lon_pos = gps.GetLongitude();
+	// char temp[12];
 	
+	// latToStr(temp, sizeof(temp), lat);
+	// ax25_send_string(temp);				// Lat:
+	// const char* const lat_pos = temp;
+
+	// lonToStr(temp, sizeof(temp), lon);
+	// const char* const lon_pos = temp;
 	
 	APRS_Send_with_String(addresses,
 			  nAddresses,
 			  dayOfMonth,
 			  hour,
 			  min,
-			  lat_pos,
-			  lon_pos, // degrees
+			  lat,
+			  lon, // degrees
 			  altitude, // meters
 			  heading,
 			  speed,
@@ -199,8 +233,8 @@ void APRS::APRS_Transmit() {
 
 void APRS::APRS_Send_with_String(const PathAddress * const paths, const int nPaths,
 	const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min,
-	const char* const lat_string,
-	const char* const lon_string, // degrees
+	const float lat,
+	const float lon,
 	const float altitude, // meters
 	const uint16_t heading, // degrees
 	const float speed, const char symbolTableIndicator, const char symbol,
@@ -219,17 +253,17 @@ void APRS::APRS_Send_with_String(const PathAddress * const paths, const int nPat
 												  (unsigned int) min);
 	ax25_send_string(temp);
 
-	//latToStr(temp, sizeof(temp), lat);
-	//ax25_send_string(temp);	//Lat:
+	latToStr(temp, sizeof(temp), lat);
+	ax25_send_string(temp);	//Lat:
 	//snprintf(temp, sizeof(temp), "%03u", lat_string);
-	ax25_send_string(lat_string);
+	//ax25_send_string(lat_string);
 
 	ax25_send_byte(symbolTableIndicator);			// Which Symbol table to use
 
-	//lonToStr(temp, sizeof(temp), lon);
-	//ax25_send_string(temp);	  // Lon: 000deg and 25.80 min
+	lonToStr(temp, sizeof(temp), lon);
+	ax25_send_string(temp);	  // Lon: 000deg and 25.80 min
 	//snprintf(temp, sizeof(temp), "%03u", lon_string);
-	ax25_send_string(lon_string);	  // Lon: 000deg and 25.80 min
+	//ax25_send_string(lon_string);	  // Lon: 000deg and 25.80 min
 
 	ax25_send_byte(symbol);	 // The symbol
 

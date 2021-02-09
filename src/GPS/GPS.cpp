@@ -27,28 +27,32 @@ void GPS::GPS_Update() {
                 tinyGPS.encode(GPSModule.read());
             }
             
-            GPS_Debug();  
+			if(GetAltitude() > MaxAltitude) {
+				MaxAltitude = gps.GetAltitude();
+			}
         }
     }  while ( ((millis() - timeout) < GPS_VALID_POS_TIMEOUT) && !valid_pos);
-
-	#ifdef DEBUG_GPS_BASIC
-		if (valid_pos) {
-			DEBUG_GPS_BASIC(F("\nLAT (deg) =       ")); DEBUG_GPS_BASIC(tinyGPS.location.rawLat().deg); // Raw latitude in whole degrees
-			DEBUG_GPS_BASIC(F("\nLNG (deg) =       ")); DEBUG_GPS_BASIC(tinyGPS.location.rawLng().deg); // Raw longitude in whole degrees
-			DEBUG_GPS_BASIC(F("\nDate (ddmmyy) =   ")); DEBUG_GPS_BASIC(tinyGPS.date.value()); // Raw date in DDMMYY format (u32)
-			DEBUG_GPS_BASIC(F("\nTime (hhmmsscc) = ")); DEBUG_GPS_BASIC(tinyGPS.time.value()); // Raw time in HHMMSSCC format (u32)
-			DEBUG_GPS_BASIC(F("\nCourse (deg) =    ")); DEBUG_GPS_BASIC(tinyGPS.course.deg()); // Course in degrees (double)
-			DEBUG_GPS_BASIC(F("\nSpeed (mps) =     ")); DEBUG_GPS_BASIC(tinyGPS.speed.mps()); // Speed in meters per second (double)
-			DEBUG_GPS_BASIC(F("\nAltitude (m) =    ")); DEBUG_GPS_BASIC(tinyGPS.altitude.meters()); // Altitude in meters (double)
-			DEBUG_GPS_BASIC(F("\nSatellites =      ")); DEBUG_GPS_BASIC(tinyGPS.satellites.value()); // Number of satellites in use (u32)   
-		} else {
-			DEBUG_GPS_BASIC(F("\nFailed GPS position fix\n"));
-		}
-	#endif
+	
+	if (valid_pos) {
+		GPS_Debug();
+	} else {
+		//DEBUG_GPS_BASIC(F("\nFailed GPS position fix\n"));		//fix this; possibly remove
+	}
 }
 
 
 void GPS::GPS_Debug()  {
+	#ifdef DEBUG_GPS_BASIC
+		DEBUG_GPS_BASIC(F("\nLAT (deg) =       ")); DEBUG_GPS_BASIC(tinyGPS.location.rawLat().deg); // Raw latitude in whole degrees
+		DEBUG_GPS_BASIC(F("\nLNG (deg) =       ")); DEBUG_GPS_BASIC(tinyGPS.location.rawLng().deg); // Raw longitude in whole degrees
+		DEBUG_GPS_BASIC(F("\nDate (ddmmyy) =   ")); DEBUG_GPS_BASIC(tinyGPS.date.value()); // Raw date in DDMMYY format (u32)
+		DEBUG_GPS_BASIC(F("\nTime (hhmmsscc) = ")); DEBUG_GPS_BASIC(tinyGPS.time.value()); // Raw time in HHMMSSCC format (u32)
+		DEBUG_GPS_BASIC(F("\nCourse (deg) =    ")); DEBUG_GPS_BASIC(tinyGPS.course.deg()); // Course in degrees (double)
+		DEBUG_GPS_BASIC(F("\nSpeed (mps) =     ")); DEBUG_GPS_BASIC(tinyGPS.speed.mps()); // Speed in meters per second (double)
+		DEBUG_GPS_BASIC(F("\nAltitude (m) =    ")); DEBUG_GPS_BASIC(tinyGPS.altitude.meters()); // Altitude in meters (double)
+		DEBUG_GPS_BASIC(F("\nSatellites =      ")); DEBUG_GPS_BASIC(tinyGPS.satellites.value()); // Number of satellites in use (u32)   
+	#endif
+	
     #ifdef GPS_ADV_DEBUG
         if (tinyGPS.location.isUpdated()) {
             DEBUG_GPS_ADV(F("\nraw LAT = "));     DEBUG_GPS_ADV(tinyGPS.location.rawLat().negative ? "-" : "+");
@@ -114,6 +118,9 @@ double GPS::GetAltitude() {
     return tinyGPS.altitude.meters();
 }
 
+double GPS::GetMaxAltitude()  {
+	return MaxAltitude;
+}
 
 double GPS::GetCourse() {
     return tinyGPS.course.deg();

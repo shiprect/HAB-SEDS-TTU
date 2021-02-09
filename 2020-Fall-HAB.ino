@@ -2,29 +2,28 @@
 #include "src/utilities/utilities.h"
 
 
-
 #ifdef BMP_ENABLE
-    #include "src/BMP/BMP.hpp"
-    BMP bmp;
+	#include "src/BMP/BMP.hpp"
+	BMP bmp;
 #endif
 
 #ifdef GPS_ENABLE
-    #include "src/GPS/GPS.hpp"
-    GPS gps;
+	#include "src/GPS/GPS.hpp"
+	GPS gps;
 #endif
 
 #ifdef SERVO_ENABLE
-    #include "src/SERVO/Servo.hpp"
+	#include "src/SERVO/Servo.hpp"
 	Servo CutServo;
 #endif
 
 #ifdef STATUS_ENABLE
-    #include "src/STATUS/Status.hpp"
+	#include "src/STATUS/Status.hpp"
 	Status status;
 #endif
 
 #ifdef APRS_ENABLE
-    #include "src/APRS/APRS.hpp"
+	#include "src/APRS/APRS.hpp"
 	APRS aprs;
 #endif
 
@@ -51,12 +50,12 @@ void setup()
 	
 	#ifdef GPS_ENABLE
 		delay(75);
-        gps.GPS_Setup();
-        delay(75);
+		gps.GPS_Setup();
+		delay(75);
 	#endif
   
 	#ifdef BMP_ENABLE
-     delay(75);
+	 delay(75);
 		bmp.BMP_Setup();
 		delay(75);
 	#endif
@@ -73,16 +72,16 @@ void setup()
 	#endif
 	
 	delay(750);
-  
+
 	#ifdef APRS_ENABLE
-		aprs.APRS_Setup( 50,      // number of preamble flags to send
+		aprs.APRS_Setup( 50,	  // number of preamble flags to send
 					PTT_PIN, // Use PTT pin
-					100,     // ms to wait after PTT to transmit
-					0, 0     // No VOX tone
+					100,	 // ms to wait after PTT to transmit
+					0, 0	 // No VOX tone
 		);
 		delay(75);
 	#endif
-  
+
 	#ifdef SD_ENABLE
 		sd_card.SD_Setup();
 	
@@ -108,7 +107,7 @@ void loop()
 	#endif
 	
 	#ifdef GPS_ENABLE
-        gps.GPS_Update(); 
+		gps.GPS_Update(); 
 	#endif
 	
 	#ifdef SERVO_ENABLE
