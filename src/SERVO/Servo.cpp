@@ -15,7 +15,7 @@ void Servo::Servo_Move(uint8_t Position) {
 	ServoPWM.write(Position);
 }
 
-
+//TODO::Make Servo Debug Print and clean up
 void Servo::Servo_Update() {
 	if(ServoStatus == ON) {
 		static unsigned long servo_timer = 0;

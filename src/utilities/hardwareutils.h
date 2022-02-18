@@ -11,5 +11,7 @@
 #define LED_ON(x) digitalWrite(x, HIGH)
 #define LED_OFF(x) digitalWrite(x, LOW)
 
+//TODO::Delay() function should be a utility call; may have different form on other systems; should hardware toggle
+
 
 #endif

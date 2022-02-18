@@ -14,7 +14,7 @@
 
 const int ChipSelectPin = BUILTIN_SDCARD;
 
-
+//TODO::Create sd record function in each class and create #ifdef calls here
 class SD_card
 {
     private:

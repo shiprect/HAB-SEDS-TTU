@@ -1,6 +1,8 @@
 #ifndef __ACCEL_H__
 #define __ACCEL_H__
 
+//FIXME::This entire class probably doesn't work
+
 
 #include <Arduino.h>
 #include <Wire.h>

@@ -1,7 +1,6 @@
 #ifndef __STATUS_H__
 #define __STATUS_H__
 
-
 #include "../BMP/BMP.hpp"
 #include "../GPS/GPS.hpp"
 //#include "accel.hpp"
@@ -12,7 +11,7 @@
 #include "../utilities/utilities.h"
 
 
-
+//TODO::Rework entire class
 class Status {
     private:
 		uint64_t TimeSinceLaunch = 0;

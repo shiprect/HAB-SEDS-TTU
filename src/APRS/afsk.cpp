@@ -110,7 +110,7 @@ const uint16_t afsk_sine_table2[129] = { SINSCALE(2047), SINSCALE(2072),
 #define SIN_TABLE_MARK afsk_sine_table2
 #define SIN_TABLE_SPACE afsk_sine_table1
 
-
+//TODO::Are all of these globals really needed???
 // Module globals
 volatile bool busy = false;                         // Modem is on
 

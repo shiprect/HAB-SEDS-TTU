@@ -8,7 +8,7 @@
 #include "../../ProjectConfig.hpp"
 #include "../utilities/utilities.h"
 
-
+//FIXME::Rework GPS class so that multiple GPS sensors can be used
 class GPS
 {
     private:

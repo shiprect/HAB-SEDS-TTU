@@ -45,7 +45,7 @@ void setup()
 		LED_OFF(GREEN_LED);
 	#endif
 	
-	DEBUG_UART.begin(230400);
+	DEBUG_UART.begin(230400); //FIXME::Remove this magic number and put it in config
 	delay(750);
 	
 	#ifdef GPS_ENABLE
@@ -68,7 +68,7 @@ void setup()
 	#endif
 	
 	#ifdef STATUS_ENABLE
-		//#include "Status.h"
+
 	#endif
 	
 	delay(750);
@@ -86,6 +86,7 @@ void setup()
 		sd_card.SD_Setup();
 	
 		if(!sd_card.IsValidSD()) {
+            //FIXME::Infinite while loops are a bad idea; what if this happened mid flight
 			while(1) {
 				#ifdef LED_ENABLE
 					LED_TOGGLE(GREEN_LED);
@@ -120,7 +121,7 @@ void loop()
 	
 	#ifdef STATUS_ENABLE
 		status.CheckStatus();
-		status.CheckServo();
+		status.CheckServo(); //FIXME::This shouldn't be here
 	#endif
 	
 	#ifdef SD_ENABLE

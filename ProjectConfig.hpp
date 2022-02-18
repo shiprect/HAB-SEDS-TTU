@@ -6,6 +6,8 @@
 // Module Configuration
 // --------------------------------------------------------------------------
 
+//TODO::All libraries should include headers based only upon what sensors are used
+
 #define GPS_ENABLE
 #define APRS_ENABLE	//fix compilation failing when this is commented
 #define BMP_ENABLE
@@ -20,7 +22,8 @@
 // --------------------------------------------------------------------------
 // Board Configuration
 // --------------------------------------------------------------------------
-
+//TODO::Fix all ifdef includers and type checking
+//TODO::Fix char based includers
 #ifdef LED_ENABLE
 	#define RED_LED 2
 	#define GREEN_LED 3
@@ -75,20 +78,6 @@ const uint32_t SERVO_CUT_TIMEOUT = 5400;						// Give desired timeout in seconds
 // --------------------------------------------------------------------------
 // 
 // --------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
