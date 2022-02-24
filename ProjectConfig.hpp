@@ -6,8 +6,6 @@
 // Module Configuration
 // --------------------------------------------------------------------------
 
-//TODO::All libraries should include headers based only upon what sensors are used
-
 #define GPS_ENABLE
 #define APRS_ENABLE	//fix compilation failing when this is commented
 #define BMP_ENABLE
@@ -22,32 +20,32 @@
 // --------------------------------------------------------------------------
 // Board Configuration
 // --------------------------------------------------------------------------
-//TODO::Fix all ifdef includers and type checking
-//TODO::Fix char based includers
+
 #ifdef LED_ENABLE
-	#define RED_LED 2
-	#define GREEN_LED 3
+	const uint8_t RED_LED = 2;
+	const uint8_t GREEN_LED = 3;
 #endif
 
 #ifdef APRS_ENABLE
-	#define PTT_PIN 24          //APRS Push to talk pin
+	const uint8_t PTT_PIN = 24;  //APRS Push to talk pin
 	#define APRS_DATA_PIN A21   //DAC pin, must be A20 or A21
 #endif
 
 #ifdef RTTY_ENABLE
 	#define RTTY_DATA_PIN A22
-	#define RADIOEN 32
+	const uint8_t RADIOEN = 32;
 #endif
 
-
-const uint8_t SERVO_PIN = 6;
-const uint8_t SERVO_START_POS = 0;
-const uint8_t SERVO_END_POS = 100;
-const uint16_t SERVO_PERIOD = 60;
+#ifdef SERVO_ENABLE
+	const uint8_t SERVO_PIN = 6;
+	const uint8_t SERVO_START_POS = 0;
+	const uint8_t SERVO_END_POS = 100;
+	const uint16_t SERVO_PERIOD = 60;
+#endif
 
 #ifdef ACCEL_ENABLE
-	#define ACCEL_SDA 39
-	#define ACCEL_SCL 38
+	coust uint8_t ACCEL_SDA = 39;
+	coust uint8_t ACCEL_SCL = 38;
 #endif
 
 
@@ -55,9 +53,10 @@ const uint16_t SERVO_PERIOD = 60;
 // Flight Profile
 // ----------------------------------------------------------------------
 
-const uint16_t SERVO_CUT_ALT = 28000;						// Give desired cut altitude in meters
-const uint32_t SERVO_CUT_TIMEOUT = 5400;						// Give desired timeout in seconds
-
+#ifdef SERVO_ENABLE
+	const uint16_t SERVO_CUT_ALT = 28000;						// Give desired cut altitude in meters
+	const uint32_t SERVO_CUT_TIMEOUT = 5400;					// Give desired timeout in seconds
+#endif
 
 // --------------------------------------------------------------------------
 // Debug Functionality
@@ -81,98 +80,118 @@ const uint32_t SERVO_CUT_TIMEOUT = 5400;						// Give desired timeout in seconds
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // --------------------------------------------------------------------------
 // APRS config
 // --------------------------------------------------------------------------
 
-//static uint16_t APRS_PERIOD = 300;	///fix this
+#ifdef APRS_ENABLE
+	//static uint16_t APRS_PERIOD = 300;	///fix this
 
-// Set your callsign and SSID here. Common values for the SSID are
-// (from http://zlhams.wikidot.com/aprs-ssidguide):
-//
-// - Balloons:  11
-// - Cars:       9
-// - Home:       0
-// - IGate:      5
-#define S_CALLSIGN      "KN4JLK"
-#define S_CALLSIGN_ID   11   // 11 is usually for balloons
+	// Set your callsign and SSID here. Common values for the SSID are
+	// (from http://zlhams.wikidot.com/aprs-ssidguide):
+	//
+	// - Balloons:  11
+	// - Cars:       9
+	// - Home:       0
+	// - IGate:      5
+	#define S_CALLSIGN      "KN4JLK"
+	const uint8_t S_CALLSIGN_ID = 11;   // 11 is usually for balloons
 
-// Destination callsign: APRS (with SSID=0) is usually okay.
-#define D_CALLSIGN      "APRS"
-#define D_CALLSIGN_ID   0
+	// Destination callsign: APRS (with SSID=0) is usually okay.
+	#define D_CALLSIGN      "APRS"
+	const uint8_t D_CALLSIGN_ID = 0;
 
-// Symbol Table: '/' is primary table '\' is secondary table
-#define SYMBOL_TABLE '/' 
-// Primary Table Symbols: /O=balloon, /-=House, /v=Blue Van, />=Red Car
-#define SYMBOL_CHAR 'O'
+	// Symbol Table: '/' is primary table '\' is secondary table
+	#define SYMBOL_TABLE '/' 
+	// Primary Table Symbols: /O=balloon, /-=House, /v=Blue Van, />=Red Car
+	#define SYMBOL_CHAR 'O'
 
-// APRS comment: this goes in the comment portion of the APRS message. You
-// might want to keep this short. The longer the packet, the more vulnerable
-// it is to noise. 
-const char * const comment = "";//"SEDSTTU";
-
-
-// APRS packets are slotted so that multiple trackers can be used without
-// them stepping on one another. The transmission times are governed by
-// the formula:
-//
-//         APRS_SLOT (seconds) + n * APRS_PERIOD (seconds)
-//
-// When launching multiple balloons, use the same APRS_PERIOD in all balloons
-// and set APRS_SLOT so that the packets are spaced equally in time.
-// Eg. for two balloons and APRS_PERIOD = 60, set APRS_SLOT to 0 and 30, 
-// respectively. The first balloon will transmit at 00:00:00, 00:01:00, 
-// 00:02:00, etc. and the second balloon will transmit at 00:00:30, 00:01:30,
-// 00:02:30, etc.
-#define APRS_SLOT     0     // seconds. 0 disables slotted transmissions
-//#define APRS_PERIOD 300//20//20//60    // seconds.
-//uint8_t APRS_PERIOD = 300;
-
-/*
-
-//#define APRS_PATH_ALTITUDE   1500              // Below this altitude, ** in metres **, path will switch to WIDE1-1, WIDE2-1.  Above it will be or path or WIDE2-1 (see below)
-//#define APRS_HIGH_USE_WIDE2    1                 // 1 means WIDE2-1 is used at altitude; 0 means no path is used
+	// APRS comment: this goes in the comment portion of the APRS message. You
+	// might want to keep this short. The longer the packet, the more vulnerable
+	// it is to noise. 
+	const char * const comment = "";//"SEDSTTU";
 
 
-// Digipeating paths:
-// (read more about digipeating paths here: http://wa8lmf.net/DigiPaths/ )
-// The recommended digi path for a balloon is WIDE2-1 or pathless. The default
-// is pathless. Uncomment the following two lines for WIDE2-1 path:
-#define DIGI_PATH1      "WIDE2"
-#define DIGI_PATH1_TTL  1
+	// APRS packets are slotted so that multiple trackers can be used without
+	// them stepping on one another. The transmission times are governed by
+	// the formula:
+	//
+	//         APRS_SLOT (seconds) + n * APRS_PERIOD (seconds)
+	//
+	// When launching multiple balloons, use the same APRS_PERIOD in all balloons
+	// and set APRS_SLOT so that the packets are spaced equally in time.
+	// Eg. for two balloons and APRS_PERIOD = 60, set APRS_SLOT to 0 and 30, 
+	// respectively. The first balloon will transmit at 00:00:00, 00:01:00, 
+	// 00:02:00, etc. and the second balloon will transmit at 00:00:30, 00:01:30,
+	// 00:02:30, etc.
+	const uint8_t APRS_SLOT = 0;    // seconds. 0 disables slotted transmissions
+	//#define APRS_PERIOD 300//20//20//60    // seconds.
+	//uint8_t APRS_PERIOD = 300;
+
+	/*
+
+	//const uint8_t APRS_PATH_ALTITUDE = 1500;	// Below this altitude, ** in metres **, path will switch to WIDE1-1, WIDE2-1.  Above it will be or path or WIDE2-1 (see below)
+	//const uint8_t APRS_HIGH_USE_WIDE2 = 1;        // 1 means WIDE2-1 is used at altitude; 0 means no path is used
 
 
-#define APRS_TELEM_INTERVAL  2                // How often to send telemetry packets.  Comment out to disable
+	// Digipeating paths:
+	// (read more about digipeating paths here: http://wa8lmf.net/DigiPaths/ )
+	// The recommended digi path for a balloon is WIDE2-1 or pathless. The default
+	// is pathless. Uncomment the following two lines for WIDE2-1 path:
+	#define DIGI_PATH1      "WIDE2"
+	coust uint8_t DIGI_PATH1_TTL = 1;
 
-#define APRS_TX_INTERVAL      1                 // APRS TX Interval in minutes
-#define APRS_PRE_EMPHASIS                      // Comment out to disable 3dB pre-emphasis.
-#define APRS_RANDOM          30                // Adjusts time to next transmission by up to +/1 this figure, in seconds.
-                                               // So for interval of 1 (minute), and random(30), each gap could be 30 - 90 seconds.
-                                               // Set to 0 to disable
-*/
+
+	const uint8_t APRS_TELEM_INTERVAL = 2;                // How often to send telemetry packets.  Comment out to disable
+
+	const uint8_t APRS_TX_INTERVAL = 1;                 // APRS TX Interval in minutes
+	#define APRS_PRE_EMPHASIS                      // Comment out to disable 3dB pre-emphasis.
+	const uint8_t APRS_RANDOM = 30;                // Adjusts time to next transmission by up to +/1 this figure, in seconds.
+						       // So for interval of 1 (minute), and random(30), each gap could be 30 - 90 seconds.
+						       // Set to 0 to disable
+	*/
+#endif
 
 
 // --------------------------------------------------------------------------
 // GPS
 // --------------------------------------------------------------------------
 
-#define GPS_VALID_POS_TIMEOUT 50
+#ifdef GPS_ENABLE
+	const uint8_t GPS_VALID_POS_TIMEOUT = 50;
 
-//static const uint32_t GPS_RX_PIN = 10, GPS_TX_PIN = 9;
-static const uint32_t GPS_TX_PIN_TO_TEENSY = 9, GPS_RX_PIN_TO_TEENSY = 10;
-static const uint32_t GPS_BAUDRATE = 9600;
+	//static const uint32_t GPS_RX_PIN = 10, GPS_TX_PIN = 9;
+	static const uint32_t GPS_TX_PIN_TO_TEENSY = 9, GPS_RX_PIN_TO_TEENSY = 10;
+	static const uint32_t GPS_BAUDRATE = 9600;
+#endif
 
 // --------------------------------------------------------------------------
 // RTTY
 // --------------------------------------------------------------------------
 
-//#define RTTY_BAUDRATE 4800
-//#define RTTY_PERIOD   0.25    //60    // seconds.'
-//#define RTTY_Channel "1b"   // values between 00 and EA, but, avoid using these extremes. hex 0-F 
+#ifdef RTTY_ENABLE
+	//const uint8_t RTTY_BAUDRATE = 4800;
+	//const uint8_t RTTY_PERIOD = 0.25;    //60    // seconds.'
+	//#define RTTY_Channel "1b"   // values between 00 and EA, but, avoid using these extremes. hex 0-F 
 
-//#define RTTY_PAYLOAD_ID   "CHANGE_ME"          // Do not use spaces.
-//#define RTTY_FREQUENCY    434.65               // For devices that are frequency-agile
-//#define RTTY_BAUD          50                  // Comment out if not using RTTY
-//#define RTTY_SHIFT        425                  // Only used on boards where PWM is used for RTTY.
+	//#define RTTY_PAYLOAD_ID   "CHANGE_ME"			// Do not use spaces.
+	//const uint8_t RTTY_FREQUENCY = 434.65;		// For devices that are frequency-agile
+	//const uint8_t RTTY_BAUD = 50;				// Comment out if not using RTTY
+	//const uint8_t RTTY_SHIFT = 425;			// Only used on boards where PWM is used for RTTY.
+#endif
 
 #endif
