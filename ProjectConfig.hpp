@@ -15,38 +15,10 @@
 #define STATUS_ENABLE
 #define SERVO_ENABLE
 //#define RTTY_ENABLE
+//#define TEENSY_ENABLE
+//#define ESP32_ENABLE
+//#define STM32_ENABLE
 
-
-// --------------------------------------------------------------------------
-// Board Configuration
-// --------------------------------------------------------------------------
-
-#ifdef LED_ENABLE
-	const uint8_t RED_LED = 2;
-	const uint8_t GREEN_LED = 3;
-#endif
-
-#ifdef APRS_ENABLE
-	const uint8_t PTT_PIN = 24;  //APRS Push to talk pin
-	#define APRS_DATA_PIN A21   //DAC pin, must be A20 or A21
-#endif
-
-#ifdef RTTY_ENABLE
-	#define RTTY_DATA_PIN A22
-	const uint8_t RADIOEN = 32;
-#endif
-
-#ifdef SERVO_ENABLE
-	const uint8_t SERVO_PIN = 6;
-	const uint8_t SERVO_START_POS = 0;
-	const uint8_t SERVO_END_POS = 100;
-	const uint16_t SERVO_PERIOD = 60;
-#endif
-
-#ifdef ACCEL_ENABLE
-	coust uint8_t ACCEL_SDA = 39;
-	coust uint8_t ACCEL_SCL = 38;
-#endif
 
 
 // --------------------------------------------------------------------------
@@ -173,9 +145,6 @@
 
 #ifdef GPS_ENABLE
 	const uint8_t GPS_VALID_POS_TIMEOUT = 50;
-
-	//static const uint32_t GPS_RX_PIN = 10, GPS_TX_PIN = 9;
-	static const uint32_t GPS_TX_PIN_TO_TEENSY = 9, GPS_RX_PIN_TO_TEENSY = 10;
 	static const uint32_t GPS_BAUDRATE = 9600;
 #endif
 
