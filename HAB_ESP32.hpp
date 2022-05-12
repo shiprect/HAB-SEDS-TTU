@@ -29,8 +29,8 @@
     #endif
     
     #ifdef GPS_ENABLE
-        static const uint32_t GPS_TX_PIN_TO_TEENSY = 29,
-                              GPS_RX_PIN_TO_TEENSY = 28;
+        const uint32_t GPS_TX_PIN_TO_TEENSY = 29,
+                       GPS_RX_PIN_TO_TEENSY = 28;
     #endif
 #endif
 

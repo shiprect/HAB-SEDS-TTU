@@ -2,6 +2,7 @@
 #define __CONFIG_H__
 
 
+
 // --------------------------------------------------------------------------
 // Module Configuration
 // --------------------------------------------------------------------------
@@ -15,11 +16,13 @@
 #define STATUS_ENABLE
 #define SERVO_ENABLE
 //#define RTTY_ENABLE
-//#define TEENSY_ENABLE
+#define TEENSY_ENABLE
 //#define ESP32_ENABLE
 //#define STM32_ENABLE
 
-
+#include "HAB_Teensy.hpp"
+//#include "HAB_STM32.hpp"
+//#include "HAB_ESP32.hpp"
 
 // --------------------------------------------------------------------------
 // Flight Profile
@@ -28,6 +31,9 @@
 #ifdef SERVO_ENABLE
 	const uint16_t SERVO_CUT_ALT = 28000;						// Give desired cut altitude in meters
 	const uint32_t SERVO_CUT_TIMEOUT = 5400;					// Give desired timeout in seconds
+  const uint8_t SERVO_START_POS = 0,          //These three are placeholder values for now.
+                SERVO_END_POS = 10,
+                SERVO_PERIOD = 1;
 #endif
 
 // --------------------------------------------------------------------------
