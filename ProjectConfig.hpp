@@ -8,13 +8,13 @@
 // --------------------------------------------------------------------------
 
 #define GPS_ENABLE
-#define APRS_ENABLE	//fix compilation failing when this is commented
-#define BMP_ENABLE
+//#define APRS_ENABLE	//fix compilation failing when this is commented
+//#define BMP_ENABLE
 #define LED_ENABLE
 //#define ACCEL_ENABLE
-#define SD_ENABLE
-#define STATUS_ENABLE
-#define SERVO_ENABLE
+//#define SD_ENABLE
+//#define STATUS_ENABLE
+//#define SERVO_ENABLE
 //#define RTTY_ENABLE
 #define TEENSY_ENABLE
 //#define ESP32_ENABLE
@@ -28,19 +28,19 @@
 // Flight Profile
 // ----------------------------------------------------------------------
 
-#ifdef SERVO_ENABLE
+//#ifdef SERVO_ENABLE
 	const uint16_t SERVO_CUT_ALT = 28000;						// Give desired cut altitude in meters
 	const uint32_t SERVO_CUT_TIMEOUT = 5400;					// Give desired timeout in seconds
   const uint8_t SERVO_START_POS = 0,          //These three are placeholder values for now.
                 SERVO_END_POS = 10,
                 SERVO_PERIOD = 1;
-#endif
+//#endif
 
 // --------------------------------------------------------------------------
 // Debug Functionality
 // --------------------------------------------------------------------------
 
-//#define DEBUG               // General Debug
+#define DEBUG               // General Debug
 //#define AFSK_DEBUG          // AFSK (modulation) output
 //#define APRS_DEBUG_APRS          // APRS transmit profile
 //#define AX25_DEBUG          // AX.25 frame dump
@@ -76,7 +76,7 @@
 // APRS config
 // --------------------------------------------------------------------------
 
-#ifdef APRS_ENABLE
+//#ifdef APRS_ENABLE
 	//static uint16_t APRS_PERIOD = 300;	///fix this
 
 	// Set your callsign and SSID here. Common values for the SSID are
@@ -142,7 +142,7 @@
 						       // So for interval of 1 (minute), and random(30), each gap could be 30 - 90 seconds.
 						       // Set to 0 to disable
 	*/
-#endif
+//#endif
 
 
 // --------------------------------------------------------------------------
