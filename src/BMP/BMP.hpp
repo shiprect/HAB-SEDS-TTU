@@ -7,16 +7,15 @@
 
 #include "Adafruit_BMP085_U.h"
 
-#include "../../ProjectConfig.hpp"
-#include "../utilities/utilities.h"
+#include "../../Config.h"
 
 
 class BMP {
     private:
         Adafruit_BMP085_Unified BMPModule = Adafruit_BMP085_Unified(10085);
-        
+
         bool ValidBMP;
-        
+
         float BaselinePressure;
         float Pressure;
         float Temperature;
@@ -29,9 +28,9 @@ class BMP {
 
         void BMP_Setup();
         void BMP_Update();
-        
+
         bool IsValidBMP();
-        
+
         float GetBaselinePressure();
         float GetPressure();
         float GetTemperature();

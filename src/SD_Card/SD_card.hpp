@@ -5,8 +5,7 @@
 #include <SD.h>
 #include <SPI.h>
 
-#include "../../ProjectConfig.hpp"
-#include "../utilities/utilities.h"
+#include "../../Config.h"
 
 #include "../BMP/BMP.hpp"
 #include "../GPS/GPS.hpp"
@@ -19,16 +18,16 @@ class SD_card
 {
     private:
         File dataFile;
-        
+
         bool ValidSD = 0;
-        
+
     public:
         SD_card () {};
         ~SD_card() {};
-    
+
         void SD_Setup();
         void SD_Record();
-        
+
         bool IsValidSD();
 };
 

@@ -1,6 +1,4 @@
-#include "ProjectConfig.hpp"
-#include "src/utilities/utilities.h"
-
+#include "Config.h"
 
 #ifdef BMP_ENABLE
 	#include "src/BMP/BMP.hpp"
@@ -44,37 +42,37 @@ void setup()
 		LED_OFF(RED_LED);
 		LED_OFF(GREEN_LED);
 	#endif
-	
+
 	DEBUG_UART.begin(9600); //FIXME::Remove this magic number and put it in config
     //Serial.begin(9600);
     while (!DEBUG_UART) {
         ; // wait for serial port to connect. Needed for native USB port only
     }
 	delay(750);
-	
+
 	#ifdef GPS_ENABLE
 		delay(75);
 		gps.GPS_Setup();
 		delay(75);
 	#endif
-  
+
 	#ifdef BMP_ENABLE
 	 delay(75);
 		bmp.BMP_Setup();
 		delay(75);
 	#endif
-	
+
 	#ifdef SERVO_ENABLE
 		delay(75);
 		CutServo.Servo_Setup();
 		delay(75);
 		//DEBUG_PRINT(F("Servo Setup"));
 	#endif
-	
+
 	#ifdef STATUS_ENABLE
 
 	#endif
-	
+
 	delay(750);
 
 	#ifdef APRS_ENABLE
@@ -88,7 +86,7 @@ void setup()
 
 	#ifdef SD_ENABLE
 		sd_card.SD_Setup();
-	
+
 		if(!sd_card.IsValidSD()) {
             //FIXME::Infinite while loops are a bad idea; what if this happened mid flight
 			while(1) {
@@ -100,34 +98,34 @@ void setup()
 			}
 		}
 	#endif
-	
+
 	DEBUG_PRINT(F("Main Setup successful"));
 }
 
 
 void loop()
-{  
-	#ifdef BMP_ENABLE 
+{
+	#ifdef BMP_ENABLE
 		bmp.BMP_Update();
 	#endif
-	
+
 	#ifdef GPS_ENABLE
-		gps.GPS_Update(); 
+		gps.GPS_Update();
 	#endif
-	
+
 	#ifdef SERVO_ENABLE
 		CutServo.Servo_Update();
 	#endif
-  
+
 	#ifdef APRS_ENABLE
 		aprs.APRS_Update();
 	#endif
-	
+
 	#ifdef STATUS_ENABLE
 		status.CheckStatus();
 		status.CheckServo(); //FIXME::This shouldn't be here
 	#endif
-	
+
 	#ifdef SD_ENABLE
 		sd_card.SD_Record();
 	#endif

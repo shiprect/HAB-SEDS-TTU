@@ -7,8 +7,7 @@
 #include "ax25.h"
 #include "../GPS/GPS.hpp"
 
-#include "../../ProjectConfig.hpp"
-#include "../utilities/utilities.h"
+#include "../../Config.h"
 #include "../Status/Status.hpp"
 
 
@@ -23,12 +22,12 @@ struct PathAddress
 //TODO::Create a robust method of message passing and transmission
 class APRS {
     private:
-	
+
         bool ValidAPRS;
 
         //TODO::Fix method of APRS period determination, config, and randomness
 		uint16_t APRS_PERIOD = 300;
-        
+
 		void APRS_Send_with_String(const PathAddress * const paths, const int nPaths,
 										const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min,
 										const float lat,
@@ -39,8 +38,8 @@ class APRS {
 										const char * const comment);
 		void logBuffer(const uint8_t * const buf, const int bitsSent,
 			const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min);
-			
-			
+
+
     public:
         APRS () {};
         ~APRS() {};
@@ -52,9 +51,9 @@ class APRS {
 						const uint32_t silenceLength    // Emit sub-audio tone before packet to trigger VOX
 						);
         void APRS_Update();
-        
+
         bool IsValidAPRS();
-        
+
         void APRS_Transmit();
 };
 
@@ -94,9 +93,9 @@ void APRS_Send_with_String( const PathAddress * const paths,
 
 void logBuffer(const uint8_t * const buf, const int bitsSent,
     const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min);
-                
-              
-              
+
+
+
 //These functions are synchronized. They won't return until the entire packet is sent
 void APRS_Send( const PathAddress * const paths,
                 const int nPaths,
@@ -112,7 +111,7 @@ void APRS_Send( const PathAddress * const paths,
                 const char symbol,
                 const char * const comment
                 );
-                
+
 void APRS_Send_modified( const PathAddress * const paths,
                 const int nPaths,
                 const uint8_t dayOfMonth,
@@ -127,9 +126,9 @@ void APRS_Send_modified( const PathAddress * const paths,
                 const char symbol,
                 const char * const comment
                 );
-                
-                
-                                
+
+
+
 void APRS_Send_gps1( const PathAddress * const paths,
                 const int nPaths,
                 const uint8_t dayOfMonth,
@@ -154,7 +153,7 @@ void APRS_Send_gpsshort(const PathAddress * const paths, const int nPaths,
     const uint16_t heading, // degrees
     const float speed, const char symbolTableIndicator, const char symbol,
     const char * const comment);
-    
+
 void APRS_Send_gpstime(const PathAddress * const paths, const int nPaths,
     const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min, const uint8_t sec,
     const float lat,

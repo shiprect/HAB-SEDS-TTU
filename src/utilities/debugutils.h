@@ -5,12 +5,8 @@
 #ifdef DEBUG__SERIAL
 	#define DEBUG_UART Serial
 
-	#ifdef DEBUG
-		#define DEBUG_PRINT(str)\
-				do { if(DEBUG__ENABLE) DEBUG_UART.println(str); } while(0)
-	//#else
-	//	#define DEBUG_PRINT(str)
-	#endif
+	#define DEBUG_PRINT(str)\
+		do { if(EN_PRINT_DEBUG) DEBUG_UART.println(str); } while(0)
 
 	#ifdef APRS_DEBUG
 		#define DEBUG_APRS(str)					\

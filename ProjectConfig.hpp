@@ -28,7 +28,6 @@
 	#define DEBUG__SERIAL    TRUE
 #endif
 
-
 // --------------------------------------------------------------------------
 // Board Configuration
 // --------------------------------------------------------------------------
@@ -55,11 +54,6 @@
 //#define STATUS_ENABLE
 //#define SERVO_ENABLE
 
-
-#include "HAB_Teensy.hpp"
-//#include "HAB_STM32.hpp"
-//#include "HAB_ESP32.hpp"
-
 // --------------------------------------------------------------------------
 // Flight Profile
 // ----------------------------------------------------------------------
@@ -75,7 +69,7 @@ SERVO_END_POS = 10, SERVO_PERIOD = 1;
 // Debug Functionality
 // --------------------------------------------------------------------------
 
-#define DEBUG               // General Debug
+#define EN_PRINT_DEBUG TRUE		// General Debug
 //#define AFSK_DEBUG          // AFSK (modulation) output
 //#define APRS_DEBUG_APRS          // APRS transmit profile
 //#define AX25_DEBUG          // AX.25 frame dump

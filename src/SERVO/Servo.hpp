@@ -6,8 +6,7 @@
 #include <PWMServo.h>
 
 
-#include "../../ProjectConfig.hpp"
-#include "../utilities/utilities.h"
+#include "../../Config.h"
 
 
 
@@ -18,16 +17,16 @@ class Servo
         PWMServo ServoPWM;
 		bool ServoStatus;
 		int CurrPosition = 0;
-    
+
     public:
         Servo () {};
         ~Servo() {};
-		
+
 		void Servo_Setup();
-		
+
 		void Servo_Status(bool Status);
 		void Servo_Move(uint8_t Position);
-		
+
 		void Servo_Update();
 };
 

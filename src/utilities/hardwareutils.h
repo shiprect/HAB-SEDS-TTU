@@ -1,10 +1,12 @@
 #ifndef __HARDWAREUTILS_H__
 #define __HARDWAREUTILS_H__
 
+
 #define TRUE 1
 #define FALSE 0
 #define ON 1
 #define OFF 0
+
 
 #if EMBEDDED__ARDUINO
 	#define LED_TOGGLE( x ) digitalWrite(x, digitalRead(x) ? LOW : HIGH)

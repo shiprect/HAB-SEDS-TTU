@@ -5,8 +5,7 @@
 #include <SoftwareSerial.h>
 #include "TinyGPS++.h"
 
-#include "../../ProjectConfig.hpp"
-#include "../utilities/utilities.h"
+#include "../../Config.h"
 
 //FIXME::Rework GPS class so that multiple GPS sensors can be used
 class GPS
@@ -14,20 +13,20 @@ class GPS
     private:
         TinyGPSPlus tinyGPS;
         SoftwareSerial GPSModule;
-		
+
 		double MaxAltitude = 0;
-		
+
         bool valid_pos = false;
-    
+
         void GPS_Debug();
-    
+
     public:
         GPS ();
         ~GPS() {};
 
         void GPS_Setup();
         void GPS_Update();
-        
+
         bool ValidLocation();
         int AgeLocation();
 
