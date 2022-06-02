@@ -44,15 +44,15 @@
 // --------------------------------------------------------------------------
 // Module Configuration
 // --------------------------------------------------------------------------
-
-#define GPS_ENABLE
-//#define APRS_ENABLE	//fix compilation failing when this is commented
-//#define BMP_ENABLE
-#define LED_ENABLE
-//#define ACCEL_ENABLE
-//#define SD_ENABLE
-//#define STATUS_ENABLE
-//#define SERVO_ENABLE
+#ifndef GPS_ENABLE
+	#define GPS_ENABLE TRUE
+#endif
+#define APRS_ENABLE TRUE   //fix compilation failing when this is commented
+#define BMP_ENABLE  TRUE
+#define LED_ENABLE TRUE
+#define SD_ENABLE TRUE
+#define STATUS_ENABLE TRUE
+#define SERVO_ENABLE TRUE
 
 // --------------------------------------------------------------------------
 // Flight Profile
@@ -69,7 +69,7 @@ SERVO_END_POS = 10, SERVO_PERIOD = 1;
 // Debug Functionality
 // --------------------------------------------------------------------------
 
-#define EN_PRINT_DEBUG TRUE		// General Debug
+#define EN_PRINT_DEBUG TRUE        // General Debug
 //#define AFSK_DEBUG          // AFSK (modulation) output
 //#define APRS_DEBUG_APRS          // APRS transmit profile
 //#define AX25_DEBUG          // AX.25 frame dump
@@ -178,13 +178,8 @@ const uint8_t APRS_RANDOM = 30;                // Adjusts time to next transmiss
 // GPS
 // --------------------------------------------------------------------------
 
-#ifdef GPS_ENABLE
 
 const uint8_t GPS_VALID_POS_TIMEOUT = 50;
-
-static const uint32_t GPS_BAUDRATE = 9600;
-
-#endif
-
+const uint32_t GPS_BAUDRATE = 9600;
 
 #endif

@@ -1,6 +1,6 @@
 #include "Config.h"
 
-#ifdef BMP_ENABLE
+#if BMP_ENABLE
 	#include "src/BMP/BMP.hpp"
 	BMP bmp;
 #endif
@@ -32,7 +32,7 @@
 
 void setup()
 {
-	#ifdef LED_ENABLE
+	#if LED_ENABLE
 		pinMode(RED_LED, OUTPUT);
 		pinMode(GREEN_LED, OUTPUT);
 		delay(750);
@@ -50,32 +50,32 @@ void setup()
     }
 	delay(750);
 
-	#ifdef GPS_ENABLE
+	#if GPS_ENABLE
 		delay(75);
 		gps.GPS_Setup();
 		delay(75);
 	#endif
 
-	#ifdef BMP_ENABLE
-	 delay(75);
+	#if BMP_ENABLE
+		delay(75);
 		bmp.BMP_Setup();
 		delay(75);
 	#endif
 
-	#ifdef SERVO_ENABLE
+	#if SERVO_ENABLE
 		delay(75);
 		CutServo.Servo_Setup();
 		delay(75);
 		//DEBUG_PRINT(F("Servo Setup"));
 	#endif
 
-	#ifdef STATUS_ENABLE
+	#if STATUS_ENABLE
 
 	#endif
 
 	delay(750);
 
-	#ifdef APRS_ENABLE
+	#if APRS_ENABLE
 		aprs.APRS_Setup( 50,	  // number of preamble flags to send
 					PTT_PIN, // Use PTT pin
 					100,	 // ms to wait after PTT to transmit
@@ -84,13 +84,13 @@ void setup()
 		delay(75);
 	#endif
 
-	#ifdef SD_ENABLE
+	#if SD_ENABLE
 		sd_card.SD_Setup();
 
 		if(!sd_card.IsValidSD()) {
             //FIXME::Infinite while loops are a bad idea; what if this happened mid flight
 			while(1) {
-				#ifdef LED_ENABLE
+				#if LED_ENABLE
 					LED_TOGGLE(GREEN_LED);
 					LED_TOGGLE(RED_LED);
 				#endif
@@ -105,28 +105,28 @@ void setup()
 
 void loop()
 {
-	#ifdef BMP_ENABLE
+	#if BMP_ENABLE
 		bmp.BMP_Update();
 	#endif
 
-	#ifdef GPS_ENABLE
+	#if GPS_ENABLE
 		gps.GPS_Update();
 	#endif
 
-	#ifdef SERVO_ENABLE
+	#if SERVO_ENABLE
 		CutServo.Servo_Update();
 	#endif
 
-	#ifdef APRS_ENABLE
+	#if APRS_ENABLE
 		aprs.APRS_Update();
 	#endif
 
-	#ifdef STATUS_ENABLE
+	#if STATUS_ENABLE
 		status.CheckStatus();
 		status.CheckServo(); //FIXME::This shouldn't be here
 	#endif
 
-	#ifdef SD_ENABLE
+	#if SD_ENABLE
 		sd_card.SD_Record();
 	#endif
 }

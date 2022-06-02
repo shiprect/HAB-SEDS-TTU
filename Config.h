@@ -1,9 +1,15 @@
-#ifndef HAB_SEDS_TTU_CONFIG_H
-#define HAB_SEDS_TTU_CONFIG_H
+#ifndef CONFIG_H
+#define CONFIG_H
 
+#include "src/Utilities/Utilities.h"
+// Simple bits of functional macros that provide various convenience functions
+// Also contains platform-specific hardware call wrapper functions
 
-#include "src/utilities/utilities.h"
 #include "ProjectConfig.hpp"
-#include "HardwareConfig.h"
+// Provides various structures to control most aspects of program performance
+// Also contains hardware controllers and debugging system controls
 
-#endif //HAB_SEDS_TTU_CONFIG_H
+#include "src/Hardware_Configuration/HardwareConfig.h"  // Must be included AFTER ProjectConfig.hpp
+// Contains pinout mapping definitions for assorted hardware platforms
+
+#endif //CONFIG_H

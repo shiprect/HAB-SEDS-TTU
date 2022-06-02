@@ -270,7 +270,7 @@ private:
   uint32_t failedChecksumCount;
   uint32_t passedChecksumCount;
 
-  // internal utilities
+  // internal Utilities
   int fromHex(char a);
   bool endOfTermHandler();
 };

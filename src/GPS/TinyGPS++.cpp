@@ -98,7 +98,7 @@ bool TinyGPSPlus::encode(char c)
 }
 
 //
-// internal utilities
+// internal Utilities
 //
 int TinyGPSPlus::fromHex(char a)
 {

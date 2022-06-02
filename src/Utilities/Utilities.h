@@ -3,8 +3,8 @@
 
 #include "../../ProjectConfig.hpp"
 
-#include "debugutils.h"
-#include "hardwareutils.h"
+#include "DebugUtilities.h"
+#include "HardwareUtilities.h"
 
 
 #endif

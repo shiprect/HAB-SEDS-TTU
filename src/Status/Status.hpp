@@ -3,7 +3,6 @@
 
 #include "../BMP/BMP.hpp"
 #include "../GPS/GPS.hpp"
-//#include "accel.hpp"
 //#include "../SD_Card/SD_card.hpp"
 #include "../SERVO/Servo.hpp"
 
