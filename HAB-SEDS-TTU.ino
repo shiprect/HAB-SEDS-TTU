@@ -16,7 +16,7 @@
 #endif
 
 #ifdef STATUS_ENABLE
-	#include "src/STATUS/Status.hpp"
+	#include "src/Status/Status.hpp"
 	Status status;
 #endif
 
