@@ -24,8 +24,10 @@
 	const uint8_t ACCEL_SDA = 39;
 	const uint8_t ACCEL_SCL = 38;
 
-	const uint32_t GPS_TX_PIN_TO_TEENSY = 29,
-				   GPS_RX_PIN_TO_TEENSY = 28;
+	const uint8_t GPS_TX1_PIN = 29,
+				  GPS_RX1_PIN = 28,
+				  GPS_TX2_PIN = 35,
+				  GPS_RX2_PIN = 34;
 //#endif
 #endif
 #endif

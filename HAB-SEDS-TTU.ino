@@ -7,7 +7,8 @@
 
 #ifdef GPS_ENABLE
 	#include "src/GPS/GPS.hpp"
-	GPS gps;
+	GPS gps(GPS_TX1_PIN, GPS_RX1_PIN);
+	GPS gps2(GPS_TX2_PIN, GPS_RX2_PIN);
 #endif
 
 #ifdef SERVO_ENABLE
@@ -52,6 +53,7 @@ void setup()
 	#if GPS_ENABLE
 		delay(75);
 		gps.GPS_Setup();
+		gps2.GPS_Setup();
 		delay(75);
 	#endif
 
@@ -110,6 +112,7 @@ void loop()
 
 	#if GPS_ENABLE
 		gps.GPS_Update();
+		gps2.GPS_Update();
 	#endif
 
 	#if SERVO_ENABLE
