@@ -2,14 +2,14 @@
 #define HAB_Teensy_hpp
 
 //#include "ProjectConfig.hpp"
-#include <stdint.h>
+//#include <stdint.h>
 
 
 #if TEENSY_ENABLE
-//const uint8_t RED_LED = 2;
-//const uint8_t GREEN_LED = 3;
-	#define RED_LED 2
-	#define GREEN_LED 3
+	const uint8_t RED_LED = 2;
+	const uint8_t GREEN_LED = 3;
+	//#define RED_LED 2
+	//#define GREEN_LED 3
 
 
 	const uint8_t PTT_PIN = 24;         //APRS Push to talk pin

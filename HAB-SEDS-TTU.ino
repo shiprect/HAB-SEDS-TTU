@@ -43,8 +43,7 @@ void setup()
 		LED_OFF(GREEN_LED);
 	#endif
 
-	DEBUG_UART.begin(9600); //FIXME::Remove this magic number and put it in config
-    //Serial.begin(9600);
+	DEBUG_UART.begin(9600); //FIXME::Remove this magic number and put it in config //Other baud rates not supported by macs???(Chris)
     while (!DEBUG_UART) {
         ; // wait for serial port to connect. Needed for native USB port only
     }

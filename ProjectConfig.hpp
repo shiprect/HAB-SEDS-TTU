@@ -47,64 +47,45 @@
 #ifndef GPS_ENABLE
 	#define GPS_ENABLE TRUE
 #endif
-#define APRS_ENABLE TRUE   //fix compilation failing when this is commented
-#define BMP_ENABLE  TRUE
-#define LED_ENABLE TRUE
-#define SD_ENABLE TRUE
-#define STATUS_ENABLE TRUE
-#define SERVO_ENABLE TRUE
+#ifndef APRS_ENABLE
+	#define APRS_ENABLE TRUE   //fix compilation failing when this is commented
+#endif
+#ifndef BMP_ENABLE
+	#define BMP_ENABLE  TRUE
+#endif
+#ifndef LED_ENABLE
+	#define LED_ENABLE TRUE
+#endif
+#ifndef SD_ENABLE
+	#define SD_ENABLE TRUE
+#endif
+#ifndef STATUS_ENABLE
+	#define STATUS_ENABLE TRUE
+#endif
+#ifndef SERVO_ENABLE
+	#define SERVO_ENABLE TRUE
+#endif
 
 // --------------------------------------------------------------------------
 // Flight Profile
 // ----------------------------------------------------------------------
 
-//#ifdef SERVO_ENABLE
-const uint16_t SERVO_CUT_ALT = 28000;                        // Give desired cut altitude in meters
-const uint32_t SERVO_CUT_TIMEOUT = 5400;                    // Give desired timeout in seconds
-const uint8_t SERVO_START_POS = 0,          //These three are placeholder values for now.
-SERVO_END_POS = 10, SERVO_PERIOD = 1;
-//#endif
+#ifdef SERVO_ENABLE
+	const uint16_t SERVO_CUT_ALT = 28000;                      // Give desired cut altitude in meters
+	const uint32_t SERVO_CUT_TIMEOUT = 5400;                   // Give desired timeout in seconds
+	const uint8_t SERVO_START_POS = 0, SERVO_END_POS = 10;     //These three are placeholder values for now.
+	const uint32_t SERVO_PERIOD = 1;
+#endif
 
 // --------------------------------------------------------------------------
 // Debug Functionality
 // --------------------------------------------------------------------------
 
 #define EN_PRINT_DEBUG TRUE        // General Debug
-//#define AFSK_DEBUG          // AFSK (modulation) output
-//#define APRS_DEBUG_APRS          // APRS transmit profile
-//#define AX25_DEBUG          // AX.25 frame dump
-//#define DEBUG_GPS_BASIC     // Basic GPS printing
-//#define GPS_ADV_DEBUG       // GPS sentence dump and checksum validation
-//#define BMP_DEBUG           // BMP logging for debug
-//#define SERVO_DEBUG	//not written yet
-
-
-// --------------------------------------------------------------------------
-//
-// --------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // --------------------------------------------------------------------------
 // APRS config
 // --------------------------------------------------------------------------
-
-//#ifdef APRS_ENABLE
-//static uint16_t APRS_PERIOD = 300;	///fix this
 
 // Set your callsign and SSID here. Common values for the SSID are
 // (from http://zlhams.wikidot.com/aprs-ssidguide):
@@ -114,12 +95,10 @@ SERVO_END_POS = 10, SERVO_PERIOD = 1;
 // - Home:       0
 // - IGate:      5
 #define S_CALLSIGN      "KN4JLK"
-
 const uint8_t S_CALLSIGN_ID = 11;   // 11 is usually for balloons
 
 // Destination callsign: APRS (with SSID=0) is usually okay.
 #define D_CALLSIGN      "APRS"
-
 const uint8_t D_CALLSIGN_ID = 0;
 
 // Symbol Table: '/' is primary table '\' is secondary table
@@ -130,9 +109,10 @@ const uint8_t D_CALLSIGN_ID = 0;
 // APRS comment: this goes in the comment portion of the APRS message. You
 // might want to keep this short. The longer the packet, the more vulnerable
 // it is to noise.
-const char *const comment = "";//"SEDSTTU";
+const char *const comment = "";
 
-
+//TODO::clean up all below this line
+//
 // APRS packets are slotted so that multiple trackers can be used without
 // them stepping on one another. The transmission times are governed by
 // the formula:

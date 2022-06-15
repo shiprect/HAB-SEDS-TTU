@@ -5,6 +5,7 @@
 
 #include "DebugUtilities.h"
 #include "HardwareUtilities.h"
+#include "TimerUtilities.h"
 
 
 #endif

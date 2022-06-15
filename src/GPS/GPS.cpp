@@ -36,68 +36,68 @@ void GPS::GPS_Update() {
 	if (valid_pos) {
 		GPS_Debug();
 	} else {
-		//DEBUG_GPS_BASIC(F("\nFailed GPS position fix\n"));		//fix this; possibly remove
+		//DEBUG_PRINT(F("\nFailed GPS position fix\n"));		//fix this; possibly remove
 	}
 }
 
 
 void GPS::GPS_Debug()  {
-	#ifdef DEBUG_GPS_BASIC
-		DEBUG_GPS_BASIC(F("\nLAT (deg) =       ")); DEBUG_GPS_BASIC(tinyGPS.location.rawLat().deg); // Raw latitude in whole degrees
-		DEBUG_GPS_BASIC(F("\nLNG (deg) =       ")); DEBUG_GPS_BASIC(tinyGPS.location.rawLng().deg); // Raw longitude in whole degrees
-		DEBUG_GPS_BASIC(F("\nDate (ddmmyy) =   ")); DEBUG_GPS_BASIC(tinyGPS.date.value()); // Raw date in DDMMYY format (u32)
-		DEBUG_GPS_BASIC(F("\nTime (hhmmsscc) = ")); DEBUG_GPS_BASIC(tinyGPS.time.value()); // Raw time in HHMMSSCC format (u32)
-		DEBUG_GPS_BASIC(F("\nCourse (deg) =    ")); DEBUG_GPS_BASIC(tinyGPS.course.deg()); // Course in degrees (double)
-		DEBUG_GPS_BASIC(F("\nSpeed (mps) =     ")); DEBUG_GPS_BASIC(tinyGPS.speed.mps()); // Speed in meters per second (double)
-		DEBUG_GPS_BASIC(F("\nAltitude (m) =    ")); DEBUG_GPS_BASIC(tinyGPS.altitude.meters()); // Altitude in meters (double)
-		DEBUG_GPS_BASIC(F("\nSatellites =      ")); DEBUG_GPS_BASIC(tinyGPS.satellites.value()); // Number of satellites in use (u32)   
+	#ifdef DEBUG_PRINT
+		DEBUG_PRINT(F("\nLAT (deg) =       ")); DEBUG_PRINT(tinyGPS.location.rawLat().deg); // Raw latitude in whole degrees
+		DEBUG_PRINT(F("\nLNG (deg) =       ")); DEBUG_PRINT(tinyGPS.location.rawLng().deg); // Raw longitude in whole degrees
+		DEBUG_PRINT(F("\nDate (ddmmyy) =   ")); DEBUG_PRINT(tinyGPS.date.value()); // Raw date in DDMMYY format (u32)
+		DEBUG_PRINT(F("\nTime (hhmmsscc) = ")); DEBUG_PRINT(tinyGPS.time.value()); // Raw time in HHMMSSCC format (u32)
+		DEBUG_PRINT(F("\nCourse (deg) =    ")); DEBUG_PRINT(tinyGPS.course.deg()); // Course in degrees (double)
+		DEBUG_PRINT(F("\nSpeed (mps) =     ")); DEBUG_PRINT(tinyGPS.speed.mps()); // Speed in meters per second (double)
+		DEBUG_PRINT(F("\nAltitude (m) =    ")); DEBUG_PRINT(tinyGPS.altitude.meters()); // Altitude in meters (double)
+		DEBUG_PRINT(F("\nSatellites =      ")); DEBUG_PRINT(tinyGPS.satellites.value()); // Number of satellites in use (u32)   
 	#endif
 	
     #ifdef GPS_ADV_DEBUG
         if (tinyGPS.location.isUpdated()) {
-            DEBUG_GPS_ADV(F("\nraw LAT = "));     DEBUG_GPS_ADV(tinyGPS.location.rawLat().negative ? "-" : "+");
-            DEBUG_GPS_ADV(F("\ndeg LAT = "));     DEBUG_GPS_ADV(tinyGPS.location.rawLat().deg); // Raw latitude in whole degrees
-            DEBUG_GPS_ADV(F("\nLAT = "));         DEBUG_GPS_ADV(tinyGPS.location.rawLat().billionths);// ... and billionths (u16/u32)
-            DEBUG_GPS_ADV(F("\nraw LNG = "));     DEBUG_GPS_ADV(tinyGPS.location.rawLng().negative ? "-" : "+");
-            DEBUG_GPS_ADV(F("\ndeg LNG = "));     DEBUG_GPS_ADV(tinyGPS.location.rawLng().deg); // Raw longitude in whole degrees
-            DEBUG_GPS_ADV(F("\nLNG = "));         DEBUG_GPS_ADV(tinyGPS.location.rawLng().billionths);// ... and billionths (u16/u32)
+            DEBUG_PRINT(F("\nraw LAT = "));     DEBUG_PRINT(tinyGPS.location.rawLat().negative ? "-" : "+");
+            DEBUG_PRINT(F("\ndeg LAT = "));     DEBUG_PRINT(tinyGPS.location.rawLat().deg); // Raw latitude in whole degrees
+            DEBUG_PRINT(F("\nLAT = "));         DEBUG_PRINT(tinyGPS.location.rawLat().billionths);// ... and billionths (u16/u32)
+            DEBUG_PRINT(F("\nraw LNG = "));     DEBUG_PRINT(tinyGPS.location.rawLng().negative ? "-" : "+");
+            DEBUG_PRINT(F("\ndeg LNG = "));     DEBUG_PRINT(tinyGPS.location.rawLng().deg); // Raw longitude in whole degrees
+            DEBUG_PRINT(F("\nLNG = "));         DEBUG_PRINT(tinyGPS.location.rawLng().billionths);// ... and billionths (u16/u32)
         }
         if (tinyGPS.date.isUpdated()) {
-            DEBUG_GPS_ADV(F("\nYEAR = "));        DEBUG_GPS_ADV(tinyGPS.date.year()); // Year (2000+) (u16)
-            DEBUG_GPS_ADV(F("\nMONTH = "));       DEBUG_GPS_ADV(tinyGPS.date.month()); // Month (1-12) (u8)
-            DEBUG_GPS_ADV(F("\nDAY = "));         DEBUG_GPS_ADV(tinyGPS.date.day()); // Day (1-31) (u8)
-            DEBUG_GPS_ADV(F("\nDDMMYY = "));      DEBUG_GPS_ADV(tinyGPS.date.value()); // Raw date in DDMMYY format (u32)
+            DEBUG_PRINT(F("\nYEAR = "));        DEBUG_PRINT(tinyGPS.date.year()); // Year (2000+) (u16)
+            DEBUG_PRINT(F("\nMONTH = "));       DEBUG_PRINT(tinyGPS.date.month()); // Month (1-12) (u8)
+            DEBUG_PRINT(F("\nDAY = "));         DEBUG_PRINT(tinyGPS.date.day()); // Day (1-31) (u8)
+            DEBUG_PRINT(F("\nDDMMYY = "));      DEBUG_PRINT(tinyGPS.date.value()); // Raw date in DDMMYY format (u32)
         }
         if (tinyGPS.time.isUpdated()) {
-            DEBUG_GPS_ADV(F("\nHOUR = "));        DEBUG_GPS_ADV(tinyGPS.time.hour()); // Hour (0-23) (u8)
-            DEBUG_GPS_ADV(F("\nMINUTE = "));      DEBUG_GPS_ADV(tinyGPS.time.minute()); // Minute (0-59) (u8)
-            DEBUG_GPS_ADV(F("\nSECOND = "));      DEBUG_GPS_ADV(tinyGPS.time.second()); // Second (0-59) (u8)
-            DEBUG_GPS_ADV(F("\nCENTISECOND = ")); DEBUG_GPS_ADV(tinyGPS.time.centisecond()); // 100ths of a second (0-99) (u8)
-            DEBUG_GPS_ADV(F("\nHHMMSSCC = "));    DEBUG_GPS_ADV(tinyGPS.time.value()); // Raw time in HHMMSSCC format (u32)
+            DEBUG_PRINT(F("\nHOUR = "));        DEBUG_PRINT(tinyGPS.time.hour()); // Hour (0-23) (u8)
+            DEBUG_PRINT(F("\nMINUTE = "));      DEBUG_PRINT(tinyGPS.time.minute()); // Minute (0-59) (u8)
+            DEBUG_PRINT(F("\nSECOND = "));      DEBUG_PRINT(tinyGPS.time.second()); // Second (0-59) (u8)
+            DEBUG_PRINT(F("\nCENTISECOND = ")); DEBUG_PRINT(tinyGPS.time.centisecond()); // 100ths of a second (0-99) (u8)
+            DEBUG_PRINT(F("\nHHMMSSCC = "));    DEBUG_PRINT(tinyGPS.time.value()); // Raw time in HHMMSSCC format (u32)
         }
         if (tinyGPS.speed.isUpdated()) {
-            DEBUG_GPS_ADV(F("\ncKNOTS = "));      DEBUG_GPS_ADV(tinyGPS.speed.value()); // Raw speed in 100ths of a knot (i32)
-            DEBUG_GPS_ADV(F("\nKNOTS = "));       DEBUG_GPS_ADV(tinyGPS.speed.knots()); // Speed in knots (double)
-            DEBUG_GPS_ADV(F("\nMPH = "));         DEBUG_GPS_ADV(tinyGPS.speed.mph()); // Speed in miles per hour (double)
-            DEBUG_GPS_ADV(F("\nMPS = "));         DEBUG_GPS_ADV(tinyGPS.speed.mps()); // Speed in meters per second (double)
-            DEBUG_GPS_ADV(F("\nKMPH = "));        DEBUG_GPS_ADV(tinyGPS.speed.kmph()); // Speed in kilometers per hour (double)
+            DEBUG_PRINT(F("\ncKNOTS = "));      DEBUG_PRINT(tinyGPS.speed.value()); // Raw speed in 100ths of a knot (i32)
+            DEBUG_PRINT(F("\nKNOTS = "));       DEBUG_PRINT(tinyGPS.speed.knots()); // Speed in knots (double)
+            DEBUG_PRINT(F("\nMPH = "));         DEBUG_PRINT(tinyGPS.speed.mph()); // Speed in miles per hour (double)
+            DEBUG_PRINT(F("\nMPS = "));         DEBUG_PRINT(tinyGPS.speed.mps()); // Speed in meters per second (double)
+            DEBUG_PRINT(F("\nKMPH = "));        DEBUG_PRINT(tinyGPS.speed.kmph()); // Speed in kilometers per hour (double)
         }
         if (tinyGPS.course.isUpdated()) {
-            DEBUG_GPS_ADV(F("\ncDEG = "));        DEBUG_GPS_ADV(tinyGPS.course.value()); // Raw course in 100ths of a degree (i32)
-            DEBUG_GPS_ADV(F("\nDEG = "));         DEBUG_GPS_ADV(tinyGPS.course.deg()); // Course in degrees (double)
+            DEBUG_PRINT(F("\ncDEG = "));        DEBUG_PRINT(tinyGPS.course.value()); // Raw course in 100ths of a degree (i32)
+            DEBUG_PRINT(F("\nDEG = "));         DEBUG_PRINT(tinyGPS.course.deg()); // Course in degrees (double)
         }
         if (tinyGPS.altitude.isUpdated()) {
-            DEBUG_GPS_ADV(F("\nALT KM = "));      DEBUG_GPS_ADV(tinyGPS.altitude.kilometers()); // Altitude in kilometers (double)
-            DEBUG_GPS_ADV(F("\nALT M = "));       DEBUG_GPS_ADV(tinyGPS.altitude.meters()); // Altitude in meters (double)
-            DEBUG_GPS_ADV(F("\nALT CM = "));      DEBUG_GPS_ADV(tinyGPS.altitude.value()); // Raw altitude in centimeters (i32)
-            DEBUG_GPS_ADV(F("\nALT MI = "));      DEBUG_GPS_ADV(tinyGPS.altitude.miles()); // Altitude in miles (double)
-            DEBUG_GPS_ADV(F("\nALT FT = "));      DEBUG_GPS_ADV(tinyGPS.altitude.feet()); // Altitude in feet (double)
+            DEBUG_PRINT(F("\nALT KM = "));      DEBUG_PRINT(tinyGPS.altitude.kilometers()); // Altitude in kilometers (double)
+            DEBUG_PRINT(F("\nALT M = "));       DEBUG_PRINT(tinyGPS.altitude.meters()); // Altitude in meters (double)
+            DEBUG_PRINT(F("\nALT CM = "));      DEBUG_PRINT(tinyGPS.altitude.value()); // Raw altitude in centimeters (i32)
+            DEBUG_PRINT(F("\nALT MI = "));      DEBUG_PRINT(tinyGPS.altitude.miles()); // Altitude in miles (double)
+            DEBUG_PRINT(F("\nALT FT = "));      DEBUG_PRINT(tinyGPS.altitude.feet()); // Altitude in feet (double)
         }
         if (tinyGPS.satellites.isUpdated()) {
-            DEBUG_GPS_ADV(F("\nSAT = "));         DEBUG_GPS_ADV(tinyGPS.satellites.value()); // Number of satellites in use (u32)
+            DEBUG_PRINT(F("\nSAT = "));         DEBUG_PRINT(tinyGPS.satellites.value()); // Number of satellites in use (u32)
         }
         if (tinyGPS.hdop.isUpdated()) {
-            DEBUG_GPS_ADV(F("\nHOZ DIM = "));     DEBUG_GPS_ADV(tinyGPS.hdop.value()); // Horizontal Dim. of Precision (100ths-i32)
+            DEBUG_PRINT(F("\nHOZ DIM = "));     DEBUG_PRINT(tinyGPS.hdop.value()); // Horizontal Dim. of Precision (100ths-i32)
         }
     #endif    
 }

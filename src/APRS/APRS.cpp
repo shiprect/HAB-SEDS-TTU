@@ -157,7 +157,6 @@ void APRS::APRS_Transmit() {
 	uint8_t dayOfMonth = gps.GetDay();
 	uint8_t hour = gps.GetHour();
 	uint8_t min = gps.GetMinute();
-	uint8_t sec = gps.GetSecond();
 	float lat = gps.GetLatitude();
 	float lon = gps.GetLongitude();
 	//float altitude = gps.GetAltitude();
