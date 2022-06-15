@@ -7,7 +7,6 @@
 
 #include "../../Config.h"
 
-//FIXME::Rework GPS class so that multiple GPS sensors can be used
 class GPS
 {
     private:
@@ -21,7 +20,7 @@ class GPS
         void GPS_Debug();
 
     public:
-        GPS ();
+        GPS (const uint8_t, const uint8_t);
         ~GPS() {};
 
         void GPS_Setup();
@@ -48,7 +47,7 @@ class GPS
 
 };
 
-extern GPS gps;
-//static GPS gps;
+extern GPS gps,
+           gps2;
 
 #endif

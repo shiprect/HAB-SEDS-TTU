@@ -1,9 +1,8 @@
 #include "GPS.hpp"
 
 
-GPS::GPS() : GPSModule (GPS_TX_PIN_TO_TEENSY, GPS_RX_PIN_TO_TEENSY){
+GPS::GPS(const uint8_t TX, const uint8_t RX) : GPSModule (TX, RX){
     TinyGPSPlus tinyGPS;
-    SoftwareSerial GPSModule(GPS_TX_PIN_TO_TEENSY, GPS_RX_PIN_TO_TEENSY);
 }
 
 
