@@ -2,7 +2,7 @@
 
 
 void Servo::Servo_Setup(){
-    ServoPWM.attach(SERVO_PIN);
+    //ServoPWM.attach(SERVO_PIN);
 }
 
 
@@ -12,7 +12,7 @@ void Servo::Servo_Status(bool Status) {
 
 
 void Servo::Servo_Move(uint8_t Position) {
-	ServoPWM.write(Position);
+	//ServoPWM.write(Position);
 }
 
 //TODO::Make Servo Debug Print and clean up
@@ -20,8 +20,8 @@ void Servo::Servo_Update() {
 	if(ServoStatus == ON) {
 		static unsigned long servo_timer = 0;
 		static unsigned long MoveDelay = 0;
-		
-		
+
+
 		if ((int32_t) (millis() - servo_timer) >= 0) {
 			if (CurrPosition == SERVO_START_POS) {
 				Servo_Move(SERVO_END_POS);
@@ -39,7 +39,7 @@ void Servo::Servo_Update() {
 			//DEBUG_PRINT(F("\nAPRS message sent. GPS signal good."));
 		} else {
 			//MoveDelay = millis();
-		}		
+		}
 	} else {
 		//DEBUG_PRINT(F("Servo not on."));
 		//debug stuff here

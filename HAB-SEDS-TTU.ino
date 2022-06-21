@@ -1,5 +1,15 @@
 #include "Config.h"
 
+#if PUSHBUTTON_ENABLE
+	#include"src/Pushbutton/Pushbutton.h"
+	PUSHBUTTON pushbutton;
+#endif
+
+#if PINS_ENABLE
+	#include"src/Pins/Pins.hpp"
+	PINS pins;
+#endif
+
 #if BMP_ENABLE
 	#include "src/BMP/BMP.hpp"
 	BMP bmp;
@@ -65,24 +75,17 @@ void setup()
 
 	#if SERVO_ENABLE
 		delay(75);
-		CutServo.Servo_Setup();
+		CutServo.Servo_Setup();//FIXME::Naming Convention
 		delay(75);
 		//DEBUG_PRINT(F("Servo Setup"));
 	#endif
 
-	#if STATUS_ENABLE
-
+	#if PINS_ENABLE
+		pins.PINS_Setup();
 	#endif
 
-	delay(750);
-
-	#if APRS_ENABLE
-		aprs.APRS_Setup( 50,	  // number of preamble flags to send
-					PTT_PIN, // Use PTT pin
-					100,	 // ms to wait after PTT to transmit
-					0, 0	 // No VOX tone
-		);
-		delay(75);
+	#if PUSHBUTTON_ENABLE
+		pushbutton.PUSHBUTTON_Setup();
 	#endif
 
 	#if SD_ENABLE
@@ -130,5 +133,20 @@ void loop()
 
 	#if SD_ENABLE
 		sd_card.SD_Record();
+	#endif
+
+	#if PINS_ENABLE
+		pins.PINS_Update();
+	#endif
+
+	#if PUSHBUTTON_ENABLE
+		pushbutton.PUSHBUTTON_Update();
+		if(pushbutton.GetbuttonState() == TRUE){ //FIXME::This is now just constantly outputting 0.0V. IDK why. Debouncing ??
+			#if LED_ENABLE
+				LED_ON(RED_LED);
+				delay(500);
+				LED_OFF(RED_LED);
+			#endif
+		}
 	#endif
 }

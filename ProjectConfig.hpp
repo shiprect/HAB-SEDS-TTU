@@ -32,7 +32,7 @@
 // Board Configuration
 // --------------------------------------------------------------------------
 #ifndef TEENSY_ENABLE
-	#define TEENSY_ENABLE    TRUE
+	#define TEENSY_ENABLE    FALSE
 #endif
 #ifndef ESP32_ENABLE
 	#define ESP32_ENABLE    FALSE
@@ -40,15 +40,17 @@
 #ifndef STM32_ENABLE
 	#define STM32_ENABLE    FALSE
 #endif
-
+#ifndef NANO_ENABLE
+	#define NANO_ENABLE    TRUE
+#endif
 // --------------------------------------------------------------------------
 // Module Configuration
 // --------------------------------------------------------------------------
 #ifndef GPS_ENABLE
-	#define GPS_ENABLE TRUE
+	#define GPS_ENABLE FALSE
 #endif
 #ifndef APRS_ENABLE
-	#define APRS_ENABLE TRUE   //fix compilation failing when this is commented
+	#define APRS_ENABLE FALSE   //fix compilation failing when this is commented
 #endif
 #ifndef BMP_ENABLE
 	#define BMP_ENABLE  TRUE
@@ -60,10 +62,16 @@
 	#define SD_ENABLE TRUE
 #endif
 #ifndef STATUS_ENABLE
-	#define STATUS_ENABLE TRUE
+	#define STATUS_ENABLE FALSE
 #endif
 #ifndef SERVO_ENABLE
-	#define SERVO_ENABLE TRUE
+	#define SERVO_ENABLE FALSE
+#endif
+#ifndef PUSHBUTTON_ENABLE
+	#define PUSHBUTTON_ENABLE TRUE
+#endif
+#ifndef PINS_ENABLE
+	#define PINS_ENABLE TRUE
 #endif
 
 // --------------------------------------------------------------------------

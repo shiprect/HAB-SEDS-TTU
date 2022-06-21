@@ -3,7 +3,9 @@
 
 
 #include <Arduino.h>
-#include <PWMServo.h>
+#if TEENSY_ENABLE
+	#include <PWMServo.h>
+#endif
 
 
 #include "../../Config.h"
@@ -14,7 +16,7 @@
 class Servo
 {
     private:
-        PWMServo ServoPWM;
+        //PWMServo ServoPWM;//FIXME::PWMServo Lib
 		bool ServoStatus;
 		int CurrPosition = 0;
 

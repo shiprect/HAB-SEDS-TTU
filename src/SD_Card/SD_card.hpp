@@ -10,8 +10,11 @@
 #include "../BMP/BMP.hpp"
 #include "../GPS/GPS.hpp"
 #include "../Status/Status.hpp"
+#include "../Pushbutton/Pushbutton.h"
+#include "../Pins/Pins.hpp"
 
-const int ChipSelectPin = BUILTIN_SDCARD;
+//const int ChipSelectPin = BUILTIN_SDCARD;
+const int ChipSelectPin = 10;
 
 //TODO::Create sd record function in each class and create #ifdef calls here
 class SD_card
