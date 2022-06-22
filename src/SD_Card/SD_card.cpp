@@ -8,7 +8,7 @@
 
 void SD_card::SD_Setup() {
 
-    if (!SD.begin(ChipSelectPin)) {
+    if (!SD.begin(CS)) {
         ValidSD = 0;
     } else {
         ValidSD = 1;
@@ -163,9 +163,9 @@ void SD_card::SD_Record() {
     }
 }
 
-void SD_card::SD_arrayPass() {
-
-
+void SD_card::SD_arrayPass(int *x, int array_Size) {
+    
+		//DEBUG_PRINT(*x);  //
 }
 
 

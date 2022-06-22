@@ -14,13 +14,13 @@
 
 	// #def d12 - garbage dump
 	// Maybe just 12 , depends on arduino board
-	#define PTT_PIN 12   //	const uint8_t PTT_PIN = 24;         //APRS Push to talk pin
+	#define PTT_PIN 2   //	const uint8_t PTT_PIN = 24;         //APRS Push to talk pin     **** as of 22 June 2022 - pin D2 
 	//const uint8_t APRS_DATA_PIN A21   // Must be A20 or A21 (Teensy 3.6)
-	#define APRS_DATA_PIN 12 // const uint8_t APRS_DATA_PIN = 40;   // Teensy 4.1
+	#define APRS_DATA_PIN 2 // const uint8_t APRS_DATA_PIN = 40;   // Teensy 4.1            **** as of 22 June 2022 - pin D2
 	//#define PTT_PIN 24
 	//#define APRS_DATA_PIN 40
 
-	 #define SERVO_PIN 12 // const uint8_t SERVO_PIN = 6;
+	 #define SERVO_PIN 2 // const uint8_t SERVO_PIN = 6;                                    **** as of 22 June 2022 - pin D2
 
 	//const uint8_t ACCEL_SDA = 39;      // prob not using accelerometer
 	//const uint8_t ACCEL_SCL = 38;

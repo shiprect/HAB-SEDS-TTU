@@ -13,7 +13,7 @@
 #include "../Pushbutton/Pushbutton.h"
 #include "../Pins/Pins.hpp"
 
-const int ChipSelectPin = 10; // pin D10 on Nano Every, connected to DI on SD card reader
+// const int ChipSelectPin = 10; // pin D10 on Nano Every, connected to DI on SD card reader
 
 //TDOD::Is Needed???
 const int CLK = 13; // pin D13/SCK yellow wire - Clock pin
@@ -34,8 +34,9 @@ class SD_card
 
         void SD_Setup();
         void SD_Record();
-		void SD_arrayPass(); //FIXME::
-
+		void SD_arrayPass(int *x, int array_Size); //FIXME::
+	
+		
         bool IsValidSD();
 };
 

@@ -35,6 +35,7 @@
 	#include "src/APRS/APRS.hpp"
 	APRS aprs;
 #endif
+	//DEBUG_PRINT(F("line 38"));
 
 #ifdef SD_ENABLE
 	#include "src/SD_Card/SD_card.hpp"
@@ -43,7 +44,7 @@
 
 void setup()
 {
-	#if LED_ENABLE
+	#if LED_ENABLE               //FIXME:: one of these needs to be removed 
 		pinMode(RED_LED, OUTPUT);
 		pinMode(GREEN_LED, OUTPUT);
 		delay(750);
@@ -52,11 +53,14 @@ void setup()
 		delay(750);
 		LED_OFF(RED_LED);
 		LED_OFF(GREEN_LED);
-	#endif
+	#endif 
+
 
 	DEBUG_UART.begin(9600); //FIXME::Remove this magic number and put it in config //Other baud rates not supported by macs???(Chris)
     while (!DEBUG_UART) {
         ; // wait for serial port to connect. Needed for native USB port only
+
+
     }
 	delay(750);
 
@@ -69,7 +73,7 @@ void setup()
 
 	#if BMP_ENABLE
 		delay(75);
-		bmp.BMP_Setup();
+		////bmp.BMP_Setup();//TODO::Broken post SD changes????????????????????????????????????????????????????????????????
 		delay(75);
 	#endif
 
@@ -77,7 +81,7 @@ void setup()
 		delay(75);
 		CutServo.Servo_Setup();//FIXME::Naming Convention
 		delay(75);
-		//DEBUG_PRINT(F("Servo Setup"));
+		DEBUG_PRINT(F("Servo Setup"));
 	#endif
 
 	#if PINS_ENABLE
@@ -87,19 +91,22 @@ void setup()
 	#if PUSHBUTTON_ENABLE
 		pushbutton.PUSHBUTTON_Setup();
 	#endif
+	
+	DEBUG_PRINT(F("idk why this is broken "));
+
 
 	#if SD_ENABLE
 		sd_card.SD_Setup();
-
 		if(!sd_card.IsValidSD()) {
             //FIXME::Infinite while loops are a bad idea; what if this happened mid flight
-			while(1) {
+			/*while(1) {																	//FIXME:: Commented out because need 3.3v					
 				#if LED_ENABLE
 					LED_TOGGLE(GREEN_LED);
 					LED_TOGGLE(RED_LED);
 				#endif
 				delay(1000);
-			}
+				DEBUG_PRINT(F("No Valid SD Card!!!"));
+			} */
 		}
 	#endif
 
@@ -109,8 +116,17 @@ void setup()
 
 void loop()
 {
+/* #if LED_ENABLE           ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+		delay(750);
+		LED_ON(RED_LED);
+		LED_ON(GREEN_LED);
+		delay(750);
+		LED_OFF(RED_LED);
+		LED_OFF(GREEN_LED);
+	#endif   */             
+	
 	#if BMP_ENABLE
-		bmp.BMP_Update();
+		////bmp.BMP_Update();
 	#endif
 
 	#if GPS_ENABLE
@@ -132,7 +148,7 @@ void loop()
 	#endif
 
 	#if SD_ENABLE
-		//sd_card.SD_Record(); //FIXME:: comment/uncomment
+		sd_card.SD_Record(); //FIXME:: comment/uncomment
 	#endif
 
 	#if PINS_ENABLE
@@ -145,15 +161,17 @@ void loop()
 			#if LED_ENABLE
 				LED_ON(RED_LED);
 			#endif
-
-			int x[500];
+			
+			
+			 
+			int x[numberofSamples];
 			timer myTimer =
 			{
 				0, 100UL, TRUE, TRUE	// lastMillis, waitMillis, IsRepeatable, IsEnabled
 			};
 			int count = 0;
-				//DEBUG_PRINT(F("Button Pressed 1"));
-			while (count < 500) {
+			DEBUG_PRINT(F("Button Pressed 1"));
+			while (count < numberofSamples) {
 				if(myTimer.CheckTime() == TRUE) {
 								DEBUG_PRINT(count);
 					int input = pins.GetsensorValue();
@@ -161,9 +179,11 @@ void loop()
 					count++;
 				}
 			}
-				//DEBUG_PRINT(F("Button Pressed 2"));
+			DEBUG_PRINT(F("Button Pressed 2"));
 
-			//sd_card.SD_arrayPass();
+			
+			sd_card.SD_arrayPass(x, numberofSamples);
+			
 			#if LED_ENABLE
 				LED_OFF(RED_LED);
 			#endif
