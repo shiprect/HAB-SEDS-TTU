@@ -51,19 +51,19 @@ void APRS::APRS_Setup(	const uint16_t p_preambleFlags,	  // number of preambleFl
 						const uint32_t toneLength,
 						const uint32_t silenceLength	// Emit sub-audio tone before packet to trigger VOX
 						)
-{	 
+{
 	preambleFlags = p_preambleFlags;
 	afsk_setup(pttPin, pttDelay, toneLength, silenceLength);
-  
+
 	// Do not start until we get a valid time reference -- for slotted transmissions.
 	transmission_timer = millis() + (1000L * APRS_SLOT);
-	
+
 	ValidAPRS = TRUE;
 }
 
 
 void APRS::APRS_Update() {
-	
+
 	if(!status.IsLaunched()) {
 		APRS_PERIOD = 120;
 	//} else if(status.IsLanded()) {
@@ -72,9 +72,9 @@ void APRS::APRS_Update() {
 	else {
 		APRS_PERIOD = 563;
 	}
-		
+
 	static unsigned long MessageDelay = 0;	//takes account of delayed APRS messages due to GPS signal loss
-	
+
 	// Time for another APRS frame
 	if ((int32_t) (millis() - transmission_timer) >= 0) {
 		//if (gps.ValidLocation() && (gps.AgeLocation() < (8 * GPS_VALID_POS_TIMEOUT) ) ) {
@@ -88,9 +88,9 @@ void APRS::APRS_Update() {
 	} else {
 		//MessageDelay = millis();
 	}
-		
-		
-		
+
+
+
 }
 
 
@@ -105,11 +105,11 @@ void APRS::APRS_Transmit() {
 		{(char *)NULL, 0}, // Digi1 (first digi in the chain)
 		{(char *)NULL, 0}  // Digi2 (second digi in the chain)
 	};
-	
-	
+
+
 	double altitude = gps.GetAltitude();
-	
-	
+
+
 	//	// If above 5000 feet switch to a single hop path
 	  int nAddresses;
 	  if (altitude > 1500) {
@@ -127,7 +127,7 @@ void APRS::APRS_Transmit() {
 		addresses[3].callsign = "WIDE2";
 		addresses[3].ssid = 2;
 	  }
-	
+
 	// Below 1500 meters use a much more generous path (assuming a mobile station)
 	// Path is "WIDE1-1,WIDE2-2"
 	//int nAddresses = 4;
@@ -135,7 +135,7 @@ void APRS::APRS_Transmit() {
 	//addresses[2].ssid = 1;
 	//addresses[3].callsign = "WIDE2";
 	//addresses[3].ssid = 2;
-  
+
 
 	// For debugging print out the path
 	//Serial.print("APRS(");
@@ -162,8 +162,8 @@ void APRS::APRS_Transmit() {
 	//float altitude = gps.GetAltitude();
 	uint16_t heading = 00;
 	float speed = gps.GetSpeed();
-	
-	
+
+
 	//DEBUG_PRINT(gps.GetLatitude());
 	//DEBUG_PRINT(gps.GetLongitude());
 	//DEBUG_PRINT(gps.GetFull_Latitude());
@@ -192,19 +192,19 @@ void APRS::APRS_Transmit() {
 	snprintf(lon_pos, 8, "%i.%i", intpart, decpart);
 	DEBUG_PRINT(F("\nAPRS Longitude:"));
 	DEBUG_PRINT(lon_pos); */
-	
+
 	//const char* const lat_string = "";
 	//const char* const lon_string = "";
-	
+
 	// char temp[12];
-	
+
 	// latToStr(temp, sizeof(temp), lat);
 	// ax25_send_string(temp);				// Lat:
 	// const char* const lat_pos = temp;
 
 	// lonToStr(temp, sizeof(temp), lon);
 	// const char* const lon_pos = temp;
-	
+
 	APRS_Send_with_String(addresses,
 			  nAddresses,
 			  dayOfMonth,
@@ -218,7 +218,7 @@ void APRS::APRS_Transmit() {
 			  SYMBOL_TABLE,
 			  SYMBOL_CHAR,
 			  comment);
-			  
+
 
 	delay(50);
 }
@@ -306,7 +306,7 @@ void APRS::APRS_Send_with_String(const PathAddress * const paths, const int nPat
 void APRS::logBuffer(const uint8_t * const buf, const int bitsSent,
 	const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min)
 	{
-	Serial.printf("Bits in packet %d: ", bitsSent);
+	//Serial.printf("Bits in packet %d: ", bitsSent);
 	Serial.print(dayOfMonth);
 	Serial.print(',');
 	Serial.print(hour);
@@ -395,7 +395,7 @@ uint16_t preambleFlags;
 
 void check_APRS(float altitude, uint16_t APRS_PERIOD) {
 	static unsigned long MessageDelay = 0;	//takes account of delayed APRS messages due to GPS signal loss
-	
+
 	// Time for another APRS frame
 	if ((int32_t) (millis() - transmission_timer) >= 0) {
 		//if (gps.ValidLocation() && (gps.AgeLocation() < (8 * GPS_VALID_POS_TIMEOUT) ) ) {
@@ -437,7 +437,7 @@ void test_broadcastLocation(float altitude) {
 		addresses[3].callsign = "WIDE2";
 		addresses[3].ssid = 2;
 	  }
-	
+
 	// Below 1500 meters use a much more generous path (assuming a mobile station)
 	// Path is "WIDE1-1,WIDE2-2"
 	//int nAddresses = 4;
@@ -445,7 +445,7 @@ void test_broadcastLocation(float altitude) {
 	//addresses[2].ssid = 1;
 	//addresses[3].callsign = "WIDE2";
 	//addresses[3].ssid = 2;
-  
+
 
 	// For debugging print out the path
 	//Serial.print("APRS(");
@@ -473,8 +473,8 @@ void test_broadcastLocation(float altitude) {
 	//float altitude = gps.GetAltitude();
 	uint16_t heading = 00;
 	float speed = gps.GetSpeed();
-	
-	
+
+
 	DEBUG_PRINT(gps.GetLatitude());
 	DEBUG_PRINT(gps.GetLongitude());
 	DEBUG_PRINT(gps.GetFull_Latitude());
@@ -503,11 +503,11 @@ void test_broadcastLocation(float altitude) {
 	snprintf(lon_pos, 8, "%i.%i", intpart, decpart);
 	DEBUG_PRINT(F("\nAPRS Longitude:"));
 	DEBUG_PRINT(lon_pos);
-	
+
 	const char* const lat_string = "";
 	const char* const lon_string = "";
-	
-	
+
+
 	APRS_Send_with_String(addresses,
 			  nAddresses,
 			  dayOfMonth,
@@ -521,10 +521,10 @@ void test_broadcastLocation(float altitude) {
 			  SYMBOL_TABLE,
 			  SYMBOL_CHAR,
 			  comment);
-			  
 
-	delay(50);		   
-			  
+
+	delay(50);
+
 //	// Send the packet
 //	APRS_Send(addresses, nAddresses
 //		,gps.day, gps.hour, gps.minute
@@ -732,10 +732,10 @@ void logBuffer(const uint8_t * const buf, const int bitsSent,
 void APRS_Setup(const uint16_t p_preambleFlags, const uint8_t pttPin,		   \
 				const uint16_t pttDelay, const uint32_t toneLength,			   \
 				const uint32_t silenceLength) {
-	
+
 	preambleFlags = p_preambleFlags;
 	afsk_setup(pttPin, pttDelay, toneLength, silenceLength);
-  
+
 	// Do not start until we get a valid time reference -- for slotted transmissions.
 	transmission_timer = millis() + (1000L * APRS_SLOT);
 }
@@ -883,7 +883,7 @@ void APRS_Send_modified(const PathAddress * const paths, const int nPaths,
 // void APRS_Send()
 // {
   // char temp[12];					  // Temperature (int/ext)
-  // const struct s_address addresses[] = { 
+  // const struct s_address addresses[] = {
 	// {D_CALLSIGN, D_CALLSIGN_ID},	 // Destination callsign
 	// {S_CALLSIGN, S_CALLSIGN_ID},	 // Source callsign (-11 = balloon, -9 = car)
 // #ifdef DIGI_PATH1
@@ -903,7 +903,7 @@ void APRS_Send_modified(const PathAddress * const paths, const int nPaths,
   // ax25_send_byte('/');				 // Symbol table
   // ax25_send_string(gps_aprs_lon);	 // Lon: 000deg and 25.80 min
   // ax25_send_byte('O');				 // Symbol: O=balloon, -=QTH
-  // snprintf(temp, 4, "%03d", (int)(gps_course + 0.5)); 
+  // snprintf(temp, 4, "%03d", (int)(gps_course + 0.5));
   // ax25_send_string(temp);			 // Course (degrees)
   // ax25_send_byte('/');				 // and
   // snprintf(temp, 4, "%03d", (int)(gps_speed + 0.5));

@@ -132,7 +132,7 @@ void loop()
 	#endif
 
 	#if SD_ENABLE
-		sd_card.SD_Record();
+		//sd_card.SD_Record(); //FIXME:: comment/uncomment
 	#endif
 
 	#if PINS_ENABLE
@@ -141,10 +141,30 @@ void loop()
 
 	#if PUSHBUTTON_ENABLE
 		pushbutton.PUSHBUTTON_Update();
-		if(pushbutton.GetbuttonState() == TRUE){ //FIXME::This is now just constantly outputting 0.0V. IDK why. Debouncing ??
+		if(pushbutton.GetbuttonState() == TRUE){
 			#if LED_ENABLE
 				LED_ON(RED_LED);
-				delay(500);
+			#endif
+
+			int x[500];
+			timer myTimer =
+			{
+				0, 100UL, TRUE, TRUE	// lastMillis, waitMillis, IsRepeatable, IsEnabled
+			};
+			int count = 0;
+				//DEBUG_PRINT(F("Button Pressed 1"));
+			while (count < 500) {
+				if(myTimer.CheckTime() == TRUE) {
+								DEBUG_PRINT(count);
+					int input = pins.GetsensorValue();
+					x[count] = input;
+					count++;
+				}
+			}
+				//DEBUG_PRINT(F("Button Pressed 2"));
+
+			//sd_card.SD_arrayPass();
+			#if LED_ENABLE
 				LED_OFF(RED_LED);
 			#endif
 		}

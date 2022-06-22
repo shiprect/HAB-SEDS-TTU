@@ -119,7 +119,7 @@ static uint32_t sine_table_switcher; // The bit mask to switch sin tables quick
 
 static uint32_t currentSampleCount; // How many output sample have been sent for the current bit
 static uint16_t currentStride;    // 1200/2200 for standard AX.25
-static uint16_t currentSample;           // Fixed point 
+static uint16_t currentSample;           // Fixed point
 static uint32_t totalSamplesSent;
 static uint8_t current_byte = 0;
 
@@ -127,7 +127,7 @@ static uint8_t current_byte = 0;
 // Buffer of bytes to send
 static const uint8_t *afsk_packet;
 static uint32_t afsk_packet_size = 0; // How many bytes in the packet
-static uint32_t packet_pos;       // Next bit to be sent out 
+static uint32_t packet_pos;       // Next bit to be sent out
 
 static bool fDoTone;
 static uint32_t toneStop, silenceStop;
@@ -137,8 +137,9 @@ static uint16_t pttDelay;
 static uint32_t toneLength;
 static uint32_t silenceLength;
 
-IntervalTimer timer;
-
+#if TEENSY_ENABLE
+	IntervalTimer timer; //TODO::Change; functionality only available on Teensy???
+#endif
 
 // Returns an entry from the sin table
 // The sin table is 128 elements long, but it emulates a 512 element table
@@ -166,7 +167,7 @@ inline void afsk_output_sample(uint16_t b) {
 
 
 void afsk_timer_stop() {
-    timer.end();
+    //timer.end();//FIXME
     afsk_output_sample(2047); // 50%
 }
 
@@ -176,7 +177,7 @@ void interrupt(void) {
     if (fDoTone) {
         // Send the sound and the silence.
         const uint32_t now = millis();
-        
+
         if (toneStop) {
             if (now >= toneStop) {
                 toneStop = 0;
@@ -192,17 +193,17 @@ void interrupt(void) {
         }
     } else {
         // Send the packet one bit at a time
-    
+
         // If done sending packet
         if (packet_pos == afsk_packet_size) {
             afsk_timer_stop();  // Disable timer
             delay(100); // Leave key open for .1 seconds
-        
+
             if (pttPin) {
                 pinMode(pttPin, OUTPUT);
                 digitalWrite(pttPin, LOW);
             }
-        
+
             busy = false;         // End of transmission
             return;       // Done.
         }
@@ -214,32 +215,32 @@ void interrupt(void) {
             } else {
                 current_byte = current_byte / 2;  // ">>1" forces int conversion
             }
-            
+
             if ((current_byte & 1) == 0) {
                 // Toggle tone (1200 <> 2200)
                 currentStride ^= (SAMPLE_STRIDE_MARK_FIXED_PNT ^ SAMPLE_STRIDE_SPACE_FIXED_PNT);
                 afsk_sine_table = (uint16_t *) ((uint32_t) afsk_sine_table ^ sine_table_switcher);
             }
         }
-        
+
         currentSampleCount += SAMPLE_COUNTER_SCALE;
         if (currentSampleCount >= SAMPLES_PER_BIT_SCALED) { // Is this bit done
             currentSampleCount -= SAMPLES_PER_BIT_SCALED; // Leave residual (fractional) count behind in counter
             packet_pos++; // Go to the next bit
         }
     }
-    
+
     currentSample += currentStride;
     uint16_t s = afsk_read_sample(afsk_sine_table,
                 (uint16_t) ( (currentSample >> FIXED_PNT_BITS) & (SAMPLES_PER_CYCLE - 1) ));
-    
+
     totalSamplesSent += 1;
     afsk_output_sample(s);
 }
 
 
 void afsk_timer_start() {
-    timer.begin(interrupt, INTERRUPT_RATE);
+    //timer.begin(interrupt, INTERRUPT_RATE);//FIXME
 }
 
 
@@ -259,8 +260,8 @@ void afsk_setup(const uint8_t p_pttPin, // Use PTT pin, 0 = do not use PTT
         pinMode(pttPin, OUTPUT);
         digitalWrite(pttPin, LOW);
     }
-    
-    analogWriteResolution(12);
+
+    //analogWriteResolution(12);/FIXME::Not available in arduino???
     afsk_output_sample(2047); // 50%
 }
 
@@ -286,7 +287,7 @@ void afsk_start() {
     currentSampleCount = 0;
     totalSamplesSent = 0;
     busy = true;
-    
+
     if (toneLength == 0) {
         fDoTone = false;
         currentStride = SAMPLE_STRIDE_MARK_FIXED_PNT;
@@ -296,7 +297,7 @@ void afsk_start() {
         silenceStop = toneStop + silenceLength;
         currentStride = SAMPLE_STRIDE_TONE_FIXED_PNT;
     }
-    
+
     sine_table_switcher = ((uint32_t) SIN_TABLE_MARK ^ (uint32_t) SIN_TABLE_SPACE);
 
     if (pttPin) {

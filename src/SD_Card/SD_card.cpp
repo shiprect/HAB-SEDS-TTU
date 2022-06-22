@@ -14,7 +14,7 @@ void SD_card::SD_Setup() {
         ValidSD = 1;
     }
 
-    d//ataFile = SD.open("data.csv",FILE_WRITE);
+    //dataFile = SD.open("data.csv",FILE_WRITE);
     if(dataFile) {
 		//dataFile.print(F("BMP Sea Level Pressure: "));
         //dataFile.print(bmp.GetBaselinePressure());
@@ -161,6 +161,11 @@ void SD_card::SD_Record() {
             ValidSD = 0;
         }
     }
+}
+
+void SD_card::SD_arrayPass() {
+
+
 }
 
 
