@@ -44,7 +44,7 @@
 
 void setup()
 {
-	#if LED_ENABLE               //FIXME:: one of these needs to be removed 
+	/* #if LED_ENABLE               //FIXME:: one of these needs to be removed 
 		pinMode(RED_LED, OUTPUT);
 		pinMode(GREEN_LED, OUTPUT);
 		delay(750);
@@ -53,7 +53,7 @@ void setup()
 		delay(750);
 		LED_OFF(RED_LED);
 		LED_OFF(GREEN_LED);
-	#endif 
+	#endif */
 
 
 	DEBUG_UART.begin(9600); //FIXME::Remove this magic number and put it in config //Other baud rates not supported by macs???(Chris)
@@ -99,14 +99,14 @@ void setup()
 		sd_card.SD_Setup();
 		if(!sd_card.IsValidSD()) {
             //FIXME::Infinite while loops are a bad idea; what if this happened mid flight
-			/*while(1) {																	//FIXME:: Commented out because need 3.3v					
+			while(1) {																	//FIXME:: Commented out because need 3.3v					
 				#if LED_ENABLE
 					LED_TOGGLE(GREEN_LED);
 					LED_TOGGLE(RED_LED);
 				#endif
 				delay(1000);
 				DEBUG_PRINT(F("No Valid SD Card!!!"));
-			} */
+			} 
 		}
 	#endif
 

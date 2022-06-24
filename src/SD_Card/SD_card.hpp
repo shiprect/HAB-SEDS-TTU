@@ -15,11 +15,11 @@
 
 // const int ChipSelectPin = 10; // pin D10 on Nano Every, connected to DI on SD card reader
 
-//TDOD::Is Needed???
-const int CLK = 13; // pin D13/SCK yellow wire - Clock pin
-const int DO = 12; // Digital output pin - white wire  - CIPO
+//TODO::Is Needed???
+const int CLK = 13; // pin D13/SCK grey wire - Clock pin
+const int DO = 12; // Digital output pin - purple wire  - CIPO
 const int DI = 11; // Digital input pin - blue wire  - COPI
-const int CS = 10; // Card select pin - orange wire
+const int CS = 10; // Chip select pin - white wire
 //TODO::Create sd record function in each class and create #ifdef calls here
 class SD_card
 {
