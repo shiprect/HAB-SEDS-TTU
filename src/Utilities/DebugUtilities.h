@@ -21,5 +21,16 @@
 	#endif*/
 #endif
 
+	// TODO::For Chris - Add fprintf() version of DEBUG
+	// This should follow the same macro format as DEBUG__SERIAL
+	// DEBUG__FPRINTF already exists in ProjectConfig.hpp
+	// As a note, the do{}while() is necessary for correct compilation
+	// error checking when the EN_DEBUG macro is set FALSE
+	// In APRS debug I also have macro examples that will do things
+	// like printing the line, function, etc. Having the ability to toggle
+	// all of these using macros would be extremely useful. At the very least,
+	// having the prints always print the line number at the beginning of the
+	// print statements would be nice.`
+
 
 #endif
