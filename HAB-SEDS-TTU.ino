@@ -92,7 +92,7 @@ void setup()
 		pushbutton.PUSHBUTTON_Setup();
 	#endif
 	
-	DEBUG_PRINT(F("idk why this is broken "));
+	//DEBUG_PRINT(F("idk why this is broken "));
 
 
 	#if SD_ENABLE
