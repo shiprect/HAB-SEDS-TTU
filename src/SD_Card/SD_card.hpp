@@ -19,7 +19,7 @@
 const int CLK = 13; // pin D13/SCK grey wire - Clock pin
 const int DO = 12; // Digital output pin - purple wire  - CIPO
 const int DI = 11; // Digital input pin - blue wire  - COPI
-const int CS = BUILTIN_SDCARD; // 10 in nano every Chip select pin - white wire
+const int CS = 10; //BUILTIN_SDCARD; // 10 in nano every Chip select pin - white wire
 //TODO::Create sd record function in each class and create #ifdef calls here
 class SD_card
 {
@@ -27,6 +27,9 @@ class SD_card
         File dataFile;
 
         bool ValidSD = 0;
+		Sd2Card card;
+		SdVolume volume;
+		SdFile root;
 
     public:
         SD_card () {};

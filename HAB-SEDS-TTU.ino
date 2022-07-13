@@ -95,7 +95,7 @@ void setup()
 	//DEBUG_PRINT(F("idk why this is broken "));
 
 
-	#if SD_ENABLE
+	#if SD_ENABLE 
 		sd_card.SD_Setup();
 		if(!sd_card.IsValidSD()) {
             //FIXME::Infinite while loops are a bad idea; what if this happened mid flight
