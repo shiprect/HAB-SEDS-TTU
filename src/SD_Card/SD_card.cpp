@@ -16,7 +16,7 @@ void SD_card::SD_Setup() {
         ValidSD = 1;
     }
 
-    //dataFile = SD.open("data.csv",FILE_WRITE);
+    dataFile = SD.open("data.csv",FILE_WRITE);
     if(dataFile) {
 		//dataFile.print(F("BMP Sea Level Pressure: "));
         //dataFile.print(bmp.GetBaselinePressure());
@@ -165,9 +165,10 @@ void SD_card::SD_Record() {
     }
 }
 
-void SD_card::SD_arrayPass(int *x, int array_Size) {
+void SD_card::SD_arrayPass(int *x, int array_Size) {   // 15 July 2022 - Add stuff about passing to the array here 
     
 		//DEBUG_PRINT(*x);  //
+		
 }
 
 

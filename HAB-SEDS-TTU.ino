@@ -170,7 +170,7 @@ void loop()
 				0, 100UL, TRUE, TRUE	// lastMillis, waitMillis, IsRepeatable, IsEnabled
 			};
 			int count = 0;
-			DEBUG_PRINT(F("Button Pressed 1"));
+			//DEBUG_PRINT(F("Button Pressed 1"));
 			while (count < numberofSamples) {
 				if(myTimer.CheckTime() == TRUE) {
 								DEBUG_PRINT(count);
@@ -179,7 +179,7 @@ void loop()
 					count++;
 				}
 			}
-			DEBUG_PRINT(F("Button Pressed 2"));
+			//DEBUG_PRINT(F("Button Pressed 2"));
 
 			
 			sd_card.SD_arrayPass(x, numberofSamples);
