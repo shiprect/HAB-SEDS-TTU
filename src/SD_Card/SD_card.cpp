@@ -146,7 +146,7 @@ void SD_card::SD_Record() {
 
 			//////////////////////////////////
 	        dataFile.println(F(""));
-	        dataFile.print(pins.GetsensorValue());
+	        dataFile.print(pins.GetsensorValue()); // FIXME:: Move outside SD_Sup so that it can be sent to SD card ? 
 	        dataFile.print(F(","));
 	        dataFile.print(F("\n"));
 
@@ -165,9 +165,11 @@ void SD_card::SD_Record() {
     }
 }
 
-void SD_card::SD_arrayPass(int *x, int array_Size) {   // 15 July 2022 - Add stuff about passing to the array here 
-    
+void SD_card::SD_arrayPass(int *x, int array_Size) {   // Add stuff about passing to the array here 
 		//DEBUG_PRINT(*x);  //
+		for (int ii = 0; ii < numberofSamples; ii++){
+			DEBUG_PRINT(x[ii]); // change DEBUG_PRINT to dataFile.printIn 
+		}
 		
 }
 
