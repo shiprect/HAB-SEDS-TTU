@@ -49,127 +49,30 @@ void SD_card::SD_Record() {
     if ((int32_t) (millis() - sd_timer) >= 0) {
         sd_timer += 1000;
 
-        dataFile = SD.open("data.csv", FILE_WRITE); //opens file to write too
+        
+    }
+}
+
+void SD_card::SD_arrayPass(int *x, int array_Size) {   // Add stuff about passing to the array here 
+		
+		dataFile = SD.open("data.csv", FILE_WRITE); //opens file to write too
         if(dataFile){
-            dataFile.println(F(""));
+			
+			for (int ii = 0; ii < numberofSamples; ii++){ // FIXME:: formatting issue when outputted to DATA.csv 
+			dataFile.println(x[ii]); // Prints out a singular one 
+			dataFile.print(F(","));
+		}
 
-			/*
-            //Bmp Data Group
-            //Print #1
-            dataFile.print(bmp.GetTemperature());
-            dataFile.print(",");
-            //Print #2
-            dataFile.print(bmp.GetPressure());
-            dataFile.print(",");
-            //Print #3
-            dataFile.print(bmp.GetAltitude());
-            dataFile.print(",");
-            //Print #4
-            dataFile.print(bmp.GetMaxAltitude());
-            dataFile.print(",");*/
+		dataFile.println("");
+		
+	    // dataFile.print(pins.GetsensorValue());  
+	   //  dataFile.print(F(","));
 
-            /*//Accelerometer Data Group
-            //Print #5
-            dataFile.print(x);
-            dataFile.print(",");
-            //Print #6
-            dataFile.print(y);
-            dataFile.print(",");
-            //Print #7
-            dataFile.print(z);
-            dataFile.print(",");
-            //Print #8
-            dataFile.print(Orientation);
-            dataFile.print(",");
-            */
-
-			/*
-            //GPS Data Group
-            //Print #9
-            dataFile.print(gps.GetLatitude());
-            dataFile.print(",");
-            //Print #10
-            dataFile.print(gps.GetLongitude());
-            dataFile.print(",");
-            //Print #11
-            dataFile.print(gps.GetAltitude());
-            dataFile.print(",");
-            //Print #12
-            dataFile.print(gps.GetCourse());
-            dataFile.print(",");
-            //Print #13
-            dataFile.print(gps.GetSpeed());
-            dataFile.print(",");
-            //Print #14
-            dataFile.print(gps.GetSatellites());
-            dataFile.print(",");
-            //Print #16
-            dataFile.print(gps.GetFull_Latitude());
-            dataFile.print(",");
-            //Print #17
-            dataFile.print(gps.GetFull_Longitude());
-            dataFile.print(",");
-            //Print #18
-            dataFile.print(gps.GetDate());
-            dataFile.print(",");
-            //Print #19
-            dataFile.print(gps.GetDay());
-            dataFile.print(",");
-            //Print #20
-            dataFile.print(gps.GetHour());
-            dataFile.print(",");
-			dataFile.print(gps.GetMinute());
-            dataFile.print(",");
-			dataFile.print(gps.GetSecond());
-            dataFile.print(",");
-
-
-            //Status Data Group
-            //Print #21
-            dataFile.print(status.IsValidBMP());
-            dataFile.print(",");
-            //Print #22
-            dataFile.print(status.IsValidSD());
-            dataFile.print(",");
-            //Print #23
-            dataFile.print(status.IsRising());
-            dataFile.print(",");
-            //Print #24
-            dataFile.print(status.IsFalling());
-            dataFile.print(",");
-            //Print #25
-            dataFile.print(status.IsLanded());
-            dataFile.print(",");
-
-            dataFile.print("\n");*/
-
-
-			//////////////////////////////////
-	        dataFile.println(F(""));
-	        dataFile.print(pins.GetsensorValue()); // FIXME:: Move outside SD_Sup so that it can be sent to SD card ? 
-	        dataFile.print(F(","));
-	        dataFile.print(F("\n"));
-
-	        DEBUG_PRINT(F(""));
-	        DEBUG_PRINT(pins.GetsensorValue());
-	        DEBUG_PRINT(F(","));
-	        DEBUG_PRINT(F("\n"));
-			///////////////////////////
-
-            dataFile.close(); //Close the file to save
             dataFile.close(); //Close the file to save
             ValidSD = 1;
         } else {
             ValidSD = 0;
         }
-    }
-}
-
-void SD_card::SD_arrayPass(int *x, int array_Size) {   // Add stuff about passing to the array here 
-		//DEBUG_PRINT(*x);  //
-		for (int ii = 0; ii < numberofSamples; ii++){
-			DEBUG_PRINT(x[ii]); // change DEBUG_PRINT to dataFile.printIn 
-		}
 		
 }
 
