@@ -56,7 +56,7 @@ void setup()
 	#endif */
 
 
-	DEBUG_UART.begin(9600); //FIXME::Remove this magic number and put it in config //Other baud rates not supported by macs???(Chris)
+	DEBUG_UART.begin(230400); //FIXME::Remove this magic number and put it in config //Other baud rates not supported by macs???(Chris)
     while (!DEBUG_UART) {
         ; // wait for serial port to connect. Needed for native USB port only
 
@@ -164,7 +164,7 @@ void loop()
 			
 			
 			 
-			int x[numberofSamples];
+			uint16_t x[numberofSamples];
 			timer myTimer =
 			{
 				0, 100UL, TRUE, TRUE	// lastMillis, waitMillis, IsRepeatable, IsEnabled
@@ -173,16 +173,16 @@ void loop()
 			//DEBUG_PRINT(F("Button Pressed 1"));
 			while (count < numberofSamples) {
 				if(myTimer.CheckTime() == TRUE) {
-								DEBUG_PRINT(count);
-					int input = pins.GetsensorValue();
+					uint16_t input = pins.GetsensorValue();
 					x[count] = input;
 					count++;
+					DEBUG_PRINT(input); 
 				}
 			}
 			//DEBUG_PRINT(F("Button Pressed 2"));
 
 			
-			sd_card.SD_arrayPass(x, numberofSamples);
+			sd_card.SD_arrayPass(x);
 			
 			#if LED_ENABLE
 				LED_OFF(RED_LED);

@@ -53,14 +53,17 @@ void SD_card::SD_Record() {
     }
 }
 
-void SD_card::SD_arrayPass(int *x, int array_Size) {   // Add stuff about passing to the array here 
+void SD_card::SD_arrayPass(int *x) {   // Add stuff about passing to the array here 
 		
-		dataFile = SD.open("data.csv", FILE_WRITE); //opens file to write too
+		dataFile = SD.open("data.txt", FILE_WRITE); //opens file to write too
         if(dataFile){
-			
-			for (int ii = 0; ii < numberofSamples; ii++){ // FIXME:: formatting issue when outputted to DATA.csv 
-			dataFile.println(x[ii]); // Prints out a singular one 
-			dataFile.print(F(","));
+			size_t n = sizeof(x) / sizeof(uint16_t);
+			for (int ii = 0; ii < n; ii++){ // FIXME:: formatting issue when outputted to DATA.csv 
+			dataFile.print(x[ii]); // Prints out a singular one 
+			//DEBUG_PRINT(x[ii]); 
+			//DEBUG_PRINT(":)"); 
+
+			//dataFile.print(F(","));
 		}
 
 		dataFile.println("");
@@ -69,10 +72,11 @@ void SD_card::SD_arrayPass(int *x, int array_Size) {   // Add stuff about passin
 	   //  dataFile.print(F(","));
 
             dataFile.close(); //Close the file to save
-            ValidSD = 1;
+			DEBUG_PRINT("SD Write_array is finished"); 
         } else {
             ValidSD = 0;
         }
+		
 		
 }
 

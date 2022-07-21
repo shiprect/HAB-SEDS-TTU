@@ -37,7 +37,7 @@ class SD_card
 
         void SD_Setup();
         void SD_Record();
-		void SD_arrayPass(int *x, int array_Size); //FIXME::
+		void SD_arrayPass(int *x); //FIXME::
 	
 		
         bool IsValidSD();

@@ -170,7 +170,7 @@ const uint8_t APRS_RANDOM = 30;                // Adjusts time to next transmiss
 const uint8_t GPS_VALID_POS_TIMEOUT = 50;
 const uint32_t GPS_BAUDRATE = 9600;
 
-const uint32_t numberofSamples = 500;
+const uint32_t numberofSamples = 100;
 
 
 #endif
