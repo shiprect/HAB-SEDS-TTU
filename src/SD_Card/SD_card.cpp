@@ -55,7 +55,7 @@ void SD_card::SD_Record() {
 
 void SD_card::SD_arrayPass(int *x) {   // Add stuff about passing to the array here 
 		
-		dataFile = SD.open("data.txt", FILE_WRITE); //opens file to write too
+    dataFile = SD.open("data.csv",FILE_WRITE); // 
         if(dataFile){
 			size_t n = sizeof(x) / sizeof(uint16_t);
 			for (int ii = 0; ii < n; ii++){ // FIXME:: formatting issue when outputted to DATA.csv 
