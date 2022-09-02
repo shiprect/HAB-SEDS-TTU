@@ -147,7 +147,7 @@ void loop()
 			#endif
 
 			int x[500];
-			timer myTimer =
+			SoftTimer_Struct myTimer =
 			{
 				0, 100UL, TRUE, TRUE	// lastMillis, waitMillis, IsRepeatable, IsEnabled
 			};

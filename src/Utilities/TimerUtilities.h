@@ -1,8 +1,8 @@
-#ifndef TIMER_H
-#define TIMER_H
+#ifndef __TIMERUTILS_H__
+#define __TIMERUTILS_H__
 
 
-struct timer {
+struct SoftTimer_Struct {
 	//**********************************
 	//	Create an instance by calling:
 	//		timer myTimer =
@@ -36,4 +36,4 @@ struct timer {
 };
 
 
-#endif //TIMER_H
+#endif //TIMERUTILS_H
