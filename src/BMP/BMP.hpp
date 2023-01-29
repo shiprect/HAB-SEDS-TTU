@@ -10,32 +10,39 @@
 #include "../../Config.h"
 
 
+//TODO::DEBUG_PRINT() should be reworked to use a custom DEBUG_BMP that can be macro toggled for this class
 class BMP {
-    private:
-        Adafruit_BMP085_Unified BMPModule = Adafruit_BMP085_Unified(10085);
+	private:
+		Adafruit_BMP085_Unified BMPModule = Adafruit_BMP085_Unified( 10085
+		); //TODO::Should be modified to work for other BMP types, type passed into constructor
 
-        bool ValidBMP;
+		//TODO::These values should be initialized appropriately here
+		bool ValidBMP;
 
-        float BaselinePressure;
-        float Pressure;
-        float Temperature;
-        float Altitude;
-        float MaxAltitude;
+		float BaselinePressure;
+		float Pressure;
+		float Temperature;
+		float Altitude;
+		float MaxAltitude;
 
-    public:
-        BMP () {};
-        ~BMP() {};
+	public:
+		BMP() {
+		};
 
-        void BMP_Setup();
-        void BMP_Update();
+		~BMP() {
+		};
 
-        bool IsValidBMP();
 
-        float GetBaselinePressure();
-        float GetPressure();
-        float GetTemperature();
-        float GetAltitude();
-        float GetMaxAltitude();
+		void BMP_Setup();//TODO::should return true if successful, false otherwise
+		void BMP_Update();//TODO::should return true if successful, false otherwise
+
+		bool IsValidBMP();
+
+		float GetBaselinePressure();
+		float GetPressure();
+		float GetTemperature();
+		float GetAltitude();
+		float GetMaxAltitude();
 };
 
 extern BMP bmp;

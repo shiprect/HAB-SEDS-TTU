@@ -11,52 +11,49 @@ uint16_t preambleFlags;
 
 ////////////////////
 // Convert latitude from a float to a string
-void latToStr(char * const s, const int size, float lat)
-{
+void latToStr( char *const s, const int size, float lat ) {
 	char hemisphere = 'N';
-	if (lat < 0) {
+	if ( lat < 0 ) {
 		lat = -lat;
 		hemisphere = 'S';
 	}
 	const int deg = (int) lat;
-	lat = (lat - (float) deg) * 60.0f;
+	lat = ( lat - (float) deg ) * 60.0f;
 	const int min = (int) lat;
-	lat = (lat - (float) min) * 100.0f;
-	const int minTenths = (int) (lat + 0.5); // Round the tenths
-	snprintf(s, size, "%02d%02d.%02d%c", deg, min, minTenths, hemisphere);
+	lat = ( lat - (float) min ) * 100.0f;
+	const int minTenths = (int) ( lat + 0.5 ); // Round the tenths
+	snprintf( s, size, "%02d%02d.%02d%c", deg, min, minTenths, hemisphere );
 }
 
 
 // Convert longitude from a float to a string
-void lonToStr(char * const s, const int size, float lon)
-{
+void lonToStr( char *const s, const int size, float lon ) {
 	char hemisphere = 'E';
-	if (lon < 0) {
+	if ( lon < 0 ) {
 		lon = -lon;
 		hemisphere = 'W';
 	}
 	const int deg = (int) lon;
-	lon = (lon - (float) deg) * 60.0f;
+	lon = ( lon - (float) deg ) * 60.0f;
 	const int min = (int) lon;
-	lon = (lon - (float) min) * 100.0f;
-	const int minTenths = (int) (lon + 0.5); // Round the tenths
-	snprintf(s, size, "%03d%02d.%02d%c", deg, min, minTenths, hemisphere);
+	lon = ( lon - (float) min ) * 100.0f;
+	const int minTenths = (int) ( lon + 0.5 ); // Round the tenths
+	snprintf( s, size, "%03d%02d.%02d%c", deg, min, minTenths, hemisphere );
 }
 /////////////////
 
 
-void APRS::APRS_Setup(	const uint16_t p_preambleFlags,	  // number of preambleFlags to send, must be at least 1 to frame packet
-						const uint8_t pttPin,			// Use PTT pin, 0 = do not use PTT
-						const uint16_t pttDelay,		// ms to wait after PTT to transmit
-						const uint32_t toneLength,
-						const uint32_t silenceLength	// Emit sub-audio tone before packet to trigger VOX
-						)
-{
+void APRS::APRS_Setup(
+		const uint16_t p_preambleFlags,      // number of preambleFlags to send, must be at least 1 to frame packet
+		const uint8_t pttPin,            // Use PTT pin, 0 = do not use PTT
+		const uint16_t pttDelay,        // ms to wait after PTT to transmit
+		const uint32_t toneLength, const uint32_t silenceLength    // Emit sub-audio tone before packet to trigger VOX
+) {
 	preambleFlags = p_preambleFlags;
-	afsk_setup(pttPin, pttDelay, toneLength, silenceLength);
+	afsk_setup( pttPin, pttDelay, toneLength, silenceLength );
 
 	// Do not start until we get a valid time reference -- for slotted transmissions.
-	transmission_timer = millis() + (1000L * APRS_SLOT);
+	transmission_timer = millis() + ( 1000L * APRS_SLOT );
 
 	ValidAPRS = TRUE;
 }
@@ -64,31 +61,31 @@ void APRS::APRS_Setup(	const uint16_t p_preambleFlags,	  // number of preambleFl
 
 void APRS::APRS_Update() {
 
-	if(!status.IsLaunched()) {
+	if ( !status.IsLaunched()) {
 		APRS_PERIOD = 120;
-	//} else if(status.IsLanded()) {
-	//	APRS_PERIOD = 300;
+		//} else if(status.IsLanded()) {
+		//	APRS_PERIOD = 300;
 	}
 	else {
 		APRS_PERIOD = 563;
 	}
 
-	static unsigned long MessageDelay = 0;	//takes account of delayed APRS messages due to GPS signal loss
+	static unsigned long MessageDelay = 0;    //takes account of delayed APRS messages due to GPS signal loss
 
 	// Time for another APRS frame
-	if ((int32_t) (millis() - transmission_timer) >= 0) {
+	if (( int32_t )( millis() - transmission_timer ) >= 0 ) {
 		//if (gps.ValidLocation() && (gps.AgeLocation() < (8 * GPS_VALID_POS_TIMEOUT) ) ) {
-			APRS_Transmit();
-			transmission_timer += ( (APRS_PERIOD * 1000L) + MessageDelay);
-			MessageDelay = 0;
-			DEBUG_PRINT(F("\nAPRS message sent. GPS signal good."));
+		APRS_Transmit();
+		transmission_timer += (( APRS_PERIOD * 1000L ) + MessageDelay );
+		MessageDelay = 0;
+		DEBUG_PRINT( F( "\nAPRS message sent. GPS signal good." ));
 		//} else {
 		//	  DEBUG_PRINT(F("\nNo APRS message sent. GPS signal problem."));
 		//}
-	} else {
+	}
+	else {
 		//MessageDelay = millis();
 	}
-
 
 
 }
@@ -99,11 +96,10 @@ bool APRS::IsValidAPRS() {
 }
 
 void APRS::APRS_Transmit() {
-	struct PathAddress addresses[] = {
-		{(char *)D_CALLSIGN, D_CALLSIGN_ID},  // Destination callsign
-		{(char *)S_CALLSIGN, S_CALLSIGN_ID},  // Source callsign
-		{(char *)NULL, 0}, // Digi1 (first digi in the chain)
-		{(char *)NULL, 0}  // Digi2 (second digi in the chain)
+	struct PathAddress addresses[] = {{ (char *) D_CALLSIGN, D_CALLSIGN_ID },  // Destination callsign
+	                                  { (char *) S_CALLSIGN, S_CALLSIGN_ID },  // Source callsign
+	                                  { (char *) NULL,       0 }, // Digi1 (first digi in the chain)
+	                                  { (char *) NULL,       0 }  // Digi2 (second digi in the chain)
 	};
 
 
@@ -111,22 +107,23 @@ void APRS::APRS_Transmit() {
 
 
 	//	// If above 5000 feet switch to a single hop path
-	  int nAddresses;
-	  if (altitude > 1500) {
+	int nAddresses;
+	if ( altitude > 1500 ) {
 		// APRS recomendations for > 5000 feet is:
 		// Path: WIDE2-1 is acceptable, but no path is preferred.
 		nAddresses = 3;
-		addresses[2].callsign = "WIDE2";
-		addresses[2].ssid = 1; //orig = 1 ===== 0-VIA;1-wide1-1;2wide2-2
-	  } else {
+		addresses[ 2 ].callsign = "WIDE2";
+		addresses[ 2 ].ssid = 1; //orig = 1 ===== 0-VIA;1-wide1-1;2wide2-2
+	}
+	else {
 		// Below 1500 meters use a much more generous path (assuming a mobile station)
 		// Path is "WIDE1-1,WIDE2-2"
 		nAddresses = 4;
-		addresses[2].callsign = "WIDE1";
-		addresses[2].ssid = 1;
-		addresses[3].callsign = "WIDE2";
-		addresses[3].ssid = 2;
-	  }
+		addresses[ 2 ].callsign = "WIDE1";
+		addresses[ 2 ].ssid = 1;
+		addresses[ 3 ].callsign = "WIDE2";
+		addresses[ 3 ].ssid = 2;
+	}
 
 	// Below 1500 meters use a much more generous path (assuming a mobile station)
 	// Path is "WIDE1-1,WIDE2-2"
@@ -142,12 +139,12 @@ void APRS::APRS_Transmit() {
 	//Serial.print(nAddresses);
 	// Serial.print("): ");
 	// for (int i=0; i < nAddresses; i++) {
-		// Serial.print(addresses[i].callsign);
-		// Serial.print('-');
-		// Serial.print(addresses[i].ssid);
-		// if (i < nAddresses-1) {
-			// Serial.print(',');
-		// }
+	// Serial.print(addresses[i].callsign);
+	// Serial.print('-');
+	// Serial.print(addresses[i].ssid);
+	// if (i < nAddresses-1) {
+	// Serial.print(',');
+	// }
 	// }
 	// Serial.print(' ');
 	// Serial.print(SYMBOL_TABLE);
@@ -205,22 +202,13 @@ void APRS::APRS_Transmit() {
 	// lonToStr(temp, sizeof(temp), lon);
 	// const char* const lon_pos = temp;
 
-	APRS_Send_with_String(addresses,
-			  nAddresses,
-			  dayOfMonth,
-			  hour,
-			  min,
-			  lat,
-			  lon, // degrees
-			  altitude, // meters
-			  heading,
-			  speed,
-			  SYMBOL_TABLE,
-			  SYMBOL_CHAR,
-			  comment);
+	APRS_Send_with_String( addresses, nAddresses, dayOfMonth, hour, min, lat, lon, // degrees
+	                       altitude, // meters
+	                       heading, speed, SYMBOL_TABLE, SYMBOL_CHAR, comment
+	);
 
 
-	delay(50);
+	delay( 50 );
 }
 
 
@@ -230,72 +218,68 @@ void APRS::APRS_Transmit() {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void APRS::APRS_Send_with_String(const PathAddress * const paths, const int nPaths,
-	const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min,
-	const float lat,
-	const float lon,
-	const float altitude, // meters
-	const uint16_t heading, // degrees
-	const float speed, const char symbolTableIndicator, const char symbol,
-	const char * const comment)
-{
+void APRS::APRS_Send_with_String(
+		const PathAddress *const paths, const int nPaths, const uint8_t dayOfMonth, const uint8_t hour,
+		const uint8_t min, const float lat, const float lon, const float altitude, // meters
+		const uint16_t heading, // degrees
+		const float speed, const char symbolTableIndicator, const char symbol, const char *const comment
+) {
 	uint8_t buf[MAXSENDBUFFER];
 	char temp[12];
 
-	ax25_initBuffer(buf, sizeof(buf));
+	ax25_initBuffer( buf, sizeof( buf ));
 
-	ax25_send_header(paths, nPaths, preambleFlags);
+	ax25_send_header( paths, nPaths, preambleFlags );
 
-	ax25_send_byte('/'); // Report w/ timestamp, no APRS messaging. $ = NMEA raw data
-	snprintf(temp, sizeof(temp), "%02u%02u%02uz", (unsigned int) dayOfMonth,
-												  (unsigned int) hour,
-												  (unsigned int) min);
-	ax25_send_string(temp);
+	ax25_send_byte( '/' ); // Report w/ timestamp, no APRS messaging. $ = NMEA raw data
+	snprintf( temp, sizeof( temp ), "%02u%02u%02uz", (unsigned int) dayOfMonth, (unsigned int) hour,
+	          (unsigned int) min
+	);
+	ax25_send_string( temp );
 
-	latToStr(temp, sizeof(temp), lat);
-	ax25_send_string(temp);	//Lat:
+	latToStr( temp, sizeof( temp ), lat );
+	ax25_send_string( temp );    //Lat:
 	//snprintf(temp, sizeof(temp), "%03u", lat_string);
 	//ax25_send_string(lat_string);
 
-	ax25_send_byte(symbolTableIndicator);			// Which Symbol table to use
+	ax25_send_byte( symbolTableIndicator );            // Which Symbol table to use
 
-	lonToStr(temp, sizeof(temp), lon);
-	ax25_send_string(temp);	  // Lon: 000deg and 25.80 min
+	lonToStr( temp, sizeof( temp ), lon );
+	ax25_send_string( temp );      // Lon: 000deg and 25.80 min
 	//snprintf(temp, sizeof(temp), "%03u", lon_string);
 	//ax25_send_string(lon_string);	  // Lon: 000deg and 25.80 min
 
-	ax25_send_byte(symbol);	 // The symbol
+	ax25_send_byte( symbol );     // The symbol
 
-	snprintf(temp, sizeof(temp), "%03u", heading);
-	ax25_send_string(temp);				// Heading (degrees)
+	snprintf( temp, sizeof( temp ), "%03u", heading );
+	ax25_send_string( temp );                // Heading (degrees)
 
-	ax25_send_byte('/');				// and
+	ax25_send_byte( '/' );                // and
 
-	snprintf(temp, sizeof(temp), "%03d", (unsigned int) (speed + 0.5));
-	ax25_send_string(temp);				// speed (knots)
+	snprintf( temp, sizeof( temp ), "%03d", (unsigned int) ( speed + 0.5 ));
+	ax25_send_string( temp );                // speed (knots)
 
-	ax25_send_string("/A="); // Altitude (feet). Goes anywhere in the comment area
+	ax25_send_string( "/A=" ); // Altitude (feet). Goes anywhere in the comment area
 
-	snprintf(temp, sizeof(temp), "%06ld", (long) (altitude / 0.3048)); // 10000 ft = 3048 m
-	ax25_send_string(temp);
+	snprintf( temp, sizeof( temp ), "%06ld", (long) ( altitude / 0.3048 )); // 10000 ft = 3048 m
+	ax25_send_string( temp );
 
-	ax25_send_string(comment);	   // Comment
+	ax25_send_string( comment );       // Comment
 
 	ax25_send_footer();
 
 	Serial.flush(); // Make sure all Serial data (which is based on interrupts) is done before you start sending.
 
 	// Set the buffer of bits we are going to send
-	afsk_set_buffer(buf, ax25_getPacketSize());
+	afsk_set_buffer( buf, ax25_getPacketSize());
 
 	Serial.flush(); // Wait until all characters are sent
 
 	// OK, no more operations until this is done.
 	afsk_start();
-	while (afsk_busy())
-	;
+	while ( afsk_busy());
 
-	logBuffer(buf, ax25_getPacketSize(), dayOfMonth, hour, min);
+	logBuffer( buf, ax25_getPacketSize(), dayOfMonth, hour, min );
 }
 
 
@@ -303,69 +287,73 @@ void APRS::APRS_Send_with_String(const PathAddress * const paths, const int nPat
 
 // Dump out the AX25 packet in a semi-readable way
 // Note, the end of header and CRC are sent as ASCII characters, which they aren't
-void APRS::logBuffer(const uint8_t * const buf, const int bitsSent,
-	const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min)
-	{
+void APRS::logBuffer(
+		const uint8_t *const buf, const int bitsSent, const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min
+) {
 	//Serial.printf("Bits in packet %d: ", bitsSent);
-	Serial.print(dayOfMonth);
-	Serial.print(',');
-	Serial.print(hour);
-	Serial.print(',');
-	Serial.print(min);
-	Serial.print(',');
+	// #TODO::FIXME
+	Serial.print( dayOfMonth );
+	Serial.print( ',' );
+	Serial.print( hour );
+	Serial.print( ',' );
+	Serial.print( min );
+	Serial.print( ',' );
 
 	uint8_t frameState = 0; // 0-No start, 1-start, 2-in header, 3-In info
 	uint8_t bSoFar = 0x00;
 	uint8_t gotBit = 0;
 	int numOnes = 0;
-	for (int onBit = 0; onBit < bitsSent; onBit++) {
-		uint8_t bit = buf[onBit >> 3] & (1 << (onBit & 7));
-		if (numOnes == 5) {
+	for ( int onBit = 0; onBit < bitsSent; onBit++ ) {
+		uint8_t bit = buf[ onBit >> 3 ] & ( 1 << ( onBit & 7 ));
+		if ( numOnes == 5 ) {
 			// This may be a 0 due to bit stuffing
-			if (bit) { // Maybe it's a 0x7e
+			if ( bit ) { // Maybe it's a 0x7e
 				onBit++;
-				bit = buf[onBit >> 3] & (1 << (onBit & 7));
-				if (gotBit == 6 && bSoFar == 0x3e && !bit) {
+				bit = buf[ onBit >> 3 ] & ( 1 << ( onBit & 7 ));
+				if ( gotBit == 6 && bSoFar == 0x3e && !bit ) {
 					// Got 0x7e frame start/end
-					if (frameState == 0) {
+					if ( frameState == 0 ) {
 						frameState = 1;
-						Serial.print('[');
-					} else
-						if (frameState == 3 || frameState == 2) {
-							frameState = 0;
-							Serial.print(']');
-						}
-						bSoFar = 0x00;
-						gotBit = 0;
-					} else {
-						Serial.print('X'); // Error
+						Serial.print( '[' );
 					}
+					else if ( frameState == 3 || frameState == 2 ) {
+						frameState = 0;
+						Serial.print( ']' );
+					}
+					bSoFar = 0x00;
+					gotBit = 0;
+				}
+				else {
+					Serial.print( 'X' ); // Error
+				}
 			}
-		numOnes = 0;
-		continue;
+			numOnes = 0;
+			continue;
 		}
-		if (bit) {
+		if ( bit ) {
 			// Set the one bit
-			bSoFar |= (1 << gotBit);
+			bSoFar |= ( 1 << gotBit );
 			numOnes++;
-		} else {
+		}
+		else {
 			numOnes = 0;
 		}
 		gotBit++;
-		if (gotBit == 8) {
+		if ( gotBit == 8 ) {
 			// Got a byte;
-			if (frameState == 1) {
+			if ( frameState == 1 ) {
 				frameState = 2;
-			} else
-				if (frameState == 2 && bSoFar == 0xf0) { // 0xf0 is the last byte of the header
-					frameState = 3;
-				}
-			if (frameState == 2) {
+			}
+			else if ( frameState == 2 && bSoFar == 0xf0 ) { // 0xf0 is the last byte of the header
+				frameState = 3;
+			}
+			if ( frameState == 2 ) {
 				// In header
-				Serial.print((char) (bSoFar >> 1));
-			} else {
+				Serial.print((char) ( bSoFar >> 1 ));
+			}
+			else {
 				// In info
-				Serial.print((char) bSoFar);
+				Serial.print((char) bSoFar );
 			}
 			bSoFar = 0x00;
 			gotBit = 0;
@@ -882,49 +870,49 @@ void APRS_Send_modified(const PathAddress * const paths, const int nPaths,
 ////Exported functions
 // void APRS_Send()
 // {
-  // char temp[12];					  // Temperature (int/ext)
-  // const struct s_address addresses[] = {
-	// {D_CALLSIGN, D_CALLSIGN_ID},	 // Destination callsign
-	// {S_CALLSIGN, S_CALLSIGN_ID},	 // Source callsign (-11 = balloon, -9 = car)
+// char temp[12];					  // Temperature (int/ext)
+// const struct s_address addresses[] = {
+// {D_CALLSIGN, D_CALLSIGN_ID},	 // Destination callsign
+// {S_CALLSIGN, S_CALLSIGN_ID},	 // Source callsign (-11 = balloon, -9 = car)
 // #ifdef DIGI_PATH1
-	// {DIGI_PATH1, DIGI_PATH1_TTL}, // Digi1 (first digi in the chain)
+// {DIGI_PATH1, DIGI_PATH1_TTL}, // Digi1 (first digi in the chain)
 // #endif
 // #ifdef DIGI_PATH2
-	// {DIGI_PATH2, DIGI_PATH2_TTL}, // Digi2 (second digi in the chain)
+// {DIGI_PATH2, DIGI_PATH2_TTL}, // Digi2 (second digi in the chain)
 // #endif
-  // };
+// };
 
-  // ax25_send_header(addresses, sizeof(addresses)/sizeof(s_address));
-  // ax25_send_byte('/');				 // Report w/ timestamp, no APRS messaging. $ = NMEA raw data
-  ////ax25_send_string("021709z");	   // 021709z = 2nd day of the month, 17:09 zulu (UTC/GMT)
-  // ax25_send_string(gps_time);		 // 170915 = 17h:09m:15s zulu (not allowed in Status Reports)
-  // ax25_send_byte('h');
-  // ax25_send_string(gps_aprs_lat);	 // Lat: 38deg and 22.20 min (.20 are NOT seconds, but 1/100th of minutes)
-  // ax25_send_byte('/');				 // Symbol table
-  // ax25_send_string(gps_aprs_lon);	 // Lon: 000deg and 25.80 min
-  // ax25_send_byte('O');				 // Symbol: O=balloon, -=QTH
-  // snprintf(temp, 4, "%03d", (int)(gps_course + 0.5));
-  // ax25_send_string(temp);			 // Course (degrees)
-  // ax25_send_byte('/');				 // and
-  // snprintf(temp, 4, "%03d", (int)(gps_speed + 0.5));
-  // ax25_send_string(temp);			 // speed (knots)
-  // ax25_send_string("/A=");			 // Altitude (feet). Goes anywhere in the comment area
-  // snprintf(temp, 7, "%06ld", (long)(meters_to_feet(gps_altitude) + 0.5));
-  // ax25_send_string(temp);
-  // ax25_send_string("/Ti=");
-  // snprintf(temp, 6, "%d", sensors_int_lm60());
-  // ax25_send_string(temp);
-  // ax25_send_string("/Te=");
-  // snprintf(temp, 6, "%d", sensors_ext_lm60());
-  // ax25_send_string(temp);
-  // ax25_send_string("/V=");
-  // snprintf(temp, 6, "%d", sensors_vin());
-  // ax25_send_string(temp);
-  // ax25_send_byte(' ');
-  // ax25_send_string(APRS_COMMENT);	 // Comment
-  // ax25_send_footer();
+// ax25_send_header(addresses, sizeof(addresses)/sizeof(s_address));
+// ax25_send_byte('/');				 // Report w/ timestamp, no APRS messaging. $ = NMEA raw data
+////ax25_send_string("021709z");	   // 021709z = 2nd day of the month, 17:09 zulu (UTC/GMT)
+// ax25_send_string(gps_time);		 // 170915 = 17h:09m:15s zulu (not allowed in Status Reports)
+// ax25_send_byte('h');
+// ax25_send_string(gps_aprs_lat);	 // Lat: 38deg and 22.20 min (.20 are NOT seconds, but 1/100th of minutes)
+// ax25_send_byte('/');				 // Symbol table
+// ax25_send_string(gps_aprs_lon);	 // Lon: 000deg and 25.80 min
+// ax25_send_byte('O');				 // Symbol: O=balloon, -=QTH
+// snprintf(temp, 4, "%03d", (int)(gps_course + 0.5));
+// ax25_send_string(temp);			 // Course (degrees)
+// ax25_send_byte('/');				 // and
+// snprintf(temp, 4, "%03d", (int)(gps_speed + 0.5));
+// ax25_send_string(temp);			 // speed (knots)
+// ax25_send_string("/A=");			 // Altitude (feet). Goes anywhere in the comment area
+// snprintf(temp, 7, "%06ld", (long)(meters_to_feet(gps_altitude) + 0.5));
+// ax25_send_string(temp);
+// ax25_send_string("/Ti=");
+// snprintf(temp, 6, "%d", sensors_int_lm60());
+// ax25_send_string(temp);
+// ax25_send_string("/Te=");
+// snprintf(temp, 6, "%d", sensors_ext_lm60());
+// ax25_send_string(temp);
+// ax25_send_string("/V=");
+// snprintf(temp, 6, "%d", sensors_vin());
+// ax25_send_string(temp);
+// ax25_send_byte(' ');
+// ax25_send_string(APRS_COMMENT);	 // Comment
+// ax25_send_footer();
 
-  // ax25_flush_frame();				 // Tell the modem to go
+// ax25_flush_frame();				 // Tell the modem to go
 // }
 
 /*

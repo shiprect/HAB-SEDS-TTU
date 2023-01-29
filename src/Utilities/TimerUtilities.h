@@ -22,14 +22,17 @@ struct SoftTimer_Struct {
 	bool IsEnabled;             // Is "this timer" enabled/allowed to be accessed
 
 	bool CheckTime() {
-		if ( IsEnabled  &&  (( millis() - lastMillis ) >= waitMillis ) ) {  // Run if Timer enabled and one period has passed
+		if ( IsEnabled
+		     && (( millis() - lastMillis ) >= waitMillis )) {  // Run if Timer enabled and one period has passed
 			if ( IsRepeatable ) {  //Should the timer reset or expire
 				lastMillis += waitMillis;
-			} else {
+			}
+			else {
 				IsEnabled = FALSE;  // Required to ensure that the timer does not execute when millis() runs over
 			}
 			return TRUE;
-		} else {
+		}
+		else {
 			return FALSE;
 		}
 	}
