@@ -4,13 +4,14 @@
 #include <Arduino.h>
 #include "../../Config.h"
 
-
+//TODO::PUSHBUTTON Should have both Update check function, and also have an interrupt based version that is configurable
+// All of this is not verified and should be tested to see if it actually works, including proper debounce
 class PUSHBUTTON {
     private:
 
         bool ValidPUSHBUTTON;
-			
-			// Debouncing Variables: 
+
+			// Debouncing Variables:
 		int buttonState;             // the current reading from the input pin
 		int lastButtonState = LOW;   // the previous reading from the input pin
 		float voltage;
@@ -20,7 +21,7 @@ class PUSHBUTTON {
 		unsigned long debounceDelay = 50;    // the debounce time; increase if the output flickers
 		const int buttonPin = 9; // trying D9 as of 20 june 2022
 		// D13 on board, connected to the momentary PushButton (onboard led??)
-		
+
 
     public:
         PUSHBUTTON () {};

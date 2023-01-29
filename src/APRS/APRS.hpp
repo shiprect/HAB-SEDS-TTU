@@ -12,49 +12,52 @@
 
 
 //TODO::add this to the class
-struct PathAddress
-{
-    const char *callsign;
-    uint8_t ssid;
+struct PathAddress {
+	const char *callsign;
+	uint8_t ssid;
 };
 
 
 //TODO::Create a robust method of message passing and transmission
 class APRS {
-    private:
+	private:
 
-        bool ValidAPRS;
+		bool ValidAPRS;
 
-        //TODO::Fix method of APRS period determination, config, and randomness
+		//TODO::Fix method of APRS period determination, config, and randomness
 		uint16_t APRS_PERIOD = 300;
 
-		void APRS_Send_with_String(const PathAddress * const paths, const int nPaths,
-										const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min,
-										const float lat,
-										const float lon,
-										const float altitude, // meters
-										const uint16_t heading, // degrees
-										const float speed, const char symbolTableIndicator, const char symbol,
-										const char * const comment);
-		void logBuffer(const uint8_t * const buf, const int bitsSent,
-			const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min);
+		void APRS_Send_with_String(
+				const PathAddress *const paths, const int nPaths, const uint8_t dayOfMonth, const uint8_t hour,
+				const uint8_t min, const float lat, const float lon, const float altitude, // meters
+				const uint16_t heading, // degrees
+				const float speed, const char symbolTableIndicator, const char symbol, const char *const comment
+		);
+		void logBuffer(
+				const uint8_t *const buf, const int bitsSent, const uint8_t dayOfMonth, const uint8_t hour,
+				const uint8_t min
+		);
 
 
-    public:
-        APRS () {};
-        ~APRS() {};
+	public:
+		APRS() {
+		};
 
-        void APRS_Setup(const uint16_t p_preambleFlags,   // number of preambleFlags to send, must be at least 1 to frame packet
-						const uint8_t pttPin,           // Use PTT pin, 0 = do not use PTT
-						const uint16_t pttDelay,        // ms to wait after PTT to transmit
-						const uint32_t toneLength,
-						const uint32_t silenceLength    // Emit sub-audio tone before packet to trigger VOX
-						);
-        void APRS_Update();
+		~APRS() {
+		};
 
-        bool IsValidAPRS();
+		void APRS_Setup(
+				const uint16_t p_preambleFlags,   // number of preambleFlags to send, must be at least 1 to frame packet
+				const uint8_t pttPin,           // Use PTT pin, 0 = do not use PTT
+				const uint16_t pttDelay,        // ms to wait after PTT to transmit
+				const uint32_t toneLength,
+				const uint32_t silenceLength    // Emit sub-audio tone before packet to trigger VOX
+		);//TODO::should return true if successful, false otherwise
+		void APRS_Update();//TODO::should return true if successful, false otherwise
 
-        void APRS_Transmit();
+		bool IsValidAPRS();
+
+		void APRS_Transmit();
 };
 
 extern APRS aprs;

@@ -7,7 +7,7 @@
 #define ON 1
 #define OFF 0
 
-
+//TODO::Should we get rid of this or add an STM version???
 #if EMBEDDED__ARDUINO
 	#define LED_TOGGLE( x ) digitalWrite(x, digitalRead(x) ? LOW : HIGH)
 	#define LED_ON( x ) digitalWrite(x, HIGH)

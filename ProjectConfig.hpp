@@ -32,7 +32,7 @@
 // Board Configuration
 // --------------------------------------------------------------------------
 #ifndef TEENSY_ENABLE
-	#define TEENSY_ENABLE    FALSE
+	#define TEENSY_ENABLE    TRUE
 #endif
 #ifndef ESP32_ENABLE
 	#define ESP32_ENABLE    FALSE
@@ -41,7 +41,7 @@
 	#define STM32_ENABLE    FALSE
 #endif
 #ifndef NANO_ENABLE
-	#define NANO_ENABLE    TRUE
+	#define NANO_ENABLE    FALSE
 #endif
 // --------------------------------------------------------------------------
 // Module Configuration
@@ -53,13 +53,13 @@
 	#define APRS_ENABLE FALSE   //fix compilation failing when this is commented
 #endif
 #ifndef BMP_ENABLE
-	#define BMP_ENABLE  TRUE
+	#define BMP_ENABLE  FALSE
 #endif
 #ifndef LED_ENABLE
-	#define LED_ENABLE TRUE
+	#define LED_ENABLE FALSE
 #endif
 #ifndef SD_ENABLE
-	#define SD_ENABLE TRUE
+	#define SD_ENABLE FALSE
 #endif
 #ifndef STATUS_ENABLE
 	#define STATUS_ENABLE FALSE
@@ -68,21 +68,23 @@
 	#define SERVO_ENABLE FALSE
 #endif
 #ifndef PUSHBUTTON_ENABLE
-	#define PUSHBUTTON_ENABLE TRUE
+	#define PUSHBUTTON_ENABLE FALSE
 #endif
-#ifndef PINS_ENABLE
-	#define PINS_ENABLE TRUE
+#ifndef ANALOGPIN_ENABLE
+	#define ANALOGPIN_ENABLE FALSE
 #endif
 
 // --------------------------------------------------------------------------
 // Flight Profile
-// ----------------------------------------------------------------------
+// --------------------------------------------------------------------------
 
 #ifdef SERVO_ENABLE
-	const uint16_t SERVO_CUT_ALT = 28000;                      // Give desired cut altitude in meters
-	const uint32_t SERVO_CUT_TIMEOUT = 5400;                   // Give desired timeout in seconds
-	const uint8_t SERVO_START_POS = 0, SERVO_END_POS = 10;     //These three are placeholder values for now.
-	const uint32_t SERVO_PERIOD = 1;
+
+const uint16_t SERVO_CUT_ALT = 28000;                      // Give desired cut altitude in meters
+const uint32_t SERVO_CUT_TIMEOUT = 5400;                   // Give desired timeout in seconds
+const uint8_t SERVO_START_POS = 0, SERVO_END_POS = 10;     //These three are placeholder values for now.
+const uint32_t SERVO_PERIOD = 1;
+
 #endif
 
 // --------------------------------------------------------------------------
@@ -103,10 +105,12 @@
 // - Home:       0
 // - IGate:      5
 #define S_CALLSIGN      "KN4JLK"
+
 const uint8_t S_CALLSIGN_ID = 11;   // 11 is usually for balloons
 
 // Destination callsign: APRS (with SSID=0) is usually okay.
 #define D_CALLSIGN      "APRS"
+
 const uint8_t D_CALLSIGN_ID = 0;
 
 // Symbol Table: '/' is primary table '\' is secondary table
@@ -168,6 +172,7 @@ const uint8_t APRS_RANDOM = 30;                // Adjusts time to next transmiss
 
 
 const uint8_t GPS_VALID_POS_TIMEOUT = 50;
+
 const uint32_t GPS_BAUDRATE = 9600;
 
 #endif
