@@ -1,5 +1,5 @@
-#ifndef __TIMERUTILS_H__
-#define __TIMERUTILS_H__
+#ifndef __TIMERUTILITIES_H__
+#define __TIMERUTILITIES_H__
 
 
 struct SoftTimer_Struct {
@@ -39,4 +39,4 @@ struct SoftTimer_Struct {
 };
 
 
-#endif //TIMERUTILS_H
+#endif //__TIMERUTILITIES_H__

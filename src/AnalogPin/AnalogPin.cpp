@@ -2,15 +2,15 @@
 
 
 void ANALOGPIN::ANALOGPIN_Setup() {
-	pinMode( sensorPin, INPUT );
+	pinMode( analogPin, INPUT );
 }
 
 void ANALOGPIN::ANALOGPIN_Update() {
 	// read the value from the sensor:
-	sensorValue = analogRead( sensorPin );
+	analogValue = analogRead( analogPin );
 }
 
 
-int ANALOGPIN::GetsensorValue() {
-	return sensorValue;
+int ANALOGPIN::getAnalogValue() {
+	return analogValue;
 }

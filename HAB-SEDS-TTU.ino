@@ -6,6 +6,11 @@
 PUSHBUTTON pushbutton;
 #endif
 
+#if PWM_ENABLE
+#include"src/PWM/PWM.h"
+PWM pwm;
+#endif
+
 #if ANALOGPIN_ENABLE
 	#include"src/Pins/Pins.hpp"
 ANALOGPIN analogpin;
@@ -99,7 +104,11 @@ void setup() {
 	#endif
 
 	#if ANALOGPIN_ENABLE
-	analogpin.PIN_Setup();
+	analogpin.ANALOGPIN_Setup();
+	#endif
+
+	#if PWM_ENABLE
+	pwm.PWM_SETUP();
 	#endif
 
 	#if PUSHBUTTON_ENABLE
@@ -154,7 +163,11 @@ void loop() {
 	#endif
 
 	#if ANALOGPIN_ENABLE
-	analogpin.PIN_Update();
+	analogpin.ANALOGPIN_Update();
+	#endif
+
+	#if PWM_ENABLE
+	pwm.PWM_Update();
 	#endif
 
 	#if PUSHBUTTON_ENABLE

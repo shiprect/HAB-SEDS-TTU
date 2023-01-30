@@ -11,6 +11,11 @@
 
 #include "../../Config.h"
 
+//TODO::check libdefs std:: instances, for Will
+// #include <cstddef>
+// #include <cstdint>
+// #include <cmath>
+// #include <array>
 
 
 //TODO::Class should include setup-defined limits for servo min-max position if appropriate
@@ -23,6 +28,12 @@ class Servo
         //PWMServo ServoPWM;//FIXME::PWMServo Lib
 		bool ServoStatus;
 		int CurrPosition = 0;
+
+		//TODO::For sending a list of commands, Will likely needs to set this up
+		// e.g. std::array<int16_t, 6> cmd = {1000, 1200, 1300, 1400, 1500, 1600}; can be passed to func to send to set of positions
+		// at a configurable time interval
+		//std::array<int16_t, N> ch_;
+		//unsigned int interval = 0;
 
     public:
         Servo () {};
