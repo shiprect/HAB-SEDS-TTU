@@ -5,12 +5,12 @@
 #include <SD.h>
 #include <SPI.h>
 
-#include "../../Config.h"
+#include "../../../Config.h"
 
 #include "../BMP/BMP.hpp"
 #include "../GPS/GPS.hpp"
-#include "../Status/Status.hpp"
-#include "../Pushbutton/Pushbutton.h"
+#include "../../Status/Status.hpp"
+#include "../Pushbutton/Pushbutton.hpp"
 #include "../AnalogPin/AnalogPin.hpp"
 
 

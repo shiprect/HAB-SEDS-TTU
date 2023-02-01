@@ -1,9 +1,9 @@
 #ifndef __DEBUGUTILS_H__
 #define __DEBUGUTILS_H__
 
-#include <cstdio>
-#include <iostream>
-#include <cstring>
+// #include <cstdio>
+// #include <iostream>
+// #include <cstring>
 
 #ifdef DEBUG__SERIAL
 	#define DEBUG_UART Serial

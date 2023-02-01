@@ -2,7 +2,7 @@
 #define PWM_H
 
 #include <Arduino.h>
-#include "../../Config.h"
+#include "../../../Config.h"
 
 
 class PWM {

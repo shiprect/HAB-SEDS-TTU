@@ -2,7 +2,7 @@
 #define __ANALOGPIN_H__
 
 #include <Arduino.h>
-#include "../../Config.h"
+#include "../../../Config.h"
 
 
 class ANALOGPIN {

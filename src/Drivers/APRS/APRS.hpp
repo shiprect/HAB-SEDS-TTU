@@ -7,8 +7,8 @@
 #include "ax25.h"
 #include "../GPS/GPS.hpp"
 
-#include "../../Config.h"
-#include "../Status/Status.hpp"
+#include "../../../Config.h"
+#include "../../Status/Status.hpp"
 
 
 //TODO::add this to the class

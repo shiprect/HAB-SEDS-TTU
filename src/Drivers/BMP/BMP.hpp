@@ -7,7 +7,7 @@
 
 #include "Adafruit_BMP085_U.h"
 
-#include "../../Config.h"
+#include "../../../Config.h"
 
 
 //TODO::DEBUG_PRINT() should be reworked to use a custom DEBUG_BMP that can be macro toggled for this class

@@ -5,7 +5,7 @@
 #include <SoftwareSerial.h>
 #include "TinyGPS++.h"
 
-#include "../../Config.h"
+#include "../../../Config.h"
 
 
 //TODO::DEBUG_PRINT() should be reworked to use a custom DEBUG_GPS that can be macro toggled for this class

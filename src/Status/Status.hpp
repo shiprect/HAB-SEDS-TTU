@@ -1,15 +1,15 @@
 #ifndef __STATUS_H__
 #define __STATUS_H__
 
-#include "../BMP/BMP.hpp"
-#include "../GPS/GPS.hpp"
-//#include "../SD_Card/SD_card.hpp"
-#include "../SERVO/Servo.hpp"
+#include "../Drivers/BMP/BMP.hpp"
+#include "../Drivers/GPS/GPS.hpp"
+//#include "../Drivers/SD_Card/SD_card.hpp"
+#include "../Drivers/SERVO/Servo.hpp"
 
 #include "../../Config.h"
 
 
-//TODO::Rework entire class
+//TODO::Rework entire class, its never done what it should do well
 class Status {
     private:
 		uint64_t TimeSinceLaunch = 0;

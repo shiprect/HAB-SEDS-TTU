@@ -2,28 +2,28 @@
 
 
 #if PUSHBUTTON_ENABLE
-	#include"src/Pushbutton/Pushbutton.h"
+	#include"src/Drivers/Pushbutton/Pushbutton.hpp"
 PUSHBUTTON pushbutton;
 #endif
 
 #if PWM_ENABLE
-#include"src/PWM/PWM.h"
+#include"src/Drivers/PWM/PWM.hpp"
 PWM pwm;
 #endif
 
 #if ANALOGPIN_ENABLE
-	#include"src/Pins/Pins.hpp"
+	#include"src/Drivers/AnalogPin/AnalogPin.hpp"
 ANALOGPIN analogpin;
 #endif
 
 #if BMP_ENABLE
-	#include "src/BMP/BMP.hpp"
+	#include "src/Drivers/BMP/BMP.hpp"
 BMP bmp;
 #endif
 
 #ifdef GPS_ENABLE
 
-	#include "src/GPS/GPS.hpp"
+	#include "src/Drivers/GPS/GPS.hpp"
 
 
 GPS gps( GPS_TX1_PIN, GPS_RX1_PIN );
@@ -34,7 +34,7 @@ GPS gps2( GPS_TX2_PIN, GPS_RX2_PIN );
 
 #ifdef SERVO_ENABLE
 
-	#include "src/SERVO/Servo.hpp"
+	#include "src/Drivers/SERVO/Servo.hpp"
 
 
 Servo CutServo;
@@ -42,9 +42,7 @@ Servo CutServo;
 #endif
 
 #ifdef STATUS_ENABLE
-
 	#include "src/Status/Status.hpp"
-
 
 Status status;
 
@@ -52,7 +50,7 @@ Status status;
 
 #ifdef APRS_ENABLE
 
-	#include "src/APRS/APRS.hpp"
+	#include "src/Drivers/APRS/APRS.hpp"
 
 
 APRS aprs;
@@ -61,7 +59,7 @@ APRS aprs;
 
 #ifdef SD_ENABLE
 
-	#include "src/SD_Card/SD_card.hpp"
+	#include "src/Drivers/SD_Card/SD_card.hpp"
 
 
 SD_card sd_card;
@@ -171,6 +169,6 @@ void loop() {
 	#endif
 
 	#if PUSHBUTTON_ENABLE
-	pushbutton.PUSHBUTTON_Update(); #TODO:: button functions should be linked to functionality, not exist as solely independent units
+	pushbutton.PUSHBUTTON_Update(); //TODO:: button functions should be linked to functionality, not exist as solely independent units
 	#endif
 }
