@@ -14,9 +14,9 @@ class ANALOGPIN {
         ANALOGPIN () {};
         ~ANALOGPIN() {};
 
-        void ANALOGPIN_Setup();     //TODO::Should return true if  successful, false otherwise
-        void ANALOGPIN_Update();    //TODO::Should return true if pin has been triggered
-		int getAnalogValue();   //TODO::Should return uint in specified sensorValue range, sensorValue and function should be renamed for clarity
+        bool ANALOGPIN_Setup();     //TODO::Should return true if  successful, false otherwise
+        bool ANALOGPIN_Update();    //TODO::Should return true if pin has been triggered
+		uint8_t getAnalogValue();   //TODO::Should return uint in specified sensorValue range, sensorValue and function should be renamed for clarity
 };
 
 extern ANALOGPIN analogpin;
