@@ -14,5 +14,6 @@ var searchData=
   ['lng_11',['lng',['../structTinyGPSLocation.html#a544e9009a5580b2fd5466821a5e5b782',1,'TinyGPSLocation']]],
   ['location_12',['location',['../classTinyGPSPlus.html#a886255f412f8e01f84e5104d36315fb3',1,'TinyGPSPlus']]],
   ['logbuffer_13',['logBuffer',['../classAPRS.html#a0f7df5200518af9182df3e3ff197d69e',1,'APRS']]],
-  ['lontostr_14',['lonToStr',['../APRS_8cpp.html#a6f1c4d8a861c06c235cc6e2c1b781f92',1,'APRS.cpp']]]
+  ['lontostr_14',['lonToStr',['../APRS_8cpp.html#a6f1c4d8a861c06c235cc6e2c1b781f92',1,'APRS.cpp']]],
+  ['loop_15',['loop',['../HAB-SEDS-TTU_8ino.html#afe461d27b9c48d5921c00d521181f12f',1,'HAB-SEDS-TTU.ino']]]
 ];

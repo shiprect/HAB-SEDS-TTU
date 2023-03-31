@@ -12,7 +12,7 @@ var searchData=
   ['servo_5fsetup_9',['Servo_Setup',['../classServo.html#ad271c3a14f793213d74d47be31a04fe8',1,'Servo']]],
   ['servo_5fstatus_10',['Servo_Status',['../classServo.html#a49ac4edc49bfd90f2522e6ff4b08a7b8',1,'Servo']]],
   ['servo_5fupdate_11',['Servo_Update',['../classServo.html#ad9b5f20cad519f2e8b8f6e4f7c19ad80',1,'Servo']]],
-  ['set_12',['set',['../structTinyGPSInteger.html#aa02f807a5831c726e6eea6892257e35c',1,'TinyGPSInteger::set()'],['../classTinyGPSCustom.html#a7fab13d1b33b96c112d896322ad9ec29',1,'TinyGPSCustom::set()'],['../structTinyGPSDecimal.html#a804fc590e73489e2f14b0daf7c8112b8',1,'TinyGPSDecimal::set()']]],
+  ['set_12',['set',['../classTinyGPSCustom.html#a7fab13d1b33b96c112d896322ad9ec29',1,'TinyGPSCustom::set()'],['../structTinyGPSInteger.html#aa02f807a5831c726e6eea6892257e35c',1,'TinyGPSInteger::set()'],['../structTinyGPSDecimal.html#a804fc590e73489e2f14b0daf7c8112b8',1,'TinyGPSDecimal::set()']]],
   ['setdate_13',['setDate',['../structTinyGPSDate.html#a2ff2893de6b59fd4dcf828c6296e2e2e',1,'TinyGPSDate']]],
   ['setdutycycle_14',['setDutyCycle',['../classPWM.html#adaf250808da20b796eac37fbbc1f78d8',1,'PWM::setDutyCycle()'],['../PWM_8cpp.html#a92427b38b387cf2abaa5be22e5ebaa68',1,'setDutyCycle():&#160;PWM.cpp']]],
   ['setlatitude_15',['setLatitude',['../structTinyGPSLocation.html#abacba4b118a3351fed607874c85b747c',1,'TinyGPSLocation']]],
@@ -21,5 +21,6 @@ var searchData=
   ['setpulsewidth_18',['setPulseWidth',['../classPWM.html#a95658a802ba3278c18a26a92ccb3df7b',1,'PWM::setPulseWidth()'],['../PWM_8cpp.html#a5c5d5bcde1733e400d796edee1c42f25',1,'setPulseWidth():&#160;PWM.cpp']]],
   ['setstate_19',['setState',['../classPWM.html#ad61f19a449a85e3962918e84d8d65313',1,'PWM::setState()'],['../PWM_8cpp.html#ac283492d8697643beb987ac446bd3fbb',1,'setState():&#160;PWM.cpp']]],
   ['settime_20',['setTime',['../structTinyGPSTime.html#a07646db66f928524a46b22030f3367c6',1,'TinyGPSTime']]],
-  ['status_21',['Status',['../classStatus.html#a944586fb328a3524805748c8f7b17f32',1,'Status']]]
+  ['setup_21',['setup',['../HAB-SEDS-TTU_8ino.html#a4fc01d736fe50cf5b977f755b675f11d',1,'HAB-SEDS-TTU.ino']]],
+  ['status_22',['Status',['../classStatus.html#a944586fb328a3524805748c8f7b17f32',1,'Status']]]
 ];

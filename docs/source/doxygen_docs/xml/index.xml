@@ -445,6 +445,14 @@
   <compound refid="conf_8py" kind="file"><name>conf.py</name>
   </compound>
   <compound refid="HAB-SEDS-TTU_8ino" kind="file"><name>HAB-SEDS-TTU.ino</name>
+    <member refid="HAB-SEDS-TTU_8ino_1a732b543a18bd3449ed1049120b68c932" kind="variable"><name>gps</name></member>
+    <member refid="HAB-SEDS-TTU_8ino_1a90cfc9f7d41478f0efa3e8459fc58715" kind="variable"><name>gps2</name></member>
+    <member refid="HAB-SEDS-TTU_8ino_1a3faf44e95d31c018178b3318756a5f2e" kind="variable"><name>CutServo</name></member>
+    <member refid="HAB-SEDS-TTU_8ino_1ae29aa2d4ae440022daaed1107eb306b3" kind="variable"><name>status</name></member>
+    <member refid="HAB-SEDS-TTU_8ino_1a0bc2ddc4d6d694aa9df516a95b046ffe" kind="variable"><name>aprs</name></member>
+    <member refid="HAB-SEDS-TTU_8ino_1a2b9a24d146657188d2661646538147a9" kind="variable"><name>sd_card</name></member>
+    <member refid="HAB-SEDS-TTU_8ino_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="HAB-SEDS-TTU_8ino_1afe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
   </compound>
   <compound refid="ProjectConfig_8hpp" kind="file"><name>ProjectConfig.hpp</name>
     <member refid="ProjectConfig_8hpp_1a828654cd2db8d92aa8aa1e5c13d50361" kind="define"><name>EMBEDDED__ARDUINO</name></member>
