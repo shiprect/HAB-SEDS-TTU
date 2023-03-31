@@ -8,7 +8,7 @@ Welcome to HAB-SEDS-TTU's documentation!
 
 .. toctree::
    API
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
 

@@ -1,7 +1,7 @@
 /**
  * @file HAB-SEDS-TTU.ino
  * 
- * The Arduino sketch.
+ * Testing for HAB-SEDS-TTU.ino
  */
 #include "Config.h"
 

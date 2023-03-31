@@ -376,7 +376,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>The Arduino sketch. </para>
+<para>Testing for <ref refid="HAB-SEDS-TTU_8ino" kindref="compound">HAB-SEDS-TTU.ino</ref> </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
