@@ -1,16 +1,17 @@
 #include "AnalogPin.hpp"
 
 
-void ANALOGPIN::ANALOGPIN_Setup() {
+bool ANALOGPIN::ANALOGPIN_Setup() {
 	pinMode( analogPin, INPUT );
 }
 
-void ANALOGPIN::ANALOGPIN_Update() {
+bool ANALOGPIN::ANALOGPIN_Update() {
 	// read the value from the sensor:
 	analogValue = analogRead( analogPin );
+	return true;
 }
 
 
-int ANALOGPIN::getAnalogValue() {
+uint8_t ANALOGPIN::getAnalogValue() {
 	return analogValue;
 }
