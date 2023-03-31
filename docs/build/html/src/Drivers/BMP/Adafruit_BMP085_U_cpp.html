@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Adafruit_BMP085_U.cpp &#8212; HAB-SEDS-TTU 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/scrolls.css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Adafruit_Sensor.h" href="Adafruit_Sensor_h.html" />
+    <link rel="prev" title="Adafruit_BMP085_U.h" href="Adafruit_BMP085_U_h.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../../index.html"
+          title="back to the documentation overview"><span>Adafruit_BMP085_U.cpp</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="Adafruit_BMP085_U_h.html">&laquo; Adafruit_BMP085_U.h</a> |
+        <a href="#">Adafruit_BMP085_U.cpp</a>
+        | <a href="Adafruit_Sensor_h.html">Adafruit_Sensor.h &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div role="main">
+        
+  <section id="adafruit-bmp085-u-cpp">
+<h1>Adafruit_BMP085_U.cpp<a class="headerlink" href="#adafruit-bmp085-u-cpp" title="Permalink to this heading">¶</a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.BMP085_USE_DATASHEET_VALS">
+<span class="target" id="Adafruit__BMP085__U_8cpp_1a0437e0951f8a63144162d9257a497c14"></span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_USE_DATASHEET_VALS</span></span></span><a class="headerlink" href="#c.BMP085_USE_DATASHEET_VALS" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412writeCommand4byte4byte">
+<span id="_CPPv312writeCommand4byte4byte"></span><span id="_CPPv212writeCommand4byte4byte"></span><span id="writeCommand__byte.byte"></span><span class="target" id="Adafruit__BMP085__U_8cpp_1a42205ae8472967e07bb7101fc5e79177"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeCommand</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">byte</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">byte</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412writeCommand4byte4byte" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Writes an 8 bit value over I2C. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv45read84byteP7uint8_t">
+<span id="_CPPv35read84byteP7uint8_t"></span><span id="_CPPv25read84byteP7uint8_t"></span><span id="read8__byte.uint8_tP"></span><span class="target" id="Adafruit__BMP085__U_8cpp_1a6ab58ad718367ee68eb369b32bdee8eb"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read8</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">byte</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv45read84byteP7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads an 8 bit value over I2C. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv46read164byteP8uint16_t">
+<span id="_CPPv36read164byteP8uint16_t"></span><span id="_CPPv26read164byteP8uint16_t"></span><span id="read16__byte.uint16_tP"></span><span class="target" id="Adafruit__BMP085__U_8cpp_1ac84b910996d699ce74e3267a00f148a4"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">byte</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv46read164byteP8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads a 16 bit value over I2C. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv47readS164byteP7int16_t">
+<span id="_CPPv37readS164byteP7int16_t"></span><span id="_CPPv27readS164byteP7int16_t"></span><span id="readS16__byte.int16_tP"></span><span class="target" id="Adafruit__BMP085__U_8cpp_1a93f9fefb4bca544b5e5bc51711762594"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readS16</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">byte</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reg</span></span>, <span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv47readS164byteP7int16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads a signed 16 bit value over I2C. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416readCoefficientsv">
+<span id="_CPPv316readCoefficientsv"></span><span id="_CPPv216readCoefficientsv"></span><span id="readCoefficients__void"></span><span class="target" id="Adafruit__BMP085__U_8cpp_1aef2906629cd6037aa2e5c11786807d4f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readCoefficients</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416readCoefficientsv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads the factory-set coefficients. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418readRawTemperatureP7int32_t">
+<span id="_CPPv318readRawTemperatureP7int32_t"></span><span id="_CPPv218readRawTemperatureP7int32_t"></span><span id="readRawTemperature__int32_tP"></span><span class="target" id="Adafruit__BMP085__U_8cpp_1a7e680b4545ab0083d204af18bd8e094d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readRawTemperature</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">temperature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418readRawTemperatureP7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415readRawPressureP7int32_t">
+<span id="_CPPv315readRawPressureP7int32_t"></span><span id="_CPPv215readRawPressureP7int32_t"></span><span id="readRawPressure__int32_tP"></span><span class="target" id="Adafruit__BMP085__U_8cpp_1aab5639fd1ff0992822bb71b52b077cfe"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readRawPressure</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pressure</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415readRawPressureP7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv414_bmp085_coeffs">
+<span id="_CPPv314_bmp085_coeffs"></span><span id="_CPPv214_bmp085_coeffs"></span><span id="_bmp085_coeffs__bmp085_calib_data"></span><span class="target" id="Adafruit__BMP085__U_8cpp_1ac3c6bcb816961e6625341f124570ad14"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="Adafruit_BMP085_U_h.html#_CPPv417bmp085_calib_data" title="bmp085_calib_data"><span class="n"><span class="pre">bmp085_calib_data</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_bmp085_coeffs</span></span></span><a class="headerlink" href="#_CPPv414_bmp085_coeffs" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv411_bmp085Mode">
+<span id="_CPPv311_bmp085Mode"></span><span id="_CPPv211_bmp085Mode"></span><span id="_bmp085Mode__uint8_t"></span><span class="target" id="Adafruit__BMP085__U_8cpp_1a18d09ff548981f6c9f8708036c9aebb5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_bmp085Mode</span></span></span><a class="headerlink" href="#_CPPv411_bmp085Mode" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, William Stump, Chris Swindell, Luke Chapman, Emma Krebs, Mia Guzman.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

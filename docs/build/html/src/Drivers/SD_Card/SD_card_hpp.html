@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>SD_Card.hpp &#8212; HAB-SEDS-TTU 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/scrolls.css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="SD_Card.cpp" href="SD_card_cpp.html" />
+    <link rel="prev" title="SD_Card" href="dir.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../../index.html"
+          title="back to the documentation overview"><span>SD_Card.hpp</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="dir.html">&laquo; SD_Card</a> |
+        <a href="#">SD_Card.hpp</a>
+        | <a href="SD_card_cpp.html">SD_Card.cpp &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div role="main">
+        
+  <section id="sd-card-hpp">
+<h1>SD_Card.hpp<a class="headerlink" href="#sd-card-hpp" title="Permalink to this heading">¶</a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413ChipSelectPin">
+<span id="_CPPv313ChipSelectPin"></span><span id="_CPPv213ChipSelectPin"></span><span id="ChipSelectPin__iC"></span><span class="target" id="SD__card_8hpp_1abda4d02ba1a1fc8db53f070eb495efc7"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ChipSelectPin</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span><a class="headerlink" href="#_CPPv413ChipSelectPin" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv43CLK">
+<span id="_CPPv33CLK"></span><span id="_CPPv23CLK"></span><span id="CLK__iC"></span><span class="target" id="SD__card_8hpp_1af62ad789f4b2a44550fb20a78dbd6292"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CLK</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">13</span></span><a class="headerlink" href="#_CPPv43CLK" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv42DO">
+<span id="_CPPv32DO"></span><span id="_CPPv22DO"></span><span id="DO__iC"></span><span class="target" id="SD__card_8hpp_1a0b6b9d07c9efaef888e0d4cbb36a5387"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DO</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">12</span></span><a class="headerlink" href="#_CPPv42DO" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv42DI">
+<span id="_CPPv32DI"></span><span id="_CPPv22DI"></span><span id="DI__iC"></span><span class="target" id="SD__card_8hpp_1a13fa1eac41bc005132b0e8b3b9f8c6d7"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DI</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">11</span></span><a class="headerlink" href="#_CPPv42DI" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv42CS">
+<span id="_CPPv32CS"></span><span id="_CPPv22CS"></span><span id="CS__iC"></span><span class="target" id="SD__card_8hpp_1a50cc348a07c7843a4024743a09bed4ac"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span><a class="headerlink" href="#_CPPv42CS" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv42sd">
+<span id="_CPPv32sd"></span><span id="_CPPv22sd"></span><span id="sd__SD_card"></span><span class="target" id="SD__card_8hpp_1a636b6d1d119a3e7f9fc60bae06fc278b"></span><a class="reference internal" href="#_CPPv47SD_card" title="SD_card"><span class="n"><span class="pre">SD_card</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sd</span></span></span><a class="headerlink" href="#_CPPv42sd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv47SD_card">
+<span id="_CPPv37SD_card"></span><span id="_CPPv27SD_card"></span><span id="SD_card"></span><span class="target" id="classSD__card"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SD_card</span></span></span><a class="headerlink" href="#_CPPv47SD_card" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;SD_card.hpp&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7SD_card7SD_cardEv">
+<span id="_CPPv3N7SD_card7SD_cardEv"></span><span id="_CPPv2N7SD_card7SD_cardEv"></span><span id="SD_card::SD_card"></span><span class="target" id="classSD__card_1aed903cb98def2194a5f0e892eac198a0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SD_card</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7SD_card7SD_cardEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7SD_cardD0Ev">
+<span id="_CPPv3N7SD_cardD0Ev"></span><span id="_CPPv2N7SD_cardD0Ev"></span><span id="SD_card::~SD_card"></span><span class="target" id="classSD__card_1a402fedfcc7a52f8137628ab2aacf136a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~SD_card</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7SD_cardD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7SD_card8SD_SetupEv">
+<span id="_CPPv3N7SD_card8SD_SetupEv"></span><span id="_CPPv2N7SD_card8SD_SetupEv"></span><span id="SD_card::SD_Setup"></span><span class="target" id="classSD__card_1a56d997c7e85b4b5b236d50d004c11e9d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SD_Setup</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7SD_card8SD_SetupEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>order </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7SD_card9SD_RecordEv">
+<span id="_CPPv3N7SD_card9SD_RecordEv"></span><span id="_CPPv2N7SD_card9SD_RecordEv"></span><span id="SD_card::SD_Record"></span><span class="target" id="classSD__card_1a99d91435b905072ccff5e5f70974bf0d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SD_Record</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7SD_card9SD_RecordEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7SD_card12SD_arrayPassEv">
+<span id="_CPPv3N7SD_card12SD_arrayPassEv"></span><span id="_CPPv2N7SD_card12SD_arrayPassEv"></span><span id="SD_card::SD_arrayPass"></span><span class="target" id="classSD__card_1ae7bf0cbc04054d72ed1de7fec34ddf6a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SD_arrayPass</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7SD_card12SD_arrayPassEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7SD_card9IsValidSDEv">
+<span id="_CPPv3N7SD_card9IsValidSDEv"></span><span id="_CPPv2N7SD_card9IsValidSDEv"></span><span id="SD_card::IsValidSD"></span><span class="target" id="classSD__card_1a7ec606c79c0695f91fc8c49965a6fdd4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IsValidSD</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7SD_card9IsValidSDEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7SD_card8dataFileE">
+<span id="_CPPv3N7SD_card8dataFileE"></span><span id="_CPPv2N7SD_card8dataFileE"></span><span id="SD_card::dataFile__File"></span><span class="target" id="classSD__card_1a8f82967d7542661f9983d2ecd03e4a4e"></span><span class="n"><span class="pre">File</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dataFile</span></span></span><a class="headerlink" href="#_CPPv4N7SD_card8dataFileE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7SD_card7ValidSDE">
+<span id="_CPPv3N7SD_card7ValidSDE"></span><span id="_CPPv2N7SD_card7ValidSDE"></span><span id="SD_card::ValidSD__b"></span><span class="target" id="classSD__card_1abeb839d9138b62530a855dd20e987787"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValidSD</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N7SD_card7ValidSDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, William Stump, Chris Swindell, Luke Chapman, Emma Krebs, Mia Guzman.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

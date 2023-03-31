@@ -1,8 +1,0 @@
-.. _src:
-
-src
-===
-
-.. toctree::
-    src/Utilities
-    :maxdepth: 1

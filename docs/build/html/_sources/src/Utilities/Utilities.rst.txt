@@ -1,5 +1,3 @@
-.. _Utilities:
-
 Utilities.h
 ===========
 

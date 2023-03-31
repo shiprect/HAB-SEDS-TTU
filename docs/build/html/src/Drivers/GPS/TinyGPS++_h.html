@@ -1,0 +1,1051 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>TinyGPS++.h &#8212; HAB-SEDS-TTU 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/scrolls.css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="TinyGPS++.cpp" href="TinyGPS%2B%2B_cpp.html" />
+    <link rel="prev" title="GPS.cpp" href="GPS_cpp.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../../index.html"
+          title="back to the documentation overview"><span>TinyGPS++.h</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="GPS_cpp.html">&laquo; GPS.cpp</a> |
+        <a href="#">TinyGPS++.h</a>
+        | <a href="TinyGPS%2B%2B_cpp.html">TinyGPS++.cpp &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div role="main">
+        
+  <section id="tinygps-h">
+<h1>TinyGPS++.h<a class="headerlink" href="#tinygps-h" title="Permalink to this heading">¶</a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c._GPS_VERSION">
+<span class="target" id="TinyGPS_09_09_8h_1a210404d704c58b910ecee5bd7e97a7dc"></span><span class="sig-name descname"><span class="n"><span class="pre">_GPS_VERSION</span></span></span><a class="headerlink" href="#c._GPS_VERSION" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c._GPS_MPH_PER_KNOT">
+<span class="target" id="TinyGPS_09_09_8h_1a15c78046c05b411cbcb3f93b7a452a97"></span><span class="sig-name descname"><span class="n"><span class="pre">_GPS_MPH_PER_KNOT</span></span></span><a class="headerlink" href="#c._GPS_MPH_PER_KNOT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c._GPS_MPS_PER_KNOT">
+<span class="target" id="TinyGPS_09_09_8h_1a54cbb270522b52fe2c0f14eab76f032b"></span><span class="sig-name descname"><span class="n"><span class="pre">_GPS_MPS_PER_KNOT</span></span></span><a class="headerlink" href="#c._GPS_MPS_PER_KNOT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c._GPS_KMPH_PER_KNOT">
+<span class="target" id="TinyGPS_09_09_8h_1a757cab8e33085416dbafbc05cf71f6a9"></span><span class="sig-name descname"><span class="n"><span class="pre">_GPS_KMPH_PER_KNOT</span></span></span><a class="headerlink" href="#c._GPS_KMPH_PER_KNOT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c._GPS_MILES_PER_METER">
+<span class="target" id="TinyGPS_09_09_8h_1a51d2cc47a0dc5655cde4135c24fef480"></span><span class="sig-name descname"><span class="n"><span class="pre">_GPS_MILES_PER_METER</span></span></span><a class="headerlink" href="#c._GPS_MILES_PER_METER" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c._GPS_KM_PER_METER">
+<span class="target" id="TinyGPS_09_09_8h_1a49b3ac6a23c4f78931942c51810e3439"></span><span class="sig-name descname"><span class="n"><span class="pre">_GPS_KM_PER_METER</span></span></span><a class="headerlink" href="#c._GPS_KM_PER_METER" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c._GPS_FEET_PER_METER">
+<span class="target" id="TinyGPS_09_09_8h_1af1a3b64121f34d416925518e994b454f"></span><span class="sig-name descname"><span class="n"><span class="pre">_GPS_FEET_PER_METER</span></span></span><a class="headerlink" href="#c._GPS_FEET_PER_METER" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c._GPS_MAX_FIELD_SIZE">
+<span class="target" id="TinyGPS_09_09_8h_1ad31ceaaeae16e1ff8e13640e3b012de3"></span><span class="sig-name descname"><span class="n"><span class="pre">_GPS_MAX_FIELD_SIZE</span></span></span><a class="headerlink" href="#c._GPS_MAX_FIELD_SIZE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv410RawDegrees">
+<span id="_CPPv310RawDegrees"></span><span id="_CPPv210RawDegrees"></span><span id="RawDegrees"></span><span class="target" id="structRawDegrees"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RawDegrees</span></span></span><a class="headerlink" href="#_CPPv410RawDegrees" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N10RawDegrees10RawDegreesEv">
+<span id="_CPPv3N10RawDegrees10RawDegreesEv"></span><span id="_CPPv2N10RawDegrees10RawDegreesEv"></span><span id="RawDegrees::RawDegrees"></span><span class="target" id="structRawDegrees_1a156d5ced092fa1473b9b669a29be3509"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RawDegrees</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N10RawDegrees10RawDegreesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10RawDegrees3degE">
+<span id="_CPPv3N10RawDegrees3degE"></span><span id="_CPPv2N10RawDegrees3degE"></span><span id="RawDegrees::deg__uint16_t"></span><span class="target" id="structRawDegrees_1a11831d9220f303bd716d9412af28e84e"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deg</span></span></span><a class="headerlink" href="#_CPPv4N10RawDegrees3degE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10RawDegrees10billionthsE">
+<span id="_CPPv3N10RawDegrees10billionthsE"></span><span id="_CPPv2N10RawDegrees10billionthsE"></span><span id="RawDegrees::billionths__uint32_t"></span><span class="target" id="structRawDegrees_1a13564009c60e20dbf03b158114d1c0e2"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">billionths</span></span></span><a class="headerlink" href="#_CPPv4N10RawDegrees10billionthsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N10RawDegrees8negativeE">
+<span id="_CPPv3N10RawDegrees8negativeE"></span><span id="_CPPv2N10RawDegrees8negativeE"></span><span id="RawDegrees::negative__b"></span><span class="target" id="structRawDegrees_1a39c31d2d0332155a4d2c975cec0a796f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">negative</span></span></span><a class="headerlink" href="#_CPPv4N10RawDegrees8negativeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv415TinyGPSLocation">
+<span id="_CPPv315TinyGPSLocation"></span><span id="_CPPv215TinyGPSLocation"></span><span id="TinyGPSLocation"></span><span class="target" id="structTinyGPSLocation"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSLocation</span></span></span><a class="headerlink" href="#_CPPv415TinyGPSLocation" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK15TinyGPSLocation7isValidEv">
+<span id="_CPPv3NK15TinyGPSLocation7isValidEv"></span><span id="_CPPv2NK15TinyGPSLocation7isValidEv"></span><span id="TinyGPSLocation::isValidC"></span><span class="target" id="structTinyGPSLocation_1aa5182c29798506eb727058d884f20633"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK15TinyGPSLocation7isValidEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK15TinyGPSLocation9isUpdatedEv">
+<span id="_CPPv3NK15TinyGPSLocation9isUpdatedEv"></span><span id="_CPPv2NK15TinyGPSLocation9isUpdatedEv"></span><span id="TinyGPSLocation::isUpdatedC"></span><span class="target" id="structTinyGPSLocation_1a905822cea7a00e550d29d037acdde549"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUpdated</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK15TinyGPSLocation9isUpdatedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK15TinyGPSLocation3ageEv">
+<span id="_CPPv3NK15TinyGPSLocation3ageEv"></span><span id="_CPPv2NK15TinyGPSLocation3ageEv"></span><span id="TinyGPSLocation::ageC"></span><span class="target" id="structTinyGPSLocation_1ae5da08aba335d0515b7a84ce57b80179"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">age</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK15TinyGPSLocation3ageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation6rawLatEv">
+<span id="_CPPv3N15TinyGPSLocation6rawLatEv"></span><span id="_CPPv2N15TinyGPSLocation6rawLatEv"></span><span id="TinyGPSLocation::rawLat"></span><span class="target" id="structTinyGPSLocation_1abe5f28b0d636a1031af3cd98af863af6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410RawDegrees" title="RawDegrees"><span class="n"><span class="pre">RawDegrees</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">rawLat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation6rawLatEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation6rawLngEv">
+<span id="_CPPv3N15TinyGPSLocation6rawLngEv"></span><span id="_CPPv2N15TinyGPSLocation6rawLngEv"></span><span id="TinyGPSLocation::rawLng"></span><span class="target" id="structTinyGPSLocation_1a4e20b4067a448ca0003fc65a3d3864d2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv410RawDegrees" title="RawDegrees"><span class="n"><span class="pre">RawDegrees</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">rawLng</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation6rawLngEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation3latEv">
+<span id="_CPPv3N15TinyGPSLocation3latEv"></span><span id="_CPPv2N15TinyGPSLocation3latEv"></span><span id="TinyGPSLocation::lat"></span><span class="target" id="structTinyGPSLocation_1a86c3acea4f317b427eebb667e4d05a49"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lat</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation3latEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation3lngEv">
+<span id="_CPPv3N15TinyGPSLocation3lngEv"></span><span id="_CPPv2N15TinyGPSLocation3lngEv"></span><span id="TinyGPSLocation::lng"></span><span class="target" id="structTinyGPSLocation_1a544e9009a5580b2fd5466821a5e5b782"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lng</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation3lngEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation15TinyGPSLocationEv">
+<span id="_CPPv3N15TinyGPSLocation15TinyGPSLocationEv"></span><span id="_CPPv2N15TinyGPSLocation15TinyGPSLocationEv"></span><span id="TinyGPSLocation::TinyGPSLocation"></span><span class="target" id="structTinyGPSLocation_1a9bc435af16c3c5224fcd4b5c40d0c70f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSLocation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation15TinyGPSLocationEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation6commitEv">
+<span id="_CPPv3N15TinyGPSLocation6commitEv"></span><span id="_CPPv2N15TinyGPSLocation6commitEv"></span><span id="TinyGPSLocation::commit"></span><span class="target" id="structTinyGPSLocation_1aa642f1dcad561199ec404129abbebbba"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation6commitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation11setLatitudeEPKc">
+<span id="_CPPv3N15TinyGPSLocation11setLatitudeEPKc"></span><span id="_CPPv2N15TinyGPSLocation11setLatitudeEPKc"></span><span id="TinyGPSLocation::setLatitude__cCP"></span><span class="target" id="structTinyGPSLocation_1abacba4b118a3351fed607874c85b747c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setLatitude</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation11setLatitudeEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation12setLongitudeEPKc">
+<span id="_CPPv3N15TinyGPSLocation12setLongitudeEPKc"></span><span id="_CPPv2N15TinyGPSLocation12setLongitudeEPKc"></span><span id="TinyGPSLocation::setLongitude__cCP"></span><span class="target" id="structTinyGPSLocation_1ac55555d5765570efadfe1846d60b32e1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setLongitude</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation12setLongitudeEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation5validE">
+<span id="_CPPv3N15TinyGPSLocation5validE"></span><span id="_CPPv2N15TinyGPSLocation5validE"></span><span id="TinyGPSLocation::valid__b"></span><span class="target" id="structTinyGPSLocation_1a891189d63dcd66e2c6be467bab3ff71f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid</span></span></span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation5validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation7updatedE">
+<span id="_CPPv3N15TinyGPSLocation7updatedE"></span><span id="_CPPv2N15TinyGPSLocation7updatedE"></span><span id="TinyGPSLocation::updated__b"></span><span class="target" id="structTinyGPSLocation_1a6e80ce526dff7b9ac38fea8044baf16f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updated</span></span></span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation7updatedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation10rawLatDataE">
+<span id="_CPPv3N15TinyGPSLocation10rawLatDataE"></span><span id="_CPPv2N15TinyGPSLocation10rawLatDataE"></span><span id="TinyGPSLocation::rawLatData__RawDegrees"></span><span class="target" id="structTinyGPSLocation_1a05f5e708acc18037290aa7da4287845f"></span><a class="reference internal" href="#_CPPv410RawDegrees" title="RawDegrees"><span class="n"><span class="pre">RawDegrees</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rawLatData</span></span></span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation10rawLatDataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation10rawLngDataE">
+<span id="_CPPv3N15TinyGPSLocation10rawLngDataE"></span><span id="_CPPv2N15TinyGPSLocation10rawLngDataE"></span><span id="TinyGPSLocation::rawLngData__RawDegrees"></span><span class="target" id="structTinyGPSLocation_1a76809e2b20ccb0722886093eb230bf29"></span><a class="reference internal" href="#_CPPv410RawDegrees" title="RawDegrees"><span class="n"><span class="pre">RawDegrees</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rawLngData</span></span></span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation10rawLngDataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation13rawNewLatDataE">
+<span id="_CPPv3N15TinyGPSLocation13rawNewLatDataE"></span><span id="_CPPv2N15TinyGPSLocation13rawNewLatDataE"></span><span id="TinyGPSLocation::rawNewLatData__RawDegrees"></span><span class="target" id="structTinyGPSLocation_1a5c75e48c14bbdabef12f157634d9d96d"></span><a class="reference internal" href="#_CPPv410RawDegrees" title="RawDegrees"><span class="n"><span class="pre">RawDegrees</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rawNewLatData</span></span></span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation13rawNewLatDataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation13rawNewLngDataE">
+<span id="_CPPv3N15TinyGPSLocation13rawNewLngDataE"></span><span id="_CPPv2N15TinyGPSLocation13rawNewLngDataE"></span><span id="TinyGPSLocation::rawNewLngData__RawDegrees"></span><span class="target" id="structTinyGPSLocation_1a198d72c29f14b74d72460adcdc4e30f8"></span><a class="reference internal" href="#_CPPv410RawDegrees" title="RawDegrees"><span class="n"><span class="pre">RawDegrees</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rawNewLngData</span></span></span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation13rawNewLngDataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSLocation14lastCommitTimeE">
+<span id="_CPPv3N15TinyGPSLocation14lastCommitTimeE"></span><span id="_CPPv2N15TinyGPSLocation14lastCommitTimeE"></span><span id="TinyGPSLocation::lastCommitTime__uint32_t"></span><span class="target" id="structTinyGPSLocation_1a190521e30929eed4edc5288346646f16"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastCommitTime</span></span></span><a class="headerlink" href="#_CPPv4N15TinyGPSLocation14lastCommitTimeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">TinyGPSPlus</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv411TinyGPSDate">
+<span id="_CPPv311TinyGPSDate"></span><span id="_CPPv211TinyGPSDate"></span><span id="TinyGPSDate"></span><span class="target" id="structTinyGPSDate"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSDate</span></span></span><a class="headerlink" href="#_CPPv411TinyGPSDate" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSDate7isValidEv">
+<span id="_CPPv3NK11TinyGPSDate7isValidEv"></span><span id="_CPPv2NK11TinyGPSDate7isValidEv"></span><span id="TinyGPSDate::isValidC"></span><span class="target" id="structTinyGPSDate_1a3ae7825f840ef4ba0ecddbc22f741817"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSDate7isValidEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSDate9isUpdatedEv">
+<span id="_CPPv3NK11TinyGPSDate9isUpdatedEv"></span><span id="_CPPv2NK11TinyGPSDate9isUpdatedEv"></span><span id="TinyGPSDate::isUpdatedC"></span><span class="target" id="structTinyGPSDate_1a1b913837130bb49ecd309eaf6bc205b1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUpdated</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSDate9isUpdatedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSDate3ageEv">
+<span id="_CPPv3NK11TinyGPSDate3ageEv"></span><span id="_CPPv2NK11TinyGPSDate3ageEv"></span><span id="TinyGPSDate::ageC"></span><span class="target" id="structTinyGPSDate_1af8b9c057a28dcb490081fcfde2a0ee11"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">age</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSDate3ageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate5valueEv">
+<span id="_CPPv3N11TinyGPSDate5valueEv"></span><span id="_CPPv2N11TinyGPSDate5valueEv"></span><span id="TinyGPSDate::value"></span><span class="target" id="structTinyGPSDate_1a718150ae16f68afa9ae81f9d1b3ce3f4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSDate5valueEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate4yearEv">
+<span id="_CPPv3N11TinyGPSDate4yearEv"></span><span id="_CPPv2N11TinyGPSDate4yearEv"></span><span id="TinyGPSDate::year"></span><span class="target" id="structTinyGPSDate_1ae2cc914fec377b429d99f01204f50d60"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">year</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSDate4yearEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate5monthEv">
+<span id="_CPPv3N11TinyGPSDate5monthEv"></span><span id="_CPPv2N11TinyGPSDate5monthEv"></span><span id="TinyGPSDate::month"></span><span class="target" id="structTinyGPSDate_1a6f3c5b4e72ef28b010f94ac9016315f3"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">month</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSDate5monthEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate3dayEv">
+<span id="_CPPv3N11TinyGPSDate3dayEv"></span><span id="_CPPv2N11TinyGPSDate3dayEv"></span><span id="TinyGPSDate::day"></span><span class="target" id="structTinyGPSDate_1ae8cc5f80c49e328f792d168a44062000"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">day</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSDate3dayEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate11TinyGPSDateEv">
+<span id="_CPPv3N11TinyGPSDate11TinyGPSDateEv"></span><span id="_CPPv2N11TinyGPSDate11TinyGPSDateEv"></span><span id="TinyGPSDate::TinyGPSDate"></span><span class="target" id="structTinyGPSDate_1a4d5f23eb008cbfd385343687bf902003"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSDate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSDate11TinyGPSDateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate6commitEv">
+<span id="_CPPv3N11TinyGPSDate6commitEv"></span><span id="_CPPv2N11TinyGPSDate6commitEv"></span><span id="TinyGPSDate::commit"></span><span class="target" id="structTinyGPSDate_1af5b0da173842da219e7c90d16e54c3e2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSDate6commitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate7setDateEPKc">
+<span id="_CPPv3N11TinyGPSDate7setDateEPKc"></span><span id="_CPPv2N11TinyGPSDate7setDateEPKc"></span><span id="TinyGPSDate::setDate__cCP"></span><span class="target" id="structTinyGPSDate_1a2ff2893de6b59fd4dcf828c6296e2e2e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSDate7setDateEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate5validE">
+<span id="_CPPv3N11TinyGPSDate5validE"></span><span id="_CPPv2N11TinyGPSDate5validE"></span><span id="TinyGPSDate::valid__b"></span><span class="target" id="structTinyGPSDate_1a6b312ccebe3537eb9687211622bc5f26"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSDate5validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate7updatedE">
+<span id="_CPPv3N11TinyGPSDate7updatedE"></span><span id="_CPPv2N11TinyGPSDate7updatedE"></span><span id="TinyGPSDate::updated__b"></span><span class="target" id="structTinyGPSDate_1af92ee9facc35b637b589320ddffcce32"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updated</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSDate7updatedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate4dateE">
+<span id="_CPPv3N11TinyGPSDate4dateE"></span><span id="_CPPv2N11TinyGPSDate4dateE"></span><span id="TinyGPSDate::date__uint32_t"></span><span class="target" id="structTinyGPSDate_1ab141f37e0dda429ad041f9a951564677"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">date</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSDate4dateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate7newDateE">
+<span id="_CPPv3N11TinyGPSDate7newDateE"></span><span id="_CPPv2N11TinyGPSDate7newDateE"></span><span id="TinyGPSDate::newDate__uint32_t"></span><span class="target" id="structTinyGPSDate_1a81d6d90be898cf44e804e86a2f4a3d2d"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">newDate</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSDate7newDateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSDate14lastCommitTimeE">
+<span id="_CPPv3N11TinyGPSDate14lastCommitTimeE"></span><span id="_CPPv2N11TinyGPSDate14lastCommitTimeE"></span><span id="TinyGPSDate::lastCommitTime__uint32_t"></span><span class="target" id="structTinyGPSDate_1acbece939f279507806570bb108311a88"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastCommitTime</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSDate14lastCommitTimeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">TinyGPSPlus</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv411TinyGPSTime">
+<span id="_CPPv311TinyGPSTime"></span><span id="_CPPv211TinyGPSTime"></span><span id="TinyGPSTime"></span><span class="target" id="structTinyGPSTime"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSTime</span></span></span><a class="headerlink" href="#_CPPv411TinyGPSTime" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSTime7isValidEv">
+<span id="_CPPv3NK11TinyGPSTime7isValidEv"></span><span id="_CPPv2NK11TinyGPSTime7isValidEv"></span><span id="TinyGPSTime::isValidC"></span><span class="target" id="structTinyGPSTime_1a46b2dc7a7946885b509b9a2f83ae655c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSTime7isValidEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSTime9isUpdatedEv">
+<span id="_CPPv3NK11TinyGPSTime9isUpdatedEv"></span><span id="_CPPv2NK11TinyGPSTime9isUpdatedEv"></span><span id="TinyGPSTime::isUpdatedC"></span><span class="target" id="structTinyGPSTime_1a0d6434dc19675d214f58347d513e7c69"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUpdated</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSTime9isUpdatedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSTime3ageEv">
+<span id="_CPPv3NK11TinyGPSTime3ageEv"></span><span id="_CPPv2NK11TinyGPSTime3ageEv"></span><span id="TinyGPSTime::ageC"></span><span class="target" id="structTinyGPSTime_1ae0aba0cbd875a3e1fe5d7872171e79fc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">age</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSTime3ageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime5valueEv">
+<span id="_CPPv3N11TinyGPSTime5valueEv"></span><span id="_CPPv2N11TinyGPSTime5valueEv"></span><span id="TinyGPSTime::value"></span><span class="target" id="structTinyGPSTime_1afcdb632fee9d144b1414c9d7b95719f1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSTime5valueEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime4hourEv">
+<span id="_CPPv3N11TinyGPSTime4hourEv"></span><span id="_CPPv2N11TinyGPSTime4hourEv"></span><span id="TinyGPSTime::hour"></span><span class="target" id="structTinyGPSTime_1a37fdb629b6ed0e31134214c7d07df2b1"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hour</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSTime4hourEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime6minuteEv">
+<span id="_CPPv3N11TinyGPSTime6minuteEv"></span><span id="_CPPv2N11TinyGPSTime6minuteEv"></span><span id="TinyGPSTime::minute"></span><span class="target" id="structTinyGPSTime_1aef83c20c14d404219299da2d7e35cdce"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">minute</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSTime6minuteEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime6secondEv">
+<span id="_CPPv3N11TinyGPSTime6secondEv"></span><span id="_CPPv2N11TinyGPSTime6secondEv"></span><span id="TinyGPSTime::second"></span><span class="target" id="structTinyGPSTime_1a729cab36ced07eb5607503663fbe33e8"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">second</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSTime6secondEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime11centisecondEv">
+<span id="_CPPv3N11TinyGPSTime11centisecondEv"></span><span id="_CPPv2N11TinyGPSTime11centisecondEv"></span><span id="TinyGPSTime::centisecond"></span><span class="target" id="structTinyGPSTime_1a1f74ad4a2a53e0ee19f8e3a6b2bc985f"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">centisecond</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSTime11centisecondEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime11TinyGPSTimeEv">
+<span id="_CPPv3N11TinyGPSTime11TinyGPSTimeEv"></span><span id="_CPPv2N11TinyGPSTime11TinyGPSTimeEv"></span><span id="TinyGPSTime::TinyGPSTime"></span><span class="target" id="structTinyGPSTime_1abd6dd7a576fd42cd6980c92eec77ab1d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSTime11TinyGPSTimeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime6commitEv">
+<span id="_CPPv3N11TinyGPSTime6commitEv"></span><span id="_CPPv2N11TinyGPSTime6commitEv"></span><span id="TinyGPSTime::commit"></span><span class="target" id="structTinyGPSTime_1a7d281752a3ce8360f02a782b938fee22"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSTime6commitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime7setTimeEPKc">
+<span id="_CPPv3N11TinyGPSTime7setTimeEPKc"></span><span id="_CPPv2N11TinyGPSTime7setTimeEPKc"></span><span id="TinyGPSTime::setTime__cCP"></span><span class="target" id="structTinyGPSTime_1a07646db66f928524a46b22030f3367c6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTime</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSTime7setTimeEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime5validE">
+<span id="_CPPv3N11TinyGPSTime5validE"></span><span id="_CPPv2N11TinyGPSTime5validE"></span><span id="TinyGPSTime::valid__b"></span><span class="target" id="structTinyGPSTime_1ab4fd62a69d4f06a45164f6a4f4caae45"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSTime5validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime7updatedE">
+<span id="_CPPv3N11TinyGPSTime7updatedE"></span><span id="_CPPv2N11TinyGPSTime7updatedE"></span><span id="TinyGPSTime::updated__b"></span><span class="target" id="structTinyGPSTime_1a8af55d20c789d6bc3c759fd42d588c7b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updated</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSTime7updatedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime4timeE">
+<span id="_CPPv3N11TinyGPSTime4timeE"></span><span id="_CPPv2N11TinyGPSTime4timeE"></span><span id="TinyGPSTime::time__uint32_t"></span><span class="target" id="structTinyGPSTime_1ae9d8132463ce75723cc826be9a1b6380"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSTime4timeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime7newTimeE">
+<span id="_CPPv3N11TinyGPSTime7newTimeE"></span><span id="_CPPv2N11TinyGPSTime7newTimeE"></span><span id="TinyGPSTime::newTime__uint32_t"></span><span class="target" id="structTinyGPSTime_1ab6794a7906f46e0309ffa31a3682ea92"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">newTime</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSTime7newTimeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSTime14lastCommitTimeE">
+<span id="_CPPv3N11TinyGPSTime14lastCommitTimeE"></span><span id="_CPPv2N11TinyGPSTime14lastCommitTimeE"></span><span id="TinyGPSTime::lastCommitTime__uint32_t"></span><span class="target" id="structTinyGPSTime_1a3a033dc00767099f6c1b3c328ff586e4"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastCommitTime</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSTime14lastCommitTimeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">TinyGPSPlus</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv414TinyGPSDecimal">
+<span id="_CPPv314TinyGPSDecimal"></span><span id="_CPPv214TinyGPSDecimal"></span><span id="TinyGPSDecimal"></span><span class="target" id="structTinyGPSDecimal"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSDecimal</span></span></span><a class="headerlink" href="#_CPPv414TinyGPSDecimal" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<p>Subclassed by <a class="reference internal" href="#structTinyGPSAltitude"><span class="std std-ref">TinyGPSAltitude</span></a>, <a class="reference internal" href="#structTinyGPSCourse"><span class="std std-ref">TinyGPSCourse</span></a>, <a class="reference internal" href="#structTinyGPSHDOP"><span class="std std-ref">TinyGPSHDOP</span></a>, <a class="reference internal" href="#structTinyGPSSpeed"><span class="std std-ref">TinyGPSSpeed</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14TinyGPSDecimal7isValidEv">
+<span id="_CPPv3NK14TinyGPSDecimal7isValidEv"></span><span id="_CPPv2NK14TinyGPSDecimal7isValidEv"></span><span id="TinyGPSDecimal::isValidC"></span><span class="target" id="structTinyGPSDecimal_1a34e6448314c198fa204dfb22cd24fc7e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14TinyGPSDecimal7isValidEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14TinyGPSDecimal9isUpdatedEv">
+<span id="_CPPv3NK14TinyGPSDecimal9isUpdatedEv"></span><span id="_CPPv2NK14TinyGPSDecimal9isUpdatedEv"></span><span id="TinyGPSDecimal::isUpdatedC"></span><span class="target" id="structTinyGPSDecimal_1a8c7fd3ccd678b195d8f23bd1cb31d9ba"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUpdated</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14TinyGPSDecimal9isUpdatedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14TinyGPSDecimal3ageEv">
+<span id="_CPPv3NK14TinyGPSDecimal3ageEv"></span><span id="_CPPv2NK14TinyGPSDecimal3ageEv"></span><span id="TinyGPSDecimal::ageC"></span><span class="target" id="structTinyGPSDecimal_1a041cada3e406205d0878c9819eddbbbb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">age</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14TinyGPSDecimal3ageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSDecimal5valueEv">
+<span id="_CPPv3N14TinyGPSDecimal5valueEv"></span><span id="_CPPv2N14TinyGPSDecimal5valueEv"></span><span id="TinyGPSDecimal::value"></span><span class="target" id="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14TinyGPSDecimal5valueEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSDecimal14TinyGPSDecimalEv">
+<span id="_CPPv3N14TinyGPSDecimal14TinyGPSDecimalEv"></span><span id="_CPPv2N14TinyGPSDecimal14TinyGPSDecimalEv"></span><span id="TinyGPSDecimal::TinyGPSDecimal"></span><span class="target" id="structTinyGPSDecimal_1ae09cbb1856cd57c7dcee52fb5fb1ba16"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSDecimal</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14TinyGPSDecimal14TinyGPSDecimalEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSDecimal6commitEv">
+<span id="_CPPv3N14TinyGPSDecimal6commitEv"></span><span id="_CPPv2N14TinyGPSDecimal6commitEv"></span><span id="TinyGPSDecimal::commit"></span><span class="target" id="structTinyGPSDecimal_1a37516916786d5c66990d5a1797cc8f86"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14TinyGPSDecimal6commitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSDecimal3setEPKc">
+<span id="_CPPv3N14TinyGPSDecimal3setEPKc"></span><span id="_CPPv2N14TinyGPSDecimal3setEPKc"></span><span id="TinyGPSDecimal::set__cCP"></span><span class="target" id="structTinyGPSDecimal_1a804fc590e73489e2f14b0daf7c8112b8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14TinyGPSDecimal3setEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSDecimal5validE">
+<span id="_CPPv3N14TinyGPSDecimal5validE"></span><span id="_CPPv2N14TinyGPSDecimal5validE"></span><span id="TinyGPSDecimal::valid__b"></span><span class="target" id="structTinyGPSDecimal_1a858e8762c24b39ee28e5076275affef2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSDecimal5validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSDecimal7updatedE">
+<span id="_CPPv3N14TinyGPSDecimal7updatedE"></span><span id="_CPPv2N14TinyGPSDecimal7updatedE"></span><span id="TinyGPSDecimal::updated__b"></span><span class="target" id="structTinyGPSDecimal_1af0803d568a59f6212f2e88e2e5ee6077"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updated</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSDecimal7updatedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSDecimal14lastCommitTimeE">
+<span id="_CPPv3N14TinyGPSDecimal14lastCommitTimeE"></span><span id="_CPPv2N14TinyGPSDecimal14lastCommitTimeE"></span><span id="TinyGPSDecimal::lastCommitTime__uint32_t"></span><span class="target" id="structTinyGPSDecimal_1aaa47eb71175c36d4ba3ba0e94d0c752e"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastCommitTime</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSDecimal14lastCommitTimeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSDecimal3valE">
+<span id="_CPPv3N14TinyGPSDecimal3valE"></span><span id="_CPPv2N14TinyGPSDecimal3valE"></span><span id="TinyGPSDecimal::val__int32_t"></span><span class="target" id="structTinyGPSDecimal_1a187fd7724408f9828603ea4368eccb1d"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">val</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSDecimal3valE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSDecimal6newvalE">
+<span id="_CPPv3N14TinyGPSDecimal6newvalE"></span><span id="_CPPv2N14TinyGPSDecimal6newvalE"></span><span id="TinyGPSDecimal::newval__int32_t"></span><span class="target" id="structTinyGPSDecimal_1ad8fa7dfb23e381b2353ea4ecaeaebc8b"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">newval</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSDecimal6newvalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">TinyGPSPlus</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv414TinyGPSInteger">
+<span id="_CPPv314TinyGPSInteger"></span><span id="_CPPv214TinyGPSInteger"></span><span id="TinyGPSInteger"></span><span class="target" id="structTinyGPSInteger"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSInteger</span></span></span><a class="headerlink" href="#_CPPv414TinyGPSInteger" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14TinyGPSInteger7isValidEv">
+<span id="_CPPv3NK14TinyGPSInteger7isValidEv"></span><span id="_CPPv2NK14TinyGPSInteger7isValidEv"></span><span id="TinyGPSInteger::isValidC"></span><span class="target" id="structTinyGPSInteger_1a3a76131645f7604b3f3e759b90f9373f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14TinyGPSInteger7isValidEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14TinyGPSInteger9isUpdatedEv">
+<span id="_CPPv3NK14TinyGPSInteger9isUpdatedEv"></span><span id="_CPPv2NK14TinyGPSInteger9isUpdatedEv"></span><span id="TinyGPSInteger::isUpdatedC"></span><span class="target" id="structTinyGPSInteger_1a35234fdeeffdb934a93740db1aefa6a5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUpdated</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14TinyGPSInteger9isUpdatedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK14TinyGPSInteger3ageEv">
+<span id="_CPPv3NK14TinyGPSInteger3ageEv"></span><span id="_CPPv2NK14TinyGPSInteger3ageEv"></span><span id="TinyGPSInteger::ageC"></span><span class="target" id="structTinyGPSInteger_1aabd55511befbd769155c69e0c1208691"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">age</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK14TinyGPSInteger3ageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSInteger5valueEv">
+<span id="_CPPv3N14TinyGPSInteger5valueEv"></span><span id="_CPPv2N14TinyGPSInteger5valueEv"></span><span id="TinyGPSInteger::value"></span><span class="target" id="structTinyGPSInteger_1a67de7e76d61dbd25eb32f701d8ce867b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14TinyGPSInteger5valueEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSInteger14TinyGPSIntegerEv">
+<span id="_CPPv3N14TinyGPSInteger14TinyGPSIntegerEv"></span><span id="_CPPv2N14TinyGPSInteger14TinyGPSIntegerEv"></span><span id="TinyGPSInteger::TinyGPSInteger"></span><span class="target" id="structTinyGPSInteger_1a017a71970fa652964a9e71b7ec945cec"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSInteger</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14TinyGPSInteger14TinyGPSIntegerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSInteger6commitEv">
+<span id="_CPPv3N14TinyGPSInteger6commitEv"></span><span id="_CPPv2N14TinyGPSInteger6commitEv"></span><span id="TinyGPSInteger::commit"></span><span class="target" id="structTinyGPSInteger_1a0b6f3cda527454e0fb0e59d9c75693ab"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14TinyGPSInteger6commitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSInteger3setEPKc">
+<span id="_CPPv3N14TinyGPSInteger3setEPKc"></span><span id="_CPPv2N14TinyGPSInteger3setEPKc"></span><span id="TinyGPSInteger::set__cCP"></span><span class="target" id="structTinyGPSInteger_1aa02f807a5831c726e6eea6892257e35c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14TinyGPSInteger3setEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSInteger5validE">
+<span id="_CPPv3N14TinyGPSInteger5validE"></span><span id="_CPPv2N14TinyGPSInteger5validE"></span><span id="TinyGPSInteger::valid__b"></span><span class="target" id="structTinyGPSInteger_1a138eaae0df615bd436e5abb651c2e376"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSInteger5validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSInteger7updatedE">
+<span id="_CPPv3N14TinyGPSInteger7updatedE"></span><span id="_CPPv2N14TinyGPSInteger7updatedE"></span><span id="TinyGPSInteger::updated__b"></span><span class="target" id="structTinyGPSInteger_1a8551627f1054eea5ca2bd871606fa8a1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updated</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSInteger7updatedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSInteger14lastCommitTimeE">
+<span id="_CPPv3N14TinyGPSInteger14lastCommitTimeE"></span><span id="_CPPv2N14TinyGPSInteger14lastCommitTimeE"></span><span id="TinyGPSInteger::lastCommitTime__uint32_t"></span><span class="target" id="structTinyGPSInteger_1ae738e3b0de372d0e8ba329f790cbc732"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastCommitTime</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSInteger14lastCommitTimeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSInteger3valE">
+<span id="_CPPv3N14TinyGPSInteger3valE"></span><span id="_CPPv2N14TinyGPSInteger3valE"></span><span id="TinyGPSInteger::val__uint32_t"></span><span class="target" id="structTinyGPSInteger_1a179c6615324c696606fb18093c1f2a74"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">val</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSInteger3valE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N14TinyGPSInteger6newvalE">
+<span id="_CPPv3N14TinyGPSInteger6newvalE"></span><span id="_CPPv2N14TinyGPSInteger6newvalE"></span><span id="TinyGPSInteger::newval__uint32_t"></span><span class="target" id="structTinyGPSInteger_1a7f9bc12f55134d4b4028edca243afc87"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">newval</span></span></span><a class="headerlink" href="#_CPPv4N14TinyGPSInteger6newvalE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">TinyGPSPlus</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv412TinyGPSSpeed">
+<span id="_CPPv312TinyGPSSpeed"></span><span id="_CPPv212TinyGPSSpeed"></span><span id="TinyGPSSpeed"></span><span class="target" id="structTinyGPSSpeed"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSSpeed</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv414TinyGPSDecimal" title="TinyGPSDecimal"><span class="n"><span class="pre">TinyGPSDecimal</span></span></a><a class="headerlink" href="#_CPPv412TinyGPSSpeed" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12TinyGPSSpeed5knotsEv">
+<span id="_CPPv3N12TinyGPSSpeed5knotsEv"></span><span id="_CPPv2N12TinyGPSSpeed5knotsEv"></span><span id="TinyGPSSpeed::knots"></span><span class="target" id="structTinyGPSSpeed_1aa3a38ce4ece3d8062c794b73f260395e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">knots</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12TinyGPSSpeed5knotsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12TinyGPSSpeed3mphEv">
+<span id="_CPPv3N12TinyGPSSpeed3mphEv"></span><span id="_CPPv2N12TinyGPSSpeed3mphEv"></span><span id="TinyGPSSpeed::mph"></span><span class="target" id="structTinyGPSSpeed_1a1809120167961ea9a85e860a964b1c6e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mph</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12TinyGPSSpeed3mphEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12TinyGPSSpeed3mpsEv">
+<span id="_CPPv3N12TinyGPSSpeed3mpsEv"></span><span id="_CPPv2N12TinyGPSSpeed3mpsEv"></span><span id="TinyGPSSpeed::mps"></span><span class="target" id="structTinyGPSSpeed_1aacee536241e810cdf4ba7846d6c202cb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mps</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12TinyGPSSpeed3mpsEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12TinyGPSSpeed4kmphEv">
+<span id="_CPPv3N12TinyGPSSpeed4kmphEv"></span><span id="_CPPv2N12TinyGPSSpeed4kmphEv"></span><span id="TinyGPSSpeed::kmph"></span><span class="target" id="structTinyGPSSpeed_1a7fee3c8f9f2fcc5f4a517bd6108f79dd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kmph</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12TinyGPSSpeed4kmphEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv413TinyGPSCourse">
+<span id="_CPPv313TinyGPSCourse"></span><span id="_CPPv213TinyGPSCourse"></span><span id="TinyGPSCourse"></span><span class="target" id="structTinyGPSCourse"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSCourse</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv414TinyGPSDecimal" title="TinyGPSDecimal"><span class="n"><span class="pre">TinyGPSDecimal</span></span></a><a class="headerlink" href="#_CPPv413TinyGPSCourse" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCourse3degEv">
+<span id="_CPPv3N13TinyGPSCourse3degEv"></span><span id="_CPPv2N13TinyGPSCourse3degEv"></span><span id="TinyGPSCourse::deg"></span><span class="target" id="structTinyGPSCourse_1a76dc8ae6c2fe5ead9b44c8d53a3272ca"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deg</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TinyGPSCourse3degEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv415TinyGPSAltitude">
+<span id="_CPPv315TinyGPSAltitude"></span><span id="_CPPv215TinyGPSAltitude"></span><span id="TinyGPSAltitude"></span><span class="target" id="structTinyGPSAltitude"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSAltitude</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv414TinyGPSDecimal" title="TinyGPSDecimal"><span class="n"><span class="pre">TinyGPSDecimal</span></span></a><a class="headerlink" href="#_CPPv415TinyGPSAltitude" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSAltitude6metersEv">
+<span id="_CPPv3N15TinyGPSAltitude6metersEv"></span><span id="_CPPv2N15TinyGPSAltitude6metersEv"></span><span id="TinyGPSAltitude::meters"></span><span class="target" id="structTinyGPSAltitude_1a5a39d145bb1778814007206c765189f7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">meters</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSAltitude6metersEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSAltitude5milesEv">
+<span id="_CPPv3N15TinyGPSAltitude5milesEv"></span><span id="_CPPv2N15TinyGPSAltitude5milesEv"></span><span id="TinyGPSAltitude::miles"></span><span class="target" id="structTinyGPSAltitude_1a5ae68d990ea08d4e21cfa6aefb46cc03"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">miles</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSAltitude5milesEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSAltitude10kilometersEv">
+<span id="_CPPv3N15TinyGPSAltitude10kilometersEv"></span><span id="_CPPv2N15TinyGPSAltitude10kilometersEv"></span><span id="TinyGPSAltitude::kilometers"></span><span class="target" id="structTinyGPSAltitude_1a1eb3e5b425784fc0db3e9ffe0f77f741"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kilometers</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSAltitude10kilometersEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15TinyGPSAltitude4feetEv">
+<span id="_CPPv3N15TinyGPSAltitude4feetEv"></span><span id="_CPPv2N15TinyGPSAltitude4feetEv"></span><span id="TinyGPSAltitude::feet"></span><span class="target" id="structTinyGPSAltitude_1ac782babc0c485d47e6f57384e88b8cc8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">feet</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15TinyGPSAltitude4feetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv411TinyGPSHDOP">
+<span id="_CPPv311TinyGPSHDOP"></span><span id="_CPPv211TinyGPSHDOP"></span><span id="TinyGPSHDOP"></span><span class="target" id="structTinyGPSHDOP"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSHDOP</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv414TinyGPSDecimal" title="TinyGPSDecimal"><span class="n"><span class="pre">TinyGPSDecimal</span></span></a><a class="headerlink" href="#_CPPv411TinyGPSHDOP" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSHDOP4hdopEv">
+<span id="_CPPv3N11TinyGPSHDOP4hdopEv"></span><span id="_CPPv2N11TinyGPSHDOP4hdopEv"></span><span id="TinyGPSHDOP::hdop"></span><span class="target" id="structTinyGPSHDOP_1a27cd35588c96eefb690bba46497d20d7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hdop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSHDOP4hdopEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv413TinyGPSCustom">
+<span id="_CPPv313TinyGPSCustom"></span><span id="_CPPv213TinyGPSCustom"></span><span id="TinyGPSCustom"></span><span class="target" id="classTinyGPSCustom"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSCustom</span></span></span><a class="headerlink" href="#_CPPv413TinyGPSCustom" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom13TinyGPSCustomEv">
+<span id="_CPPv3N13TinyGPSCustom13TinyGPSCustomEv"></span><span id="_CPPv2N13TinyGPSCustom13TinyGPSCustomEv"></span><span id="TinyGPSCustom::TinyGPSCustom"></span><span class="target" id="classTinyGPSCustom_1ac82fa99f3bcd9811377dd5fa3e9e98c7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSCustom</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom13TinyGPSCustomEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom13TinyGPSCustomER11TinyGPSPlusPKci">
+<span id="_CPPv3N13TinyGPSCustom13TinyGPSCustomER11TinyGPSPlusPKci"></span><span id="_CPPv2N13TinyGPSCustom13TinyGPSCustomER11TinyGPSPlusPKci"></span><span id="TinyGPSCustom::TinyGPSCustom__TinyGPSPlusR.cCP.i"></span><span class="target" id="classTinyGPSCustom_1a29b2a658bf95d8e6265e983b1c0251b5"></span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSCustom</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv411TinyGPSPlus" title="TinyGPSPlus"><span class="n"><span class="pre">TinyGPSPlus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">gps</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sentenceName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">termNumber</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom13TinyGPSCustomER11TinyGPSPlusPKci" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom5beginER11TinyGPSPlusPKci">
+<span id="_CPPv3N13TinyGPSCustom5beginER11TinyGPSPlusPKci"></span><span id="_CPPv2N13TinyGPSCustom5beginER11TinyGPSPlusPKci"></span><span id="TinyGPSCustom::begin__TinyGPSPlusR.cCP.i"></span><span class="target" id="classTinyGPSCustom_1a3bf972f7e2e7e3f483071630e5ca8355"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv411TinyGPSPlus" title="TinyGPSPlus"><span class="n"><span class="pre">TinyGPSPlus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">gps</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">_sentenceName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_termNumber</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom5beginER11TinyGPSPlusPKci" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13TinyGPSCustom9isUpdatedEv">
+<span id="_CPPv3NK13TinyGPSCustom9isUpdatedEv"></span><span id="_CPPv2NK13TinyGPSCustom9isUpdatedEv"></span><span id="TinyGPSCustom::isUpdatedC"></span><span class="target" id="classTinyGPSCustom_1ac735cdd0adb996de1d86bdcc15090977"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUpdated</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13TinyGPSCustom9isUpdatedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13TinyGPSCustom7isValidEv">
+<span id="_CPPv3NK13TinyGPSCustom7isValidEv"></span><span id="_CPPv2NK13TinyGPSCustom7isValidEv"></span><span id="TinyGPSCustom::isValidC"></span><span class="target" id="classTinyGPSCustom_1a6cc9903b3c45a321962642440204afeb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isValid</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13TinyGPSCustom7isValidEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK13TinyGPSCustom3ageEv">
+<span id="_CPPv3NK13TinyGPSCustom3ageEv"></span><span id="_CPPv2NK13TinyGPSCustom3ageEv"></span><span id="TinyGPSCustom::ageC"></span><span class="target" id="classTinyGPSCustom_1af5347ee2785bca9acb5a0f16fcc68ea0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">age</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK13TinyGPSCustom3ageEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom5valueEv">
+<span id="_CPPv3N13TinyGPSCustom5valueEv"></span><span id="_CPPv2N13TinyGPSCustom5valueEv"></span><span id="TinyGPSCustom::value"></span><span class="target" id="classTinyGPSCustom_1a03bb66f8d3e078b21c8a5033a88d8a32"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">value</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom5valueEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom6commitEv">
+<span id="_CPPv3N13TinyGPSCustom6commitEv"></span><span id="_CPPv2N13TinyGPSCustom6commitEv"></span><span id="TinyGPSCustom::commit"></span><span class="target" id="classTinyGPSCustom_1a3eea950a5ef62d6a226613fe72055dc4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom6commitEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom3setEPKc">
+<span id="_CPPv3N13TinyGPSCustom3setEPKc"></span><span id="_CPPv2N13TinyGPSCustom3setEPKc"></span><span id="TinyGPSCustom::set__cCP"></span><span class="target" id="classTinyGPSCustom_1a7fab13d1b33b96c112d896322ad9ec29"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom3setEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom13stagingBufferE">
+<span id="_CPPv3N13TinyGPSCustom13stagingBufferE"></span><span id="_CPPv2N13TinyGPSCustom13stagingBufferE"></span><span id="TinyGPSCustom::stagingBuffer__cA"></span><span class="target" id="classTinyGPSCustom_1a750eb149054cc4dfdcb75967ed0e9c32"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stagingBuffer</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">_GPS_MAX_FIELD_SIZE</span></span><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom13stagingBufferE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom6bufferE">
+<span id="_CPPv3N13TinyGPSCustom6bufferE"></span><span id="_CPPv2N13TinyGPSCustom6bufferE"></span><span id="TinyGPSCustom::buffer__cA"></span><span class="target" id="classTinyGPSCustom_1afcfd3fec763e381e0ea41bf59085fa93"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buffer</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">_GPS_MAX_FIELD_SIZE</span></span><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom6bufferE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom14lastCommitTimeE">
+<span id="_CPPv3N13TinyGPSCustom14lastCommitTimeE"></span><span id="_CPPv2N13TinyGPSCustom14lastCommitTimeE"></span><span id="TinyGPSCustom::lastCommitTime__unsigned-l"></span><span class="target" id="classTinyGPSCustom_1acd99fe5bbe5f274de1c172079e80110b"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lastCommitTime</span></span></span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom14lastCommitTimeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom5validE">
+<span id="_CPPv3N13TinyGPSCustom5validE"></span><span id="_CPPv2N13TinyGPSCustom5validE"></span><span id="TinyGPSCustom::valid__b"></span><span class="target" id="classTinyGPSCustom_1a579ba14a727c8fa4b65a756ddec209c8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">valid</span></span></span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom5validE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom7updatedE">
+<span id="_CPPv3N13TinyGPSCustom7updatedE"></span><span id="_CPPv2N13TinyGPSCustom7updatedE"></span><span id="TinyGPSCustom::updated__b"></span><span class="target" id="classTinyGPSCustom_1a9cb408f7deeff94aeec23b49a3036f97"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updated</span></span></span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom7updatedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom12sentenceNameE">
+<span id="_CPPv3N13TinyGPSCustom12sentenceNameE"></span><span id="_CPPv2N13TinyGPSCustom12sentenceNameE"></span><span id="TinyGPSCustom::sentenceName__cCP"></span><span class="target" id="classTinyGPSCustom_1ab3c8cb4f12d289cbf20abe6eccb3aa14"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">sentenceName</span></span></span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom12sentenceNameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom10termNumberE">
+<span id="_CPPv3N13TinyGPSCustom10termNumberE"></span><span id="_CPPv2N13TinyGPSCustom10termNumberE"></span><span id="TinyGPSCustom::termNumber__i"></span><span class="target" id="classTinyGPSCustom_1ae7302f115f94eab88739fa67bf6cbba1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">termNumber</span></span></span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom10termNumberE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13TinyGPSCustom4nextE">
+<span id="_CPPv3N13TinyGPSCustom4nextE"></span><span id="_CPPv2N13TinyGPSCustom4nextE"></span><span id="TinyGPSCustom::next__TinyGPSCustomP"></span><span class="target" id="classTinyGPSCustom_1a994b5ad843074007b061252293347270"></span><a class="reference internal" href="#_CPPv413TinyGPSCustom" title="TinyGPSCustom"><span class="n"><span class="pre">TinyGPSCustom</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">next</span></span></span><a class="headerlink" href="#_CPPv4N13TinyGPSCustom4nextE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">TinyGPSPlus</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv411TinyGPSPlus">
+<span id="_CPPv311TinyGPSPlus"></span><span id="_CPPv211TinyGPSPlus"></span><span id="TinyGPSPlus"></span><span class="target" id="classTinyGPSPlus"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSPlus</span></span></span><a class="headerlink" href="#_CPPv411TinyGPSPlus" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;TinyGPS++.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus11TinyGPSPlusEv">
+<span id="_CPPv3N11TinyGPSPlus11TinyGPSPlusEv"></span><span id="_CPPv2N11TinyGPSPlus11TinyGPSPlusEv"></span><span id="TinyGPSPlus::TinyGPSPlus"></span><span class="target" id="classTinyGPSPlus_1a3d9173312d514abf50bd43efe6bf6af3"></span><span class="sig-name descname"><span class="n"><span class="pre">TinyGPSPlus</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus11TinyGPSPlusEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus6encodeEc">
+<span id="_CPPv3N11TinyGPSPlus6encodeEc"></span><span id="_CPPv2N11TinyGPSPlus6encodeEc"></span><span id="TinyGPSPlus::encode__c"></span><span class="target" id="classTinyGPSPlus_1ad7b78320b7e4967df17c6a27008a5154"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">encode</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus6encodeEc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPluslsEc">
+<span id="_CPPv3N11TinyGPSPluslsEc"></span><span id="_CPPv2N11TinyGPSPluslsEc"></span><span id="TinyGPSPlus::lshift-operator__c"></span><span class="target" id="classTinyGPSPlus_1a05c12d268eddf254a9846bc34935a73c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv411TinyGPSPlus" title="TinyGPSPlus"><span class="n"><span class="pre">TinyGPSPlus</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">&lt;&lt;</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">c</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPluslsEc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSPlus14charsProcessedEv">
+<span id="_CPPv3NK11TinyGPSPlus14charsProcessedEv"></span><span id="_CPPv2NK11TinyGPSPlus14charsProcessedEv"></span><span id="TinyGPSPlus::charsProcessedC"></span><span class="target" id="classTinyGPSPlus_1addfc1fdbfddfeef2774dda1be42cdd55"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">charsProcessed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSPlus14charsProcessedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSPlus16sentencesWithFixEv">
+<span id="_CPPv3NK11TinyGPSPlus16sentencesWithFixEv"></span><span id="_CPPv2NK11TinyGPSPlus16sentencesWithFixEv"></span><span id="TinyGPSPlus::sentencesWithFixC"></span><span class="target" id="classTinyGPSPlus_1a8093eef1ee9f97b5293f1048320756e3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sentencesWithFix</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSPlus16sentencesWithFixEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSPlus14failedChecksumEv">
+<span id="_CPPv3NK11TinyGPSPlus14failedChecksumEv"></span><span id="_CPPv2NK11TinyGPSPlus14failedChecksumEv"></span><span id="TinyGPSPlus::failedChecksumC"></span><span class="target" id="classTinyGPSPlus_1af7dc415ad7cf13f01ca2eaead8a4ade2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">failedChecksum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSPlus14failedChecksumEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK11TinyGPSPlus14passedChecksumEv">
+<span id="_CPPv3NK11TinyGPSPlus14passedChecksumEv"></span><span id="_CPPv2NK11TinyGPSPlus14passedChecksumEv"></span><span id="TinyGPSPlus::passedChecksumC"></span><span class="target" id="classTinyGPSPlus_1a54c027a84bdeed40ac25bb54010d7c96"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">passedChecksum</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK11TinyGPSPlus14passedChecksumEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus8locationE">
+<span id="_CPPv3N11TinyGPSPlus8locationE"></span><span id="_CPPv2N11TinyGPSPlus8locationE"></span><span id="TinyGPSPlus::location__TinyGPSLocation"></span><span class="target" id="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3"></span><a class="reference internal" href="#_CPPv415TinyGPSLocation" title="TinyGPSLocation"><span class="n"><span class="pre">TinyGPSLocation</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">location</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus8locationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus4dateE">
+<span id="_CPPv3N11TinyGPSPlus4dateE"></span><span id="_CPPv2N11TinyGPSPlus4dateE"></span><span id="TinyGPSPlus::date__TinyGPSDate"></span><span class="target" id="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0"></span><a class="reference internal" href="#_CPPv411TinyGPSDate" title="TinyGPSDate"><span class="n"><span class="pre">TinyGPSDate</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">date</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus4dateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus4timeE">
+<span id="_CPPv3N11TinyGPSPlus4timeE"></span><span id="_CPPv2N11TinyGPSPlus4timeE"></span><span id="TinyGPSPlus::time__TinyGPSTime"></span><span class="target" id="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134"></span><a class="reference internal" href="#_CPPv411TinyGPSTime" title="TinyGPSTime"><span class="n"><span class="pre">TinyGPSTime</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus4timeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus5speedE">
+<span id="_CPPv3N11TinyGPSPlus5speedE"></span><span id="_CPPv2N11TinyGPSPlus5speedE"></span><span id="TinyGPSPlus::speed__TinyGPSSpeed"></span><span class="target" id="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404"></span><a class="reference internal" href="#_CPPv412TinyGPSSpeed" title="TinyGPSSpeed"><span class="n"><span class="pre">TinyGPSSpeed</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">speed</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus5speedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus6courseE">
+<span id="_CPPv3N11TinyGPSPlus6courseE"></span><span id="_CPPv2N11TinyGPSPlus6courseE"></span><span id="TinyGPSPlus::course__TinyGPSCourse"></span><span class="target" id="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868"></span><a class="reference internal" href="#_CPPv413TinyGPSCourse" title="TinyGPSCourse"><span class="n"><span class="pre">TinyGPSCourse</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">course</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus6courseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus8altitudeE">
+<span id="_CPPv3N11TinyGPSPlus8altitudeE"></span><span id="_CPPv2N11TinyGPSPlus8altitudeE"></span><span id="TinyGPSPlus::altitude__TinyGPSAltitude"></span><span class="target" id="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8"></span><a class="reference internal" href="#_CPPv415TinyGPSAltitude" title="TinyGPSAltitude"><span class="n"><span class="pre">TinyGPSAltitude</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">altitude</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus8altitudeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus10satellitesE">
+<span id="_CPPv3N11TinyGPSPlus10satellitesE"></span><span id="_CPPv2N11TinyGPSPlus10satellitesE"></span><span id="TinyGPSPlus::satellites__TinyGPSInteger"></span><span class="target" id="classTinyGPSPlus_1a5fb47066d1d03f4bb5853529053aab48"></span><a class="reference internal" href="#_CPPv414TinyGPSInteger" title="TinyGPSInteger"><span class="n"><span class="pre">TinyGPSInteger</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">satellites</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus10satellitesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus4hdopE">
+<span id="_CPPv3N11TinyGPSPlus4hdopE"></span><span id="_CPPv2N11TinyGPSPlus4hdopE"></span><span id="TinyGPSPlus::hdop__TinyGPSHDOP"></span><span class="target" id="classTinyGPSPlus_1a0bb6a7eb2d0261095911d71c8c067546"></span><a class="reference internal" href="#_CPPv411TinyGPSHDOP" title="TinyGPSHDOP"><span class="n"><span class="pre">TinyGPSHDOP</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hdop</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus4hdopE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus14libraryVersionEv">
+<span id="_CPPv3N11TinyGPSPlus14libraryVersionEv"></span><span id="_CPPv2N11TinyGPSPlus14libraryVersionEv"></span><span id="TinyGPSPlus::libraryVersion"></span><span class="target" id="classTinyGPSPlus_1a9cf0da36b5237ea295b4544f4a6d2273"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">libraryVersion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus14libraryVersionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus15distanceBetweenEdddd">
+<span id="_CPPv3N11TinyGPSPlus15distanceBetweenEdddd"></span><span id="_CPPv2N11TinyGPSPlus15distanceBetweenEdddd"></span><span id="TinyGPSPlus::distanceBetween__double.double.double.double"></span><span class="target" id="classTinyGPSPlus_1ace607cf3a6d49628e44eae1232237138"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distanceBetween</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lat1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">long1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lat2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">long2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus15distanceBetweenEdddd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus8courseToEdddd">
+<span id="_CPPv3N11TinyGPSPlus8courseToEdddd"></span><span id="_CPPv2N11TinyGPSPlus8courseToEdddd"></span><span id="TinyGPSPlus::courseTo__double.double.double.double"></span><span class="target" id="classTinyGPSPlus_1af338c18ccf58a47659be1ffc8259541d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">courseTo</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lat1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">long1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lat2</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">long2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus8courseToEdddd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus8cardinalEd">
+<span id="_CPPv3N11TinyGPSPlus8cardinalEd"></span><span id="_CPPv2N11TinyGPSPlus8cardinalEd"></span><span id="TinyGPSPlus::cardinal__double"></span><span class="target" id="classTinyGPSPlus_1a8c9e9444552ff85a505ffc6933dda03c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">cardinal</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">course</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus8cardinalEd" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus12parseDecimalEPKc">
+<span id="_CPPv3N11TinyGPSPlus12parseDecimalEPKc"></span><span id="_CPPv2N11TinyGPSPlus12parseDecimalEPKc"></span><span id="TinyGPSPlus::parseDecimal__cCP"></span><span class="target" id="classTinyGPSPlus_1a06d9bf0c1f0d0963511dc05e2f121121"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseDecimal</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">term</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus12parseDecimalEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus12parseDegreesEPKcR10RawDegrees">
+<span id="_CPPv3N11TinyGPSPlus12parseDegreesEPKcR10RawDegrees"></span><span id="_CPPv2N11TinyGPSPlus12parseDegreesEPKcR10RawDegrees"></span><span id="TinyGPSPlus::parseDegrees__cCP.RawDegreesR"></span><span class="target" id="classTinyGPSPlus_1a00627eaffc625bf366e4c984014fbf29"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parseDegrees</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">term</span></span>, <a class="reference internal" href="#_CPPv410RawDegrees" title="RawDegrees"><span class="n"><span class="pre">RawDegrees</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">deg</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus12parseDegreesEPKcR10RawDegrees" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-types">Private Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlusUt2_13E">
+<span id="_CPPv3N11TinyGPSPlusUt2_13E"></span><span class="target" id="classTinyGPSPlus_1a606b09c9985d7b2285409060aa784486"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlusUt2_13E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlusUt2_1318GPS_SENTENCE_GPGGAE">
+<span id="_CPPv3N11TinyGPSPlusUt2_1318GPS_SENTENCE_GPGGAE"></span><span class="target" id="classTinyGPSPlus_1a606b09c9985d7b2285409060aa784486a21da219c3e59be9c2ce2b0beff76918f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GPS_SENTENCE_GPGGA</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlusUt2_1318GPS_SENTENCE_GPGGAE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlusUt2_1318GPS_SENTENCE_GPRMCE">
+<span id="_CPPv3N11TinyGPSPlusUt2_1318GPS_SENTENCE_GPRMCE"></span><span class="target" id="classTinyGPSPlus_1a606b09c9985d7b2285409060aa784486af9076c9ba9a752d528726536899f7dbe"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GPS_SENTENCE_GPRMC</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlusUt2_1318GPS_SENTENCE_GPRMCE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlusUt2_1318GPS_SENTENCE_OTHERE">
+<span id="_CPPv3N11TinyGPSPlusUt2_1318GPS_SENTENCE_OTHERE"></span><span class="target" id="classTinyGPSPlus_1a606b09c9985d7b2285409060aa784486a51c5c85d67cfa4fdd6865104564a89aa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GPS_SENTENCE_OTHER</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlusUt2_1318GPS_SENTENCE_OTHERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus12insertCustomEP13TinyGPSCustomPKci">
+<span id="_CPPv3N11TinyGPSPlus12insertCustomEP13TinyGPSCustomPKci"></span><span id="_CPPv2N11TinyGPSPlus12insertCustomEP13TinyGPSCustomPKci"></span><span id="TinyGPSPlus::insertCustom__TinyGPSCustomP.cCP.i"></span><span class="target" id="classTinyGPSPlus_1af9ab42b8af4a6ab0db9794b980987430"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insertCustom</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413TinyGPSCustom" title="TinyGPSCustom"><span class="n"><span class="pre">TinyGPSCustom</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pElt</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">sentenceName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">index</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus12insertCustomEP13TinyGPSCustomPKci" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus7fromHexEc">
+<span id="_CPPv3N11TinyGPSPlus7fromHexEc"></span><span id="_CPPv2N11TinyGPSPlus7fromHexEc"></span><span id="TinyGPSPlus::fromHex__c"></span><span class="target" id="classTinyGPSPlus_1a9f8acf18530c3b4fd2d6b2f9947e315c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fromHex</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus7fromHexEc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus16endOfTermHandlerEv">
+<span id="_CPPv3N11TinyGPSPlus16endOfTermHandlerEv"></span><span id="_CPPv2N11TinyGPSPlus16endOfTermHandlerEv"></span><span id="TinyGPSPlus::endOfTermHandler"></span><span class="target" id="classTinyGPSPlus_1ad03e05d24ecc96c27814eb17adfb38db"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">endOfTermHandler</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus16endOfTermHandlerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus6parityE">
+<span id="_CPPv3N11TinyGPSPlus6parityE"></span><span id="_CPPv2N11TinyGPSPlus6parityE"></span><span id="TinyGPSPlus::parity__uint8_t"></span><span class="target" id="classTinyGPSPlus_1adfe5e8fc602e2777c6df87fb212b1ab6"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parity</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus6parityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus14isChecksumTermE">
+<span id="_CPPv3N11TinyGPSPlus14isChecksumTermE"></span><span id="_CPPv2N11TinyGPSPlus14isChecksumTermE"></span><span id="TinyGPSPlus::isChecksumTerm__b"></span><span class="target" id="classTinyGPSPlus_1a1b00b1bf055b0965698f9e747da3b03a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isChecksumTerm</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus14isChecksumTermE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus4termE">
+<span id="_CPPv3N11TinyGPSPlus4termE"></span><span id="_CPPv2N11TinyGPSPlus4termE"></span><span id="TinyGPSPlus::term__cA"></span><span class="target" id="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">term</span></span></span><span class="p"><span class="pre">[</span></span><span class="n"><span class="pre">_GPS_MAX_FIELD_SIZE</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus4termE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus15curSentenceTypeE">
+<span id="_CPPv3N11TinyGPSPlus15curSentenceTypeE"></span><span id="_CPPv2N11TinyGPSPlus15curSentenceTypeE"></span><span id="TinyGPSPlus::curSentenceType__uint8_t"></span><span class="target" id="classTinyGPSPlus_1a8b89eadf418a22fdaf2c7520f7b084a3"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">curSentenceType</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus15curSentenceTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus13curTermNumberE">
+<span id="_CPPv3N11TinyGPSPlus13curTermNumberE"></span><span id="_CPPv2N11TinyGPSPlus13curTermNumberE"></span><span id="TinyGPSPlus::curTermNumber__uint8_t"></span><span class="target" id="classTinyGPSPlus_1a5688c9f32b16fab9433f0fde869d0e89"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">curTermNumber</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus13curTermNumberE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus13curTermOffsetE">
+<span id="_CPPv3N11TinyGPSPlus13curTermOffsetE"></span><span id="_CPPv2N11TinyGPSPlus13curTermOffsetE"></span><span id="TinyGPSPlus::curTermOffset__uint8_t"></span><span class="target" id="classTinyGPSPlus_1a2b12aee8c9a1f550ee09b74a9b4ae570"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">curTermOffset</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus13curTermOffsetE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus14sentenceHasFixE">
+<span id="_CPPv3N11TinyGPSPlus14sentenceHasFixE"></span><span id="_CPPv2N11TinyGPSPlus14sentenceHasFixE"></span><span id="TinyGPSPlus::sentenceHasFix__b"></span><span class="target" id="classTinyGPSPlus_1af5fbeb1e2a1cebb044079e4799a8be55"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sentenceHasFix</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus14sentenceHasFixE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus10customEltsE">
+<span id="_CPPv3N11TinyGPSPlus10customEltsE"></span><span id="_CPPv2N11TinyGPSPlus10customEltsE"></span><span id="TinyGPSPlus::customElts__TinyGPSCustomP"></span><span class="target" id="classTinyGPSPlus_1a814ec9664ba8f1b28870342e5308e2cd"></span><a class="reference internal" href="#_CPPv413TinyGPSCustom" title="TinyGPSCustom"><span class="n"><span class="pre">TinyGPSCustom</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">customElts</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus10customEltsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus16customCandidatesE">
+<span id="_CPPv3N11TinyGPSPlus16customCandidatesE"></span><span id="_CPPv2N11TinyGPSPlus16customCandidatesE"></span><span id="TinyGPSPlus::customCandidates__TinyGPSCustomP"></span><span class="target" id="classTinyGPSPlus_1ad817698ca7fa61998a2cd42cee5bfbc8"></span><a class="reference internal" href="#_CPPv413TinyGPSCustom" title="TinyGPSCustom"><span class="n"><span class="pre">TinyGPSCustom</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">customCandidates</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus16customCandidatesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus16encodedCharCountE">
+<span id="_CPPv3N11TinyGPSPlus16encodedCharCountE"></span><span id="_CPPv2N11TinyGPSPlus16encodedCharCountE"></span><span id="TinyGPSPlus::encodedCharCount__uint32_t"></span><span class="target" id="classTinyGPSPlus_1a80ce0fa1f373c26c83f517c8bde3686c"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">encodedCharCount</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus16encodedCharCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus21sentencesWithFixCountE">
+<span id="_CPPv3N11TinyGPSPlus21sentencesWithFixCountE"></span><span id="_CPPv2N11TinyGPSPlus21sentencesWithFixCountE"></span><span id="TinyGPSPlus::sentencesWithFixCount__uint32_t"></span><span class="target" id="classTinyGPSPlus_1a2c71f75dbb81f8d1d2b3ccbbd61155da"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sentencesWithFixCount</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus21sentencesWithFixCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus19failedChecksumCountE">
+<span id="_CPPv3N11TinyGPSPlus19failedChecksumCountE"></span><span id="_CPPv2N11TinyGPSPlus19failedChecksumCountE"></span><span id="TinyGPSPlus::failedChecksumCount__uint32_t"></span><span class="target" id="classTinyGPSPlus_1ac829f43b23f5d50e888034170451cb73"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">failedChecksumCount</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus19failedChecksumCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N11TinyGPSPlus19passedChecksumCountE">
+<span id="_CPPv3N11TinyGPSPlus19passedChecksumCountE"></span><span id="_CPPv2N11TinyGPSPlus19passedChecksumCountE"></span><span id="TinyGPSPlus::passedChecksumCount__uint32_t"></span><span class="target" id="classTinyGPSPlus_1a0010f4b025a85b9ee717d78d316d3365"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">passedChecksumCount</span></span></span><a class="headerlink" href="#_CPPv4N11TinyGPSPlus19passedChecksumCountE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-friends">Friends</p>
+<dl>
+<dt class="sig sig-object cpp">
+<em class="property"><span class="pre">friend</span> <span class="pre">class</span></em> <span class="pre">TinyGPSCustom</span></dt>
+</dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, William Stump, Chris Swindell, Luke Chapman, Emma Krebs, Mia Guzman.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>
