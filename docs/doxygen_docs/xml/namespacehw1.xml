@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacehw1" kind="namespace" language="Python">
+    <compoundname>hw1</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacehw1_1a233b7a428f9d96278a876d1908608119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw1.p1</definition>
+        <argsstring>()</argsstring>
+        <name>p1</name>
+        <qualifiedname>hw1.p1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw1/hw1.py" line="5" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw1/hw1.py" bodystart="5" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw1_1abca8afe1849804fdd3d5bb94af21213d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw1.p2</definition>
+        <argsstring>()</argsstring>
+        <name>p2</name>
+        <qualifiedname>hw1.p2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw1/hw1.py" line="46" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw1/hw1.py" bodystart="46" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw1_1a0d94f582011971d93ed9bcf2b544662c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw1.p3</definition>
+        <argsstring>()</argsstring>
+        <name>p3</name>
+        <qualifiedname>hw1.p3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw1/hw1.py" line="69" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw1/hw1.py" bodystart="69" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw1_1a30e62e29f7e8351a1f69e34b26ccb963" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw1.p4</definition>
+        <argsstring>()</argsstring>
+        <name>p4</name>
+        <qualifiedname>hw1.p4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw1/hw1.py" line="92" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw1/hw1.py" bodystart="92" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw1_1ac37731109eb8a8d4aaf57ac0606b45cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw1.p5</definition>
+        <argsstring>()</argsstring>
+        <name>p5</name>
+        <qualifiedname>hw1.p5</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw1/hw1.py" line="106" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw1/hw1.py" bodystart="106" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw1_1a1f2b74b7a32910acfc1c7b75abb31c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw1.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>hw1.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw1/hw1.py" line="139" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw1/hw1.py" bodystart="139" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece5520/homework/hw1/hw1.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

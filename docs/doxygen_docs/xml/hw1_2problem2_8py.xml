@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="hw1_2problem2_8py" kind="file" language="Python">
+    <compoundname>problem2.py</compoundname>
+    <innernamespace refid="namespaceproblem2">problem2</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceproblem2" refkind="compound"><highlight class="comment">#<sp/>Name:<sp/>Chris<sp/>Swindell</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Assignment:<sp/>HW1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>math<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>sqrt,<sp/>pi</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>exp,<sp/>linspace</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>matplotlib<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pyplot<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>plot</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral">Name:<sp/>Dirac_delta</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral">Parameters:<sp/>t<sp/>-&gt;<sp/>numpy<sp/>array<sp/>of<sp/>time<sp/>steps<sp/>(seconds)</highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sigma<sp/>-&gt;<sp/>standard<sp/>deviation<sp/>of<sp/>Dirac<sp/>delta<sp/>pdf<sp/>approximation</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral">Purpose:<sp/>Calculates<sp/>an<sp/>approximation<sp/>of<sp/>the<sp/>Dirac<sp/>delta<sp/>distribution<sp/>using<sp/>a<sp/>pdf<sp/>(probability<sp/>density<sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>function)<sp/>of<sp/>a<sp/>Gaussian<sp/>distribution.</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral">def<sp/>Dirac_delta<sp/>(t,<sp/>sigma:<sp/>float):</highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(1<sp/>/<sp/>sqrt(2<sp/>*<sp/>pi<sp/>*<sp/>sigma**2))<sp/>*<sp/>exp(-(t**2<sp/>/<sp/>(2<sp/>*<sp/>sigma**2)))</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1a5bc68aafe95fc8640efeb5eef2317d68" kindref="member">main</ref><sp/>():</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>Parameters<sp/>for<sp/>Dirac_delta().<sp/>These<sp/>are<sp/>pairs<sp/>(AKA<sp/>2-tuples,<sp/>couples)<sp/>with<sp/>the<sp/>first</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>element<sp/>being<sp/>the<sp/>quantity<sp/>and<sp/>the<sp/>second<sp/>element<sp/>being<sp/>the<sp/>unit.<sp/>I&apos;ve<sp/>found<sp/>this<sp/>format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>makes<sp/>it<sp/>easier<sp/>to<sp/>keep<sp/>unit<sp/>changes<sp/>consistent<sp/>when<sp/>plotting.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>=<sp/>(linspace(-1,<sp/>1,<sp/>1001),<sp/></highlight><highlight class="stringliteral">&apos;sec&apos;</highlight><highlight class="normal">)<sp/><sp/></highlight><highlight class="comment">#<sp/>msec<sp/>time<sp/>steps</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>sigma<sp/>=<sp/>([0.01,<sp/>0.02,<sp/>0.05],<sp/></highlight><highlight class="stringliteral">&apos;sec&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">#<sp/>standard<sp/>deviations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>Solution<sp/>for<sp/>Dirac_delta(t).<sp/>Each<sp/>list<sp/>element<sp/>is<sp/>a<sp/>numpy<sp/>array<sp/>calculated<sp/>for<sp/>each<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/><sp/><sp/>of<sp/>sigma.<sp/>Since<sp/>the<sp/>approximation<sp/>is<sp/>a<sp/>probability,<sp/>the<sp/>result<sp/>is<sp/>a<sp/>unitless<sp/>quantity.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>Dd_t<sp/>=<sp/>([<ref refid="namespaceproblem2_1af525a89e0908e5ae7b75446db523b1e7" kindref="member">Dirac_delta</ref>(t[0],<sp/>sig)<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>sig<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>sigma[0]],<sp/></highlight><highlight class="stringliteral">&apos;unitless&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>Plotting<sp/>Dirac_delta(t)<sp/>for<sp/>every<sp/>time<sp/>step<sp/>t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>sig,<sp/>y<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>zip(sigma[0],<sp/>Dd_t[0]):<sp/>plot.plot(t[0],<sp/>y,<sp/>label=</highlight><highlight class="stringliteral">&apos;$\sigma$=%.2f&apos;</highlight><highlight class="normal"><sp/>%sig)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>plot.title(</highlight><highlight class="stringliteral">&apos;Problem<sp/>2<sp/>-<sp/>$\delta(t)$<sp/>Approximation<sp/>Using<sp/>Guassian<sp/>PDF&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>plot.xlabel(</highlight><highlight class="stringliteral">&apos;t<sp/>(sec)&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>plot.ylabel(</highlight><highlight class="stringliteral">&apos;p(t<sp/>|<sp/>$\mu=0,<sp/>\sigma^2$)<sp/>(%s)&apos;</highlight><highlight class="normal"><sp/>%Dd_t[1])</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>plot.legend(loc=</highlight><highlight class="stringliteral">&apos;upper<sp/>right&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>plot.show()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceproblem2_1a5bc68aafe95fc8640efeb5eef2317d68" kindref="member">main</ref>()</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/ece6040/homework/hw1/problem2.py"/>
+  </compounddef>
+</doxygen>

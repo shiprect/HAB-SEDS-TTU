@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classPWM" kind="class" language="C++" prot="public">
+    <compoundname>PWM</compoundname>
+    <includes local="no">PWM.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classPWM_1a057c4f4333ba4f39127a55980d3d17dc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PWM::OutputPin</definition>
+        <argsstring></argsstring>
+        <name>OutputPin</name>
+        <qualifiedname>PWM::OutputPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="10" column="5" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPWM_1a5cac54bdf932efce64b707eb5a09eb7f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool PWM::State</definition>
+        <argsstring></argsstring>
+        <name>State</name>
+        <qualifiedname>PWM::State</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="11" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPWM_1a19435d334ce3b63ce25d95d8bcdfbf15" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PWM::DutyCycle</definition>
+        <argsstring></argsstring>
+        <name>DutyCycle</name>
+        <qualifiedname>PWM::DutyCycle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="15" column="7" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPWM_1abc27f06c2b4192aed95a62b5cb534f3f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PWM::Period_us_</definition>
+        <argsstring></argsstring>
+        <name>Period_us_</name>
+        <qualifiedname>PWM::Period_us_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="16" column="7" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPWM_1abe178de9b826d5bcbe63639eb0c56ec9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PWM::PulseWidth_us_</definition>
+        <argsstring></argsstring>
+        <name>PulseWidth_us_</name>
+        <qualifiedname>PWM::PulseWidth_us_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="17" column="7" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classPWM_1a67186a0ffeabee8d4a33bbd1d6488ef8" prot="private" static="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int PWM::Resolution</definition>
+        <argsstring></argsstring>
+        <name>Resolution</name>
+        <qualifiedname>PWM::Resolution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="13" column="21" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPWM_1ab3333b13b539a7dc1c712a73a53bbd3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PWM::PWM</definition>
+        <argsstring>()</argsstring>
+        <name>PWM</name>
+        <qualifiedname>PWM::PWM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="20" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1a903377c1da3618530f999d77297406af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PWM::~PWM</definition>
+        <argsstring>()</argsstring>
+        <name>~PWM</name>
+        <qualifiedname>PWM::~PWM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="21" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1ac80709934a4045a6ba9357144b30ece2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::ANALOGPIN_Setup</definition>
+        <argsstring>(int Pin, bool state=OFF)</argsstring>
+        <name>ANALOGPIN_Setup</name>
+        <qualifiedname>PWM::ANALOGPIN_Setup</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>Pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+          <defval><ref refid="HardwareUtilities_8h_1a29e413f6725b2ba32d165ffaa35b01e5" kindref="member">OFF</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="23" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1a635b80e90b345c6bd2291c7eea668c3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::ANALOGPIN_Update</definition>
+        <argsstring>()</argsstring>
+        <name>ANALOGPIN_Update</name>
+        <qualifiedname>PWM::ANALOGPIN_Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="24" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1ad61f19a449a85e3962918e84d8d65313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::setState</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setState</name>
+        <qualifiedname>PWM::setState</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="26" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1aae4390846e4e3e8fae8b9559e63d8186" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::toggleState</definition>
+        <argsstring>()</argsstring>
+        <name>toggleState</name>
+        <qualifiedname>PWM::toggleState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="27" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1aa7c3cd6bcd57d3460a77572bb9270e26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool PWM::getState</definition>
+        <argsstring>()</argsstring>
+        <name>getState</name>
+        <qualifiedname>PWM::getState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="28" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1adaf250808da20b796eac37fbbc1f78d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::setDutyCycle</definition>
+        <argsstring>(float CycleRate)</argsstring>
+        <name>setDutyCycle</name>
+        <qualifiedname>PWM::setDutyCycle</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>CycleRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="30" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1a335ecdc0437d24468435aa3c81d60fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PWM::getDutyCycle</definition>
+        <argsstring>()</argsstring>
+        <name>getDutyCycle</name>
+        <qualifiedname>PWM::getDutyCycle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="31" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1a71f7511221fca40c826cff51db4deb22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::setPeriod</definition>
+        <argsstring>(float _us_)</argsstring>
+        <name>setPeriod</name>
+        <qualifiedname>PWM::setPeriod</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>_us_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="32" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1aff75778f1e4a4eb223cba696ec43a5f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PWM::getPeriod</definition>
+        <argsstring>()</argsstring>
+        <name>getPeriod</name>
+        <qualifiedname>PWM::getPeriod</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="33" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1a95658a802ba3278c18a26a92ccb3df7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PWM::setPulseWidth</definition>
+        <argsstring>(float us)</argsstring>
+        <name>setPulseWidth</name>
+        <qualifiedname>PWM::setPulseWidth</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>us</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="34" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classPWM_1ad4d4bc342c9e1db23c2933153590f3e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float PWM::getPulseWidth</definition>
+        <argsstring>()</argsstring>
+        <name>getPulseWidth</name>
+        <qualifiedname>PWM::getPulseWidth</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="35" column="7"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" line="8" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp" bodystart="8" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classPWM_1ac80709934a4045a6ba9357144b30ece2" prot="public" virt="non-virtual"><scope>PWM</scope><name>ANALOGPIN_Setup</name></member>
+      <member refid="classPWM_1a635b80e90b345c6bd2291c7eea668c3f" prot="public" virt="non-virtual"><scope>PWM</scope><name>ANALOGPIN_Update</name></member>
+      <member refid="classPWM_1a19435d334ce3b63ce25d95d8bcdfbf15" prot="private" virt="non-virtual"><scope>PWM</scope><name>DutyCycle</name></member>
+      <member refid="classPWM_1a335ecdc0437d24468435aa3c81d60fd5" prot="public" virt="non-virtual"><scope>PWM</scope><name>getDutyCycle</name></member>
+      <member refid="classPWM_1aff75778f1e4a4eb223cba696ec43a5f9" prot="public" virt="non-virtual"><scope>PWM</scope><name>getPeriod</name></member>
+      <member refid="classPWM_1ad4d4bc342c9e1db23c2933153590f3e6" prot="public" virt="non-virtual"><scope>PWM</scope><name>getPulseWidth</name></member>
+      <member refid="classPWM_1aa7c3cd6bcd57d3460a77572bb9270e26" prot="public" virt="non-virtual"><scope>PWM</scope><name>getState</name></member>
+      <member refid="classPWM_1a057c4f4333ba4f39127a55980d3d17dc" prot="private" virt="non-virtual"><scope>PWM</scope><name>OutputPin</name></member>
+      <member refid="classPWM_1abc27f06c2b4192aed95a62b5cb534f3f" prot="private" virt="non-virtual"><scope>PWM</scope><name>Period_us_</name></member>
+      <member refid="classPWM_1abe178de9b826d5bcbe63639eb0c56ec9" prot="private" virt="non-virtual"><scope>PWM</scope><name>PulseWidth_us_</name></member>
+      <member refid="classPWM_1ab3333b13b539a7dc1c712a73a53bbd3b" prot="public" virt="non-virtual"><scope>PWM</scope><name>PWM</name></member>
+      <member refid="classPWM_1a67186a0ffeabee8d4a33bbd1d6488ef8" prot="private" virt="non-virtual"><scope>PWM</scope><name>Resolution</name></member>
+      <member refid="classPWM_1adaf250808da20b796eac37fbbc1f78d8" prot="public" virt="non-virtual"><scope>PWM</scope><name>setDutyCycle</name></member>
+      <member refid="classPWM_1a71f7511221fca40c826cff51db4deb22" prot="public" virt="non-virtual"><scope>PWM</scope><name>setPeriod</name></member>
+      <member refid="classPWM_1a95658a802ba3278c18a26a92ccb3df7b" prot="public" virt="non-virtual"><scope>PWM</scope><name>setPulseWidth</name></member>
+      <member refid="classPWM_1ad61f19a449a85e3962918e84d8d65313" prot="public" virt="non-virtual"><scope>PWM</scope><name>setState</name></member>
+      <member refid="classPWM_1a5cac54bdf932efce64b707eb5a09eb7f" prot="private" virt="non-virtual"><scope>PWM</scope><name>State</name></member>
+      <member refid="classPWM_1aae4390846e4e3e8fae8b9559e63d8186" prot="public" virt="non-virtual"><scope>PWM</scope><name>toggleState</name></member>
+      <member refid="classPWM_1a903377c1da3618530f999d77297406af" prot="public" virt="non-virtual"><scope>PWM</scope><name>~PWM</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

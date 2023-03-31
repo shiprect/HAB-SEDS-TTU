@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_30b65656a37ddcd04b731af58c5e1f01" kind="dir">
+    <compoundname>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS</compoundname>
+    <innerfile refid="GPS_8cpp">GPS.cpp</innerfile>
+    <innerfile refid="GPS_8hpp">GPS.hpp</innerfile>
+    <innerfile refid="TinyGPS_09_09_8cpp">TinyGPS++.cpp</innerfile>
+    <innerfile refid="TinyGPS_09_09_8h">TinyGPS++.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/"/>
+  </compounddef>
+</doxygen>

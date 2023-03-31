@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classAPRS" kind="class" language="C++" prot="public">
+    <compoundname>APRS</compoundname>
+    <includes local="no">APRS.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAPRS_1a0916a2fa19451c564257f63e8a57c5f5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool APRS::ValidAPRS</definition>
+        <argsstring></argsstring>
+        <name>ValidAPRS</name>
+        <qualifiedname>APRS::ValidAPRS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="25" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAPRS_1a0ae38b7326866b2ce9e1d79eb84cdc1b" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t APRS::APRS_PERIOD</definition>
+        <argsstring></argsstring>
+        <name>APRS_PERIOD</name>
+        <qualifiedname>APRS::APRS_PERIOD</qualifiedname>
+        <initializer>= 300</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="28" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classAPRS_1a843dde7eb8ef178e57b5edd63aa76d3b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APRS::APRS_Send_with_String</definition>
+        <argsstring>(const PathAddress *const paths, const int nPaths, const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min, const float lat, const float lon, const float altitude, const uint16_t heading, const float speed, const char symbolTableIndicator, const char symbol, const char *const comment)</argsstring>
+        <name>APRS_Send_with_String</name>
+        <qualifiedname>APRS::APRS_Send_with_String</qualifiedname>
+        <param>
+          <type>const <ref refid="structPathAddress" kindref="compound">PathAddress</ref> *const</type>
+          <declname>paths</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>nPaths</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>dayOfMonth</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>lat</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>altitude</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>heading</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>speed</declname>
+        </param>
+        <param>
+          <type>const char</type>
+          <declname>symbolTableIndicator</declname>
+        </param>
+        <param>
+          <type>const char</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>const char *const</type>
+          <declname>comment</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="30" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp" bodystart="221" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classAPRS_1a0f7df5200518af9182df3e3ff197d69e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APRS::logBuffer</definition>
+        <argsstring>(const uint8_t *const buf, const int bitsSent, const uint8_t dayOfMonth, const uint8_t hour, const uint8_t min)</argsstring>
+        <name>logBuffer</name>
+        <qualifiedname>APRS::logBuffer</qualifiedname>
+        <param>
+          <type>const uint8_t *const</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>bitsSent</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>dayOfMonth</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>min</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="36" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp" bodystart="290" bodyend="363"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAPRS_1abe39a031fb76d9928c8cde6946a6f361" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>APRS::APRS</definition>
+        <argsstring>()</argsstring>
+        <name>APRS</name>
+        <qualifiedname>APRS::APRS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="43" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" bodystart="43" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classAPRS_1a41489d83dab3f21934959a7ca1c76308" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>APRS::~APRS</definition>
+        <argsstring>()</argsstring>
+        <name>~APRS</name>
+        <qualifiedname>APRS::~APRS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="46" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" bodystart="46" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classAPRS_1a1bf8abb9e97f94e6b59a7758339839d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APRS::APRS_Setup</definition>
+        <argsstring>(const uint16_t p_preambleFlags, const uint8_t pttPin, const uint16_t pttDelay, const uint32_t toneLength, const uint32_t silenceLength)</argsstring>
+        <name>APRS_Setup</name>
+        <qualifiedname>APRS::APRS_Setup</qualifiedname>
+        <param>
+          <type>const uint16_t</type>
+          <declname>p_preambleFlags</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>pttPin</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>pttDelay</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>toneLength</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>silenceLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="49" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp" bodystart="46" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classAPRS_1acef31535927a942a9b735ef550606280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APRS::APRS_Update</definition>
+        <argsstring>()</argsstring>
+        <name>APRS_Update</name>
+        <qualifiedname>APRS::APRS_Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="56" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp" bodystart="62" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classAPRS_1abb63cf7b937980c4925235443e8f6b16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool APRS::IsValidAPRS</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidAPRS</name>
+        <qualifiedname>APRS::IsValidAPRS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="58" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classAPRS_1ac3accbab93100491b11dd3e9c838f765" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void APRS::APRS_Transmit</definition>
+        <argsstring>()</argsstring>
+        <name>APRS_Transmit</name>
+        <qualifiedname>APRS::APRS_Transmit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="60" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp" bodystart="98" bodyend="212"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="22" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" bodystart="22" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classAPRS_1abe39a031fb76d9928c8cde6946a6f361" prot="public" virt="non-virtual"><scope>APRS</scope><name>APRS</name></member>
+      <member refid="classAPRS_1a0ae38b7326866b2ce9e1d79eb84cdc1b" prot="private" virt="non-virtual"><scope>APRS</scope><name>APRS_PERIOD</name></member>
+      <member refid="classAPRS_1a843dde7eb8ef178e57b5edd63aa76d3b" prot="private" virt="non-virtual"><scope>APRS</scope><name>APRS_Send_with_String</name></member>
+      <member refid="classAPRS_1a1bf8abb9e97f94e6b59a7758339839d5" prot="public" virt="non-virtual"><scope>APRS</scope><name>APRS_Setup</name></member>
+      <member refid="classAPRS_1ac3accbab93100491b11dd3e9c838f765" prot="public" virt="non-virtual"><scope>APRS</scope><name>APRS_Transmit</name></member>
+      <member refid="classAPRS_1acef31535927a942a9b735ef550606280" prot="public" virt="non-virtual"><scope>APRS</scope><name>APRS_Update</name></member>
+      <member refid="classAPRS_1abb63cf7b937980c4925235443e8f6b16" prot="public" virt="non-virtual"><scope>APRS</scope><name>IsValidAPRS</name></member>
+      <member refid="classAPRS_1a0f7df5200518af9182df3e3ff197d69e" prot="private" virt="non-virtual"><scope>APRS</scope><name>logBuffer</name></member>
+      <member refid="classAPRS_1a0916a2fa19451c564257f63e8a57c5f5" prot="private" virt="non-virtual"><scope>APRS</scope><name>ValidAPRS</name></member>
+      <member refid="classAPRS_1a41489d83dab3f21934959a7ca1c76308" prot="public" virt="non-virtual"><scope>APRS</scope><name>~APRS</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

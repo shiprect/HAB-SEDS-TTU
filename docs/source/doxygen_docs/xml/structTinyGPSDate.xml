@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structTinyGPSDate" kind="struct" language="C++" prot="public">
+    <compoundname>TinyGPSDate</compoundname>
+    <includes local="no">TinyGPS++.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structTinyGPSDate_1a6501fd5ef19ae166d43e0e5781609ee2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class TinyGPSPlus</definition>
+        <argsstring></argsstring>
+        <name>TinyGPSPlus</name>
+        <qualifiedname>TinyGPSDate::TinyGPSPlus</qualifiedname>
+        <param>
+          <type><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="99" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structTinyGPSDate_1a6b312ccebe3537eb9687211622bc5f26" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TinyGPSDate::valid</definition>
+        <argsstring></argsstring>
+        <name>valid</name>
+        <qualifiedname>TinyGPSDate::valid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="127" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTinyGPSDate_1af92ee9facc35b637b589320ddffcce32" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TinyGPSDate::updated</definition>
+        <argsstring></argsstring>
+        <name>updated</name>
+        <qualifiedname>TinyGPSDate::updated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="127" column="12" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTinyGPSDate_1ab141f37e0dda429ad041f9a951564677" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSDate::date</definition>
+        <argsstring></argsstring>
+        <name>date</name>
+        <qualifiedname>TinyGPSDate::date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="128" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTinyGPSDate_1a81d6d90be898cf44e804e86a2f4a3d2d" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSDate::newDate</definition>
+        <argsstring></argsstring>
+        <name>newDate</name>
+        <qualifiedname>TinyGPSDate::newDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="128" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structTinyGPSDate_1acbece939f279507806570bb108311a88" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSDate::lastCommitTime</definition>
+        <argsstring></argsstring>
+        <name>lastCommitTime</name>
+        <qualifiedname>TinyGPSDate::lastCommitTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="129" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structTinyGPSDate_1a3ae7825f840ef4ba0ecddbc22f741817" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TinyGPSDate::isValid</definition>
+        <argsstring>() const</argsstring>
+        <name>isValid</name>
+        <qualifiedname>TinyGPSDate::isValid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="102" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="structTinyGPSDate_1a1b913837130bb49ecd309eaf6bc205b1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TinyGPSDate::isUpdated</definition>
+        <argsstring>() const</argsstring>
+        <name>isUpdated</name>
+        <qualifiedname>TinyGPSDate::isUpdated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="106" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="structTinyGPSDate_1af8b9c057a28dcb490081fcfde2a0ee11" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSDate::age</definition>
+        <argsstring>() const</argsstring>
+        <name>age</name>
+        <qualifiedname>TinyGPSDate::age</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="110" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="structTinyGPSDate_1a718150ae16f68afa9ae81f9d1b3ce3f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSDate::value</definition>
+        <argsstring>()</argsstring>
+        <name>value</name>
+        <qualifiedname>TinyGPSDate::value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="114" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="structTinyGPSDate_1ae2cc914fec377b429d99f01204f50d60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t TinyGPSDate::year</definition>
+        <argsstring>()</argsstring>
+        <name>year</name>
+        <qualifiedname>TinyGPSDate::year</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="119" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="381" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="structTinyGPSDate_1a6f3c5b4e72ef28b010f94ac9016315f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t TinyGPSDate::month</definition>
+        <argsstring>()</argsstring>
+        <name>month</name>
+        <qualifiedname>TinyGPSDate::month</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="120" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="387" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="structTinyGPSDate_1ae8cc5f80c49e328f792d168a44062000" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t TinyGPSDate::day</definition>
+        <argsstring>()</argsstring>
+        <name>day</name>
+        <qualifiedname>TinyGPSDate::day</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="121" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="392" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="structTinyGPSDate_1a4d5f23eb008cbfd385343687bf902003" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>TinyGPSDate::TinyGPSDate</definition>
+        <argsstring>()</argsstring>
+        <name>TinyGPSDate</name>
+        <qualifiedname>TinyGPSDate::TinyGPSDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="123" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="123" bodyend="124"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structTinyGPSDate_1af5b0da173842da219e7c90d16e54c3e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TinyGPSDate::commit</definition>
+        <argsstring>()</argsstring>
+        <name>commit</name>
+        <qualifiedname>TinyGPSDate::commit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="130" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="361" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="structTinyGPSDate_1a2ff2893de6b59fd4dcf828c6296e2e2e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TinyGPSDate::setDate</definition>
+        <argsstring>(const char *term)</argsstring>
+        <name>setDate</name>
+        <qualifiedname>TinyGPSDate::setDate</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="131" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="377" bodyend="379"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="98" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="98" bodyend="132"/>
+    <listofallmembers>
+      <member refid="structTinyGPSDate_1af8b9c057a28dcb490081fcfde2a0ee11" prot="public" virt="non-virtual"><scope>TinyGPSDate</scope><name>age</name></member>
+      <member refid="structTinyGPSDate_1af5b0da173842da219e7c90d16e54c3e2" prot="private" virt="non-virtual"><scope>TinyGPSDate</scope><name>commit</name></member>
+      <member refid="structTinyGPSDate_1ab141f37e0dda429ad041f9a951564677" prot="private" virt="non-virtual"><scope>TinyGPSDate</scope><name>date</name></member>
+      <member refid="structTinyGPSDate_1ae8cc5f80c49e328f792d168a44062000" prot="public" virt="non-virtual"><scope>TinyGPSDate</scope><name>day</name></member>
+      <member refid="structTinyGPSDate_1a1b913837130bb49ecd309eaf6bc205b1" prot="public" virt="non-virtual"><scope>TinyGPSDate</scope><name>isUpdated</name></member>
+      <member refid="structTinyGPSDate_1a3ae7825f840ef4ba0ecddbc22f741817" prot="public" virt="non-virtual"><scope>TinyGPSDate</scope><name>isValid</name></member>
+      <member refid="structTinyGPSDate_1acbece939f279507806570bb108311a88" prot="private" virt="non-virtual"><scope>TinyGPSDate</scope><name>lastCommitTime</name></member>
+      <member refid="structTinyGPSDate_1a6f3c5b4e72ef28b010f94ac9016315f3" prot="public" virt="non-virtual"><scope>TinyGPSDate</scope><name>month</name></member>
+      <member refid="structTinyGPSDate_1a81d6d90be898cf44e804e86a2f4a3d2d" prot="private" virt="non-virtual"><scope>TinyGPSDate</scope><name>newDate</name></member>
+      <member refid="structTinyGPSDate_1a2ff2893de6b59fd4dcf828c6296e2e2e" prot="private" virt="non-virtual"><scope>TinyGPSDate</scope><name>setDate</name></member>
+      <member refid="structTinyGPSDate_1a4d5f23eb008cbfd385343687bf902003" prot="public" virt="non-virtual"><scope>TinyGPSDate</scope><name>TinyGPSDate</name></member>
+      <member refid="structTinyGPSDate_1a6501fd5ef19ae166d43e0e5781609ee2" prot="public" virt="non-virtual"><scope>TinyGPSDate</scope><name>TinyGPSPlus</name></member>
+      <member refid="structTinyGPSDate_1af92ee9facc35b637b589320ddffcce32" prot="private" virt="non-virtual"><scope>TinyGPSDate</scope><name>updated</name></member>
+      <member refid="structTinyGPSDate_1a6b312ccebe3537eb9687211622bc5f26" prot="private" virt="non-virtual"><scope>TinyGPSDate</scope><name>valid</name></member>
+      <member refid="structTinyGPSDate_1a718150ae16f68afa9ae81f9d1b3ce3f4" prot="public" virt="non-virtual"><scope>TinyGPSDate</scope><name>value</name></member>
+      <member refid="structTinyGPSDate_1ae2cc914fec377b429d99f01204f50d60" prot="public" virt="non-virtual"><scope>TinyGPSDate</scope><name>year</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

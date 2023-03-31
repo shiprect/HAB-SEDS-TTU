@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="md__home_chris_Documents_sphinx_testing_docs_source_README" kind="page">
+    <compoundname>md__home_chris_Documents_sphinx_testing_docs_source_README</compoundname>
+    <title>sudoku-tui</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This will be a user-friendly implementation of the classic game of sudoku that you can play in your terminal. As such, it will be all text-based, but should be extremely easy to play. More in-depth explanations as far as how to play the game will be provided, assuming I remember to do so (I&apos;m currently going through graduate school, so it&apos;s very likely that I&apos;ll forget to update this or will go long stretches of time without any updates).</para>
+<sect1 id="md__home_chris_Documents_sphinx_testing_docs_source_README_1autotoc_md3">
+<title>Status update: 31 January 2023</title>
+<para>Games can now be saved both when the in-game menu is and isn&apos;t enabled. I&apos;ve also made some other minor adjustments to the in-game menu display.</para>
+<para>Next is adding the ability to resume games. This will (hopefully) be the last difficult left to do. After that, it should just be cleaning up some leftover TODOs. </para>
+</sect1>
+    </detaileddescription>
+    <location file="/home/chris/Documents/sphinx_testing/docs/source/README.md"/>
+  </compounddef>
+</doxygen>

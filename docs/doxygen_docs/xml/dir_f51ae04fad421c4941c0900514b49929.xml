@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_f51ae04fad421c4941c0900514b49929" kind="dir">
+    <compoundname>/home/chris/Documents/tsudoku/docs/source</compoundname>
+    <innerfile refid="tsudoku_2docs_2source_2conf_8py">conf.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/tsudoku/docs/source/"/>
+  </compounddef>
+</doxygen>

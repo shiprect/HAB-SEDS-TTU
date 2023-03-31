@@ -1,0 +1,638 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespaceproblem2" kind="namespace" language="Python">
+    <compoundname>problem2</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproblem2_1a3fb9cfdab059a01840fa28efd0ea82f8" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple problem2.B</definition>
+        <argsstring></argsstring>
+        <name>B</name>
+        <qualifiedname>problem2.B</qualifiedname>
+        <initializer>=  (10e6, &apos;Hz&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="8" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproblem2_1abcf51e32f96722b35445e875d593a803" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple problem2.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <qualifiedname>problem2.T</qualifiedname>
+        <initializer>=  (10e-6, &apos;sec&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="9" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproblem2_1a4e0877dcc984e782c3a8915ddb86c498" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int problem2.to_linear</definition>
+        <argsstring></argsstring>
+        <name>to_linear</name>
+        <qualifiedname>problem2.to_linear</qualifiedname>
+        <initializer>=  lambda x: 10**(x/10)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="10" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproblem2_1a8966c1906c24f751e650fda340c1c327" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple problem2.SNR</definition>
+        <argsstring></argsstring>
+        <name>SNR</name>
+        <qualifiedname>problem2.SNR</qualifiedname>
+        <initializer>=  (-17, &apos;dB&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="11" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproblem2_1af525a89e0908e5ae7b75446db523b1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.Dirac_delta</definition>
+        <argsstring>(t, float sigma)</argsstring>
+        <name>Dirac_delta</name>
+        <qualifiedname>problem2.Dirac_delta</qualifiedname>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>sigma</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw1/problem2.py" line="15" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw1/problem2.py" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a5bc68aafe95fc8640efeb5eef2317d68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2::main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>problem2.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw1/problem2.py" line="18" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw1/problem2.py" bodystart="18" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1abb3147728ca8167adee3c5cfc41fcb91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.delta_gaussian</definition>
+        <argsstring>(sigma)</argsstring>
+        <name>delta_gaussian</name>
+        <qualifiedname>problem2.delta_gaussian</qualifiedname>
+        <param>
+          <type>sigma</type>
+          <defname>sigma</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Function to approximate the dirac delta distribution using
+a Gaussian &quot;bell curve&quot;
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw1/soln/problem2.py" line="8" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw1/soln/problem2.py" bodystart="8" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a1aae7c8e9525ecb2b9b24ee97b526a2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.basis_k</definition>
+        <argsstring>(int N, int k, n)</argsstring>
+        <name>basis_k</name>
+        <qualifiedname>problem2.basis_k</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>n</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/problem2.py" line="18" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/problem2.py" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1afc35ff297af15b997a278be8c9d4a049" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.basis_l</definition>
+        <argsstring>(int N, int l, n)</argsstring>
+        <name>basis_l</name>
+        <qualifiedname>problem2.basis_l</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>n</type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/problem2.py" line="30" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/problem2.py" bodystart="30" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a48ab4faaefc9991a3f58eb2f9953bb09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.DCT</definition>
+        <argsstring>(int N)</argsstring>
+        <name>DCT</name>
+        <qualifiedname>problem2.DCT</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/problem2.py" line="40" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/problem2.py" bodystart="40" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a24c08b5f79db0af2b83c11a708fce0c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.dct</definition>
+        <argsstring>(x)</argsstring>
+        <name>dct</name>
+        <qualifiedname>problem2.dct</qualifiedname>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/soln/problem2.py" line="8" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/soln/problem2.py" bodystart="8" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1ad44ccbab0d36d42b502b71d8eae09308" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.b</definition>
+        <argsstring>(k)</argsstring>
+        <name>b</name>
+        <qualifiedname>problem2.b</qualifiedname>
+        <param>
+          <type>k</type>
+          <defname>k</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/soln/problem2.py" line="26" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/soln/problem2.py" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1acd483334d23ad9844ee14b0297d848b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.LFMpulse</definition>
+        <argsstring>(n, tuple B=B, tuple Fs=Fs, tuple T=T)</argsstring>
+        <name>LFMpulse</name>
+        <qualifiedname>problem2.LFMpulse</qualifiedname>
+        <param>
+          <type>n</type>
+          <defname>n</defname>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>B</declname>
+          <defval><ref refid="namespaceproblem2_1a3fb9cfdab059a01840fa28efd0ea82f8" kindref="member">B</ref></defval>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>Fs</declname>
+          <defval>Fs</defval>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>T</declname>
+          <defval><ref refid="namespaceproblem2_1abcf51e32f96722b35445e875d593a803" kindref="member">T</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="20" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="20" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a06720966d5404d843a6f5619b97dbf0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.avg_sig_pwr</definition>
+        <argsstring>(x1, int i_first, int i_last, tuple Fs=Fs)</argsstring>
+        <name>avg_sig_pwr</name>
+        <qualifiedname>problem2.avg_sig_pwr</qualifiedname>
+        <param>
+          <type>x1</type>
+          <defname>x1</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_first</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_last</declname>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>Fs</declname>
+          <defval>Fs</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="42" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="42" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a68dfc291e119419633715668a303205e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.complexAWGN</definition>
+        <argsstring>(tuple SNR, tuple Px, int size)</argsstring>
+        <name>complexAWGN</name>
+        <qualifiedname>problem2.complexAWGN</qualifiedname>
+        <param>
+          <type>tuple</type>
+          <declname>SNR</declname>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>Px</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="53" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="53" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a5bc50e4b8b37d8185f5d8f9b895c8ede" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.h</definition>
+        <argsstring>(n, tuple B, tuple Fs, tuple T)</argsstring>
+        <name>h</name>
+        <qualifiedname>problem2.h</qualifiedname>
+        <param>
+          <type>n</type>
+          <defname>n</defname>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>B</declname>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>Fs</declname>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>T</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="69" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="69" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a851d24b57586d977e7862d3d24c44c04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.match_filter</definition>
+        <argsstring>(bool signal_on, int threshold)</argsstring>
+        <name>match_filter</name>
+        <qualifiedname>problem2.match_filter</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>signal_on</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="81" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="81" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1aa01db30d1af7a68c5e8730980035b12d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.test1</definition>
+        <argsstring>()</argsstring>
+        <name>test1</name>
+        <qualifiedname>problem2.test1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="119" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="119" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1af45c020c2bf953caff11b0acf09cf546" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.draw_confusion_matrix</definition>
+        <argsstring>(int TP, int FN, int FP, int TN)</argsstring>
+        <name>draw_confusion_matrix</name>
+        <qualifiedname>problem2.draw_confusion_matrix</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>TP</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>FN</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>FP</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>TN</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="149" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="149" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a9bf4098285ac47949356dfe0f7820cb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.calc_TPR</definition>
+        <argsstring>(TP, FN)</argsstring>
+        <name>calc_TPR</name>
+        <qualifiedname>problem2.calc_TPR</qualifiedname>
+        <param>
+          <type>TP</type>
+          <defname>TP</defname>
+        </param>
+        <param>
+          <type>FN</type>
+          <defname>FN</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="165" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="165" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a7833a6d5d53d67f750db465147385782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.calc_FPR</definition>
+        <argsstring>(FP, TN)</argsstring>
+        <name>calc_FPR</name>
+        <qualifiedname>problem2.calc_FPR</qualifiedname>
+        <param>
+          <type>FP</type>
+          <defname>FP</defname>
+        </param>
+        <param>
+          <type>TN</type>
+          <defname>TN</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="174" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="174" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1ac761d688511e4ccaafe34d5a9beb5a70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.test2</definition>
+        <argsstring>()</argsstring>
+        <name>test2</name>
+        <qualifiedname>problem2.test2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem2.py" line="185" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem2.py" bodystart="185" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1ab5e6be3c452235a38c4f0e35b3e50142" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.rect</definition>
+        <argsstring>(t)</argsstring>
+        <name>rect</name>
+        <qualifiedname>problem2.rect</qualifiedname>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" line="9" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" bodystart="9" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1ab85a3f6724a0c8ea3e09927a8cebfe89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.awgn</definition>
+        <argsstring>(SNR, N)</argsstring>
+        <name>awgn</name>
+        <qualifiedname>problem2.awgn</qualifiedname>
+        <param>
+          <type><ref refid="namespaceproblem2_1a8966c1906c24f751e650fda340c1c327" kindref="member">SNR</ref></type>
+          <defname>SNR</defname>
+        </param>
+        <param>
+          <type>N</type>
+          <defname>N</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" line="14" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" bodystart="14" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a8f8ef31f24404dc8d051e323d1f6fdc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.lfm</definition>
+        <argsstring>(B, T)</argsstring>
+        <name>lfm</name>
+        <qualifiedname>problem2.lfm</qualifiedname>
+        <param>
+          <type><ref refid="namespaceproblem2_1a3fb9cfdab059a01840fa28efd0ea82f8" kindref="member">B</ref></type>
+          <defname>B</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceproblem2_1abcf51e32f96722b35445e875d593a803" kindref="member">T</ref></type>
+          <defname>T</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" line="19" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1aa27a86fdfb7e8075bfb44f04ef52e97a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.matched_filter</definition>
+        <argsstring>(B, T)</argsstring>
+        <name>matched_filter</name>
+        <qualifiedname>problem2.matched_filter</qualifiedname>
+        <param>
+          <type><ref refid="namespaceproblem2_1a3fb9cfdab059a01840fa28efd0ea82f8" kindref="member">B</ref></type>
+          <defname>B</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceproblem2_1abcf51e32f96722b35445e875d593a803" kindref="member">T</ref></type>
+          <defname>T</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" line="27" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1a45f3cdf491f338a03bc6359aea97ff94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.run_trial</definition>
+        <argsstring>(B, T, SNR, T_detect, present)</argsstring>
+        <name>run_trial</name>
+        <qualifiedname>problem2.run_trial</qualifiedname>
+        <param>
+          <type><ref refid="namespaceproblem2_1a3fb9cfdab059a01840fa28efd0ea82f8" kindref="member">B</ref></type>
+          <defname>B</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceproblem2_1abcf51e32f96722b35445e875d593a803" kindref="member">T</ref></type>
+          <defname>T</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceproblem2_1a8966c1906c24f751e650fda340c1c327" kindref="member">SNR</ref></type>
+          <defname>SNR</defname>
+        </param>
+        <param>
+          <type>T_detect</type>
+          <defname>T_detect</defname>
+        </param>
+        <param>
+          <type>present</type>
+          <defname>present</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" line="31" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" bodystart="31" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem2_1ad616a1fd9505edd7f0ff0aabbee481ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem2.compute_confusion_matrix</definition>
+        <argsstring>(P, N, SNR, T_detect, B, T)</argsstring>
+        <name>compute_confusion_matrix</name>
+        <qualifiedname>problem2.compute_confusion_matrix</qualifiedname>
+        <param>
+          <type>P</type>
+          <defname>P</defname>
+        </param>
+        <param>
+          <type>N</type>
+          <defname>N</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceproblem2_1a8966c1906c24f751e650fda340c1c327" kindref="member">SNR</ref></type>
+          <defname>SNR</defname>
+        </param>
+        <param>
+          <type>T_detect</type>
+          <defname>T_detect</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceproblem2_1a3fb9cfdab059a01840fa28efd0ea82f8" kindref="member">B</ref></type>
+          <defname>B</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceproblem2_1abcf51e32f96722b35445e875d593a803" kindref="member">T</ref></type>
+          <defname>T</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" line="53" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py" bodystart="53" bodyend="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece6040/homework/hw1/problem2.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

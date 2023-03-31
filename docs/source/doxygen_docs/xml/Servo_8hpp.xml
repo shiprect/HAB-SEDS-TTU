@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Servo_8hpp" kind="file" language="C++">
+    <compoundname>Servo.hpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="Config_8h" local="yes">../../../Config.h</includes>
+    <includedby refid="HAB-SEDS-TTU_8ino" local="yes">/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino</includedby>
+    <includedby refid="Servo_8cpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp</includedby>
+    <includedby refid="Status_8hpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp</label>
+        <link refid="Servo_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="14">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="11">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="10">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="7">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="9">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="8">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="4">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="15">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino</label>
+        <link refid="HAB-SEDS-TTU_8ino"/>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp</label>
+        <link refid="APRS_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp</label>
+        <link refid="ax25_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp</label>
+        <link refid="SD__card_8cpp"/>
+      </node>
+      <node id="9">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</label>
+        <link refid="SD__card_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp</label>
+        <link refid="Servo_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp</label>
+        <link refid="Servo_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp</label>
+        <link refid="Status_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classServo" prot="public">Servo</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Servo_8hpp_1a3faf44e95d31c018178b3318756a5f2e" prot="public" static="no" mutable="no">
+        <type><ref refid="classServo" kindref="compound">Servo</ref></type>
+        <definition>Servo CutServo</definition>
+        <argsstring></argsstring>
+        <name>CutServo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="50" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino" bodystart="45" bodyend="-1" declfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" declline="50" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SERVO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVO_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//TODO::Figure<sp/>out<sp/>servo<sp/>library<sp/>situation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//TODO::Ideally,<sp/>our<sp/>custom<sp/>PWM<sp/>functionality<sp/>should<sp/>be<sp/>used<sp/>with<sp/>these</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>TEENSY_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;PWMServo.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../Config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//TODO::check<sp/>libdefs<sp/>std::<sp/>instances,<sp/>for<sp/>Will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//TODO::Class<sp/>should<sp/>include<sp/>setup-defined<sp/>limits<sp/>for<sp/>servo<sp/>min-max<sp/>position<sp/>if<sp/>appropriate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//TODO::Add<sp/>getServoPosition()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//TODO::ServoStatus<sp/>should<sp/>be<sp/>reworked,<sp/>was<sp/>just<sp/>a<sp/>quick<sp/>and<sp/>dirty<sp/>solution,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>if<sp/>code<sp/>requires<sp/>that<sp/>a<sp/>servo<sp/>be<sp/>moved<sp/>on<sp/>a<sp/>time<sp/>interval,<sp/>that<sp/>should<sp/>use<sp/>the<sp/>timing<sp/>struct<sp/>and<sp/>a<sp/>SERVO<sp/>ON/OFF<sp/>bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classServo" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classServo" kindref="compound">Servo</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//PWMServo<sp/>ServoPWM;//FIXME::PWMServo<sp/>Lib</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classServo_1a341d171f1406c9b9d2f4e7605dd8a03a" kindref="member">ServoStatus</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classServo_1a5cf38360cbb219e754afe442ab43d2f4" kindref="member">CurrPosition</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO::For<sp/>sending<sp/>a<sp/>list<sp/>of<sp/>commands,<sp/>Will<sp/>likely<sp/>needs<sp/>to<sp/>set<sp/>this<sp/>up</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>e.g.<sp/>std::array&lt;int16_t,<sp/>6&gt;<sp/>cmd<sp/>=<sp/>{1000,<sp/>1200,<sp/>1300,<sp/>1400,<sp/>1500,<sp/>1600};<sp/>can<sp/>be<sp/>passed<sp/>to<sp/>func<sp/>to<sp/>send<sp/>to<sp/>set<sp/>of<sp/>positions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>at<sp/>a<sp/>configurable<sp/>time<sp/>interval</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::array&lt;int16_t,<sp/>N&gt;<sp/>ch_;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//unsigned<sp/>int<sp/>interval<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classServo_1a70b2b17657cf258cdcb57503bcf62cd2" kindref="member">Servo</ref><sp/>()<sp/>{};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classServo_1acb51bf4d970b071741ba76349a431fb0" kindref="member">~Servo</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classServo_1ad271c3a14f793213d74d47be31a04fe8" kindref="member">Servo_Setup</ref>();</highlight><highlight class="comment">//TODO::should<sp/>return<sp/>true<sp/>if<sp/>setup<sp/>successful,<sp/>false<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classServo_1a49ac4edc49bfd90f2522e6ff4b08a7b8" kindref="member">Servo_Status</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classStatus" kindref="compound">Status</ref>);</highlight><highlight class="comment">//TODO::should<sp/>return<sp/>true<sp/>if<sp/>successful,<sp/>false<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classServo_1ac3985ecf37998a3da508d46bf74b0a36" kindref="member">Servo_Move</ref>(uint8_t<sp/>Position);</highlight><highlight class="comment">//TODO::should<sp/>return<sp/>true<sp/>if<sp/>successful,<sp/>false<sp/>otherwise<sp/>(e.g.<sp/>position<sp/>was<sp/>outside<sp/>servo<sp/>limits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classServo_1ad9b5f20cad519f2e8b8f6e4f7c19ad80" kindref="member">Servo_Update</ref>();</highlight><highlight class="comment">//TODO::This<sp/>is<sp/>from<sp/>when<sp/>HAB<sp/>cutting<sp/>was<sp/>written<sp/>the<sp/>night<sp/>before,<sp/>the<sp/>functionality<sp/>here<sp/>should<sp/>not<sp/>be<sp/>in<sp/>the<sp/>lass,<sp/>it<sp/>should<sp/>be<sp/>at<sp/>the<sp/>function<sp/>call<sp/>and<sp/>performed<sp/>using<sp/>Servo_Move()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classServo" kindref="compound">Servo</ref><sp/><ref refid="Servo_8hpp_1a3faf44e95d31c018178b3318756a5f2e" kindref="member">CutServo</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp"/>
+  </compounddef>
+</doxygen>

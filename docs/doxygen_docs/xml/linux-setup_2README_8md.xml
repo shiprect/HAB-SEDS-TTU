@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="linux-setup_2README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>linux-setup</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>set<sp/>of<sp/>scripts<sp/>to<sp/>install<sp/>and<sp/>configure<sp/>system<sp/>and<sp/>apps<sp/>for<sp/>supported<sp/>Linux<sp/>OSs.</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/linux-setup/README.md"/>
+  </compounddef>
+</doxygen>

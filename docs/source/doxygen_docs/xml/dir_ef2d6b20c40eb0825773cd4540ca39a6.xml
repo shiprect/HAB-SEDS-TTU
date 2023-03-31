@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_ef2d6b20c40eb0825773cd4540ca39a6" kind="dir">
+    <compoundname>/home/chris/Documents/HAB-SEDS-TTU/src/Hardware_Configuration</compoundname>
+    <innerfile refid="HAB__ESP32_8hpp">HAB_ESP32.hpp</innerfile>
+    <innerfile refid="HAB__Nano_8hpp">HAB_Nano.hpp</innerfile>
+    <innerfile refid="HAB__STM32_8hpp">HAB_STM32.hpp</innerfile>
+    <innerfile refid="HAB__Teensy_8hpp">HAB_Teensy.hpp</innerfile>
+    <innerfile refid="HardwareConfig_8h">HardwareConfig.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Hardware_Configuration/"/>
+  </compounddef>
+</doxygen>

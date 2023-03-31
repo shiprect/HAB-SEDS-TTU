@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="tsudoku_2docs_2source_2README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>tsudoku</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">tsudoku<sp/>(both<sp/>short<sp/>for<sp/>&quot;terminal<sp/>sudoku&quot;<sp/>and<sp/>inspired<sp/>phonetically<sp/>by<sp/>other<sp/>Japanese<sp/>words<sp/>such<sp/>as<sp/>&quot;tsunami&quot;)<sp/>is<sp/>a<sp/>user-friendly<sp/>implementation<sp/>of<sp/>the<sp/>classic<sp/>game<sp/>of<sp/>sudoku<sp/>that<sp/>you<sp/>can<sp/>play<sp/>in<sp/>your<sp/>terminal.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Supported<sp/>systems</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>below<sp/>operating<sp/>systems<sp/>have<sp/>been<sp/>tested<sp/>for<sp/>working<sp/>condition.<sp/>Other<sp/>Unix-based<sp/>OSs<sp/>are<sp/>also<sp/>likely<sp/>to<sp/>also<sp/>be<sp/>supported.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;\-<sp/>Debian<sp/>Linux<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;\-<sp/>MacOS<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;\-<sp/>WSL<sp/>(Windows<sp/>Subsystem<sp/>for<sp/>Linux)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note<sp/>for<sp/>MacOS<sp/>users**:<sp/>It&apos;s<sp/>possible<sp/>that<sp/>certain<sp/>(e.g.<sp/>the<sp/>Makefile<sp/>and<sp/>this<sp/>README)<sp/>will<sp/>be<sp/>marked<sp/>as<sp/>executable<sp/>during<sp/>the<sp/>install<sp/>process<sp/>and<sp/>prevent<sp/>you<sp/>from<sp/>easily<sp/>viewing<sp/>the<sp/>file<sp/>in<sp/>a<sp/>text<sp/>editor.<sp/>Alternative<sp/>ways<sp/>to<sp/>view<sp/>the<sp/>files<sp/>marked<sp/>this<sp/>way<sp/>include<sp/>the<sp/>Unix<sp/>command<sp/>line<sp/>utility<sp/>`less`<sp/>or<sp/>terminal-based<sp/>text<sp/>editors<sp/>such<sp/>as<sp/>`vim`/`view`<sp/>or<sp/>`nano`.<sp/>The<sp/>easiest<sp/>and<sp/>simplest<sp/>to<sp/>use<sp/>is<sp/>`less`.<sp/>Examples<sp/>are<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>less<sp/>README.md`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>view<sp/>README.md`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>nano<sp/>-v<sp/>README.md`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Note<sp/>for<sp/>inexperienced<sp/>WSL<sp/>users**:<sp/>tsudoku<sp/>will<sp/>not<sp/>be<sp/>compilable<sp/>or<sp/>playable<sp/>unless<sp/>a<sp/>WSL<sp/>shell<sp/>is<sp/>opened<sp/>first.<sp/>A<sp/>WSL<sp/>shell<sp/>should<sp/>be<sp/>easily<sp/>accessible<sp/>from<sp/>either<sp/>a<sp/>PowerShell<sp/>or<sp/>Windows<sp/>Command<sp/>Prompt<sp/>by<sp/>running<sp/>`wsl.exe`<sp/>at<sp/>the<sp/>current<sp/>terminal<sp/>prompt.<sp/>Also<sp/>see<sp/>the<sp/>example<sp/>below.<sp/>If<sp/>you<sp/>are<sp/>unsure<sp/>how<sp/>to<sp/>install<sp/>or<sp/>setup<sp/>WSL,<sp/>please<sp/>reference<sp/>https://learn.microsoft.com/en-us/windows/wsl/install<sp/>.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Ex:<sp/>Running<sp/>tsudoku<sp/>from<sp/>Windows<sp/>Command<sp/>Prompt</highlight></codeline>
+<codeline><highlight class="normal">&gt;`&gt;wsl.exe`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>tsudoku`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Prerequisites</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">NOTE:<sp/>These<sp/>are<sp/>likely<sp/>already<sp/>installed<sp/>depending<sp/>on<sp/>your<sp/>operating<sp/>system.<sp/>If<sp/>not,<sp/>you<sp/>should<sp/>be<sp/>able<sp/>to<sp/>download<sp/>them<sp/>easily<sp/>using<sp/>your<sp/>OS&apos;s<sp/>package<sp/>manager<sp/>(see<sp/>**Prerequisites<sp/>Installation**<sp/>section).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;\-<sp/>g++<sp/>(tsudoku<sp/>compiles<sp/>using<sp/>the<sp/>C++17<sp/>standard)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;\-<sp/>ncurses</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Prerequisites<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>either<sp/>of<sp/>the<sp/>prerquisites<sp/>are<sp/>not<sp/>pre-installed<sp/>by<sp/>your<sp/>operating<sp/>system,<sp/>you<sp/>can<sp/>install<sp/>them<sp/>from<sp/>your<sp/>package<sp/>manager.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>sudo<sp/>apt<sp/>install<sp/>g++`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>sudo<sp/>apt<sp/>install<sp/>libncurses-dev`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>From<sp/>source</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Step<sp/>1:<sp/>Clone<sp/>the<sp/>project<sp/>from<sp/>Github.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Option<sp/>1:<sp/>Git<sp/>via<sp/>HTTPS</highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>git<sp/>clone<sp/>https://github.com/TheOGChips/tsudoku.git<sp/>&amp;&amp;<sp/>cd<sp/>tsudoku`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Option<sp/>2:<sp/>Git<sp/>via<sp/>SSH</highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>git<sp/>clone<sp/>git@github.com:TheOGChips/tsudoku.git<sp/>&amp;&amp;<sp/>cd<sp/>tsudoku`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Option<sp/>3:<sp/>Direct<sp/>download<sp/>from<sp/>the<sp/>main<sp/>branch</highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>wget<sp/>https://github.com/TheOGChips/tsudoku/archive/refs/heads/main.zip<sp/>-O<sp/>tsudoku.zip`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>unzip<sp/>tsudoku.zip<sp/>&amp;&amp;<sp/>mv<sp/>tsudoku-main<sp/>tsudoku<sp/>&amp;&amp;<sp/>cd<sp/>tsudoku`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Step<sp/>2:<sp/>Compile<sp/>the<sp/>source<sp/>code<sp/>using<sp/>the<sp/>provided<sp/>makefile.<sp/>Performing<sp/>any<sp/>of<sp/>the<sp/>three<sp/>methods<sp/>above<sp/>should<sp/>have<sp/>already<sp/>placed<sp/>you<sp/>inside<sp/>the<sp/>*tsudoku*<sp/>directory<sp/>of<sp/>the<sp/>cloned<sp/>source<sp/>code.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>make`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Step<sp/>3:<sp/>Source<sp/>your<sp/>shell&apos;s<sp/>RC<sp/>file<sp/>to<sp/>allow<sp/>running<sp/>*tsudoku*<sp/>in<sp/>the<sp/>current<sp/>shell<sp/>instance.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Examples:</highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>source<sp/>~/.bashrc<sp/><sp/><sp/><sp/>#<sp/>if<sp/>using<sp/>bash`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>source<sp/>~/.zshrc<sp/><sp/><sp/><sp/><sp/>#<sp/>if<sp/>using<sp/>zsh`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>With<sp/>in-game<sp/>menu<sp/>enabled:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>tsudoku`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>With<sp/>in-game<sp/>menu<sp/>disabled:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>tsudoku<sp/>-n`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;or<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>tsudoku<sp/>--no-in-game-menu`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Display<sp/>usage<sp/>information:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>tsudoku<sp/>--help`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Remove<sp/>all<sp/>saved<sp/>games</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>tsudoku<sp/>-d`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;or<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>tsudoku<sp/>--delete-saved-games`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Updates</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>From<sp/>source</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>If<sp/>installed<sp/>using<sp/>Git<sp/>via<sp/>HTTPS<sp/>or<sp/>SSH<sp/>(options<sp/>1<sp/>or<sp/>2),<sp/>navigate<sp/>to<sp/>the<sp/>*tsudoku*<sp/>directory,<sp/>then<sp/>perform<sp/>the<sp/>following<sp/>steps:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>git<sp/>pull`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>make<sp/>upgrade`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>If<sp/>installed<sp/>via<sp/>direct<sp/>downloaded<sp/>(option<sp/>3),<sp/>delete<sp/>the<sp/>*tsudoku*<sp/>directory<sp/>and<sp/>repeat<sp/>the<sp/>installation<sp/>process<sp/>as<sp/>described<sp/>in<sp/>the<sp/>**Installation**<sp/>section<sp/>again.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>rm<sp/>-rf<sp/>tsudoku`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>wget<sp/>https://github.com/TheOGChips/tsudoku/archive/refs/heads/main.zip<sp/>-O<sp/>tsudoku.zip`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>unzip<sp/>tsudoku.zip<sp/>&amp;&amp;<sp/>mv<sp/>tsudoku-main<sp/>tsudoku<sp/>&amp;&amp;<sp/>cd<sp/>tsudoku`<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">&gt;`$<sp/>make`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Status<sp/>update:<sp/>3<sp/>March<sp/>2023</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">tsudoku<sp/>is<sp/>now<sp/>ready<sp/>for<sp/>official<sp/>release!<sp/>Barring<sp/>any<sp/>potential<sp/>future<sp/>bug<sp/>fixes,<sp/>this<sp/>will<sp/>be<sp/>the<sp/>last<sp/>update<sp/>until<sp/>either<sp/>the<sp/>documentation<sp/>is<sp/>finished<sp/>or<sp/>this<sp/>project<sp/>has<sp/>been<sp/>officially<sp/>added<sp/>to<sp/>the<sp/>Debian<sp/>APT<sp/>repository.<sp/>Anyone<sp/>is<sp/>welcome<sp/>to<sp/>notify<sp/>me<sp/>of<sp/>a<sp/>bug<sp/>fix<sp/>by<sp/>email<sp/>at:<sp/>swindell.christian.g@gmail.com<sp/>.<sp/>If<sp/>you<sp/>have<sp/>played<sp/>tsudoku<sp/>and<sp/>enjoyed<sp/>your<sp/>experience,<sp/>and<sp/>you<sp/>feel<sp/>obligated<sp/>to<sp/>compensate<sp/>me<sp/>for<sp/>my<sp/>time<sp/>working<sp/>on<sp/>this,<sp/>you<sp/>can<sp/>also<sp/>email<sp/>me<sp/>to<sp/>ask<sp/>about<sp/>setting<sp/>up<sp/>a<sp/>one-time<sp/>donation.<sp/>Have<sp/>fun<sp/>playing!</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/docs/source/README.md"/>
+  </compounddef>
+</doxygen>

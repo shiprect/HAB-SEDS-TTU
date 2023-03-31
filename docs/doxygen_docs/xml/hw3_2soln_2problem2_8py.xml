@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="hw3_2soln_2problem2_8py" kind="file" language="Python">
+    <compoundname>problem2.py</compoundname>
+    <innernamespace refid="namespaceproblem2">problem2</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>matplotlib.pyplot<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>plt</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&apos;font.family&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;serif&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&apos;font.serif&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Times<sp/>New<sp/>Roman&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&quot;mathtext.fontset&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cm&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1ab5e6be3c452235a38c4f0e35b3e50142" kindref="member">rect</ref>(t):</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/>np.zeros(len(t))</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>x[abs(t)<sp/>&lt;<sp/>0.5]<sp/>=<sp/>1.</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1ab85a3f6724a0c8ea3e09927a8cebfe89" kindref="member">awgn</ref>(SNR,<sp/>N):</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>sig_power<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>noise_power<sp/>=<sp/>sig_power/SNR</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.sqrt(noise_power/2)*(np.random.randn(N)<sp/>+<sp/>1j*np.random.randn(N))</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1a8f8ef31f24404dc8d051e323d1f6fdc0" kindref="member">lfm</ref>(B,<sp/>T):</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>Fs<sp/>=<sp/>B</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>Ts<sp/>=<sp/>1/Fs</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>N<sp/>=<sp/>int(round(T/Ts))</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>np.arange(-N/2,<sp/>N/2)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>n,<sp/>np.exp(1j*np.pi*B/T*(n*Ts)**2)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1aa27a86fdfb7e8075bfb44f04ef52e97a" kindref="member">matched_filter</ref>(B,<sp/>T):</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>n,<sp/>x1<sp/>=<sp/><ref refid="namespaceproblem2_1a8f8ef31f24404dc8d051e323d1f6fdc0" kindref="member">lfm</ref>(B,<sp/>T)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.conj(x1[::-1])</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1a45f3cdf491f338a03bc6359aea97ff94" kindref="member">run_trial</ref>(B,<sp/>T,<sp/>SNR,<sp/>T_detect,<sp/>present):</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>x1<sp/>=<sp/><ref refid="namespaceproblem2_1a8f8ef31f24404dc8d051e323d1f6fdc0" kindref="member">lfm</ref>(B,<sp/>T)[1]</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>mf<sp/>=<sp/><ref refid="namespaceproblem2_1aa27a86fdfb7e8075bfb44f04ef52e97a" kindref="member">matched_filter</ref>(B,<sp/>T)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>Fs<sp/>=<sp/>B</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>Ts<sp/>=<sp/>1/Fs</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>N<sp/>=<sp/>int(round(T/Ts))</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>noise<sp/>=<sp/><ref refid="namespaceproblem2_1ab85a3f6724a0c8ea3e09927a8cebfe89" kindref="member">awgn</ref>(SNR,<sp/>N)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>present:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>x1<sp/>+<sp/>noise</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>noise</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>sample<sp/>real<sp/>part<sp/>at<sp/>t=0<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#z<sp/>=<sp/>np.convolve(y,<sp/>mf,<sp/>&apos;same&apos;).real[N//2]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>=<sp/>np.dot(y,<sp/>mf[::-1]).real</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>z<sp/>&gt;<sp/>T_detect</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1ad616a1fd9505edd7f0ff0aabbee481ea" kindref="member">compute_confusion_matrix</ref>(P,<sp/>N,<sp/>SNR,<sp/>T_detect,<sp/>B,<sp/>T):</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>trials<sp/>=<sp/>np.concatenate((np.zeros(N,<sp/>dtype=int),<sp/>np.ones(P,<sp/>dtype=int)))</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>TP<sp/>=<sp/>FN<sp/>=<sp/>FP<sp/>=<sp/>TN<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>present<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>trials:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decision<sp/>=<sp/><ref refid="namespaceproblem2_1a45f3cdf491f338a03bc6359aea97ff94" kindref="member">run_trial</ref>(B,<sp/>T,<sp/>SNR,<sp/>T_detect,<sp/>present)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>present:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TP<sp/>+=<sp/>decision</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FN<sp/>+=<sp/>1<sp/>-<sp/>decision</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TN<sp/>+=<sp/>1<sp/>-<sp/>decision</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FP<sp/>+=<sp/>decision</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>TP,<sp/>FN,<sp/>FP,<sp/>TN</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1a5bc68aafe95fc8640efeb5eef2317d68" kindref="member">main</ref>():</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>B<sp/>=<sp/>10e6</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/>=<sp/>10e-6</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>initialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>P<sp/>=<sp/>N<sp/>=<sp/>1000</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>TP<sp/>=<sp/>TN<sp/>=<sp/>FP<sp/>=<sp/>FN<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>SNR_dB<sp/>=<sp/>-17</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>SNR<sp/>=<sp/>10**(SNR_dB/10)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>T_detect<sp/>=<sp/>50</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>computing<sp/>single<sp/>confusion<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>np.random.seed(0)<sp/></highlight><highlight class="comment">#<sp/>for<sp/>reproducible<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>TP,<sp/>FN,<sp/>FP,<sp/>TN<sp/>=<sp/><ref refid="namespaceproblem2_1ad616a1fd9505edd7f0ff0aabbee481ea" kindref="member">compute_confusion_matrix</ref>(P,<sp/>N,<sp/>SNR,<sp/>T_detect,<sp/>B,<sp/>T)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>TPR<sp/>=<sp/>TP/P</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>FPR<sp/>=<sp/>FP/N</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;TP:&apos;</highlight><highlight class="normal">,<sp/>TP,<sp/></highlight><highlight class="stringliteral">&apos;FN:&apos;</highlight><highlight class="normal">,<sp/>FN)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;FP:&apos;</highlight><highlight class="normal">,<sp/>FP,<sp/></highlight><highlight class="stringliteral">&apos;TN:&apos;</highlight><highlight class="normal">,<sp/>TN)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;TPR:&apos;</highlight><highlight class="normal">,<sp/>TP/P,<sp/></highlight><highlight class="stringliteral">&apos;FPR:&apos;</highlight><highlight class="normal">,<sp/>FP/N,<sp/></highlight><highlight class="stringliteral">&apos;FNR:&apos;</highlight><highlight class="normal">,<sp/>FN/P,<sp/></highlight><highlight class="stringliteral">&apos;TNR:&apos;</highlight><highlight class="normal">,<sp/>TN/N)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>tracing<sp/>ROC<sp/>curve</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>T_detect_vector<sp/>=<sp/>np.arange(-50,<sp/>151)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>TPR<sp/>=<sp/>np.zeros(len(T_detect_vector))</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>FPR<sp/>=<sp/>np.zeros(len(T_detect_vector))</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>n,<sp/>T_detect<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(T_detect_vector):</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>n%25<sp/>==<sp/>0:</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;T_detect:&apos;</highlight><highlight class="normal">,<sp/>T_detect)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TP,<sp/>FN,<sp/>FP,<sp/>TN<sp/>=<sp/><ref refid="namespaceproblem2_1ad616a1fd9505edd7f0ff0aabbee481ea" kindref="member">compute_confusion_matrix</ref>(P,<sp/>N,<sp/>SNR,<sp/>T_detect,<sp/>B,<sp/>T)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(&apos;TP:&apos;,<sp/>TP,<sp/>&apos;FN:&apos;,<sp/>FN,<sp/>&apos;FP:&apos;,<sp/>FP,<sp/>&apos;TN:&apos;,<sp/>TN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TPR[n]<sp/>=<sp/>TP/P</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FPR[n]<sp/>=<sp/>FP/N</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.figure(figsize=(5,5))</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.plot(FPR,<sp/>TPR,<sp/></highlight><highlight class="stringliteral">&apos;.&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.xlabel(</highlight><highlight class="stringliteral">&apos;FPR&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.ylabel(</highlight><highlight class="stringliteral">&apos;TPR&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.xlim(0,<sp/>1)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.ylim(0,<sp/>1)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.grid()</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.tight_layout()</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.savefig(</highlight><highlight class="stringliteral">&apos;problem2roc.pdf&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.show()</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceproblem2_1a5bc68aafe95fc8640efeb5eef2317d68" kindref="member">main</ref>()</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/ece6040/homework/hw3/soln/problem2.py"/>
+  </compounddef>
+</doxygen>

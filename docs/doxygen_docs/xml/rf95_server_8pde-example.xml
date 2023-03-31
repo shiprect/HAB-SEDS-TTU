@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="rf95_server_8pde-example" kind="example">
+    <compoundname>rf95_server.pde</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><programlisting filename="rf95_server.pde"></programlisting> </para>
+    </detaileddescription>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h"/>
+  </compounddef>
+</doxygen>

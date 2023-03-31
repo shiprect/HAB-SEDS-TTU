@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="sphinx__testing_2include_2Menu_8hpp" kind="file" language="C++">
+    <compoundname>Menu.hpp</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">string</includes>
+    <includes refid="values_8hpp" local="yes">values.hpp</includes>
+    <includedby refid="sphinx__testing_2include_2InGameMenu_8hpp" local="yes">/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp</includedby>
+    <includedby refid="sphinx__testing_2include_2MainMenu_8hpp" local="yes">/home/chris/Documents/sphinx_testing/include/MainMenu.hpp</includedby>
+    <includedby refid="sphinx__testing_2include_2SavedGameMenu_8hpp" local="yes">/home/chris/Documents/sphinx_testing/include/SavedGameMenu.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/include/Menu.hpp</label>
+        <link refid="sphinx__testing_2include_2Menu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>values.hpp</label>
+        <link refid="values_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp</label>
+        <link refid="sphinx__testing_2include_2InGameMenu_8hpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/sphinx_testing/include/MainMenu.hpp</label>
+        <link refid="sphinx__testing_2include_2MainMenu_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/include/Menu.hpp</label>
+        <link refid="sphinx__testing_2include_2Menu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/sphinx_testing/include/SavedGameMenu.hpp</label>
+        <link refid="sphinx__testing_2include_2SavedGameMenu_8hpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classMenu" prot="public">Menu</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>options</name>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" prot="public">
+          <name>NEW_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" prot="public">
+          <name>RESUME_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" prot="public">
+          <name>SHOW_STATS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da8c61ff69145519f69b2f7736e4526561" prot="public">
+          <name>RULES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa60a6a471c0681e5a49c4f5d00f6bc5a" prot="public">
+          <name>MANUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4fbf7baea4efa3a7afe4508f40ec7e09" prot="public">
+          <name>SAVE_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" prot="public">
+          <name>NEW_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" prot="public">
+          <name>RESUME_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" prot="public">
+          <name>SHOW_STATS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa42b2fb0e720a080e79a92f4ca97d927" prot="public">
+          <name>EXIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da8c61ff69145519f69b2f7736e4526561" prot="public">
+          <name>RULES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa60a6a471c0681e5a49c4f5d00f6bc5a" prot="public">
+          <name>MANUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4fbf7baea4efa3a7afe4508f40ec7e09" prot="public">
+          <name>SAVE_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da21768410a256413b6b47dcf6f2ed9a63" prot="public">
+          <name>SAVE_READY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daf82e95a8a8acf4640c278ca92b4f1d13" prot="public">
+          <name>NO_SAVES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Menu.hpp" line="8" column="1" bodyfile="/home/chris/Documents/sphinx_testing/include/Menu.hpp" bodystart="8" bodyend="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="values_8hpp" kindref="compound">values.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/>{<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" kindref="member">NEW_GAME</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" kindref="member">RESUME_GAME</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" kindref="member">SHOW_STATS</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da8c61ff69145519f69b2f7736e4526561" kindref="member">RULES</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa60a6a471c0681e5a49c4f5d00f6bc5a" kindref="member">MANUAL</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4fbf7baea4efa3a7afe4508f40ec7e09" kindref="member">SAVE_GAME</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693" kindref="member">NONE</ref><sp/>};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classMenu" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMenu" kindref="compound">Menu</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" kindref="member">TOP_PADDING</ref><sp/>=<sp/><ref refid="values_8hpp_1aa4a1e2bfbb4b6bdfc6d70f689a31810f" kindref="member">ORIGINy</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//blank<sp/>space<sp/>on<sp/>all<sp/>the<sp/>edges<sp/>of<sp/>the<sp/>window</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref><sp/>=<sp/><ref refid="values_8hpp_1a07d71a60201fb66046cb6293933c68dd" kindref="member">ORIGINx</ref>,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1a1611ec6c672448c9f86d473a18b8bdb7" kindref="member">PUZZLE_SPACE</ref><sp/>=<sp/>29;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//space<sp/>(x<sp/>and<sp/>y)<sp/>for<sp/>the<sp/>display<sp/>puzzle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classMenu_1a593f1ec27088578ed2dbdeb7c92d222b" kindref="member">VERTICAL_DIVIDER</ref><sp/>=<sp/>4,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//blank<sp/>space<sp/>between<sp/>display<sp/>puzzle<sp/>and<sp/>in-game<sp/>menu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1a26719c17d8801e207892e6ad4b8dcfa2" kindref="member">IN_GAME_MENU_DISPLAY_SPACING</ref><sp/>=<sp/>80;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//x-axis,<sp/>columns<sp/>for<sp/>display<sp/>area</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Change<sp/>this<sp/>back<sp/>to<sp/>90<sp/>for<sp/>final<sp/>release</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMenu_1af1adbe6ce5816c5b99036e671862aca9" kindref="member">display_menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>)<sp/>=<sp/><ref refid="values_8hpp_1ac863338f50a6894733cdcfeef6d756d1" kindref="member">PURE_VIRTUAL</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1ad466dd83355124a6ed958430450bfe94" kindref="member">Menu</ref><sp/>()<sp/>{}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1a831387f51358cfb88cd018e1777bc980" kindref="member">~Menu</ref><sp/>()<sp/>{}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classMenu_1a19172889100b7d04a06e7e172a8db428" kindref="member">menu</ref><sp/>()<sp/>=<sp/><ref refid="values_8hpp_1ac863338f50a6894733cdcfeef6d756d1" kindref="member">PURE_VIRTUAL</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//virtual<sp/>options<sp/>operator<sp/>++<sp/>();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//virtual<sp/>options<sp/>operator<sp/>--<sp/>();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/sphinx_testing/include/Menu.hpp"/>
+  </compounddef>
+</doxygen>

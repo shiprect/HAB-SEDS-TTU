@@ -1,0 +1,785 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="ProjectConfig_8hpp" kind="file" language="C++">
+    <compoundname>ProjectConfig.hpp</compoundname>
+    <includedby refid="Config_8h" local="yes">/home/chris/Documents/HAB-SEDS-TTU/Config.h</includedby>
+    <includedby refid="Utilities_8h" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/Utilities.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino</label>
+        <link refid="HAB-SEDS-TTU_8ino"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp</label>
+        <link refid="APRS_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp</label>
+        <link refid="afsk_8cpp"/>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp</label>
+        <link refid="ax25_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.cpp</label>
+        <link refid="AnalogPin_8cpp"/>
+      </node>
+      <node id="10">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp</label>
+        <link refid="AnalogPin_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.cpp</label>
+        <link refid="BMP_8cpp"/>
+      </node>
+      <node id="14">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.hpp</label>
+        <link refid="BMP_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.cpp</label>
+        <link refid="GPS_8cpp"/>
+      </node>
+      <node id="18">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.hpp</label>
+        <link refid="GPS_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp</label>
+        <link refid="PWM_8cpp"/>
+      </node>
+      <node id="20">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp</label>
+        <link refid="PWM_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.cpp</label>
+        <link refid="Pushbutton_8cpp"/>
+      </node>
+      <node id="22">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.hpp</label>
+        <link refid="Pushbutton_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp</label>
+        <link refid="SD__card_8cpp"/>
+      </node>
+      <node id="12">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</label>
+        <link refid="SD__card_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp</label>
+        <link refid="Servo_8cpp"/>
+      </node>
+      <node id="24">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp</label>
+        <link refid="Servo_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp</label>
+        <link refid="Status_8cpp"/>
+      </node>
+      <node id="16">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a828654cd2db8d92aa8aa1e5c13d50361" prot="public" static="no">
+        <name>EMBEDDED__ARDUINO</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="13" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1af622d85b53ef4435687d84ce9b1c05b1" prot="public" static="no">
+        <name>DEBUG__ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="19" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a38d8aef3933283c8873588db47606661" prot="public" static="no">
+        <name>DEBUG__FPRINTF</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="25" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a5098076aa336f42d76b8e7db9c736ad5" prot="public" static="no">
+        <name>DEBUG__SERIAL</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="28" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a71dd623dfe17d3a1a3041ffb51015cc7" prot="public" static="no">
+        <name>TEENSY_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="35" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a44559eaf80414699ea0ef4139c809113" prot="public" static="no">
+        <name>ESP32_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="38" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1acffc74bf4c1c9bf37db1268d7063917c" prot="public" static="no">
+        <name>STM32_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="41" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1ad880a735411f9c43c715b24a59ad0617" prot="public" static="no">
+        <name>NANO_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="44" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1ac8383d8fc4fa97bb45f89d9a50e0966d" prot="public" static="no">
+        <name>GPS_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="50" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1aeac42aa142d7a3aa5069fa133e8c0e02" prot="public" static="no">
+        <name>APRS_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="53" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1ae1cf93ee2b4a5678d41f6661f0000905" prot="public" static="no">
+        <name>BMP_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="56" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1ab4278efd564404bc530ba15991671b46" prot="public" static="no">
+        <name>LED_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="59" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1afd5564bf4d8c4bc55e2079b62cdc8731" prot="public" static="no">
+        <name>SD_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="62" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a06deb8dcd2c7185ce2f61212d8bf199f" prot="public" static="no">
+        <name>STATUS_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="65" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a405e43e4785abb1ba49e3feb11f2b730" prot="public" static="no">
+        <name>SERVO_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="68" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1aaa7efac9850b3189e036d02017a1ef22" prot="public" static="no">
+        <name>PUSHBUTTON_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="71" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a4dfa66c7ba15de90e2fc310292846dd8" prot="public" static="no">
+        <name>ANALOGPIN_ENABLE</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="74" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a7192cd3698575c28dfcf97a5818c371f" prot="public" static="no">
+        <name>EN_PRINT_DEBUG</name>
+        <initializer><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="94" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a264620a9977e1f6a6be4486e447a01a5" prot="public" static="no">
+        <name>S_CALLSIGN</name>
+        <initializer>&quot;KN4JLK&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="107" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1ad5b5911231170d89e5396c6100faa155" prot="public" static="no">
+        <name>D_CALLSIGN</name>
+        <initializer>&quot;APRS&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="112" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a501ad44d9dec287c5f675619c6768635" prot="public" static="no">
+        <name>SYMBOL_TABLE</name>
+        <initializer>&apos;/&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="117" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="ProjectConfig_8hpp_1a5abaab0e1df4c3b5d7dabe40a2d87e8a" prot="public" static="no">
+        <name>SYMBOL_CHAR</name>
+        <initializer>&apos;O&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="119" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1aa96db7994b4400df30a787bef3e167da" prot="public" static="no" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t SERVO_CUT_ALT</definition>
+        <argsstring></argsstring>
+        <name>SERVO_CUT_ALT</name>
+        <initializer>= 28000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="83" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1a2e8dc5bb18c6d4fd76afdb679b58a79b" prot="public" static="no" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t SERVO_CUT_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>SERVO_CUT_TIMEOUT</name>
+        <initializer>= 5400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="84" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1aa14a2f79513d92c5bfef846a81e1446f" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t SERVO_START_POS</definition>
+        <argsstring></argsstring>
+        <name>SERVO_START_POS</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="85" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1a712614211b001ca253be86d7bbd37ce3" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t SERVO_END_POS</definition>
+        <argsstring></argsstring>
+        <name>SERVO_END_POS</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="85" column="32" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1ad4882d6c040bfba518c2c14ee776e312" prot="public" static="no" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t SERVO_PERIOD</definition>
+        <argsstring></argsstring>
+        <name>SERVO_PERIOD</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="86" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1ab9c7d15dbba430d937c2638e63f1a439" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t S_CALLSIGN_ID</definition>
+        <argsstring></argsstring>
+        <name>S_CALLSIGN_ID</name>
+        <initializer>= 11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="109" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1aa15d8e72f0af9e15bf831067c3448891" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t D_CALLSIGN_ID</definition>
+        <argsstring></argsstring>
+        <name>D_CALLSIGN_ID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="114" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1a6b372a3b4273a5b1cbb420eb7d058a07" prot="public" static="no" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const comment</definition>
+        <argsstring></argsstring>
+        <name>comment</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="124" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1aac849203a0ae07254155d280f1b5a253" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t APRS_SLOT</definition>
+        <argsstring></argsstring>
+        <name>APRS_SLOT</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="140" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1ad2f24c4ed30375904a762e3881f00eb8" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t GPS_VALID_POS_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>GPS_VALID_POS_TIMEOUT</name>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="174" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ProjectConfig_8hpp_1ab0a8acd375f8212769a7ea0d7230671e" prot="public" static="no" mutable="no">
+        <type>const uint32_t</type>
+        <definition>const uint32_t GPS_BAUDRATE</definition>
+        <argsstring></argsstring>
+        <name>GPS_BAUDRATE</name>
+        <initializer>= 9600</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" line="176" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__CONFIG_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__CONFIG_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Structure<sp/>Configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//NOTE::All<sp/>macros<sp/>can<sp/>be<sp/>overridden<sp/>during<sp/>compilation<sp/>with<sp/>gcc<sp/>-DMACRONAME=value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*Functionality<sp/>Toggles*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//NOTE::Only<sp/>define<sp/>one<sp/>of<sp/>these</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EMBEDDED__ARDUINO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>EMBEDDED__ARDUINO<sp/><sp/><sp/><sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Debug<sp/>Enable<sp/>Toggles<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//NOTE::Only<sp/>define<sp/>one<sp/>of<sp/>these<sp/>as<sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DEBUG__ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DEBUG__ENABLE<sp/><sp/><sp/><sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Debug<sp/>Method<sp/>Toggles<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//NOTE::Only<sp/>define<sp/>one<sp/>of<sp/>these<sp/>as<sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DEBUG__FPRINTF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DEBUG__FPRINTF<sp/><sp/><sp/><sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DEBUG__SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DEBUG__SERIAL<sp/><sp/><sp/><sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Board<sp/>Configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TEENSY_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>TEENSY_ENABLE<sp/><sp/><sp/><sp/>TRUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ESP32_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ESP32_ENABLE<sp/><sp/><sp/><sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STM32_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>STM32_ENABLE<sp/><sp/><sp/><sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NANO_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>NANO_ENABLE<sp/><sp/><sp/><sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Module<sp/>Configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GPS_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>GPS_ENABLE<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>APRS_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>APRS_ENABLE<sp/>FALSE<sp/><sp/><sp/></highlight><highlight class="comment">//fix<sp/>compilation<sp/>failing<sp/>when<sp/>this<sp/>is<sp/>commented</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>BMP_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>BMP_ENABLE<sp/><sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LED_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>LED_ENABLE<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SD_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SD_ENABLE<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>STATUS_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>STATUS_ENABLE<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SERVO_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SERVO_ENABLE<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PUSHBUTTON_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>PUSHBUTTON_ENABLE<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ANALOGPIN_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>ANALOGPIN_ENABLE<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Flight<sp/>Profile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>SERVO_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="ProjectConfig_8hpp_1aa96db7994b4400df30a787bef3e167da" kindref="member">SERVO_CUT_ALT</ref><sp/>=<sp/>28000;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Give<sp/>desired<sp/>cut<sp/>altitude<sp/>in<sp/>meters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="ProjectConfig_8hpp_1a2e8dc5bb18c6d4fd76afdb679b58a79b" kindref="member">SERVO_CUT_TIMEOUT</ref><sp/>=<sp/>5400;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Give<sp/>desired<sp/>timeout<sp/>in<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="ProjectConfig_8hpp_1aa14a2f79513d92c5bfef846a81e1446f" kindref="member">SERVO_START_POS</ref><sp/>=<sp/>0,<sp/><ref refid="ProjectConfig_8hpp_1a712614211b001ca253be86d7bbd37ce3" kindref="member">SERVO_END_POS</ref><sp/>=<sp/>10;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//These<sp/>three<sp/>are<sp/>placeholder<sp/>values<sp/>for<sp/>now.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="ProjectConfig_8hpp_1ad4882d6c040bfba518c2c14ee776e312" kindref="member">SERVO_PERIOD</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Debug<sp/>Functionality</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EN_PRINT_DEBUG<sp/>TRUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>General<sp/>Debug</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/>APRS<sp/>config</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>your<sp/>callsign<sp/>and<sp/>SSID<sp/>here.<sp/>Common<sp/>values<sp/>for<sp/>the<sp/>SSID<sp/>are</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(from<sp/>http://zlhams.wikidot.com/aprs-ssidguide):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Balloons:<sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Cars:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>Home:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-<sp/>IGate:<sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_CALLSIGN<sp/><sp/><sp/><sp/><sp/><sp/>&quot;KN4JLK&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="ProjectConfig_8hpp_1ab9c7d15dbba430d937c2638e63f1a439" kindref="member">S_CALLSIGN_ID</ref><sp/>=<sp/>11;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>11<sp/>is<sp/>usually<sp/>for<sp/>balloons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Destination<sp/>callsign:<sp/>APRS<sp/>(with<sp/>SSID=0)<sp/>is<sp/>usually<sp/>okay.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>D_CALLSIGN<sp/><sp/><sp/><sp/><sp/><sp/>&quot;APRS&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="ProjectConfig_8hpp_1aa15d8e72f0af9e15bf831067c3448891" kindref="member">D_CALLSIGN_ID</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Symbol<sp/>Table:<sp/>&apos;/&apos;<sp/>is<sp/>primary<sp/>table<sp/>&apos;\&apos;<sp/>is<sp/>secondary<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYMBOL_TABLE<sp/>&apos;/&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Primary<sp/>Table<sp/>Symbols:<sp/>/O=balloon,<sp/>/-=House,<sp/>/v=Blue<sp/>Van,<sp/>/&gt;=Red<sp/>Car</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SYMBOL_CHAR<sp/>&apos;O&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>APRS<sp/>comment:<sp/>this<sp/>goes<sp/>in<sp/>the<sp/>comment<sp/>portion<sp/>of<sp/>the<sp/>APRS<sp/>message.<sp/>You</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>might<sp/>want<sp/>to<sp/>keep<sp/>this<sp/>short.<sp/>The<sp/>longer<sp/>the<sp/>packet,<sp/>the<sp/>more<sp/>vulnerable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>it<sp/>is<sp/>to<sp/>noise.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ProjectConfig_8hpp_1a6b372a3b4273a5b1cbb420eb7d058a07" kindref="member">comment</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//TODO::clean<sp/>up<sp/>all<sp/>below<sp/>this<sp/>line</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//<sp/>APRS<sp/>packets<sp/>are<sp/>slotted<sp/>so<sp/>that<sp/>multiple<sp/>trackers<sp/>can<sp/>be<sp/>used<sp/>without</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>them<sp/>stepping<sp/>on<sp/>one<sp/>another.<sp/>The<sp/>transmission<sp/>times<sp/>are<sp/>governed<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>formula:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>APRS_SLOT<sp/>(seconds)<sp/>+<sp/>n<sp/>*<sp/>APRS_PERIOD<sp/>(seconds)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="comment">//<sp/>When<sp/>launching<sp/>multiple<sp/>balloons,<sp/>use<sp/>the<sp/>same<sp/>APRS_PERIOD<sp/>in<sp/>all<sp/>balloons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>set<sp/>APRS_SLOT<sp/>so<sp/>that<sp/>the<sp/>packets<sp/>are<sp/>spaced<sp/>equally<sp/>in<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Eg.<sp/>for<sp/>two<sp/>balloons<sp/>and<sp/>APRS_PERIOD<sp/>=<sp/>60,<sp/>set<sp/>APRS_SLOT<sp/>to<sp/>0<sp/>and<sp/>30,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">//<sp/>respectively.<sp/>The<sp/>first<sp/>balloon<sp/>will<sp/>transmit<sp/>at<sp/>00:00:00,<sp/>00:01:00,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">//<sp/>00:02:00,<sp/>etc.<sp/>and<sp/>the<sp/>second<sp/>balloon<sp/>will<sp/>transmit<sp/>at<sp/>00:00:30,<sp/>00:01:30,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">//<sp/>00:02:30,<sp/>etc.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="ProjectConfig_8hpp_1aac849203a0ae07254155d280f1b5a253" kindref="member">APRS_SLOT</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>seconds.<sp/>0<sp/>disables<sp/>slotted<sp/>transmissions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">//#define<sp/>APRS_PERIOD<sp/>300//20//20//60<sp/><sp/><sp/><sp/>//<sp/>seconds.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">//uint8_t<sp/>APRS_PERIOD<sp/>=<sp/>300;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"></highlight></codeline>
+<codeline lineno="146"><highlight class="comment">//const<sp/>uint8_t<sp/>APRS_PATH_ALTITUDE<sp/>=<sp/>1500;<sp/><sp/>//<sp/>Below<sp/>this<sp/>altitude,<sp/>**<sp/>in<sp/>metres<sp/>**,<sp/>path<sp/>will<sp/>switch<sp/>to<sp/>WIDE1-1,<sp/>WIDE2-1.<sp/><sp/>Above<sp/>it<sp/>will<sp/>be<sp/>or<sp/>path<sp/>or<sp/>WIDE2-1<sp/>(see<sp/>below)</highlight></codeline>
+<codeline lineno="147"><highlight class="comment">//const<sp/>uint8_t<sp/>APRS_HIGH_USE_WIDE2<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>1<sp/>means<sp/>WIDE2-1<sp/>is<sp/>used<sp/>at<sp/>altitude;<sp/>0<sp/>means<sp/>no<sp/>path<sp/>is<sp/>used</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"></highlight></codeline>
+<codeline lineno="149"><highlight class="comment"></highlight></codeline>
+<codeline lineno="150"><highlight class="comment">//<sp/>Digipeating<sp/>paths:</highlight></codeline>
+<codeline lineno="151"><highlight class="comment">//<sp/>(read<sp/>more<sp/>about<sp/>digipeating<sp/>paths<sp/>here:<sp/>http://wa8lmf.net/DigiPaths/<sp/>)</highlight></codeline>
+<codeline lineno="152"><highlight class="comment">//<sp/>The<sp/>recommended<sp/>digi<sp/>path<sp/>for<sp/>a<sp/>balloon<sp/>is<sp/>WIDE2-1<sp/>or<sp/>pathless.<sp/>The<sp/>default</highlight></codeline>
+<codeline lineno="153"><highlight class="comment">//<sp/>is<sp/>pathless.<sp/>Uncomment<sp/>the<sp/>following<sp/>two<sp/>lines<sp/>for<sp/>WIDE2-1<sp/>path:</highlight></codeline>
+<codeline lineno="154"><highlight class="comment">#define<sp/>DIGI_PATH1<sp/><sp/><sp/><sp/><sp/><sp/>&quot;WIDE2&quot;</highlight></codeline>
+<codeline lineno="155"><highlight class="comment">coust<sp/>uint8_t<sp/>DIGI_PATH1_TTL<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"></highlight></codeline>
+<codeline lineno="157"><highlight class="comment"></highlight></codeline>
+<codeline lineno="158"><highlight class="comment">const<sp/>uint8_t<sp/>APRS_TELEM_INTERVAL<sp/>=<sp/>2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>How<sp/>often<sp/>to<sp/>send<sp/>telemetry<sp/>packets.<sp/><sp/>Comment<sp/>out<sp/>to<sp/>disable</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"></highlight></codeline>
+<codeline lineno="160"><highlight class="comment">const<sp/>uint8_t<sp/>APRS_TX_INTERVAL<sp/>=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>APRS<sp/>TX<sp/>Interval<sp/>in<sp/>minutes</highlight></codeline>
+<codeline lineno="161"><highlight class="comment">#define<sp/>APRS_PRE_EMPHASIS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Comment<sp/>out<sp/>to<sp/>disable<sp/>3dB<sp/>pre-emphasis.</highlight></codeline>
+<codeline lineno="162"><highlight class="comment">const<sp/>uint8_t<sp/>APRS_RANDOM<sp/>=<sp/>30;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Adjusts<sp/>time<sp/>to<sp/>next<sp/>transmission<sp/>by<sp/>up<sp/>to<sp/>+/1<sp/>this<sp/>figure,<sp/>in<sp/>seconds.</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>So<sp/>for<sp/>interval<sp/>of<sp/>1<sp/>(minute),<sp/>and<sp/>random(30),<sp/>each<sp/>gap<sp/>could<sp/>be<sp/>30<sp/>-<sp/>90<sp/>seconds.</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Set<sp/>to<sp/>0<sp/>to<sp/>disable</highlight></codeline>
+<codeline lineno="165"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">//#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">//<sp/>GPS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">//<sp/>--------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="ProjectConfig_8hpp_1ad2f24c4ed30375904a762e3881f00eb8" kindref="member">GPS_VALID_POS_TIMEOUT</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/><ref refid="ProjectConfig_8hpp_1ab0a8acd375f8212769a7ea0d7230671e" kindref="member">GPS_BAUDRATE</ref><sp/>=<sp/>9600;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/ProjectConfig.hpp"/>
+  </compounddef>
+</doxygen>

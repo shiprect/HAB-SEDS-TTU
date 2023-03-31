@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="tsudoku_2include_2InGameMenu_8hpp" kind="file" language="C++">
+    <compoundname>InGameMenu.hpp</compoundname>
+    <includes refid="tsudoku_2include_2Menu_8hpp" local="yes">Menu.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/InGameMenu.hpp</label>
+        <link refid="tsudoku_2include_2InGameMenu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu.hpp</label>
+        <link refid="tsudoku_2include_2Menu_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classInGameMenu" prot="public">InGameMenu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>INGAMEMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INGAMEMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_2include_2Menu_8hpp" kindref="compound">Menu.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Class:<sp/>InGameMenu</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Purpose:<sp/>Menu-derived<sp/>class<sp/>that<sp/>displays<sp/>the<sp/>in-game<sp/>menu<sp/>and<sp/>the<sp/>content<sp/>of<sp/>the<sp/>menu<sp/>item</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chosen.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Private<sp/>variables:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>IN_GAME_MENU_TITLE_SPACING<sp/>-&gt;<sp/>The<sp/>amount<sp/>of<sp/>spacing<sp/>between<sp/>the<sp/>in-game<sp/>menu<sp/>title<sp/>and<sp/>its</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>IN_GAME_MENU_LEFT_EDGE<sp/>-&gt;<sp/>The<sp/>leftmost<sp/>column<sp/>the<sp/>display<sp/>menu<sp/>will<sp/>occupy.<sp/>This<sp/>will<sp/>be<sp/>the</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>column<sp/>immediately<sp/>after<sp/>the<sp/>end<sp/>of<sp/>the<sp/>vertical<sp/>divider.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>NUM_OPTS<sp/>-&gt;<sp/>The<sp/>number<sp/>of<sp/>choosable<sp/>options<sp/>in<sp/>the<sp/>in-game<sp/>menu.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>display_matrix<sp/>-&gt;<sp/>A<sp/>pointer<sp/>to<sp/>the<sp/>display<sp/>matrix<sp/>used<sp/>for<sp/>saving<sp/>the<sp/>game.<sp/>This<sp/>must<sp/>be<sp/>a</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pointer<sp/>so<sp/>that<sp/>the<sp/>display<sp/>matrix<sp/>will<sp/>be<sp/>properly<sp/>updated<sp/>in<sp/>the<sp/>in-game</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menu&apos;s<sp/>scope.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classInGameMenu" kindref="compound">InGameMenu</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classMenu" kindref="compound">Menu</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classInGameMenu_1a02e84b187e7377b0d51183a379fba270" kindref="member">IN_GAME_MENU_TITLE_SPACING</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classInGameMenu_1a936ac63d64322d05e0b3984ff6c28171" kindref="member">IN_GAME_MENU_LEFT_EDGE</ref><sp/>=<sp/><ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref><sp/>+<sp/><ref refid="classMenu_1a1611ec6c672448c9f86d473a18b8bdb7" kindref="member">PUZZLE_SPACE</ref><sp/>+<sp/><ref refid="classMenu_1a593f1ec27088578ed2dbdeb7c92d222b" kindref="member">VERTICAL_DIVIDER</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classInGameMenu_1afc3c110ca204dee6c7959ee70c7836e1" kindref="member">NUM_OPTS</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t*<sp/><ref refid="classInGameMenu_1a6cf40d34d30e80412986547841d075eb" kindref="member">display_matrix</ref>[<ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref>];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classInGameMenu_1a0f272ee193572ee12d3ac418adaecacc" kindref="member">window_resized</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classInGameMenu_1af78a7555ea064eb8197037e64781b990" kindref="member">display_menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classInGameMenu_1a8e904a1e9bd8ec79719608119c18187c" kindref="member">clear</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classInGameMenu_1a5200f4723a180fa3978f1146750a280a" kindref="member">display_rules</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classInGameMenu_1a5c8628563c1226bf9a09a4a7748789b3" kindref="member">display_manual</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classInGameMenu_1a20a72ac9a3b4aab551e00865bfcbff23" kindref="member">screen_reader</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>,<sp/>std::string,<sp/>uint8_t&amp;);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classInGameMenu_1a15de1aedfac9528b5e7a31644cc6f32a" kindref="member">save_game</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classInGameMenu_1ac17f03775063a51d64a801e4dccd75af" kindref="member">set_window_resized</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classInGameMenu_1a4232e0b611c806c13260e6fbca3e7e0a" kindref="member">InGameMenu</ref><sp/>(uint8_t[<ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref>][<ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref>]);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classInGameMenu_1afe83efb63a3ddd1ab538c66f8bb3ed5a" kindref="member">~InGameMenu</ref><sp/>()<sp/>{}<sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Default<sp/>destructor.<sp/>Does<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classInGameMenu_1a798c63ddd821e2bce03d7fb6d3df4309" kindref="member">menu</ref><sp/>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classInGameMenu_1a15de1aedfac9528b5e7a31644cc6f32a" kindref="member">save_game</ref><sp/>(uint8_t*[<ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref>]);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classInGameMenu_1a527b5f83d496aa103cbf0a3eb53c49e5" kindref="member">get_window_resized</ref><sp/>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp"/>
+  </compounddef>
+</doxygen>

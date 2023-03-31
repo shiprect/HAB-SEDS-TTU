@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="DebugUtilities_8h" kind="file" language="C++">
+    <compoundname>DebugUtilities.h</compoundname>
+    <includedby refid="Utilities_8h" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/Utilities.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino</label>
+        <link refid="HAB-SEDS-TTU_8ino"/>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp</label>
+        <link refid="APRS_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp</label>
+        <link refid="afsk_8cpp"/>
+      </node>
+      <node id="9">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp</label>
+        <link refid="ax25_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.cpp</label>
+        <link refid="AnalogPin_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp</label>
+        <link refid="AnalogPin_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.cpp</label>
+        <link refid="BMP_8cpp"/>
+      </node>
+      <node id="15">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.hpp</label>
+        <link refid="BMP_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.cpp</label>
+        <link refid="GPS_8cpp"/>
+      </node>
+      <node id="19">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.hpp</label>
+        <link refid="GPS_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp</label>
+        <link refid="PWM_8cpp"/>
+      </node>
+      <node id="21">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp</label>
+        <link refid="PWM_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.cpp</label>
+        <link refid="Pushbutton_8cpp"/>
+      </node>
+      <node id="23">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.hpp</label>
+        <link refid="Pushbutton_8hpp"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp</label>
+        <link refid="SD__card_8cpp"/>
+      </node>
+      <node id="13">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</label>
+        <link refid="SD__card_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp</label>
+        <link refid="Servo_8cpp"/>
+      </node>
+      <node id="25">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp</label>
+        <link refid="Servo_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp</label>
+        <link refid="Status_8cpp"/>
+      </node>
+      <node id="17">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__DEBUGUTILS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__DEBUGUTILS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEBUG__SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DEBUG_UART<sp/>Serial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>DEBUG_PRINT(str)\</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{<sp/>if(EN_PRINT_DEBUG)<sp/>DEBUG_UART.println(str);<sp/>}<sp/>while(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/*#ifdef<sp/>APRS_DEBUG</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/>#define<sp/>DEBUG_APRS(str)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_UART.print(millis()/1000);\</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_UART.print(F(&quot;:<sp/>&quot;));<sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_UART.print(__FUNCTION__);<sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_UART.print(__LINE__);<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_UART.print(F(&apos;<sp/>&apos;));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_UART.println(str);</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">#else</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/>#define<sp/>DEBUG_APRS(str)</highlight></codeline>
+<codeline lineno="24"><highlight class="comment">#endif*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO::For<sp/>Chris<sp/>-<sp/>Add<sp/>fprintf()<sp/>version<sp/>of<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>should<sp/>follow<sp/>the<sp/>same<sp/>macro<sp/>format<sp/>as<sp/>DEBUG__SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DEBUG__FPRINTF<sp/>already<sp/>exists<sp/>in<sp/>ProjectConfig.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>As<sp/>a<sp/>note,<sp/>the<sp/>do{}while()<sp/>is<sp/>necessary<sp/>for<sp/>correct<sp/>compilation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>error<sp/>checking<sp/>when<sp/>the<sp/>EN_DEBUG<sp/>macro<sp/>is<sp/>set<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>APRS<sp/>debug<sp/>I<sp/>also<sp/>have<sp/>macro<sp/>examples<sp/>that<sp/>will<sp/>do<sp/>things</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>like<sp/>printing<sp/>the<sp/>line,<sp/>function,<sp/>etc.<sp/>Having<sp/>the<sp/>ability<sp/>to<sp/>toggle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>all<sp/>of<sp/>these<sp/>using<sp/>macros<sp/>would<sp/>be<sp/>extremely<sp/>useful.<sp/>At<sp/>the<sp/>very<sp/>least,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/>having<sp/>the<sp/>prints<sp/>always<sp/>print<sp/>the<sp/>line<sp/>number<sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>print<sp/>statements<sp/>would<sp/>be<sp/>nice.`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>DEBUG__FPRINTF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>#if<sp/>DEBUG_CX<sp/>==<sp/>cout<sp/><sp/><sp/><sp/>//NOTE:<sp/>This<sp/>is<sp/>still<sp/>broken<sp/>until<sp/>tested<sp/>on<sp/>another<sp/>board<sp/>besides<sp/>the<sp/>Teensy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>DEBUG_PRINT(str)\</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{\</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(EN_PRINT_DEBUG)<sp/>{\</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_CX<sp/>&lt;&lt;<sp/>str<sp/>&lt;&lt;<sp/>endl;\</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>#else<sp/><sp/><sp/>//if<sp/>DEBUG_CX<sp/>==<sp/>STDOUT_FILENO<sp/>or<sp/>STDERR_FILENO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//dprintf<sp/>is<sp/>a<sp/>variant<sp/>that<sp/>uses<sp/>a<sp/>file<sp/>descriptor<sp/>instead<sp/>of<sp/>a<sp/>FILE*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//i.e.<sp/>uses<sp/>STDOUT_FILENO/STDERR_FILENO<sp/>instead<sp/>of<sp/>stdout/stderr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//NOTE:<sp/>This<sp/>is<sp/>still<sp/>broken<sp/>until<sp/>tested<sp/>on<sp/>another<sp/>board<sp/>besides<sp/>the<sp/>Teensy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>DEBUG_PRINT(str)\</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do<sp/>{\</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(EN_PRINT_DEBUG)<sp/>{\</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dprintf(DEBUG_CX,<sp/>str);\</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}\</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>while<sp/>(0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//DEBUGUTILS</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/DebugUtilities.h"/>
+  </compounddef>
+</doxygen>

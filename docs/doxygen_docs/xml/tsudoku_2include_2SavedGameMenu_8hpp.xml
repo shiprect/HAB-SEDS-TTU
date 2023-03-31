@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="tsudoku_2include_2SavedGameMenu_8hpp" kind="file" language="C++">
+    <compoundname>SavedGameMenu.hpp</compoundname>
+    <includes refid="tsudoku_2include_2Menu_8hpp" local="yes">Menu.hpp</includes>
+    <includes local="no">filesystem</includes>
+    <includes local="no">list</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Menu.hpp</label>
+        <link refid="tsudoku_2include_2Menu_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/SavedGameMenu.hpp</label>
+        <link refid="tsudoku_2include_2SavedGameMenu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>filesystem</label>
+      </node>
+      <node id="8">
+        <label>list</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classSavedGameMenu" prot="public">SavedGameMenu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SAVEDGAMEMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAVEDGAMEMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_2include_2Menu_8hpp" kindref="compound">Menu.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Class:<sp/>SavedGameMenu</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Purpose:<sp/>Menu-derived<sp/>class<sp/>that<sp/>displays<sp/>the<sp/>a<sp/>list<sp/>of<sp/>saved<sp/>games<sp/>the<sp/>user<sp/>can<sp/>choose<sp/>from<sp/>to</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resume.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>Private<sp/>variables:</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>list_iter<sp/>-&gt;<sp/>Alias<sp/>to<sp/>a<sp/>string<sp/>list<sp/>iterator.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>saved_games<sp/>-&gt;<sp/>The<sp/>list<sp/>of<sp/>saved<sp/>games<sp/>to<sp/>be<sp/>displayed<sp/>to<sp/>the<sp/>screen.<sp/>Each<sp/>will<sp/>appear<sp/>as<sp/>an</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>option<sp/>the<sp/>user<sp/>can<sp/>choose<sp/>from.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>selection<sp/>-&gt;<sp/>The<sp/>currently<sp/>highlighted<sp/>game<sp/>from<sp/>the<sp/>displayed<sp/>list.<sp/>If<sp/>the<sp/>user<sp/>presses</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Enter,<sp/>this<sp/>becomes<sp/>the<sp/>game<sp/>loaded.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>saved_game<sp/>-&gt;<sp/>The<sp/>matrix<sp/>used<sp/>to<sp/>read<sp/>a<sp/>saved<sp/>game<sp/>into.<sp/>This<sp/>later<sp/>becomes<sp/>the<sp/>display</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>saved_color_codes<sp/>-&gt;<sp/>The<sp/>matrix<sp/>used<sp/>to<sp/>read<sp/>saved<sp/>game<sp/>display<sp/>matrix<sp/>color<sp/>codes<sp/>into.<sp/>This</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>used<sp/>to<sp/>display<sp/>the<sp/>saved<sp/>game<sp/>with<sp/>the<sp/>same<sp/>coloring<sp/>as<sp/>the<sp/>session</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>from<sp/>when<sp/>it<sp/>was<sp/>saved.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSavedGameMenu" kindref="compound">SavedGameMenu</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classMenu" kindref="compound">Menu</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::list&lt;std::string&gt;::iterator<sp/><ref refid="classSavedGameMenu_1a2a7248157231ea2eafeea045a86fb75e" kindref="member">list_iter</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::list&lt;std::string&gt;<sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1a2a7248157231ea2eafeea045a86fb75e" kindref="member">list_iter</ref><sp/><ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSavedGameMenu_1a38996e1c44cf2236f0270d8ff4caa650" kindref="member">saved_game</ref>[<ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref>][<ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref>]<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a8b5c918f4831c77b6516efba2a4261af" kindref="member">saved_color_codes</ref>[<ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref>][<ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref>]<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a3897fe15acb6a9dab3206d81993a6cdf" kindref="member">display_menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a673d0e5a7a2550713f4842451c25b68c" kindref="member">generate_saved_games_list</ref><sp/>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a7e25d2e42cdd753eba2cc29423fb397d" kindref="member">select_saved_game</ref><sp/>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a80ecd31bcce230051d2a25fa8db5ed5d" kindref="member">read_saved_game</ref><sp/>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1aeffc7a6262d15b5f334f1713c4352d56" kindref="member">print_saved_game</ref><sp/>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1ac3438ac7dc8e11aa9e4aa0505c5179b5" kindref="member">SavedGameMenu</ref><sp/>()<sp/>{}<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Default<sp/>constructor.<sp/>Does<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1a223e77f734bd5e1394c3abe0e224ddc1" kindref="member">~SavedGameMenu</ref><sp/>()<sp/>{}<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Default<sp/>destructor.<sp/>Does<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classSavedGameMenu_1a0eaa9f1f96d531625764f3f472c667a6" kindref="member">menu</ref><sp/>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref><sp/><ref refid="classSavedGameMenu_1aeb3ae0a8e87dec685cf6e6eaecae4ed6" kindref="member">get_saved_game</ref><sp/>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/SavedGameMenu.hpp"/>
+  </compounddef>
+</doxygen>

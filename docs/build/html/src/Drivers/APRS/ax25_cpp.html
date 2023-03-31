@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>ax25.cpp &#8212; HAB-SEDS-TTU 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/scrolls.css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="BMP" href="../BMP/dir.html" />
+    <link rel="prev" title="ax25.h" href="ax25_h.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../../index.html"
+          title="back to the documentation overview"><span>ax25.cpp</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="ax25_h.html">&laquo; ax25.h</a> |
+        <a href="#">ax25.cpp</a>
+        | <a href="../BMP/dir.html">BMP &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div role="main">
+        
+  <section id="ax25-cpp">
+<h1>ax25.cpp<a class="headerlink" href="#ax25-cpp" title="Permalink to this heading">¶</a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410update_crcK7uint8_t">
+<span id="_CPPv310update_crcK7uint8_t"></span><span id="_CPPv210update_crcK7uint8_t"></span><span id="update_crc__uint8_tC"></span><span class="target" id="ax25_8cpp_1ad7daa7e56e4630913f5ce27b75fef0ae"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update_crc</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a_bit</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410update_crcK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413ax25_send_bitK7uint8_tK7uint8_t">
+<span id="_CPPv313ax25_send_bitK7uint8_tK7uint8_t"></span><span id="_CPPv213ax25_send_bitK7uint8_tK7uint8_t"></span><span id="ax25_send_bit__uint8_tC.uint8_tC"></span><span class="target" id="ax25_8cpp_1a0d3ff38761ae59a6bb5c4f9afac29a7c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ax25_send_bit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a_bit</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bitStuff</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413ax25_send_bitK7uint8_tK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414ax25_send_byte7uint8_t">
+<span id="_CPPv314ax25_send_byte7uint8_t"></span><span id="_CPPv214ax25_send_byte7uint8_t"></span><span id="ax25_send_byte__uint8_t"></span><span class="target" id="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ax25_send_byte</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a_byte</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ax25_send_byte7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414ax25_send_flagv">
+<span id="_CPPv314ax25_send_flagv"></span><span id="_CPPv214ax25_send_flagv"></span><span id="ax25_send_flag"></span><span class="target" id="ax25_8cpp_1adb8f872fce5a2a7b4f0228853d69409b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ax25_send_flag</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414ax25_send_flagv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418ax25_getPacketSizev">
+<span id="_CPPv318ax25_getPacketSizev"></span><span id="_CPPv218ax25_getPacketSizev"></span><span id="ax25_getPacketSize"></span><span class="target" id="ax25_8cpp_1a295f9e62a38c8eac1190df9b77c139aa"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ax25_getPacketSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418ax25_getPacketSizev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416ax25_send_stringPCKc">
+<span id="_CPPv316ax25_send_stringPCKc"></span><span id="_CPPv216ax25_send_stringPCKc"></span><span id="ax25_send_string__cCPC"></span><span class="target" id="ax25_8cpp_1a9cf6154e0de4ee381680d59aaff8d6e3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ax25_send_string</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">string</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ax25_send_stringPCKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415ax25_initBufferP7uint8_tKi">
+<span id="_CPPv315ax25_initBufferP7uint8_tKi"></span><span id="_CPPv215ax25_initBufferP7uint8_tKi"></span><span id="ax25_initBuffer__uint8_tP.iC"></span><span class="target" id="ax25_8cpp_1af8f91b6c94fc7d360bcfc236c6ccc190"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ax25_initBuffer</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bufSize</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415ax25_initBufferP7uint8_tKi" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416ax25_send_headerPCK11PathAddressK8uint16_tK8uint16_t">
+<span id="_CPPv316ax25_send_headerPCK11PathAddressK8uint16_tK8uint16_t"></span><span id="_CPPv216ax25_send_headerPCK11PathAddressK8uint16_tK8uint16_t"></span><span id="ax25_send_header__PathAddressCPC.uint16_tC.uint16_tC"></span><span class="target" id="ax25_8cpp_1a45891ff098c74d3817d00c61b34f5780"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ax25_send_header</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="APRS_hpp.html#_CPPv411PathAddress" title="PathAddress"><span class="n"><span class="pre">PathAddress</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">paths</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nPaths</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">preambleFlags</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ax25_send_headerPCK11PathAddressK8uint16_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416ax25_send_footerv">
+<span id="_CPPv316ax25_send_footerv"></span><span id="_CPPv216ax25_send_footerv"></span><span id="ax25_send_footer"></span><span class="target" id="ax25_8cpp_1aa73200bd12eb56bad00541d3776ca8dd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ax25_send_footer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416ax25_send_footerv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv43crc">
+<span id="_CPPv33crc"></span><span id="_CPPv23crc"></span><span id="crc__uint16_t"></span><span class="target" id="ax25_8cpp_1aa60093a9a5d5d17864cfda66c47733e3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">crc</span></span></span><a class="headerlink" href="#_CPPv43crc" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413ones_in_a_row">
+<span id="_CPPv313ones_in_a_row"></span><span id="_CPPv213ones_in_a_row"></span><span id="ones_in_a_row__uint8_t"></span><span class="target" id="ax25_8cpp_1aa076507468df0883dd5f0a1296794268"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ones_in_a_row</span></span></span><a class="headerlink" href="#_CPPv413ones_in_a_row" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv411packet_size">
+<span id="_CPPv311packet_size"></span><span id="_CPPv211packet_size"></span><span id="packet_size__uint16_t"></span><span class="target" id="ax25_8cpp_1aaf8e82ad3f27d2e6839acc984ae4155b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">packet_size</span></span></span><a class="headerlink" href="#_CPPv411packet_size" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv46packet">
+<span id="_CPPv36packet"></span><span id="_CPPv26packet"></span><span id="packet__uint8_tP"></span><span class="target" id="ax25_8cpp_1a021141e4ed340d853a361edbafdc68a8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">packet</span></span></span><a class="headerlink" href="#_CPPv46packet" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413maxPacketSize">
+<span id="_CPPv313maxPacketSize"></span><span id="_CPPv213maxPacketSize"></span><span id="maxPacketSize__unsigned-i"></span><span class="target" id="ax25_8cpp_1a32b6b77e59a6e2244f7dbcd9c3e7f1e8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">maxPacketSize</span></span></span><a class="headerlink" href="#_CPPv413maxPacketSize" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, William Stump, Chris Swindell, Luke Chapman, Emma Krebs, Mia Guzman.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

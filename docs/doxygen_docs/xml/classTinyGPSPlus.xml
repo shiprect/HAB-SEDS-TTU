@@ -1,0 +1,804 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classTinyGPSPlus" kind="class" language="C++" prot="public">
+    <compoundname>TinyGPSPlus</compoundname>
+    <includes local="no">TinyGPS++.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classTinyGPSPlus_1abebf02c0d9aa523c0d0df57c207261b6" prot="private" static="no" strong="no">
+        <type></type>
+        <name>@15</name>
+        <qualifiedname>TinyGPSPlus::@15</qualifiedname>
+        <enumvalue id="classTinyGPSPlus_1abebf02c0d9aa523c0d0df57c207261b6a21da219c3e59be9c2ce2b0beff76918f" prot="private">
+          <name>GPS_SENTENCE_GPGGA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTinyGPSPlus_1abebf02c0d9aa523c0d0df57c207261b6af9076c9ba9a752d528726536899f7dbe" prot="private">
+          <name>GPS_SENTENCE_GPRMC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classTinyGPSPlus_1abebf02c0d9aa523c0d0df57c207261b6a51c5c85d67cfa4fdd6865104564a89aa" prot="private">
+          <name>GPS_SENTENCE_OTHER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="371" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="371" bodyend="371"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" prot="public" static="no" mutable="no">
+        <type><ref refid="structTinyGPSLocation" kindref="compound">TinyGPSLocation</ref></type>
+        <definition>TinyGPSLocation TinyGPSPlus::location</definition>
+        <argsstring></argsstring>
+        <name>location</name>
+        <qualifiedname>TinyGPSPlus::location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="334" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" prot="public" static="no" mutable="no">
+        <type><ref refid="structTinyGPSDate" kindref="compound">TinyGPSDate</ref></type>
+        <definition>TinyGPSDate TinyGPSPlus::date</definition>
+        <argsstring></argsstring>
+        <name>date</name>
+        <qualifiedname>TinyGPSPlus::date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="335" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" prot="public" static="no" mutable="no">
+        <type><ref refid="structTinyGPSTime" kindref="compound">TinyGPSTime</ref></type>
+        <definition>TinyGPSTime TinyGPSPlus::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <qualifiedname>TinyGPSPlus::time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="336" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" prot="public" static="no" mutable="no">
+        <type><ref refid="structTinyGPSSpeed" kindref="compound">TinyGPSSpeed</ref></type>
+        <definition>TinyGPSSpeed TinyGPSPlus::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <qualifiedname>TinyGPSPlus::speed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="337" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868" prot="public" static="no" mutable="no">
+        <type><ref refid="structTinyGPSCourse" kindref="compound">TinyGPSCourse</ref></type>
+        <definition>TinyGPSCourse TinyGPSPlus::course</definition>
+        <argsstring></argsstring>
+        <name>course</name>
+        <qualifiedname>TinyGPSPlus::course</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="338" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" prot="public" static="no" mutable="no">
+        <type><ref refid="structTinyGPSAltitude" kindref="compound">TinyGPSAltitude</ref></type>
+        <definition>TinyGPSAltitude TinyGPSPlus::altitude</definition>
+        <argsstring></argsstring>
+        <name>altitude</name>
+        <qualifiedname>TinyGPSPlus::altitude</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="339" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a5fb47066d1d03f4bb5853529053aab48" prot="public" static="no" mutable="no">
+        <type><ref refid="structTinyGPSInteger" kindref="compound">TinyGPSInteger</ref></type>
+        <definition>TinyGPSInteger TinyGPSPlus::satellites</definition>
+        <argsstring></argsstring>
+        <name>satellites</name>
+        <qualifiedname>TinyGPSPlus::satellites</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="340" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a0bb6a7eb2d0261095911d71c8c067546" prot="public" static="no" mutable="no">
+        <type><ref refid="structTinyGPSHDOP" kindref="compound">TinyGPSHDOP</ref></type>
+        <definition>TinyGPSHDOP TinyGPSPlus::hdop</definition>
+        <argsstring></argsstring>
+        <name>hdop</name>
+        <qualifiedname>TinyGPSPlus::hdop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="341" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classTinyGPSPlus_1adfe5e8fc602e2777c6df87fb212b1ab6" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TinyGPSPlus::parity</definition>
+        <argsstring></argsstring>
+        <name>parity</name>
+        <qualifiedname>TinyGPSPlus::parity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="374" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a1b00b1bf055b0965698f9e747da3b03a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TinyGPSPlus::isChecksumTerm</definition>
+        <argsstring></argsstring>
+        <name>isChecksumTerm</name>
+        <qualifiedname>TinyGPSPlus::isChecksumTerm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="375" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char TinyGPSPlus::term[_GPS_MAX_FIELD_SIZE]</definition>
+        <argsstring>[_GPS_MAX_FIELD_SIZE]</argsstring>
+        <name>term</name>
+        <qualifiedname>TinyGPSPlus::term</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="376" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a8b89eadf418a22fdaf2c7520f7b084a3" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TinyGPSPlus::curSentenceType</definition>
+        <argsstring></argsstring>
+        <name>curSentenceType</name>
+        <qualifiedname>TinyGPSPlus::curSentenceType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="377" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a5688c9f32b16fab9433f0fde869d0e89" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TinyGPSPlus::curTermNumber</definition>
+        <argsstring></argsstring>
+        <name>curTermNumber</name>
+        <qualifiedname>TinyGPSPlus::curTermNumber</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="378" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a2b12aee8c9a1f550ee09b74a9b4ae570" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TinyGPSPlus::curTermOffset</definition>
+        <argsstring></argsstring>
+        <name>curTermOffset</name>
+        <qualifiedname>TinyGPSPlus::curTermOffset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="379" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1af5fbeb1e2a1cebb044079e4799a8be55" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TinyGPSPlus::sentenceHasFix</definition>
+        <argsstring></argsstring>
+        <name>sentenceHasFix</name>
+        <qualifiedname>TinyGPSPlus::sentenceHasFix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="380" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a814ec9664ba8f1b28870342e5308e2cd" prot="private" static="no" mutable="no">
+        <type><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref> *</type>
+        <definition>TinyGPSCustom* TinyGPSPlus::customElts</definition>
+        <argsstring></argsstring>
+        <name>customElts</name>
+        <qualifiedname>TinyGPSPlus::customElts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="385" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1ad817698ca7fa61998a2cd42cee5bfbc8" prot="private" static="no" mutable="no">
+        <type><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref> *</type>
+        <definition>TinyGPSCustom* TinyGPSPlus::customCandidates</definition>
+        <argsstring></argsstring>
+        <name>customCandidates</name>
+        <qualifiedname>TinyGPSPlus::customCandidates</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="386" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a80ce0fa1f373c26c83f517c8bde3686c" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSPlus::encodedCharCount</definition>
+        <argsstring></argsstring>
+        <name>encodedCharCount</name>
+        <qualifiedname>TinyGPSPlus::encodedCharCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="390" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a2c71f75dbb81f8d1d2b3ccbbd61155da" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSPlus::sentencesWithFixCount</definition>
+        <argsstring></argsstring>
+        <name>sentencesWithFixCount</name>
+        <qualifiedname>TinyGPSPlus::sentencesWithFixCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="391" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1ac829f43b23f5d50e888034170451cb73" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSPlus::failedChecksumCount</definition>
+        <argsstring></argsstring>
+        <name>failedChecksumCount</name>
+        <qualifiedname>TinyGPSPlus::failedChecksumCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="392" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTinyGPSPlus_1a0010f4b025a85b9ee717d78d316d3365" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSPlus::passedChecksumCount</definition>
+        <argsstring></argsstring>
+        <name>passedChecksumCount</name>
+        <qualifiedname>TinyGPSPlus::passedChecksumCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="393" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classTinyGPSPlus_1aaad5bf5a2728a81e624ad2304f817772" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class</type>
+        <definition>friend class TinyGPSCustom</definition>
+        <argsstring></argsstring>
+        <name>TinyGPSCustom</name>
+        <qualifiedname>TinyGPSPlus::TinyGPSCustom</qualifiedname>
+        <param>
+          <type><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="383" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTinyGPSPlus_1a3d9173312d514abf50bd43efe6bf6af3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TinyGPSPlus::TinyGPSPlus</definition>
+        <argsstring>()</argsstring>
+        <name>TinyGPSPlus</name>
+        <qualifiedname>TinyGPSPlus::TinyGPSPlus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="327" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1ad7b78320b7e4967df17c6a27008a5154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TinyGPSPlus::encode</definition>
+        <argsstring>(char c)</argsstring>
+        <name>encode</name>
+        <qualifiedname>TinyGPSPlus::encode</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="328" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="47" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1a05c12d268eddf254a9846bc34935a73c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref> &amp;</type>
+        <definition>TinyGPSPlus &amp; TinyGPSPlus::operator&lt;&lt;</definition>
+        <argsstring>(char c)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>TinyGPSPlus::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="329" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="329" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1addfc1fdbfddfeef2774dda1be42cdd55" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSPlus::charsProcessed</definition>
+        <argsstring>() const</argsstring>
+        <name>charsProcessed</name>
+        <qualifiedname>TinyGPSPlus::charsProcessed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="354" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="354" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1a8093eef1ee9f97b5293f1048320756e3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSPlus::sentencesWithFix</definition>
+        <argsstring>() const</argsstring>
+        <name>sentencesWithFix</name>
+        <qualifiedname>TinyGPSPlus::sentencesWithFix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="358" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="358" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1af7dc415ad7cf13f01ca2eaead8a4ade2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSPlus::failedChecksum</definition>
+        <argsstring>() const</argsstring>
+        <name>failedChecksum</name>
+        <qualifiedname>TinyGPSPlus::failedChecksum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="362" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="362" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1a54c027a84bdeed40ac25bb54010d7c96" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t TinyGPSPlus::passedChecksum</definition>
+        <argsstring>() const</argsstring>
+        <name>passedChecksum</name>
+        <qualifiedname>TinyGPSPlus::passedChecksum</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="366" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="366" bodyend="368"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classTinyGPSPlus_1a9cf0da36b5237ea295b4544f4a6d2273" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>static const char * TinyGPSPlus::libraryVersion</definition>
+        <argsstring>()</argsstring>
+        <name>libraryVersion</name>
+        <qualifiedname>TinyGPSPlus::libraryVersion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="343" column="19" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="343" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1ace607cf3a6d49628e44eae1232237138" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TinyGPSPlus::distanceBetween</definition>
+        <argsstring>(double lat1, double long1, double lat2, double long2)</argsstring>
+        <name>distanceBetween</name>
+        <qualifiedname>TinyGPSPlus::distanceBetween</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>lat1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>long1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lat2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>long2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="347" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="284" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1af338c18ccf58a47659be1ffc8259541d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double TinyGPSPlus::courseTo</definition>
+        <argsstring>(double lat1, double long1, double lat2, double long2)</argsstring>
+        <name>courseTo</name>
+        <qualifiedname>TinyGPSPlus::courseTo</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>lat1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>long1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lat2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>long2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="348" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="308" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1a8c9e9444552ff85a505ffc6933dda03c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * TinyGPSPlus::cardinal</definition>
+        <argsstring>(double course)</argsstring>
+        <name>cardinal</name>
+        <qualifiedname>TinyGPSPlus::cardinal</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>course</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="349" column="19" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="326" bodyend="332"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1a06d9bf0c1f0d0963511dc05e2f121121" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t TinyGPSPlus::parseDecimal</definition>
+        <argsstring>(const char *term)</argsstring>
+        <name>parseDecimal</name>
+        <qualifiedname>TinyGPSPlus::parseDecimal</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>term</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="351" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="106" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1a00627eaffc625bf366e4c984014fbf29" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TinyGPSPlus::parseDegrees</definition>
+        <argsstring>(const char *term, RawDegrees &amp;deg)</argsstring>
+        <name>parseDegrees</name>
+        <qualifiedname>TinyGPSPlus::parseDegrees</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>term</declname>
+        </param>
+        <param>
+          <type><ref refid="structRawDegrees" kindref="compound">RawDegrees</ref> &amp;</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="352" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="126" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classTinyGPSPlus_1af9ab42b8af4a6ab0db9794b980987430" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TinyGPSPlus::insertCustom</definition>
+        <argsstring>(TinyGPSCustom *pElt, const char *sentenceName, int index)</argsstring>
+        <name>insertCustom</name>
+        <qualifiedname>TinyGPSPlus::insertCustom</qualifiedname>
+        <param>
+          <type><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref> *</type>
+          <declname>pElt</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>sentenceName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="387" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="463" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1a9f8acf18530c3b4fd2d6b2f9947e315c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int TinyGPSPlus::fromHex</definition>
+        <argsstring>(char a)</argsstring>
+        <name>fromHex</name>
+        <qualifiedname>TinyGPSPlus::fromHex</qualifiedname>
+        <param>
+          <type>char</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="396" column="5" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="92" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classTinyGPSPlus_1ad03e05d24ecc96c27814eb17adfb38db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TinyGPSPlus::endOfTermHandler</definition>
+        <argsstring>()</argsstring>
+        <name>endOfTermHandler</name>
+        <qualifiedname>TinyGPSPlus::endOfTermHandler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="397" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp" bodystart="153" bodyend="281"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>RawDegrees</label>
+        <link refid="structRawDegrees"/>
+      </node>
+      <node id="9">
+        <label>TinyGPSAltitude</label>
+        <link refid="structTinyGPSAltitude"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>TinyGPSCourse</label>
+        <link refid="structTinyGPSCourse"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>TinyGPSCustom</label>
+        <link refid="classTinyGPSCustom"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>TinyGPSDate</label>
+        <link refid="structTinyGPSDate"/>
+      </node>
+      <node id="7">
+        <label>TinyGPSDecimal</label>
+        <link refid="structTinyGPSDecimal"/>
+      </node>
+      <node id="11">
+        <label>TinyGPSHDOP</label>
+        <link refid="structTinyGPSHDOP"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>TinyGPSInteger</label>
+        <link refid="structTinyGPSInteger"/>
+      </node>
+      <node id="2">
+        <label>TinyGPSLocation</label>
+        <link refid="structTinyGPSLocation"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>rawLatData</edgelabel>
+          <edgelabel>rawLngData</edgelabel>
+          <edgelabel>rawNewLatData</edgelabel>
+          <edgelabel>rawNewLngData</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>TinyGPSPlus</label>
+        <link refid="classTinyGPSPlus"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>location</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>date</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>time</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>speed</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>course</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>altitude</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>satellites</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>hdop</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>customCandidates</edgelabel>
+          <edgelabel>customElts</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>TinyGPSSpeed</label>
+        <link refid="structTinyGPSSpeed"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>TinyGPSTime</label>
+        <link refid="structTinyGPSTime"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="325" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="325" bodyend="398"/>
+    <listofallmembers>
+      <member refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>altitude</name></member>
+      <member refid="classTinyGPSPlus_1a8c9e9444552ff85a505ffc6933dda03c" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>cardinal</name></member>
+      <member refid="classTinyGPSPlus_1addfc1fdbfddfeef2774dda1be42cdd55" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>charsProcessed</name></member>
+      <member refid="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>course</name></member>
+      <member refid="classTinyGPSPlus_1af338c18ccf58a47659be1ffc8259541d" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>courseTo</name></member>
+      <member refid="classTinyGPSPlus_1a8b89eadf418a22fdaf2c7520f7b084a3" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>curSentenceType</name></member>
+      <member refid="classTinyGPSPlus_1a5688c9f32b16fab9433f0fde869d0e89" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>curTermNumber</name></member>
+      <member refid="classTinyGPSPlus_1a2b12aee8c9a1f550ee09b74a9b4ae570" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>curTermOffset</name></member>
+      <member refid="classTinyGPSPlus_1ad817698ca7fa61998a2cd42cee5bfbc8" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>customCandidates</name></member>
+      <member refid="classTinyGPSPlus_1a814ec9664ba8f1b28870342e5308e2cd" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>customElts</name></member>
+      <member refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>date</name></member>
+      <member refid="classTinyGPSPlus_1ace607cf3a6d49628e44eae1232237138" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>distanceBetween</name></member>
+      <member refid="classTinyGPSPlus_1ad7b78320b7e4967df17c6a27008a5154" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>encode</name></member>
+      <member refid="classTinyGPSPlus_1a80ce0fa1f373c26c83f517c8bde3686c" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>encodedCharCount</name></member>
+      <member refid="classTinyGPSPlus_1ad03e05d24ecc96c27814eb17adfb38db" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>endOfTermHandler</name></member>
+      <member refid="classTinyGPSPlus_1af7dc415ad7cf13f01ca2eaead8a4ade2" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>failedChecksum</name></member>
+      <member refid="classTinyGPSPlus_1ac829f43b23f5d50e888034170451cb73" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>failedChecksumCount</name></member>
+      <member refid="classTinyGPSPlus_1a9f8acf18530c3b4fd2d6b2f9947e315c" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>fromHex</name></member>
+      <member refid="classTinyGPSPlus_1abebf02c0d9aa523c0d0df57c207261b6a21da219c3e59be9c2ce2b0beff76918f" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>GPS_SENTENCE_GPGGA</name></member>
+      <member refid="classTinyGPSPlus_1abebf02c0d9aa523c0d0df57c207261b6af9076c9ba9a752d528726536899f7dbe" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>GPS_SENTENCE_GPRMC</name></member>
+      <member refid="classTinyGPSPlus_1abebf02c0d9aa523c0d0df57c207261b6a51c5c85d67cfa4fdd6865104564a89aa" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>GPS_SENTENCE_OTHER</name></member>
+      <member refid="classTinyGPSPlus_1a0bb6a7eb2d0261095911d71c8c067546" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>hdop</name></member>
+      <member refid="classTinyGPSPlus_1af9ab42b8af4a6ab0db9794b980987430" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>insertCustom</name></member>
+      <member refid="classTinyGPSPlus_1a1b00b1bf055b0965698f9e747da3b03a" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>isChecksumTerm</name></member>
+      <member refid="classTinyGPSPlus_1a9cf0da36b5237ea295b4544f4a6d2273" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>libraryVersion</name></member>
+      <member refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>location</name></member>
+      <member refid="classTinyGPSPlus_1a05c12d268eddf254a9846bc34935a73c" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classTinyGPSPlus_1adfe5e8fc602e2777c6df87fb212b1ab6" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>parity</name></member>
+      <member refid="classTinyGPSPlus_1a06d9bf0c1f0d0963511dc05e2f121121" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>parseDecimal</name></member>
+      <member refid="classTinyGPSPlus_1a00627eaffc625bf366e4c984014fbf29" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>parseDegrees</name></member>
+      <member refid="classTinyGPSPlus_1a54c027a84bdeed40ac25bb54010d7c96" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>passedChecksum</name></member>
+      <member refid="classTinyGPSPlus_1a0010f4b025a85b9ee717d78d316d3365" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>passedChecksumCount</name></member>
+      <member refid="classTinyGPSPlus_1a5fb47066d1d03f4bb5853529053aab48" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>satellites</name></member>
+      <member refid="classTinyGPSPlus_1af5fbeb1e2a1cebb044079e4799a8be55" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>sentenceHasFix</name></member>
+      <member refid="classTinyGPSPlus_1a8093eef1ee9f97b5293f1048320756e3" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>sentencesWithFix</name></member>
+      <member refid="classTinyGPSPlus_1a2c71f75dbb81f8d1d2b3ccbbd61155da" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>sentencesWithFixCount</name></member>
+      <member refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>speed</name></member>
+      <member refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>term</name></member>
+      <member refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>time</name></member>
+      <member refid="classTinyGPSPlus_1aaad5bf5a2728a81e624ad2304f817772" prot="private" virt="non-virtual"><scope>TinyGPSPlus</scope><name>TinyGPSCustom</name></member>
+      <member refid="classTinyGPSPlus_1a3d9173312d514abf50bd43efe6bf6af3" prot="public" virt="non-virtual"><scope>TinyGPSPlus</scope><name>TinyGPSPlus</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Status_8cpp" kind="file" language="C++">
+    <compoundname>Status.cpp</compoundname>
+    <includes refid="Status_8hpp" local="yes">Status.hpp</includes>
+    <incdepgraph>
+      <node id="11">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="7">
+        <label>Adafruit_BMP085_U.h</label>
+        <link refid="Adafruit__BMP085__U_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Adafruit_Sensor.h</label>
+        <link refid="Adafruit__Sensor_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../Drivers/BMP/BMP.hpp</label>
+        <link refid="BMP_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>../Drivers/GPS/GPS.hpp</label>
+        <link refid="GPS_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>TinyGPS++.h</label>
+        <link refid="TinyGPS_09_09_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>../Drivers/SERVO/Servo.hpp</label>
+        <link refid="Servo_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="22">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="19">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="18">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp</label>
+        <link refid="Status_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="15">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="17">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="16">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="12">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Arduino.h</label>
+      </node>
+      <node id="5">
+        <label>SPI.h</label>
+      </node>
+      <node id="24">
+        <label>SoftwareSerial.h</label>
+      </node>
+      <node id="8">
+        <label>WProgram.h</label>
+      </node>
+      <node id="6">
+        <label>Wire.h</label>
+      </node>
+      <node id="26">
+        <label>limits.h</label>
+      </node>
+      <node id="10">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Status_8hpp" kindref="compound">Status.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatus_1aaebebdc0edd540e9d20e148d9bb49418" kindref="member">Status::CheckSensors</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a1a8e6077ce7043d7dd948480e196554f" kindref="member">Status::CheckRising</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if(bmp.GetAltitude()<sp/>&gt;<sp/>100)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Rising<sp/>=<sp/>TRUE;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DEBUG_PRINT(F(&quot;Rising&quot;));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(<ref refid="BMP_8hpp_1a71587ac8f039760da14d2d3fffd8f6d2" kindref="member">bmp</ref>.<ref refid="classBMP_1abb853b0b1aa87b4c638460853cd65d0e" kindref="member">GetAltitude</ref>()<sp/>&gt;<sp/>500)<sp/>or<sp/>(<ref refid="HAB-SEDS-TTU_8ino_1a732b543a18bd3449ed1049120b68c932" kindref="member">gps</ref>.<ref refid="classGPS_1a4a04e77b0eaf79bfd6e4e7dddacfb498" kindref="member">GetAltitude</ref>()<sp/>&gt;<sp/>500)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatus_1ac6a4ec6f9dcf7c5b67866071ce46a5b9" kindref="member">Rising</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatus_1a0c8ca57db11fecd43b288566d98a54a2" kindref="member">Launched</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;Rising&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatus_1a93365e7591ad69f078462216b1091d7c" kindref="member">TimeSinceLaunch</ref><sp/>=<sp/>millis()<sp/>+<sp/>(<ref refid="ProjectConfig_8hpp_1a2e8dc5bb18c6d4fd76afdb679b58a79b" kindref="member">SERVO_CUT_TIMEOUT</ref><sp/>*<sp/>1000L);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a932b1ca89268c7fd06e712d996551f89" kindref="member">Status::CheckFalling</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if(Rising)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if(bmp.GetAltitude()<sp/>&lt;<sp/>(bmp.GetMaxAltitude()<sp/>-<sp/>100)<sp/>)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Falling<sp/>=<sp/>TRUE;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DEBUG_PRINT(F(&quot;Falling&quot;));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classStatus_1ac6a4ec6f9dcf7c5b67866071ce46a5b9" kindref="member">Rising</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(<ref refid="BMP_8hpp_1a71587ac8f039760da14d2d3fffd8f6d2" kindref="member">bmp</ref>.<ref refid="classBMP_1abb853b0b1aa87b4c638460853cd65d0e" kindref="member">GetAltitude</ref>()<sp/>&lt;<sp/>(<ref refid="BMP_8hpp_1a71587ac8f039760da14d2d3fffd8f6d2" kindref="member">bmp</ref>.<ref refid="classBMP_1ac9427ce729a014d2bdc968d80d28adbe" kindref="member">GetMaxAltitude</ref>()<sp/>-<sp/>100))<sp/>)<sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatus_1a98ee7d99f0d2f6d684a290fc2e56b459" kindref="member">Falling</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DEBUG_PRINT(F(&quot;Falling&quot;));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(<ref refid="HAB-SEDS-TTU_8ino_1a732b543a18bd3449ed1049120b68c932" kindref="member">gps</ref>.<ref refid="classGPS_1a4a04e77b0eaf79bfd6e4e7dddacfb498" kindref="member">GetAltitude</ref>()<sp/>&lt;<sp/>(<ref refid="HAB-SEDS-TTU_8ino_1a732b543a18bd3449ed1049120b68c932" kindref="member">gps</ref>.<ref refid="classGPS_1a109ce8baa4e1fba4b89e862f52be5258" kindref="member">GetMaxAltitude</ref>()<sp/>-<sp/>100))<sp/>)<sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatus_1a98ee7d99f0d2f6d684a290fc2e56b459" kindref="member">Falling</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DEBUG_PRINT(F(&quot;Falling&quot;));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a1dd40d6f6d6531d36598076beea7aac7" kindref="member">Status::CheckLanded</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classStatus_1a98ee7d99f0d2f6d684a290fc2e56b459" kindref="member">Falling</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(<ref refid="BMP_8hpp_1a71587ac8f039760da14d2d3fffd8f6d2" kindref="member">bmp</ref>.<ref refid="classBMP_1abb853b0b1aa87b4c638460853cd65d0e" kindref="member">GetAltitude</ref>()<sp/>&lt;<sp/>1000)<sp/>or<sp/>(<ref refid="HAB-SEDS-TTU_8ino_1a732b543a18bd3449ed1049120b68c932" kindref="member">gps</ref>.<ref refid="classGPS_1a4a04e77b0eaf79bfd6e4e7dddacfb498" kindref="member">GetAltitude</ref>()<sp/>&lt;<sp/>1000)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatus_1af50272938fd3cd0352a05ad62f7c29e4" kindref="member">Landed</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DEBUG_PRINT(F(&quot;Landed&quot;));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatus_1aa0877c337ae500fa3011a162a1be2137" kindref="member">Status::CheckServo</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="classStatus_1ac6a4ec6f9dcf7c5b67866071ce46a5b9" kindref="member">Rising</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>(<ref refid="BMP_8hpp_1a71587ac8f039760da14d2d3fffd8f6d2" kindref="member">bmp</ref>.<ref refid="classBMP_1abb853b0b1aa87b4c638460853cd65d0e" kindref="member">GetAltitude</ref>()<sp/>&gt;<sp/><ref refid="ProjectConfig_8hpp_1aa96db7994b4400df30a787bef3e167da" kindref="member">SERVO_CUT_ALT</ref>)<sp/>and<sp/>(<ref refid="HAB-SEDS-TTU_8ino_1a732b543a18bd3449ed1049120b68c932" kindref="member">gps</ref>.<ref refid="classGPS_1a4a04e77b0eaf79bfd6e4e7dddacfb498" kindref="member">GetAltitude</ref>()<sp/>&gt;<sp/><ref refid="ProjectConfig_8hpp_1aa96db7994b4400df30a787bef3e167da" kindref="member">SERVO_CUT_ALT</ref>)<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatus_1a1427f1e9372bc557a6c9e3e5b4d25dbe" kindref="member">ServoStatus</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1ad76d1750a6cdeebd506bfcd6752554d2" kindref="member">ON</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HAB-SEDS-TTU_8ino_1a3faf44e95d31c018178b3318756a5f2e" kindref="member">CutServo</ref>.<ref refid="classServo_1a49ac4edc49bfd90f2522e6ff4b08a7b8" kindref="member">Servo_Status</ref>(<ref refid="HardwareUtilities_8h_1ad76d1750a6cdeebd506bfcd6752554d2" kindref="member">ON</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(millis()<sp/>&gt;<sp/><ref refid="classStatus_1a93365e7591ad69f078462216b1091d7c" kindref="member">TimeSinceLaunch</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStatus_1a1427f1e9372bc557a6c9e3e5b4d25dbe" kindref="member">ServoStatus</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1ad76d1750a6cdeebd506bfcd6752554d2" kindref="member">ON</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="HAB-SEDS-TTU_8ino_1a3faf44e95d31c018178b3318756a5f2e" kindref="member">CutServo</ref>.<ref refid="classServo_1a49ac4edc49bfd90f2522e6ff4b08a7b8" kindref="member">Servo_Status</ref>(<ref refid="HardwareUtilities_8h_1ad76d1750a6cdeebd506bfcd6752554d2" kindref="member">ON</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatus_1af9976c565c17dd9c3bfc9d2cd3fa37da" kindref="member">Status::CheckStatus</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStatus_1aaebebdc0edd540e9d20e148d9bb49418" kindref="member">CheckSensors</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStatus_1a1a8e6077ce7043d7dd948480e196554f" kindref="member">CheckRising</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStatus_1a932b1ca89268c7fd06e712d996551f89" kindref="member">CheckFalling</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStatus_1a1dd40d6f6d6531d36598076beea7aac7" kindref="member">CheckLanded</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStatus_1ab5bc2a572269fef3533114e5390e948e" kindref="member">CheckAPRS</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classStatus_1ab5bc2a572269fef3533114e5390e948e" kindref="member">Status::CheckAPRS</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a7031ddc73047926323e782290029baa8" kindref="member">Status::IsValidBMP</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a1d3e44bc051e7606d1db5a1984b6974f" kindref="member">ValidBMP</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classStatus_1ac0bea2e39f830f10c1c0caf7061473db" kindref="member">Status::IsValidSD</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStatus_1af0ef38733daabe0d5010472a2585a663" kindref="member">ValidSD</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a11cf5c02770e7892cc0fbf7ebd3b20e9" kindref="member">Status::IsLaunched</ref>()<sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a0c8ca57db11fecd43b288566d98a54a2" kindref="member">Launched</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a8402d96fff53604a534819b765781006" kindref="member">Status::IsRising</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStatus_1ac6a4ec6f9dcf7c5b67866071ce46a5b9" kindref="member">Rising</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a4f8938037c5cbf0660e3a26e23de2130" kindref="member">Status::IsFalling</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a98ee7d99f0d2f6d684a290fc2e56b459" kindref="member">Falling</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classStatus_1afecee878fcb1fc6ae1250060e51dc537" kindref="member">Status::IsLanded</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStatus_1af50272938fd3cd0352a05ad62f7c29e4" kindref="member">Landed</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a20f2987bfc874f92bf9c363f11ae2351" kindref="member">Status::IsServoOn</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classStatus_1a1427f1e9372bc557a6c9e3e5b4d25dbe" kindref="member">ServoStatus</ref>;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp"/>
+  </compounddef>
+</doxygen>

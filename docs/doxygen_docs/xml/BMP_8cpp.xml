@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="BMP_8cpp" kind="file" language="C++">
+    <compoundname>BMP.cpp</compoundname>
+    <includes refid="BMP_8hpp" local="yes">BMP.hpp</includes>
+    <incdepgraph>
+      <node id="10">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="6">
+        <label>Adafruit_BMP085_U.h</label>
+        <link refid="Adafruit__BMP085__U_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Adafruit_Sensor.h</label>
+        <link refid="Adafruit__Sensor_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.cpp</label>
+        <link refid="BMP_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BMP.hpp</label>
+        <link refid="BMP_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="21">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="18">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="17">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="14">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="16">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="15">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="11">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>SPI.h</label>
+      </node>
+      <node id="7">
+        <label>WProgram.h</label>
+      </node>
+      <node id="5">
+        <label>Wire.h</label>
+      </node>
+      <node id="9">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="BMP_8hpp" kindref="compound">BMP.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a563b4743d674f34d34639fe923e3c381" kindref="member">BMP::BMP_Setup</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="classBMP_1a9bc48b1194cb4b8fbc7b386a4d98e46a" kindref="member">BMPModule</ref>.<ref refid="classAdafruit__BMP085__Unified_1a19afa291aca37fbfaa5cf02137c5777f" kindref="member">begin</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBMP_1a9c195f0a29269786d33dda94a2aaa019" kindref="member">ValidBMP</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nBMP<sp/>setup<sp/>failure&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBMP_1a9c195f0a29269786d33dda94a2aaa019" kindref="member">ValidBMP</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nBMP<sp/>setup<sp/>successful&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref><sp/>event;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBMP_1a9bc48b1194cb4b8fbc7b386a4d98e46a" kindref="member">BMPModule</ref>.<ref refid="classAdafruit__BMP085__Unified_1a75df7711caf4c3a80831cb9c9327aeff" kindref="member">getEvent</ref>(<sp/>&amp;event<sp/>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBMP_1a8c080ad9dc69278fad444c165be9d3da" kindref="member">BaselinePressure</ref><sp/>=<sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">.pressure;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;Baseline<sp/>Pressure:<sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>event.<ref refid="structsensors__event__t_1a2ec6e34e1a6cf832d85ca19066bd38f0" kindref="member">pressure</ref><sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a1a06e9b10dd9ed83da7ffed05517a4e7" kindref="member">BMP::BMP_Update</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref><sp/>bmp_event;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classBMP_1a9bc48b1194cb4b8fbc7b386a4d98e46a" kindref="member">BMPModule</ref>.<ref refid="classAdafruit__BMP085__Unified_1a75df7711caf4c3a80831cb9c9327aeff" kindref="member">getEvent</ref>(<sp/>&amp;bmp_event<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>bmp_event.<ref refid="structsensors__event__t_1a2ec6e34e1a6cf832d85ca19066bd38f0" kindref="member">pressure</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBMP_1a420757d90b9aac29eca432bed8528691" kindref="member">Pressure</ref><sp/>=<sp/>bmp_event.<ref refid="structsensors__event__t_1a2ec6e34e1a6cf832d85ca19066bd38f0" kindref="member">pressure</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nBMP<sp/>Pressure:<sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classBMP_1a420757d90b9aac29eca432bed8528691" kindref="member">Pressure</ref><sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;<sp/>hPa&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Calculating<sp/>altitude<sp/>with<sp/>reasonable<sp/>accuracy<sp/>requires<sp/>pressure<sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>sea<sp/>level<sp/>pressure<sp/>for<sp/>your<sp/>position<sp/>at<sp/>the<sp/>moment<sp/>the<sp/>data<sp/>is<sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>converted,<sp/>as<sp/>well<sp/>as<sp/>the<sp/>ambient<sp/>temperature<sp/>in<sp/>degrees<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Celsius.<sp/>If<sp/>you<sp/>don&apos;t<sp/>have<sp/>these<sp/>values,<sp/>a<sp/>&apos;generic&apos;<sp/>value<sp/>of<sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>1013.25<sp/>hPa<sp/>can<sp/>be<sp/>used<sp/>(defined<sp/>as<sp/>SENSORS_PRESSURE_SEALEVELHPA<sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>in<sp/>sensors.h),<sp/>but<sp/>this<sp/>isn&apos;t<sp/>ideal<sp/>and<sp/>will<sp/>give<sp/>variable<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>results<sp/>from<sp/>one<sp/>day<sp/>to<sp/>the<sp/>next.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>First<sp/>we<sp/>get<sp/>the<sp/>current<sp/>temperature<sp/>from<sp/>the<sp/>BMP085<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBMP_1a9bc48b1194cb4b8fbc7b386a4d98e46a" kindref="member">BMPModule</ref>.<ref refid="classAdafruit__BMP085__Unified_1a4d74250c9406e7360e1a8b4f13610e8d" kindref="member">getTemperature</ref>(<sp/>&amp;<ref refid="classBMP_1a86104cc1a0f79e71f96ab12cf94038c3" kindref="member">Temperature</ref><sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nBMP<sp/>Temperature:<sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classBMP_1a86104cc1a0f79e71f96ab12cf94038c3" kindref="member">Temperature</ref><sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;<sp/>C&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Then<sp/>convert<sp/>the<sp/>atmospheric<sp/>pressure,<sp/>SLP<sp/>and<sp/>temp<sp/>to<sp/>altitude<sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//float<sp/>seaLevelPressure<sp/>=<sp/>SENSORS_PRESSURE_SEALEVELHPA;<sp/>//uncomment<sp/>to<sp/>use<sp/>generic<sp/>sea<sp/>level<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBMP_1a6d818a95235fd5465305d5ef1e146498" kindref="member">Altitude</ref><sp/>=<sp/><ref refid="classBMP_1a9bc48b1194cb4b8fbc7b386a4d98e46a" kindref="member">BMPModule</ref>.<ref refid="classAdafruit__BMP085__Unified_1a899d8915f530ad7be9e2cab86b26d86f" kindref="member">pressureToAltitude</ref>(<sp/><ref refid="classBMP_1a8c080ad9dc69278fad444c165be9d3da" kindref="member">BaselinePressure</ref>,<sp/>bmp_event.<ref refid="structsensors__event__t_1a2ec6e34e1a6cf832d85ca19066bd38f0" kindref="member">pressure</ref>,<sp/><ref refid="classBMP_1a86104cc1a0f79e71f96ab12cf94038c3" kindref="member">Temperature</ref><sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classBMP_1a6d818a95235fd5465305d5ef1e146498" kindref="member">Altitude</ref><sp/>&gt;<sp/><ref refid="classBMP_1a1c6d4b250a1bd1dd31bd1f5330e4992c" kindref="member">MaxAltitude</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBMP_1a1c6d4b250a1bd1dd31bd1f5330e4992c" kindref="member">MaxAltitude</ref><sp/>=<sp/><ref refid="classBMP_1a6d818a95235fd5465305d5ef1e146498" kindref="member">Altitude</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nBMP<sp/>Altitude:<sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classBMP_1a6d818a95235fd5465305d5ef1e146498" kindref="member">Altitude</ref><sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;<sp/>m&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nBMP<sp/>MaxAltitude:<sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classBMP_1a1c6d4b250a1bd1dd31bd1f5330e4992c" kindref="member">MaxAltitude</ref><sp/>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;<sp/>m\n&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a93e67509c6d5aad748555eb4f0f96851" kindref="member">BMP::IsValidBMP</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a9c195f0a29269786d33dda94a2aaa019" kindref="member">ValidBMP</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a9d24015596bf2f2582b17b4881393654" kindref="member">BMP::GetBaselinePressure</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a8c080ad9dc69278fad444c165be9d3da" kindref="member">BaselinePressure</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classBMP_1af6fa3539a2d75570f242bcfa21f370e5" kindref="member">BMP::GetPressure</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a420757d90b9aac29eca432bed8528691" kindref="member">Pressure</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classBMP_1ad7dc380e252896f27ee7c05b2acc9534" kindref="member">BMP::GetTemperature</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a86104cc1a0f79e71f96ab12cf94038c3" kindref="member">Temperature</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classBMP_1abb853b0b1aa87b4c638460853cd65d0e" kindref="member">BMP::GetAltitude</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a6d818a95235fd5465305d5ef1e146498" kindref="member">Altitude</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classBMP_1ac9427ce729a014d2bdc968d80d28adbe" kindref="member">BMP::GetMaxAltitude</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classBMP_1a1c6d4b250a1bd1dd31bd1f5330e4992c" kindref="member">MaxAltitude</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.cpp"/>
+  </compounddef>
+</doxygen>

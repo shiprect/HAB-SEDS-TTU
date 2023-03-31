@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="RadioHead_2RHGenericSPI_8h" kind="file" language="C++">
+    <compoundname>RHGenericSPI.h</compoundname>
+    <includes refid="RadioHead_2RadioHead_8h" local="no">RadioHead.h</includes>
+    <includedby refid="RadioHead_2RHGenericSPI_8cpp" local="no">/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.cpp</includedby>
+    <includedby refid="RadioHead_2RHHardwareSPI_8h" local="no">/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h</label>
+        <link refid="RadioHead_2RHGenericSPI_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RadioHead.h</label>
+        <link refid="RadioHead_2RadioHead_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.cpp</label>
+        <link refid="RadioHead_2RHGenericSPI_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h</label>
+        <link refid="RadioHead_2RHGenericSPI_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.cpp</label>
+        <link refid="RadioHead_2RHHardwareSPI_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.h</label>
+        <link refid="RadioHead_2RHHardwareSPI_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.cpp</label>
+        <link refid="RadioHead_2RHSPIDriver_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h</label>
+        <link refid="RadioHead_2RHSPIDriver_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.cpp</label>
+        <link refid="RadioHead_2RH__RF95_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h</label>
+        <link refid="RadioHead_2RH__RF95_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRHGenericSPI" prot="public">RHGenericSPI</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>RHGenericSPI.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Mike<sp/>McCauley<sp/>(mikem@airspayce.com)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2011<sp/>Mike<sp/>McCauley</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Contributed<sp/>by<sp/>Joanna<sp/>Rutkowska</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>RHGenericSPI.h,v<sp/>1.7<sp/>2014/04/14<sp/>08:37:11<sp/>mikem<sp/>Exp<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RHGenericSPI_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RHGenericSPI_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="RadioHead_2RadioHead_8h" kindref="compound">RadioHead.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" kindref="member">DataMode0</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fad163c5586916a72c503cbc802278807f" kindref="member">DataMode1</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fafee3778c48affb675976408e3d703412" kindref="member">DataMode2</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fa7b94169eadd026d993076e462db5e3fd" kindref="member">DataMode3</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">DataMode</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" kindref="member">Frequency1MHz</ref><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba1cf7ded513364cea33b664367559a7ac" kindref="member">Frequency2MHz</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba3f551d8a71f11a09286f070d6dbbfa16" kindref="member">Frequency4MHz</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bac47ec8bfc0d0940c51c953ec6e513a2c" kindref="member">Frequency8MHz</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba96d32b348eeedee70c3e98e3bec00a64" kindref="member">Frequency16MHz</ref><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">Frequency</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" kindref="member">BitOrderMSBFirst</ref><sp/>=<sp/>0,<sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380a367543a6b63bab953acaa74628657d48" kindref="member">BitOrderLSBFirst</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">BitOrder</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a7d9a16c339ff396e259672afd226742f" kindref="member">RHGenericSPI</ref>(<ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">Frequency</ref><sp/>frequency<sp/>=<sp/><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" kindref="member">Frequency1MHz</ref>,<sp/><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">BitOrder</ref><sp/>bitOrder<sp/>=<sp/><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" kindref="member">BitOrderMSBFirst</ref>,<sp/><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">DataMode</ref><sp/>dataMode<sp/>=<sp/><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" kindref="member">DataMode0</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer</ref>(uint8_t<sp/>data)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHGenericSPI_1ad790927c415639388bbe6a5fe99c4e13" kindref="member">attachInterrupt</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHGenericSPI_1afe5edb725cf6b8110464a72b1e75eddc" kindref="member">detachInterrupt</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHGenericSPI_1ab2e3de040be2bd97400a993af114d26a" kindref="member">begin</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHGenericSPI_1a06b2066e7d97941fbb70c854821fadb3" kindref="member">end</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHGenericSPI_1a76fa1e24aa0f686e66fa71f95ee7c0b4" kindref="member">setBitOrder</ref>(<ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">BitOrder</ref><sp/>bitOrder);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHGenericSPI_1a829a6400bab6a3d09b16d82d2c940f22" kindref="member">setDataMode</ref>(<ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">DataMode</ref><sp/>dataMode);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHGenericSPI_1a9eecf2a206d0c6f42ca904c8f4374e13" kindref="member">setFrequency</ref>(<ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">Frequency</ref><sp/>frequency);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">Frequency</ref><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a0fb8976ef154c748e0d222f824e24ef6" kindref="member">_frequency</ref>;<sp/></highlight><highlight class="comment">//<sp/>Bus<sp/>frequency,<sp/>one<sp/>of<sp/>RHGenericSPI::Frequency</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">BitOrder</ref><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1aaf44bdc591031120f4fc90673aedf1c6" kindref="member">_bitOrder</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">DataMode</ref><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI_1a13c2f2a7f75c5563125b2a697ce8b14b" kindref="member">_dataMode</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="soln_2problem3_8py" kind="file" language="Python">
+    <compoundname>problem3.py</compoundname>
+    <innernamespace refid="namespaceproblem3">problem3</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>matplotlib.pyplot<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>plt</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&apos;font.family&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;serif&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&apos;font.serif&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Times<sp/>New<sp/>Roman&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&quot;mathtext.fontset&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cm&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem3_1a5ffbaebb041a8ae59d7eb2a8ca1fc76e" kindref="member">dct</ref>(x):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>N<sp/>=<sp/>len(x)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>np.arange(N)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">basis(k):</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>k<sp/>!=<sp/>0:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.cos(np.pi/N*(n<sp/>+<sp/>0.5)*k)*np.sqrt(2/N)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.ones(N)/np.sqrt(N)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>X<sp/>=<sp/>np.zeros(N)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>k<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>n:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X[k]<sp/>=<sp/>x.dot(basis(k))</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>X</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem3_1a4be1977b749b3b23324e3824ce6a618a" kindref="member">dft</ref>(x):</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>N<sp/>=<sp/>len(x)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>np.arange(N)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">basis(k):</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.sqrt(1/N)*np.exp(2j*np.pi*k*n/N)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>X<sp/>=<sp/>np.zeros(N,<sp/>dtype=np.complex128)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>k<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>n:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X[k]<sp/>=<sp/>x.dot(basis(k))</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>X</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem3_1a0e7d30df2d6721a953696ac23a7c256f" kindref="member">main</ref>():</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>N<sp/>=<sp/>8</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>np.arange(N)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/>0.1*n</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>X_c<sp/>=<sp/><ref refid="namespaceproblem3_1a5ffbaebb041a8ae59d7eb2a8ca1fc76e" kindref="member">dct</ref>(x)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>X_f<sp/>=<sp/><ref refid="namespaceproblem3_1a4be1977b749b3b23324e3824ce6a618a" kindref="member">dft</ref>(x)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#plt.figure()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#plt.stem(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.figure()</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.stem(abs(X_c))</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.xlim(-0.25,<sp/>N-0.75)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.ylim(0,<sp/>1.1)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.xlabel(</highlight><highlight class="stringliteral">r&apos;$k$<sp/>(frequency<sp/>bin)&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.ylabel(</highlight><highlight class="stringliteral">r&apos;$|X_c[k]|$<sp/>(V/$\sqrt{\operatorname{bin}}$)&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.grid()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.title(</highlight><highlight class="stringliteral">&apos;DCT&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.tight_layout()</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.savefig(</highlight><highlight class="stringliteral">&apos;problem3_dct.pdf&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.figure()</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.stem(abs(X_f))</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.xlim(-0.25,<sp/>N-0.75)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.ylim(0,<sp/>1.1)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.xlabel(</highlight><highlight class="stringliteral">r&apos;$k$<sp/>(frequency<sp/>bin)&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.ylabel(</highlight><highlight class="stringliteral">r&apos;$|X_f[k]|$<sp/>(V/$\sqrt{\operatorname{bin}}$)&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.grid()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.title(</highlight><highlight class="stringliteral">&apos;DFT&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.tight_layout()</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.savefig(</highlight><highlight class="stringliteral">&apos;problem3_dft.pdf&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.show()</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceproblem3_1a0e7d30df2d6721a953696ac23a7c256f" kindref="member">main</ref>()</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/ece6040/homework/hw2/soln/problem3.py"/>
+  </compounddef>
+</doxygen>

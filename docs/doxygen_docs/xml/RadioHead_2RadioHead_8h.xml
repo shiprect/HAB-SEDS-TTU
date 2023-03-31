@@ -1,0 +1,680 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="RadioHead_2RadioHead_8h" kind="file" language="C++">
+    <compoundname>RadioHead.h</compoundname>
+    <includedby refid="RadioHead_2RHGenericDriver_8h" local="no">/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h</includedby>
+    <includedby refid="RadioHead_2RHGenericSPI_8h" local="no">/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.cpp</label>
+        <link refid="RadioHead_2RHGenericDriver_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h</label>
+        <link refid="RadioHead_2RHGenericDriver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.cpp</label>
+        <link refid="RadioHead_2RHGenericSPI_8cpp"/>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h</label>
+        <link refid="RadioHead_2RHGenericSPI_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.cpp</label>
+        <link refid="RadioHead_2RHHardwareSPI_8cpp"/>
+      </node>
+      <node id="10">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.h</label>
+        <link refid="RadioHead_2RHHardwareSPI_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.cpp</label>
+        <link refid="RadioHead_2RHSPIDriver_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h</label>
+        <link refid="RadioHead_2RHSPIDriver_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.cpp</label>
+        <link refid="RadioHead_2RH__RF95_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h</label>
+        <link refid="RadioHead_2RH__RF95_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h</label>
+        <link refid="RadioHead_2RadioHead_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1aaf14fb1378e9e881b2958d23eb755244" prot="public" static="no">
+        <name>RH_VERSION_MAJOR</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="664" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="664" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1ae5c5225ca31ae2c0d95713ff2b7ec288" prot="public" static="no">
+        <name>RH_VERSION_MINOR</name>
+        <initializer>59</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="665" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="665" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a20a2a99139eaa483af3c6e0db00f081a" prot="public" static="no">
+        <name>RH_PLATFORM_ARDUINO</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="668" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1aedf599cdc6982604a3d7238b2960e46f" prot="public" static="no">
+        <name>RH_PLATFORM_MSP430</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="669" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a20afd7dc592f0aa19fad92fcdde8953e" prot="public" static="no">
+        <name>RH_PLATFORM_STM32</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="670" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1adc8abb9e824a121a2669b3be65714801" prot="public" static="no">
+        <name>RH_PLATFORM_GENERIC_AVR8</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="671" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="671" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a14e1722ee06535009414a47e25884a82" prot="public" static="no">
+        <name>RH_PLATFORM_UNO32</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="672" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="672" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a46e83ab5b1e63a1cfd92470edd631f21" prot="public" static="no">
+        <name>RH_PLATFORM_UNIX</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="673" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a74834948b910f78b35be31cb9a8afb1a" prot="public" static="no">
+        <name>RH_PLATFORM_STM32STD</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="674" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="674" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a0c9ab1498b61547d659658f7096aba4a" prot="public" static="no">
+        <name>RH_PLATFORM_STM32F4_HAL</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="675" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a2ac10cac6696d5d0f3faa95e8ed8d079" prot="public" static="no">
+        <name>RH_PLATFORM_RASPI</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="676" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="676" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1aae4eceb744ad0072ac59c4d620ccc560" prot="public" static="no">
+        <name>RH_PLATFORM_NRF51</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="677" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="677" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a9db03131f6a558f185dcd948435c8546" prot="public" static="no">
+        <name>RH_PLATFORM_ESP8266</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="678" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a137d1b431df37c37d6e9f13e675bbe54" prot="public" static="no">
+        <name>RH_PLATFORM_STM32F2</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="679" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1aa9520dce209058822e09a51a99183f11" prot="public" static="no">
+        <name>RH_PLATFORM_CHIPKIT_CORE</name>
+        <initializer>13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="680" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a2c90fff0c5ce0e23e9d63e51345a039c" prot="public" static="no">
+        <name>ATOMIC_BLOCK_START</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="858" column="10" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1af6ea392035217debede073b3c864a056" prot="public" static="no">
+        <name>ATOMIC_BLOCK_END</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="859" column="10" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="859" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a50d551776c26c1579754521287f0b0f0" prot="public" static="no">
+        <name>YIELD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="872" column="11" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="872" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1ace73be9d32b9ad15d9120c47304266dc" prot="public" static="no">
+        <name>NOT_AN_INTERRUPT</name>
+        <initializer>-1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="879" column="10" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="879" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a4eeada3d193a6c489a1a146fb4ff87d5" prot="public" static="no">
+        <name>digitalPinToInterrupt</name>
+        <param><defname>p</defname></param>
+        <initializer>(p)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="913" column="11" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="913" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a88f7782e210e61586baf33b93240d905" prot="public" static="no">
+        <name>SS</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="924" column="10" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="924" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1a51799f5ebb4c7228ef7e95c247030f42" prot="public" static="no">
+        <name>htons</name>
+        <param><defname>x</defname></param>
+        <initializer>( ((x)&lt;&lt;8) | (((x)&gt;&gt;8)&amp;0xFF) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="939" column="11" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="939" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1ada37feda716b4ba89cf9dba34288141d" prot="public" static="no">
+        <name>ntohs</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="RadioHead_2RadioHead_8h_1a51799f5ebb4c7228ef7e95c247030f42" kindref="member">htons</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="940" column="11" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="940" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1ae4027a6ad07f13aa12eab285a1b46019" prot="public" static="no">
+        <name>htonl</name>
+        <param><defname>x</defname></param>
+        <initializer>                   ( ((x)&lt;&lt;24 &amp; 0xFF000000UL) | \
+                   ((x)&lt;&lt; 8 &amp; 0x00FF0000UL) | \
+                   ((x)&gt;&gt; 8 &amp; 0x0000FF00UL) | \
+                   ((x)&gt;&gt;24 &amp; 0x000000FFUL) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="941" column="11" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="941" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1ac317b3e903719ba02894f1710f7f2439" prot="public" static="no">
+        <name>ntohl</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="RadioHead_2RadioHead_8h_1ae4027a6ad07f13aa12eab285a1b46019" kindref="member">htonl</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="945" column="11" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="945" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RadioHead_8h_1ae4050e2769ea54086c074bace6d6f9a5" prot="public" static="no">
+        <name>RH_BROADCAST_ADDRESS</name>
+        <initializer>0xff</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" line="960" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h" bodystart="960" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>RadioHead.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Mike<sp/>McCauley<sp/>(mikem@airspayce.com)<sp/>DO<sp/>NOT<sp/>CONTACT<sp/>THE<sp/>AUTHOR<sp/>DIRECTLY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2014<sp/>Mike<sp/>McCauley</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>RadioHead.h,v<sp/>1.55<sp/>2016/04/04<sp/>01:40:12<sp/>mikem<sp/>Exp<sp/>mikem<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="659"><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RadioHead_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RadioHead_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight></codeline>
+<codeline lineno="663"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Official<sp/>version<sp/>numbers<sp/>are<sp/>maintained<sp/>automatically<sp/>by<sp/>Makefile:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="664"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_VERSION_MAJOR<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="665"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_VERSION_MINOR<sp/>59</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="666"><highlight class="normal"></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Symbolic<sp/>names<sp/>for<sp/>currently<sp/>supported<sp/>platform<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="668"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_ARDUINO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="669"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_MSP430<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="670"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_STM32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="671"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_GENERIC_AVR8<sp/><sp/><sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="672"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_UNO32<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="673"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_UNIX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="674"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_STM32STD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="675"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_STM32F4_HAL<sp/><sp/><sp/><sp/><sp/><sp/>8<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="676"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_RASPI<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="677"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_NRF51<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="678"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_ESP8266<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="679"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_STM32F2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_PLATFORM_CHIPKIT_CORE<sp/><sp/><sp/><sp/><sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="683"><highlight class="comment">//<sp/>Select<sp/>platform<sp/>automatically,<sp/>if<sp/>possible</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="684"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RH_PLATFORM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="685"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#if<sp/>(MPIDE&gt;=150<sp/>&amp;&amp;<sp/>defined(ARDUINO))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="686"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Using<sp/>ChipKIT<sp/>Core<sp/>on<sp/>Arduino<sp/>IDE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="687"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_CHIPKIT_CORE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="688"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>defined(MPIDE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="689"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Uno32<sp/>under<sp/>old<sp/>MPIDE,<sp/>which<sp/>has<sp/>been<sp/>discontinued:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="690"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_UNO32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>defined(NRF51)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="692"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_NRF51</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="693"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>defined(ESP8266)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="694"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_ESP8266</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="695"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>defined(ARDUINO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="696"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_ARDUINO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="697"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>defined(__MSP430G2452__)<sp/>||<sp/>defined(__MSP430G2553__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="698"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_MSP430</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>defined(MCU_STM32F103RE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="700"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_STM32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="701"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>defined(STM32F2XX)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="702"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_STM32F2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>defined(USE_STDPERIPH_DRIVER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_STM32STD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="705"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>defined(RASPBERRY_PI)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_RASPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="707"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__unix__)<sp/></highlight><highlight class="comment">//<sp/>Linux</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="708"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_UNIX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__APPLE__)<sp/></highlight><highlight class="comment">//<sp/>OSX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_PLATFORM<sp/>RH_PLATFORM_UNIX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="712"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#error<sp/>Platform<sp/>not<sp/>defined!<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="713"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="714"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="715"><highlight class="normal"></highlight></codeline>
+<codeline lineno="716"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__AVR_ATtiny84__)<sp/>||<sp/>defined(__AVR_ATtiny85__)<sp/>||<sp/>defined(__AVR_ATtiny24__)<sp/>||<sp/>defined(__AVR_ATtiny44__)<sp/>||<sp/>defined(__AVR_ATtiny45__)<sp/>||<sp/>defined(__AVR_ATtinyX4__)<sp/>||<sp/>defined(__AVR_ATtinyX5__)<sp/>||<sp/>defined(__AVR_ATtiny2313__)<sp/>||<sp/>defined(__AVR_ATtiny4313__)<sp/>||<sp/>defined(__AVR_ATtinyX313__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="717"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_PLATFORM_ATTINY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="718"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"></highlight></codeline>
+<codeline lineno="721"><highlight class="comment">//<sp/>Platform<sp/>specific<sp/>headers:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="722"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_ARDUINO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="723"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#if<sp/>(ARDUINO<sp/>&gt;=<sp/>100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="724"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="725"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="726"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;wiring.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="727"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="728"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#ifdef<sp/>RH_PLATFORM_ATTINY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="729"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#warning<sp/>Arduino<sp/>TinyCore<sp/>does<sp/>not<sp/>support<sp/>hardware<sp/>SPI.<sp/>Use<sp/>software<sp/>SPI<sp/>instead.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="730"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="731"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="732"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="733"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="734"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="735"><highlight class="normal"></highlight></codeline>
+<codeline lineno="736"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_ESP8266)<sp/></highlight><highlight class="comment">//<sp/>ESP8266<sp/>processor<sp/>on<sp/>Arduino<sp/>IDE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="737"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="739"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="740"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="741"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_MSP430)<sp/></highlight><highlight class="comment">//<sp/>LaunchPad<sp/>specific</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="742"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;legacymsp430.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="743"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;Energia.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="744"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="746"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="747"><highlight class="normal"></highlight></codeline>
+<codeline lineno="748"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_UNO32<sp/>||<sp/>RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_CHIPKIT_CORE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="749"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;WProgram.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="750"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="751"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="752"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="753"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>memcpy_P<sp/>memcpy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="754"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="755"><highlight class="normal"></highlight></codeline>
+<codeline lineno="756"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_STM32)<sp/></highlight><highlight class="comment">//<sp/>Maple,<sp/>Flymaple<sp/>etc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="757"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;wirish.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="758"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="759"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="760"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;HardwareSPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="761"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Defines<sp/>which<sp/>timer<sp/>to<sp/>use<sp/>on<sp/>Maple</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="763"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>MAPLE_TIMER<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="764"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>PROGMEM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="765"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>memcpy_P<sp/>memcpy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="766"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>Serial<sp/>SerialUSB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="767"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="768"><highlight class="normal"></highlight></codeline>
+<codeline lineno="769"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_STM32F2)<sp/></highlight><highlight class="comment">//<sp/>Particle<sp/>Photon<sp/>with<sp/>firmware-develop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="770"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;stm32f2xx.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="771"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;application.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="772"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>floor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="773"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="774"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="775"><highlight class="normal"></highlight></codeline>
+<codeline lineno="776"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_STM32STD)<sp/></highlight><highlight class="comment">//<sp/>STM32<sp/>with<sp/>STM32F4xx_StdPeriph_Driver<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="777"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;stm32f4xx.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="778"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;wirish.h&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="779"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="780"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="781"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="782"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;HardwareSPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="783"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="784"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>Serial<sp/>SerialUSB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="785"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="786"><highlight class="normal"></highlight></codeline>
+<codeline lineno="787"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_GENERIC_AVR8)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="788"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;avr/io.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="789"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;avr/interrupt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="790"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;util/delay.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="791"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="792"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="793"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="794"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="795"><highlight class="normal"></highlight></codeline>
+<codeline lineno="796"><highlight class="normal"></highlight><highlight class="comment">//<sp/>For<sp/>Steve<sp/>Childress<sp/>port<sp/>to<sp/>ARM<sp/>M4<sp/>w/CMSIS<sp/>with<sp/>STM&apos;s<sp/>Hardware<sp/>Abstraction<sp/>lib.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="797"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>ArduinoWorkarounds.h<sp/>(not<sp/>supplied)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="798"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_STM32F4_HAL)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="799"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;ArduinoWorkarounds.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="800"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;stm32f4xx.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Also<sp/>using<sp/>ST&apos;s<sp/>CubeMX<sp/>to<sp/>generate<sp/>I/O<sp/>and<sp/>CPU<sp/>setup<sp/>source<sp/>code<sp/>for<sp/>IAR/EWARM,<sp/>not<sp/>GCC<sp/>ARM.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="801"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="802"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="803"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="804"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI<sp/></highlight><highlight class="comment">//<sp/>using<sp/>HAL<sp/>(Hardware<sp/>Abstraction<sp/>Libraries<sp/>from<sp/>ST<sp/>along<sp/>with<sp/>CMSIS,<sp/>not<sp/>arduino<sp/>libs<sp/>or<sp/>pins<sp/>concept.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="805"><highlight class="normal"></highlight></codeline>
+<codeline lineno="806"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_RASPI)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="807"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_HARDWARE_SPI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="808"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="809"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>PROGMEM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="810"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;RHutil/RasPi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="811"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="812"><highlight class="normal"><sp/></highlight><highlight class="comment">//Define<sp/>SS<sp/>for<sp/>CS0<sp/>or<sp/>pin<sp/>24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="813"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>SS<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="814"><highlight class="normal"></highlight></codeline>
+<codeline lineno="815"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_NRF51)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="816"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="817"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>PROGMEM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="818"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="819"><highlight class="normal"></highlight></codeline>
+<codeline lineno="820"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_UNIX)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="821"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Simulate<sp/>the<sp/>sketch<sp/>on<sp/>Linux<sp/>and<sp/>OSX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="822"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;RHutil/simulator.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="823"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="824"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;netinet/in.h&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>For<sp/>htons<sp/>and<sp/>friends</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="825"><highlight class="normal"></highlight></codeline>
+<codeline lineno="826"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="827"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#error<sp/>Platform<sp/>unknown!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="828"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="829"><highlight class="normal"></highlight></codeline>
+<codeline lineno="831"><highlight class="comment">//<sp/>This<sp/>is<sp/>an<sp/>attempt<sp/>to<sp/>make<sp/>a<sp/>portable<sp/>atomic<sp/>block</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="832"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_ARDUINO)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="833"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__arm__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="834"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;RHutil/atomic.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="835"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="836"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;util/atomic.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="837"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="838"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_START<sp/><sp/><sp/><sp/><sp/>ATOMIC_BLOCK(ATOMIC_RESTORESTATE)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="839"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_END<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="840"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_CHIPKIT_CORE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="841"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>UsingChipKIT<sp/>Core<sp/>on<sp/>Arduino<sp/>IDE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="842"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_START<sp/>unsigned<sp/>int<sp/>__status<sp/>=<sp/>disableInterrupts();<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="843"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_END<sp/>}<sp/>restoreInterrupts(__status);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="844"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_UNO32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="845"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Under<sp/>old<sp/>MPIDE,<sp/>which<sp/>has<sp/>been<sp/>discontinued:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="846"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;peripheral/int.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="847"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_START<sp/>unsigned<sp/>int<sp/>__status<sp/>=<sp/>INTDisableInterrupts();<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="848"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_END<sp/>}<sp/>INTRestoreInterrupts(__status);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="849"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_STM32F2)<sp/></highlight><highlight class="comment">//<sp/>Particle<sp/>Photon<sp/>with<sp/>firmware-develop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="850"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_START<sp/>{<sp/>int<sp/>__prev<sp/>=<sp/>HAL_disable_irq();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="851"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_END<sp/><sp/>HAL_enable_irq(__prev);<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="852"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_ESP8266)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="853"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>hardware/esp8266/2.0.0/cores/esp8266/Arduino.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="854"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_START<sp/>{<sp/>uint32_t<sp/>__savedPS<sp/>=<sp/>xt_rsil(15);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="855"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_END<sp/>xt_wsr_ps(__savedPS);}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="856"><highlight class="normal"></highlight><highlight class="preprocessor">#else<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="857"><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>TO<sp/>BE<sp/>DONE:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="858"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_START</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="859"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>ATOMIC_BLOCK_END</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="860"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="861"><highlight class="normal"></highlight></codeline>
+<codeline lineno="863"><highlight class="comment">//<sp/>Try<sp/>to<sp/>be<sp/>compatible<sp/>with<sp/>systems<sp/>that<sp/>support<sp/>yield()<sp/>and<sp/>multitasking</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="864"><highlight class="normal"></highlight><highlight class="comment">//<sp/>instead<sp/>of<sp/>spin-loops</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="865"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Recent<sp/>Arduino<sp/>IDE<sp/>or<sp/>Teensy<sp/>3<sp/>has<sp/>yield()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="866"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_ARDUINO<sp/>&amp;&amp;<sp/>ARDUINO<sp/>&gt;=<sp/>155<sp/>&amp;&amp;<sp/>!defined(RH_PLATFORM_ATTINY))<sp/>||<sp/>(TEENSYDUINO<sp/>&amp;&amp;<sp/>defined(__MK20DX128__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="867"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>YIELD<sp/>yield();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="868"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_ESP8266)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="869"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ESP8266<sp/>also<sp/>hash<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="870"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>YIELD<sp/>yield();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="871"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="872"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>YIELD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="873"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="874"><highlight class="normal"></highlight></codeline>
+<codeline lineno="876"><highlight class="comment">//<sp/>digitalPinToInterrupt<sp/>is<sp/>not<sp/>available<sp/>prior<sp/>to<sp/>Arduino<sp/>1.5.6<sp/>and<sp/>1.0.6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="877"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>http://arduino.cc/en/Reference/attachInterrupt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="878"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>NOT_AN_INTERRUPT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="879"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>NOT_AN_INTERRUPT<sp/>-1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="880"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="881"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>digitalPinToInterrupt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="882"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#if<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_ARDUINO)<sp/>&amp;&amp;<sp/>!defined(__arm__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="883"><highlight class="normal"></highlight></codeline>
+<codeline lineno="884"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#if<sp/>defined(__AVR_ATmega1280__)<sp/>||<sp/>defined(__AVR_ATmega2560__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="885"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Arduino<sp/>Mega,<sp/>Mega<sp/>ADK,<sp/>Mega<sp/>Pro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="886"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2-&gt;0,<sp/>3-&gt;1,<sp/>21-&gt;2,<sp/>20-&gt;3,<sp/>19-&gt;4,<sp/>18-&gt;5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="887"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>digitalPinToInterrupt(p)<sp/>((p)<sp/>==<sp/>2<sp/>?<sp/>0<sp/>:<sp/>((p)<sp/>==<sp/>3<sp/>?<sp/>1<sp/>:<sp/>((p)<sp/>&gt;=<sp/>18<sp/>&amp;&amp;<sp/>(p)<sp/>&lt;=<sp/>21<sp/>?<sp/>23<sp/>-<sp/>(p)<sp/>:<sp/>NOT_AN_INTERRUPT)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="888"><highlight class="normal"></highlight></codeline>
+<codeline lineno="889"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>defined(__AVR_ATmega1284__)<sp/>||<sp/>defined(__AVR_ATmega1284P__)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="890"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Arduino<sp/>1284<sp/>and<sp/>1284P<sp/>-<sp/>See<sp/>Manicbug<sp/>and<sp/>Optiboot</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="891"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>10-&gt;0,<sp/>11-&gt;1,<sp/>2-&gt;2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="892"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>digitalPinToInterrupt(p)<sp/>((p)<sp/>==<sp/>10<sp/>?<sp/>0<sp/>:<sp/>((p)<sp/>==<sp/>11<sp/>?<sp/>1<sp/>:<sp/>((p)<sp/>==<sp/>2<sp/>?<sp/>2<sp/>:<sp/>NOT_AN_INTERRUPT)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="893"><highlight class="normal"></highlight></codeline>
+<codeline lineno="894"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#elif<sp/>defined(__AVR_ATmega32U4__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="895"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Leonardo,<sp/>Yun,<sp/>Micro,<sp/>Pro<sp/>Micro,<sp/>Flora,<sp/>Esplora</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="896"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3-&gt;0,<sp/>2-&gt;1,<sp/>0-&gt;2,<sp/>1-&gt;3,<sp/>7-&gt;4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="897"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>digitalPinToInterrupt(p)<sp/>((p)<sp/>==<sp/>0<sp/>?<sp/>2<sp/>:<sp/>((p)<sp/>==<sp/>1<sp/>?<sp/>3<sp/>:<sp/>((p)<sp/>==<sp/>2<sp/>?<sp/>1<sp/>:<sp/>((p)<sp/>==<sp/>3<sp/>?<sp/>0<sp/>:<sp/>((p)<sp/>==<sp/>7<sp/>?<sp/>4<sp/>:<sp/>NOT_AN_INTERRUPT)))))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="898"><highlight class="normal"></highlight></codeline>
+<codeline lineno="899"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="900"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>All<sp/>other<sp/>arduino<sp/>except<sp/>Due:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="901"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Serial<sp/>Arduino,<sp/>Extreme,<sp/>NG,<sp/>BT,<sp/>Uno,<sp/>Diecimila,<sp/>Duemilanove,<sp/>Nano,<sp/>Menta,<sp/>Pro,<sp/>Mini<sp/>04,<sp/>Fio,<sp/>LilyPad,<sp/>Ethernet<sp/>etc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="902"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2-&gt;0,<sp/>3-&gt;1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="903"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/>#define<sp/>digitalPinToInterrupt(p)<sp/><sp/>((p)<sp/>==<sp/>2<sp/>?<sp/>0<sp/>:<sp/>((p)<sp/>==<sp/>3<sp/>?<sp/>1<sp/>:<sp/>NOT_AN_INTERRUPT))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="904"><highlight class="normal"></highlight></codeline>
+<codeline lineno="905"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="906"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="907"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_UNO32)<sp/>||<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_CHIPKIT_CORE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="908"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Hmmm,<sp/>this<sp/>is<sp/>correct<sp/>for<sp/>Uno32,<sp/>but<sp/>what<sp/>about<sp/>other<sp/>boards<sp/>on<sp/>ChipKIT<sp/>Core?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="909"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>digitalPinToInterrupt(p)<sp/>((p)<sp/>==<sp/>38<sp/>?<sp/>0<sp/>:<sp/>((p)<sp/>==<sp/>2<sp/>?<sp/>1<sp/>:<sp/>((p)<sp/>==<sp/>7<sp/>?<sp/>2<sp/>:<sp/>((p)<sp/>==<sp/>8<sp/>?<sp/>3<sp/>:<sp/>((p)<sp/>==<sp/>735<sp/>?<sp/>4<sp/>:<sp/>NOT_AN_INTERRUPT)))))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="910"><highlight class="normal"></highlight></codeline>
+<codeline lineno="911"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="912"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Everything<sp/>else<sp/>(including<sp/>Due<sp/>and<sp/>Teensy)<sp/>interrupt<sp/>number<sp/>the<sp/>same<sp/>as<sp/>the<sp/>interrupt<sp/>pin<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="913"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>digitalPinToInterrupt(p)<sp/>(p)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="914"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="915"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="916"><highlight class="normal"></highlight></codeline>
+<codeline lineno="917"><highlight class="normal"></highlight><highlight class="comment">//<sp/>On<sp/>some<sp/>platforms,<sp/>attachInterrupt()<sp/>takes<sp/>a<sp/>pin<sp/>number,<sp/>not<sp/>an<sp/>interrupt<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="918"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(RH_PLATFORM<sp/>==<sp/>RH_PLATFORM_ARDUINO)<sp/>&amp;&amp;<sp/>defined<sp/>(__arm__)<sp/>&amp;&amp;<sp/>(defined(ARDUINO_ARCH_SAMD)<sp/>||<sp/>defined(ARDUINO_SAM_DUE))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="919"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_ATTACHINTERRUPT_TAKES_PIN_NUMBER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="920"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="921"><highlight class="normal"></highlight></codeline>
+<codeline lineno="922"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Slave<sp/>select<sp/>pin,<sp/>some<sp/>platforms<sp/>such<sp/>as<sp/>ATTiny<sp/>do<sp/>not<sp/>define<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="923"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="924"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>SS<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="926"><highlight class="normal"></highlight></codeline>
+<codeline lineno="927"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>defs<sp/>cause<sp/>trouble<sp/>on<sp/>some<sp/>versions<sp/>of<sp/>Arduino</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="928"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>abs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="929"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>round</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="930"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="931"><highlight class="normal"></highlight></codeline>
+<codeline lineno="932"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Sigh:<sp/>there<sp/>is<sp/>no<sp/>widespread<sp/>adoption<sp/>of<sp/>htons<sp/>and<sp/>friends<sp/>in<sp/>the<sp/>base<sp/>code,<sp/>only<sp/>in<sp/>some<sp/>WiFi<sp/>headers<sp/>etc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="933"><highlight class="normal"></highlight><highlight class="comment">//<sp/>that<sp/>have<sp/>a<sp/>lot<sp/>of<sp/>excess<sp/>baggage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="934"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>RH_PLATFORM<sp/>!=<sp/>RH_PLATFORM_UNIX<sp/>&amp;&amp;<sp/>!defined(htons)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="935"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#ifndef<sp/>htons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="936"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>predefined<sp/>macros<sp/>availble<sp/>on<sp/>modern<sp/>GCC<sp/>compilers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="937"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#if<sp/><sp/><sp/>__BYTE_ORDER__<sp/>==<sp/>__ORDER_LITTLE_ENDIAN__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="938"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Atmel<sp/>processors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="939"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>htons(x)<sp/>(<sp/>((x)&lt;&lt;8)<sp/>|<sp/>(((x)&gt;&gt;8)&amp;0xFF)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="940"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>ntohs(x)<sp/>htons(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="941"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>htonl(x)<sp/>(<sp/>((x)&lt;&lt;24<sp/>&amp;<sp/>0xFF000000UL)<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="942"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x)&lt;&lt;<sp/>8<sp/>&amp;<sp/>0x00FF0000UL)<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="943"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x)&gt;&gt;<sp/>8<sp/>&amp;<sp/>0x0000FF00UL)<sp/>|<sp/>\</highlight></codeline>
+<codeline lineno="944"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((x)&gt;&gt;24<sp/>&amp;<sp/>0x000000FFUL)<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="945"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>ntohl(x)<sp/>htonl(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="946"><highlight class="normal"></highlight></codeline>
+<codeline lineno="947"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#elif<sp/>__BYTE_ORDER__<sp/>==<sp/>__ORDER_BIG_ENDIAN__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="948"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Others</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="949"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>htons(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="950"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>ntohs(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="951"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>htonl(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="952"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>ntohl(x)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="953"><highlight class="normal"></highlight></codeline>
+<codeline lineno="954"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="955"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#error<sp/>&quot;Dont<sp/>know<sp/>how<sp/>to<sp/>define<sp/>htons<sp/>and<sp/>friends<sp/>for<sp/>this<sp/>processor&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="956"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="957"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="958"><highlight class="normal"></highlight></codeline>
+<codeline lineno="959"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>address<sp/>that<sp/>indicates<sp/>a<sp/>broadcast</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="960"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_BROADCAST_ADDRESS<sp/>0xff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="961"><highlight class="normal"></highlight></codeline>
+<codeline lineno="962"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/RadioHead/RadioHead.h"/>
+  </compounddef>
+</doxygen>

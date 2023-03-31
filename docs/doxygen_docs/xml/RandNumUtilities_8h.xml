@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="RandNumUtilities_8h" kind="file" language="C++">
+    <compoundname>RandNumUtilities.h</compoundname>
+    <includedby refid="Utilities_8h" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/Utilities.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp</label>
+        <link refid="APRS_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp</label>
+        <link refid="afsk_8cpp"/>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp</label>
+        <link refid="ax25_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.cpp</label>
+        <link refid="AnalogPin_8cpp"/>
+      </node>
+      <node id="10">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp</label>
+        <link refid="AnalogPin_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.cpp</label>
+        <link refid="BMP_8cpp"/>
+      </node>
+      <node id="14">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.hpp</label>
+        <link refid="BMP_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.cpp</label>
+        <link refid="GPS_8cpp"/>
+      </node>
+      <node id="18">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.hpp</label>
+        <link refid="GPS_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp</label>
+        <link refid="PWM_8cpp"/>
+      </node>
+      <node id="20">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp</label>
+        <link refid="PWM_8hpp"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.cpp</label>
+        <link refid="Pushbutton_8cpp"/>
+      </node>
+      <node id="22">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.hpp</label>
+        <link refid="Pushbutton_8hpp"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp</label>
+        <link refid="SD__card_8cpp"/>
+      </node>
+      <node id="12">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</label>
+        <link refid="SD__card_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp</label>
+        <link refid="Servo_8cpp"/>
+      </node>
+      <node id="24">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp</label>
+        <link refid="Servo_8hpp"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp</label>
+        <link refid="Status_8cpp"/>
+      </node>
+      <node id="16">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__RANDNUMUTILS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__RANDNUMUTILS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//TODO::Fix<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>struct<sp/>PSRNG_Struct<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//**********************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/>Create<sp/>an<sp/>instance<sp/>by<sp/>calling:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/>timer<sp/>PSRNG<sp/>=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>seed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//<sp/><sp/><sp/><sp/><sp/><sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>//**********************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint32_t<sp/><sp/><sp/><sp/>__u32_PRNG_Seed;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>unsigned<sp/>uint32_t<sp/>Min;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>unsigned<sp/>uint32_t<sp/>Max;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint32_t<sp/>get_seed()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>__u32_PRNG_Seed;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bool<sp/>set_seed(uint32_t<sp/>seed)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>__u32_PRNG_Seed<sp/>=<sp/>seed;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//TODO::Add<sp/>set<sp/>seed<sp/>once<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bool<sp/>gen_seed()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//TODO::fix<sp/>seed<sp/>gen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>__u32_PRNG_Seed<sp/>=<sp/>42;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//TODO::set<sp/>seed<sp/>once<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint32_t<sp/>get_min()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>Min;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint32_t<sp/>get_max()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>Max;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bool<sp/>set_min(uint32_t<sp/>min)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Min<sp/>=<sp/>min;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>bool<sp/>set_max(uint32_t<sp/>max)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Max<sp/>=<sp/>max;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>/**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*<sp/>Returns<sp/>a<sp/>31-bit<sp/>pseudo-random<sp/>number<sp/>generated<sp/>by<sp/>the<sp/>Park-Miller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*<sp/>algorithm.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*<sp/>\note<sp/>Visit<sp/>http://www.firstpr.com.au/dsp/rand31/<sp/>for<sp/>more<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>uint32_t<sp/><sp/><sp/>get_PRNG_RandomUint32(void)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><sp/>hi,<sp/>lo;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>lo<sp/>=<sp/>16807<sp/>*<sp/>(<sp/>__u32_PRNG_Seed<sp/>*<sp/>0xFFFF<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>hi<sp/>=<sp/>16807<sp/>*<sp/>(<sp/>__u32_PRNG_Seed<sp/>&gt;&gt;<sp/>16<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>lo<sp/>+=<sp/>(hi<sp/>&amp;<sp/>0x7FFF)<sp/>&lt;&lt;<sp/>16;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>lo<sp/>+=<sp/>(hi<sp/>&gt;&gt;<sp/>15);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(lo<sp/>&gt;<sp/>0x7FFFFFFF)<sp/>lo<sp/>-=<sp/>0x7FFFFFFF;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>(__u32_PRNG_Seed<sp/>=<sp/>(uint32_t)<sp/>lo<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>//TODO::modulus<sp/>function<sp/>for<sp/>RNG<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/>/*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/>get_PRNG_RandomUint32()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>calls<sp/>HW<sp/>rand<sp/>if<sp/>available</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>else<sp/>call<sp/>software<sp/>rand</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/>/**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*<sp/>Sets<sp/>the<sp/>seed<sp/>value<sp/>in<sp/>the<sp/>pseudo-random<sp/>number<sp/>generator<sp/>(PRNG).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*<sp/>\note<sp/>The<sp/>init<sp/>code<sp/>sets<sp/>a<sp/>seed<sp/>value<sp/>for<sp/>the<sp/>PRNG.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>void<sp/>set_PRNG_U32Seed(uint32_t<sp/>u32_seed)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>__u32_PRNG_Seed<sp/>=<sp/>u32_seed;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="comment">//<sp/>/**</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>Returns<sp/>a<sp/>32-bit<sp/>pseudo-random<sp/>number.<sp/><sp/>Will<sp/>call<sp/>a<sp/>&quot;hw&quot;<sp/>RNG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>function<sp/>to<sp/>allow<sp/>for<sp/>HW<sp/>PRNG<sp/>if<sp/>available.<sp/><sp/>If<sp/>HW<sp/>is<sp/>not<sp/>present,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>the<sp/>hardware<sp/>specific<sp/>(hwxxx<sp/>or<sp/>others)<sp/>can<sp/>simply<sp/>call<sp/>back<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>the<sp/>hidden<sp/>ESOS<sp/>function<sp/>above:<sp/>__esos_GetSWRNGRandomUint32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*<sp/>\sa<sp/>__esos_setSWRNGU32Seed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>*<sp/>\sa<sp/>__esos_GetSWRNGRandomUint32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*<sp/>\note<sp/>Visit<sp/>http://www.firstpr.com.au/dsp/rand31/<sp/>for<sp/>more<sp/>information</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>inline<sp/>uint32_t<sp/><sp/><sp/><sp/>esos_GetRandomUint32(void)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>return<sp/>(<sp/>__esos_hw_PRNG_u32()<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}<sp/>//<sp/>end<sp/>esos_getRandomUint32()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/RandNumUtilities.h"/>
+  </compounddef>
+</doxygen>

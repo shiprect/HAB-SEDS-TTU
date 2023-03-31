@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="misc_8hpp" kind="file" language="C++">
+    <compoundname>misc.hpp</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">utility</includes>
+    <includes local="no">string</includes>
+    <includedby refid="tsudoku_2include_2Container_8hpp" local="yes">/home/chris/Documents/tsudoku/include/Container.hpp</includedby>
+    <includedby refid="tsudoku_2include_2Menu_8hpp" local="yes">/home/chris/Documents/tsudoku/include/Menu.hpp</includedby>
+    <includedby refid="tsudoku_8hpp" local="yes">/home/chris/Documents/tsudoku/include/tsudoku.hpp</includedby>
+    <includedby refid="misc_8cpp" local="yes">/home/chris/Documents/tsudoku/src/misc.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/tsudoku/include/Container.hpp</label>
+        <link refid="tsudoku_2include_2Container_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp</label>
+        <link refid="DifficultyMenu_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/tsudoku/include/Grid.hpp</label>
+        <link refid="tsudoku_2include_2Grid_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/chris/Documents/tsudoku/include/InGameMenu.hpp</label>
+        <link refid="tsudoku_2include_2InGameMenu_8hpp"/>
+      </node>
+      <node id="11">
+        <label>/home/chris/Documents/tsudoku/include/MainMenu.hpp</label>
+        <link refid="tsudoku_2include_2MainMenu_8hpp"/>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/tsudoku/include/Menu.hpp</label>
+        <link refid="tsudoku_2include_2Menu_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/chris/Documents/tsudoku/include/SavedGameMenu.hpp</label>
+        <link refid="tsudoku_2include_2SavedGameMenu_8hpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/tsudoku/include/Sudoku.hpp</label>
+        <link refid="Sudoku_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/chris/Documents/tsudoku/include/tsudoku.hpp</label>
+        <link refid="tsudoku_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/chris/Documents/tsudoku/src/DifficultyMenu.cpp</label>
+        <link refid="DifficultyMenu_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/tsudoku/src/Sudoku.cpp</label>
+        <link refid="Sudoku_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/tsudoku/src/main.cpp</label>
+        <link refid="tsudoku_2src_2main_8cpp"/>
+      </node>
+      <node id="15">
+        <label>/home/chris/Documents/tsudoku/src/misc.cpp</label>
+        <link refid="misc_8cpp"/>
+      </node>
+      <node id="14">
+        <label>/home/chris/Documents/tsudoku/src/tsudoku.cpp</label>
+        <link refid="tsudoku_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structSavedPuzzle" prot="public">SavedPuzzle</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="misc_8hpp_1ad72dbcf6d0153db1b8d8a58001feed83" prot="public" static="no">
+        <name>DEBUG</name>
+        <initializer>false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="10" column="9" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="misc_8hpp_1ac863338f50a6894733cdcfeef6d756d1" prot="public" static="no">
+        <name>PURE_VIRTUAL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="12" column="9" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Values</name>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a7a725f13af144bdef532d0389ba75e0d" prot="public">
+          <name>ONE</name>
+          <initializer>= &apos;1&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a0e793500a63ffa575b9b712ca3bc9851" prot="public">
+          <name>TWO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a1251fbf93888ad32fe0ae54d49bcef17" prot="public">
+          <name>THREE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a23d7ef5341c6930d19b2ecbb997977cf" prot="public">
+          <name>FOUR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a3a40d11d30db182ab8f9846aa9458bec" prot="public">
+          <name>FIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6aadffddd32c3e7497e32cd7e430c9c106" prot="public">
+          <name>SIX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a9a193f3e84352f3fbbe44f8d275a820c" prot="public">
+          <name>SEVEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a2fd39b67b424f4ea3b4c11ce3195ab8b" prot="public">
+          <name>EIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6aea09d09b793ccc4a4b5983368d18a4ab" prot="public">
+          <name>NINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6ae117e3533122c80b262257b49b21cddf" prot="public">
+          <name>ZERO</name>
+          <initializer>= &apos;0&apos;</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a7a725f13af144bdef532d0389ba75e0d" prot="public">
+          <name>ONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a0e793500a63ffa575b9b712ca3bc9851" prot="public">
+          <name>TWO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a1251fbf93888ad32fe0ae54d49bcef17" prot="public">
+          <name>THREE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a23d7ef5341c6930d19b2ecbb997977cf" prot="public">
+          <name>FOUR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a3a40d11d30db182ab8f9846aa9458bec" prot="public">
+          <name>FIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6aadffddd32c3e7497e32cd7e430c9c106" prot="public">
+          <name>SIX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a9a193f3e84352f3fbbe44f8d275a820c" prot="public">
+          <name>SEVEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a2fd39b67b424f4ea3b4c11ce3195ab8b" prot="public">
+          <name>EIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6aea09d09b793ccc4a4b5983368d18a4ab" prot="public">
+          <name>NINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="25" column="1" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="enum" id="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>difficulty_level</name>
+        <enumvalue id="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883aa6e5affbf5c08fef0e28c094856f94627" prot="public">
+          <name>EASY</name>
+          <initializer>= 60</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883aac87f3be66ffc3c0d4249f1c2cc5f3cce" prot="public">
+          <name>MEDIUM</name>
+          <initializer>= 45</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883aa7c144eae2e08db14c82e376603cc01f4" prot="public">
+          <name>HARD</name>
+          <initializer>= 30</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883aab75532299fcaca99abf925e555791b82" prot="public">
+          <name>EXPERT</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="43" column="1" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="misc_8hpp_1a203969cb2eeec9a61b3882358ab94509" prot="public" static="no">
+        <type>std::pair&lt; uint8_t, uint8_t &gt;</type>
+        <definition>typedef std::pair&lt;uint8_t, uint8_t&gt; cell</definition>
+        <argsstring></argsstring>
+        <name>cell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="27" column="19" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="misc_8hpp_1a42616646ccdb9b49a8beb277362e08e6" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t KEY_ENTER</definition>
+        <argsstring></argsstring>
+        <name>KEY_ENTER</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="16" column="15" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="misc_8hpp_1aa4a1e2bfbb4b6bdfc6d70f689a31810f" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t ORIGINy</definition>
+        <argsstring></argsstring>
+        <name>ORIGINy</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="17" column="15" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="misc_8hpp_1a07d71a60201fb66046cb6293933c68dd" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t ORIGINx</definition>
+        <argsstring></argsstring>
+        <name>ORIGINx</name>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="18" column="15" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t DISPLAY_MATRIX_ROWS</definition>
+        <argsstring></argsstring>
+        <name>DISPLAY_MATRIX_ROWS</name>
+        <initializer>= 27</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="19" column="15" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t DISPLAY_MATRIX_COLUMNS</definition>
+        <argsstring></argsstring>
+        <name>DISPLAY_MATRIX_COLUMNS</name>
+        <initializer>= <ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="20" column="15" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="misc_8hpp_1aed7ea92bab2e4a8946e0a6219ddfa4af" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t CONTAINER_SIZE</definition>
+        <argsstring></argsstring>
+        <name>CONTAINER_SIZE</name>
+        <initializer>= 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="21" column="15" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="misc_8hpp_1a5836cfba77309360a7aef90d638da708" prot="public" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t NUM_CONTAINERS</definition>
+        <argsstring></argsstring>
+        <name>NUM_CONTAINERS</name>
+        <initializer>= 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="22" column="15" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="misc_8hpp_1a97884cc582d09fc804ffff6b09e6c09c" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string DIR</definition>
+        <argsstring></argsstring>
+        <name>DIR</name>
+        <initializer>= std::string(getenv(&quot;HOME&quot;)) + &quot;/.tsudoku&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="30" column="19" bodyfile="/home/chris/Documents/tsudoku/include/misc.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="misc_8hpp_1a144d37a686256a8360827479151a7ba8" prot="public" static="no" mutable="no">
+        <type><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref></type>
+        <definition>cell WINDOW_REQ</definition>
+        <argsstring></argsstring>
+        <name>WINDOW_REQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="46" column="13" bodyfile="/home/chris/Documents/tsudoku/src/misc.cpp" bodystart="10" bodyend="-1" declfile="/home/chris/Documents/tsudoku/include/misc.hpp" declline="46" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="misc_8hpp_1a4df753caf9fd310b30e1fa38cbac4abf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool invalid_window_size_handler</definition>
+        <argsstring>()</argsstring>
+        <name>invalid_window_size_handler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/misc.hpp" line="47" column="6" bodyfile="/home/chris/Documents/tsudoku/src/misc.cpp" bodystart="40" bodyend="81" declfile="/home/chris/Documents/tsudoku/include/misc.hpp" declline="47" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>VALUES_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>VALUES_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//uint8_t,<sp/>uint16_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//std::pair</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//std::string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>This<sp/>file<sp/>contains<sp/>miscellaneous<sp/>values<sp/>and<sp/>data<sp/>structures<sp/>needed<sp/>across<sp/>some<sp/>or<sp/>all<sp/>files.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEBUG<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PURE_VIRTUAL<sp/>0<sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>A<sp/>more<sp/>helpful<sp/>note<sp/>when<sp/>declaring<sp/>a<sp/>pure<sp/>virtual<sp/>function.<sp/>Gives<sp/>an</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>error<sp/>if<sp/>used<sp/>as<sp/>a<sp/>regular<sp/>constant<sp/>instead<sp/>of<sp/>a<sp/>macro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>KEY_ENTER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Redefines<sp/>the<sp/>value<sp/>of<sp/>the<sp/>Enter<sp/>key<sp/>because<sp/>the<sp/>pre-defined<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="misc_8hpp_1a42616646ccdb9b49a8beb277362e08e6" kindref="member">KEY_ENTER</ref><sp/>=<sp/>10,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>NCurses<sp/>value<sp/>doesn&apos;t<sp/>seem<sp/>to<sp/>work.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="misc_8hpp_1aa4a1e2bfbb4b6bdfc6d70f689a31810f" kindref="member">ORIGINy</ref><sp/>=<sp/>3,<sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Sudoku<sp/>puzzle<sp/>display<sp/>origin<sp/>coordinates<sp/>(top<sp/>left<sp/>cell)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="misc_8hpp_1a07d71a60201fb66046cb6293933c68dd" kindref="member">ORIGINx</ref><sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref><sp/>=<sp/>27,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref><sp/>=<sp/><ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="misc_8hpp_1aed7ea92bab2e4a8946e0a6219ddfa4af" kindref="member">CONTAINER_SIZE</ref><sp/>=<sp/>9,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="misc_8hpp_1a5836cfba77309360a7aef90d638da708" kindref="member">NUM_CONTAINERS</ref><sp/>=<sp/>9;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//NOTE:<sp/>A<sp/>more<sp/>helpful<sp/>way<sp/>of<sp/>using<sp/>the<sp/>character<sp/>versions<sp/>of<sp/>the<sp/>10<sp/>digits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a23a01397a0a1fb98fafffd690348f5d6" kindref="member">Values</ref><sp/>{<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6ae117e3533122c80b262257b49b21cddf" kindref="member">ZERO</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">,<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a7a725f13af144bdef532d0389ba75e0d" kindref="member">ONE</ref>,<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a0e793500a63ffa575b9b712ca3bc9851" kindref="member">TWO</ref>,<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a1251fbf93888ad32fe0ae54d49bcef17" kindref="member">THREE</ref>,<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a23d7ef5341c6930d19b2ecbb997977cf" kindref="member">FOUR</ref>,<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a3a40d11d30db182ab8f9846aa9458bec" kindref="member">FIVE</ref>,<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6aadffddd32c3e7497e32cd7e430c9c106" kindref="member">SIX</ref>,<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a9a193f3e84352f3fbbe44f8d275a820c" kindref="member">SEVEN</ref>,<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6a2fd39b67b424f4ea3b4c11ce3195ab8b" kindref="member">EIGHT</ref>,<sp/><ref refid="misc_8hpp_1a23a01397a0a1fb98fafffd690348f5d6aea09d09b793ccc4a4b5983368d18a4ab" kindref="member">NINE</ref><sp/>};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;uint8_t,<sp/>uint8_t&gt;<sp/><ref refid="misc_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>A<sp/>cell<sp/>in<sp/>the<sp/>NCurses<sp/>terminal<sp/>display</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//NOTE:<sp/>Hidden<sp/>directory<sp/>for<sp/>storing<sp/>game<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="misc_8hpp_1a97884cc582d09fc804ffff6b09e6c09c" kindref="member">DIR</ref><sp/>=<sp/>std::string(getenv(</highlight><highlight class="stringliteral">&quot;HOME&quot;</highlight><highlight class="normal">))<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/.tsudoku&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//NOTE:<sp/>Wrapper<sp/>struct<sp/>for<sp/>handling<sp/>saved<sp/>game<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="structSavedPuzzle" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structSavedPuzzle_1a6614da7fc37a9a3dfa3559bbcbb4d3b5" kindref="member">puzzle</ref>[<ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref>][<ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref>];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="structSavedPuzzle_1a27609af4fc91e19e73c4b82e20a8b662" kindref="member">color_codes</ref>[<ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref>][<ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref>];</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="structSavedPuzzle_1a12126bb9471cb755b0c6141b4692d81c" kindref="member">filename</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:<sp/>Difficulty<sp/>levels<sp/>corresponding<sp/>to<sp/>the<sp/>number<sp/>of<sp/>grid<sp/>cells<sp/>given.<sp/>According<sp/>to</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>https://www.101computing.net/sudoku-generator-algorithm/,<sp/>the<sp/>minimum<sp/>amount<sp/>of<sp/>tiles<sp/>that</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>need<sp/>to<sp/>be<sp/>filled<sp/>in<sp/>in<sp/>order<sp/>to<sp/>create<sp/>a<sp/>uniquely<sp/>solvable<sp/>puzzle<sp/>is<sp/>17.</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883a" kindref="member">difficulty_level</ref><sp/>{<sp/><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883aa6e5affbf5c08fef0e28c094856f94627" kindref="member">EASY</ref><sp/>=<sp/>60,<sp/><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883aac87f3be66ffc3c0d4249f1c2cc5f3cce" kindref="member">MEDIUM</ref><sp/>=<sp/>45,<sp/><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883aa7c144eae2e08db14c82e376603cc01f4" kindref="member">HARD</ref><sp/>=<sp/>30,<sp/><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883aab75532299fcaca99abf925e555791b82" kindref="member">EXPERT</ref><sp/>=<sp/>17<sp/>};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//NOTE:<sp/>These<sp/>are<sp/>both<sp/>defined<sp/>in<sp/>misc.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref><sp/><ref refid="misc_8hpp_1a144d37a686256a8360827479151a7ba8" kindref="member">WINDOW_REQ</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="misc_8hpp_1a4df753caf9fd310b30e1fa38cbac4abf" kindref="member">invalid_window_size_handler</ref><sp/>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/misc.hpp"/>
+  </compounddef>
+</doxygen>

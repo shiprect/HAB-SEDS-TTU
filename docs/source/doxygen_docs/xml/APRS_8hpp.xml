@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="APRS_8hpp" kind="file" language="C++">
+    <compoundname>APRS.hpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="afsk_8h" local="yes">afsk.h</includes>
+    <includes refid="ax25_8h" local="yes">ax25.h</includes>
+    <includes refid="GPS_8hpp" local="yes">../GPS/GPS.hpp</includes>
+    <includes refid="Config_8h" local="yes">../../../Config.h</includes>
+    <includes refid="Status_8hpp" local="yes">../../Status/Status.hpp</includes>
+    <includedby refid="HAB-SEDS-TTU_8ino" local="yes">/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino</includedby>
+    <includedby refid="APRS_8cpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp</includedby>
+    <includedby refid="ax25_8h" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Adafruit_BMP085_U.h</label>
+        <link refid="Adafruit__BMP085__U_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Adafruit_Sensor.h</label>
+        <link refid="Adafruit__Sensor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../Drivers/BMP/BMP.hpp</label>
+        <link refid="BMP_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../GPS/GPS.hpp</label>
+        <link refid="GPS_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>TinyGPS++.h</label>
+        <link refid="TinyGPS_09_09_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>../Drivers/SERVO/Servo.hpp</label>
+        <link refid="Servo_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="16">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="13">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="12">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>../../Status/Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="9">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="11">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="10">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="6">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="25">
+        <label>SPI.h</label>
+      </node>
+      <node id="19">
+        <label>SoftwareSerial.h</label>
+      </node>
+      <node id="21">
+        <label>WProgram.h</label>
+      </node>
+      <node id="26">
+        <label>Wire.h</label>
+      </node>
+      <node id="22">
+        <label>limits.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino</label>
+        <link refid="HAB-SEDS-TTU_8ino"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp</label>
+        <link refid="APRS_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp</label>
+        <link refid="ax25_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structPathAddress" prot="public">PathAddress</innerclass>
+    <innerclass refid="classAPRS" prot="public">APRS</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="APRS_8hpp_1a0bc2ddc4d6d694aa9df516a95b046ffe" prot="public" static="no" mutable="no">
+        <type><ref refid="classAPRS" kindref="compound">APRS</ref></type>
+        <definition>APRS aprs</definition>
+        <argsstring></argsstring>
+        <name>aprs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" line="63" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino" bodystart="61" bodyend="-1" declfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp" declline="63" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__APRS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__APRS_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="afsk_8h" kindref="compound">afsk.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ax25_8h" kindref="compound">ax25.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../GPS/GPS.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../Config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../Status/Status.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//TODO::add<sp/>this<sp/>to<sp/>the<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="structPathAddress" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structPathAddress" kindref="compound">PathAddress</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structPathAddress_1a9a25917b2700ddfbcb88f5a3213d1b9a" kindref="member">callsign</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structPathAddress_1a20b1369cbafbc06dd06bf92db3bd6392" kindref="member">ssid</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//TODO::Create<sp/>a<sp/>robust<sp/>method<sp/>of<sp/>message<sp/>passing<sp/>and<sp/>transmission</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classAPRS" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAPRS" kindref="compound">APRS</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAPRS_1a0916a2fa19451c564257f63e8a57c5f5" kindref="member">ValidAPRS</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO::Fix<sp/>method<sp/>of<sp/>APRS<sp/>period<sp/>determination,<sp/>config,<sp/>and<sp/>randomness</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="classAPRS_1a0ae38b7326866b2ce9e1d79eb84cdc1b" kindref="member">APRS_PERIOD</ref><sp/>=<sp/>300;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAPRS_1a843dde7eb8ef178e57b5edd63aa76d3b" kindref="member">APRS_Send_with_String</ref>(</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structPathAddress" kindref="compound">PathAddress</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>paths,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nPaths,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>dayOfMonth,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>hour,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>min,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lon,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>altitude,<sp/></highlight><highlight class="comment">//<sp/>meters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>heading,<sp/></highlight><highlight class="comment">//<sp/>degrees</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>symbolTableIndicator,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>symbol,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="ProjectConfig_8hpp_1a6b372a3b4273a5b1cbb420eb7d058a07" kindref="member">comment</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAPRS_1a0f7df5200518af9182df3e3ff197d69e" kindref="member">logBuffer</ref>(</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bitsSent,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>dayOfMonth,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>hour,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>min</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAPRS_1abe39a031fb76d9928c8cde6946a6f361" kindref="member">APRS</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAPRS_1a41489d83dab3f21934959a7ca1c76308" kindref="member">~APRS</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAPRS_1a1bf8abb9e97f94e6b59a7758339839d5" kindref="member">APRS_Setup</ref>(</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>p_preambleFlags,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>preambleFlags<sp/>to<sp/>send,<sp/>must<sp/>be<sp/>at<sp/>least<sp/>1<sp/>to<sp/>frame<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>pttPin,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>PTT<sp/>pin,<sp/>0<sp/>=<sp/>do<sp/>not<sp/>use<sp/>PTT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>pttDelay,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ms<sp/>to<sp/>wait<sp/>after<sp/>PTT<sp/>to<sp/>transmit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>toneLength,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>silenceLength<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Emit<sp/>sub-audio<sp/>tone<sp/>before<sp/>packet<sp/>to<sp/>trigger<sp/>VOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight><highlight class="comment">//TODO::should<sp/>return<sp/>true<sp/>if<sp/>successful,<sp/>false<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAPRS_1acef31535927a942a9b735ef550606280" kindref="member">APRS_Update</ref>();</highlight><highlight class="comment">//TODO::should<sp/>return<sp/>true<sp/>if<sp/>successful,<sp/>false<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAPRS_1abb63cf7b937980c4925235443e8f6b16" kindref="member">IsValidAPRS</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAPRS_1ac3accbab93100491b11dd3e9c838f765" kindref="member">APRS_Transmit</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classAPRS" kindref="compound">APRS</ref><sp/><ref refid="APRS_8hpp_1a0bc2ddc4d6d694aa9df516a95b046ffe" kindref="member">aprs</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="67"><highlight class="comment">//TODO::APRS<sp/>messaging<sp/>types</highlight></codeline>
+<codeline lineno="68"><highlight class="comment">1<sp/>-<sp/>Lat/Long<sp/>Position<sp/>Report<sp/>Format<sp/>—<sp/>without<sp/>Timestamp</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">2<sp/>-<sp/>Lat/Long<sp/>Position<sp/>Report<sp/>Format<sp/>—<sp/>with<sp/>Timestamp</highlight></codeline>
+<codeline lineno="70"><highlight class="comment">3<sp/>-<sp/>Lat/Long<sp/>Position<sp/>Report<sp/>Format<sp/>—<sp/>with<sp/>Data<sp/>Extension<sp/>(no<sp/>Timestamp)</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">4<sp/>-<sp/>Lat/Long<sp/>Position<sp/>Report<sp/>Format<sp/>—<sp/>with<sp/>Data<sp/>Extension<sp/>and<sp/>Timestamp</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">5<sp/>-<sp/>Compressed<sp/>Lat/Long<sp/>Position<sp/>Report<sp/>Format<sp/>—<sp/>no<sp/>Timestamp</highlight></codeline>
+<codeline lineno="73"><highlight class="comment">6<sp/>-<sp/>Compressed<sp/>Lat/Long<sp/>Position<sp/>Report<sp/>Format<sp/>—<sp/>with<sp/>Timestamp</highlight></codeline>
+<codeline lineno="74"><highlight class="comment">7<sp/>-<sp/>Message<sp/>Format</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">8<sp/>-<sp/>Telemetry<sp/>Report<sp/>Format</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">9<sp/>-<sp/>Maidenhead<sp/>Locater<sp/>Beacon</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">void<sp/>APRS_Send_with_String(<sp/>const<sp/>PathAddress<sp/>*<sp/>const<sp/>paths,</highlight></codeline>
+<codeline lineno="81"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>int<sp/>nPaths,</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>dayOfMonth,</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>hour,</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>min,</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char*<sp/>const<sp/>lat_string,</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char*<sp/>const<sp/>lon_string,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>altitude,<sp/>//<sp/>meters</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint16_t<sp/>heading,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>speed,</highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>symbolTableIndicator,</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>symbol,</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*<sp/>const<sp/>comment</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"></highlight></codeline>
+<codeline lineno="95"><highlight class="comment"></highlight></codeline>
+<codeline lineno="96"><highlight class="comment"></highlight></codeline>
+<codeline lineno="97"><highlight class="comment">void<sp/>logBuffer(const<sp/>uint8_t<sp/>*<sp/>const<sp/>buf,<sp/>const<sp/>int<sp/>bitsSent,</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>dayOfMonth,<sp/>const<sp/>uint8_t<sp/>hour,<sp/>const<sp/>uint8_t<sp/>min);</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"></highlight></codeline>
+<codeline lineno="100"><highlight class="comment"></highlight></codeline>
+<codeline lineno="101"><highlight class="comment"></highlight></codeline>
+<codeline lineno="102"><highlight class="comment">//These<sp/>functions<sp/>are<sp/>synchronized.<sp/>They<sp/>won&apos;t<sp/>return<sp/>until<sp/>the<sp/>entire<sp/>packet<sp/>is<sp/>sent</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">void<sp/>APRS_Send(<sp/>const<sp/>PathAddress<sp/>*<sp/>const<sp/>paths,</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>int<sp/>nPaths,</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>dayOfMonth,</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>hour,</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>min,</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lat,</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lon,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>altitude,<sp/>//<sp/>meters</highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint16_t<sp/>heading,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>speed,</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>symbolTableIndicator,</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>symbol,</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*<sp/>const<sp/>comment</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"></highlight></codeline>
+<codeline lineno="118"><highlight class="comment">void<sp/>APRS_Send_modified(<sp/>const<sp/>PathAddress<sp/>*<sp/>const<sp/>paths,</highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>int<sp/>nPaths,</highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>dayOfMonth,</highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>hour,</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>min,</highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lat,</highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lon,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>altitude,<sp/>//<sp/>meters</highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint16_t<sp/>heading,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>speed,</highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>symbolTableIndicator,</highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>symbol,</highlight></codeline>
+<codeline lineno="130"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*<sp/>const<sp/>comment</highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="132"><highlight class="comment"></highlight></codeline>
+<codeline lineno="133"><highlight class="comment"></highlight></codeline>
+<codeline lineno="134"><highlight class="comment"></highlight></codeline>
+<codeline lineno="135"><highlight class="comment">void<sp/>APRS_Send_gps1(<sp/>const<sp/>PathAddress<sp/>*<sp/>const<sp/>paths,</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>int<sp/>nPaths,</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>dayOfMonth,</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>hour,</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>min,</highlight></codeline>
+<codeline lineno="140"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>sec,</highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lat,</highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lon,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>altitude,<sp/>//<sp/>meters</highlight></codeline>
+<codeline lineno="144"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>uint16_t<sp/>heading,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>float<sp/>speed,</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>symbolTableIndicator,</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>symbol,</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*<sp/>const<sp/>comment</highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"></highlight></codeline>
+<codeline lineno="151"><highlight class="comment">void<sp/>APRS_Send_gpsshort(const<sp/>PathAddress<sp/>*<sp/>const<sp/>paths,<sp/>const<sp/>int<sp/>nPaths,</highlight></codeline>
+<codeline lineno="152"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>dayOfMonth,<sp/>const<sp/>uint8_t<sp/>hour,<sp/>const<sp/>uint8_t<sp/>min,<sp/>const<sp/>uint8_t<sp/>sec,</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lat,</highlight></codeline>
+<codeline lineno="154"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lon,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="155"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>float<sp/>altitude,<sp/>//<sp/>meters</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>uint16_t<sp/>heading,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>float<sp/>speed,<sp/>const<sp/>char<sp/>symbolTableIndicator,<sp/>const<sp/>char<sp/>symbol,</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*<sp/>const<sp/>comment);</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"></highlight></codeline>
+<codeline lineno="160"><highlight class="comment">void<sp/>APRS_Send_gpstime(const<sp/>PathAddress<sp/>*<sp/>const<sp/>paths,<sp/>const<sp/>int<sp/>nPaths,</highlight></codeline>
+<codeline lineno="161"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>uint8_t<sp/>dayOfMonth,<sp/>const<sp/>uint8_t<sp/>hour,<sp/>const<sp/>uint8_t<sp/>min,<sp/>const<sp/>uint8_t<sp/>sec,</highlight></codeline>
+<codeline lineno="162"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lat,</highlight></codeline>
+<codeline lineno="163"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>float<sp/>lon,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="164"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>float<sp/>altitude,<sp/>//<sp/>meters</highlight></codeline>
+<codeline lineno="165"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>uint16_t<sp/>heading,<sp/>//<sp/>degrees</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>float<sp/>speed,<sp/>const<sp/>char<sp/>symbolTableIndicator,<sp/>const<sp/>char<sp/>symbol,</highlight></codeline>
+<codeline lineno="167"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>char<sp/>*<sp/>const<sp/>comment);</highlight></codeline>
+<codeline lineno="168"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,475 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="LoRaNodeV4_2RadioHead_2RH__RF95_8cpp" kind="file" language="C++">
+    <compoundname>RH_RF95.cpp</compoundname>
+    <includes refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h" local="no">RH_RF95.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>RHGenericDriver.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>RHGenericSPI.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHGenericSPI_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RHHardwareSPI.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHHardwareSPI_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RHSPIDriver.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RH__RF95_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RH_RF95.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>RadioHead.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RadioHead_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="LoRaNodeV4_2RadioHead_2RH__RF95_8cpp_1acbfac19166db5513c0702781e7cd151c" prot="public" static="yes" mutable="no">
+        <type>PROGMEM const <ref refid="structRH__RF95_1_1ModemConfig" kindref="compound">RH_RF95::ModemConfig</ref></type>
+        <definition>PROGMEM const RH_RF95::ModemConfig MODEM_CONFIG_TABLE[]</definition>
+        <argsstring>[]</argsstring>
+        <name>MODEM_CONFIG_TABLE</name>
+        <initializer>=
+{
+    
+    { 0x72,   0x74,    0x00}, 
+    { 0x92,   0x74,    0x00}, 
+    { 0x48,   0x94,    0x00}, 
+    { 0x78,   0xc4,    0x00}, 
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" line="16" column="43" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>RH_RF95.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2011<sp/>Mike<sp/>McCauley</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>RH_RF95.cpp,v<sp/>1.11<sp/>2016/04/04<sp/>01:40:12<sp/>mikem<sp/>Exp<sp/>mikem<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="RadioHead_2RH__RF95_8h" kindref="compound">RH_RF95.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Interrupt<sp/>vectors<sp/>for<sp/>the<sp/>3<sp/>Arduino<sp/>interrupt<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Each<sp/>interrupt<sp/>can<sp/>be<sp/>handled<sp/>by<sp/>a<sp/>different<sp/>instance<sp/>of<sp/>RH_RF95,<sp/>allowing<sp/>you<sp/>to<sp/>have</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2<sp/>or<sp/>more<sp/>LORAs<sp/>per<sp/>Arduino</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="classRH__RF95" kindref="compound">RH_RF95</ref>*<sp/><ref refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" kindref="member">RH_RF95::_deviceForInterrupt</ref>[<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a672d1ad6cde297c54ee49577d47caddf" kindref="member">RH_RF95_NUM_INTERRUPTS</ref>]<sp/>=<sp/>{0,<sp/>0,<sp/>0};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">uint8_t<sp/><ref refid="classRH__RF95_1a2ea96ae4f1d6e510f0b527c85fa5b629" kindref="member">RH_RF95::_interruptCount</ref><sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>Index<sp/>into<sp/>_deviceForInterrupt<sp/>for<sp/>next<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>are<sp/>indexed<sp/>by<sp/>the<sp/>values<sp/>of<sp/>ModemConfigChoice</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stored<sp/>in<sp/>flash<sp/>(program)<sp/>memory<sp/>to<sp/>save<sp/>SRAM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">PROGMEM<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structRH__RF95_1_1ModemConfig" kindref="compound">RH_RF95::ModemConfig</ref><sp/>MODEM_CONFIG_TABLE[]<sp/>=</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>1d,<sp/><sp/><sp/><sp/><sp/>1e,<sp/><sp/><sp/><sp/><sp/><sp/>26<sp/><sp/><sp/>regester</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>0x72,<sp/><sp/><sp/>0x74,<sp/><sp/><sp/><sp/>0x00},<sp/></highlight><highlight class="comment">//<sp/>Bw125Cr45Sf128<sp/>(the<sp/>chip<sp/>default)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>0x92,<sp/><sp/><sp/>0x74,<sp/><sp/><sp/><sp/>0x00},<sp/></highlight><highlight class="comment">//<sp/>Bw500Cr45Sf128</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>0x48,<sp/><sp/><sp/>0x94,<sp/><sp/><sp/><sp/>0x00},<sp/></highlight><highlight class="comment">//<sp/>Bw31_25Cr48Sf512</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>0x78,<sp/><sp/><sp/>0xc4,<sp/><sp/><sp/><sp/>0x00},<sp/></highlight><highlight class="comment">//<sp/>Bw125Cr48Sf4096</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="classRH__RF95_1a274c170acdb53f55fd45445ab7f51889" kindref="member">RH_RF95::RH_RF95</ref>(uint8_t<sp/>slaveSelectPin,<sp/>uint8_t<sp/>interruptPin,<sp/><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref>&amp;<sp/>spi)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver" kindref="compound">RHSPIDriver</ref>(slaveSelectPin,<sp/>spi),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>_rxBufValid(0)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>_interruptPin<sp/>=<sp/>interruptPin;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>_myInterruptIndex<sp/>=<sp/>0xff;<sp/></highlight><highlight class="comment">//<sp/>Not<sp/>allocated<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" kindref="member">RH_RF95::init</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557" kindref="member">RHSPIDriver::init</ref>())</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>the<sp/>interrupt<sp/>number<sp/>that<sp/>corresponds<sp/>to<sp/>the<sp/>interruptPin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>interruptNumber<sp/>=<sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a4eeada3d193a6c489a1a146fb4ff87d5" kindref="member">digitalPinToInterrupt</ref>(<ref refid="classRH__RF95_1a9f43cda8dd8d5edc5508937393dfce13" kindref="member">_interruptPin</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(interruptNumber<sp/>==<sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1ace73be9d32b9ad15d9120c47304266dc" kindref="member">NOT_AN_INTERRUPT</ref>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>RH_ATTACHINTERRUPT_TAKES_PIN_NUMBER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>interruptNumber<sp/>=<sp/><ref refid="classRH__RF95_1a9f43cda8dd8d5edc5508937393dfce13" kindref="member">_interruptPin</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>way<sp/>to<sp/>check<sp/>the<sp/>device<sp/>type<sp/>:-(</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>sleep<sp/>mode,<sp/>so<sp/>we<sp/>can<sp/>also<sp/>set<sp/>LORA<sp/>mode:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a44cfb9c1ca9f68fe1e6623415ac2fade" kindref="member">RH_RF95_REG_01_OP_MODE</ref>,<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1acc6a3326284bdca07e6a16de48ca44ce" kindref="member">RH_RF95_MODE_SLEEP</ref><sp/>|<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1affed48173363dfd614c76084f22c1da7" kindref="member">RH_RF95_LONG_RANGE_MODE</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(10);<sp/></highlight><highlight class="comment">//<sp/>Wait<sp/>for<sp/>sleep<sp/>mode<sp/>to<sp/>take<sp/>over<sp/>from<sp/>say,<sp/>CAD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>we<sp/>are<sp/>in<sp/>sleep<sp/>mode,<sp/>with<sp/>LORA<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" kindref="member">spiRead</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a44cfb9c1ca9f68fe1e6623415ac2fade" kindref="member">RH_RF95_REG_01_OP_MODE</ref>)<sp/>!=<sp/>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1acc6a3326284bdca07e6a16de48ca44ce" kindref="member">RH_RF95_MODE_SLEEP</ref><sp/>|<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1affed48173363dfd614c76084f22c1da7" kindref="member">RH_RF95_LONG_RANGE_MODE</ref>))</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Serial.println(spiRead(RH_RF95_REG_01_OP_MODE),<sp/>HEX);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>No<sp/>device<sp/>present?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>by<sp/>Adrien<sp/>van<sp/>den<sp/>Bossche<sp/>&lt;vandenbo@univ-tlse2.fr&gt;<sp/>for<sp/>Teensy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ARM<sp/>M4<sp/>requires<sp/>the<sp/>below.<sp/>else<sp/>pin<sp/>interrupt<sp/>doesn&apos;t<sp/>work<sp/>properly.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>all<sp/>other<sp/>platforms,<sp/>its<sp/>innocuous,<sp/>belt<sp/>and<sp/>braces</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="classRH__RF95_1a9f43cda8dd8d5edc5508937393dfce13" kindref="member">_interruptPin</ref>,<sp/>INPUT);<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>interrupt<sp/>handler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>there<sp/>are<sp/>a<sp/>limited<sp/>number<sp/>of<sp/>interrupt<sp/>glue<sp/>functions<sp/>isr*()<sp/>available,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>can<sp/>only<sp/>support<sp/>a<sp/>limited<sp/>number<sp/>of<sp/>devices<sp/>simultaneously</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ON<sp/>some<sp/>devices,<sp/>notably<sp/>most<sp/>Arduinos,<sp/>the<sp/>interrupt<sp/>pin<sp/>passed<sp/>in<sp/>is<sp/>actuallt<sp/>the<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>interrupt<sp/>number.<sp/>You<sp/>have<sp/>to<sp/>figure<sp/>out<sp/>the<sp/>interruptnumber-to-interruptpin<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>yourself<sp/>based<sp/>on<sp/>knwledge<sp/>of<sp/>what<sp/>Arduino<sp/>board<sp/>you<sp/>are<sp/>running<sp/>on.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1a358c2394e5b1e52aa15adbff92b3e229" kindref="member">_myInterruptIndex</ref><sp/>==<sp/>0xff)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>run,<sp/>no<sp/>interrupt<sp/>allocated<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1a2ea96ae4f1d6e510f0b527c85fa5b629" kindref="member">_interruptCount</ref><sp/>&lt;=<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a672d1ad6cde297c54ee49577d47caddf" kindref="member">RH_RF95_NUM_INTERRUPTS</ref>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a358c2394e5b1e52aa15adbff92b3e229" kindref="member">_myInterruptIndex</ref><sp/>=<sp/><ref refid="classRH__RF95_1a2ea96ae4f1d6e510f0b527c85fa5b629" kindref="member">_interruptCount</ref>++;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Too<sp/>many<sp/>devices,<sp/>not<sp/>enough<sp/>interrupt<sp/>vectors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" kindref="member">_deviceForInterrupt</ref>[<ref refid="classRH__RF95_1a358c2394e5b1e52aa15adbff92b3e229" kindref="member">_myInterruptIndex</ref>]<sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1a358c2394e5b1e52aa15adbff92b3e229" kindref="member">_myInterruptIndex</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>attachInterrupt(interruptNumber,<sp/><ref refid="classRH__RF95_1a7d1d574c24de1f7d4971fa06cc166c7f" kindref="member">isr0</ref>,<sp/>RISING);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1a358c2394e5b1e52aa15adbff92b3e229" kindref="member">_myInterruptIndex</ref><sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>attachInterrupt(interruptNumber,<sp/><ref refid="classRH__RF95_1ae351a13bb0d022a0dbf6d55b9631195e" kindref="member">isr1</ref>,<sp/>RISING);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1a358c2394e5b1e52aa15adbff92b3e229" kindref="member">_myInterruptIndex</ref><sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>attachInterrupt(interruptNumber,<sp/><ref refid="classRH__RF95_1a2adc0c6029b10de04bda31de199e98ed" kindref="member">isr2</ref>,<sp/>RISING);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Too<sp/>many<sp/>devices,<sp/>not<sp/>enough<sp/>interrupt<sp/>vectors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>FIFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>configure<sp/>so<sp/>that<sp/>we<sp/>can<sp/>use<sp/>the<sp/>entire<sp/>256<sp/>byte<sp/>FIFO<sp/>for<sp/>either<sp/>receive</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>or<sp/>transmit,<sp/>but<sp/>not<sp/>both<sp/>at<sp/>the<sp/>same<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1ad1087b3b8ccd6559653956b2ab8be2ac" kindref="member">RH_RF95_REG_0E_FIFO_TX_BASE_ADDR</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1ad38f60787e6f18e174a0f451fd14c6d5" kindref="member">RH_RF95_REG_0F_FIFO_RX_BASE_ADDR</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Packet<sp/>format<sp/>is<sp/>preamble<sp/>+<sp/>explicit-header<sp/>+<sp/>payload<sp/>+<sp/>crc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Explicit<sp/>Header<sp/>Mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>payload<sp/>is<sp/>TO<sp/>+<sp/>FROM<sp/>+<sp/>ID<sp/>+<sp/>FLAGS<sp/>+<sp/>message<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RX<sp/>mode<sp/>is<sp/>implmented<sp/>with<sp/>RXCONTINUOUS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>max<sp/>message<sp/>data<sp/>length<sp/>is<sp/>255<sp/>-<sp/>4<sp/>=<sp/>251<sp/>octets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" kindref="member">setModeIdle</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>default<sp/>configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>Sync<sp/>Words<sp/>in<sp/>LORA<sp/>mode.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1af6f6131a36c2a0f84a5883a6ec7acfec" kindref="member">setModemConfig</ref>(<ref refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a8b6aeb4bf0acd379adb2cf223110c8f7" kindref="member">Bw125Cr45Sf128</ref>);</highlight><highlight class="comment">//<sp/>Radio<sp/>default<sp/><sp/>///&lt;<sp/>Bw<sp/>=<sp/>125<sp/>kHz,<sp/>Cr<sp/>=<sp/>4/5,<sp/>Sf<sp/>=<sp/>128chips/symbol,<sp/>CRC<sp/>on.<sp/>Default<sp/>medium<sp/>range<sp/><sp/>:sf=7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//setModemConfig(Bw125Cr48Sf4096);//<sp/>slow<sp/>and<sp/>reliable?<sp/><sp/><sp/>///&lt;<sp/>Bw<sp/>=<sp/>125<sp/>kHz,<sp/>Cr<sp/>=<sp/>4/8,<sp/>Sf<sp/>=<sp/>4096chips/symbol,<sp/>CRC<sp/>on.<sp/>Slow+long<sp/>range<sp/>:sf=12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//setModemConfig(Bw31_25Cr48Sf512);//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1af0f16c9b450bdd13a421d282e58a09fb" kindref="member">setPreambleLength</ref>(8);<sp/></highlight><highlight class="comment">//<sp/>Default<sp/>is<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>An<sp/>innocuous<sp/>ISM<sp/>frequency,<sp/>same<sp/>as<sp/>RF22&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a854c2eaa2f3cf9583453ff09f15e1099" kindref="member">setFrequency</ref>(433.0);</highlight><highlight class="comment">//Changed<sp/>by<sp/>Chalin<sp/>from<sp/>868.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Lowish<sp/>power</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ab273e242758e3cc2ed2679ef795a7196" kindref="member">setTxPower</ref>(23);</highlight><highlight class="comment">//Changed<sp/>by<sp/>Chalin<sp/>from<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="comment">//<sp/>C++<sp/>level<sp/>interrupt<sp/>handler<sp/>for<sp/>this<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>LORA<sp/>is<sp/>unusual<sp/>in<sp/>that<sp/>it<sp/>has<sp/>several<sp/>interrupt<sp/>lines,<sp/>and<sp/>not<sp/>a<sp/>single,<sp/>combined<sp/>one.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>On<sp/>MiniWirelessLoRa,<sp/>only<sp/>one<sp/>of<sp/>the<sp/>several<sp/>interrupt<sp/>lines<sp/>(DI0)<sp/>from<sp/>the<sp/>RFM95<sp/>is<sp/>usefuly<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>connnected<sp/>to<sp/>the<sp/>processor.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">//<sp/>We<sp/>use<sp/>this<sp/>to<sp/>get<sp/>RxDone<sp/>and<sp/>TxDone<sp/>interrupts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a18191ee8063c7beec84671abb184aef4" kindref="member">RH_RF95::handleInterrupt</ref>()</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>interrupt<sp/>register</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>irq_flags<sp/>=<sp/><ref refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" kindref="member">spiRead</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a791e693c6ed7960d805fd4baade90517" kindref="member">RH_RF95_REG_12_IRQ_FLAGS</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>==<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" kindref="member">RHModeRx</ref><sp/>&amp;&amp;<sp/>irq_flags<sp/>&amp;<sp/>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1abe2df377b2893d6bfdae5b42ab308f59" kindref="member">RH_RF95_RX_TIMEOUT</ref><sp/>|<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1aa9ac844bf3e8413494cb336e789c02b3" kindref="member">RH_RF95_PAYLOAD_CRC_ERROR</ref>))</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a3bafd8dc638309a473367c4ff8e59c0e" kindref="member">_rxBad</ref>++;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>==<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" kindref="member">RHModeRx</ref><sp/>&amp;&amp;<sp/>irq_flags<sp/>&amp;<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a9dbc5d3dd8c85bfa0b0c910f63f49a54" kindref="member">RH_RF95_RX_DONE</ref>)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Have<sp/>received<sp/>a<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>len<sp/>=<sp/><ref refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" kindref="member">spiRead</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1ab4f46c60c320d68053ffd6a50ec0d8b2" kindref="member">RH_RF95_REG_13_RX_NB_BYTES</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>the<sp/>fifo<sp/>read<sp/>ptr<sp/>to<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a6d1c9b5733d548eeb74f2981e879ea80" kindref="member">RH_RF95_REG_0D_FIFO_ADDR_PTR</ref>,<sp/><ref refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" kindref="member">spiRead</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a8d719286e4679159da4b8d70a151c3e8" kindref="member">RH_RF95_REG_10_FIFO_RX_CURRENT_ADDR</ref>));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1af0ffebc1db1a6008734a37c4448fe926" kindref="member">spiBurstRead</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a764eed31b8443c79d9a885749009d60f" kindref="member">RH_RF95_REG_00_FIFO</ref>,<sp/><ref refid="classRH__RF95_1addc6c7d4b752ee8f35595ed35161908f" kindref="member">_buf</ref>,<sp/>len);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1aa553f8428e9528dc43a78a983b379110" kindref="member">_bufLen</ref><sp/>=<sp/>len;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a791e693c6ed7960d805fd4baade90517" kindref="member">RH_RF95_REG_12_IRQ_FLAGS</ref>,<sp/>0xff);<sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>all<sp/>IRQ<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remember<sp/>the<sp/>RSSI<sp/>of<sp/>this<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>according<sp/>to<sp/>the<sp/>doc,<sp/>but<sp/>is<sp/>it<sp/>really<sp/>correct?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>weakest<sp/>receiveable<sp/>signals<sp/>are<sp/>reported<sp/>RSSI<sp/>at<sp/>about<sp/>-66</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1ae75ce1fa0448733a6e058f4c7a1ba0a7" kindref="member">_lastRssi</ref><sp/>=<sp/><ref refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" kindref="member">spiRead</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1aa1d6c2a4411227f67994c9ffe9e82c37" kindref="member">RH_RF95_REG_1A_PKT_RSSI_VALUE</ref>)<sp/>-<sp/>137;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>have<sp/>received<sp/>a<sp/>message.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a09086214734986feeb1e647a7820b615" kindref="member">validateRxBuf</ref>();<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1a03d4a80e90eb918841c2e63d79536f5d" kindref="member">_rxBufValid</ref>)</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" kindref="member">setModeIdle</ref>();<sp/></highlight><highlight class="comment">//<sp/>Got<sp/>one<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>==<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" kindref="member">RHModeTx</ref><sp/>&amp;&amp;<sp/>irq_flags<sp/>&amp;<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1adb7abe1ae9bda956ef66168e9a370028" kindref="member">RH_RF95_TX_DONE</ref>)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a5f71653ad58e35ddca7fe3e052674ca2" kindref="member">_txGood</ref>++;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" kindref="member">setModeIdle</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a791e693c6ed7960d805fd4baade90517" kindref="member">RH_RF95_REG_12_IRQ_FLAGS</ref>,<sp/>0xff);<sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>all<sp/>IRQ<sp/>flags</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>are<sp/>low<sp/>level<sp/>functions<sp/>that<sp/>call<sp/>the<sp/>interrupt<sp/>handler<sp/>for<sp/>the<sp/>correct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//<sp/>instance<sp/>of<sp/>RH_RF95.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">//<sp/>3<sp/>interrupts<sp/>allows<sp/>us<sp/>to<sp/>have<sp/>3<sp/>different<sp/>devices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a7d1d574c24de1f7d4971fa06cc166c7f" kindref="member">RH_RF95::isr0</ref>()</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" kindref="member">_deviceForInterrupt</ref>[0])</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" kindref="member">_deviceForInterrupt</ref>[0]-&gt;<ref refid="classRH__RF95_1a18191ee8063c7beec84671abb184aef4" kindref="member">handleInterrupt</ref>();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1ae351a13bb0d022a0dbf6d55b9631195e" kindref="member">RH_RF95::isr1</ref>()</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" kindref="member">_deviceForInterrupt</ref>[1])</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" kindref="member">_deviceForInterrupt</ref>[1]-&gt;<ref refid="classRH__RF95_1a18191ee8063c7beec84671abb184aef4" kindref="member">handleInterrupt</ref>();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a2adc0c6029b10de04bda31de199e98ed" kindref="member">RH_RF95::isr2</ref>()</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" kindref="member">_deviceForInterrupt</ref>[2])</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" kindref="member">_deviceForInterrupt</ref>[2]-&gt;<ref refid="classRH__RF95_1a18191ee8063c7beec84671abb184aef4" kindref="member">handleInterrupt</ref>();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Check<sp/>whether<sp/>the<sp/>latest<sp/>received<sp/>message<sp/>is<sp/>complete<sp/>and<sp/>uncorrupted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a09086214734986feeb1e647a7820b615" kindref="member">RH_RF95::validateRxBuf</ref>()</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRH__RF95_1aa553f8428e9528dc43a78a983b379110" kindref="member">_bufLen</ref><sp/>&lt;<sp/>4)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Too<sp/>short<sp/>to<sp/>be<sp/>a<sp/>real<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>the<sp/>4<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1abff3740bc072a2d435194a7860b2bfe3" kindref="member">_rxHeaderTo</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="classRH__RF95_1addc6c7d4b752ee8f35595ed35161908f" kindref="member">_buf</ref>[0];</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7283cfec4e7c1ecf074307534592fd8f" kindref="member">_rxHeaderFrom</ref><sp/><sp/>=<sp/><ref refid="classRH__RF95_1addc6c7d4b752ee8f35595ed35161908f" kindref="member">_buf</ref>[1];</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a3155557c35198acdde0ecdf58a201b19" kindref="member">_rxHeaderId</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="classRH__RF95_1addc6c7d4b752ee8f35595ed35161908f" kindref="member">_buf</ref>[2];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a5fd0c3bbc3cfe199924a9e1cb909f5fd" kindref="member">_rxHeaderFlags</ref><sp/>=<sp/><ref refid="classRH__RF95_1addc6c7d4b752ee8f35595ed35161908f" kindref="member">_buf</ref>[3];</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHGenericDriver_1a2d94c93203714ed3dd9a7434101683e9" kindref="member">_promiscuous</ref><sp/>||</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1abff3740bc072a2d435194a7860b2bfe3" kindref="member">_rxHeaderTo</ref><sp/>==<sp/><ref refid="classRHGenericDriver_1a6d2e9824e29c9d5e9ad28682e53ea974" kindref="member">_thisAddress</ref><sp/>||</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1abff3740bc072a2d435194a7860b2bfe3" kindref="member">_rxHeaderTo</ref><sp/>==<sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1ae4050e2769ea54086c074bace6d6f9a5" kindref="member">RH_BROADCAST_ADDRESS</ref>)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1abf09ee8b0cc1bf2b64dc0d963895ff71" kindref="member">_rxGood</ref>++;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a03d4a80e90eb918841c2e63d79536f5d" kindref="member">_rxBufValid</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a917a6b16ca2be2da530516220560cf43" kindref="member">RH_RF95::available</ref>()</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>==<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" kindref="member">RHModeTx</ref>)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ade668dcd0730fef266c8d94c7e6e7085" kindref="member">setModeRx</ref>();</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a03d4a80e90eb918841c2e63d79536f5d" kindref="member">_rxBufValid</ref>;<sp/></highlight><highlight class="comment">//<sp/>Will<sp/>be<sp/>set<sp/>by<sp/>the<sp/>interrupt<sp/>handler<sp/>when<sp/>a<sp/>good<sp/>message<sp/>is<sp/>received</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a1af385a295c834e88610dfcfb4112fb2" kindref="member">RH_RF95::clearRxBuf</ref>()</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a2c90fff0c5ce0e23e9d63e51345a039c" kindref="member">ATOMIC_BLOCK_START</ref>;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a03d4a80e90eb918841c2e63d79536f5d" kindref="member">_rxBufValid</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1aa553f8428e9528dc43a78a983b379110" kindref="member">_bufLen</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1af6ea392035217debede073b3c864a056" kindref="member">ATOMIC_BLOCK_END</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b" kindref="member">RH_RF95::recv</ref>(uint8_t*<sp/>buf,<sp/>uint8_t*<sp/>len)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classRH__RF95_1a917a6b16ca2be2da530516220560cf43" kindref="member">available</ref>())</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(buf<sp/>&amp;&amp;<sp/>len)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a2c90fff0c5ce0e23e9d63e51345a039c" kindref="member">ATOMIC_BLOCK_START</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Skip<sp/>the<sp/>4<sp/>headers<sp/>that<sp/>are<sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>rxBuf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*len<sp/>&gt;<sp/><ref refid="classRH__RF95_1aa553f8428e9528dc43a78a983b379110" kindref="member">_bufLen</ref>-<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a0ed28dfc5bdb8a3c2ee093882ebe1e3f" kindref="member">RH_RF95_HEADER_LEN</ref>)</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*len<sp/>=<sp/><ref refid="classRH__RF95_1aa553f8428e9528dc43a78a983b379110" kindref="member">_bufLen</ref>-<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a0ed28dfc5bdb8a3c2ee093882ebe1e3f" kindref="member">RH_RF95_HEADER_LEN</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(buf,<sp/><ref refid="classRH__RF95_1addc6c7d4b752ee8f35595ed35161908f" kindref="member">_buf</ref>+<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a0ed28dfc5bdb8a3c2ee093882ebe1e3f" kindref="member">RH_RF95_HEADER_LEN</ref>,<sp/>*len);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1af6ea392035217debede073b3c864a056" kindref="member">ATOMIC_BLOCK_END</ref>;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a1af385a295c834e88610dfcfb4112fb2" kindref="member">clearRxBuf</ref>();<sp/></highlight><highlight class="comment">//<sp/>This<sp/>message<sp/>accepted<sp/>and<sp/>cleared</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1ae7d3743511fdcc1b41f5f8e6b0964c1f" kindref="member">RH_RF95::send</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>data,<sp/>uint8_t<sp/>len)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&gt;<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1ac710e297f651a9f10a5b8c7d1756278b" kindref="member">RH_RF95_MAX_MESSAGE_LEN</ref>)</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" kindref="member">waitPacketSent</ref>();<sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>we<sp/>dont<sp/>interrupt<sp/>an<sp/>outgoing<sp/>message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" kindref="member">setModeIdle</ref>();</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>FIFO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a6d1c9b5733d548eeb74f2981e879ea80" kindref="member">RH_RF95_REG_0D_FIFO_ADDR_PTR</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a764eed31b8443c79d9a885749009d60f" kindref="member">RH_RF95_REG_00_FIFO</ref>,<sp/><ref refid="classRHGenericDriver_1a759debcdbdb837cea024f777020203e5" kindref="member">_txHeaderTo</ref>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a764eed31b8443c79d9a885749009d60f" kindref="member">RH_RF95_REG_00_FIFO</ref>,<sp/><ref refid="classRHGenericDriver_1a2c7cdccccf1b17c73ef95dca6d3075f9" kindref="member">_txHeaderFrom</ref>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a764eed31b8443c79d9a885749009d60f" kindref="member">RH_RF95_REG_00_FIFO</ref>,<sp/><ref refid="classRHGenericDriver_1ad0eafb5a8316b90ad8cd9d42234517da" kindref="member">_txHeaderId</ref>);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a764eed31b8443c79d9a885749009d60f" kindref="member">RH_RF95_REG_00_FIFO</ref>,<sp/><ref refid="classRHGenericDriver_1abf4db9bddfee361cc44fbf4bd22202bc" kindref="member">_txHeaderFlags</ref>);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>message<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a559b2c489825fe1ae737cb4371956d3d" kindref="member">spiBurstWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a764eed31b8443c79d9a885749009d60f" kindref="member">RH_RF95_REG_00_FIFO</ref>,<sp/>data,<sp/>len);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1ac40a89475b03c5398153fe22f6301e1a" kindref="member">RH_RF95_REG_22_PAYLOAD_LENGTH</ref>,<sp/>len<sp/>+<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a0ed28dfc5bdb8a3c2ee093882ebe1e3f" kindref="member">RH_RF95_HEADER_LEN</ref>);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a46330e9d7ec87255b91d0e4297cc8814" kindref="member">setModeTx</ref>();<sp/></highlight><highlight class="comment">//<sp/>Start<sp/>the<sp/>transmitter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>when<sp/>Tx<sp/>is<sp/>done,<sp/>interruptHandler<sp/>will<sp/>fire<sp/>and<sp/>radio<sp/>mode<sp/>will<sp/>return<sp/>to<sp/>STANDBY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1af82a441a5946b538f60f31e727009750" kindref="member">RH_RF95::printRegisters</ref>()</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>RH_HAVE_SERIAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61a" kindref="member">registers</ref>[]<sp/>=<sp/>{<sp/>0x01,<sp/>0x06,<sp/>0x07,<sp/>0x08,<sp/>0x09,<sp/>0x0a,<sp/>0x0b,<sp/>0x0c,<sp/>0x0d,<sp/>0x0e,<sp/>0x0f,<sp/>0x10,<sp/>0x11,<sp/>0x12,<sp/>0x13,<sp/>0x014,<sp/>0x15,<sp/>0x16,<sp/>0x17,<sp/>0x18,<sp/>0x19,<sp/>0x1a,<sp/>0x1b,<sp/>0x1c,<sp/>0x1d,<sp/>0x1e,<sp/>0x1f,<sp/>0x20,<sp/>0x21,<sp/>0x22,<sp/>0x23,<sp/>0x24,<sp/>0x25,<sp/>0x26,<sp/>0x27};</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>i;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61a" kindref="member">registers</ref>);<sp/>i++)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(<ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61a" kindref="member">registers</ref>[i],<sp/>HEX);</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(<ref refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" kindref="member">spiRead</ref>(<ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61a" kindref="member">registers</ref>[i]),<sp/>HEX);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal">uint8_t<sp/><ref refid="classRH__RF95_1af910c0670d3f3cc158355f20a2361485" kindref="member">RH_RF95::maxMessageLength</ref>()</highlight></codeline>
+<codeline lineno="271"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1ac710e297f651a9f10a5b8c7d1756278b" kindref="member">RH_RF95_MAX_MESSAGE_LEN</ref>;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a854c2eaa2f3cf9583453ff09f15e1099" kindref="member">RH_RF95::setFrequency</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>centre)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Frf<sp/>=<sp/>FRF<sp/>/<sp/>FSTEP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>frf<sp/>=<sp/>(centre<sp/>*<sp/>1000000.0)<sp/>/<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a7da634807765f3f2025f0296b4e256d7" kindref="member">RH_RF95_FSTEP</ref>;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a90e4c782e5b84ffa4efce206fd75e6d2" kindref="member">RH_RF95_REG_06_FRF_MSB</ref>,<sp/>(frf<sp/>&gt;&gt;<sp/>16)<sp/>&amp;<sp/>0xff);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1ad72bc6e3a53f1f2d1fb147a324aca800" kindref="member">RH_RF95_REG_07_FRF_MID</ref>,<sp/>(frf<sp/>&gt;&gt;<sp/>8)<sp/>&amp;<sp/>0xff);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a65f578edcc8585fb85092aa1301872d5" kindref="member">RH_RF95_REG_08_FRF_LSB</ref>,<sp/>frf<sp/>&amp;<sp/>0xff);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" kindref="member">RH_RF95::setModeIdle</ref>()</highlight></codeline>
+<codeline lineno="287"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>!=<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" kindref="member">RHModeIdle</ref>)</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a44cfb9c1ca9f68fe1e6623415ac2fade" kindref="member">RH_RF95_REG_01_OP_MODE</ref>,<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1adaaba316a7eb60cceef2ac6a8649f550" kindref="member">RH_RF95_MODE_STDBY</ref>);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>=<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" kindref="member">RHModeIdle</ref>;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1aa9184ab8aec1c3c54a275d08c7e85c66" kindref="member">RH_RF95::sleep</ref>()</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>!=<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" kindref="member">RHModeSleep</ref>)</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a44cfb9c1ca9f68fe1e6623415ac2fade" kindref="member">RH_RF95_REG_01_OP_MODE</ref>,<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1acc6a3326284bdca07e6a16de48ca44ce" kindref="member">RH_RF95_MODE_SLEEP</ref>);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>=<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" kindref="member">RHModeSleep</ref>;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1ade668dcd0730fef266c8d94c7e6e7085" kindref="member">RH_RF95::setModeRx</ref>()</highlight></codeline>
+<codeline lineno="306"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>!=<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" kindref="member">RHModeRx</ref>)</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a44cfb9c1ca9f68fe1e6623415ac2fade" kindref="member">RH_RF95_REG_01_OP_MODE</ref>,<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1af09fc626786f2aadf766a857816e3289" kindref="member">RH_RF95_MODE_RXCONTINUOUS</ref>);</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a693efa45b361cb145a8ee2bdd592ec65" kindref="member">RH_RF95_REG_40_DIO_MAPPING1</ref>,<sp/>0x00);<sp/></highlight><highlight class="comment">//<sp/>Interrupt<sp/>on<sp/>RxDone</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>=<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" kindref="member">RHModeRx</ref>;</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a46330e9d7ec87255b91d0e4297cc8814" kindref="member">RH_RF95::setModeTx</ref>()</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>!=<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" kindref="member">RHModeTx</ref>)</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a44cfb9c1ca9f68fe1e6623415ac2fade" kindref="member">RH_RF95_REG_01_OP_MODE</ref>,<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a6f3ce4d4dbcfe5bef4083352f5243739" kindref="member">RH_RF95_MODE_TX</ref>);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a693efa45b361cb145a8ee2bdd592ec65" kindref="member">RH_RF95_REG_40_DIO_MAPPING1</ref>,<sp/>0x40);<sp/></highlight><highlight class="comment">//<sp/>Interrupt<sp/>on<sp/>TxDone</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref><sp/>=<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" kindref="member">RHModeTx</ref>;</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1ab273e242758e3cc2ed2679ef795a7196" kindref="member">RH_RF95::setTxPower</ref>(int8_t<sp/>power,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useRFO)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sigh,<sp/>different<sp/>behaviours<sp/>depending<sp/>on<sp/>whther<sp/>the<sp/>module<sp/>use<sp/>PA_BOOST<sp/>or<sp/>the<sp/>RFO<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>the<sp/>transmitter<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(useRFO)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(power<sp/>&gt;<sp/>14)</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>power<sp/>=<sp/>14;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(power<sp/>&lt;<sp/>-1)</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>power<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a710a8fa0c7b677929d621e29a7cddacb" kindref="member">RH_RF95_REG_09_PA_CONFIG</ref>,<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a1e6c9d3a986c0de71c4e4d822108d31d" kindref="member">RH_RF95_MAX_POWER</ref><sp/>|<sp/>(power<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(power<sp/>&gt;<sp/>23)</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>power<sp/>=<sp/>23;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(power<sp/>&lt;<sp/>5)</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>power<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>RH_RF95_PA_DAC_ENABLE,<sp/>manual<sp/>says<sp/>&apos;+20dBm<sp/>on<sp/>PA_BOOST<sp/>when<sp/>OutputPower=0xf&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RH_RF95_PA_DAC_ENABLE<sp/>actually<sp/>adds<sp/>about<sp/>3dBm<sp/>to<sp/>all<sp/>power<sp/>levels.<sp/>We<sp/>will<sp/>us<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>21,<sp/>22<sp/>and<sp/>23dBm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(power<sp/>&gt;<sp/>20)</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a2899dab48497000444e53723319cc140" kindref="member">RH_RF95_REG_4D_PA_DAC</ref>,<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a1869a45eec2b937b63955687b57febb8" kindref="member">RH_RF95_PA_DAC_ENABLE</ref>);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>power<sp/>-=<sp/>3;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a2899dab48497000444e53723319cc140" kindref="member">RH_RF95_REG_4D_PA_DAC</ref>,<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a8aad5fd829d2400ce1c6aac8e7ee360e" kindref="member">RH_RF95_PA_DAC_DISABLE</ref>);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>RFM95/96/97/98<sp/>does<sp/>not<sp/>have<sp/>RFO<sp/>pins<sp/>connected<sp/>to<sp/>anything.<sp/>Only<sp/>PA_BOOST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>pin<sp/>is<sp/>connected,<sp/>so<sp/>must<sp/>use<sp/>PA_BOOST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pout<sp/>=<sp/>2<sp/>+<sp/>OutputPower.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>documentation<sp/>is<sp/>pretty<sp/>confusing<sp/>on<sp/>this<sp/>topic:<sp/>PaSelect<sp/>says<sp/>the<sp/>max<sp/>power<sp/>is<sp/>20dBm,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>but<sp/>OutputPower<sp/>claims<sp/>it<sp/>would<sp/>be<sp/>17dBm.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>My<sp/>measurements<sp/>show<sp/>20dBm<sp/>is<sp/>correct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a710a8fa0c7b677929d621e29a7cddacb" kindref="member">RH_RF95_REG_09_PA_CONFIG</ref>,<sp/><ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a512981100c7f281a6262fa7520f66e15" kindref="member">RH_RF95_PA_SELECT</ref><sp/>|<sp/>(power-5));</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Sets<sp/>registers<sp/>from<sp/>a<sp/>canned<sp/>modem<sp/>configuration<sp/>structure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" kindref="member">RH_RF95::setModemRegisters</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ModemConfig*<sp/>config)</highlight></codeline>
+<codeline lineno="369"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a73c735dbddab9d817d5119f8ab450a52" kindref="member">RH_RF95_REG_1D_MODEM_CONFIG1</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>config-&gt;reg_1d);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1afb03cc76781218f20015da40c5dcc257" kindref="member">RH_RF95_REG_1E_MODEM_CONFIG2</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>config-&gt;reg_1e);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a90d5c16ec66d5326649dd996b19f1c13" kindref="member">RH_RF95_REG_26_MODEM_CONFIG3</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>config-&gt;reg_26);</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Set<sp/>one<sp/>of<sp/>the<sp/>canned<sp/>FSK<sp/>Modem<sp/>configs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>true<sp/>if<sp/>its<sp/>a<sp/>valid<sp/>choice</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1af6f6131a36c2a0f84a5883a6ec7acfec" kindref="member">RH_RF95::setModemConfig</ref>(ModemConfigChoice<sp/>index)</highlight></codeline>
+<codeline lineno="378"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>&gt;<sp/>(</highlight><highlight class="keywordtype">signed</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(MODEM_CONFIG_TABLE)<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(ModemConfig)))</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>ModemConfig<sp/>cfg;</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy_P(&amp;cfg,<sp/>&amp;MODEM_CONFIG_TABLE[index],<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structRH__RF95_1_1ModemConfig" kindref="compound">RH_RF95::ModemConfig</ref>));</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" kindref="member">setModemRegisters</ref>(&amp;cfg);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1af0f16c9b450bdd13a421d282e58a09fb" kindref="member">RH_RF95::setPreambleLength</ref>(uint16_t<sp/>bytes)</highlight></codeline>
+<codeline lineno="390"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1ae48fbe3de22710dde32140c10f004b52" kindref="member">RH_RF95_REG_20_PREAMBLE_MSB</ref>,<sp/>bytes<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(<ref refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h_1a2f65d7f4413506d895976f7cf9ae1a3d" kindref="member">RH_RF95_REG_21_PREAMBLE_LSB</ref>,<sp/>bytes<sp/>&amp;<sp/>0xff);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp"/>
+  </compounddef>
+</doxygen>

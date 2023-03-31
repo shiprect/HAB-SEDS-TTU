@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="LoRaNodeV4_2RadioHead_2RHSPIDriver_8cpp" kind="file" language="C++">
+    <compoundname>RHSPIDriver.cpp</compoundname>
+    <includes refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h" local="no">RHSPIDriver.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>RHGenericDriver.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RHGenericSPI.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHGenericSPI_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>RHHardwareSPI.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHHardwareSPI_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RHSPIDriver.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RadioHead.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RadioHead_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>RHSPIDriver.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2014<sp/>Mike<sp/>McCauley</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>RHSPIDriver.cpp,v<sp/>1.10<sp/>2015/12/16<sp/>04:55:33<sp/>mikem<sp/>Exp<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="RadioHead_2RHSPIDriver_8h" kindref="compound">RHSPIDriver.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="classRHSPIDriver_1a4285d2fb96b09588556bfc4f8a143f61" kindref="member">RHSPIDriver::RHSPIDriver</ref>(uint8_t<sp/>slaveSelectPin,<sp/><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref>&amp;<sp/>spi)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>_spi(spi),</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>_slaveSelectPin(slaveSelectPin)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557" kindref="member">RHSPIDriver::init</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>the<sp/>SPI<sp/>library<sp/>with<sp/>the<sp/>default<sp/>speeds<sp/>etc:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>Arduino<sp/>Due<sp/>this<sp/>defaults<sp/>to<sp/>SPI1<sp/>on<sp/>the<sp/>central<sp/>group<sp/>of<sp/>6<sp/>SPI<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>.<ref refid="classRHGenericSPI_1ab2e3de040be2bd97400a993af114d26a" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>the<sp/>slave<sp/>select<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>Maple,<sp/>this<sp/>must<sp/>be<sp/>_after_<sp/>spi.begin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(100);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">uint8_t<sp/><ref refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" kindref="member">RHSPIDriver::spiRead</ref>(uint8_t<sp/>reg)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>val;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a2c90fff0c5ce0e23e9d63e51345a039c" kindref="member">ATOMIC_BLOCK_START</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>.<ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer</ref>(reg<sp/>&amp;<sp/>~<ref refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h_1a42f47c5b5d1be3e1b4527e7b6112004a" kindref="member">RH_SPI_WRITE_MASK</ref>);<sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>address<sp/>with<sp/>the<sp/>write<sp/>mask<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>val<sp/>=<sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>.<ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer</ref>(0);<sp/></highlight><highlight class="comment">//<sp/>The<sp/>written<sp/>value<sp/>is<sp/>ignored,<sp/>reg<sp/>value<sp/>is<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1af6ea392035217debede073b3c864a056" kindref="member">ATOMIC_BLOCK_END</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>val;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">uint8_t<sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">RHSPIDriver::spiWrite</ref>(uint8_t<sp/>reg,<sp/>uint8_t<sp/>val)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="Status_8hpp_1ae29aa2d4ae440022daaed1107eb306b3" kindref="member">status</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a2c90fff0c5ce0e23e9d63e51345a039c" kindref="member">ATOMIC_BLOCK_START</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Status_8hpp_1ae29aa2d4ae440022daaed1107eb306b3" kindref="member">status</ref><sp/>=<sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>.<ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer</ref>(reg<sp/>|<sp/><ref refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h_1a42f47c5b5d1be3e1b4527e7b6112004a" kindref="member">RH_SPI_WRITE_MASK</ref>);<sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>address<sp/>with<sp/>the<sp/>write<sp/>mask<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>.<ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer</ref>(val);<sp/></highlight><highlight class="comment">//<sp/>New<sp/>value<sp/>follows</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1af6ea392035217debede073b3c864a056" kindref="member">ATOMIC_BLOCK_END</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="Status_8hpp_1ae29aa2d4ae440022daaed1107eb306b3" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">uint8_t<sp/><ref refid="classRHSPIDriver_1af0ffebc1db1a6008734a37c4448fe926" kindref="member">RHSPIDriver::spiBurstRead</ref>(uint8_t<sp/>reg,<sp/>uint8_t*<sp/>dest,<sp/>uint8_t<sp/>len)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="Status_8hpp_1ae29aa2d4ae440022daaed1107eb306b3" kindref="member">status</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a2c90fff0c5ce0e23e9d63e51345a039c" kindref="member">ATOMIC_BLOCK_START</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Status_8hpp_1ae29aa2d4ae440022daaed1107eb306b3" kindref="member">status</ref><sp/>=<sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>.<ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer</ref>(reg<sp/>&amp;<sp/>~<ref refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h_1a42f47c5b5d1be3e1b4527e7b6112004a" kindref="member">RH_SPI_WRITE_MASK</ref>);<sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>start<sp/>address<sp/>with<sp/>the<sp/>write<sp/>mask<sp/>off</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len--)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>*dest++<sp/>=<sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>.<ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer</ref>(0);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1af6ea392035217debede073b3c864a056" kindref="member">ATOMIC_BLOCK_END</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="Status_8hpp_1ae29aa2d4ae440022daaed1107eb306b3" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">uint8_t<sp/><ref refid="classRHSPIDriver_1a559b2c489825fe1ae737cb4371956d3d" kindref="member">RHSPIDriver::spiBurstWrite</ref>(uint8_t<sp/>reg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>src,<sp/>uint8_t<sp/>len)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="Status_8hpp_1ae29aa2d4ae440022daaed1107eb306b3" kindref="member">status</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a2c90fff0c5ce0e23e9d63e51345a039c" kindref="member">ATOMIC_BLOCK_START</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>LOW);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="Status_8hpp_1ae29aa2d4ae440022daaed1107eb306b3" kindref="member">status</ref><sp/>=<sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>.<ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer</ref>(reg<sp/>|<sp/><ref refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h_1a42f47c5b5d1be3e1b4527e7b6112004a" kindref="member">RH_SPI_WRITE_MASK</ref>);<sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>start<sp/>address<sp/>with<sp/>the<sp/>write<sp/>mask<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(len--)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>.<ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer</ref>(*src++);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(<ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1af6ea392035217debede073b3c864a056" kindref="member">ATOMIC_BLOCK_END</ref>;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="Status_8hpp_1ae29aa2d4ae440022daaed1107eb306b3" kindref="member">status</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHSPIDriver_1a89cc3ee4a7cceb8b283e2efc3f2a6362" kindref="member">RHSPIDriver::setSlaveSelectPin</ref>(uint8_t<sp/>slaveSelectPin)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref><sp/>=<sp/>slaveSelectPin;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp"/>
+  </compounddef>
+</doxygen>

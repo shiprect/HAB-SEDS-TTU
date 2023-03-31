@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="tsudoku_2include_2MainMenu_8hpp" kind="file" language="C++">
+    <compoundname>MainMenu.hpp</compoundname>
+    <includes refid="tsudoku_2include_2Menu_8hpp" local="yes">Menu.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/MainMenu.hpp</label>
+        <link refid="tsudoku_2include_2MainMenu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu.hpp</label>
+        <link refid="tsudoku_2include_2Menu_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classMainMenu" prot="public">MainMenu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MAINMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAINMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_2include_2Menu_8hpp" kindref="compound">Menu.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Class:<sp/>MainMenu</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Purpose:<sp/>Menu-derived<sp/>class<sp/>that<sp/>displays<sp/>and<sp/>controls<sp/>the<sp/>main<sp/>menu<sp/>the<sp/>user<sp/>sees<sp/>before<sp/>and</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>after<sp/>every<sp/>game.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Private<sp/>variables:</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>BOTTOM_PADDING<sp/>-&gt;<sp/>Empty<sp/>space<sp/>between<sp/>the<sp/>bottom<sp/>of<sp/>the<sp/>terminal<sp/>window<sp/>and<sp/>the<sp/>in-terminal</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>display.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>RIGHT_PADDING<sp/>-&gt;<sp/>Empty<sp/>space<sp/>between<sp/>the<sp/>right<sp/>side<sp/>of<sp/>the<sp/>terminal<sp/>window<sp/>and<sp/>the<sp/>in</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>terminal<sp/>display.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>RESULT_MSG_SPACE<sp/>-&gt;<sp/>Minimum<sp/>number<sp/>of<sp/>lines<sp/>required<sp/>to<sp/>properly<sp/>display<sp/>the<sp/>puzzle&apos;s</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>evaluation<sp/>result.</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMainMenu" kindref="compound">MainMenu</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classMenu" kindref="compound">Menu</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classMainMenu_1a9f8609edcd657ac3150ae948e1eaf932" kindref="member">BOTTOM_PADDING</ref><sp/>=<sp/><ref refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" kindref="member">TOP_PADDING</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a6b08d51b12dd836c9dac66895e71362b" kindref="member">RIGHT_PADDING</ref><sp/>=<sp/><ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref>,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a2d9709d1142a5b1b9ac64fae6f1ba46c" kindref="member">RESULT_MSG_SPACE</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainMenu_1a7644a536b858b5095fd2e9915b1f10ba" kindref="member">display_menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainMenu_1a81e7e504259a458f72cde734c49ead31" kindref="member">set_VERTICAL_DIVIDER</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainMenu_1aedd8f211669de8140804de6668a2d669" kindref="member">set_IN_GAME_MENU_DISPLAY_SPACING</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainMenu_1afe1eeb3b23a29c670b5ba3640154d7ae" kindref="member">set_WINDOW_REQ</ref><sp/>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a53eecf9d5ffd094f54ac4193e7e57eaf" kindref="member">MainMenu</ref><sp/>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a0a19ddba3ac52bf39c09b579171c98f2" kindref="member">~MainMenu</ref><sp/>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" kindref="member">menu</ref><sp/>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" kindref="member">menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/MainMenu.hpp"/>
+  </compounddef>
+</doxygen>

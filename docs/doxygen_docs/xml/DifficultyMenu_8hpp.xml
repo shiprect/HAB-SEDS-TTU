@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="DifficultyMenu_8hpp" kind="file" language="C++">
+    <compoundname>DifficultyMenu.hpp</compoundname>
+    <includes refid="tsudoku_2include_2Menu_8hpp" local="yes">Menu.hpp</includes>
+    <includes refid="tsudoku_2include_2colors_8hpp" local="yes">colors.hpp</includes>
+    <includedby refid="DifficultyMenu_8cpp" local="yes">/home/chris/Documents/tsudoku/src/DifficultyMenu.cpp</includedby>
+    <includedby refid="Sudoku_8cpp" local="yes">/home/chris/Documents/tsudoku/src/Sudoku.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp</label>
+        <link refid="DifficultyMenu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu.hpp</label>
+        <link refid="tsudoku_2include_2Menu_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>colors.hpp</label>
+        <link refid="tsudoku_2include_2colors_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp</label>
+        <link refid="DifficultyMenu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/tsudoku/src/DifficultyMenu.cpp</label>
+        <link refid="DifficultyMenu_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/tsudoku/src/Sudoku.cpp</label>
+        <link refid="Sudoku_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classDifficultyMenu" prot="public">DifficultyMenu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>DIFFICULTYMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIFFICULTYMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_2include_2Menu_8hpp" kindref="compound">Menu.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_2include_2colors_8hpp" kindref="compound">colors.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Class:<sp/>DifficultyMenu</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Purpose:<sp/>Menu-derived<sp/>class<sp/>that<sp/>displays<sp/>the<sp/>names<sp/>of<sp/>difficulty<sp/>levels<sp/>before<sp/>starting<sp/>a<sp/>new</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>game<sp/>and<sp/>records<sp/>the<sp/>user&apos;s<sp/>choice.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Private<sp/>variables:</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>diff<sp/>-&gt;<sp/>The<sp/>difficulty<sp/>setting<sp/>chosen<sp/>for<sp/>the<sp/>current<sp/>game<sp/>(if<sp/>the<sp/>user<sp/>chose<sp/>to<sp/>start<sp/>a<sp/>new</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>game).</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classDifficultyMenu" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classDifficultyMenu" kindref="compound">DifficultyMenu</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classMenu" kindref="compound">Menu</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883a" kindref="member">difficulty_level</ref><sp/><ref refid="classDifficultyMenu_1ab942c796acd0f92844a772c9140a9433" kindref="member">diff</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifficultyMenu_1a3eae10d01a1d9a82d640e0601a625755" kindref="member">display_menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classDifficultyMenu_1abfac41d6c2f3bc6ec86ab4ff3968bcd3" kindref="member">set_difficulty_level</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883a" kindref="member">difficulty_level</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDifficultyMenu_1a12db87e9ce6e4a5253384f71907d7820" kindref="member">DifficultyMenu</ref><sp/>()<sp/>{}<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Default<sp/>constructor.<sp/>Does<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDifficultyMenu_1a77e95e9a5d897359802e16dced9a298a" kindref="member">~DifficultyMenu</ref><sp/>()<sp/>{}<sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Default<sp/>destructor.<sp/>Does<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classDifficultyMenu_1a062881435b4ba42d166d81276b38719e" kindref="member">menu</ref><sp/>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883a" kindref="member">difficulty_level</ref><sp/><ref refid="classDifficultyMenu_1a211f958dc341fd8d16251255b669aa6e" kindref="member">get_difficulty_level</ref><sp/>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_c1f80bb831a878fdd8e9dae632fb0abf" kind="dir">
+    <compoundname>/home/chris/Documents/ece6040/projects/project1</compoundname>
+    <innerfile refid="project1_8py">project1.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece6040/projects/project1/"/>
+  </compounddef>
+</doxygen>

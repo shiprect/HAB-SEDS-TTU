@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="sphinx__testing_2include_2Grid_8hpp" kind="file" language="C++">
+    <compoundname>Grid.hpp</compoundname>
+    <includes refid="sphinx__testing_2include_2Container_8hpp" local="yes">Container.hpp</includes>
+    <includes local="no">random</includes>
+    <includes local="no">array</includes>
+    <includes local="no">map</includes>
+    <includedby refid="sudoku_8hpp" local="yes">/home/chris/Documents/sphinx_testing/include/sudoku.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>Container.hpp</label>
+        <link refid="sphinx__testing_2include_2Container_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/include/Grid.hpp</label>
+        <link refid="sphinx__testing_2include_2Grid_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>values.hpp</label>
+        <link refid="values_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>array</label>
+      </node>
+      <node id="4">
+        <label>cstdint</label>
+      </node>
+      <node id="9">
+        <label>map</label>
+      </node>
+      <node id="7">
+        <label>random</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/include/Grid.hpp</label>
+        <link refid="sphinx__testing_2include_2Grid_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/sphinx_testing/include/sudoku.hpp</label>
+        <link refid="sudoku_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/sphinx_testing/src/main.cpp</label>
+        <link refid="sphinx__testing_2src_2main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/sphinx_testing/src/sudoku.cpp</label>
+        <link refid="sudoku_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classGrid" prot="public">Grid</innerclass>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GRID_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRID_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;values.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;Box.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;Row.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;Column.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_2include_2Container_8hpp" kindref="compound">Container.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;random&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//mt19937(),<sp/>uniform_int_distribution&lt;&gt;(),</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classGrid" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classGrid" kindref="compound">Grid</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classContainer" kindref="compound">Box</ref><sp/><ref refid="classGrid_1abe81452ffffeebcedb8d9021a2907c4a" kindref="member">matrices</ref>[9];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classContainer" kindref="compound">Row</ref><sp/><ref refid="classGrid_1af944dc4b45f6efe0d042687b340b0e42" kindref="member">rows</ref>[9];</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classContainer" kindref="compound">Column</ref><sp/><ref refid="classGrid_1af596bf94ed8445fe215890e3c02ab7f8" kindref="member">cols</ref>[9];</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGrid_1aefc7cb7aabd32b8eef0e512cdb3c3d9c" kindref="member">known_positions</ref>[81];</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//mt19937<sp/>//position_generator,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//generator;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//uniform_int_distribution&lt;uint8_t&gt;<sp/>//position_dist,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//dist;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;uint8_t,<sp/>cell&gt;<sp/><ref refid="classGrid_1acc11e7c7f6dcdcd63c2faf5154e5de42" kindref="member">_map_</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//maps<sp/>81<sp/>positions<sp/>to<sp/>positions<sp/>on<sp/>9x9<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGrid_1a6c664e7c3118c86058612017ae63e20e" kindref="member">init_positions</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array&lt;uint8_t,<sp/>81&gt;<sp/><ref refid="classGrid_1a94a3baa8454fb3c165887b2b373ea3dd" kindref="member">generate_solved_puzzle</ref><sp/>(time_t);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGrid_1a57080b9722c807317ce84a06d8c3d11a" kindref="member">set_starting_positions</ref><sp/>(uint8_t);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//uint8_t<sp/>next_position();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//uint8_t<sp/>next_value();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;uint8_t,<sp/>cell&gt;<sp/><ref refid="classGrid_1a56cbda07963230793289268a7cdac772" kindref="member">create_map</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGrid_1af04e216bea543fced5fce7ee7d017ed9" kindref="member">solve</ref>(uint8_t,<sp/>uint8_t,<sp/><ref refid="classContainer" kindref="compound">Row</ref>[9],<sp/><ref refid="classContainer" kindref="compound">Column</ref>[9],<sp/><ref refid="classContainer" kindref="compound">Box</ref>[9]);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGrid_1a4ac9ff4f63552b4c61ff90fcb35ad66c" kindref="member">Grid</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGrid_1a3661d0a7f998caaaf8627d7a67072116" kindref="member">~Grid</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGrid_1ac754d5b4894f975883035621bbeacc35" kindref="member">map_row</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGrid_1ace3bceec2b7ba523f78a8815afc45484" kindref="member">map_column</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGrid_1a6353cc368999b83bedbe5823621b4e7c" kindref="member">map_submatrix</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classContainer" kindref="compound">Box</ref>&amp;<sp/><ref refid="classGrid_1a7aa601961dbd52cd07c35ca80e31000b" kindref="member">get_submatrix</ref><sp/>(uint8_t);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classContainer" kindref="compound">Row</ref>&amp;<sp/><ref refid="classGrid_1adcebe05c84614d3e2a53beb69b90d973" kindref="member">get_row</ref><sp/>(uint8_t);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classContainer" kindref="compound">Column</ref>&amp;<sp/><ref refid="classGrid_1a94758486a4f76b7dacad8c27b6e2eed5" kindref="member">get_column</ref><sp/>(uint8_t);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGrid_1a03817f12af33e74d59c7f45996080c8c" kindref="member">get_row_index</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGrid_1aad342f31d0e9337b8cab2a650add3356" kindref="member">get_column_index</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGrid_1aa4d35b0e99680068d084e53678f2a686" kindref="member">get_submatrix_index</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>print(const<sp/>bool,<sp/>const<sp/>bool);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGrid_1a654fa6ae18969bf895c905fc524f912c" kindref="member">mvprintw</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//the<sp/>one<sp/>to<sp/>call<sp/>while<sp/>using<sp/>ncurses</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGrid_1ad6e4e4b30af768dde20d41f51292413d" kindref="member">printw</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref><sp/><ref refid="classGrid_1a9198799ac8829d485d77d16120e749ed" kindref="member">get_map</ref><sp/>(uint8_t);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGrid_1a2a83f154c949606c32f3e793db028437" kindref="member">get_map_size</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGrid_1a6b3521b0b6fd6a0cb551fe64b90d9805" kindref="member">at</ref><sp/>(uint8_t);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Virtual<sp/>function<sp/>candidate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classGrid_1a05557e973f89bc0f106d44e09491119d" kindref="member">operator [] </ref>(uint8_t);<sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Virtual<sp/>function<sp/>candidate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGrid_1a63104ed99a2886378c2d0e4c2f69ad49" kindref="member">is_known</ref><sp/>(uint8_t);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGrid_1a52eb92df53dd1306b999fb232654617e" kindref="member">evaluate</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Virtual<sp/>function<sp/>candidate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>value_exists<sp/>and<sp/>set_value<sp/>virtual<sp/>candidates<sp/>missing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp"/>
+  </compounddef>
+</doxygen>

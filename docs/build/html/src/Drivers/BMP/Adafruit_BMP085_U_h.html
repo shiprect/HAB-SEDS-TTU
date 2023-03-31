@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Adafruit_BMP085_U.h &#8212; HAB-SEDS-TTU 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/scrolls.css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Adafruit_BMP085_U.cpp" href="Adafruit_BMP085_U_cpp.html" />
+    <link rel="prev" title="BMP" href="dir.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../../index.html"
+          title="back to the documentation overview"><span>Adafruit_BMP085_U.h</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="dir.html">&laquo; BMP</a> |
+        <a href="#">Adafruit_BMP085_U.h</a>
+        | <a href="Adafruit_BMP085_U_cpp.html">Adafruit_BMP085_U.cpp &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div role="main">
+        
+  <section id="adafruit-bmp085-u-h">
+<h1>Adafruit_BMP085_U.h<a class="headerlink" href="#adafruit-bmp085-u-h" title="Permalink to this heading">¶</a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.BMP085_ADDRESS">
+<span class="target" id="Adafruit__BMP085__U_8h_1a32a3aa8c5356736b5700f4c136fe8646"></span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_ADDRESS</span></span></span><a class="headerlink" href="#c.BMP085_ADDRESS" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4Ut1_0">
+<span id="_CPPv3Ut1_0"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55b"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4Ut1_0" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_023BMP085_REGISTER_CAL_AC1E">
+<span id="_CPPv3NUt1_023BMP085_REGISTER_CAL_AC1E"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6999200e418e683015cb4551f874948f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_AC1</span></span></span><a class="headerlink" href="#_CPPv4NUt1_023BMP085_REGISTER_CAL_AC1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_023BMP085_REGISTER_CAL_AC2E">
+<span id="_CPPv3NUt1_023BMP085_REGISTER_CAL_AC2E"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5e85373127fef30c83d387782d0e67d0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_AC2</span></span></span><a class="headerlink" href="#_CPPv4NUt1_023BMP085_REGISTER_CAL_AC2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_023BMP085_REGISTER_CAL_AC3E">
+<span id="_CPPv3NUt1_023BMP085_REGISTER_CAL_AC3E"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ecca29ffff12313238d891093af2520"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_AC3</span></span></span><a class="headerlink" href="#_CPPv4NUt1_023BMP085_REGISTER_CAL_AC3E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_023BMP085_REGISTER_CAL_AC4E">
+<span id="_CPPv3NUt1_023BMP085_REGISTER_CAL_AC4E"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba295f1765768a433741186c00990955ba"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_AC4</span></span></span><a class="headerlink" href="#_CPPv4NUt1_023BMP085_REGISTER_CAL_AC4E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_023BMP085_REGISTER_CAL_AC5E">
+<span id="_CPPv3NUt1_023BMP085_REGISTER_CAL_AC5E"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba37886675e54ac7a2f4c405d6515059de"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_AC5</span></span></span><a class="headerlink" href="#_CPPv4NUt1_023BMP085_REGISTER_CAL_AC5E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_023BMP085_REGISTER_CAL_AC6E">
+<span id="_CPPv3NUt1_023BMP085_REGISTER_CAL_AC6E"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba7b56fbed86df839dfa7d1912171818fc"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_AC6</span></span></span><a class="headerlink" href="#_CPPv4NUt1_023BMP085_REGISTER_CAL_AC6E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_022BMP085_REGISTER_CAL_B1E">
+<span id="_CPPv3NUt1_022BMP085_REGISTER_CAL_B1E"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba40855131031111d736eb2f30e64c533c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_B1</span></span></span><a class="headerlink" href="#_CPPv4NUt1_022BMP085_REGISTER_CAL_B1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_022BMP085_REGISTER_CAL_B2E">
+<span id="_CPPv3NUt1_022BMP085_REGISTER_CAL_B2E"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bac09c5cc5f929afb312444c2a3a604a47"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_B2</span></span></span><a class="headerlink" href="#_CPPv4NUt1_022BMP085_REGISTER_CAL_B2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_022BMP085_REGISTER_CAL_MBE">
+<span id="_CPPv3NUt1_022BMP085_REGISTER_CAL_MBE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba257fdc9a1bda05a5598b9c15da513398"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_MB</span></span></span><a class="headerlink" href="#_CPPv4NUt1_022BMP085_REGISTER_CAL_MBE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_022BMP085_REGISTER_CAL_MCE">
+<span id="_CPPv3NUt1_022BMP085_REGISTER_CAL_MCE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba7a59a9e1ac87a1dc8c85e3a708acd9be"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_MC</span></span></span><a class="headerlink" href="#_CPPv4NUt1_022BMP085_REGISTER_CAL_MCE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_022BMP085_REGISTER_CAL_MDE">
+<span id="_CPPv3NUt1_022BMP085_REGISTER_CAL_MDE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba11870ebb5e1634adb52c843b67d4f5e2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CAL_MD</span></span></span><a class="headerlink" href="#_CPPv4NUt1_022BMP085_REGISTER_CAL_MDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_022BMP085_REGISTER_CHIPIDE">
+<span id="_CPPv3NUt1_022BMP085_REGISTER_CHIPIDE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bac1dfc765b526b0076a4ce260697454a0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CHIPID</span></span></span><a class="headerlink" href="#_CPPv4NUt1_022BMP085_REGISTER_CHIPIDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_023BMP085_REGISTER_VERSIONE">
+<span id="_CPPv3NUt1_023BMP085_REGISTER_VERSIONE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba7932a4888055f98d39459b5f71d9bda6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_VERSION</span></span></span><a class="headerlink" href="#_CPPv4NUt1_023BMP085_REGISTER_VERSIONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_025BMP085_REGISTER_SOFTRESETE">
+<span id="_CPPv3NUt1_025BMP085_REGISTER_SOFTRESETE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bad64ffff906f0b763b6c0a29948188564"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_SOFTRESET</span></span></span><a class="headerlink" href="#_CPPv4NUt1_025BMP085_REGISTER_SOFTRESETE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_023BMP085_REGISTER_CONTROLE">
+<span id="_CPPv3NUt1_023BMP085_REGISTER_CONTROLE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6816d5e052e9d122c10b79a44c5c30e1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_CONTROL</span></span></span><a class="headerlink" href="#_CPPv4NUt1_023BMP085_REGISTER_CONTROLE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_024BMP085_REGISTER_TEMPDATAE">
+<span id="_CPPv3NUt1_024BMP085_REGISTER_TEMPDATAE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55badbbe2e87f1a8877559a2212879ab0cb1"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_TEMPDATA</span></span></span><a class="headerlink" href="#_CPPv4NUt1_024BMP085_REGISTER_TEMPDATAE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_028BMP085_REGISTER_PRESSUREDATAE">
+<span id="_CPPv3NUt1_028BMP085_REGISTER_PRESSUREDATAE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bac55ff9dc9131f9e0541b51f79c50f0d2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_PRESSUREDATA</span></span></span><a class="headerlink" href="#_CPPv4NUt1_028BMP085_REGISTER_PRESSUREDATAE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_027BMP085_REGISTER_READTEMPCMDE">
+<span id="_CPPv3NUt1_027BMP085_REGISTER_READTEMPCMDE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba32131f64f1d981a19956341f1ca7831d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_READTEMPCMD</span></span></span><a class="headerlink" href="#_CPPv4NUt1_027BMP085_REGISTER_READTEMPCMDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4NUt1_031BMP085_REGISTER_READPRESSURECMDE">
+<span id="_CPPv3NUt1_031BMP085_REGISTER_READPRESSURECMDE"></span><span class="target" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba08c1f3c0270292fca9c96df65dc603c6"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_REGISTER_READPRESSURECMD</span></span></span><a class="headerlink" href="#_CPPv4NUt1_031BMP085_REGISTER_READPRESSURECMDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv413bmp085_mode_t">
+<span id="_CPPv313bmp085_mode_t"></span><span id="_CPPv213bmp085_mode_t"></span><span class="target" id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7b"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bmp085_mode_t</span></span></span><a class="headerlink" href="#_CPPv413bmp085_mode_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13bmp085_mode_t25BMP085_MODE_ULTRALOWPOWERE">
+<span id="_CPPv3N13bmp085_mode_t25BMP085_MODE_ULTRALOWPOWERE"></span><span id="_CPPv2N13bmp085_mode_t25BMP085_MODE_ULTRALOWPOWERE"></span><span class="target" id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7baadedc159681579a4c306ebf1654c5a32"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_MODE_ULTRALOWPOWER</span></span></span><a class="headerlink" href="#_CPPv4N13bmp085_mode_t25BMP085_MODE_ULTRALOWPOWERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13bmp085_mode_t20BMP085_MODE_STANDARDE">
+<span id="_CPPv3N13bmp085_mode_t20BMP085_MODE_STANDARDE"></span><span id="_CPPv2N13bmp085_mode_t20BMP085_MODE_STANDARDE"></span><span class="target" id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba59b57f5bbfc7d6b8ccb13ff09ac4397c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_MODE_STANDARD</span></span></span><a class="headerlink" href="#_CPPv4N13bmp085_mode_t20BMP085_MODE_STANDARDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13bmp085_mode_t19BMP085_MODE_HIGHRESE">
+<span id="_CPPv3N13bmp085_mode_t19BMP085_MODE_HIGHRESE"></span><span id="_CPPv2N13bmp085_mode_t19BMP085_MODE_HIGHRESE"></span><span class="target" id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7bae939b2b687268de84d2fc27c064509e0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_MODE_HIGHRES</span></span></span><a class="headerlink" href="#_CPPv4N13bmp085_mode_t19BMP085_MODE_HIGHRESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N13bmp085_mode_t24BMP085_MODE_ULTRAHIGHRESE">
+<span id="_CPPv3N13bmp085_mode_t24BMP085_MODE_ULTRAHIGHRESE"></span><span id="_CPPv2N13bmp085_mode_t24BMP085_MODE_ULTRAHIGHRESE"></span><span class="target" id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba6145303f80a1daa6873c32ca5fdd5b3e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BMP085_MODE_ULTRAHIGHRES</span></span></span><a class="headerlink" href="#_CPPv4N13bmp085_mode_t24BMP085_MODE_ULTRAHIGHRESE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv417bmp085_calib_data">
+<span id="_CPPv317bmp085_calib_data"></span><span id="_CPPv217bmp085_calib_data"></span><span id="bmp085_calib_data"></span><span class="target" id="structbmp085__calib__data"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bmp085_calib_data</span></span></span><a class="headerlink" href="#_CPPv417bmp085_calib_data" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Adafruit_BMP085_U.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data3ac1E">
+<span id="_CPPv3N17bmp085_calib_data3ac1E"></span><span id="_CPPv2N17bmp085_calib_data3ac1E"></span><span id="bmp085_calib_data::ac1__int16_t"></span><span class="target" id="structbmp085__calib__data_1a8f808eba492852ca1b0a0cd61629ce5f"></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ac1</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data3ac1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data3ac2E">
+<span id="_CPPv3N17bmp085_calib_data3ac2E"></span><span id="_CPPv2N17bmp085_calib_data3ac2E"></span><span id="bmp085_calib_data::ac2__int16_t"></span><span class="target" id="structbmp085__calib__data_1ac9d1c1863d3a62844e516c2e3bbb5ac7"></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ac2</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data3ac2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data3ac3E">
+<span id="_CPPv3N17bmp085_calib_data3ac3E"></span><span id="_CPPv2N17bmp085_calib_data3ac3E"></span><span id="bmp085_calib_data::ac3__int16_t"></span><span class="target" id="structbmp085__calib__data_1a20bcdf35d893f1ded132f2645b7a6f5a"></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ac3</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data3ac3E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data3ac4E">
+<span id="_CPPv3N17bmp085_calib_data3ac4E"></span><span id="_CPPv2N17bmp085_calib_data3ac4E"></span><span id="bmp085_calib_data::ac4__uint16_t"></span><span class="target" id="structbmp085__calib__data_1af516b64047136528a997aa75b56f597c"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ac4</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data3ac4E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data3ac5E">
+<span id="_CPPv3N17bmp085_calib_data3ac5E"></span><span id="_CPPv2N17bmp085_calib_data3ac5E"></span><span id="bmp085_calib_data::ac5__uint16_t"></span><span class="target" id="structbmp085__calib__data_1aa9097616ddd245e0ccfc3ae2b0b79d24"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ac5</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data3ac5E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data3ac6E">
+<span id="_CPPv3N17bmp085_calib_data3ac6E"></span><span id="_CPPv2N17bmp085_calib_data3ac6E"></span><span id="bmp085_calib_data::ac6__uint16_t"></span><span class="target" id="structbmp085__calib__data_1a7ece6824a6e65a631cdafdcf0f3210ed"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ac6</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data3ac6E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data2b1E">
+<span id="_CPPv3N17bmp085_calib_data2b1E"></span><span id="_CPPv2N17bmp085_calib_data2b1E"></span><span id="bmp085_calib_data::b1__int16_t"></span><span class="target" id="structbmp085__calib__data_1a7a2fda649e8dfb2ac8f2164ce3d02194"></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">b1</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data2b1E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data2b2E">
+<span id="_CPPv3N17bmp085_calib_data2b2E"></span><span id="_CPPv2N17bmp085_calib_data2b2E"></span><span id="bmp085_calib_data::b2__int16_t"></span><span class="target" id="structbmp085__calib__data_1ac0ab7a73d5b1e92a05f9bc404b6933c6"></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">b2</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data2b2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data2mbE">
+<span id="_CPPv3N17bmp085_calib_data2mbE"></span><span id="_CPPv2N17bmp085_calib_data2mbE"></span><span id="bmp085_calib_data::mb__int16_t"></span><span class="target" id="structbmp085__calib__data_1a7f474f6ec30b50ba31fd1f1563a96120"></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mb</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data2mbE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data2mcE">
+<span id="_CPPv3N17bmp085_calib_data2mcE"></span><span id="_CPPv2N17bmp085_calib_data2mcE"></span><span id="bmp085_calib_data::mc__int16_t"></span><span class="target" id="structbmp085__calib__data_1a5b74fa720b0cece5c0f82f7efcbf4e20"></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mc</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data2mcE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N17bmp085_calib_data2mdE">
+<span id="_CPPv3N17bmp085_calib_data2mdE"></span><span id="_CPPv2N17bmp085_calib_data2mdE"></span><span id="bmp085_calib_data::md__int16_t"></span><span class="target" id="structbmp085__calib__data_1a15d87676d309b6f6ccc2c1b04c956cef"></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">md</span></span></span><a class="headerlink" href="#_CPPv4N17bmp085_calib_data2mdE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv423Adafruit_BMP085_Unified">
+<span id="_CPPv323Adafruit_BMP085_Unified"></span><span id="_CPPv223Adafruit_BMP085_Unified"></span><span id="Adafruit_BMP085_Unified"></span><span class="target" id="classAdafruit__BMP085__Unified"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Adafruit_BMP085_Unified</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="Adafruit_Sensor_h.html#_CPPv415Adafruit_Sensor" title="Adafruit_Sensor"><span class="n"><span class="pre">Adafruit_Sensor</span></span></a><a class="headerlink" href="#_CPPv423Adafruit_BMP085_Unified" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Adafruit_BMP085_U.h&gt;</em></div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified23Adafruit_BMP085_UnifiedE7int32_t">
+<span id="_CPPv3N23Adafruit_BMP085_Unified23Adafruit_BMP085_UnifiedE7int32_t"></span><span id="_CPPv2N23Adafruit_BMP085_Unified23Adafruit_BMP085_UnifiedE7int32_t"></span><span id="Adafruit_BMP085_Unified::Adafruit_BMP085_Unified__int32_t"></span><span class="target" id="classAdafruit__BMP085__Unified_1a9411ffe6c882ce1aec61a6227db3e47c"></span><span class="sig-name descname"><span class="n"><span class="pre">Adafruit_BMP085_Unified</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sensorID</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified23Adafruit_BMP085_UnifiedE7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Instantiates a new <a class="reference internal" href="#classAdafruit__BMP085__Unified"><span class="std std-ref">Adafruit_BMP085_Unified</span></a> class. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified5beginE13bmp085_mode_t">
+<span id="_CPPv3N23Adafruit_BMP085_Unified5beginE13bmp085_mode_t"></span><span id="_CPPv2N23Adafruit_BMP085_Unified5beginE13bmp085_mode_t"></span><span id="Adafruit_BMP085_Unified::begin__bmp085_mode_t"></span><span class="target" id="classAdafruit__BMP085__Unified_1a19afa291aca37fbfaa5cf02137c5777f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">begin</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv413bmp085_mode_t" title="bmp085_mode_t"><span class="n"><span class="pre">bmp085_mode_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">BMP085_MODE_ULTRAHIGHRES</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified5beginE13bmp085_mode_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Setups the HW. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified14getTemperatureEPf">
+<span id="_CPPv3N23Adafruit_BMP085_Unified14getTemperatureEPf"></span><span id="_CPPv2N23Adafruit_BMP085_Unified14getTemperatureEPf"></span><span id="Adafruit_BMP085_Unified::getTemperature__floatP"></span><span class="target" id="classAdafruit__BMP085__Unified_1a4d74250c9406e7360e1a8b4f13610e8d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTemperature</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">temp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified14getTemperatureEPf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads the temperatures in degrees Celsius. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified11getPressureEPf">
+<span id="_CPPv3N23Adafruit_BMP085_Unified11getPressureEPf"></span><span id="_CPPv2N23Adafruit_BMP085_Unified11getPressureEPf"></span><span id="Adafruit_BMP085_Unified::getPressure__floatP"></span><span class="target" id="classAdafruit__BMP085__Unified_1abdc7b3759a57b5c03ba09873a39a1839"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPressure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pressure</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified11getPressureEPf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gets the compensated pressure level in kPa. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified18pressureToAltitudeEff">
+<span id="_CPPv3N23Adafruit_BMP085_Unified18pressureToAltitudeEff"></span><span id="_CPPv2N23Adafruit_BMP085_Unified18pressureToAltitudeEff"></span><span id="Adafruit_BMP085_Unified::pressureToAltitude__float.float"></span><span class="target" id="classAdafruit__BMP085__Unified_1a899d8915f530ad7be9e2cab86b26d86f"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pressureToAltitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">seaLevel</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atmospheric</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified18pressureToAltitudeEff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculates the altitude (in meters) from the specified atmospheric pressure (in hPa), and sea-level pressure (in hPa).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>seaLevel</strong> – Sea-level pressure in hPa </p></li>
+<li><p><strong>atmospheric</strong> – Atmospheric pressure in hPa </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified19seaLevelForAltitudeEff">
+<span id="_CPPv3N23Adafruit_BMP085_Unified19seaLevelForAltitudeEff"></span><span id="_CPPv2N23Adafruit_BMP085_Unified19seaLevelForAltitudeEff"></span><span id="Adafruit_BMP085_Unified::seaLevelForAltitude__float.float"></span><span class="target" id="classAdafruit__BMP085__Unified_1aa5a5cb715d056811b1cee546997edbbc"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seaLevelForAltitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">altitude</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atmospheric</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified19seaLevelForAltitudeEff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculates the pressure at sea level (in hPa) from the specified altitude (in meters), and atmospheric pressure (in hPa). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>altitude</strong> – Altitude in meters </p></li>
+<li><p><strong>atmospheric</strong> – Atmospheric pressure in hPa </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified18pressureToAltitudeEfff">
+<span id="_CPPv3N23Adafruit_BMP085_Unified18pressureToAltitudeEfff"></span><span id="_CPPv2N23Adafruit_BMP085_Unified18pressureToAltitudeEfff"></span><span id="Adafruit_BMP085_Unified::pressureToAltitude__float.float.float"></span><span class="target" id="classAdafruit__BMP085__Unified_1a5c1fe10ee79f4f7f224102f919f27e41"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pressureToAltitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">seaLevel</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atmospheric</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">temp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified18pressureToAltitudeEfff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculates the altitude (in meters) from the specified atmospheric pressure (in hPa), and sea-level pressure (in hPa). Note that this function just calls the overload of pressureToAltitude which takes seaLevel and atmospheric pressure&amp;#8212;temperature is ignored. The original implementation of this function was based on calculations from Wikipedia which are not accurate at higher altitudes. To keep compatibility with old code this function remains with the same interface, but it calls the more accurate calculation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>seaLevel</strong> – Sea-level pressure in hPa </p></li>
+<li><p><strong>atmospheric</strong> – Atmospheric pressure in hPa </p></li>
+<li><p><strong>temp</strong> – Temperature in degrees Celsius </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified19seaLevelForAltitudeEfff">
+<span id="_CPPv3N23Adafruit_BMP085_Unified19seaLevelForAltitudeEfff"></span><span id="_CPPv2N23Adafruit_BMP085_Unified19seaLevelForAltitudeEfff"></span><span id="Adafruit_BMP085_Unified::seaLevelForAltitude__float.float.float"></span><span class="target" id="classAdafruit__BMP085__Unified_1aaf8f96a7190ab72a6de44719ebb934f5"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seaLevelForAltitude</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">altitude</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">atmospheric</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">temp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified19seaLevelForAltitudeEfff" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Calculates the pressure at sea level (in hPa) from the specified altitude (in meters), and atmospheric pressure (in hPa). Note that this function just calls the overload of seaLevelForAltitude which takes altitude and atmospheric pressure&amp;#8212;temperature is ignored. The original implementation of this function was based on calculations from Wikipedia which are not accurate at higher altitudes. To keep compatibility with old code this function remains with the same interface, but it calls the more accurate calculation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>altitude</strong> – Altitude in meters </p></li>
+<li><p><strong>atmospheric</strong> – Atmospheric pressure in hPa </p></li>
+<li><p><strong>temp</strong> – Temperature in degrees Celsius </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified8getEventEP15sensors_event_t">
+<span id="_CPPv3N23Adafruit_BMP085_Unified8getEventEP15sensors_event_t"></span><span id="_CPPv2N23Adafruit_BMP085_Unified8getEventEP15sensors_event_t"></span><span id="Adafruit_BMP085_Unified::getEvent__sensors_event_tP"></span><span class="target" id="classAdafruit__BMP085__Unified_1a75df7711caf4c3a80831cb9c9327aeff"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEvent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="Adafruit_Sensor_h.html#_CPPv415sensors_event_t" title="sensors_event_t"><span class="n"><span class="pre">sensors_event_t</span></span></a><span class="p"><span class="pre">*</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified8getEventEP15sensors_event_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Reads the sensor and returns the data as a <a class="reference internal" href="Adafruit_Sensor_h.html#structsensors__event__t"><span class="std std-ref">sensors_event_t</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified9getSensorEP8sensor_t">
+<span id="_CPPv3N23Adafruit_BMP085_Unified9getSensorEP8sensor_t"></span><span id="_CPPv2N23Adafruit_BMP085_Unified9getSensorEP8sensor_t"></span><span id="Adafruit_BMP085_Unified::getSensor__sensor_tP"></span><span class="target" id="classAdafruit__BMP085__Unified_1acb3b37e177179ebd4fc0680c188c5280"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSensor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="Adafruit_Sensor_h.html#_CPPv48sensor_t" title="sensor_t"><span class="n"><span class="pre">sensor_t</span></span></a><span class="p"><span class="pre">*</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified9getSensorEP8sensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Provides the <a class="reference internal" href="Adafruit_Sensor_h.html#structsensor__t"><span class="std std-ref">sensor_t</span></a> data for this sensor. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified9computeB5E7int32_t">
+<span id="_CPPv3N23Adafruit_BMP085_Unified9computeB5E7int32_t"></span><span id="_CPPv2N23Adafruit_BMP085_Unified9computeB5E7int32_t"></span><span id="Adafruit_BMP085_Unified::computeB5__int32_t"></span><span class="target" id="classAdafruit__BMP085__Unified_1aea3f76eb40f65b3545df730b9fe76553"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">computeB5</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ut</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified9computeB5E7int32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Compute B5 coefficient used in temperature &amp; pressure calcs. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N23Adafruit_BMP085_Unified9_sensorIDE">
+<span id="_CPPv3N23Adafruit_BMP085_Unified9_sensorIDE"></span><span id="_CPPv2N23Adafruit_BMP085_Unified9_sensorIDE"></span><span id="Adafruit_BMP085_Unified::_sensorID__int32_t"></span><span class="target" id="classAdafruit__BMP085__Unified_1a31f5869ed0f0ba87733e1f9ea3bc7530"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_sensorID</span></span></span><a class="headerlink" href="#_CPPv4N23Adafruit_BMP085_Unified9_sensorIDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, William Stump, Chris Swindell, Luke Chapman, Emma Krebs, Mia Guzman.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

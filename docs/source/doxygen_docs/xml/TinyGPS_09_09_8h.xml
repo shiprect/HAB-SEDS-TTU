@@ -1,0 +1,625 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="TinyGPS_09_09_8h" kind="file" language="C++">
+    <compoundname>TinyGPS++.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes local="no">limits.h</includes>
+    <includedby refid="GPS_8hpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.hpp</includedby>
+    <includedby refid="TinyGPS_09_09_8cpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h</label>
+        <link refid="TinyGPS_09_09_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WProgram.h</label>
+      </node>
+      <node id="3">
+        <label>limits.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino</label>
+        <link refid="HAB-SEDS-TTU_8ino"/>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp</label>
+        <link refid="APRS_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp</label>
+        <link refid="ax25_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.cpp</label>
+        <link refid="GPS_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.hpp</label>
+        <link refid="GPS_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.cpp</label>
+        <link refid="TinyGPS_09_09_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h</label>
+        <link refid="TinyGPS_09_09_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp</label>
+        <link refid="SD__card_8cpp"/>
+      </node>
+      <node id="9">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</label>
+        <link refid="SD__card_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp</label>
+        <link refid="Status_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structRawDegrees" prot="public">RawDegrees</innerclass>
+    <innerclass refid="structTinyGPSLocation" prot="public">TinyGPSLocation</innerclass>
+    <innerclass refid="structTinyGPSDate" prot="public">TinyGPSDate</innerclass>
+    <innerclass refid="structTinyGPSTime" prot="public">TinyGPSTime</innerclass>
+    <innerclass refid="structTinyGPSDecimal" prot="public">TinyGPSDecimal</innerclass>
+    <innerclass refid="structTinyGPSInteger" prot="public">TinyGPSInteger</innerclass>
+    <innerclass refid="structTinyGPSSpeed" prot="public">TinyGPSSpeed</innerclass>
+    <innerclass refid="structTinyGPSCourse" prot="public">TinyGPSCourse</innerclass>
+    <innerclass refid="structTinyGPSAltitude" prot="public">TinyGPSAltitude</innerclass>
+    <innerclass refid="structTinyGPSHDOP" prot="public">TinyGPSHDOP</innerclass>
+    <innerclass refid="classTinyGPSCustom" prot="public">TinyGPSCustom</innerclass>
+    <innerclass refid="classTinyGPSPlus" prot="public">TinyGPSPlus</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="TinyGPS_09_09_8h_1a210404d704c58b910ecee5bd7e97a7dc" prot="public" static="no">
+        <name>_GPS_VERSION</name>
+        <initializer>&quot;1.0.2&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="39" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TinyGPS_09_09_8h_1a15c78046c05b411cbcb3f93b7a452a97" prot="public" static="no">
+        <name>_GPS_MPH_PER_KNOT</name>
+        <initializer>1.15077945</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="40" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TinyGPS_09_09_8h_1a54cbb270522b52fe2c0f14eab76f032b" prot="public" static="no">
+        <name>_GPS_MPS_PER_KNOT</name>
+        <initializer>0.51444444</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="41" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TinyGPS_09_09_8h_1a757cab8e33085416dbafbc05cf71f6a9" prot="public" static="no">
+        <name>_GPS_KMPH_PER_KNOT</name>
+        <initializer>1.852</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="42" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TinyGPS_09_09_8h_1a51d2cc47a0dc5655cde4135c24fef480" prot="public" static="no">
+        <name>_GPS_MILES_PER_METER</name>
+        <initializer>0.00062137112</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="43" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TinyGPS_09_09_8h_1a49b3ac6a23c4f78931942c51810e3439" prot="public" static="no">
+        <name>_GPS_KM_PER_METER</name>
+        <initializer>0.001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="44" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TinyGPS_09_09_8h_1af1a3b64121f34d416925518e994b454f" prot="public" static="no">
+        <name>_GPS_FEET_PER_METER</name>
+        <initializer>3.2808399</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="45" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="TinyGPS_09_09_8h_1ad31ceaaeae16e1ff8e13640e3b012de3" prot="public" static="no">
+        <name>_GPS_MAX_FIELD_SIZE</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="46" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">TinyGPS++<sp/>-<sp/>a<sp/>small<sp/>GPS<sp/>library<sp/>for<sp/>Arduino<sp/>providing<sp/>universal<sp/>NMEA<sp/>parsing</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">Based<sp/>on<sp/>work<sp/>by<sp/>and<sp/>&quot;distanceBetween&quot;<sp/>and<sp/>&quot;courseTo&quot;<sp/>courtesy<sp/>of<sp/>Maarten<sp/>Lamers.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">Suggestion<sp/>to<sp/>add<sp/>satellites,<sp/>courseTo(),<sp/>and<sp/>cardinal()<sp/>by<sp/>Matt<sp/>Monson.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">Location<sp/>precision<sp/>improvements<sp/>suggested<sp/>by<sp/>Wayne<sp/>Holder.</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">Copyright<sp/>(C)<sp/>2008-2013<sp/>Mikal<sp/>Hart</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>St,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/><sp/>02110-1301<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__TinyGPSPlus_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__TinyGPSPlus_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(ARDUINO)<sp/>&amp;&amp;<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GPS_VERSION<sp/>&quot;1.0.2&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>software<sp/>version<sp/>of<sp/>this<sp/>library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GPS_MPH_PER_KNOT<sp/>1.15077945</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GPS_MPS_PER_KNOT<sp/>0.51444444</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GPS_KMPH_PER_KNOT<sp/>1.852</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GPS_MILES_PER_METER<sp/>0.00062137112</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GPS_KM_PER_METER<sp/>0.001</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GPS_FEET_PER_METER<sp/>3.2808399</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_GPS_MAX_FIELD_SIZE<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="structRawDegrees" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structRawDegrees" kindref="compound">RawDegrees</ref><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structRawDegrees_1a11831d9220f303bd716d9412af28e84e" kindref="member">deg</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structRawDegrees_1a13564009c60e20dbf03b158114d1c0e2" kindref="member">billionths</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structRawDegrees_1a39c31d2d0332155a4d2c975cec0a796f" kindref="member">negative</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structRawDegrees_1a156d5ced092fa1473b9b669a29be3509" kindref="member">RawDegrees</ref>()<sp/>:<sp/><ref refid="structRawDegrees_1a11831d9220f303bd716d9412af28e84e" kindref="member">deg</ref>(<sp/>0<sp/>),<sp/><ref refid="structRawDegrees_1a13564009c60e20dbf03b158114d1c0e2" kindref="member">billionths</ref>(<sp/>0<sp/>),<sp/><ref refid="structRawDegrees_1a39c31d2d0332155a4d2c975cec0a796f" kindref="member">negative</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="structTinyGPSLocation" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTinyGPSLocation" kindref="compound">TinyGPSLocation</ref><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1aa5182c29798506eb727058d884f20633" kindref="member">isValid</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1a891189d63dcd66e2c6be467bab3ff71f" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1a905822cea7a00e550d29d037acdde549" kindref="member">isUpdated</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1a6e80ce526dff7b9ac38fea8044baf16f" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSLocation_1ae5da08aba335d0515b7a84ce57b80179" kindref="member">age</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1a891189d63dcd66e2c6be467bab3ff71f" kindref="member">valid</ref><sp/>?<sp/>millis()<sp/>-<sp/><ref refid="structTinyGPSLocation_1a190521e30929eed4edc5288346646f16" kindref="member">lastCommitTime</ref><sp/>:<sp/>(uint32_t)<sp/>ULONG_MAX;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structRawDegrees" kindref="compound">RawDegrees</ref><sp/>&amp;<ref refid="structTinyGPSLocation_1abe5f28b0d636a1031af3cd98af863af6" kindref="member">rawLat</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSLocation_1a6e80ce526dff7b9ac38fea8044baf16f" kindref="member">updated</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1a05f5e708acc18037290aa7da4287845f" kindref="member">rawLatData</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structRawDegrees" kindref="compound">RawDegrees</ref><sp/>&amp;<ref refid="structTinyGPSLocation_1a4e20b4067a448ca0003fc65a3d3864d2" kindref="member">rawLng</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSLocation_1a6e80ce526dff7b9ac38fea8044baf16f" kindref="member">updated</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1a76809e2b20ccb0722886093eb230bf29" kindref="member">rawLngData</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1a86c3acea4f317b427eebb667e4d05a49" kindref="member">lat</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1a544e9009a5580b2fd5466821a5e5b782" kindref="member">lng</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSLocation_1a9bc435af16c3c5224fcd4b5c40d0c70f" kindref="member">TinyGPSLocation</ref>()<sp/>:<sp/><ref refid="structTinyGPSLocation_1a891189d63dcd66e2c6be467bab3ff71f" kindref="member">valid</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>),<sp/><ref refid="structTinyGPSLocation_1a6e80ce526dff7b9ac38fea8044baf16f" kindref="member">updated</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1a891189d63dcd66e2c6be467bab3ff71f" kindref="member">valid</ref>,<sp/><ref refid="structTinyGPSLocation_1a6e80ce526dff7b9ac38fea8044baf16f" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structRawDegrees" kindref="compound">RawDegrees</ref><sp/><ref refid="structTinyGPSLocation_1a05f5e708acc18037290aa7da4287845f" kindref="member">rawLatData</ref>,<sp/><ref refid="structTinyGPSLocation_1a76809e2b20ccb0722886093eb230bf29" kindref="member">rawLngData</ref>,<sp/><ref refid="structTinyGPSLocation_1a5c75e48c14bbdabef12f157634d9d96d" kindref="member">rawNewLatData</ref>,<sp/><ref refid="structTinyGPSLocation_1a198d72c29f14b74d72460adcdc4e30f8" kindref="member">rawNewLngData</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSLocation_1a190521e30929eed4edc5288346646f16" kindref="member">lastCommitTime</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1aa642f1dcad561199ec404129abbebbba" kindref="member">commit</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1abacba4b118a3351fed607874c85b747c" kindref="member">setLatitude</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" kindref="member">term</ref><sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSLocation_1ac55555d5765570efadfe1846d60b32e1" kindref="member">setLongitude</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" kindref="member">term</ref><sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="structTinyGPSDate" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTinyGPSDate" kindref="compound">TinyGPSDate</ref><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDate_1a3ae7825f840ef4ba0ecddbc22f741817" kindref="member">isValid</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDate_1a6b312ccebe3537eb9687211622bc5f26" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDate_1a1b913837130bb49ecd309eaf6bc205b1" kindref="member">isUpdated</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDate_1af92ee9facc35b637b589320ddffcce32" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSDate_1af8b9c057a28dcb490081fcfde2a0ee11" kindref="member">age</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDate_1a6b312ccebe3537eb9687211622bc5f26" kindref="member">valid</ref><sp/>?<sp/>millis()<sp/>-<sp/><ref refid="structTinyGPSDate_1acbece939f279507806570bb108311a88" kindref="member">lastCommitTime</ref><sp/>:<sp/>(uint32_t)<sp/>ULONG_MAX;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSDate_1a718150ae16f68afa9ae81f9d1b3ce3f4" kindref="member">value</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSDate_1af92ee9facc35b637b589320ddffcce32" kindref="member">updated</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDate_1ab141f37e0dda429ad041f9a951564677" kindref="member">date</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structTinyGPSDate_1ae2cc914fec377b429d99f01204f50d60" kindref="member">year</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structTinyGPSDate_1a6f3c5b4e72ef28b010f94ac9016315f3" kindref="member">month</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structTinyGPSDate_1ae8cc5f80c49e328f792d168a44062000" kindref="member">day</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSDate_1a4d5f23eb008cbfd385343687bf902003" kindref="member">TinyGPSDate</ref>()<sp/>:<sp/><ref refid="structTinyGPSDate_1a6b312ccebe3537eb9687211622bc5f26" kindref="member">valid</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>),<sp/><ref refid="structTinyGPSDate_1af92ee9facc35b637b589320ddffcce32" kindref="member">updated</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>),<sp/><ref refid="structTinyGPSDate_1ab141f37e0dda429ad041f9a951564677" kindref="member">date</ref>(<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDate_1a6b312ccebe3537eb9687211622bc5f26" kindref="member">valid</ref>,<sp/><ref refid="structTinyGPSDate_1af92ee9facc35b637b589320ddffcce32" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSDate_1ab141f37e0dda429ad041f9a951564677" kindref="member">date</ref>,<sp/><ref refid="structTinyGPSDate_1a81d6d90be898cf44e804e86a2f4a3d2d" kindref="member">newDate</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSDate_1acbece939f279507806570bb108311a88" kindref="member">lastCommitTime</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDate_1af5b0da173842da219e7c90d16e54c3e2" kindref="member">commit</ref>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDate_1a2ff2893de6b59fd4dcf828c6296e2e2e" kindref="member">setDate</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" kindref="member">term</ref><sp/>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="structTinyGPSTime" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTinyGPSTime" kindref="compound">TinyGPSTime</ref><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSTime_1a46b2dc7a7946885b509b9a2f83ae655c" kindref="member">isValid</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSTime_1ab4fd62a69d4f06a45164f6a4f4caae45" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSTime_1a0d6434dc19675d214f58347d513e7c69" kindref="member">isUpdated</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSTime_1a8af55d20c789d6bc3c759fd42d588c7b" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSTime_1ae0aba0cbd875a3e1fe5d7872171e79fc" kindref="member">age</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSTime_1ab4fd62a69d4f06a45164f6a4f4caae45" kindref="member">valid</ref><sp/>?<sp/>millis()<sp/>-<sp/><ref refid="structTinyGPSTime_1a3a033dc00767099f6c1b3c328ff586e4" kindref="member">lastCommitTime</ref><sp/>:<sp/>(uint32_t)<sp/>ULONG_MAX;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSTime_1afcdb632fee9d144b1414c9d7b95719f1" kindref="member">value</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSTime_1a8af55d20c789d6bc3c759fd42d588c7b" kindref="member">updated</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSTime_1ae9d8132463ce75723cc826be9a1b6380" kindref="member">time</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structTinyGPSTime_1a37fdb629b6ed0e31134214c7d07df2b1" kindref="member">hour</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structTinyGPSTime_1aef83c20c14d404219299da2d7e35cdce" kindref="member">minute</ref>();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structTinyGPSTime_1a729cab36ced07eb5607503663fbe33e8" kindref="member">second</ref>();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="structTinyGPSTime_1a1f74ad4a2a53e0ee19f8e3a6b2bc985f" kindref="member">centisecond</ref>();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSTime_1abd6dd7a576fd42cd6980c92eec77ab1d" kindref="member">TinyGPSTime</ref>()<sp/>:<sp/><ref refid="structTinyGPSTime_1ab4fd62a69d4f06a45164f6a4f4caae45" kindref="member">valid</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>),<sp/><ref refid="structTinyGPSTime_1a8af55d20c789d6bc3c759fd42d588c7b" kindref="member">updated</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>),<sp/><ref refid="structTinyGPSTime_1ae9d8132463ce75723cc826be9a1b6380" kindref="member">time</ref>(<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSTime_1ab4fd62a69d4f06a45164f6a4f4caae45" kindref="member">valid</ref>,<sp/><ref refid="structTinyGPSTime_1a8af55d20c789d6bc3c759fd42d588c7b" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSTime_1ae9d8132463ce75723cc826be9a1b6380" kindref="member">time</ref>,<sp/><ref refid="structTinyGPSTime_1ab6794a7906f46e0309ffa31a3682ea92" kindref="member">newTime</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSTime_1a3a033dc00767099f6c1b3c328ff586e4" kindref="member">lastCommitTime</ref>;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSTime_1a7d281752a3ce8360f02a782b938fee22" kindref="member">commit</ref>();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSTime_1a07646db66f928524a46b22030f3367c6" kindref="member">setTime</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" kindref="member">term</ref><sp/>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="structTinyGPSDecimal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTinyGPSDecimal" kindref="compound">TinyGPSDecimal</ref><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1a34e6448314c198fa204dfb22cd24fc7e" kindref="member">isValid</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1a858e8762c24b39ee28e5076275affef2" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1a8c7fd3ccd678b195d8f23bd1cb31d9ba" kindref="member">isUpdated</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1af0803d568a59f6212f2e88e2e5ee6077" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSDecimal_1a041cada3e406205d0878c9819eddbbbb" kindref="member">age</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1a858e8762c24b39ee28e5076275affef2" kindref="member">valid</ref><sp/>?<sp/>millis()<sp/>-<sp/><ref refid="structTinyGPSDecimal_1aaa47eb71175c36d4ba3ba0e94d0c752e" kindref="member">lastCommitTime</ref><sp/>:<sp/>(uint32_t)<sp/>ULONG_MAX;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSDecimal_1af0803d568a59f6212f2e88e2e5ee6077" kindref="member">updated</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1a187fd7724408f9828603ea4368eccb1d" kindref="member">val</ref>;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSDecimal_1ae09cbb1856cd57c7dcee52fb5fb1ba16" kindref="member">TinyGPSDecimal</ref>()<sp/>:<sp/><ref refid="structTinyGPSDecimal_1a858e8762c24b39ee28e5076275affef2" kindref="member">valid</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>),<sp/><ref refid="structTinyGPSDecimal_1af0803d568a59f6212f2e88e2e5ee6077" kindref="member">updated</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>),<sp/><ref refid="structTinyGPSDecimal_1a187fd7724408f9828603ea4368eccb1d" kindref="member">val</ref>(<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1a858e8762c24b39ee28e5076275affef2" kindref="member">valid</ref>,<sp/><ref refid="structTinyGPSDecimal_1af0803d568a59f6212f2e88e2e5ee6077" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSDecimal_1aaa47eb71175c36d4ba3ba0e94d0c752e" kindref="member">lastCommitTime</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="structTinyGPSDecimal_1a187fd7724408f9828603ea4368eccb1d" kindref="member">val</ref>,<sp/><ref refid="structTinyGPSDecimal_1ad8fa7dfb23e381b2353ea4ecaeaebc8b" kindref="member">newval</ref>;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1a37516916786d5c66990d5a1797cc8f86" kindref="member">commit</ref>();</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1a804fc590e73489e2f14b0daf7c8112b8" kindref="member">set</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" kindref="member">term</ref><sp/>);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="structTinyGPSInteger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTinyGPSInteger" kindref="compound">TinyGPSInteger</ref><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref>;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSInteger_1a3a76131645f7604b3f3e759b90f9373f" kindref="member">isValid</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSInteger_1a138eaae0df615bd436e5abb651c2e376" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSInteger_1a35234fdeeffdb934a93740db1aefa6a5" kindref="member">isUpdated</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSInteger_1a8551627f1054eea5ca2bd871606fa8a1" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSInteger_1aabd55511befbd769155c69e0c1208691" kindref="member">age</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSInteger_1a138eaae0df615bd436e5abb651c2e376" kindref="member">valid</ref><sp/>?<sp/>millis()<sp/>-<sp/><ref refid="structTinyGPSInteger_1ae738e3b0de372d0e8ba329f790cbc732" kindref="member">lastCommitTime</ref><sp/>:<sp/>(uint32_t)<sp/>ULONG_MAX;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSInteger_1a67de7e76d61dbd25eb32f701d8ce867b" kindref="member">value</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSInteger_1a8551627f1054eea5ca2bd871606fa8a1" kindref="member">updated</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSInteger_1a179c6615324c696606fb18093c1f2a74" kindref="member">val</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSInteger_1a017a71970fa652964a9e71b7ec945cec" kindref="member">TinyGPSInteger</ref>()<sp/>:<sp/><ref refid="structTinyGPSInteger_1a138eaae0df615bd436e5abb651c2e376" kindref="member">valid</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>),<sp/><ref refid="structTinyGPSInteger_1a8551627f1054eea5ca2bd871606fa8a1" kindref="member">updated</ref>(<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>),<sp/><ref refid="structTinyGPSInteger_1a179c6615324c696606fb18093c1f2a74" kindref="member">val</ref>(<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSInteger_1a138eaae0df615bd436e5abb651c2e376" kindref="member">valid</ref>,<sp/><ref refid="structTinyGPSInteger_1a8551627f1054eea5ca2bd871606fa8a1" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSInteger_1ae738e3b0de372d0e8ba329f790cbc732" kindref="member">lastCommitTime</ref>;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="structTinyGPSInteger_1a179c6615324c696606fb18093c1f2a74" kindref="member">val</ref>,<sp/><ref refid="structTinyGPSInteger_1a7f9bc12f55134d4b4028edca243afc87" kindref="member">newval</ref>;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSInteger_1a0b6f3cda527454e0fb0e59d9c75693ab" kindref="member">commit</ref>();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSInteger_1aa02f807a5831c726e6eea6892257e35c" kindref="member">set</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" kindref="member">term</ref><sp/>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="structTinyGPSSpeed" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTinyGPSSpeed" kindref="compound">TinyGPSSpeed</ref><sp/>:<sp/><ref refid="structTinyGPSDecimal" kindref="compound">TinyGPSDecimal</ref><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSSpeed_1aa3a38ce4ece3d8062c794b73f260395e" kindref="member">knots</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSSpeed_1a1809120167961ea9a85e860a964b1c6e" kindref="member">mph</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="TinyGPS_09_09_8h_1a15c78046c05b411cbcb3f93b7a452a97" kindref="member">_GPS_MPH_PER_KNOT</ref><sp/>*<sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSSpeed_1aacee536241e810cdf4ba7846d6c202cb" kindref="member">mps</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="TinyGPS_09_09_8h_1a54cbb270522b52fe2c0f14eab76f032b" kindref="member">_GPS_MPS_PER_KNOT</ref><sp/>*<sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSSpeed_1a7fee3c8f9f2fcc5f4a517bd6108f79dd" kindref="member">kmph</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="TinyGPS_09_09_8h_1a757cab8e33085416dbafbc05cf71f6a9" kindref="member">_GPS_KMPH_PER_KNOT</ref><sp/>*<sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="structTinyGPSCourse" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTinyGPSCourse" kindref="compound">TinyGPSCourse</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal" kindref="compound">TinyGPSDecimal</ref><sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSCourse_1a76dc8ae6c2fe5ead9b44c8d53a3272ca" kindref="member">deg</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="structTinyGPSAltitude" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTinyGPSAltitude" kindref="compound">TinyGPSAltitude</ref><sp/>:<sp/><ref refid="structTinyGPSDecimal" kindref="compound">TinyGPSDecimal</ref><sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSAltitude_1a5a39d145bb1778814007206c765189f7" kindref="member">meters</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSAltitude_1a5ae68d990ea08d4e21cfa6aefb46cc03" kindref="member">miles</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="TinyGPS_09_09_8h_1a51d2cc47a0dc5655cde4135c24fef480" kindref="member">_GPS_MILES_PER_METER</ref><sp/>*<sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSAltitude_1a1eb3e5b425784fc0db3e9ffe0f77f741" kindref="member">kilometers</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="TinyGPS_09_09_8h_1a49b3ac6a23c4f78931942c51810e3439" kindref="member">_GPS_KM_PER_METER</ref><sp/>*<sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSAltitude_1ac782babc0c485d47e6f57384e88b8cc8" kindref="member">feet</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="TinyGPS_09_09_8h_1af1a3b64121f34d416925518e994b454f" kindref="member">_GPS_FEET_PER_METER</ref><sp/>*<sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="structTinyGPSHDOP" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structTinyGPSHDOP" kindref="compound">TinyGPSHDOP</ref><sp/>:<sp/><ref refid="structTinyGPSDecimal" kindref="compound">TinyGPSDecimal</ref><sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSHDOP_1a27cd35588c96eefb690bba46497d20d7" kindref="member">hdop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>()<sp/>/<sp/>100.0;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref>;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="classTinyGPSCustom" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref><sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTinyGPSCustom_1ac82fa99f3bcd9811377dd5fa3e9e98c7" kindref="member">TinyGPSCustom</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTinyGPSCustom_1ac82fa99f3bcd9811377dd5fa3e9e98c7" kindref="member">TinyGPSCustom</ref>(<sp/><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref><sp/>&amp;<ref refid="HAB-SEDS-TTU_8ino_1a732b543a18bd3449ed1049120b68c932" kindref="member">gps</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSCustom_1ab3c8cb4f12d289cbf20abe6eccb3aa14" kindref="member">sentenceName</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1ae7302f115f94eab88739fa67bf6cbba1" kindref="member">termNumber</ref><sp/>);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1a3bf972f7e2e7e3f483071630e5ca8355" kindref="member">begin</ref>(<sp/><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref><sp/>&amp;<ref refid="HAB-SEDS-TTU_8ino_1a732b543a18bd3449ed1049120b68c932" kindref="member">gps</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*_sentenceName,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_termNumber<sp/>);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1ac735cdd0adb996de1d86bdcc15090977" kindref="member">isUpdated</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1a9cb408f7deeff94aeec23b49a3036f97" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1a6cc9903b3c45a321962642440204afeb" kindref="member">isValid</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1a579ba14a727c8fa4b65a756ddec209c8" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classTinyGPSCustom_1af5347ee2785bca9acb5a0f16fcc68ea0" kindref="member">age</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1a579ba14a727c8fa4b65a756ddec209c8" kindref="member">valid</ref><sp/>?<sp/>millis()<sp/>-<sp/><ref refid="classTinyGPSCustom_1acd99fe5bbe5f274de1c172079e80110b" kindref="member">lastCommitTime</ref><sp/>:<sp/>(uint32_t)<sp/>ULONG_MAX;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSCustom_1a03bb66f8d3e078b21c8a5033a88d8a32" kindref="member">value</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTinyGPSCustom_1a9cb408f7deeff94aeec23b49a3036f97" kindref="member">updated</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1afcfd3fec763e381e0ea41bf59085fa93" kindref="member">buffer</ref>;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1a3eea950a5ef62d6a226613fe72055dc4" kindref="member">commit</ref>();</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1a7fab13d1b33b96c112d896322ad9ec29" kindref="member">set</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*term<sp/>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1a750eb149054cc4dfdcb75967ed0e9c32" kindref="member">stagingBuffer</ref>[<ref refid="TinyGPS_09_09_8h_1ad31ceaaeae16e1ff8e13640e3b012de3" kindref="member">_GPS_MAX_FIELD_SIZE</ref><sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1afcfd3fec763e381e0ea41bf59085fa93" kindref="member">buffer</ref>[<ref refid="TinyGPS_09_09_8h_1ad31ceaaeae16e1ff8e13640e3b012de3" kindref="member">_GPS_MAX_FIELD_SIZE</ref><sp/>+<sp/>1];</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1acd99fe5bbe5f274de1c172079e80110b" kindref="member">lastCommitTime</ref>;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1a579ba14a727c8fa4b65a756ddec209c8" kindref="member">valid</ref>,<sp/><ref refid="classTinyGPSCustom_1a9cb408f7deeff94aeec23b49a3036f97" kindref="member">updated</ref>;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSCustom_1ab3c8cb4f12d289cbf20abe6eccb3aa14" kindref="member">sentenceName</ref>;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSCustom_1ae7302f115f94eab88739fa67bf6cbba1" kindref="member">termNumber</ref>;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref>;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref><sp/>*<ref refid="classTinyGPSCustom_1a994b5ad843074007b061252293347270" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight></codeline>
+<codeline lineno="325" refid="classTinyGPSPlus" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref><sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTinyGPSPlus_1a3d9173312d514abf50bd43efe6bf6af3" kindref="member">TinyGPSPlus</ref>();</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1ad7b78320b7e4967df17c6a27008a5154" kindref="member">encode</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c<sp/>);<sp/></highlight><highlight class="comment">//<sp/>process<sp/>one<sp/>character<sp/>received<sp/>from<sp/>GPS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref><sp/>&amp;<ref refid="classTinyGPSPlus_1a05c12d268eddf254a9846bc34935a73c" kindref="member">operator&lt;&lt;</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTinyGPSPlus_1ad7b78320b7e4967df17c6a27008a5154" kindref="member">encode</ref>(<sp/>c<sp/>);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSLocation" kindref="compound">TinyGPSLocation</ref><sp/><ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSDate" kindref="compound">TinyGPSDate</ref><sp/><ref refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" kindref="member">date</ref>;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSTime" kindref="compound">TinyGPSTime</ref><sp/><ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSSpeed" kindref="compound">TinyGPSSpeed</ref><sp/><ref refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" kindref="member">speed</ref>;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSCourse" kindref="compound">TinyGPSCourse</ref><sp/><ref refid="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868" kindref="member">course</ref>;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSAltitude" kindref="compound">TinyGPSAltitude</ref><sp/><ref refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" kindref="member">altitude</ref>;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSInteger" kindref="compound">TinyGPSInteger</ref><sp/><ref refid="classTinyGPSPlus_1a5fb47066d1d03f4bb5853529053aab48" kindref="member">satellites</ref>;</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structTinyGPSHDOP" kindref="compound">TinyGPSHDOP</ref><sp/><ref refid="classTinyGPSPlus_1a0bb6a7eb2d0261095911d71c8c067546" kindref="member">hdop</ref>;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1a9cf0da36b5237ea295b4544f4a6d2273" kindref="member">libraryVersion</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="TinyGPS_09_09_8h_1a210404d704c58b910ecee5bd7e97a7dc" kindref="member">_GPS_VERSION</ref>;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1ace607cf3a6d49628e44eae1232237138" kindref="member">distanceBetween</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lat1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>long1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lat2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>long2<sp/>);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1af338c18ccf58a47659be1ffc8259541d" kindref="member">courseTo</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lat1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>long1,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lat2,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>long2<sp/>);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1a8c9e9444552ff85a505ffc6933dda03c" kindref="member">cardinal</ref>(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868" kindref="member">course</ref><sp/>);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int32_t<sp/><ref refid="classTinyGPSPlus_1a06d9bf0c1f0d0963511dc05e2f121121" kindref="member">parseDecimal</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" kindref="member">term</ref><sp/>);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1a00627eaffc625bf366e4c984014fbf29" kindref="member">parseDegrees</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" kindref="member">term</ref>,<sp/><ref refid="structRawDegrees" kindref="compound">RawDegrees</ref><sp/>&amp;deg<sp/>);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classTinyGPSPlus_1addfc1fdbfddfeef2774dda1be42cdd55" kindref="member">charsProcessed</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1a80ce0fa1f373c26c83f517c8bde3686c" kindref="member">encodedCharCount</ref>;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classTinyGPSPlus_1a8093eef1ee9f97b5293f1048320756e3" kindref="member">sentencesWithFix</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1a2c71f75dbb81f8d1d2b3ccbbd61155da" kindref="member">sentencesWithFixCount</ref>;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classTinyGPSPlus_1af7dc415ad7cf13f01ca2eaead8a4ade2" kindref="member">failedChecksum</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1ac829f43b23f5d50e888034170451cb73" kindref="member">failedChecksumCount</ref>;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classTinyGPSPlus_1a54c027a84bdeed40ac25bb54010d7c96" kindref="member">passedChecksum</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1a0010f4b025a85b9ee717d78d316d3365" kindref="member">passedChecksumCount</ref>;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/><ref refid="classTinyGPSPlus_1a606b09c9985d7b2285409060aa784486a21da219c3e59be9c2ce2b0beff76918f" kindref="member">GPS_SENTENCE_GPGGA</ref>,<sp/><ref refid="classTinyGPSPlus_1a606b09c9985d7b2285409060aa784486af9076c9ba9a752d528726536899f7dbe" kindref="member">GPS_SENTENCE_GPRMC</ref>,<sp/><ref refid="classTinyGPSPlus_1a606b09c9985d7b2285409060aa784486a51c5c85d67cfa4fdd6865104564a89aa" kindref="member">GPS_SENTENCE_OTHER</ref><sp/>};</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>parsing<sp/>state<sp/>variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classTinyGPSPlus_1adfe5e8fc602e2777c6df87fb212b1ab6" kindref="member">parity</ref>;</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1a1b00b1bf055b0965698f9e747da3b03a" kindref="member">isChecksumTerm</ref>;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1abe13c5a4d41e91a1f398b4bb46acde93" kindref="member">term</ref>[<ref refid="TinyGPS_09_09_8h_1ad31ceaaeae16e1ff8e13640e3b012de3" kindref="member">_GPS_MAX_FIELD_SIZE</ref>];</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classTinyGPSPlus_1a8b89eadf418a22fdaf2c7520f7b084a3" kindref="member">curSentenceType</ref>;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classTinyGPSPlus_1a5688c9f32b16fab9433f0fde869d0e89" kindref="member">curTermNumber</ref>;</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classTinyGPSPlus_1a2b12aee8c9a1f550ee09b74a9b4ae570" kindref="member">curTermOffset</ref>;</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1af5fbeb1e2a1cebb044079e4799a8be55" kindref="member">sentenceHasFix</ref>;</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>custom<sp/>element<sp/>support</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref>;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref><sp/>*<ref refid="classTinyGPSPlus_1a814ec9664ba8f1b28870342e5308e2cd" kindref="member">customElts</ref>;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref><sp/>*<ref refid="classTinyGPSPlus_1ad817698ca7fa61998a2cd42cee5bfbc8" kindref="member">customCandidates</ref>;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1af9ab42b8af4a6ab0db9794b980987430" kindref="member">insertCustom</ref>(<sp/><ref refid="classTinyGPSCustom" kindref="compound">TinyGPSCustom</ref><sp/>*pElt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="classTinyGPSCustom_1ab3c8cb4f12d289cbf20abe6eccb3aa14" kindref="member">sentenceName</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>statistics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classTinyGPSPlus_1a80ce0fa1f373c26c83f517c8bde3686c" kindref="member">encodedCharCount</ref>;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classTinyGPSPlus_1a2c71f75dbb81f8d1d2b3ccbbd61155da" kindref="member">sentencesWithFixCount</ref>;</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classTinyGPSPlus_1ac829f43b23f5d50e888034170451cb73" kindref="member">failedChecksumCount</ref>;</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classTinyGPSPlus_1a0010f4b025a85b9ee717d78d316d3365" kindref="member">passedChecksumCount</ref>;</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>internal<sp/>Utilities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1a9f8acf18530c3b4fd2d6b2f9947e315c" kindref="member">fromHex</ref>(<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>a<sp/>);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classTinyGPSPlus_1ad03e05d24ecc96c27814eb17adfb38db" kindref="member">endOfTermHandler</ref>();</highlight></codeline>
+<codeline lineno="398"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>def(__TinyGPSPlus_h)</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h"/>
+  </compounddef>
+</doxygen>

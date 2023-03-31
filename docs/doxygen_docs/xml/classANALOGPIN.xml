@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classANALOGPIN" kind="class" language="C++" prot="public">
+    <compoundname>ANALOGPIN</compoundname>
+    <includes local="no">AnalogPin.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classANALOGPIN_1a808bb3e74c4cd7b6b23e8a17e5794766" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int ANALOGPIN::analogPin</definition>
+        <argsstring></argsstring>
+        <name>analogPin</name>
+        <qualifiedname>ANALOGPIN::analogPin</qualifiedname>
+        <initializer>= A1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" line="10" column="11" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classANALOGPIN_1a0ad5aed119038d8baabe593fb58aa649" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ANALOGPIN::analogValue</definition>
+        <argsstring></argsstring>
+        <name>analogValue</name>
+        <qualifiedname>ANALOGPIN::analogValue</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" line="11" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classANALOGPIN_1a0b287d8a607fc61cf099da8c014e7f50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ANALOGPIN::ANALOGPIN</definition>
+        <argsstring>()</argsstring>
+        <name>ANALOGPIN</name>
+        <qualifiedname>ANALOGPIN::ANALOGPIN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" line="14" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classANALOGPIN_1ae69dd2f3b280cfd717deeb86474048c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ANALOGPIN::~ANALOGPIN</definition>
+        <argsstring>()</argsstring>
+        <name>~ANALOGPIN</name>
+        <qualifiedname>ANALOGPIN::~ANALOGPIN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" line="15" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classANALOGPIN_1a24c6a68bd13ebc58a1be187b9c37f0a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ANALOGPIN::ANALOGPIN_Setup</definition>
+        <argsstring>()</argsstring>
+        <name>ANALOGPIN_Setup</name>
+        <qualifiedname>ANALOGPIN::ANALOGPIN_Setup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" line="17" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classANALOGPIN_1ab934cef5fef78b85de5e11408f0da289" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ANALOGPIN::ANALOGPIN_Update</definition>
+        <argsstring>()</argsstring>
+        <name>ANALOGPIN_Update</name>
+        <qualifiedname>ANALOGPIN::ANALOGPIN_Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" line="18" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classANALOGPIN_1a143ef46dd2732782aa869e1db1b6661f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ANALOGPIN::getAnalogValue</definition>
+        <argsstring>()</argsstring>
+        <name>getAnalogValue</name>
+        <qualifiedname>ANALOGPIN::getAnalogValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" line="19" column="5" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" line="8" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" bodystart="8" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classANALOGPIN_1a808bb3e74c4cd7b6b23e8a17e5794766" prot="private" virt="non-virtual"><scope>ANALOGPIN</scope><name>analogPin</name></member>
+      <member refid="classANALOGPIN_1a0b287d8a607fc61cf099da8c014e7f50" prot="public" virt="non-virtual"><scope>ANALOGPIN</scope><name>ANALOGPIN</name></member>
+      <member refid="classANALOGPIN_1a24c6a68bd13ebc58a1be187b9c37f0a5" prot="public" virt="non-virtual"><scope>ANALOGPIN</scope><name>ANALOGPIN_Setup</name></member>
+      <member refid="classANALOGPIN_1ab934cef5fef78b85de5e11408f0da289" prot="public" virt="non-virtual"><scope>ANALOGPIN</scope><name>ANALOGPIN_Update</name></member>
+      <member refid="classANALOGPIN_1a0ad5aed119038d8baabe593fb58aa649" prot="private" virt="non-virtual"><scope>ANALOGPIN</scope><name>analogValue</name></member>
+      <member refid="classANALOGPIN_1a143ef46dd2732782aa869e1db1b6661f" prot="public" virt="non-virtual"><scope>ANALOGPIN</scope><name>getAnalogValue</name></member>
+      <member refid="classANALOGPIN_1ae69dd2f3b280cfd717deeb86474048c8" prot="public" virt="non-virtual"><scope>ANALOGPIN</scope><name>~ANALOGPIN</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

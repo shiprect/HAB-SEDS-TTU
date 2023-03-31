@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="md__home_chris_Documents_farm_sensors_README" kind="page">
+    <compoundname>md__home_chris_Documents_farm_sensors_README</compoundname>
+    <title>Farm Sensors</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Schematics and Code for the wireless sensors at the farm </para>
+    </detaileddescription>
+    <location file="/home/chris/Documents/farm-sensors/README.md"/>
+  </compounddef>
+</doxygen>

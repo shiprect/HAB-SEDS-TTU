@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="ImportSerial_8py" kind="file" language="Python">
+    <compoundname>ImportSerial.py</compoundname>
+    <innernamespace refid="namespaceImportSerial">ImportSerial</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceImportSerial" refkind="compound"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>serial</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>time</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>datetime</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">ser<sp/>=<sp/>serial.Serial(</highlight><highlight class="stringliteral">&apos;/dev/ttyUSB0&apos;</highlight><highlight class="normal">,<sp/>115200)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">while(1):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>line<sp/>=<sp/>ser.readline()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>timestamp<sp/>=<sp/>str(datetime.datetime.fromtimestamp(time.time()).strftime(</highlight><highlight class="stringliteral">&apos;%m-%d<sp/>%H:%M:%S&apos;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>pyfile<sp/>=<sp/>open(</highlight><highlight class="stringliteral">&apos;DataLogging.txt&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;a&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>pyfile.write(str(line)<sp/>+<sp/>timestamp<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;\n&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>ser.flushInput()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>pyfile.close()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>print(line)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">ser.close()</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/ImportSerial.py"/>
+  </compounddef>
+</doxygen>

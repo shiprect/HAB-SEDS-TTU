@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="PWM_8cpp" kind="file" language="C++">
+    <compoundname>PWM.cpp</compoundname>
+    <includes refid="PWM_8hpp" local="yes">PWM.hpp</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp</label>
+        <link refid="PWM_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>PWM.hpp</label>
+        <link refid="PWM_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="15">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="12">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="11">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="8">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="10">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="9">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="5">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="16">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="PWM_8cpp_1a3adeec92d173b696a4c0cb2cb2ee68a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ANALOGPIN_Setup</definition>
+        <argsstring>(int Pin, bool state=OFF)</argsstring>
+        <name>ANALOGPIN_Setup</name>
+        <param>
+          <type>int</type>
+          <declname>Pin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+          <defval><ref refid="HardwareUtilities_8h_1a29e413f6725b2ba32d165ffaa35b01e5" kindref="member">OFF</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="8" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="8" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1a94502a7d212ccbc26f7e93640b31e1d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ANALOGPIN_Update</definition>
+        <argsstring>()</argsstring>
+        <name>ANALOGPIN_Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="9" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="9" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1ac283492d8697643beb987ac446bd3fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setState</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setState</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="11" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1a75bd36114d41b5e12186aad2bf17c377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void toggleState</definition>
+        <argsstring>()</argsstring>
+        <name>toggleState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="12" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1a2fff5e0fc769290e16824d4dce589660" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool getState</definition>
+        <argsstring>()</argsstring>
+        <name>getState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="13" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1a92427b38b387cf2abaa5be22e5ebaa68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setDutyCycle</definition>
+        <argsstring>(float CycleRate)</argsstring>
+        <name>setDutyCycle</name>
+        <param>
+          <type>float</type>
+          <declname>CycleRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="15" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1a2d16382216488e598eeb818475cb56c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float getDutyCycle</definition>
+        <argsstring>()</argsstring>
+        <name>getDutyCycle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the current output duty-cycle setting, measured as a percentage (float) 83  * 84  * <simplesect kind="return"><para>85  * A floating-point value representing the current duty-cycle being output on the pin, 86  * measured as a percentage. The returned value will lie between 87  * 0.0f (representing on 0%) and 1.0f (representing on 100%). 88  * 89  * </para>
+</simplesect>
+<simplesect kind="note"><para>90  * This value may not match exactly the value set by a previous write(). 91  <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="27" column="7" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1a9a3205022ef145bf6611f0ba0269851d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPeriod</definition>
+        <argsstring>(float _us_)</argsstring>
+        <name>setPeriod</name>
+        <param>
+          <type>float</type>
+          <declname>_us_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="28" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1a42b489cba2b92e821ac7294afad41709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float getPeriod</definition>
+        <argsstring>()</argsstring>
+        <name>getPeriod</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="29" column="7" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1a5c5d5bcde1733e400d796edee1c42f25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setPulseWidth</definition>
+        <argsstring>(float us)</argsstring>
+        <name>setPulseWidth</name>
+        <param>
+          <type>float</type>
+          <declname>us</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="30" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="PWM_8cpp_1a5846a2227401a8070b2920fec6e8d1f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float getPulseWidth</definition>
+        <argsstring>()</argsstring>
+        <name>getPulseWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" line="31" column="7" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="PWM_8hpp" kindref="compound">PWM.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a3adeec92d173b696a4c0cb2cb2ee68a5" kindref="member">ANALOGPIN_Setup</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state<sp/>=<sp/><ref refid="HardwareUtilities_8h_1a29e413f6725b2ba32d165ffaa35b01e5" kindref="member">OFF</ref>){};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a94502a7d212ccbc26f7e93640b31e1d7" kindref="member">ANALOGPIN_Update</ref>(){};</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1ac283492d8697643beb987ac446bd3fbb" kindref="member">setState</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state){};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a75bd36114d41b5e12186aad2bf17c377" kindref="member">toggleState</ref>(){};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a2fff5e0fc769290e16824d4dce589660" kindref="member">getState</ref>(){};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a92427b38b387cf2abaa5be22e5ebaa68" kindref="member">setDutyCycle</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>CycleRate){};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a2d16382216488e598eeb818475cb56c9" kindref="member">getDutyCycle</ref>(){};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a9a3205022ef145bf6611f0ba0269851d" kindref="member">setPeriod</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_us_){};<sp/></highlight><highlight class="comment">//in<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a42b489cba2b92e821ac7294afad41709" kindref="member">getPeriod</ref>(){};<sp/></highlight><highlight class="comment">//in<sp/>us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a5c5d5bcde1733e400d796edee1c42f25" kindref="member">setPulseWidth</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>us){};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="PWM_8cpp_1a5846a2227401a8070b2920fec6e8d1f0" kindref="member">getPulseWidth</ref>(){};</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp"/>
+  </compounddef>
+</doxygen>

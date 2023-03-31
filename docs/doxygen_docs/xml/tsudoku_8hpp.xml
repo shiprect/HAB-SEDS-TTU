@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="tsudoku_8hpp" kind="file" language="C++">
+    <compoundname>tsudoku.hpp</compoundname>
+    <includes refid="misc_8hpp" local="yes">misc.hpp</includes>
+    <includedby refid="tsudoku_2src_2main_8cpp" local="yes">/home/chris/Documents/tsudoku/src/main.cpp</includedby>
+    <includedby refid="tsudoku_8cpp" local="yes">/home/chris/Documents/tsudoku/src/tsudoku.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/tsudoku.hpp</label>
+        <link refid="tsudoku_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/tsudoku.hpp</label>
+        <link refid="tsudoku_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/tsudoku/src/main.cpp</label>
+        <link refid="tsudoku_2src_2main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/tsudoku/src/tsudoku.cpp</label>
+        <link refid="tsudoku_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="tsudoku_8hpp_1a0617b961a07e64f908e42a78270a2278" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>err_msg</name>
+        <enumvalue id="tsudoku_8hpp_1a0617b961a07e64f908e42a78270a2278a894ac82c59da1ab27f0f2ec607e67de4" prot="public">
+          <name>INVALID_ARG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_8hpp_1a0617b961a07e64f908e42a78270a2278a835e794609b9d1a16c3701a79fd4e1e2" prot="public">
+          <name>TOO_MANY_ARGS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_8hpp_1a0617b961a07e64f908e42a78270a2278a894ac82c59da1ab27f0f2ec607e67de4" prot="public">
+          <name>INVALID_ARG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_8hpp_1a0617b961a07e64f908e42a78270a2278a835e794609b9d1a16c3701a79fd4e1e2" prot="public">
+          <name>TOO_MANY_ARGS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/tsudoku.hpp" line="8" column="1" bodyfile="/home/chris/Documents/tsudoku/include/tsudoku.hpp" bodystart="8" bodyend="8"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="tsudoku_8hpp_1a9f01fd39eaf5e01c79646fa24c75af71" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string COMPLETED</definition>
+        <argsstring></argsstring>
+        <name>COMPLETED</name>
+        <initializer>= <ref refid="misc_8hpp_1a97884cc582d09fc804ffff6b09e6c09c" kindref="member">DIR</ref> + &quot;/completed_puzzles.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/tsudoku.hpp" line="7" column="19" bodyfile="/home/chris/Documents/tsudoku/include/tsudoku.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tsudoku_8hpp_1ab84a0bcf35fd0964ca5883459c78031f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void create_dir</definition>
+        <argsstring>()</argsstring>
+        <name>create_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/tsudoku.hpp" line="10" column="6" bodyfile="/home/chris/Documents/sphinx_testing/src/main.cpp" bodystart="99" bodyend="109" declfile="/home/chris/Documents/tsudoku/include/tsudoku.hpp" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="tsudoku_8hpp_1a8301f9a01a3795d54f6444580dec40eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void display_completed_puzzles</definition>
+        <argsstring>()</argsstring>
+        <name>display_completed_puzzles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/tsudoku.hpp" line="11" column="6" bodyfile="/home/chris/Documents/sphinx_testing/src/main.cpp" bodystart="111" bodyend="131" declfile="/home/chris/Documents/tsudoku/include/tsudoku.hpp" declline="11" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="tsudoku_8hpp_1a853216ac51aa181669ff4d3de74058a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_help</definition>
+        <argsstring>()</argsstring>
+        <name>print_help</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/tsudoku.hpp" line="12" column="6" bodyfile="/home/chris/Documents/tsudoku/src/tsudoku.cpp" bodystart="15" bodyend="21" declfile="/home/chris/Documents/tsudoku/include/tsudoku.hpp" declline="12" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="tsudoku_8hpp_1ab08a18768a0556a7973c559250188c60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_err_msg</definition>
+        <argsstring>(err_msg)</argsstring>
+        <name>print_err_msg</name>
+        <param>
+          <type><ref refid="sphinx__testing_2src_2main_8cpp_1a0617b961a07e64f908e42a78270a2278" kindref="member">err_msg</ref></type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/tsudoku.hpp" line="13" column="6" bodyfile="/home/chris/Documents/sphinx_testing/src/main.cpp" bodystart="83" bodyend="97" declfile="/home/chris/Documents/tsudoku/include/tsudoku.hpp" declline="13" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="tsudoku_8hpp_1a343c3ba499c346d9be6f55d18d680d76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void delete_saved_games</definition>
+        <argsstring>()</argsstring>
+        <name>delete_saved_games</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/tsudoku.hpp" line="14" column="6" bodyfile="/home/chris/Documents/tsudoku/src/tsudoku.cpp" bodystart="100" bodyend="116" declfile="/home/chris/Documents/tsudoku/include/tsudoku.hpp" declline="14" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TSUDOKU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TSUDOKU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="misc_8hpp" kindref="compound">misc.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//NOTE:<sp/>This<sp/>file<sp/>keeps<sp/>a<sp/>persistent<sp/>record<sp/>of<sp/>how<sp/>many<sp/>games<sp/>the<sp/>player<sp/>has<sp/>successfully<sp/>finished</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="tsudoku_8hpp_1a9f01fd39eaf5e01c79646fa24c75af71" kindref="member">COMPLETED</ref><sp/>=<sp/><ref refid="values_8hpp_1a97884cc582d09fc804ffff6b09e6c09c" kindref="member">DIR</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;/completed_puzzles.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2src_2main_8cpp_1a0617b961a07e64f908e42a78270a2278" kindref="member">err_msg</ref><sp/>{<sp/><ref refid="sphinx__testing_2src_2main_8cpp_1a0617b961a07e64f908e42a78270a2278a894ac82c59da1ab27f0f2ec607e67de4" kindref="member">INVALID_ARG</ref>,<sp/><ref refid="sphinx__testing_2src_2main_8cpp_1a0617b961a07e64f908e42a78270a2278a835e794609b9d1a16c3701a79fd4e1e2" kindref="member">TOO_MANY_ARGS</ref><sp/>};<sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Possible<sp/>types<sp/>of<sp/>errors<sp/>that<sp/>can<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>generated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tsudoku_8hpp_1ab84a0bcf35fd0964ca5883459c78031f" kindref="member">create_dir</ref><sp/>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tsudoku_8hpp_1a8301f9a01a3795d54f6444580dec40eb" kindref="member">display_completed_puzzles</ref><sp/>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tsudoku_8hpp_1a853216ac51aa181669ff4d3de74058a7" kindref="member">print_help</ref><sp/>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tsudoku_8hpp_1ab08a18768a0556a7973c559250188c60" kindref="member">print_err_msg</ref><sp/>(<ref refid="sphinx__testing_2src_2main_8cpp_1a0617b961a07e64f908e42a78270a2278" kindref="member">err_msg</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="tsudoku_8hpp_1a343c3ba499c346d9be6f55d18d680d76" kindref="member">delete_saved_games</ref><sp/>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/tsudoku.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespaceproblem3" kind="namespace" language="Python">
+    <compoundname>problem3</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproblem3_1ab2262463f795fc03a25793d4abf08781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem3.DFT</definition>
+        <argsstring>(x_n, int N, array n)</argsstring>
+        <name>DFT</name>
+        <qualifiedname>problem3.DFT</qualifiedname>
+        <param>
+          <type>x_n</type>
+          <defname>x_n</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>array</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Name: basis_k
+Parameters: N -&gt; An integer. The total number of samples and basis functions.
+            k -&gt; An integer. The particular basis function being used.
+            n -&gt; A NumPy array. Size corresponds to number of samples taken. Values range from 0
+                 to N-1.
+Purpose: Calculates the DFT basis function for N samples. The value of k is used to determine
+         what basis function is used. Returns a NumPy array of results for each sample with a
+         size equivalent to n.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/problem3.py" line="17" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/problem3.py" bodystart="17" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem3_1af222e3f741572ad14031fe70dc64149e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem3.DCT</definition>
+        <argsstring>(x_n, int N, array n)</argsstring>
+        <name>DCT</name>
+        <qualifiedname>problem3.DCT</qualifiedname>
+        <param>
+          <type>x_n</type>
+          <defname>x_n</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>array</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Name: basis_k
+Parameters: N -&gt; An integer. The total number of samples and basis functions.
+            k -&gt; An integer. The particular basis function being used.
+            n -&gt; A NumPy array. Size corresponds to number of samples taken. Values range from 0
+                 to N-1.
+Purpose: Calculates the DCT basis function for N samples. The value of k is used to determine
+         what basis function is used. In particular, a completely different basis function is
+         used when k=0. Returns a NumPy array of results for each sample with a size equivalent
+         to n.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/problem3.py" line="43" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/problem3.py" bodystart="43" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem3_1a0e7d30df2d6721a953696ac23a7c256f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem3::main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>problem3.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/problem3.py" line="61" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/problem3.py" bodystart="61" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem3_1a5ffbaebb041a8ae59d7eb2a8ca1fc76e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem3.dct</definition>
+        <argsstring>(x)</argsstring>
+        <name>dct</name>
+        <qualifiedname>problem3.dct</qualifiedname>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/soln/problem3.py" line="8" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/soln/problem3.py" bodystart="8" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem3_1a4be1977b749b3b23324e3824ce6a618a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem3.dft</definition>
+        <argsstring>(x)</argsstring>
+        <name>dft</name>
+        <qualifiedname>problem3.dft</qualifiedname>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw2/soln/problem3.py" line="25" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw2/soln/problem3.py" bodystart="25" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece6040/homework/hw2/problem3.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

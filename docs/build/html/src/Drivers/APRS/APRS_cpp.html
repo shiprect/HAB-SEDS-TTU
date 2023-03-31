@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>APRS.cpp &#8212; HAB-SEDS-TTU 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/scrolls.css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="ax25.h" href="ax25_h.html" />
+    <link rel="prev" title="APRS.hpp" href="APRS_hpp.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../../index.html"
+          title="back to the documentation overview"><span>APRS.cpp</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="APRS_hpp.html">&laquo; APRS.hpp</a> |
+        <a href="#">APRS.cpp</a>
+        | <a href="ax25_h.html">ax25.h &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div role="main">
+        
+  <section id="aprs-cpp">
+<h1>APRS.cpp<a class="headerlink" href="#aprs-cpp" title="Permalink to this heading">¶</a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MAXSENDBUFFER">
+<span class="target" id="APRS_8cpp_1a740a712c140d23aef9b3a2a5e3db9249"></span><span class="sig-name descname"><span class="n"><span class="pre">MAXSENDBUFFER</span></span></span><a class="headerlink" href="#c.MAXSENDBUFFER" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv48latToStrPCcKif">
+<span id="_CPPv38latToStrPCcKif"></span><span id="_CPPv28latToStrPCcKif"></span><span id="latToStr__cPC.iC.float"></span><span class="target" id="APRS_8cpp_1ac44e8366679396e2bb4dbbe33584a384"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">latToStr</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48latToStrPCcKif" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv48lonToStrPCcKif">
+<span id="_CPPv38lonToStrPCcKif"></span><span id="_CPPv28lonToStrPCcKif"></span><span id="lonToStr__cPC.iC.float"></span><span class="target" id="APRS_8cpp_1a6f1c4d8a861c06c235cc6e2c1b781f92"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lonToStr</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">s</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv48lonToStrPCcKif" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv418transmission_timer">
+<span id="_CPPv318transmission_timer"></span><span id="_CPPv218transmission_timer"></span><span id="transmission_timer__unsigned-l"></span><span class="target" id="APRS_8cpp_1ada1b9d525b2993c50837d3c597f29a59"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transmission_timer</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv418transmission_timer" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413preambleFlags">
+<span id="_CPPv313preambleFlags"></span><span id="_CPPv213preambleFlags"></span><span id="preambleFlags__uint16_t"></span><span class="target" id="APRS_8cpp_1a2746207058ea5e2a2f3f26debebac10c"></span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">preambleFlags</span></span></span><a class="headerlink" href="#_CPPv413preambleFlags" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, William Stump, Chris Swindell, Luke Chapman, Emma Krebs, Mia Guzman.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_e9c33db2f21936a8b76b060d4feb992d" kind="dir">
+    <compoundname>/home/chris/Documents/tsudoku</compoundname>
+    <innerdir refid="dir_80f33893bdbd4ff9521ba8f674ea0733">/home/chris/Documents/tsudoku/docs</innerdir>
+    <innerdir refid="dir_62ee3b5a36dfe61ffde0616f5f798f08">/home/chris/Documents/tsudoku/include</innerdir>
+    <innerdir refid="dir_332fc80ddc57b97eca6f2fbb33f91b69">/home/chris/Documents/tsudoku/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/tsudoku/"/>
+  </compounddef>
+</doxygen>

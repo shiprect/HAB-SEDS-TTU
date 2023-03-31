@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="tsudoku_2src_2main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <includes local="no">ncurses.h</includes>
+    <includes refid="tsudoku_8hpp" local="yes">tsudoku.hpp</includes>
+    <includes local="yes">MainMenu.hpp</includes>
+    <includes local="yes">SavedGameMenu.hpp</includes>
+    <includes refid="Sudoku_8hpp" local="yes">Sudoku.hpp</includes>
+    <includes local="no">cstring</includes>
+    <incdepgraph>
+      <node id="12">
+        <label>Container.hpp</label>
+        <link refid="tsudoku_2include_2Container_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Grid.hpp</label>
+        <link refid="tsudoku_2include_2Grid_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Sudoku.hpp</label>
+        <link refid="Sudoku_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>tsudoku.hpp</label>
+        <link refid="tsudoku_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/src/main.cpp</label>
+        <link refid="tsudoku_2src_2main_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>MainMenu.hpp</label>
+      </node>
+      <node id="9">
+        <label>SavedGameMenu.hpp</label>
+      </node>
+      <node id="14">
+        <label>array</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="16">
+        <label>cstring</label>
+      </node>
+      <node id="15">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>ncurses.h</label>
+      </node>
+      <node id="13">
+        <label>random</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="tsudoku_2src_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char **argv)</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The main function from the which the program starts. Tsudoku only accepts one option at run time. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The total number of items entered on the command line. &quot;tsudoku&quot; will always be index 0 and any option, if provided, will start at index 1. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The list of items entered on the command line. Possible tsudoku options are:<orderedlist>
+<listitem><para>&quot;--no-in-game-menu&quot; or &quot;-n&quot; to disable the in-game menu</para>
+</listitem><listitem><para>&quot;--help&quot; to display the help information</para>
+</listitem><listitem><para>&quot;--delete-saved-games&quot; or &quot;-d&quot; to delete all saved games </para>
+</listitem></orderedlist>
+</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/src/main.cpp" line="28" column="5" bodyfile="/home/chris/Documents/tsudoku/src/main.cpp" bodystart="28" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The starting file. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:<sp/>NCurses<sp/>is<sp/>included<sp/>first<sp/>in<sp/>all<sp/>files<sp/>where<sp/>its<sp/>needed<sp/>so<sp/>that<sp/>the<sp/>KEY_ENTER</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>redefinition<sp/>in<sp/>values.hpp<sp/>persists<sp/>across<sp/>files<sp/>the<sp/>way<sp/>I<sp/>wanted.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ncurses.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_8hpp" kindref="compound">tsudoku.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MainMenu.hpp&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SavedGameMenu.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Sudoku_8hpp" kindref="compound">Sudoku.hpp</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>This<sp/>inclusion<sp/>here<sp/>should<sp/>cause<sp/>issues<sp/>with<sp/>the<sp/>getch()<sp/>calls<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>this<sp/>file;<sp/>however,<sp/>there<sp/>don&apos;t<sp/>appear<sp/>to<sp/>be<sp/>any<sp/>for<sp/>some<sp/>reason.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//strcmp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2src_2main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">**<sp/>argv)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Detemine<sp/>whether<sp/>the<sp/>in-game<sp/>menu<sp/>should<sp/>be<sp/>enabled<sp/>and<sp/>if<sp/>there<sp/>is<sp/>any<sp/>input<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>use_in_game_menu;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(argc)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>use_in_game_menu<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(not<sp/>strcmp(argv[1],<sp/></highlight><highlight class="stringliteral">&quot;--no-in-game-menu&quot;</highlight><highlight class="normal">)<sp/>or</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>not<sp/>strcmp(argv[1],<sp/></highlight><highlight class="stringliteral">&quot;-n&quot;</highlight><highlight class="normal">))<sp/>use_in_game_menu<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(not<sp/>strcmp(argv[1],<sp/></highlight><highlight class="stringliteral">&quot;--help&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsudoku_8hpp_1a853216ac51aa181669ff4d3de74058a7" kindref="member">print_help</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(not<sp/>strcmp(argv[1],<sp/></highlight><highlight class="stringliteral">&quot;--delete-saved-games&quot;</highlight><highlight class="normal">)<sp/>or</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>not<sp/>strcmp(argv[1],<sp/></highlight><highlight class="stringliteral">&quot;-d&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="tsudoku_8hpp_1a343c3ba499c346d9be6f55d18d680d76" kindref="member">delete_saved_games</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2src_2main_8cpp_1ab08a18768a0556a7973c559250188c60" kindref="member">print_err_msg</ref>(<ref refid="sphinx__testing_2src_2main_8cpp_1a0617b961a07e64f908e42a78270a2278a894ac82c59da1ab27f0f2ec607e67de4" kindref="member">err_msg::INVALID_ARG</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2src_2main_8cpp_1ab08a18768a0556a7973c559250188c60" kindref="member">print_err_msg</ref>(<ref refid="sphinx__testing_2src_2main_8cpp_1a0617b961a07e64f908e42a78270a2278a835e794609b9d1a16c3701a79fd4e1e2" kindref="member">err_msg::TOO_MANY_ARGS</ref>);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2src_2main_8cpp_1ab84a0bcf35fd0964ca5883459c78031f" kindref="member">create_dir</ref>();<sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Create<sp/>the<sp/>tsudoku<sp/>environment<sp/>directory<sp/>if<sp/>it<sp/>doesn&apos;t<sp/>already<sp/>exist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMainMenu" kindref="compound">MainMenu</ref><sp/>main_menu;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/>opt;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>opt<sp/>=<sp/>main_menu.<ref refid="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" kindref="member">menu</ref>(use_in_game_menu);<sp/></highlight><highlight class="comment">//NOTE:<sp/>Start<sp/>the<sp/>main<sp/>menu<sp/>and<sp/>respond<sp/>accordingly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(opt)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" kindref="member">options::NEW_GAME</ref>:<sp/>{<sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Start<sp/>a<sp/>new<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSudoku" kindref="compound">Sudoku</ref><sp/>puzzle(</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>puzzle.start_game(use_in_game_menu,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" kindref="member">options::RESUME_GAME</ref>:<sp/>{<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Resume<sp/>a<sp/>previously<sp/>saved<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu" kindref="compound">SavedGameMenu</ref><sp/>saved_game_menu;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(saved_game_menu.<ref refid="classSavedGameMenu_1a0eaa9f1f96d531625764f3f472c667a6" kindref="member">menu</ref>()<sp/>==<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da21768410a256413b6b47dcf6f2ed9a63" kindref="member">options::SAVE_READY</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref><sp/>saved_puzzle<sp/>=<sp/>saved_game_menu.<ref refid="classSavedGameMenu_1aeb3ae0a8e87dec685cf6e6eaecae4ed6" kindref="member">get_saved_game</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSudoku" kindref="compound">Sudoku</ref><sp/>puzzle(</highlight><highlight class="comment">/*true,<sp/>*/</highlight><highlight class="normal">&amp;saved_puzzle);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>puzzle.start_game(use_in_game_menu,<sp/>&amp;saved_puzzle);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" kindref="member">options::SHOW_STATS</ref>:<sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Show<sp/>how<sp/>many<sp/>games<sp/>the<sp/>player<sp/>has<sp/>finished</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2src_2main_8cpp_1a8301f9a01a3795d54f6444580dec40eb" kindref="member">display_completed_puzzles</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(opt<sp/>!=<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa42b2fb0e720a080e79a92f4ca97d927" kindref="member">options::EXIT</ref>);<sp/></highlight><highlight class="comment">//NOTE:<sp/>Exit<sp/>the<sp/>program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>clear();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printw(</highlight><highlight class="stringliteral">&quot;sizeof(Sudoku):<sp/>%lu<sp/>B\n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="classSudoku" kindref="compound">Sudoku</ref>));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printw(</highlight><highlight class="stringliteral">&quot;sizeof(Sudoku):<sp/>%.7f<sp/>kB&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="classSudoku" kindref="compound">Sudoku</ref>)<sp/>/<sp/>1024.0);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>refresh();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getch();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/src/main.cpp"/>
+  </compounddef>
+</doxygen>

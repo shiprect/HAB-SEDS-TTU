@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="tsudoku_2include_2Menu_8hpp" kind="file" language="C++">
+    <compoundname>Menu.hpp</compoundname>
+    <includes refid="misc_8hpp" local="yes">misc.hpp</includes>
+    <includedby refid="DifficultyMenu_8hpp" local="yes">/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp</includedby>
+    <includedby refid="tsudoku_2include_2InGameMenu_8hpp" local="yes">/home/chris/Documents/tsudoku/include/InGameMenu.hpp</includedby>
+    <includedby refid="tsudoku_2include_2MainMenu_8hpp" local="yes">/home/chris/Documents/tsudoku/include/MainMenu.hpp</includedby>
+    <includedby refid="tsudoku_2include_2SavedGameMenu_8hpp" local="yes">/home/chris/Documents/tsudoku/include/SavedGameMenu.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/Menu.hpp</label>
+        <link refid="tsudoku_2include_2Menu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp</label>
+        <link refid="DifficultyMenu_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/tsudoku/include/InGameMenu.hpp</label>
+        <link refid="tsudoku_2include_2InGameMenu_8hpp"/>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/tsudoku/include/MainMenu.hpp</label>
+        <link refid="tsudoku_2include_2MainMenu_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/Menu.hpp</label>
+        <link refid="tsudoku_2include_2Menu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/tsudoku/include/SavedGameMenu.hpp</label>
+        <link refid="tsudoku_2include_2SavedGameMenu_8hpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/tsudoku/src/DifficultyMenu.cpp</label>
+        <link refid="DifficultyMenu_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/tsudoku/src/Sudoku.cpp</label>
+        <link refid="Sudoku_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classMenu" prot="public">Menu</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>options</name>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" prot="public">
+          <name>NEW_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" prot="public">
+          <name>RESUME_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" prot="public">
+          <name>SHOW_STATS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da8c61ff69145519f69b2f7736e4526561" prot="public">
+          <name>RULES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa60a6a471c0681e5a49c4f5d00f6bc5a" prot="public">
+          <name>MANUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4fbf7baea4efa3a7afe4508f40ec7e09" prot="public">
+          <name>SAVE_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" prot="public">
+          <name>NEW_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" prot="public">
+          <name>RESUME_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" prot="public">
+          <name>SHOW_STATS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa42b2fb0e720a080e79a92f4ca97d927" prot="public">
+          <name>EXIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da8c61ff69145519f69b2f7736e4526561" prot="public">
+          <name>RULES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa60a6a471c0681e5a49c4f5d00f6bc5a" prot="public">
+          <name>MANUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4fbf7baea4efa3a7afe4508f40ec7e09" prot="public">
+          <name>SAVE_GAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da21768410a256413b6b47dcf6f2ed9a63" prot="public">
+          <name>SAVE_READY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daf82e95a8a8acf4640c278ca92b4f1d13" prot="public">
+          <name>NO_SAVES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Menu.hpp" line="12" column="1" bodyfile="/home/chris/Documents/tsudoku/include/Menu.hpp" bodystart="12" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="misc_8hpp" kindref="compound">misc.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:<sp/>Options<sp/>used<sp/>by<sp/>the<sp/>various<sp/>Menu-derived<sp/>classes.<sp/>There<sp/>is<sp/>probably<sp/>a<sp/>slightly<sp/>better<sp/>way<sp/>to</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>implement<sp/>this<sp/>had<sp/>I<sp/>been<sp/>able<sp/>to<sp/>predict<sp/>all<sp/>the<sp/>different<sp/>types<sp/>of<sp/>menus<sp/>I<sp/>would<sp/>end<sp/>up</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>needing<sp/>ahead<sp/>of<sp/>time.<sp/>I<sp/>thought<sp/>I<sp/>would<sp/>only<sp/>need<sp/>2,<sp/>but<sp/>wound<sp/>up<sp/>needing<sp/>4.<sp/>Originally,</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>each<sp/>derived<sp/>class<sp/>would<sp/>only<sp/>know<sp/>of<sp/>its<sp/>specific<sp/>options,<sp/>but<sp/>that<sp/>became<sp/>too<sp/>restrictive</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>the<sp/>implementation<sp/>I<sp/>already<sp/>had<sp/>designed.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/>{<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" kindref="member">NEW_GAME</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" kindref="member">RESUME_GAME</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" kindref="member">SHOW_STATS</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa42b2fb0e720a080e79a92f4ca97d927" kindref="member">EXIT</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da8c61ff69145519f69b2f7736e4526561" kindref="member">RULES</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daa60a6a471c0681e5a49c4f5d00f6bc5a" kindref="member">MANUAL</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4fbf7baea4efa3a7afe4508f40ec7e09" kindref="member">SAVE_GAME</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da21768410a256413b6b47dcf6f2ed9a63" kindref="member">SAVE_READY</ref>,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203daf82e95a8a8acf4640c278ca92b4f1d13" kindref="member">NO_SAVES</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693" kindref="member">NONE</ref><sp/>};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>Class:<sp/>Menu</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Purpose:<sp/>Abstract<sp/>class<sp/>from<sp/>which<sp/>all<sp/>Menu-derived<sp/>classes<sp/>inherit<sp/>as<sp/>a<sp/>parent<sp/>class.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Protected<sp/>variables:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>TOP_PADDING<sp/>-&gt;<sp/>Empty<sp/>space<sp/>between<sp/>the<sp/>top<sp/>of<sp/>the<sp/>terminal<sp/>window<sp/>and<sp/>the<sp/>in-terminal</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>display.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>LEFT_PADDING<sp/>-&gt;<sp/>Empty<sp/>space<sp/>between<sp/>the<sp/>left<sp/>side<sp/>of<sp/>the<sp/>terminal<sp/>window<sp/>and<sp/>the<sp/>in-terminal</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>display.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>PUZZLE_SPACE<sp/>-&gt;<sp/>Minimum<sp/>number<sp/>of<sp/>lines<sp/>and<sp/>columns<sp/>required<sp/>to<sp/>properly<sp/>display<sp/>the</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>terminal<sp/>(27<sp/>for<sp/>all<sp/>cells<sp/>of<sp/>the<sp/>display<sp/>matrix,<sp/>2<sp/>for<sp/>border<sp/>lines/columns</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>between<sp/>boxes).</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>VERTICAL_DIVIDER<sp/>-&gt;<sp/>Empty<sp/>space<sp/>between<sp/>puzzle<sp/>and<sp/>the<sp/>in-game<sp/>menu.<sp/>Disabling<sp/>the<sp/>in-game</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menu<sp/>changes<sp/>the<sp/>default<sp/>value.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>IN_GAME_MENU_DISPLAY_SPACING<sp/>-&gt;<sp/>Number<sp/>of<sp/>columns<sp/>to<sp/>be<sp/>used<sp/>for<sp/>the<sp/>in-game<sp/>menu<sp/>display</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>area.<sp/>Disabling<sp/>the<sp/>in-game<sp/>menu<sp/>changes<sp/>the<sp/>default<sp/>value.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMenu" kindref="compound">Menu</ref><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" kindref="member">TOP_PADDING</ref><sp/>=<sp/><ref refid="values_8hpp_1aa4a1e2bfbb4b6bdfc6d70f689a31810f" kindref="member">ORIGINy</ref>,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref><sp/>=<sp/><ref refid="values_8hpp_1a07d71a60201fb66046cb6293933c68dd" kindref="member">ORIGINx</ref>,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1a1611ec6c672448c9f86d473a18b8bdb7" kindref="member">PUZZLE_SPACE</ref><sp/>=<sp/>29;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classMenu_1a593f1ec27088578ed2dbdeb7c92d222b" kindref="member">VERTICAL_DIVIDER</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1a26719c17d8801e207892e6ad4b8dcfa2" kindref="member">IN_GAME_MENU_DISPLAY_SPACING</ref><sp/>=<sp/>80;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMenu_1af1adbe6ce5816c5b99036e671862aca9" kindref="member">display_menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>)<sp/>=<sp/><ref refid="values_8hpp_1ac863338f50a6894733cdcfeef6d756d1" kindref="member">PURE_VIRTUAL</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1ad466dd83355124a6ed958430450bfe94" kindref="member">Menu</ref><sp/>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMenu_1a831387f51358cfb88cd018e1777bc980" kindref="member">~Menu</ref><sp/>()<sp/>{}<sp/></highlight><highlight class="comment">//NOTE:<sp/>Default<sp/>destructor.<sp/>Does<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classMenu_1a19172889100b7d04a06e7e172a8db428" kindref="member">menu</ref><sp/>()<sp/>=<sp/><ref refid="values_8hpp_1ac863338f50a6894733cdcfeef6d756d1" kindref="member">PURE_VIRTUAL</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMenu_1a5a6fec931e1e71721d454da21cd6f9dc" kindref="member">SIGINT_handler</ref><sp/>(int32_t);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/Menu.hpp"/>
+  </compounddef>
+</doxygen>

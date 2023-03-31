@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="sphinx__testing_2include_2colors_8hpp" kind="file" language="C++">
+    <compoundname>colors.hpp</compoundname>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/include/colors.hpp</label>
+        <link refid="sphinx__testing_2include_2colors_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>colors</name>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a6ce26a62afab55d7606ad4e92428b30c" prot="public">
+          <name>UNKNOWN</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a0d6cf1dce39b9aca3be47ffd1ab117f9" prot="public">
+          <name>GIVEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab3a0a49e164b5aef8cc1cda4725ef028" prot="public">
+          <name>CANDIDATES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab8c769f7e7a67d0a91a2fe34fdc5dbea" prot="public">
+          <name>GUESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" prot="public">
+          <name>MENU_SELECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a6ce26a62afab55d7606ad4e92428b30c" prot="public">
+          <name>UNKNOWN</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a0d6cf1dce39b9aca3be47ffd1ab117f9" prot="public">
+          <name>GIVEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a61bae3fe70c42bacec47f8f7fe2841d3" prot="public">
+          <name>CANDIDATES_Y</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab543069b8105f0af2defd5e19a29eb11" prot="public">
+          <name>CANDIDATES_B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab8c769f7e7a67d0a91a2fe34fdc5dbea" prot="public">
+          <name>GUESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" prot="public">
+          <name>MENU_SELECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/colors.hpp" line="6" column="1" bodyfile="/home/chris/Documents/sphinx_testing/include/colors.hpp" bodystart="6" bodyend="6"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sphinx__testing_2include_2colors_8hpp_1a6f01e052fa2b5a730cb5a1e264a11be7" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string color_code[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>color_code</name>
+        <initializer>= { &quot;n&quot;, &quot;u&quot;, &quot;r&quot;, &quot;y&quot;, &quot;g&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/colors.hpp" line="7" column="19" bodyfile="/home/chris/Documents/sphinx_testing/include/colors.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>COLORS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLORS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//std::string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3" kindref="member">colors</ref><sp/>{<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a6ce26a62afab55d7606ad4e92428b30c" kindref="member">UNKNOWN</ref><sp/>=<sp/>1,<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a0d6cf1dce39b9aca3be47ffd1ab117f9" kindref="member">GIVEN</ref>,<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab3a0a49e164b5aef8cc1cda4725ef028" kindref="member">CANDIDATES</ref>,<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab8c769f7e7a67d0a91a2fe34fdc5dbea" kindref="member">GUESS</ref>,<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" kindref="member">MENU_SELECTION</ref>};</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1a6f01e052fa2b5a730cb5a1e264a11be7" kindref="member">color_code</ref>[5]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;u&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/sphinx_testing/include/colors.hpp"/>
+  </compounddef>
+</doxygen>

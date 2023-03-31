@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Adafruit_Sensor.h &#8212; HAB-SEDS-TTU 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/scrolls.css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="BMP.hpp" href="BMP_hpp.html" />
+    <link rel="prev" title="Adafruit_BMP085_U.cpp" href="Adafruit_BMP085_U_cpp.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../../index.html"
+          title="back to the documentation overview"><span>Adafruit_Sensor.h</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="Adafruit_BMP085_U_cpp.html">&laquo; Adafruit_BMP085_U.cpp</a> |
+        <a href="#">Adafruit_Sensor.h</a>
+        | <a href="BMP_hpp.html">BMP.hpp &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div role="main">
+        
+  <section id="adafruit-sensor-h">
+<h1>Adafruit_Sensor.h<a class="headerlink" href="#adafruit-sensor-h" title="Permalink to this heading">¶</a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SENSORS_GRAVITY_EARTH">
+<span class="target" id="Adafruit__Sensor_8h_1adf2baeb9499e0aae21699e2345fd51bd"></span><span class="sig-name descname"><span class="n"><span class="pre">SENSORS_GRAVITY_EARTH</span></span></span><a class="headerlink" href="#c.SENSORS_GRAVITY_EARTH" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Earth’s gravity in m/s^2 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SENSORS_GRAVITY_MOON">
+<span class="target" id="Adafruit__Sensor_8h_1a4c728b30ce5e9479e6fa974f6d10d03a"></span><span class="sig-name descname"><span class="n"><span class="pre">SENSORS_GRAVITY_MOON</span></span></span><a class="headerlink" href="#c.SENSORS_GRAVITY_MOON" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The moon’s gravity in m/s^2 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SENSORS_GRAVITY_SUN">
+<span class="target" id="Adafruit__Sensor_8h_1a9520402939315a287a0ab085f6b21a5b"></span><span class="sig-name descname"><span class="n"><span class="pre">SENSORS_GRAVITY_SUN</span></span></span><a class="headerlink" href="#c.SENSORS_GRAVITY_SUN" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The sun’s gravity in m/s^2 </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SENSORS_GRAVITY_STANDARD">
+<span class="target" id="Adafruit__Sensor_8h_1ab70b42e9de016c42388ff5d293b75712"></span><span class="sig-name descname"><span class="n"><span class="pre">SENSORS_GRAVITY_STANDARD</span></span></span><a class="headerlink" href="#c.SENSORS_GRAVITY_STANDARD" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SENSORS_MAGFIELD_EARTH_MAX">
+<span class="target" id="Adafruit__Sensor_8h_1a23db0dca57c605a25ddfcdc0e349fd27"></span><span class="sig-name descname"><span class="n"><span class="pre">SENSORS_MAGFIELD_EARTH_MAX</span></span></span><a class="headerlink" href="#c.SENSORS_MAGFIELD_EARTH_MAX" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Maximum magnetic field on Earth’s surface </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SENSORS_MAGFIELD_EARTH_MIN">
+<span class="target" id="Adafruit__Sensor_8h_1a7a7347c9dd68408657c181e16d75472d"></span><span class="sig-name descname"><span class="n"><span class="pre">SENSORS_MAGFIELD_EARTH_MIN</span></span></span><a class="headerlink" href="#c.SENSORS_MAGFIELD_EARTH_MIN" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Minimum magnetic field on Earth’s surface </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SENSORS_PRESSURE_SEALEVELHPA">
+<span class="target" id="Adafruit__Sensor_8h_1ad12eded4725631bfb3a662e743fe3bfb"></span><span class="sig-name descname"><span class="n"><span class="pre">SENSORS_PRESSURE_SEALEVELHPA</span></span></span><a class="headerlink" href="#c.SENSORS_PRESSURE_SEALEVELHPA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Average sea level pressure is 1013.25 hPa </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SENSORS_DPS_TO_RADS">
+<span class="target" id="Adafruit__Sensor_8h_1a54bd9549d7c88977f8769fac7be4578d"></span><span class="sig-name descname"><span class="n"><span class="pre">SENSORS_DPS_TO_RADS</span></span></span><a class="headerlink" href="#c.SENSORS_DPS_TO_RADS" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Degrees/s to rad/s multiplier </p>
+</dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SENSORS_GAUSS_TO_MICROTESLA">
+<span class="target" id="Adafruit__Sensor_8h_1ac6c93a70e05c30bcd40f68a0621b8d52"></span><span class="sig-name descname"><span class="n"><span class="pre">SENSORS_GAUSS_TO_MICROTESLA</span></span></span><a class="headerlink" href="#c.SENSORS_GAUSS_TO_MICROTESLA" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gauss to micro-Tesla multiplier </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv414sensors_type_t">
+<span id="_CPPv314sensors_type_t"></span><span id="_CPPv214sensors_type_t"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sensors_type_t</span></span></span><a class="headerlink" href="#_CPPv414sensors_type_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sensor types </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t25SENSOR_TYPE_ACCELEROMETERE">
+<span id="_CPPv3N14sensors_type_t25SENSOR_TYPE_ACCELEROMETERE"></span><span id="_CPPv2N14sensors_type_t25SENSOR_TYPE_ACCELEROMETERE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643abd9779b04292b5e8054485b10fccb99c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_ACCELEROMETER</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t25SENSOR_TYPE_ACCELEROMETERE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Gravity + linear acceleration </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t26SENSOR_TYPE_MAGNETIC_FIELDE">
+<span id="_CPPv3N14sensors_type_t26SENSOR_TYPE_MAGNETIC_FIELDE"></span><span id="_CPPv2N14sensors_type_t26SENSOR_TYPE_MAGNETIC_FIELDE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a74438e3f4f1f8cb1e97ccebbd1096fe8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_MAGNETIC_FIELD</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t26SENSOR_TYPE_MAGNETIC_FIELDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t23SENSOR_TYPE_ORIENTATIONE">
+<span id="_CPPv3N14sensors_type_t23SENSOR_TYPE_ORIENTATIONE"></span><span id="_CPPv2N14sensors_type_t23SENSOR_TYPE_ORIENTATIONE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643af2ccaca19bdabe513c45c058003ed596"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_ORIENTATION</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t23SENSOR_TYPE_ORIENTATIONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t21SENSOR_TYPE_GYROSCOPEE">
+<span id="_CPPv3N14sensors_type_t21SENSOR_TYPE_GYROSCOPEE"></span><span id="_CPPv2N14sensors_type_t21SENSOR_TYPE_GYROSCOPEE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643adc01250dcba5642d294f74ba4d115c28"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_GYROSCOPE</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t21SENSOR_TYPE_GYROSCOPEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t17SENSOR_TYPE_LIGHTE">
+<span id="_CPPv3N14sensors_type_t17SENSOR_TYPE_LIGHTE"></span><span id="_CPPv2N14sensors_type_t17SENSOR_TYPE_LIGHTE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ae19c28b874a4ef6706d44af6f373f743"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_LIGHT</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t17SENSOR_TYPE_LIGHTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t20SENSOR_TYPE_PRESSUREE">
+<span id="_CPPv3N14sensors_type_t20SENSOR_TYPE_PRESSUREE"></span><span id="_CPPv2N14sensors_type_t20SENSOR_TYPE_PRESSUREE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a81634a16935829065d399d686c44ad86"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_PRESSURE</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t20SENSOR_TYPE_PRESSUREE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t21SENSOR_TYPE_PROXIMITYE">
+<span id="_CPPv3N14sensors_type_t21SENSOR_TYPE_PROXIMITYE"></span><span id="_CPPv2N14sensors_type_t21SENSOR_TYPE_PROXIMITYE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a47912cab9ef79bbe4eb20538a88ce59c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_PROXIMITY</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t21SENSOR_TYPE_PROXIMITYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t19SENSOR_TYPE_GRAVITYE">
+<span id="_CPPv3N14sensors_type_t19SENSOR_TYPE_GRAVITYE"></span><span id="_CPPv2N14sensors_type_t19SENSOR_TYPE_GRAVITYE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ac7d364262029cc21bc865577d5288a1e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_GRAVITY</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t19SENSOR_TYPE_GRAVITYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t31SENSOR_TYPE_LINEAR_ACCELERATIONE">
+<span id="_CPPv3N14sensors_type_t31SENSOR_TYPE_LINEAR_ACCELERATIONE"></span><span id="_CPPv2N14sensors_type_t31SENSOR_TYPE_LINEAR_ACCELERATIONE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a914a1f090dcc61586318fd4eb4cb1384"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_LINEAR_ACCELERATION</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t31SENSOR_TYPE_LINEAR_ACCELERATIONE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Acceleration not including gravity </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t27SENSOR_TYPE_ROTATION_VECTORE">
+<span id="_CPPv3N14sensors_type_t27SENSOR_TYPE_ROTATION_VECTORE"></span><span id="_CPPv2N14sensors_type_t27SENSOR_TYPE_ROTATION_VECTORE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ac407aca03c7ce72ea55e52f40477561b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_ROTATION_VECTOR</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t27SENSOR_TYPE_ROTATION_VECTORE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t29SENSOR_TYPE_RELATIVE_HUMIDITYE">
+<span id="_CPPv3N14sensors_type_t29SENSOR_TYPE_RELATIVE_HUMIDITYE"></span><span id="_CPPv2N14sensors_type_t29SENSOR_TYPE_RELATIVE_HUMIDITYE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ad9ebf0d3f835c55738b4d4e915768875"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_RELATIVE_HUMIDITY</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t29SENSOR_TYPE_RELATIVE_HUMIDITYE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t31SENSOR_TYPE_AMBIENT_TEMPERATUREE">
+<span id="_CPPv3N14sensors_type_t31SENSOR_TYPE_AMBIENT_TEMPERATUREE"></span><span id="_CPPv2N14sensors_type_t31SENSOR_TYPE_AMBIENT_TEMPERATUREE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a7d9456395f361833de2ee3ef12a1af2a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_AMBIENT_TEMPERATURE</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t31SENSOR_TYPE_AMBIENT_TEMPERATUREE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t19SENSOR_TYPE_VOLTAGEE">
+<span id="_CPPv3N14sensors_type_t19SENSOR_TYPE_VOLTAGEE"></span><span id="_CPPv2N14sensors_type_t19SENSOR_TYPE_VOLTAGEE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643aac4a182cee3a61ab359afa073b352b02"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_VOLTAGE</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t19SENSOR_TYPE_VOLTAGEE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t19SENSOR_TYPE_CURRENTE">
+<span id="_CPPv3N14sensors_type_t19SENSOR_TYPE_CURRENTE"></span><span id="_CPPv2N14sensors_type_t19SENSOR_TYPE_CURRENTE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ac822523f1553bc62459b208283e27fa5"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_CURRENT</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t19SENSOR_TYPE_CURRENTE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N14sensors_type_t17SENSOR_TYPE_COLORE">
+<span id="_CPPv3N14sensors_type_t17SENSOR_TYPE_COLORE"></span><span id="_CPPv2N14sensors_type_t17SENSOR_TYPE_COLORE"></span><span class="target" id="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643ae41c2d95d02910a0e15266a9f4f1ed63"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SENSOR_TYPE_COLOR</span></span></span><a class="headerlink" href="#_CPPv4N14sensors_type_t17SENSOR_TYPE_COLORE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv413sensors_vec_t">
+<span id="_CPPv313sensors_vec_t"></span><span id="_CPPv213sensors_vec_t"></span><span id="sensors_vec_t"></span><span class="target" id="structsensors__vec__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sensors_vec_t</span></span></span><a class="headerlink" href="#_CPPv413sensors_vec_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Adafruit_Sensor.h&gt;</em></div>
+<p>struct sensors_vec_s is used to return a vector in a common format. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_t1vE">
+<span id="_CPPv3N13sensors_vec_t1vE"></span><span id="_CPPv2N13sensors_vec_t1vE"></span><span id="sensors_vec_t::v__floatA"></span><span class="target" id="structsensors__vec__t_1a5114a743de9aab053acce7722f394bc4"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">v</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_t1vE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_t1xE">
+<span id="_CPPv3N13sensors_vec_t1xE"></span><span id="_CPPv2N13sensors_vec_t1xE"></span><span id="sensors_vec_t::x__float"></span><span class="target" id="structsensors__vec__t_1a9fb71ba50079915da244b839969da7d9"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">x</span></span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_t1xE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_t1yE">
+<span id="_CPPv3N13sensors_vec_t1yE"></span><span id="_CPPv2N13sensors_vec_t1yE"></span><span id="sensors_vec_t::y__float"></span><span class="target" id="structsensors__vec__t_1a08088cd422b668c75ca0db77d0227ef8"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">y</span></span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_t1yE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_t1zE">
+<span id="_CPPv3N13sensors_vec_t1zE"></span><span id="_CPPv2N13sensors_vec_t1zE"></span><span id="sensors_vec_t::z__float"></span><span class="target" id="structsensors__vec__t_1af955e602ed046ad810f972fbbc5e0936"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z</span></span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_t1zE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_t4rollE">
+<span id="_CPPv3N13sensors_vec_t4rollE"></span><span id="_CPPv2N13sensors_vec_t4rollE"></span><span id="sensors_vec_t::roll__float"></span><span class="target" id="structsensors__vec__t_1a6d8c6e288de54942e1d2be4f42f96bb2"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">roll</span></span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_t4rollE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Rotation around the longitudinal axis (the plane body, ‘X axis’). Roll is positive and increasing when moving downward. -90°&lt;=roll&lt;=90° </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_t5pitchE">
+<span id="_CPPv3N13sensors_vec_t5pitchE"></span><span id="_CPPv2N13sensors_vec_t5pitchE"></span><span id="sensors_vec_t::pitch__float"></span><span class="target" id="structsensors__vec__t_1aa298c3cbbd0016698c64d9451fbf3aff"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pitch</span></span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_t5pitchE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Rotation around the lateral axis (the wing span, ‘Y axis’). Pitch is positive and increasing when moving upwards. -180°&lt;=pitch&lt;=180°) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_t7headingE">
+<span id="_CPPv3N13sensors_vec_t7headingE"></span><span id="_CPPv2N13sensors_vec_t7headingE"></span><span id="sensors_vec_t::heading__float"></span><span class="target" id="structsensors__vec__t_1a4fe8caabff59868ff44f1ed8334cbf47"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">heading</span></span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_t7headingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Angle between the longitudinal axis (the plane body) and magnetic north, measured clockwise when viewing from the top of the device. 0-359° </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_tUt1_2E">
+<span id="_CPPv3N13sensors_vec_tUt1_2E"></span><span class="target" id="structsensors__vec__t_1a8d63468f7ffeded31f669a1c5cb52906"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv413sensors_vec_t" title="sensors_vec_t"><span class="n"><span class="pre">sensors_vec_t</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">[anonymous]</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_tUt1_2E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_t6statusE">
+<span id="_CPPv3N13sensors_vec_t6statusE"></span><span id="_CPPv2N13sensors_vec_t6statusE"></span><span id="sensors_vec_t::status__int8_t"></span><span class="target" id="structsensors__vec__t_1af75d491f35f979932de5609d6ef6c363"></span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">status</span></span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_t6statusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13sensors_vec_t8reservedE">
+<span id="_CPPv3N13sensors_vec_t8reservedE"></span><span id="_CPPv2N13sensors_vec_t8reservedE"></span><span id="sensors_vec_t::reserved__uint8_tA"></span><span class="target" id="structsensors__vec__t_1acb78c50bdd894d4dd4015f144c4a4488"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N13sensors_vec_t8reservedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv415sensors_color_t">
+<span id="_CPPv315sensors_color_t"></span><span id="_CPPv215sensors_color_t"></span><span id="sensors_color_t"></span><span class="target" id="structsensors__color__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sensors_color_t</span></span></span><a class="headerlink" href="#_CPPv415sensors_color_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Adafruit_Sensor.h&gt;</em></div>
+<p>struct sensors_color_s is used to return color data in a common format. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_color_t1cE">
+<span id="_CPPv3N15sensors_color_t1cE"></span><span id="_CPPv2N15sensors_color_t1cE"></span><span id="sensors_color_t::c__floatA"></span><span class="target" id="structsensors__color__t_1a4d76803c2e83303f611cf2a7910eaf17"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">c</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N15sensors_color_t1cE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_color_t1rE">
+<span id="_CPPv3N15sensors_color_t1rE"></span><span id="_CPPv2N15sensors_color_t1rE"></span><span id="sensors_color_t::r__float"></span><span class="target" id="structsensors__color__t_1acdeed981e7df8c701e09d4b2fdb9a40c"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">r</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_color_t1rE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Red component </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_color_t1gE">
+<span id="_CPPv3N15sensors_color_t1gE"></span><span id="_CPPv2N15sensors_color_t1gE"></span><span id="sensors_color_t::g__float"></span><span class="target" id="structsensors__color__t_1ac91ecea980718cf134f60c497d2a0049"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">g</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_color_t1gE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Green component </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_color_t1bE">
+<span id="_CPPv3N15sensors_color_t1bE"></span><span id="_CPPv2N15sensors_color_t1bE"></span><span id="sensors_color_t::b__float"></span><span class="target" id="structsensors__color__t_1a1bf461b5c728e323f8883a3785c7c60b"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">b</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_color_t1bE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Blue component </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_color_tUt1_8E">
+<span id="_CPPv3N15sensors_color_tUt1_8E"></span><span class="target" id="structsensors__color__t_1afe9515562cb25624efae037cd3d7e7e9"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415sensors_color_t" title="sensors_color_t"><span class="n"><span class="pre">sensors_color_t</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">[anonymous]</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_color_tUt1_8E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_color_t4rgbaE">
+<span id="_CPPv3N15sensors_color_t4rgbaE"></span><span id="_CPPv2N15sensors_color_t4rgbaE"></span><span id="sensors_color_t::rgba__uint32_t"></span><span class="target" id="structsensors__color__t_1a0afbff980c17fbacdab1666735f3d3e6"></span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rgba</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_color_t4rgbaE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>24-bit RGBA value </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv415sensors_event_t">
+<span id="_CPPv315sensors_event_t"></span><span id="_CPPv215sensors_event_t"></span><span id="sensors_event_t"></span><span class="target" id="structsensors__event__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sensors_event_t</span></span></span><a class="headerlink" href="#_CPPv415sensors_event_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Adafruit_Sensor.h&gt;</em></div>
+<p>struct sensor_event_s is used to provide a single sensor event in a common format. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t7versionE">
+<span id="_CPPv3N15sensors_event_t7versionE"></span><span id="_CPPv2N15sensors_event_t7versionE"></span><span id="sensors_event_t::version__int32_t"></span><span class="target" id="structsensors__event__t_1a2134d60fdb21e3495c595a2df2f5cece"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">version</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t7versionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>must be sizeof(struct sensors_event_t) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t9sensor_idE">
+<span id="_CPPv3N15sensors_event_t9sensor_idE"></span><span id="_CPPv2N15sensors_event_t9sensor_idE"></span><span id="sensors_event_t::sensor_id__int32_t"></span><span class="target" id="structsensors__event__t_1a6b06d35b17afbee79de7f45d9d71ed0b"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sensor_id</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t9sensor_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>unique sensor identifier </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t4typeE">
+<span id="_CPPv3N15sensors_event_t4typeE"></span><span id="_CPPv2N15sensors_event_t4typeE"></span><span id="sensors_event_t::type__int32_t"></span><span class="target" id="structsensors__event__t_1a58401dd7f3400d9eb96c71b8fba9f8e8"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>sensor type </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t9reserved0E">
+<span id="_CPPv3N15sensors_event_t9reserved0E"></span><span id="_CPPv2N15sensors_event_t9reserved0E"></span><span id="sensors_event_t::reserved0__int32_t"></span><span class="target" id="structsensors__event__t_1a8be4dc00344f46abf29e06251bf9fad9"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserved0</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t9reserved0E" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>reserved </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t9timestampE">
+<span id="_CPPv3N15sensors_event_t9timestampE"></span><span id="_CPPv2N15sensors_event_t9timestampE"></span><span id="sensors_event_t::timestamp__int32_t"></span><span class="target" id="structsensors__event__t_1acd3be1560458b3e3bf52f93f744e8238"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timestamp</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t9timestampE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>time is in milliseconds </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t4dataE">
+<span id="_CPPv3N15sensors_event_t4dataE"></span><span id="_CPPv2N15sensors_event_t4dataE"></span><span id="sensors_event_t::data__floatA"></span><span class="target" id="structsensors__event__t_1addee33a715123e16eb463e5cc9024fe2"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">data</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t4dataE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t12accelerationE">
+<span id="_CPPv3N15sensors_event_t12accelerationE"></span><span id="_CPPv2N15sensors_event_t12accelerationE"></span><span id="sensors_event_t::acceleration__sensors_vec_t"></span><span class="target" id="structsensors__event__t_1a91a4325f468d3155e6921358a6f61baa"></span><a class="reference internal" href="#_CPPv413sensors_vec_t" title="sensors_vec_t"><span class="n"><span class="pre">sensors_vec_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">acceleration</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t12accelerationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>acceleration values are in meter per second per second (m/s^2) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t8magneticE">
+<span id="_CPPv3N15sensors_event_t8magneticE"></span><span id="_CPPv2N15sensors_event_t8magneticE"></span><span id="sensors_event_t::magnetic__sensors_vec_t"></span><span class="target" id="structsensors__event__t_1aa634d41a024e1cacdceecf85ec326698"></span><a class="reference internal" href="#_CPPv413sensors_vec_t" title="sensors_vec_t"><span class="n"><span class="pre">sensors_vec_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">magnetic</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t8magneticE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>magnetic vector values are in micro-Tesla (uT) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t11orientationE">
+<span id="_CPPv3N15sensors_event_t11orientationE"></span><span id="_CPPv2N15sensors_event_t11orientationE"></span><span id="sensors_event_t::orientation__sensors_vec_t"></span><span class="target" id="structsensors__event__t_1acbe3c50a256fa9423bc9e3a6e0da7ebf"></span><a class="reference internal" href="#_CPPv413sensors_vec_t" title="sensors_vec_t"><span class="n"><span class="pre">sensors_vec_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">orientation</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t11orientationE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>orientation values are in degrees </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t4gyroE">
+<span id="_CPPv3N15sensors_event_t4gyroE"></span><span id="_CPPv2N15sensors_event_t4gyroE"></span><span id="sensors_event_t::gyro__sensors_vec_t"></span><span class="target" id="structsensors__event__t_1ad108ea8c3a18d02cfc674ba27e94a2c4"></span><a class="reference internal" href="#_CPPv413sensors_vec_t" title="sensors_vec_t"><span class="n"><span class="pre">sensors_vec_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gyro</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t4gyroE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>gyroscope values are in rad/s </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t11temperatureE">
+<span id="_CPPv3N15sensors_event_t11temperatureE"></span><span id="_CPPv2N15sensors_event_t11temperatureE"></span><span id="sensors_event_t::temperature__float"></span><span class="target" id="structsensors__event__t_1a914f76beb75bd99aa3c13d3a8e56e21c"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">temperature</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t11temperatureE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>temperature is in degrees centigrade (Celsius) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t8distanceE">
+<span id="_CPPv3N15sensors_event_t8distanceE"></span><span id="_CPPv2N15sensors_event_t8distanceE"></span><span id="sensors_event_t::distance__float"></span><span class="target" id="structsensors__event__t_1a456259aaeb265913281d7ffbd8ad8697"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">distance</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t8distanceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>distance in centimeters </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t5lightE">
+<span id="_CPPv3N15sensors_event_t5lightE"></span><span id="_CPPv2N15sensors_event_t5lightE"></span><span id="sensors_event_t::light__float"></span><span class="target" id="structsensors__event__t_1adefd2ce2da44e4449ef7cadeaecc6cfd"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">light</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t5lightE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>light in SI lux units </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t8pressureE">
+<span id="_CPPv3N15sensors_event_t8pressureE"></span><span id="_CPPv2N15sensors_event_t8pressureE"></span><span id="sensors_event_t::pressure__float"></span><span class="target" id="structsensors__event__t_1a2ec6e34e1a6cf832d85ca19066bd38f0"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pressure</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t8pressureE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>pressure in hectopascal (hPa) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t17relative_humidityE">
+<span id="_CPPv3N15sensors_event_t17relative_humidityE"></span><span id="_CPPv2N15sensors_event_t17relative_humidityE"></span><span id="sensors_event_t::relative_humidity__float"></span><span class="target" id="structsensors__event__t_1a577b73698368fb061382ce9f31052417"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">relative_humidity</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t17relative_humidityE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>relative humidity in percent </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t7currentE">
+<span id="_CPPv3N15sensors_event_t7currentE"></span><span id="_CPPv2N15sensors_event_t7currentE"></span><span id="sensors_event_t::current__float"></span><span class="target" id="structsensors__event__t_1ad34303af57d6bce18c34862a887fc005"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t7currentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>current in milliamps (mA) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t7voltageE">
+<span id="_CPPv3N15sensors_event_t7voltageE"></span><span id="_CPPv2N15sensors_event_t7voltageE"></span><span id="sensors_event_t::voltage__float"></span><span class="target" id="structsensors__event__t_1ab01b52f6b83f390a6370d319ded97b28"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">voltage</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t7voltageE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>voltage in volts (V) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_t5colorE">
+<span id="_CPPv3N15sensors_event_t5colorE"></span><span id="_CPPv2N15sensors_event_t5colorE"></span><span id="sensors_event_t::color__sensors_color_t"></span><span class="target" id="structsensors__event__t_1a56b4d05fbf47013727ec1a0a94db91e6"></span><a class="reference internal" href="#_CPPv415sensors_color_t" title="sensors_color_t"><span class="n"><span class="pre">sensors_color_t</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">color</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_t5colorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>color in RGB component values </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15sensors_event_tUt2_12E">
+<span id="_CPPv3N15sensors_event_tUt2_12E"></span><span class="target" id="structsensors__event__t_1a8a1d5fee713d2d517ab20706e1da8cb1"></span><span class="k"><span class="pre">union</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv415sensors_event_t" title="sensors_event_t"><span class="n"><span class="pre">sensors_event_t</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">[anonymous]</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">[anonymous]</span></span></span><a class="headerlink" href="#_CPPv4N15sensors_event_tUt2_12E" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv48sensor_t">
+<span id="_CPPv38sensor_t"></span><span id="_CPPv28sensor_t"></span><span id="sensor_t"></span><span class="target" id="structsensor__t"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sensor_t</span></span></span><a class="headerlink" href="#_CPPv48sensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Adafruit_Sensor.h&gt;</em></div>
+<p>struct sensor_s is used to describe basic information about a specific sensor. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8sensor_t4nameE">
+<span id="_CPPv3N8sensor_t4nameE"></span><span id="_CPPv2N8sensor_t4nameE"></span><span id="sensor_t::name__cA"></span><span class="target" id="structsensor__t_1a4383b68d36f9dc4096d83583c3b009bf"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">12</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv4N8sensor_t4nameE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>sensor name </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8sensor_t7versionE">
+<span id="_CPPv3N8sensor_t7versionE"></span><span id="_CPPv2N8sensor_t7versionE"></span><span id="sensor_t::version__int32_t"></span><span class="target" id="structsensor__t_1a274f12a47669fbd2b61935706339e1c2"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">version</span></span></span><a class="headerlink" href="#_CPPv4N8sensor_t7versionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>version of the hardware + driver </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8sensor_t9sensor_idE">
+<span id="_CPPv3N8sensor_t9sensor_idE"></span><span id="_CPPv2N8sensor_t9sensor_idE"></span><span id="sensor_t::sensor_id__int32_t"></span><span class="target" id="structsensor__t_1a224f6201d59873cc1b6e9dd8a1894736"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sensor_id</span></span></span><a class="headerlink" href="#_CPPv4N8sensor_t9sensor_idE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>unique sensor identifier </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8sensor_t4typeE">
+<span id="_CPPv3N8sensor_t4typeE"></span><span id="_CPPv2N8sensor_t4typeE"></span><span id="sensor_t::type__int32_t"></span><span class="target" id="structsensor__t_1ae1d59df64438923d3bd95f2416c32203"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">type</span></span></span><a class="headerlink" href="#_CPPv4N8sensor_t4typeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>this sensor’s type (ex. SENSOR_TYPE_LIGHT) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8sensor_t9max_valueE">
+<span id="_CPPv3N8sensor_t9max_valueE"></span><span id="_CPPv2N8sensor_t9max_valueE"></span><span id="sensor_t::max_value__float"></span><span class="target" id="structsensor__t_1a1a17359f1080eb169a452656f7dec1ee"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_value</span></span></span><a class="headerlink" href="#_CPPv4N8sensor_t9max_valueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>maximum value of this sensor’s value in SI units </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8sensor_t9min_valueE">
+<span id="_CPPv3N8sensor_t9min_valueE"></span><span id="_CPPv2N8sensor_t9min_valueE"></span><span id="sensor_t::min_value__float"></span><span class="target" id="structsensor__t_1a4556ed82a0389a7f6af25a6fd0ee1431"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">min_value</span></span></span><a class="headerlink" href="#_CPPv4N8sensor_t9min_valueE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>minimum value of this sensor’s value in SI units </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8sensor_t10resolutionE">
+<span id="_CPPv3N8sensor_t10resolutionE"></span><span id="_CPPv2N8sensor_t10resolutionE"></span><span id="sensor_t::resolution__float"></span><span class="target" id="structsensor__t_1a926aba3216afd50e62c0a6cdbcc7433a"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resolution</span></span></span><a class="headerlink" href="#_CPPv4N8sensor_t10resolutionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>smallest difference between two values reported by this sensor </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8sensor_t9min_delayE">
+<span id="_CPPv3N8sensor_t9min_delayE"></span><span id="_CPPv2N8sensor_t9min_delayE"></span><span id="sensor_t::min_delay__int32_t"></span><span class="target" id="structsensor__t_1a1cd271377ff25ec9ca54886f876c87ec"></span><span class="n"><span class="pre">int32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">min_delay</span></span></span><a class="headerlink" href="#_CPPv4N8sensor_t9min_delayE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>min delay in microseconds between events. zero = not a constant rate </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv415Adafruit_Sensor">
+<span id="_CPPv315Adafruit_Sensor"></span><span id="_CPPv215Adafruit_Sensor"></span><span id="Adafruit_Sensor"></span><span class="target" id="classAdafruit__Sensor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Adafruit_Sensor</span></span></span><a class="headerlink" href="#_CPPv415Adafruit_Sensor" title="Permalink to this definition">¶</a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;Adafruit_Sensor.h&gt;</em></div>
+<p>Subclassed by <a class="reference internal" href="Adafruit_BMP085_U_h.html#classAdafruit__BMP085__Unified"><span class="std std-ref">Adafruit_BMP085_Unified</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15Adafruit_Sensor15Adafruit_SensorEv">
+<span id="_CPPv3N15Adafruit_Sensor15Adafruit_SensorEv"></span><span id="_CPPv2N15Adafruit_Sensor15Adafruit_SensorEv"></span><span id="Adafruit_Sensor::Adafruit_Sensor"></span><span class="target" id="classAdafruit__Sensor_1a1d06c6f2b9d014894f47102fc1effddf"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Adafruit_Sensor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15Adafruit_Sensor15Adafruit_SensorEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15Adafruit_SensorD0Ev">
+<span id="_CPPv3N15Adafruit_SensorD0Ev"></span><span id="_CPPv2N15Adafruit_SensorD0Ev"></span><span id="Adafruit_Sensor::~Adafruit_Sensor"></span><span class="target" id="classAdafruit__Sensor_1ac98df73e0cd9367a226b96668417e2e6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~Adafruit_Sensor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15Adafruit_SensorD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15Adafruit_Sensor15enableAutoRangeEb">
+<span id="_CPPv3N15Adafruit_Sensor15enableAutoRangeEb"></span><span id="_CPPv2N15Adafruit_Sensor15enableAutoRangeEb"></span><span id="Adafruit_Sensor::enableAutoRange__b"></span><span class="target" id="classAdafruit__Sensor_1ace6c1f26eeb956f95801b9fc1841f3a0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableAutoRange</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">enabled</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15Adafruit_Sensor15enableAutoRangeEb" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15Adafruit_Sensor8getEventEP15sensors_event_t">
+<span id="_CPPv3N15Adafruit_Sensor8getEventEP15sensors_event_t"></span><span id="_CPPv2N15Adafruit_Sensor8getEventEP15sensors_event_t"></span><span id="Adafruit_Sensor::getEvent__sensors_event_tP"></span><span class="target" id="classAdafruit__Sensor_1a0636562b9bc853b796ecc87b5d4b1bec"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEvent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv415sensors_event_t" title="sensors_event_t"><span class="n"><span class="pre">sensors_event_t</span></span></a><span class="p"><span class="pre">*</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N15Adafruit_Sensor8getEventEP15sensors_event_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N15Adafruit_Sensor9getSensorEP8sensor_t">
+<span id="_CPPv3N15Adafruit_Sensor9getSensorEP8sensor_t"></span><span id="_CPPv2N15Adafruit_Sensor9getSensorEP8sensor_t"></span><span id="Adafruit_Sensor::getSensor__sensor_tP"></span><span class="target" id="classAdafruit__Sensor_1a19e844c1eb2dc37cb72705d5572c4676"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSensor</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv48sensor_t" title="sensor_t"><span class="n"><span class="pre">sensor_t</span></span></a><span class="p"><span class="pre">*</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N15Adafruit_Sensor9getSensorEP8sensor_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N15Adafruit_Sensor10_autoRangeE">
+<span id="_CPPv3N15Adafruit_Sensor10_autoRangeE"></span><span id="_CPPv2N15Adafruit_Sensor10_autoRangeE"></span><span id="Adafruit_Sensor::_autoRange__b"></span><span class="target" id="classAdafruit__Sensor_1a79419e4b6898903c0de4aa80133f01ae"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_autoRange</span></span></span><a class="headerlink" href="#_CPPv4N15Adafruit_Sensor10_autoRangeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, William Stump, Chris Swindell, Luke Chapman, Emma Krebs, Mia Guzman.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

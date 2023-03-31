@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>afsk.cpp &#8212; HAB-SEDS-TTU 0.1 documentation</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/scrolls.css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="APRS.hpp" href="APRS_hpp.html" />
+    <link rel="prev" title="afsk.h" href="afsk_h.html" /> 
+  </head><body>
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="../../../index.html"
+          title="back to the documentation overview"><span>afsk.cpp</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="afsk_h.html">&laquo; afsk.h</a> |
+        <a href="#">afsk.cpp</a>
+        | <a href="APRS_hpp.html">APRS.hpp &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        <div role="main">
+        
+  <section id="afsk-cpp">
+<h1>afsk.cpp<a class="headerlink" href="#afsk-cpp" title="Permalink to this heading">¶</a></h1>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-defines">Defines</p>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SAMPLES_PER_CYCLE">
+<span class="target" id="afsk_8cpp_1a98b6e204e92cc1fa897486988a77ee0a"></span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLES_PER_CYCLE</span></span></span><a class="headerlink" href="#c.SAMPLES_PER_CYCLE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.INTERRUPT_RATE">
+<span class="target" id="afsk_8cpp_1a4fa002f43cad7f1b55e3276268cd6ee7"></span><span class="sig-name descname"><span class="n"><span class="pre">INTERRUPT_RATE</span></span></span><a class="headerlink" href="#c.INTERRUPT_RATE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.PLAYBACK_RATE">
+<span class="target" id="afsk_8cpp_1ac7f78afb15c887cf1fdd2f5b60dafa61"></span><span class="sig-name descname"><span class="n"><span class="pre">PLAYBACK_RATE</span></span></span><a class="headerlink" href="#c.PLAYBACK_RATE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.BAUD_RATE">
+<span class="target" id="afsk_8cpp_1ad4455691936f92fdd6c37566fc58ba1f"></span><span class="sig-name descname"><span class="n"><span class="pre">BAUD_RATE</span></span></span><a class="headerlink" href="#c.BAUD_RATE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MARK_FREQUENCY">
+<span class="target" id="afsk_8cpp_1a687b36ba21ba1c211d06a1cbf47a03a6"></span><span class="sig-name descname"><span class="n"><span class="pre">MARK_FREQUENCY</span></span></span><a class="headerlink" href="#c.MARK_FREQUENCY" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SPACE_FREQUENCY">
+<span class="target" id="afsk_8cpp_1aea6fdf87c7928942c94bbecd517a6bdf"></span><span class="sig-name descname"><span class="n"><span class="pre">SPACE_FREQUENCY</span></span></span><a class="headerlink" href="#c.SPACE_FREQUENCY" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TONE_FREQUENCY">
+<span class="target" id="afsk_8cpp_1a2381e2e95d6dd5b8ed8125d54dd3775e"></span><span class="sig-name descname"><span class="n"><span class="pre">TONE_FREQUENCY</span></span></span><a class="headerlink" href="#c.TONE_FREQUENCY" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SAMPLE_COUNTER_SCALE">
+<span class="target" id="afsk_8cpp_1a11970dc489a59fda76d671632912912c"></span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_COUNTER_SCALE</span></span></span><a class="headerlink" href="#c.SAMPLE_COUNTER_SCALE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SAMPLES_PER_BIT_SCALED">
+<span class="target" id="afsk_8cpp_1abe5e11a6e090eeb36102cf7126f122db"></span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLES_PER_BIT_SCALED</span></span></span><a class="headerlink" href="#c.SAMPLES_PER_BIT_SCALED" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.FIXED_PNT_BITS">
+<span class="target" id="afsk_8cpp_1a2ddb43a1d7b1f9862750dfedf027b8f1"></span><span class="sig-name descname"><span class="n"><span class="pre">FIXED_PNT_BITS</span></span></span><a class="headerlink" href="#c.FIXED_PNT_BITS" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.FIXED_PNT_SCALE">
+<span class="target" id="afsk_8cpp_1a4c6fcd332b3c540a41ce6a7b84e2c55a"></span><span class="sig-name descname"><span class="n"><span class="pre">FIXED_PNT_SCALE</span></span></span><a class="headerlink" href="#c.FIXED_PNT_SCALE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SAMPLE_STRIDE_TONE_FLOAT">
+<span class="target" id="afsk_8cpp_1a6cc399d14e6cd2a98aaf550cf389d52e"></span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_STRIDE_TONE_FLOAT</span></span></span><a class="headerlink" href="#c.SAMPLE_STRIDE_TONE_FLOAT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SAMPLE_STRIDE_TONE_FIXED_PNT">
+<span class="target" id="afsk_8cpp_1a52b976e381ca95212f3088ec14e8912a"></span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_STRIDE_TONE_FIXED_PNT</span></span></span><a class="headerlink" href="#c.SAMPLE_STRIDE_TONE_FIXED_PNT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SAMPLE_STRIDE_MARK_FLOAT">
+<span class="target" id="afsk_8cpp_1adbd0837d675bdd2c18db5b06752b1886"></span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_STRIDE_MARK_FLOAT</span></span></span><a class="headerlink" href="#c.SAMPLE_STRIDE_MARK_FLOAT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SAMPLE_STRIDE_MARK_FIXED_PNT">
+<span class="target" id="afsk_8cpp_1aa3e2e35dfa0aa5007f35bce9c245592f"></span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_STRIDE_MARK_FIXED_PNT</span></span></span><a class="headerlink" href="#c.SAMPLE_STRIDE_MARK_FIXED_PNT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SAMPLE_STRIDE_SPACE_FLOAT">
+<span class="target" id="afsk_8cpp_1a643709a76601f4bdfd7b8eb29f37246b"></span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_STRIDE_SPACE_FLOAT</span></span></span><a class="headerlink" href="#c.SAMPLE_STRIDE_SPACE_FLOAT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SAMPLE_STRIDE_SPACE_FIXED_PNT">
+<span class="target" id="afsk_8cpp_1a17e45d6042d3f9d6c3c9c513946ffd51"></span><span class="sig-name descname"><span class="n"><span class="pre">SAMPLE_STRIDE_SPACE_FIXED_PNT</span></span></span><a class="headerlink" href="#c.SAMPLE_STRIDE_SPACE_FIXED_PNT" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.TABLE2_SCALE">
+<span class="target" id="afsk_8cpp_1aeefd11fddc4436afc22a87ebe9547b21"></span><span class="sig-name descname"><span class="n"><span class="pre">TABLE2_SCALE</span></span></span><a class="headerlink" href="#c.TABLE2_SCALE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SINSCALE">
+<span class="target" id="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c"></span><span class="sig-name descname"><span class="n"><span class="pre">SINSCALE</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">x</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.SINSCALE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SIN_TABLE_MARK">
+<span class="target" id="afsk_8cpp_1a817810f8023aa966466a9fe12b148517"></span><span class="sig-name descname"><span class="n"><span class="pre">SIN_TABLE_MARK</span></span></span><a class="headerlink" href="#c.SIN_TABLE_MARK" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.SIN_TABLE_SPACE">
+<span class="target" id="afsk_8cpp_1ade09ec3a28df6b4fb31f60201d84872f"></span><span class="sig-name descname"><span class="n"><span class="pre">SIN_TABLE_SPACE</span></span></span><a class="headerlink" href="#c.SIN_TABLE_SPACE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416afsk_read_samplePCK8uint16_tK8uint16_t">
+<span id="_CPPv316afsk_read_samplePCK8uint16_tK8uint16_t"></span><span id="_CPPv216afsk_read_samplePCK8uint16_tK8uint16_t"></span><span id="afsk_read_sample__uint16_tCPC.uint16_tC"></span><span class="target" id="afsk_8cpp_1a74efd30d30f0d8274960015243d5b990"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_read_sample</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sine_table</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">phase</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416afsk_read_samplePCK8uint16_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv418afsk_output_sample8uint16_t">
+<span id="_CPPv318afsk_output_sample8uint16_t"></span><span id="_CPPv218afsk_output_sample8uint16_t"></span><span id="afsk_output_sample__uint16_t"></span><span class="target" id="afsk_8cpp_1a77357a5be8a013d7079cc549b098e707"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_output_sample</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv418afsk_output_sample8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415afsk_timer_stopv">
+<span id="_CPPv315afsk_timer_stopv"></span><span id="_CPPv215afsk_timer_stopv"></span><span id="afsk_timer_stop"></span><span class="target" id="afsk_8cpp_1aee2665da1e06179de2db4e81391a8aa2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_timer_stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415afsk_timer_stopv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49interruptv">
+<span id="_CPPv39interruptv"></span><span id="_CPPv29interruptv"></span><span id="interrupt__void"></span><span class="target" id="afsk_8cpp_1a66754ba1cb64cfc1fd62c9f0dfbe0108"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">interrupt</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49interruptv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416afsk_timer_startv">
+<span id="_CPPv316afsk_timer_startv"></span><span id="_CPPv216afsk_timer_startv"></span><span id="afsk_timer_start"></span><span class="target" id="afsk_8cpp_1a55d21dccf55b04ccfeaf0d46c0ffd7d9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_timer_start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416afsk_timer_startv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410afsk_setupK7uint8_tK8uint16_tK8uint32_tK8uint32_t">
+<span id="_CPPv310afsk_setupK7uint8_tK8uint16_tK8uint32_tK8uint32_t"></span><span id="_CPPv210afsk_setupK7uint8_tK8uint16_tK8uint32_tK8uint32_t"></span><span id="afsk_setup__uint8_tC.uint16_tC.uint32_tC.uint32_tC"></span><span class="target" id="afsk_8cpp_1af04b6ba0f071bd838dbe9cbbebb2da4d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_setup</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_pttPin</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_pttDelay</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_toneLength</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_silenceLength</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410afsk_setupK7uint8_tK8uint16_tK8uint32_tK8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415afsk_set_bufferPCK7uint8_tK8uint16_t">
+<span id="_CPPv315afsk_set_bufferPCK7uint8_tK8uint16_t"></span><span id="_CPPv215afsk_set_bufferPCK7uint8_tK8uint16_t"></span><span id="afsk_set_buffer__uint8_tCPC.uint16_tC"></span><span class="target" id="afsk_8cpp_1a852f39a7ffa81b2a2e4cbdca6b004837"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_set_buffer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415afsk_set_bufferPCK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49afsk_busyv">
+<span id="_CPPv39afsk_busyv"></span><span id="_CPPv29afsk_busyv"></span><span id="afsk_busy"></span><span class="target" id="afsk_8cpp_1a284c725f2b2cb0743504fbc0d0c4bf97"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_busy</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49afsk_busyv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410afsk_startv">
+<span id="_CPPv310afsk_startv"></span><span id="_CPPv210afsk_startv"></span><span id="afsk_start"></span><span class="target" id="afsk_8cpp_1ad7daf3efd823a9075f24b6e6d3fbe4c4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_start</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410afsk_startv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-variables">Variables</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv416afsk_sine_table1">
+<span id="_CPPv316afsk_sine_table1"></span><span id="_CPPv216afsk_sine_table1"></span><span id="afsk_sine_table1__uint16_tCA"></span><span class="target" id="afsk_8cpp_1a6044576ab11abcba5d061b63403a3de2"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_sine_table1</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">129</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">2047</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2072</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2097</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2122</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2147</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2173</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2198</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2223</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2248</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2273</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2298</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2323</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2348</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2372</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2397</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2422</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2447</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2471</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2496</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2520</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2545</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2569</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2593</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2617</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2642</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2666</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2689</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2713</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2737</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2761</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2784</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2807</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2831</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2854</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2877</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2900</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2923</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2945</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2968</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">2990</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3012</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3035</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3056</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3078</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3100</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3121</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3143</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3164</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3185</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3206</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3226</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3247</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3267</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3287</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3307</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3327</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3346</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3366</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3385</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3404</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3422</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3441</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3459</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3477</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3495</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3513</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3530</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3547</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3564</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3581</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3598</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3614</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3630</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3646</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3662</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3677</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3692</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3707</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3721</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3736</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3750</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3764</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3777</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3791</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3804</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3816</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3829</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3841</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3853</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3865</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3876</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3887</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3898</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3909</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3919</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3929</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3939</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3949</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3958</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3967</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3975</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3984</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3992</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3999</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4007</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4014</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4021</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4027</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4034</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4040</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4045</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4051</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4056</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4060</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4065</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4069</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4073</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4076</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4080</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4083</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4085</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4087</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4089</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4091</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4093</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4094</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4094</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4095</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4095</span></span><span class="p"><span class="pre">,</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv416afsk_sine_table1" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv416afsk_sine_table2">
+<span id="_CPPv316afsk_sine_table2"></span><span id="_CPPv216afsk_sine_table2"></span><span id="afsk_sine_table2__uint16_tCA"></span><span class="target" id="afsk_8cpp_1ac3632852aae8f71af6df28f23bdd2d48"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_sine_table2</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">129</span></span><span class="p"><span class="pre">]</span></span><a class="headerlink" href="#_CPPv416afsk_sine_table2" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv44busy">
+<span id="_CPPv34busy"></span><span id="_CPPv24busy"></span><span id="busy__bV"></span><span class="target" id="afsk_8cpp_1a70e323088aaa8fc65f804e5c6a1def9f"></span><span class="k"><span class="pre">volatile</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">busy</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv44busy" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv415afsk_sine_table">
+<span id="_CPPv315afsk_sine_table"></span><span id="_CPPv215afsk_sine_table"></span><span id="afsk_sine_table__uint16_tCP"></span><span class="target" id="afsk_8cpp_1a3961f07a29518799976c7630faebe735"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">afsk_sine_table</span></span></span><a class="headerlink" href="#_CPPv415afsk_sine_table" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv419sine_table_switcher">
+<span id="_CPPv319sine_table_switcher"></span><span id="_CPPv219sine_table_switcher"></span><span id="sine_table_switcher__uint32_t"></span><span class="target" id="afsk_8cpp_1abab18891c8142ade5607995eecc26a15"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sine_table_switcher</span></span></span><a class="headerlink" href="#_CPPv419sine_table_switcher" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv418currentSampleCount">
+<span id="_CPPv318currentSampleCount"></span><span id="_CPPv218currentSampleCount"></span><span id="currentSampleCount__uint32_t"></span><span class="target" id="afsk_8cpp_1a09a1d70fd7c1fc351166151885257e14"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentSampleCount</span></span></span><a class="headerlink" href="#_CPPv418currentSampleCount" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413currentStride">
+<span id="_CPPv313currentStride"></span><span id="_CPPv213currentStride"></span><span id="currentStride__uint16_t"></span><span class="target" id="afsk_8cpp_1a9902950e1ec39994abb55bea5a7e30b3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentStride</span></span></span><a class="headerlink" href="#_CPPv413currentStride" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413currentSample">
+<span id="_CPPv313currentSample"></span><span id="_CPPv213currentSample"></span><span id="currentSample__uint16_t"></span><span class="target" id="afsk_8cpp_1a64a9f3fb68e5d60357e9f4406c0ac6d6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentSample</span></span></span><a class="headerlink" href="#_CPPv413currentSample" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv416totalSamplesSent">
+<span id="_CPPv316totalSamplesSent"></span><span id="_CPPv216totalSamplesSent"></span><span id="totalSamplesSent__uint32_t"></span><span class="target" id="afsk_8cpp_1a0ff321d0ea3d7ccf28ec55bf18739cf7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">totalSamplesSent</span></span></span><a class="headerlink" href="#_CPPv416totalSamplesSent" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv412current_byte">
+<span id="_CPPv312current_byte"></span><span id="_CPPv212current_byte"></span><span id="current_byte__uint8_t"></span><span class="target" id="afsk_8cpp_1a65b988e1163cc65c6d3e5562fbc36a98"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">current_byte</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv412current_byte" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv411afsk_packet">
+<span id="_CPPv311afsk_packet"></span><span id="_CPPv211afsk_packet"></span><span id="afsk_packet__uint8_tCP"></span><span class="target" id="afsk_8cpp_1ae15009f62c8fe3ee4d688692aa16498a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">afsk_packet</span></span></span><a class="headerlink" href="#_CPPv411afsk_packet" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv416afsk_packet_size">
+<span id="_CPPv316afsk_packet_size"></span><span id="_CPPv216afsk_packet_size"></span><span id="afsk_packet_size__uint32_t"></span><span class="target" id="afsk_8cpp_1a18f13030ce80188875b9096b502491d6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">afsk_packet_size</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv416afsk_packet_size" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv410packet_pos">
+<span id="_CPPv310packet_pos"></span><span id="_CPPv210packet_pos"></span><span id="packet_pos__uint32_t"></span><span class="target" id="afsk_8cpp_1a84913563ed029103a9f5caf740d73300"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">packet_pos</span></span></span><a class="headerlink" href="#_CPPv410packet_pos" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv47fDoTone">
+<span id="_CPPv37fDoTone"></span><span id="_CPPv27fDoTone"></span><span id="fDoTone__b"></span><span class="target" id="afsk_8cpp_1a109d4d2572fa55c29318bfb47aa6a4ad"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fDoTone</span></span></span><a class="headerlink" href="#_CPPv47fDoTone" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv48toneStop">
+<span id="_CPPv38toneStop"></span><span id="_CPPv28toneStop"></span><span id="toneStop__uint32_t"></span><span class="target" id="afsk_8cpp_1a4c879d4e7c7ce8ec39e615e0c479f905"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toneStop</span></span></span><a class="headerlink" href="#_CPPv48toneStop" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv411silenceStop">
+<span id="_CPPv311silenceStop"></span><span id="_CPPv211silenceStop"></span><span id="silenceStop__uint32_t"></span><span class="target" id="afsk_8cpp_1a13fa570f50aa665dff23d97f257e817a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">silenceStop</span></span></span><a class="headerlink" href="#_CPPv411silenceStop" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv46pttPin">
+<span id="_CPPv36pttPin"></span><span id="_CPPv26pttPin"></span><span id="pttPin__uint8_t"></span><span class="target" id="afsk_8cpp_1ae4c47aa483a62526c5df73419f0e514b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pttPin</span></span></span><a class="headerlink" href="#_CPPv46pttPin" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv48pttDelay">
+<span id="_CPPv38pttDelay"></span><span id="_CPPv28pttDelay"></span><span id="pttDelay__uint16_t"></span><span class="target" id="afsk_8cpp_1aa6e65d8bdf16e4d1f42f23a9b23a9308"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pttDelay</span></span></span><a class="headerlink" href="#_CPPv48pttDelay" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv410toneLength">
+<span id="_CPPv310toneLength"></span><span id="_CPPv210toneLength"></span><span id="toneLength__uint32_t"></span><span class="target" id="afsk_8cpp_1aaa6c5758e3ace72d6b4d4547297920f2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toneLength</span></span></span><a class="headerlink" href="#_CPPv410toneLength" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv413silenceLength">
+<span id="_CPPv313silenceLength"></span><span id="_CPPv213silenceLength"></span><span id="silenceLength__uint32_t"></span><span class="target" id="afsk_8cpp_1a1713f2537979a8de29f27a5e30ec1fb5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">silenceLength</span></span></span><a class="headerlink" href="#_CPPv413silenceLength" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</section>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, William Stump, Chris Swindell, Luke Chapman, Emma Krebs, Mia Guzman.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h" kind="file" language="C++">
+    <compoundname>RHGenericDriver.h</compoundname>
+    <includes refid="LoRaNodeV4_2RadioHead_2RadioHead_8h" local="no">RadioHead.h</includes>
+    <includedby refid="LoRaNodeV4_2RadioHead_2RHGenericDriver_8cpp" local="no">/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp</includedby>
+    <includedby refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h" local="no">/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RadioHead.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RadioHead_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHGenericDriver_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RH__RF95_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h</label>
+        <link refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRHGenericDriver" prot="public">RHGenericDriver</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h_1a9c84f7d91767956cb008ff33db315c76" prot="public" static="no">
+        <name>RH_FLAGS_RESERVED</name>
+        <initializer>0xf0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="13" column="9" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h_1a2de7645a3f8c3f6a2a0de24924808c54" prot="public" static="no">
+        <name>RH_FLAGS_APPLICATION_SPECIFIC</name>
+        <initializer>0x0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="14" column="9" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h_1a444bd3905c27fbbf3d94dd27542d2c19" prot="public" static="no">
+        <name>RH_FLAGS_NONE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="15" column="9" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>RHGenericDriver.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Mike<sp/>McCauley<sp/>(mikem@airspayce.com)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2014<sp/>Mike<sp/>McCauley</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>RHGenericDriver.h,v<sp/>1.17<sp/>2016/04/04<sp/>01:40:12<sp/>mikem<sp/>Exp<sp/>mikem<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RHGenericDriver_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RHGenericDriver_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="RadioHead_2RadioHead_8h" kindref="compound">RadioHead.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Defines<sp/>bits<sp/>of<sp/>the<sp/>FLAGS<sp/>header<sp/>reserved<sp/>for<sp/>use<sp/>by<sp/>the<sp/>RadioHead<sp/>library<sp/>and<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>flags<sp/>available<sp/>for<sp/>use<sp/>by<sp/>applications</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_FLAGS_RESERVED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xf0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_FLAGS_APPLICATION_SPECIFIC<sp/><sp/><sp/><sp/><sp/>0x0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_FLAGS_NONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classRHGenericDriver" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRHGenericDriver" kindref="compound">RHGenericDriver</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abf4722e2aaba29a678d754fc677d5a1d" kindref="member">RHModeInitialising</ref><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" kindref="member">RHModeSleep</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" kindref="member">RHModeIdle</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" kindref="member">RHModeTx</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" kindref="member">RHModeRx</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" kindref="member">RHMode</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1aacf1b301be4cc16800a62632df6fdd37" kindref="member">RHGenericDriver</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888" kindref="member">available</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" kindref="member">recv</ref>(uint8_t*<sp/>buf,<sp/>uint8_t*<sp/>len)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" kindref="member">send</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>data,<sp/>uint8_t<sp/>len)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classRHGenericDriver_1a267459de4eb3032c5efb8b220af7d164" kindref="member">maxMessageLength</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1abf108e52389353cb3658b6802b92c77c" kindref="member">waitAvailable</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" kindref="member">waitPacketSent</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" kindref="member">waitPacketSent</ref>(uint16_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a8ed545cecc22196a325333dc9637e4cf" kindref="member">waitAvailableTimeout</ref>(uint16_t<sp/>timeout);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHGenericDriver_1a5e8f15e1e7480899d18c3a21248bb628" kindref="member">setThisAddress</ref>(uint8_t<sp/>thisAddress);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a182436232f7a345bca0d1766d242f3fb" kindref="member">setHeaderTo</ref>(uint8_t<sp/>to);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a470e67f4168dec41435dcc0e194202c8" kindref="member">setHeaderFrom</ref>(uint8_t<sp/>from);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a4dd57079264bda98bc89145fe5d2eb8f" kindref="member">setHeaderId</ref>(uint8_t<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1acb992b3c5e360e68b67e4843558bcf3b" kindref="member">setHeaderFlags</ref>(uint8_t<sp/>set,<sp/>uint8_t<sp/>clear<sp/>=<sp/><ref refid="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h_1a2de7645a3f8c3f6a2a0de24924808c54" kindref="member">RH_FLAGS_APPLICATION_SPECIFIC</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a2791f57538b02a73e7dbe1031048230e" kindref="member">setPromiscuous</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>promiscuous);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a6f49c9fe68354b50988dec435fa8d086" kindref="member">headerTo</ref>();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a8cf7a972186592c51c6fde034d17ab9f" kindref="member">headerFrom</ref>();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a81548960bb29a3ac35325c74cd562f45" kindref="member">headerId</ref>();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a056fbd2df558971fe8a1653499a37c63" kindref="member">headerFlags</ref>();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1ab04f2ca335d89f5fac1d213c0aea9da2" kindref="member">lastRssi</ref>();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" kindref="member">RHMode</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a80ff7dfded27279332cf8fa6f15dce74" kindref="member">mode</ref>();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1aa1c0a94ba6414b5bbab0133c4d74e646" kindref="member">setMode</ref>(<ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" kindref="member">RHMode</ref><sp/><ref refid="classRHGenericDriver_1a80ff7dfded27279332cf8fa6f15dce74" kindref="member">mode</ref>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a97050555cbf46ad723ad9c45d7f76a55" kindref="member">sleep</ref>();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a63915f6420833eb8ec61ee3b0610e34b" kindref="member">printBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>prompt,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>buf,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a0163fb71dc8d0cd86136882886adba7f" kindref="member">rxBad</ref>();</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a5f730e644ab1f5f529fdfa82fdb2ed69" kindref="member">rxGood</ref>();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a66a408f88a1188a0fab458816cb705f4" kindref="member">txGood</ref>();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" kindref="member">RHMode</ref><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" kindref="member">_mode</ref>;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a6d2e9824e29c9d5e9ad28682e53ea974" kindref="member">_thisAddress</ref>;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a2d94c93203714ed3dd9a7434101683e9" kindref="member">_promiscuous</ref>;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1abff3740bc072a2d435194a7860b2bfe3" kindref="member">_rxHeaderTo</ref>;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a7283cfec4e7c1ecf074307534592fd8f" kindref="member">_rxHeaderFrom</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a3155557c35198acdde0ecdf58a201b19" kindref="member">_rxHeaderId</ref>;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a5fd0c3bbc3cfe199924a9e1cb909f5fd" kindref="member">_rxHeaderFlags</ref>;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a759debcdbdb837cea024f777020203e5" kindref="member">_txHeaderTo</ref>;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1a2c7cdccccf1b17c73ef95dca6d3075f9" kindref="member">_txHeaderFrom</ref>;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1ad0eafb5a8316b90ad8cd9d42234517da" kindref="member">_txHeaderId</ref>;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1abf4db9bddfee361cc44fbf4bd22202bc" kindref="member">_txHeaderFlags</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>int8_t<sp/><sp/><sp/><sp/><sp/><ref refid="classRHGenericDriver_1ae75ce1fa0448733a6e058f4c7a1ba0a7" kindref="member">_lastRssi</ref>;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint16_t<sp/><sp/><sp/><ref refid="classRHGenericDriver_1a3bafd8dc638309a473367c4ff8e59c0e" kindref="member">_rxBad</ref>;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint16_t<sp/><sp/><sp/><ref refid="classRHGenericDriver_1abf09ee8b0cc1bf2b64dc0d963895ff71" kindref="member">_rxGood</ref>;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint16_t<sp/><sp/><sp/><ref refid="classRHGenericDriver_1a5f71653ad58e35ddca7fe3e052674ca2" kindref="member">_txGood</ref>;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_82a528aae3e26de3daedaf4668e55965" kind="dir">
+    <compoundname>/home/chris/Documents/ece5520/homework</compoundname>
+    <innerdir refid="dir_618679bd9d371b6f46d4bbe110d4de52">/home/chris/Documents/ece5520/homework/hw1</innerdir>
+    <innerdir refid="dir_f795979614ff9a1b97c508ed62b5b33b">/home/chris/Documents/ece5520/homework/hw2</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece5520/homework/"/>
+  </compounddef>
+</doxygen>

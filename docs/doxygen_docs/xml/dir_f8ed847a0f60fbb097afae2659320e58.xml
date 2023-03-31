@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_f8ed847a0f60fbb097afae2659320e58" kind="dir">
+    <compoundname>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS</compoundname>
+    <innerfile refid="afsk_8cpp">afsk.cpp</innerfile>
+    <innerfile refid="afsk_8h">afsk.h</innerfile>
+    <innerfile refid="APRS_8cpp">APRS.cpp</innerfile>
+    <innerfile refid="APRS_8hpp">APRS.hpp</innerfile>
+    <innerfile refid="ax25_8cpp">ax25.cpp</innerfile>
+    <innerfile refid="ax25_8h">ax25.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/"/>
+  </compounddef>
+</doxygen>

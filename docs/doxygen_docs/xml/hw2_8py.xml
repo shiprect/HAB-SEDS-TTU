@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="hw2_8py" kind="file" language="Python">
+    <compoundname>hw2.py</compoundname>
+    <innernamespace refid="namespacehw2">hw2</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacehw2" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>math<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pi,<sp/>sin,<sp/>cos,<sp/>atan<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>arctan,<sp/>asin<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>arcsin</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1a5fb4ed9eeeb99e6e76e40c6f9ee058f8" kindref="member">alpha2</ref><sp/>(n1:<sp/>float,<sp/>n2:<sp/>float,<sp/>lamb0:<sp/>float,<sp/>theta:<sp/>float):</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>term1<sp/>=<sp/>(2<sp/>*<sp/>pi<sp/>*<sp/>n2)<sp/>/<sp/>lamb0</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>term2<sp/>=<sp/>abs(((n1/n2)**2<sp/>*<sp/>sin(theta)**2<sp/>-<sp/>1)**0.5)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1<sp/>/<sp/>(term1<sp/>*<sp/>term2)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1ad76181efbc2628765d7efd1f25842b6c" kindref="member">E_perpendicular</ref><sp/>(n1:<sp/>float,<sp/>n2:<sp/>float,<sp/>theta:<sp/>float):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>n2<sp/>/<sp/>n1</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>numer<sp/>=<sp/>abs((sin(theta)**2<sp/>-<sp/>n**2)**0.5)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>denom<sp/>=<sp/>cos(theta)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>numer/denom</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1aea17bd8969e5b433fcab1a9b6a886bc1" kindref="member">E_parallel</ref><sp/>(n1:<sp/>float,<sp/>n2:<sp/>float,<sp/>theta:<sp/>float):</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>n2<sp/>/<sp/>n1</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1/n**2<sp/>*<sp/><ref refid="namespacehw2_1ad76181efbc2628765d7efd1f25842b6c" kindref="member">E_perpendicular</ref>(n1,<sp/>n2,<sp/>theta)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1a26cfea219e0a5b2fd12aac818b5c5f65" kindref="member">phase_change_perpendicular</ref><sp/>(n1:<sp/>float,<sp/>n2:<sp/>float,<sp/>theta:<sp/>float):</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2<sp/>*<sp/>arctan(<ref refid="namespacehw2_1ad76181efbc2628765d7efd1f25842b6c" kindref="member">E_perpendicular</ref>(n1,<sp/>n2,<sp/>theta))</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1a84a63ba7d0913b5cad82d86ce848ad15" kindref="member">phase_change_parallel</ref><sp/>(n1:<sp/>float,<sp/>n2:<sp/>float,<sp/>theta:<sp/>float):</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2<sp/>*<sp/>arctan(<ref refid="namespacehw2_1aea17bd8969e5b433fcab1a9b6a886bc1" kindref="member">E_parallel</ref>(n1,<sp/>n2,<sp/>theta))<sp/>-<sp/>pi</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1aa93f5e3232c659599d0293eba7aa9fa0" kindref="member">min_theta_i</ref><sp/>(n1:<sp/>float,<sp/>n2:<sp/>float):</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>n2<sp/>/<sp/>n1</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>arcsin(n)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1a4aa6d777352855394448a493ffac190b" kindref="member">refl_coeff</ref><sp/>(n1:<sp/>float,<sp/>n2:<sp/>float):</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(n1<sp/>-<sp/>n2)<sp/>/<sp/>(n1<sp/>+<sp/>n2)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1a4900e997846abdc9039cb7397be2ebc7" kindref="member">p1</ref><sp/>():</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>deg2rad<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x:<sp/>x<sp/>*<sp/>pi<sp/>/<sp/>180</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>rad2deg<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x:<sp/>x<sp/>*<sp/>180<sp/>/<sp/>pi</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>n1<sp/>=<sp/>1.327<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>Glass<sp/>medium<sp/>refractive<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>n2<sp/>=<sp/>1.117<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>(less<sp/>dense)<sp/>Glass<sp/>medium<sp/>refractive<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>lamb0<sp/>=<sp/>(1.8e-6,<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)<sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>Free<sp/>space<sp/>wavelength<sp/>of<sp/>the<sp/>light</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>theta1<sp/>=<sp/>(57,<sp/></highlight><highlight class="stringliteral">&apos;deg&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>theta2<sp/>=<sp/>(77,<sp/></highlight><highlight class="stringliteral">&apos;deg&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>delta1<sp/>=<sp/>(<ref refid="namespacehw2_1a5fb4ed9eeeb99e6e76e40c6f9ee058f8" kindref="member">alpha2</ref>(n1,<sp/>n2,<sp/>lamb0[0],<sp/>deg2rad(theta1[0])),<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>delta2<sp/>=<sp/>(<ref refid="namespacehw2_1a5fb4ed9eeeb99e6e76e40c6f9ee058f8" kindref="member">alpha2</ref>(n1,<sp/>n2,<sp/>lamb0[0],<sp/>deg2rad(theta2[0])),<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>phi1_perpendicular<sp/>=<sp/>(rad2deg(<ref refid="namespacehw2_1a26cfea219e0a5b2fd12aac818b5c5f65" kindref="member">phase_change_perpendicular</ref>(n1,<sp/>n2,<sp/>deg2rad(theta1[0]))),<sp/></highlight><highlight class="stringliteral">&apos;deg&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>phi1_parallel<sp/>=<sp/>(rad2deg(<ref refid="namespacehw2_1a84a63ba7d0913b5cad82d86ce848ad15" kindref="member">phase_change_parallel</ref>(n1,<sp/>n2,<sp/>deg2rad(theta1[0]))),<sp/></highlight><highlight class="stringliteral">&apos;deg&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>phi2_perpendicular<sp/>=<sp/>(rad2deg(<ref refid="namespacehw2_1a26cfea219e0a5b2fd12aac818b5c5f65" kindref="member">phase_change_perpendicular</ref>(n1,<sp/>n2,<sp/>deg2rad(theta2[0]))),<sp/></highlight><highlight class="stringliteral">&apos;deg&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>phi2_parallel<sp/>=<sp/>(rad2deg(<ref refid="namespacehw2_1a84a63ba7d0913b5cad82d86ce848ad15" kindref="member">phase_change_parallel</ref>(n1,<sp/>n2,<sp/>deg2rad(theta2[0]))),<sp/></highlight><highlight class="stringliteral">&apos;deg&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>min_theta<sp/>=<sp/>(rad2deg(<ref refid="namespacehw2_1aa93f5e3232c659599d0293eba7aa9fa0" kindref="member">min_theta_i</ref>(n1,<sp/>n2)),<sp/></highlight><highlight class="stringliteral">&apos;deg&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>n_glass<sp/>=<sp/>1.23</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>n_air<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>r1<sp/>=<sp/><ref refid="namespacehw2_1a4aa6d777352855394448a493ffac190b" kindref="member">refl_coeff</ref>(n_glass,<sp/>n_air)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>r2<sp/>=<sp/><ref refid="namespacehw2_1a4aa6d777352855394448a493ffac190b" kindref="member">refl_coeff</ref>(n_air,<sp/>n_glass)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>R1<sp/>=<sp/>r1**2</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>R2<sp/>=<sp/>r2**2</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;******<sp/>PROBLEM<sp/>1<sp/>******&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;a.<sp/>Penetration<sp/>depth<sp/>(theta1):<sp/>%e<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(delta1[0],<sp/>delta1[1]))</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>Penetration<sp/>depth<sp/>(theta2):<sp/>%e<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(delta2[0],<sp/>delta2[1]))</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>phi1<sp/>(perpendicular):<sp/>%f<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(phi1_perpendicular[0],<sp/>phi1_perpendicular[1]))</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>phi1<sp/>(parallel):<sp/>%f<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(phi1_parallel[0],<sp/>phi1_parallel[1]))</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>phi2<sp/>(perpendicular):<sp/>%f<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(phi2_perpendicular[0],<sp/>phi2_perpendicular[1]))</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>phi2<sp/>(parallel):<sp/>%f<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(phi2_parallel[0],<sp/>phi2_parallel[1]))</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>Minimum<sp/>theta_i:<sp/>%f<sp/>%s\n&apos;</highlight><highlight class="normal"><sp/>%(min_theta[0],<sp/>min_theta[1]))</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;b.<sp/>r1:<sp/>%f&apos;</highlight><highlight class="normal"><sp/>%r1)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>R1:<sp/>%f&apos;</highlight><highlight class="normal"><sp/>%R1)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>r2:<sp/>%f&apos;</highlight><highlight class="normal"><sp/>%r2)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>R2:<sp/>%f&apos;</highlight><highlight class="normal"><sp/>%R2)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>print()</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1a40789d0a8dd0ce27e6641433ccb495cb" kindref="member">absorption_coeff</ref><sp/>(k0,<sp/>K):</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2<sp/>*<sp/>k0<sp/>*<sp/>K</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1a2395fe93fb35a3871bb527d82e2739da" kindref="member">p2</ref><sp/>():</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>_alpha<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>k0,<sp/>K:<sp/>2<sp/>*<sp/>k0<sp/>*<sp/>K</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>_k0<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>lamb:<sp/>2<sp/>*<sp/>pi<sp/>/<sp/>lamb</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>_R<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>n,<sp/>K:<sp/>((n<sp/>-<sp/>1)**2<sp/>+<sp/>K**2)<sp/>/<sp/>((n<sp/>+<sp/>1)**2<sp/>+<sp/>K**2)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>3.1276</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>lamb<sp/>=<sp/>(599e-9,<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>k0<sp/>=<sp/>(_k0(lamb[0]),<sp/></highlight><highlight class="stringliteral">&apos;m^-1&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>Free<sp/>space<sp/>propogation<sp/>constant</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>K<sp/>=<sp/>0.279</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>alpha<sp/>=<sp/>(_alpha(k0[0],<sp/>K),<sp/></highlight><highlight class="stringliteral">&apos;m^-1&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>R<sp/>=<sp/>_R(n,<sp/>K)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;******<sp/>PROBLEM<sp/>2<sp/>******&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;a.<sp/>alpha:<sp/>%f<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(alpha[0],<sp/>alpha[1]))</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>R:<sp/>%f\n&apos;</highlight><highlight class="normal"><sp/>%R)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>[4,<sp/>0.002,<sp/>0.05]</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>lamb<sp/>=<sp/>([70e-6,<sp/>47.8e-6,<sp/>89.2e-6],<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>K<sp/>=<sp/>[6,<sp/>0.008,<sp/>0.1]</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>k0<sp/>=<sp/>([_k0(lam)<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>lam<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>lamb[0]],<sp/></highlight><highlight class="stringliteral">&apos;m^-1&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(n)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(lamb[0])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(K)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(k0[0])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>alpha<sp/>=<sp/>([_alpha(k0,<sp/>K)<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>k0,<sp/>K<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>zip(k0[0],<sp/>K)],<sp/></highlight><highlight class="stringliteral">&apos;m^-1&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>R<sp/>=<sp/>[_R(n,<sp/>K)<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>n,<sp/>K<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>zip(n,<sp/>K)]</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(alpha[0])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(R)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#print(len(alpha[0]))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;b.<sp/>alpha<sp/>(Reststrahlen):<sp/>%f<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(alpha[0][0],<sp/>alpha[1]))</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>R<sp/>(Reststrahlen):<sp/>%f&apos;</highlight><highlight class="normal"><sp/>%R[0])</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>alpha<sp/>(%e<sp/>%s):<sp/>%f<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(lamb[0][1],<sp/>lamb[1],<sp/>alpha[0][1],<sp/>alpha[1]))</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>R<sp/>(%e<sp/>%s):<sp/>%f&apos;</highlight><highlight class="normal"><sp/>%(lamb[0][1],<sp/>lamb[1],<sp/>R[1]))</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>alpha<sp/>(%e<sp/>%s):<sp/>%f&apos;</highlight><highlight class="normal"><sp/>%(lamb[0][2],<sp/>lamb[1],<sp/>alpha[0][2]))</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>R<sp/>(%e<sp/>%s):<sp/>%f\n&apos;</highlight><highlight class="normal"><sp/>%(lamb[0][2],<sp/>lamb[1],<sp/>R[2]))</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>print()</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1acbc136b349a010885fc54edf781ffd61" kindref="member">p3</ref><sp/>():</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>deltaf<sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>dlambda,<sp/>c,<sp/>lamb:<sp/>dlambda<sp/>*<sp/>c<sp/>/<sp/>lamb**2</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(2.998e8,<sp/></highlight><highlight class="stringliteral">&apos;m/s&apos;</highlight><highlight class="normal">)<sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>Speed<sp/>of<sp/>light<sp/>constant</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>lamb<sp/>=<sp/>(690e-9,<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>dlambda<sp/>=<sp/>(28e-9,<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>df<sp/>=<sp/>(deltaf(dlambda[0],<sp/>c[0],<sp/>lamb[0]),<sp/></highlight><highlight class="stringliteral">&apos;Hz&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>dt<sp/>=<sp/>(1/df[0],<sp/></highlight><highlight class="stringliteral">&apos;s&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>lc<sp/>=<sp/>(c[0]<sp/>*<sp/>dt[0],<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;******<sp/>PROBLEM<sp/>3<sp/>******&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;a.<sp/>dt:<sp/>%e<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(dt[0],<sp/>dt[1]))</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;<sp/><sp/><sp/>lc:<sp/>%e<sp/>%s\n&apos;</highlight><highlight class="normal"><sp/>%(lc[0],<sp/>lc[1]))</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>print()</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1a75f5d3fa6c6629db33c083892f9c2d9e" kindref="member">p4</ref><sp/>():</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>L<sp/>=<sp/>(237e-6,<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>R<sp/>=<sp/>0.793</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>lamb0<sp/>=<sp/>(1307e-9,<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>3.6</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>(2.998e8,<sp/></highlight><highlight class="stringliteral">&apos;m/s&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>m<sp/>=<sp/>int(2<sp/>*<sp/>n<sp/>*<sp/>L[0]<sp/>/<sp/>lamb0[0])</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>lambm<sp/>=<sp/>(2<sp/>*<sp/>n<sp/>*<sp/>L[0]<sp/>/<sp/>m,<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>dfm<sp/>=<sp/>(c[0]<sp/>/<sp/>(2<sp/>*<sp/>n<sp/>*<sp/>L[0]),<sp/></highlight><highlight class="stringliteral">&apos;Hz&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>F<sp/>=<sp/>pi<sp/>*<sp/>R**0.5<sp/>/<sp/>(1<sp/>-<sp/>R)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>delta_fm<sp/>=<sp/>(dfm[0]<sp/>/<sp/>F,<sp/></highlight><highlight class="stringliteral">&apos;Hz&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>fm<sp/>=<sp/>(c[0]<sp/>/<sp/>lambm[0],<sp/></highlight><highlight class="stringliteral">&apos;Hz&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>dlambm<sp/>=<sp/>((c[0]<sp/>/<sp/>fm[0]**2)<sp/>*<sp/>delta_fm[0],<sp/></highlight><highlight class="stringliteral">&apos;m&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>Q<sp/>=<sp/>m<sp/>*<sp/>F</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;******<sp/>PROBLEM<sp/>4<sp/>******&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;m:<sp/>%f&apos;</highlight><highlight class="normal"><sp/>%m)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;lambm:<sp/>%e<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(lambm[0],<sp/>lambm[1]))</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;dfm:<sp/>%e<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(dfm[0],<sp/>dfm[1]))</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;F:<sp/>%f&apos;</highlight><highlight class="normal"><sp/>%F)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;delta_fm:<sp/>%e<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(delta_fm[0],<sp/>delta_fm[1]))</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;fm:<sp/>%e<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(fm[0],<sp/>fm[1]))</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;dlambm:<sp/>%e<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%(dlambm[0],<sp/>dlambm[1]))</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Q:<sp/>%e&apos;</highlight><highlight class="normal"><sp/>%Q)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>print()</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacehw2_1aed7bef681e5f0d1b3c383de1b831a588" kindref="member">main</ref><sp/>():</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>print()</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#p1()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#p2()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#p3()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehw2_1a75f5d3fa6c6629db33c083892f9c2d9e" kindref="member">p4</ref>()</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacehw2_1aed7bef681e5f0d1b3c383de1b831a588" kindref="member">main</ref>()</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py"/>
+  </compounddef>
+</doxygen>

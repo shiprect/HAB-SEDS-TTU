@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="TimerUtilities_8h" kind="file" language="C++">
+    <compoundname>TimerUtilities.h</compoundname>
+    <includedby refid="Utilities_8h" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/Utilities.h</includedby>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino</label>
+        <link refid="HAB-SEDS-TTU_8ino"/>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp</label>
+        <link refid="APRS_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp</label>
+        <link refid="afsk_8cpp"/>
+      </node>
+      <node id="9">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp</label>
+        <link refid="ax25_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.cpp</label>
+        <link refid="AnalogPin_8cpp"/>
+      </node>
+      <node id="11">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp</label>
+        <link refid="AnalogPin_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.cpp</label>
+        <link refid="BMP_8cpp"/>
+      </node>
+      <node id="15">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.hpp</label>
+        <link refid="BMP_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.cpp</label>
+        <link refid="GPS_8cpp"/>
+      </node>
+      <node id="19">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.hpp</label>
+        <link refid="GPS_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.cpp</label>
+        <link refid="PWM_8cpp"/>
+      </node>
+      <node id="21">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/PWM/PWM.hpp</label>
+        <link refid="PWM_8hpp"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.cpp</label>
+        <link refid="Pushbutton_8cpp"/>
+      </node>
+      <node id="23">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.hpp</label>
+        <link refid="Pushbutton_8hpp"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp</label>
+        <link refid="SD__card_8cpp"/>
+      </node>
+      <node id="13">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</label>
+        <link refid="SD__card_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp</label>
+        <link refid="Servo_8cpp"/>
+      </node>
+      <node id="25">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp</label>
+        <link refid="Servo_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp</label>
+        <link refid="Status_8cpp"/>
+      </node>
+      <node id="17">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structSoftTimer__Struct" prot="public">SoftTimer_Struct</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__TIMERUTILITIES_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__TIMERUTILITIES_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="structSoftTimer__Struct" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structSoftTimer__Struct" kindref="compound">SoftTimer_Struct</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//**********************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Create<sp/>an<sp/>instance<sp/>by<sp/>calling:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>timer<sp/>myTimer<sp/>=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>200UL,<sp/>TRUE,<sp/>TRUE<sp/><sp/><sp/><sp/>//<sp/>lastMillis,<sp/>waitMillis,<sp/>IsRepeatable,<sp/>IsEnabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Update<sp/>the<sp/>timer<sp/>via:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>myTimer.CheckTime()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>Note<sp/>that<sp/>the<sp/>timer<sp/>will<sp/>disable<sp/>itself<sp/>if<sp/>IsRepeatable<sp/>=<sp/>FALSE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//**********************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="structSoftTimer__Struct_1a7d2b7bc8d6e30b308722bbb2f5a3d43e" kindref="member">lastMillis</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>time<sp/>this<sp/>&quot;timer&quot;<sp/>was<sp/>(re)started</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="structSoftTimer__Struct_1afbc58f828579173a64954fbbb8b0d89b" kindref="member">waitMillis</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Delay<sp/>time(mS)<sp/>we<sp/>are<sp/>looking<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structSoftTimer__Struct_1a148c45bf842bd8afd36d6a8d171f5299" kindref="member">IsRepeatable</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Does<sp/>the<sp/>timer<sp/>repeat<sp/>itself</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structSoftTimer__Struct_1a9ab742f4dcbc1dab683fe1880bd4ed93" kindref="member">IsEnabled</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Is<sp/>&quot;this<sp/>timer&quot;<sp/>enabled/allowed<sp/>to<sp/>be<sp/>accessed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structSoftTimer__Struct_1a79f30b28c5470a5b688b028fb74cb25d" kindref="member">CheckTime</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="structSoftTimer__Struct_1a9ab742f4dcbc1dab683fe1880bd4ed93" kindref="member">IsEnabled</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>((<sp/>millis()<sp/>-<sp/><ref refid="structSoftTimer__Struct_1a7d2b7bc8d6e30b308722bbb2f5a3d43e" kindref="member">lastMillis</ref><sp/>)<sp/>&gt;=<sp/><ref refid="structSoftTimer__Struct_1afbc58f828579173a64954fbbb8b0d89b" kindref="member">waitMillis</ref><sp/>))<sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>Run<sp/>if<sp/>Timer<sp/>enabled<sp/>and<sp/>one<sp/>period<sp/>has<sp/>passed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="structSoftTimer__Struct_1a148c45bf842bd8afd36d6a8d171f5299" kindref="member">IsRepeatable</ref><sp/>)<sp/>{<sp/><sp/></highlight><highlight class="comment">//Should<sp/>the<sp/>timer<sp/>reset<sp/>or<sp/>expire</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structSoftTimer__Struct_1a7d2b7bc8d6e30b308722bbb2f5a3d43e" kindref="member">lastMillis</ref><sp/>+=<sp/><ref refid="structSoftTimer__Struct_1afbc58f828579173a64954fbbb8b0d89b" kindref="member">waitMillis</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structSoftTimer__Struct_1a9ab742f4dcbc1dab683fe1880bd4ed93" kindref="member">IsEnabled</ref><sp/>=<sp/><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;<sp/><sp/></highlight><highlight class="comment">//<sp/>Required<sp/>to<sp/>ensure<sp/>that<sp/>the<sp/>timer<sp/>does<sp/>not<sp/>execute<sp/>when<sp/>millis()<sp/>runs<sp/>over</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="HardwareUtilities_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" kindref="member">TRUE</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//__TIMERUTILITIES_H__</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classGrid" kind="class" language="C++" prot="public">
+    <compoundname>Grid</compoundname>
+    <includes local="no">Grid.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classGrid_1abe81452ffffeebcedb8d9021a2907c4a" prot="private" static="no" mutable="no">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a28b686d142088dcdf146d2c96377f362" kindref="member">Box</ref></type>
+        <definition>Box Grid::matrices[9]</definition>
+        <argsstring>[9]</argsstring>
+        <name>matrices</name>
+        <qualifiedname>Grid::matrices</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="17" column="13" bodyfile="/home/chris/Documents/sphinx_testing/include/Grid.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGrid_1af944dc4b45f6efe0d042687b340b0e42" prot="private" static="no" mutable="no">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a5699d63a3ce5ffb14b2ffdefbe65877f" kindref="member">Row</ref></type>
+        <definition>Row Grid::rows</definition>
+        <argsstring>[9]</argsstring>
+        <name>rows</name>
+        <qualifiedname>Grid::rows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="18" column="13" bodyfile="/home/chris/Documents/sphinx_testing/include/Grid.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGrid_1af596bf94ed8445fe215890e3c02ab7f8" prot="private" static="no" mutable="no">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a613a25b77848c639c356618e73fee8c7" kindref="member">Column</ref></type>
+        <definition>Column Grid::cols</definition>
+        <argsstring>[9]</argsstring>
+        <name>cols</name>
+        <qualifiedname>Grid::cols</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="19" column="16" bodyfile="/home/chris/Documents/sphinx_testing/include/Grid.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGrid_1aefc7cb7aabd32b8eef0e512cdb3c3d9c" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Grid::known_positions</definition>
+        <argsstring>[81]</argsstring>
+        <name>known_positions</name>
+        <qualifiedname>Grid::known_positions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="20" column="14" bodyfile="/home/chris/Documents/sphinx_testing/include/Grid.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGrid_1acc11e7c7f6dcdcd63c2faf5154e5de42" prot="private" static="no" mutable="no">
+        <type>map&lt; uint8_t, <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref> &gt;</type>
+        <definition>map&lt;uint8_t, cell&gt; Grid::_map_</definition>
+        <argsstring></argsstring>
+        <name>_map_</name>
+        <qualifiedname>Grid::_map_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="25" column="13" bodyfile="/home/chris/Documents/sphinx_testing/include/Grid.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGrid_1a5a5098674713aa112f7fa5b795a93d51" prot="private" static="no" mutable="no">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a28b686d142088dcdf146d2c96377f362" kindref="member">Box</ref></type>
+        <definition>Box Grid::boxes[NUM_CONTAINERS]</definition>
+        <argsstring>[NUM_CONTAINERS]</argsstring>
+        <name>boxes</name>
+        <qualifiedname>Grid::boxes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="27" column="13" bodyfile="/home/chris/Documents/tsudoku/include/Grid.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classGrid_1a1afd40d50ab45cffbe9567fb8c2d4e82" prot="private" static="no" mutable="no">
+        <type>map&lt; uint8_t, <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref> &gt;</type>
+        <definition>map&lt;uint8_t, cell&gt; Grid::grid_map</definition>
+        <argsstring></argsstring>
+        <name>grid_map</name>
+        <qualifiedname>Grid::grid_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="31" column="13" bodyfile="/home/chris/Documents/tsudoku/include/Grid.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classGrid_1a6c664e7c3118c86058612017ae63e20e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::init_positions</definition>
+        <argsstring>()</argsstring>
+        <name>init_positions</name>
+        <qualifiedname>Grid::init_positions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="27" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="237" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a94a3baa8454fb3c165887b2b373ea3dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>array&lt; uint8_t, 81 &gt;</type>
+        <definition>array&lt; uint8_t, GRID_SIZE &gt; Grid::generate_solved_puzzle</definition>
+        <argsstring>(time_t)</argsstring>
+        <name>generate_solved_puzzle</name>
+        <qualifiedname>Grid::generate_solved_puzzle</qualifiedname>
+        <param>
+          <type>time_t</type>
+          <defname>seed</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="28" column="15" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="352" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a57080b9722c807317ce84a06d8c3d11a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::set_starting_positions</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>set_starting_positions</name>
+        <qualifiedname>Grid::set_starting_positions</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>NUM_POSITIONS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="29" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="438" bodyend="564"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a56cbda07963230793289268a7cdac772" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; uint8_t, <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref> &gt;</type>
+        <definition>void Grid::create_map</definition>
+        <argsstring>()</argsstring>
+        <name>create_map</name>
+        <qualifiedname>Grid::create_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="32" column="13" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="672" bodyend="684"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1af04e216bea543fced5fce7ee7d017ed9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Grid::solve</definition>
+        <argsstring>(uint8_t, uint8_t, Row[9], Column[9], Box[9])</argsstring>
+        <name>solve</name>
+        <qualifiedname>Grid::solve</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>submatrix</defname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <defname>value</defname>
+        </param>
+        <param>
+          <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a5699d63a3ce5ffb14b2ffdefbe65877f" kindref="member">Row</ref></type>
+          <defname>rows</defname>
+          <array>[9]</array>
+        </param>
+        <param>
+          <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a613a25b77848c639c356618e73fee8c7" kindref="member">Column</ref></type>
+          <defname>columns</defname>
+          <array>[9]</array>
+        </param>
+        <param>
+          <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a28b686d142088dcdf146d2c96377f362" kindref="member">Box</ref></type>
+          <defname>submatrices</defname>
+          <array>[9]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="33" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="260" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a35eb8bcc69488be1fc58931c9a78dfd2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::init_known_positions</definition>
+        <argsstring>()</argsstring>
+        <name>init_known_positions</name>
+        <qualifiedname>Grid::init_known_positions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="33" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="192" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a16a318788930afc0aaf98525b68a3e3b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>array&lt; uint8_t, <ref refid="tsudoku_2include_2Grid_8hpp_1acf3f707ba6199ab50ab295b84d40f9a4" kindref="member">GRID_SIZE</ref> &gt;</type>
+        <definition>array&lt; uint8_t, GRID_SIZE &gt; Grid::generate_solved_puzzle</definition>
+        <argsstring>(const time_t)</argsstring>
+        <name>generate_solved_puzzle</name>
+        <qualifiedname>Grid::generate_solved_puzzle</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>time_t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="34" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a57080b9722c807317ce84a06d8c3d11a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::set_starting_positions</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>set_starting_positions</name>
+        <qualifiedname>Grid::set_starting_positions</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="35" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1ab858d845ef7a3a9376fa31bc33ae0b4c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::set_starting_positions</definition>
+        <argsstring>(const uint8_t[NUM_CONTAINERS][NUM_CONTAINERS])</argsstring>
+        <name>set_starting_positions</name>
+        <qualifiedname>Grid::set_starting_positions</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>GRID</defname>
+          <array>[NUM_CONTAINERS][NUM_CONTAINERS]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="36" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="416" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a56cbda07963230793289268a7cdac772" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::create_map</definition>
+        <argsstring>()</argsstring>
+        <name>create_map</name>
+        <qualifiedname>Grid::create_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="37" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a5aed1d1dc16f97266bf3daa63f46395c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Grid::solve</definition>
+        <argsstring>(const uint8_t, const uint8_t, Row[NUM_CONTAINERS], Column[NUM_CONTAINERS], Box[NUM_CONTAINERS])</argsstring>
+        <name>solve</name>
+        <qualifiedname>Grid::solve</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>BOX</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>VALUE</defname>
+        </param>
+        <param>
+          <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a5699d63a3ce5ffb14b2ffdefbe65877f" kindref="member">Row</ref></type>
+          <defname>rows</defname>
+          <array>[NUM_CONTAINERS]</array>
+        </param>
+        <param>
+          <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a613a25b77848c639c356618e73fee8c7" kindref="member">Column</ref></type>
+          <defname>columns</defname>
+          <array>[NUM_CONTAINERS]</array>
+        </param>
+        <param>
+          <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a28b686d142088dcdf146d2c96377f362" kindref="member">Box</ref></type>
+          <defname>boxes</defname>
+          <array>[NUM_CONTAINERS]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="38" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="236" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1aa4bd31898b586396ab97b483dc9b63c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::at</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>at</name>
+        <qualifiedname>Grid::at</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="40" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGrid_1a4ac9ff4f63552b4c61ff90fcb35ad66c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Grid::Grid</definition>
+        <argsstring>()</argsstring>
+        <name>Grid</name>
+        <qualifiedname>Grid::Grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="36" column="9" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="16" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a3661d0a7f998caaaf8627d7a67072116" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Grid::~Grid</definition>
+        <argsstring>()</argsstring>
+        <name>~Grid</name>
+        <qualifiedname>Grid::~Grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="37" column="9" bodyfile="/home/chris/Documents/sphinx_testing/include/Grid.hpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1ac754d5b4894f975883035621bbeacc35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::map_row</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>map_row</name>
+        <qualifiedname>Grid::map_row</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>POS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="38" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="571" bodyend="574"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1ace3bceec2b7ba523f78a8815afc45484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::map_column</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>map_column</name>
+        <qualifiedname>Grid::map_column</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>POS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="39" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="576" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a6353cc368999b83bedbe5823621b4e7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::map_submatrix</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>map_submatrix</name>
+        <qualifiedname>Grid::map_submatrix</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>ROW</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>COLUMN</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="40" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="581" bodyend="631"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a7aa601961dbd52cd07c35ca80e31000b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a28b686d142088dcdf146d2c96377f362" kindref="member">Box</ref> &amp;</type>
+        <definition>Box &amp; Grid::get_submatrix</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>get_submatrix</name>
+        <qualifiedname>Grid::get_submatrix</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="41" column="13" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1adcebe05c84614d3e2a53beb69b90d973" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a5699d63a3ce5ffb14b2ffdefbe65877f" kindref="member">Row</ref> &amp;</type>
+        <definition>Row &amp; Grid::get_row</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>get_row</name>
+        <qualifiedname>Grid::get_row</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="42" column="13" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a94758486a4f76b7dacad8c27b6e2eed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a613a25b77848c639c356618e73fee8c7" kindref="member">Column</ref> &amp;</type>
+        <definition>Column &amp; Grid::get_column</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>get_column</name>
+        <qualifiedname>Grid::get_column</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="43" column="16" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="232" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a03817f12af33e74d59c7f45996080c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::get_row_index</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_row_index</name>
+        <qualifiedname>Grid::get_row_index</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>POS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="44" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="638" bodyend="656"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1aad342f31d0e9337b8cab2a650add3356" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::get_column_index</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_column_index</name>
+        <qualifiedname>Grid::get_column_index</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>POS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="45" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="658" bodyend="662"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1aa4d35b0e99680068d084e53678f2a686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::get_submatrix_index</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_submatrix_index</name>
+        <qualifiedname>Grid::get_submatrix_index</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>POS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="46" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="664" bodyend="670"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a654fa6ae18969bf895c905fc524f912c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::mvprintw</definition>
+        <argsstring>(const uint8_t, const uint8_t, const bool, const bool)</argsstring>
+        <name>mvprintw</name>
+        <qualifiedname>Grid::mvprintw</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>YCOORD</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>XCOORD</defname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <defname>COLUMN_PRINTING</defname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <defname>SUBMATRIX_PRINTING</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="48" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="121" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1ad6e4e4b30af768dde20d41f51292413d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::printw</definition>
+        <argsstring>(const bool, const bool)</argsstring>
+        <name>printw</name>
+        <qualifiedname>Grid::printw</qualifiedname>
+        <param>
+          <type>const bool</type>
+          <defname>COLUMN_PRINTING</defname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <defname>SUBMATRIX_PRINTING</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="49" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="113" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a9198799ac8829d485d77d16120e749ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref></type>
+        <definition>const cell Grid::get_map</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>get_map</name>
+        <qualifiedname>Grid::get_map</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="50" column="20" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="686" bodyend="689"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a2a83f154c949606c32f3e793db028437" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::get_map_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_map_size</name>
+        <qualifiedname>Grid::get_map_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="51" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="691" bodyend="694"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a6b3521b0b6fd6a0cb551fe64b90d9805" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::at</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>at</name>
+        <qualifiedname>Grid::at</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="52" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="696" bodyend="701"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a05557e973f89bc0f106d44e09491119d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::operator[]</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>Grid::operator[]</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="53" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="703" bodyend="706"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a63104ed99a2886378c2d0e4c2f69ad49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Grid::is_known</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>is_known</name>
+        <qualifiedname>Grid::is_known</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>index</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="54" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="708" bodyend="710"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a52eb92df53dd1306b999fb232654617e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Grid::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>Grid::evaluate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="55" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/Grid.cpp" bodystart="712" bodyend="724"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a4ac9ff4f63552b4c61ff90fcb35ad66c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Grid::Grid</definition>
+        <argsstring>()</argsstring>
+        <name>Grid</name>
+        <qualifiedname>Grid::Grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="43" column="9" bodyfile="/home/chris/Documents/tsudoku/include/Grid.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1ad52d59c2953c4f70816be32a136a749b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Grid::Grid</definition>
+        <argsstring>(const uint8_t[NUM_CONTAINERS][NUM_CONTAINERS])</argsstring>
+        <name>Grid</name>
+        <qualifiedname>Grid::Grid</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>GRID</defname>
+          <array>[NUM_CONTAINERS][NUM_CONTAINERS]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="44" column="9" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1ae3b56032bee6df1102d54dbb6b3c8659" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Grid::Grid</definition>
+        <argsstring>(const difficulty_level)</argsstring>
+        <name>Grid</name>
+        <qualifiedname>Grid::Grid</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>difficulty_level</declname>
+          <defname>DIFF</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="45" column="9" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="34" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a3661d0a7f998caaaf8627d7a67072116" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Grid::~Grid</definition>
+        <argsstring>()</argsstring>
+        <name>~Grid</name>
+        <qualifiedname>Grid::~Grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="46" column="9" bodyfile="/home/chris/Documents/tsudoku/include/Grid.hpp" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1aab1c27193650d48e9a5ae61722622903" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::map_box</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>map_box</name>
+        <qualifiedname>Grid::map_box</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>ROW</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>COLUMN</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="48" column="17" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="489" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1ac754d5b4894f975883035621bbeacc35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::map_row</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>map_row</name>
+        <qualifiedname>Grid::map_row</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="49" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1ace3bceec2b7ba523f78a8815afc45484" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::map_column</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>map_column</name>
+        <qualifiedname>Grid::map_column</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="50" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a3edfa4bfa38eabfa0a41410955043865" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a28b686d142088dcdf146d2c96377f362" kindref="member">Box</ref> &amp;</type>
+        <definition>Box &amp; Grid::get_box</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_box</name>
+        <qualifiedname>Grid::get_box</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>INDEX</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="51" column="13" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a3809b63111e3b2e7fe45fe47d5901f1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a5699d63a3ce5ffb14b2ffdefbe65877f" kindref="member">Row</ref> &amp;</type>
+        <definition>Row &amp; Grid::get_row</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_row</name>
+        <qualifiedname>Grid::get_row</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="52" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a6205be377f319bb6f62f6c3eb6972a4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Container_8hpp_1a613a25b77848c639c356618e73fee8c7" kindref="member">Column</ref> &amp;</type>
+        <definition>Column &amp; Grid::get_column</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_column</name>
+        <qualifiedname>Grid::get_column</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="53" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a03817f12af33e74d59c7f45996080c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::get_row_index</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_row_index</name>
+        <qualifiedname>Grid::get_row_index</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="54" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1aad342f31d0e9337b8cab2a650add3356" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::get_column_index</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_column_index</name>
+        <qualifiedname>Grid::get_column_index</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="55" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a790979b97c1f1cd4de3a49707309c09b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::get_box_index</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_box_index</name>
+        <qualifiedname>Grid::get_box_index</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>POS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="56" column="17" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="566" bodyend="570"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1aad15e647bfcfd39aa3971cbafafa04f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grid::set_value</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>set_value</name>
+        <qualifiedname>Grid::set_value</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>POS</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>VALUE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="57" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="579" bodyend="597"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a329a10411147c9458d1d5d9533f9c2e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref></type>
+        <definition>const cell Grid::get_position</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>get_position</name>
+        <qualifiedname>Grid::get_position</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>INDEX</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="64" column="20" bodyfile="/home/chris/Documents/tsudoku/src/Grid.cpp" bodystart="618" bodyend="620"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a2a83f154c949606c32f3e793db028437" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::get_map_size</definition>
+        <argsstring>() const</argsstring>
+        <name>get_map_size</name>
+        <qualifiedname>Grid::get_map_size</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="65" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a4dc73daa2fa63a5759d68e3da0aeb1f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t Grid::operator[]</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>operator[]</name>
+        <qualifiedname>Grid::operator[]</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="66" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a63104ed99a2886378c2d0e4c2f69ad49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Grid::is_known</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>is_known</name>
+        <qualifiedname>Grid::is_known</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="67" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classGrid_1a52eb92df53dd1306b999fb232654617e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Grid::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>Grid::evaluate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Grid.hpp" line="68" column="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Container</label>
+        <link refid="classContainer"/>
+      </node>
+      <node id="1">
+        <label>Grid</label>
+        <link refid="classGrid"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>boxes</edgelabel>
+          <edgelabel>cols</edgelabel>
+          <edgelabel>matrices</edgelabel>
+          <edgelabel>rows</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/sphinx_testing/include/Grid.hpp" line="15" column="1" bodyfile="/home/chris/Documents/sphinx_testing/include/Grid.hpp" bodystart="15" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classGrid_1acc11e7c7f6dcdcd63c2faf5154e5de42" prot="private" virt="non-virtual"><scope>Grid</scope><name>_map_</name></member>
+      <member refid="classGrid_1a6b3521b0b6fd6a0cb551fe64b90d9805" prot="public" virt="non-virtual"><scope>Grid</scope><name>at</name></member>
+      <member refid="classGrid_1aa4bd31898b586396ab97b483dc9b63c6" prot="private" virt="non-virtual"><scope>Grid</scope><name>at</name></member>
+      <member refid="classGrid_1a5a5098674713aa112f7fa5b795a93d51" prot="private" virt="non-virtual"><scope>Grid</scope><name>boxes</name></member>
+      <member refid="classGrid_1af596bf94ed8445fe215890e3c02ab7f8" prot="private" virt="non-virtual"><scope>Grid</scope><name>cols</name></member>
+      <member refid="classGrid_1a56cbda07963230793289268a7cdac772" prot="private" virt="non-virtual"><scope>Grid</scope><name>create_map</name></member>
+      <member refid="classGrid_1a56cbda07963230793289268a7cdac772" prot="private" virt="non-virtual"><scope>Grid</scope><name>create_map</name></member>
+      <member refid="classGrid_1a52eb92df53dd1306b999fb232654617e" prot="public" virt="non-virtual"><scope>Grid</scope><name>evaluate</name></member>
+      <member refid="classGrid_1a52eb92df53dd1306b999fb232654617e" prot="public" virt="non-virtual"><scope>Grid</scope><name>evaluate</name></member>
+      <member refid="classGrid_1a94a3baa8454fb3c165887b2b373ea3dd" prot="private" virt="non-virtual"><scope>Grid</scope><name>generate_solved_puzzle</name></member>
+      <member refid="classGrid_1a16a318788930afc0aaf98525b68a3e3b" prot="private" virt="non-virtual"><scope>Grid</scope><name>generate_solved_puzzle</name></member>
+      <member refid="classGrid_1a3edfa4bfa38eabfa0a41410955043865" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_box</name></member>
+      <member refid="classGrid_1a790979b97c1f1cd4de3a49707309c09b" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_box_index</name></member>
+      <member refid="classGrid_1a94758486a4f76b7dacad8c27b6e2eed5" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_column</name></member>
+      <member refid="classGrid_1a6205be377f319bb6f62f6c3eb6972a4b" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_column</name></member>
+      <member refid="classGrid_1aad342f31d0e9337b8cab2a650add3356" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_column_index</name></member>
+      <member refid="classGrid_1aad342f31d0e9337b8cab2a650add3356" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_column_index</name></member>
+      <member refid="classGrid_1a9198799ac8829d485d77d16120e749ed" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_map</name></member>
+      <member refid="classGrid_1a2a83f154c949606c32f3e793db028437" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_map_size</name></member>
+      <member refid="classGrid_1a2a83f154c949606c32f3e793db028437" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_map_size</name></member>
+      <member refid="classGrid_1a329a10411147c9458d1d5d9533f9c2e4" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_position</name></member>
+      <member refid="classGrid_1adcebe05c84614d3e2a53beb69b90d973" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_row</name></member>
+      <member refid="classGrid_1a3809b63111e3b2e7fe45fe47d5901f1c" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_row</name></member>
+      <member refid="classGrid_1a03817f12af33e74d59c7f45996080c8c" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_row_index</name></member>
+      <member refid="classGrid_1a03817f12af33e74d59c7f45996080c8c" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_row_index</name></member>
+      <member refid="classGrid_1a7aa601961dbd52cd07c35ca80e31000b" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_submatrix</name></member>
+      <member refid="classGrid_1aa4d35b0e99680068d084e53678f2a686" prot="public" virt="non-virtual"><scope>Grid</scope><name>get_submatrix_index</name></member>
+      <member refid="classGrid_1a4ac9ff4f63552b4c61ff90fcb35ad66c" prot="public" virt="non-virtual"><scope>Grid</scope><name>Grid</name></member>
+      <member refid="classGrid_1a4ac9ff4f63552b4c61ff90fcb35ad66c" prot="public" virt="non-virtual"><scope>Grid</scope><name>Grid</name></member>
+      <member refid="classGrid_1ad52d59c2953c4f70816be32a136a749b" prot="public" virt="non-virtual"><scope>Grid</scope><name>Grid</name></member>
+      <member refid="classGrid_1ae3b56032bee6df1102d54dbb6b3c8659" prot="public" virt="non-virtual"><scope>Grid</scope><name>Grid</name></member>
+      <member refid="classGrid_1a1afd40d50ab45cffbe9567fb8c2d4e82" prot="private" virt="non-virtual"><scope>Grid</scope><name>grid_map</name></member>
+      <member refid="classGrid_1a35eb8bcc69488be1fc58931c9a78dfd2" prot="private" virt="non-virtual"><scope>Grid</scope><name>init_known_positions</name></member>
+      <member refid="classGrid_1a6c664e7c3118c86058612017ae63e20e" prot="private" virt="non-virtual"><scope>Grid</scope><name>init_positions</name></member>
+      <member refid="classGrid_1a63104ed99a2886378c2d0e4c2f69ad49" prot="public" virt="non-virtual"><scope>Grid</scope><name>is_known</name></member>
+      <member refid="classGrid_1a63104ed99a2886378c2d0e4c2f69ad49" prot="public" virt="non-virtual"><scope>Grid</scope><name>is_known</name></member>
+      <member refid="classGrid_1aefc7cb7aabd32b8eef0e512cdb3c3d9c" prot="private" virt="non-virtual"><scope>Grid</scope><name>known_positions</name></member>
+      <member refid="classGrid_1aab1c27193650d48e9a5ae61722622903" prot="public" virt="non-virtual"><scope>Grid</scope><name>map_box</name></member>
+      <member refid="classGrid_1ace3bceec2b7ba523f78a8815afc45484" prot="public" virt="non-virtual"><scope>Grid</scope><name>map_column</name></member>
+      <member refid="classGrid_1ace3bceec2b7ba523f78a8815afc45484" prot="public" virt="non-virtual"><scope>Grid</scope><name>map_column</name></member>
+      <member refid="classGrid_1ac754d5b4894f975883035621bbeacc35" prot="public" virt="non-virtual"><scope>Grid</scope><name>map_row</name></member>
+      <member refid="classGrid_1ac754d5b4894f975883035621bbeacc35" prot="public" virt="non-virtual"><scope>Grid</scope><name>map_row</name></member>
+      <member refid="classGrid_1a6353cc368999b83bedbe5823621b4e7c" prot="public" virt="non-virtual"><scope>Grid</scope><name>map_submatrix</name></member>
+      <member refid="classGrid_1abe81452ffffeebcedb8d9021a2907c4a" prot="private" virt="non-virtual"><scope>Grid</scope><name>matrices</name></member>
+      <member refid="classGrid_1a654fa6ae18969bf895c905fc524f912c" prot="public" virt="non-virtual"><scope>Grid</scope><name>mvprintw</name></member>
+      <member refid="classGrid_1a05557e973f89bc0f106d44e09491119d" prot="public" virt="non-virtual"><scope>Grid</scope><name>operator[]</name></member>
+      <member refid="classGrid_1a4dc73daa2fa63a5759d68e3da0aeb1f5" prot="public" virt="non-virtual"><scope>Grid</scope><name>operator[]</name></member>
+      <member refid="classGrid_1ad6e4e4b30af768dde20d41f51292413d" prot="public" virt="non-virtual"><scope>Grid</scope><name>printw</name></member>
+      <member refid="classGrid_1af944dc4b45f6efe0d042687b340b0e42" prot="private" virt="non-virtual"><scope>Grid</scope><name>rows</name></member>
+      <member refid="classGrid_1a57080b9722c807317ce84a06d8c3d11a" prot="private" virt="non-virtual"><scope>Grid</scope><name>set_starting_positions</name></member>
+      <member refid="classGrid_1a57080b9722c807317ce84a06d8c3d11a" prot="private" virt="non-virtual"><scope>Grid</scope><name>set_starting_positions</name></member>
+      <member refid="classGrid_1ab858d845ef7a3a9376fa31bc33ae0b4c" prot="private" virt="non-virtual"><scope>Grid</scope><name>set_starting_positions</name></member>
+      <member refid="classGrid_1aad15e647bfcfd39aa3971cbafafa04f9" prot="public" virt="non-virtual"><scope>Grid</scope><name>set_value</name></member>
+      <member refid="classGrid_1af04e216bea543fced5fce7ee7d017ed9" prot="private" virt="non-virtual"><scope>Grid</scope><name>solve</name></member>
+      <member refid="classGrid_1a5aed1d1dc16f97266bf3daa63f46395c" prot="private" virt="non-virtual"><scope>Grid</scope><name>solve</name></member>
+      <member refid="classGrid_1a3661d0a7f998caaaf8627d7a67072116" prot="public" virt="non-virtual"><scope>Grid</scope><name>~Grid</name></member>
+      <member refid="classGrid_1a3661d0a7f998caaaf8627d7a67072116" prot="public" virt="non-virtual"><scope>Grid</scope><name>~Grid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

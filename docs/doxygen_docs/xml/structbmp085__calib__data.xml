@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structbmp085__calib__data" kind="struct" language="C++" prot="public">
+    <compoundname>bmp085_calib_data</compoundname>
+    <includes local="no">Adafruit_BMP085_U.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structbmp085__calib__data_1a8f808eba492852ca1b0a0cd61629ce5f" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t bmp085_calib_data::ac1</definition>
+        <argsstring></argsstring>
+        <name>ac1</name>
+        <qualifiedname>bmp085_calib_data::ac1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="82" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1ac9d1c1863d3a62844e516c2e3bbb5ac7" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t bmp085_calib_data::ac2</definition>
+        <argsstring></argsstring>
+        <name>ac2</name>
+        <qualifiedname>bmp085_calib_data::ac2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="83" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1a20bcdf35d893f1ded132f2645b7a6f5a" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t bmp085_calib_data::ac3</definition>
+        <argsstring></argsstring>
+        <name>ac3</name>
+        <qualifiedname>bmp085_calib_data::ac3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="84" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1af516b64047136528a997aa75b56f597c" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t bmp085_calib_data::ac4</definition>
+        <argsstring></argsstring>
+        <name>ac4</name>
+        <qualifiedname>bmp085_calib_data::ac4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="85" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1aa9097616ddd245e0ccfc3ae2b0b79d24" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t bmp085_calib_data::ac5</definition>
+        <argsstring></argsstring>
+        <name>ac5</name>
+        <qualifiedname>bmp085_calib_data::ac5</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="86" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1a7ece6824a6e65a631cdafdcf0f3210ed" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t bmp085_calib_data::ac6</definition>
+        <argsstring></argsstring>
+        <name>ac6</name>
+        <qualifiedname>bmp085_calib_data::ac6</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="87" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1a7a2fda649e8dfb2ac8f2164ce3d02194" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t bmp085_calib_data::b1</definition>
+        <argsstring></argsstring>
+        <name>b1</name>
+        <qualifiedname>bmp085_calib_data::b1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="88" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1ac0ab7a73d5b1e92a05f9bc404b6933c6" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t bmp085_calib_data::b2</definition>
+        <argsstring></argsstring>
+        <name>b2</name>
+        <qualifiedname>bmp085_calib_data::b2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="89" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1a7f474f6ec30b50ba31fd1f1563a96120" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t bmp085_calib_data::mb</definition>
+        <argsstring></argsstring>
+        <name>mb</name>
+        <qualifiedname>bmp085_calib_data::mb</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="90" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1a5b74fa720b0cece5c0f82f7efcbf4e20" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t bmp085_calib_data::mc</definition>
+        <argsstring></argsstring>
+        <name>mc</name>
+        <qualifiedname>bmp085_calib_data::mc</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="91" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structbmp085__calib__data_1a15d87676d309b6f6ccc2c1b04c956cef" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t bmp085_calib_data::md</definition>
+        <argsstring></argsstring>
+        <name>md</name>
+        <qualifiedname>bmp085_calib_data::md</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="92" column="18" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="81" column="5" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="81" bodyend="93"/>
+    <listofallmembers>
+      <member refid="structbmp085__calib__data_1a8f808eba492852ca1b0a0cd61629ce5f" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>ac1</name></member>
+      <member refid="structbmp085__calib__data_1ac9d1c1863d3a62844e516c2e3bbb5ac7" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>ac2</name></member>
+      <member refid="structbmp085__calib__data_1a20bcdf35d893f1ded132f2645b7a6f5a" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>ac3</name></member>
+      <member refid="structbmp085__calib__data_1af516b64047136528a997aa75b56f597c" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>ac4</name></member>
+      <member refid="structbmp085__calib__data_1aa9097616ddd245e0ccfc3ae2b0b79d24" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>ac5</name></member>
+      <member refid="structbmp085__calib__data_1a7ece6824a6e65a631cdafdcf0f3210ed" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>ac6</name></member>
+      <member refid="structbmp085__calib__data_1a7a2fda649e8dfb2ac8f2164ce3d02194" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>b1</name></member>
+      <member refid="structbmp085__calib__data_1ac0ab7a73d5b1e92a05f9bc404b6933c6" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>b2</name></member>
+      <member refid="structbmp085__calib__data_1a7f474f6ec30b50ba31fd1f1563a96120" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>mb</name></member>
+      <member refid="structbmp085__calib__data_1a5b74fa720b0cece5c0f82f7efcbf4e20" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>mc</name></member>
+      <member refid="structbmp085__calib__data_1a15d87676d309b6f6ccc2c1b04c956cef" prot="public" virt="non-virtual"><scope>bmp085_calib_data</scope><name>md</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

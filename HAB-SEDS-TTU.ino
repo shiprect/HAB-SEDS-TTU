@@ -1,3 +1,8 @@
+/**
+ * @file HAB-SEDS-TTU.ino
+ * 
+ * Testing for HAB-SEDS-TTU.ino
+ */
 #include "Config.h"
 
 
@@ -66,6 +71,10 @@ SD_card sd_card;
 
 #endif
 
+/**
+ * The initial Arduino setup function. This function will only be run once at 
+ * the start of the program.
+ */
 void setup() {
 	#if LED_ENABLE
 	pinMode(RED_LED, OUTPUT);

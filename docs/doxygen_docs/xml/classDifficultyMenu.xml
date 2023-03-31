@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classDifficultyMenu" kind="class" language="C++" prot="public">
+    <compoundname>DifficultyMenu</compoundname>
+    <basecompoundref refid="classMenu" prot="public" virt="non-virtual">Menu</basecompoundref>
+    <includes local="no">DifficultyMenu.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDifficultyMenu_1ab942c796acd0f92844a772c9140a9433" prot="private" static="no" mutable="no">
+        <type><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883a" kindref="member">difficulty_level</ref></type>
+        <definition>difficulty_level DifficultyMenu::diff</definition>
+        <argsstring></argsstring>
+        <name>diff</name>
+        <qualifiedname>DifficultyMenu::diff</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" line="17" column="26" bodyfile="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classDifficultyMenu_1a3eae10d01a1d9a82d640e0601a625755" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void DifficultyMenu::display_menu</definition>
+        <argsstring>(const cell, const options)</argsstring>
+        <name>display_menu</name>
+        <qualifiedname>DifficultyMenu::display_menu</qualifiedname>
+        <reimplements refid="classMenu_1abb72073036d52f38a1c43134a71a260c">display_menu</reimplements>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>EDGE</defname>
+        </param>
+        <param>
+          <type>const</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" line="19" column="14" bodyfile="/home/chris/Documents/tsudoku/src/DifficultyMenu.cpp" bodystart="70" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classDifficultyMenu_1abfac41d6c2f3bc6ec86ab4ff3968bcd3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DifficultyMenu::set_difficulty_level</definition>
+        <argsstring>(const difficulty_level)</argsstring>
+        <name>set_difficulty_level</name>
+        <qualifiedname>DifficultyMenu::set_difficulty_level</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>difficulty_level</declname>
+          <defname>DIFF</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" line="20" column="14" bodyfile="/home/chris/Documents/tsudoku/src/DifficultyMenu.cpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDifficultyMenu_1a12db87e9ce6e4a5253384f71907d7820" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DifficultyMenu::DifficultyMenu</definition>
+        <argsstring>()</argsstring>
+        <name>DifficultyMenu</name>
+        <qualifiedname>DifficultyMenu::DifficultyMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" line="23" column="9" bodyfile="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classDifficultyMenu_1a77e95e9a5d897359802e16dced9a298a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>DifficultyMenu::~DifficultyMenu</definition>
+        <argsstring>()</argsstring>
+        <name>~DifficultyMenu</name>
+        <qualifiedname>DifficultyMenu::~DifficultyMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" line="24" column="9" bodyfile="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classDifficultyMenu_1a062881435b4ba42d166d81276b38719e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref></type>
+        <definition>options DifficultyMenu::menu</definition>
+        <argsstring>()</argsstring>
+        <name>menu</name>
+        <qualifiedname>DifficultyMenu::menu</qualifiedname>
+        <reimplements refid="classMenu_1a19172889100b7d04a06e7e172a8db428">menu</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" line="25" column="17" bodyfile="/home/chris/Documents/tsudoku/src/DifficultyMenu.cpp" bodystart="105" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classDifficultyMenu_1a211f958dc341fd8d16251255b669aa6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="misc_8hpp_1a0d761aedcd5af659356cdc28db9f883a" kindref="member">difficulty_level</ref></type>
+        <definition>difficulty_level DifficultyMenu::get_difficulty_level</definition>
+        <argsstring>()</argsstring>
+        <name>get_difficulty_level</name>
+        <qualifiedname>DifficultyMenu::get_difficulty_level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" line="26" column="26" bodyfile="/home/chris/Documents/tsudoku/src/DifficultyMenu.cpp" bodystart="139" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>DifficultyMenu</label>
+        <link refid="classDifficultyMenu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="classMenu"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>DifficultyMenu</label>
+        <link refid="classDifficultyMenu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="classMenu"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" line="15" column="1" bodyfile="/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp" bodystart="15" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classDifficultyMenu_1ab942c796acd0f92844a772c9140a9433" prot="private" virt="non-virtual"><scope>DifficultyMenu</scope><name>diff</name></member>
+      <member refid="classDifficultyMenu_1a12db87e9ce6e4a5253384f71907d7820" prot="public" virt="non-virtual"><scope>DifficultyMenu</scope><name>DifficultyMenu</name></member>
+      <member refid="classDifficultyMenu_1a3eae10d01a1d9a82d640e0601a625755" prot="private" virt="virtual"><scope>DifficultyMenu</scope><name>display_menu</name></member>
+      <member refid="classMenu_1af1adbe6ce5816c5b99036e671862aca9" prot="protected" virt="virtual" ambiguityscope="Menu::"><scope>DifficultyMenu</scope><name>display_menu</name></member>
+      <member refid="classDifficultyMenu_1a211f958dc341fd8d16251255b669aa6e" prot="public" virt="non-virtual"><scope>DifficultyMenu</scope><name>get_difficulty_level</name></member>
+      <member refid="classMenu_1a26719c17d8801e207892e6ad4b8dcfa2" prot="protected" virt="non-virtual"><scope>DifficultyMenu</scope><name>IN_GAME_MENU_DISPLAY_SPACING</name></member>
+      <member refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" prot="protected" virt="non-virtual"><scope>DifficultyMenu</scope><name>LEFT_PADDING</name></member>
+      <member refid="classDifficultyMenu_1a062881435b4ba42d166d81276b38719e" prot="public" virt="virtual"><scope>DifficultyMenu</scope><name>menu</name></member>
+      <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" virt="non-virtual"><scope>DifficultyMenu</scope><name>Menu</name></member>
+      <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" virt="non-virtual"><scope>DifficultyMenu</scope><name>Menu</name></member>
+      <member refid="classMenu_1a1611ec6c672448c9f86d473a18b8bdb7" prot="protected" virt="non-virtual"><scope>DifficultyMenu</scope><name>PUZZLE_SPACE</name></member>
+      <member refid="classDifficultyMenu_1abfac41d6c2f3bc6ec86ab4ff3968bcd3" prot="private" virt="non-virtual"><scope>DifficultyMenu</scope><name>set_difficulty_level</name></member>
+      <member refid="classMenu_1a5a6fec931e1e71721d454da21cd6f9dc" prot="public" virt="non-virtual"><scope>DifficultyMenu</scope><name>SIGINT_handler</name></member>
+      <member refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" prot="protected" virt="non-virtual"><scope>DifficultyMenu</scope><name>TOP_PADDING</name></member>
+      <member refid="classMenu_1a593f1ec27088578ed2dbdeb7c92d222b" prot="protected" virt="non-virtual"><scope>DifficultyMenu</scope><name>VERTICAL_DIVIDER</name></member>
+      <member refid="classDifficultyMenu_1a77e95e9a5d897359802e16dced9a298a" prot="public" virt="non-virtual"><scope>DifficultyMenu</scope><name>~DifficultyMenu</name></member>
+      <member refid="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>DifficultyMenu</scope><name>~Menu</name></member>
+      <member refid="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>DifficultyMenu</scope><name>~Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

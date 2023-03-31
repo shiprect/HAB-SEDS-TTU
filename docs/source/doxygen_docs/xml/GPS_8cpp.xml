@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="GPS_8cpp" kind="file" language="C++">
+    <compoundname>GPS.cpp</compoundname>
+    <includes refid="GPS_8hpp" local="yes">GPS.hpp</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.cpp</label>
+        <link refid="GPS_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>GPS.hpp</label>
+        <link refid="GPS_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>TinyGPS++.h</label>
+        <link refid="TinyGPS_09_09_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="19">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="16">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="15">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="12">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="14">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="13">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="9">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>SoftwareSerial.h</label>
+      </node>
+      <node id="6">
+        <label>WProgram.h</label>
+      </node>
+      <node id="7">
+        <label>limits.h</label>
+      </node>
+      <node id="20">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="GPS_8hpp" kindref="compound">GPS.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="classGPS_1a91c4f30c3d56cb7cc0e50079171aa142" kindref="member">GPS::GPS</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>TX,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>RX<sp/>)<sp/>:<sp/>GPSModule(<sp/>TX,<sp/>RX<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTinyGPSPlus" kindref="compound">TinyGPSPlus</ref><sp/>tinyGPS;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGPS_1ac249f35add866361c3cec1282835e633" kindref="member">GPS::GPS_Setup</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGPS_1a498f368f74e924b13b1e6ffef5a83a7b" kindref="member">GPSModule</ref>.begin(<sp/><ref refid="ProjectConfig_8hpp_1ab0a8acd375f8212769a7ea0d7230671e" kindref="member">GPS_BAUDRATE</ref><sp/>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nGPS<sp/>setup<sp/>successful&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a68d94b5b65a0335539c2e0d9d252da14" kindref="member">GPS::GPS_Update</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>a<sp/>valid<sp/>position<sp/>from<sp/>the<sp/>GPS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classGPS_1a33774476a727e46ec842aa88d719e431" kindref="member">valid_pos</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>timeout<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classGPS_1a498f368f74e924b13b1e6ffef5a83a7b" kindref="member">GPSModule</ref>.available())<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//GPS_ADV_DEBUG(F(&quot;\nGPS<sp/>module<sp/>was<sp/>available&quot;));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGPS_1a33774476a727e46ec842aa88d719e431" kindref="member">valid_pos</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classGPS_1a498f368f74e924b13b1e6ffef5a83a7b" kindref="member">GPSModule</ref>.available()<sp/>&gt;<sp/>0<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1ad7b78320b7e4967df17c6a27008a5154" kindref="member">encode</ref>(<sp/><ref refid="classGPS_1a498f368f74e924b13b1e6ffef5a83a7b" kindref="member">GPSModule</ref>.read());</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classGPS_1a4a04e77b0eaf79bfd6e4e7dddacfb498" kindref="member">GetAltitude</ref>()<sp/>&gt;<sp/><ref refid="classGPS_1a5a21a4df672051b80cc2fc83810e1ff8" kindref="member">MaxAltitude</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGPS_1a5a21a4df672051b80cc2fc83810e1ff8" kindref="member">MaxAltitude</ref><sp/>=<sp/><ref refid="HAB-SEDS-TTU_8ino_1a732b543a18bd3449ed1049120b68c932" kindref="member">gps</ref>.<ref refid="classGPS_1a4a04e77b0eaf79bfd6e4e7dddacfb498" kindref="member">GetAltitude</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(((<sp/>millis()<sp/>-<sp/>timeout<sp/>)<sp/>&lt;<sp/><ref refid="ProjectConfig_8hpp_1ad2f24c4ed30375904a762e3881f00eb8" kindref="member">GPS_VALID_POS_TIMEOUT</ref><sp/>)<sp/>&amp;&amp;<sp/>!<ref refid="classGPS_1a33774476a727e46ec842aa88d719e431" kindref="member">valid_pos</ref><sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classGPS_1a33774476a727e46ec842aa88d719e431" kindref="member">valid_pos</ref><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGPS_1a75d54bcad33fd9685e72572c1e86f6d5" kindref="member">GPS_Debug</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DEBUG_PRINT(F(&quot;\nFailed<sp/>GPS<sp/>position<sp/>fix\n&quot;));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//fix<sp/>this;<sp/>possibly<sp/>remove</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a75d54bcad33fd9685e72572c1e86f6d5" kindref="member">GPS::GPS_Debug</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>DEBUG_PRINT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nLAT<sp/>(deg)<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1abe5f28b0d636a1031af3cd98af863af6" kindref="member">rawLat</ref>().<ref refid="structRawDegrees_1a11831d9220f303bd716d9412af28e84e" kindref="member">deg</ref><sp/>);<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>latitude<sp/>in<sp/>whole<sp/>degrees</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nLNG<sp/>(deg)<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1a4e20b4067a448ca0003fc65a3d3864d2" kindref="member">rawLng</ref>().<ref refid="structRawDegrees_1a11831d9220f303bd716d9412af28e84e" kindref="member">deg</ref><sp/>);<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>longitude<sp/>in<sp/>whole<sp/>degrees</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nDate<sp/>(ddmmyy)<sp/>=<sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" kindref="member">date</ref>.<ref refid="structTinyGPSDate_1a718150ae16f68afa9ae81f9d1b3ce3f4" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>date<sp/>in<sp/>DDMMYY<sp/>format<sp/>(u32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nTime<sp/>(hhmmsscc)<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1afcdb632fee9d144b1414c9d7b95719f1" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>time<sp/>in<sp/>HHMMSSCC<sp/>format<sp/>(u32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nCourse<sp/>(deg)<sp/>=<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868" kindref="member">course</ref>.<ref refid="structTinyGPSCourse_1a76dc8ae6c2fe5ead9b44c8d53a3272ca" kindref="member">deg</ref>());<sp/></highlight><highlight class="comment">//<sp/>Course<sp/>in<sp/>degrees<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nSpeed<sp/>(mps)<sp/>=<sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" kindref="member">speed</ref>.<ref refid="structTinyGPSSpeed_1aacee536241e810cdf4ba7846d6c202cb" kindref="member">mps</ref>());<sp/></highlight><highlight class="comment">//<sp/>Speed<sp/>in<sp/>meters<sp/>per<sp/>second<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nAltitude<sp/>(m)<sp/>=<sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" kindref="member">altitude</ref>.<ref refid="structTinyGPSAltitude_1a5a39d145bb1778814007206c765189f7" kindref="member">meters</ref>());<sp/></highlight><highlight class="comment">//<sp/>Altitude<sp/>in<sp/>meters<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/></highlight><highlight class="stringliteral">&quot;\nSatellites<sp/>=<sp/><sp/><sp/><sp/><sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a5fb47066d1d03f4bb5853529053aab48" kindref="member">satellites</ref>.<ref refid="structTinyGPSInteger_1a67de7e76d61dbd25eb32f701d8ce867b" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>satellites<sp/>in<sp/>use<sp/>(u32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>GPS_ADV_DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1a905822cea7a00e550d29d037acdde549" kindref="member">isUpdated</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nraw<sp/>LAT<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1abe5f28b0d636a1031af3cd98af863af6" kindref="member">rawLat</ref>().<ref refid="structRawDegrees_1a39c31d2d0332155a4d2c975cec0a796f" kindref="member">negative</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\ndeg<sp/>LAT<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1abe5f28b0d636a1031af3cd98af863af6" kindref="member">rawLat</ref>().<ref refid="structRawDegrees_1a11831d9220f303bd716d9412af28e84e" kindref="member">deg</ref>);<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>latitude<sp/>in<sp/>whole<sp/>degrees</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nLAT<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1abe5f28b0d636a1031af3cd98af863af6" kindref="member">rawLat</ref>().<ref refid="structRawDegrees_1a13564009c60e20dbf03b158114d1c0e2" kindref="member">billionths</ref>);</highlight><highlight class="comment">//<sp/>...<sp/>and<sp/>billionths<sp/>(u16/u32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nraw<sp/>LNG<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1a4e20b4067a448ca0003fc65a3d3864d2" kindref="member">rawLng</ref>().<ref refid="structRawDegrees_1a39c31d2d0332155a4d2c975cec0a796f" kindref="member">negative</ref><sp/>?<sp/></highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\ndeg<sp/>LNG<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1a4e20b4067a448ca0003fc65a3d3864d2" kindref="member">rawLng</ref>().<ref refid="structRawDegrees_1a11831d9220f303bd716d9412af28e84e" kindref="member">deg</ref>);<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>longitude<sp/>in<sp/>whole<sp/>degrees</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nLNG<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1a4e20b4067a448ca0003fc65a3d3864d2" kindref="member">rawLng</ref>().<ref refid="structRawDegrees_1a13564009c60e20dbf03b158114d1c0e2" kindref="member">billionths</ref>);</highlight><highlight class="comment">//<sp/>...<sp/>and<sp/>billionths<sp/>(u16/u32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" kindref="member">date</ref>.<ref refid="structTinyGPSDate_1a1b913837130bb49ecd309eaf6bc205b1" kindref="member">isUpdated</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nYEAR<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" kindref="member">date</ref>.<ref refid="structTinyGPSDate_1ae2cc914fec377b429d99f01204f50d60" kindref="member">year</ref>());<sp/></highlight><highlight class="comment">//<sp/>Year<sp/>(2000+)<sp/>(u16)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nMONTH<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" kindref="member">date</ref>.<ref refid="structTinyGPSDate_1a6f3c5b4e72ef28b010f94ac9016315f3" kindref="member">month</ref>());<sp/></highlight><highlight class="comment">//<sp/>Month<sp/>(1-12)<sp/>(u8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nDAY<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" kindref="member">date</ref>.<ref refid="structTinyGPSDate_1ae8cc5f80c49e328f792d168a44062000" kindref="member">day</ref>());<sp/></highlight><highlight class="comment">//<sp/>Day<sp/>(1-31)<sp/>(u8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nDDMMYY<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" kindref="member">date</ref>.<ref refid="structTinyGPSDate_1a718150ae16f68afa9ae81f9d1b3ce3f4" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>date<sp/>in<sp/>DDMMYY<sp/>format<sp/>(u32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1a0d6434dc19675d214f58347d513e7c69" kindref="member">isUpdated</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nHOUR<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1a37fdb629b6ed0e31134214c7d07df2b1" kindref="member">hour</ref>());<sp/></highlight><highlight class="comment">//<sp/>Hour<sp/>(0-23)<sp/>(u8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nMINUTE<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1aef83c20c14d404219299da2d7e35cdce" kindref="member">minute</ref>());<sp/></highlight><highlight class="comment">//<sp/>Minute<sp/>(0-59)<sp/>(u8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nSECOND<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1a729cab36ced07eb5607503663fbe33e8" kindref="member">second</ref>());<sp/></highlight><highlight class="comment">//<sp/>Second<sp/>(0-59)<sp/>(u8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nCENTISECOND<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1a1f74ad4a2a53e0ee19f8e3a6b2bc985f" kindref="member">centisecond</ref>());<sp/></highlight><highlight class="comment">//<sp/>100ths<sp/>of<sp/>a<sp/>second<sp/>(0-99)<sp/>(u8)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nHHMMSSCC<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1afcdb632fee9d144b1414c9d7b95719f1" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>time<sp/>in<sp/>HHMMSSCC<sp/>format<sp/>(u32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" kindref="member">speed</ref>.<ref refid="structTinyGPSDecimal_1a8c7fd3ccd678b195d8f23bd1cb31d9ba" kindref="member">isUpdated</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\ncKNOTS<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" kindref="member">speed</ref>.<ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>speed<sp/>in<sp/>100ths<sp/>of<sp/>a<sp/>knot<sp/>(i32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nKNOTS<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" kindref="member">speed</ref>.<ref refid="structTinyGPSSpeed_1aa3a38ce4ece3d8062c794b73f260395e" kindref="member">knots</ref>());<sp/></highlight><highlight class="comment">//<sp/>Speed<sp/>in<sp/>knots<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nMPH<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" kindref="member">speed</ref>.<ref refid="structTinyGPSSpeed_1a1809120167961ea9a85e860a964b1c6e" kindref="member">mph</ref>());<sp/></highlight><highlight class="comment">//<sp/>Speed<sp/>in<sp/>miles<sp/>per<sp/>hour<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nMPS<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" kindref="member">speed</ref>.<ref refid="structTinyGPSSpeed_1aacee536241e810cdf4ba7846d6c202cb" kindref="member">mps</ref>());<sp/></highlight><highlight class="comment">//<sp/>Speed<sp/>in<sp/>meters<sp/>per<sp/>second<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nKMPH<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" kindref="member">speed</ref>.<ref refid="structTinyGPSSpeed_1a7fee3c8f9f2fcc5f4a517bd6108f79dd" kindref="member">kmph</ref>());<sp/></highlight><highlight class="comment">//<sp/>Speed<sp/>in<sp/>kilometers<sp/>per<sp/>hour<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868" kindref="member">course</ref>.<ref refid="structTinyGPSDecimal_1a8c7fd3ccd678b195d8f23bd1cb31d9ba" kindref="member">isUpdated</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\ncDEG<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868" kindref="member">course</ref>.<ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>course<sp/>in<sp/>100ths<sp/>of<sp/>a<sp/>degree<sp/>(i32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nDEG<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868" kindref="member">course</ref>.<ref refid="structTinyGPSCourse_1a76dc8ae6c2fe5ead9b44c8d53a3272ca" kindref="member">deg</ref>());<sp/></highlight><highlight class="comment">//<sp/>Course<sp/>in<sp/>degrees<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" kindref="member">altitude</ref>.<ref refid="structTinyGPSDecimal_1a8c7fd3ccd678b195d8f23bd1cb31d9ba" kindref="member">isUpdated</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nALT<sp/>KM<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" kindref="member">altitude</ref>.<ref refid="structTinyGPSAltitude_1a1eb3e5b425784fc0db3e9ffe0f77f741" kindref="member">kilometers</ref>());<sp/></highlight><highlight class="comment">//<sp/>Altitude<sp/>in<sp/>kilometers<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nALT<sp/>M<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" kindref="member">altitude</ref>.<ref refid="structTinyGPSAltitude_1a5a39d145bb1778814007206c765189f7" kindref="member">meters</ref>());<sp/></highlight><highlight class="comment">//<sp/>Altitude<sp/>in<sp/>meters<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nALT<sp/>CM<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" kindref="member">altitude</ref>.<ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Raw<sp/>altitude<sp/>in<sp/>centimeters<sp/>(i32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nALT<sp/>MI<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" kindref="member">altitude</ref>.<ref refid="structTinyGPSAltitude_1a5ae68d990ea08d4e21cfa6aefb46cc03" kindref="member">miles</ref>());<sp/></highlight><highlight class="comment">//<sp/>Altitude<sp/>in<sp/>miles<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nALT<sp/>FT<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" kindref="member">altitude</ref>.<ref refid="structTinyGPSAltitude_1ac782babc0c485d47e6f57384e88b8cc8" kindref="member">feet</ref>());<sp/></highlight><highlight class="comment">//<sp/>Altitude<sp/>in<sp/>feet<sp/>(double)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a5fb47066d1d03f4bb5853529053aab48" kindref="member">satellites</ref>.<ref refid="structTinyGPSInteger_1a35234fdeeffdb934a93740db1aefa6a5" kindref="member">isUpdated</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nSAT<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a5fb47066d1d03f4bb5853529053aab48" kindref="member">satellites</ref>.<ref refid="structTinyGPSInteger_1a67de7e76d61dbd25eb32f701d8ce867b" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Number<sp/>of<sp/>satellites<sp/>in<sp/>use<sp/>(u32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0bb6a7eb2d0261095911d71c8c067546" kindref="member">hdop</ref>.<ref refid="structTinyGPSDecimal_1a8c7fd3ccd678b195d8f23bd1cb31d9ba" kindref="member">isUpdated</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(F(</highlight><highlight class="stringliteral">&quot;\nHOZ<sp/>DIM<sp/>=<sp/>&quot;</highlight><highlight class="normal">));<sp/><sp/><sp/><sp/><sp/>DEBUG_PRINT(<ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0bb6a7eb2d0261095911d71c8c067546" kindref="member">hdop</ref>.<ref refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" kindref="member">value</ref>());<sp/></highlight><highlight class="comment">//<sp/>Horizontal<sp/>Dim.<sp/>of<sp/>Precision<sp/>(100ths-i32)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a15eedbed1821339059701c171d29cae4" kindref="member">GPS::ValidLocation</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1aa5182c29798506eb727058d884f20633" kindref="member">isValid</ref>();</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a324cfaf6b2e23bda5b453557fa9975b9" kindref="member">GPS::AgeLocation</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1ae5da08aba335d0515b7a84ce57b80179" kindref="member">age</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">/******<sp/>Functions<sp/>to<sp/>return<sp/>GPS<sp/>values<sp/>******/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a4a04e77b0eaf79bfd6e4e7dddacfb498" kindref="member">GPS::GetAltitude</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a0b3451a4ee75e5880ffd88c3038eacf8" kindref="member">altitude</ref>.<ref refid="structTinyGPSAltitude_1a5a39d145bb1778814007206c765189f7" kindref="member">meters</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a109ce8baa4e1fba4b89e862f52be5258" kindref="member">GPS::GetMaxAltitude</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a5a21a4df672051b80cc2fc83810e1ff8" kindref="member">MaxAltitude</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a75cecfd69259d7fce5f396cce828a265" kindref="member">GPS::GetCourse</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1ad7800d3decbe58e355f5229bba231868" kindref="member">course</ref>.<ref refid="structTinyGPSCourse_1a76dc8ae6c2fe5ead9b44c8d53a3272ca" kindref="member">deg</ref>();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a95d604b38ad88e138a0feb15e37e15ed" kindref="member">GPS::GetSpeed</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1aa085c3e72a399a829dd92af52b373404" kindref="member">speed</ref>.<ref refid="structTinyGPSSpeed_1aacee536241e810cdf4ba7846d6c202cb" kindref="member">mps</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classGPS_1ace66c4769d36ca8b1318fe996d95275a" kindref="member">GPS::GetLatitude</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1a86c3acea4f317b427eebb667e4d05a49" kindref="member">lat</ref>();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a343091b8b0d61079ddfe47224eeafaca" kindref="member">GPS::GetLongitude</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1a544e9009a5580b2fd5466821a5e5b782" kindref="member">lng</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classGPS_1ab64308a8753a21edf3698f4e911e39a0" kindref="member">GPS::GetFull_Latitude</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1abe5f28b0d636a1031af3cd98af863af6" kindref="member">rawLat</ref>().<ref refid="structRawDegrees_1a13564009c60e20dbf03b158114d1c0e2" kindref="member">billionths</ref>;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>tinyGPS.location.rawLat();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classGPS_1ac4751fcd302aa4bfc7a3175413f7cf1e" kindref="member">GPS::GetFull_Longitude</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a886255f412f8e01f84e5104d36315fb3" kindref="member">location</ref>.<ref refid="structTinyGPSLocation_1a4e20b4067a448ca0003fc65a3d3864d2" kindref="member">rawLng</ref>().<ref refid="structRawDegrees_1a13564009c60e20dbf03b158114d1c0e2" kindref="member">billionths</ref>;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>tinyGPS.location.rawLng();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">uint32_t<sp/><ref refid="classGPS_1ac5e7fe9a8756a56eedad4558cab349ec" kindref="member">GPS::GetDate</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" kindref="member">date</ref>.<ref refid="structTinyGPSDate_1a718150ae16f68afa9ae81f9d1b3ce3f4" kindref="member">value</ref>();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">uint32_t<sp/><ref refid="classGPS_1a387f0f26072fdf849156c46ab83163cd" kindref="member">GPS::GetSatellites</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a5fb47066d1d03f4bb5853529053aab48" kindref="member">satellites</ref>.<ref refid="structTinyGPSInteger_1a67de7e76d61dbd25eb32f701d8ce867b" kindref="member">value</ref>();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">//uint32_t<sp/>GPS::GetDate()<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>return<sp/>tinyGPS.date.value();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal">uint8_t<sp/><ref refid="classGPS_1abeaab59b022619cdb363ce87e78b129c" kindref="member">GPS::GetDay</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a83a70812b432d7f51c7c735bfe7be0f0" kindref="member">date</ref>.<ref refid="structTinyGPSDate_1ae8cc5f80c49e328f792d168a44062000" kindref="member">day</ref>();</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">uint8_t<sp/><ref refid="classGPS_1a945c9dca9c3f114cafb52435bde602e2" kindref="member">GPS::GetHour</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1a37fdb629b6ed0e31134214c7d07df2b1" kindref="member">hour</ref>();</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal">uint8_t<sp/><ref refid="classGPS_1a6e15e126a0bd7e1a4127af6967004740" kindref="member">GPS::GetMinute</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1aef83c20c14d404219299da2d7e35cdce" kindref="member">minute</ref>();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">uint8_t<sp/><ref refid="classGPS_1abb4cc281553a31a014bc1b65f9f14840" kindref="member">GPS::GetSecond</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classGPS_1a84422845949ccc724e57027be9fe6d08" kindref="member">tinyGPS</ref>.<ref refid="classTinyGPSPlus_1a377c975527fa24b45fb86356505eb134" kindref="member">time</ref>.<ref refid="structTinyGPSTime_1a729cab36ced07eb5607503663fbe33e8" kindref="member">second</ref>();</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/GPS.cpp"/>
+  </compounddef>
+</doxygen>

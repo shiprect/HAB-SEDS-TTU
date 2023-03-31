@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="hw2_2soln_2problem2_8py" kind="file" language="Python">
+    <compoundname>problem2.py</compoundname>
+    <innernamespace refid="namespaceproblem2">problem2</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>matplotlib.pyplot<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>plt</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&apos;font.family&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;serif&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&apos;font.serif&apos;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Times<sp/>New<sp/>Roman&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&quot;mathtext.fontset&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cm&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1a24c08b5f79db0af2b83c11a708fce0c4" kindref="member">dct</ref>(x):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>N<sp/>=<sp/>len(x)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>n<sp/>=<sp/>np.arange(N)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">basis(k):</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>k<sp/>!=<sp/>0:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.cos(np.pi/N*(n<sp/>+<sp/>0.5)*k)*np.sqrt(2/N)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.ones(N)/np.sqrt(N)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>X<sp/>=<sp/>np.zeros(N)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>k<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>n:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(k)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X[k]<sp/>=<sp/>x.dot(basis(k))</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>X</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1ad44ccbab0d36d42b502b71d8eae09308" kindref="member">b</ref>(k):</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1a5bc68aafe95fc8640efeb5eef2317d68" kindref="member">main</ref>():</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>number<sp/>of<sp/>decimal<sp/>places<sp/>to<sp/>print</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>dec<sp/>=<sp/>10</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>N<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>[16,<sp/>64,<sp/>128]:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;N<sp/>=<sp/>%d:&apos;</highlight><highlight class="normal">%N)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>n<sp/>=<sp/>np.arange(N)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem2_1ad44ccbab0d36d42b502b71d8eae09308" kindref="member">b</ref>(k):</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>k<sp/>==<sp/>0:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.ones(N)/np.sqrt(N)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.sqrt(2/N)*np.cos(np.pi/N*(n<sp/>+<sp/>0.5)*k)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>l<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(N):</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>k<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(N):</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>np.vdot<sp/>conjugates<sp/>the<sp/>first<sp/>argument</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inner_product<sp/>=<sp/>np.vdot(<ref refid="namespaceproblem2_1ad44ccbab0d36d42b502b71d8eae09308" kindref="member">b</ref>(l),<sp/><ref refid="namespaceproblem2_1ad44ccbab0d36d42b502b71d8eae09308" kindref="member">b</ref>(k))</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>format<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fmt<sp/>=<sp/>str(</highlight><highlight class="stringliteral">&apos;%&apos;</highlight><highlight class="normal"><sp/>+<sp/>str(dec<sp/>+<sp/>3)<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;.&apos;</highlight><highlight class="normal"><sp/>+<sp/>str(dec)<sp/>+<sp/></highlight><highlight class="stringliteral">&apos;f&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;k<sp/>=<sp/>%3d,<sp/>l<sp/>=<sp/>%3d,<sp/>inner_product<sp/>=<sp/>&apos;</highlight><highlight class="normal">%(k,<sp/>l)<sp/>+<sp/>fmt%inner_product)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>k<sp/>==<sp/>l:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>abs(inner_product<sp/>-<sp/>1)<sp/>&gt;<sp/>1e-6:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&apos;inner<sp/>product<sp/>should<sp/>be<sp/>near<sp/>1&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>abs(inner_product)<sp/>&gt;<sp/>1e-6:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&apos;inner<sp/>product<sp/>should<sp/>be<sp/>near<sp/>0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceproblem2_1a5bc68aafe95fc8640efeb5eef2317d68" kindref="member">main</ref>()</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/ece6040/homework/hw2/soln/problem2.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1094 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="afsk_8cpp" kind="file" language="C++">
+    <compoundname>afsk.cpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="afsk_8h" local="yes">afsk.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp</label>
+        <link refid="afsk_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="16">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="13">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="12">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="9">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="11">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="10">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="6">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="afsk_8cpp_1a98b6e204e92cc1fa897486988a77ee0a" prot="public" static="no">
+        <name>SAMPLES_PER_CYCLE</name>
+        <initializer>512</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="9" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a4fa002f43cad7f1b55e3276268cd6ee7" prot="public" static="no">
+        <name>INTERRUPT_RATE</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="11" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1ac7f78afb15c887cf1fdd2f5b60dafa61" prot="public" static="no">
+        <name>PLAYBACK_RATE</name>
+        <initializer>(1000000.0f / <ref refid="afsk_8cpp_1a4fa002f43cad7f1b55e3276268cd6ee7" kindref="member">INTERRUPT_RATE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="12" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1ad4455691936f92fdd6c37566fc58ba1f" prot="public" static="no">
+        <name>BAUD_RATE</name>
+        <initializer>1200.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="16" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a687b36ba21ba1c211d06a1cbf47a03a6" prot="public" static="no">
+        <name>MARK_FREQUENCY</name>
+        <initializer>1200.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="17" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1aea6fdf87c7928942c94bbecd517a6bdf" prot="public" static="no">
+        <name>SPACE_FREQUENCY</name>
+        <initializer>2200.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="18" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a2381e2e95d6dd5b8ed8125d54dd3775e" prot="public" static="no">
+        <name>TONE_FREQUENCY</name>
+        <initializer>300.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="19" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a11970dc489a59fda76d671632912912c" prot="public" static="no">
+        <name>SAMPLE_COUNTER_SCALE</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="26" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1abe5e11a6e090eeb36102cf7126f122db" prot="public" static="no">
+        <name>SAMPLES_PER_BIT_SCALED</name>
+        <initializer>(int32_t)(<ref refid="afsk_8cpp_1a11970dc489a59fda76d671632912912c" kindref="member">SAMPLE_COUNTER_SCALE</ref> * <ref refid="afsk_8cpp_1ac7f78afb15c887cf1fdd2f5b60dafa61" kindref="member">PLAYBACK_RATE</ref> / <ref refid="afsk_8cpp_1ad4455691936f92fdd6c37566fc58ba1f" kindref="member">BAUD_RATE</ref> + 0.5f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="27" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a2ddb43a1d7b1f9862750dfedf027b8f1" prot="public" static="no">
+        <name>FIXED_PNT_BITS</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="32" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a4c6fcd332b3c540a41ce6a7b84e2c55a" prot="public" static="no">
+        <name>FIXED_PNT_SCALE</name>
+        <initializer>(1 &lt;&lt; <ref refid="afsk_8cpp_1a2ddb43a1d7b1f9862750dfedf027b8f1" kindref="member">FIXED_PNT_BITS</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="33" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a6cc399d14e6cd2a98aaf550cf389d52e" prot="public" static="no">
+        <name>SAMPLE_STRIDE_TONE_FLOAT</name>
+        <initializer>((float)<ref refid="afsk_8cpp_1a98b6e204e92cc1fa897486988a77ee0a" kindref="member">SAMPLES_PER_CYCLE</ref> * <ref refid="afsk_8cpp_1a2381e2e95d6dd5b8ed8125d54dd3775e" kindref="member">TONE_FREQUENCY</ref> / <ref refid="afsk_8cpp_1ac7f78afb15c887cf1fdd2f5b60dafa61" kindref="member">PLAYBACK_RATE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="38" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a52b976e381ca95212f3088ec14e8912a" prot="public" static="no">
+        <name>SAMPLE_STRIDE_TONE_FIXED_PNT</name>
+        <initializer>((uint16_t)(<ref refid="afsk_8cpp_1a6cc399d14e6cd2a98aaf550cf389d52e" kindref="member">SAMPLE_STRIDE_TONE_FLOAT</ref> * (float)<ref refid="afsk_8cpp_1a4c6fcd332b3c540a41ce6a7b84e2c55a" kindref="member">FIXED_PNT_SCALE</ref> + 0.5f))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="39" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1adbd0837d675bdd2c18db5b06752b1886" prot="public" static="no">
+        <name>SAMPLE_STRIDE_MARK_FLOAT</name>
+        <initializer>((float)<ref refid="afsk_8cpp_1a98b6e204e92cc1fa897486988a77ee0a" kindref="member">SAMPLES_PER_CYCLE</ref> * <ref refid="afsk_8cpp_1a687b36ba21ba1c211d06a1cbf47a03a6" kindref="member">MARK_FREQUENCY</ref> / <ref refid="afsk_8cpp_1ac7f78afb15c887cf1fdd2f5b60dafa61" kindref="member">PLAYBACK_RATE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="41" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1aa3e2e35dfa0aa5007f35bce9c245592f" prot="public" static="no">
+        <name>SAMPLE_STRIDE_MARK_FIXED_PNT</name>
+        <initializer>((uint16_t)(<ref refid="afsk_8cpp_1adbd0837d675bdd2c18db5b06752b1886" kindref="member">SAMPLE_STRIDE_MARK_FLOAT</ref> * (float)<ref refid="afsk_8cpp_1a4c6fcd332b3c540a41ce6a7b84e2c55a" kindref="member">FIXED_PNT_SCALE</ref> + 0.5f))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="42" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a643709a76601f4bdfd7b8eb29f37246b" prot="public" static="no">
+        <name>SAMPLE_STRIDE_SPACE_FLOAT</name>
+        <initializer>((float)<ref refid="afsk_8cpp_1a98b6e204e92cc1fa897486988a77ee0a" kindref="member">SAMPLES_PER_CYCLE</ref> * <ref refid="afsk_8cpp_1aea6fdf87c7928942c94bbecd517a6bdf" kindref="member">SPACE_FREQUENCY</ref> / <ref refid="afsk_8cpp_1ac7f78afb15c887cf1fdd2f5b60dafa61" kindref="member">PLAYBACK_RATE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="44" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a17e45d6042d3f9d6c3c9c513946ffd51" prot="public" static="no">
+        <name>SAMPLE_STRIDE_SPACE_FIXED_PNT</name>
+        <initializer>((uint16_t)(<ref refid="afsk_8cpp_1a643709a76601f4bdfd7b8eb29f37246b" kindref="member">SAMPLE_STRIDE_SPACE_FLOAT</ref> * (float)<ref refid="afsk_8cpp_1a4c6fcd332b3c540a41ce6a7b84e2c55a" kindref="member">FIXED_PNT_SCALE</ref> + 0.5f))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="45" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1aeefd11fddc4436afc22a87ebe9547b21" prot="public" static="no">
+        <name>TABLE2_SCALE</name>
+        <initializer>1.0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="49" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" prot="public" static="no">
+        <name>SINSCALE</name>
+        <param><defname>x</defname></param>
+        <initializer>(uint16_t)((((float)(x)-2047.0f) * <ref refid="afsk_8cpp_1aeefd11fddc4436afc22a87ebe9547b21" kindref="member">TABLE2_SCALE</ref>) + 2047.49f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="66" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1a817810f8023aa966466a9fe12b148517" prot="public" static="no">
+        <name>SIN_TABLE_MARK</name>
+        <initializer><ref refid="afsk_8cpp_1ac3632852aae8f71af6df28f23bdd2d48" kindref="member">afsk_sine_table2</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="110" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="afsk_8cpp_1ade09ec3a28df6b4fb31f60201d84872f" prot="public" static="no">
+        <name>SIN_TABLE_SPACE</name>
+        <initializer><ref refid="afsk_8cpp_1a6044576ab11abcba5d061b63403a3de2" kindref="member">afsk_sine_table1</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="111" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="afsk_8cpp_1a6044576ab11abcba5d061b63403a3de2" prot="public" static="no" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t afsk_sine_table1[129]</definition>
+        <argsstring>[129]</argsstring>
+        <name>afsk_sine_table1</name>
+        <initializer>= { 2047, 2072, 2097, 2122, 2147, 2173,
+    2198, 2223, 2248, 2273, 2298, 2323, 2348, 2372, 2397, 2422, 2447, 2471,
+    2496, 2520, 2545, 2569, 2593, 2617, 2642, 2666, 2689, 2713, 2737, 2761,
+    2784, 2807, 2831, 2854, 2877, 2900, 2923, 2945, 2968, 2990, 3012, 3035,
+    3056, 3078, 3100, 3121, 3143, 3164, 3185, 3206, 3226, 3247, 3267, 3287,
+    3307, 3327, 3346, 3366, 3385, 3404, 3422, 3441, 3459, 3477, 3495, 3513,
+    3530, 3547, 3564, 3581, 3598, 3614, 3630, 3646, 3662, 3677, 3692, 3707,
+    3721, 3736, 3750, 3764, 3777, 3791, 3804, 3816, 3829, 3841, 3853, 3865,
+    3876, 3887, 3898, 3909, 3919, 3929, 3939, 3949, 3958, 3967, 3975, 3984,
+    3992, 3999, 4007, 4014, 4021, 4027, 4034, 4040, 4045, 4051, 4056, 4060,
+    4065, 4069, 4073, 4076, 4080, 4083, 4085, 4087, 4089, 4091, 4093, 4094,
+    4094, 4095, 4095, }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="53" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1ac3632852aae8f71af6df28f23bdd2d48" prot="public" static="no" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t afsk_sine_table2[129]</definition>
+        <argsstring>[129]</argsstring>
+        <name>afsk_sine_table2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="71" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a70e323088aaa8fc65f804e5c6a1def9f" prot="public" static="no" mutable="no">
+        <type>volatile bool</type>
+        <definition>volatile bool busy</definition>
+        <argsstring></argsstring>
+        <name>busy</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="115" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a3961f07a29518799976c7630faebe735" prot="public" static="yes" mutable="no">
+        <type>const uint16_t *</type>
+        <definition>const uint16_t* afsk_sine_table</definition>
+        <argsstring></argsstring>
+        <name>afsk_sine_table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="117" column="23" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1abab18891c8142ade5607995eecc26a15" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t sine_table_switcher</definition>
+        <argsstring></argsstring>
+        <name>sine_table_switcher</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="118" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a09a1d70fd7c1fc351166151885257e14" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t currentSampleCount</definition>
+        <argsstring></argsstring>
+        <name>currentSampleCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="120" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a9902950e1ec39994abb55bea5a7e30b3" prot="public" static="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t currentStride</definition>
+        <argsstring></argsstring>
+        <name>currentStride</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="121" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a64a9f3fb68e5d60357e9f4406c0ac6d6" prot="public" static="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t currentSample</definition>
+        <argsstring></argsstring>
+        <name>currentSample</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="122" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a0ff321d0ea3d7ccf28ec55bf18739cf7" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t totalSamplesSent</definition>
+        <argsstring></argsstring>
+        <name>totalSamplesSent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="123" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a65b988e1163cc65c6d3e5562fbc36a98" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t current_byte</definition>
+        <argsstring></argsstring>
+        <name>current_byte</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="124" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1ae15009f62c8fe3ee4d688692aa16498a" prot="public" static="yes" mutable="no">
+        <type>const uint8_t *</type>
+        <definition>const uint8_t* afsk_packet</definition>
+        <argsstring></argsstring>
+        <name>afsk_packet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="128" column="22" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a18f13030ce80188875b9096b502491d6" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t afsk_packet_size</definition>
+        <argsstring></argsstring>
+        <name>afsk_packet_size</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="129" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a84913563ed029103a9f5caf740d73300" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t packet_pos</definition>
+        <argsstring></argsstring>
+        <name>packet_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="130" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a109d4d2572fa55c29318bfb47aa6a4ad" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool fDoTone</definition>
+        <argsstring></argsstring>
+        <name>fDoTone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="132" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a4c879d4e7c7ce8ec39e615e0c479f905" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t toneStop</definition>
+        <argsstring></argsstring>
+        <name>toneStop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="133" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a13fa570f50aa665dff23d97f257e817a" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t silenceStop</definition>
+        <argsstring></argsstring>
+        <name>silenceStop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="133" column="26" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1ae4c47aa483a62526c5df73419f0e514b" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t pttPin</definition>
+        <argsstring></argsstring>
+        <name>pttPin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="135" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1aa6e65d8bdf16e4d1f42f23a9b23a9308" prot="public" static="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t pttDelay</definition>
+        <argsstring></argsstring>
+        <name>pttDelay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="136" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1aaa6c5758e3ace72d6b4d4547297920f2" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t toneLength</definition>
+        <argsstring></argsstring>
+        <name>toneLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="137" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="afsk_8cpp_1a1713f2537979a8de29f27a5e30ec1fb5" prot="public" static="yes" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t silenceLength</definition>
+        <argsstring></argsstring>
+        <name>silenceLength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="138" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="afsk_8cpp_1a74efd30d30f0d8274960015243d5b990" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t afsk_read_sample</definition>
+        <argsstring>(const uint16_t *const sine_table, const uint16_t phase)</argsstring>
+        <name>afsk_read_sample</name>
+        <param>
+          <type>const uint16_t *const</type>
+          <declname>sine_table</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>phase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="147" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="147" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="afsk_8cpp_1a77357a5be8a013d7079cc549b098e707" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void afsk_output_sample</definition>
+        <argsstring>(uint16_t b)</argsstring>
+        <name>afsk_output_sample</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="164" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="afsk_8cpp_1aee2665da1e06179de2db4e81391a8aa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afsk_timer_stop</definition>
+        <argsstring>()</argsstring>
+        <name>afsk_timer_stop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="169" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="169" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="afsk_8cpp_1a66754ba1cb64cfc1fd62c9f0dfbe0108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void interrupt</definition>
+        <argsstring>(void)</argsstring>
+        <name>interrupt</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="176" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="176" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="afsk_8cpp_1a55d21dccf55b04ccfeaf0d46c0ffd7d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afsk_timer_start</definition>
+        <argsstring>()</argsstring>
+        <name>afsk_timer_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="242" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="242" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="afsk_8cpp_1af04b6ba0f071bd838dbe9cbbebb2da4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afsk_setup</definition>
+        <argsstring>(const uint8_t p_pttPin, const uint16_t p_pttDelay, const uint32_t p_toneLength, const uint32_t p_silenceLength)</argsstring>
+        <name>afsk_setup</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>p_pttPin</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>p_pttDelay</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>p_toneLength</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>p_silenceLength</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="247" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="247" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="afsk_8cpp_1a852f39a7ffa81b2a2e4cbdca6b004837" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afsk_set_buffer</definition>
+        <argsstring>(const uint8_t *const buffer, const uint16_t len)</argsstring>
+        <name>afsk_set_buffer</name>
+        <param>
+          <type>const uint8_t *const</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="269" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="269" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="afsk_8cpp_1a284c725f2b2cb0743504fbc0d0c4bf97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int afsk_busy</definition>
+        <argsstring>()</argsstring>
+        <name>afsk_busy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="275" column="5" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="275" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="afsk_8cpp_1ad7daf3efd823a9075f24b6e6d3fbe4c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afsk_start</definition>
+        <argsstring>()</argsstring>
+        <name>afsk_start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" line="282" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp" bodystart="282" bodyend="312"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="afsk_8h" kindref="compound">afsk.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Timing<sp/>constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>of<sp/>the<sp/>calculations<sp/>are<sp/>done<sp/>in<sp/>the<sp/>precompiler<sp/>in<sp/>float<sp/>point,<sp/>and<sp/>then</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>converted<sp/>to<sp/>fixed<sp/>point<sp/>at<sp/>the<sp/>end<sp/>(scaled<sp/>up<sp/>by<sp/>FIXED_PNT_SCALE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLES_PER_CYCLE<sp/>512<sp/></highlight><highlight class="comment">//<sp/>How<sp/>many<sp/>samples<sp/>in<sp/>our<sp/>sin-wave<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INTERRUPT_RATE<sp/>8<sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>Microseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLAYBACK_RATE<sp/>(1000000.0f<sp/>/<sp/>INTERRUPT_RATE)<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>Hertz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1200<sp/>Baud<sp/>settings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BAUD_RATE<sp/>1200.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MARK_FREQUENCY<sp/>1200.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPACE_FREQUENCY<sp/>2200.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TONE_FREQUENCY<sp/>300.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>How<sp/>many<sp/>samples<sp/>to<sp/>send<sp/>from<sp/>the<sp/>sin<sp/>table<sp/>for<sp/>each<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>a<sp/>potential<sp/>source<sp/>of<sp/>output<sp/>timing<sp/>drift,<sp/>as<sp/>this<sp/>isn&apos;t<sp/>very<sp/>precise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>at<sp/>low<sp/>INTERRUPT_RATEs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>At<sp/>16<sp/>microseconds<sp/>it<sp/>is<sp/>off<sp/>by<sp/>0.1%</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_COUNTER_SCALE<sp/>1000<sp/><sp/></highlight><highlight class="comment">//<sp/>Increase<sp/>the<sp/>resolution<sp/>of<sp/>the<sp/>sample<sp/>counter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLES_PER_BIT_SCALED<sp/>(int32_t)(SAMPLE_COUNTER_SCALE<sp/>*<sp/>PLAYBACK_RATE<sp/>/<sp/>BAUD_RATE<sp/>+<sp/>0.5f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fixed<sp/>point<sp/>arithmentic<sp/>on<sp/>the<sp/>stride<sp/>length<sp/>through<sp/>the<sp/>sin<sp/>wave<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note,<sp/>the<sp/>bottom<sp/>&quot;FIXED_PNT_BITS&quot;<sp/>bits<sp/>of<sp/>the<sp/>counter<sp/>are<sp/>the<sp/>fractional<sp/>part</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FIXED_PNT_BITS<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FIXED_PNT_SCALE<sp/>(1<sp/>&lt;&lt;<sp/>FIXED_PNT_BITS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>stride<sp/>rates<sp/>below<sp/>are<sp/>how<sp/>much<sp/>to<sp/>add<sp/>to<sp/>the<sp/>index<sp/>through<sp/>the<sp/>sin<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for<sp/>each<sp/>interrupt<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_STRIDE_TONE_FLOAT<sp/>((float)SAMPLES_PER_CYCLE<sp/>*<sp/>TONE_FREQUENCY<sp/>/<sp/>PLAYBACK_RATE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_STRIDE_TONE_FIXED_PNT<sp/>((uint16_t)(SAMPLE_STRIDE_TONE_FLOAT<sp/>*<sp/>(float)FIXED_PNT_SCALE<sp/>+<sp/>0.5f))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_STRIDE_MARK_FLOAT<sp/>((float)SAMPLES_PER_CYCLE<sp/>*<sp/>MARK_FREQUENCY<sp/>/<sp/>PLAYBACK_RATE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_STRIDE_MARK_FIXED_PNT<sp/>((uint16_t)(SAMPLE_STRIDE_MARK_FLOAT<sp/>*<sp/>(float)FIXED_PNT_SCALE<sp/>+<sp/>0.5f))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_STRIDE_SPACE_FLOAT<sp/>((float)SAMPLES_PER_CYCLE<sp/>*<sp/>SPACE_FREQUENCY<sp/>/<sp/>PLAYBACK_RATE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAMPLE_STRIDE_SPACE_FIXED_PNT<sp/>((uint16_t)(SAMPLE_STRIDE_SPACE_FLOAT<sp/>*<sp/>(float)FIXED_PNT_SCALE<sp/>+<sp/>0.5f))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>scale<sp/>of<sp/>the<sp/>second<sp/>sin<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TABLE2_SCALE<sp/>1.0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Store<sp/>only<sp/>1/4th<sp/>of<sp/>a<sp/>sin<sp/>wave<sp/>(plus<sp/>one<sp/>byte)<sp/>to<sp/>save<sp/>progmem<sp/>space.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>afsk_read_sample()<sp/>does<sp/>the<sp/>math<sp/>for<sp/>the<sp/>other<sp/>3/4ths.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="afsk_8cpp_1a6044576ab11abcba5d061b63403a3de2" kindref="member">afsk_sine_table1</ref>[129]<sp/>=<sp/>{<sp/>2047,<sp/>2072,<sp/>2097,<sp/>2122,<sp/>2147,<sp/>2173,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>2198,<sp/>2223,<sp/>2248,<sp/>2273,<sp/>2298,<sp/>2323,<sp/>2348,<sp/>2372,<sp/>2397,<sp/>2422,<sp/>2447,<sp/>2471,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>2496,<sp/>2520,<sp/>2545,<sp/>2569,<sp/>2593,<sp/>2617,<sp/>2642,<sp/>2666,<sp/>2689,<sp/>2713,<sp/>2737,<sp/>2761,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>2784,<sp/>2807,<sp/>2831,<sp/>2854,<sp/>2877,<sp/>2900,<sp/>2923,<sp/>2945,<sp/>2968,<sp/>2990,<sp/>3012,<sp/>3035,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>3056,<sp/>3078,<sp/>3100,<sp/>3121,<sp/>3143,<sp/>3164,<sp/>3185,<sp/>3206,<sp/>3226,<sp/>3247,<sp/>3267,<sp/>3287,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>3307,<sp/>3327,<sp/>3346,<sp/>3366,<sp/>3385,<sp/>3404,<sp/>3422,<sp/>3441,<sp/>3459,<sp/>3477,<sp/>3495,<sp/>3513,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>3530,<sp/>3547,<sp/>3564,<sp/>3581,<sp/>3598,<sp/>3614,<sp/>3630,<sp/>3646,<sp/>3662,<sp/>3677,<sp/>3692,<sp/>3707,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>3721,<sp/>3736,<sp/>3750,<sp/>3764,<sp/>3777,<sp/>3791,<sp/>3804,<sp/>3816,<sp/>3829,<sp/>3841,<sp/>3853,<sp/>3865,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>3876,<sp/>3887,<sp/>3898,<sp/>3909,<sp/>3919,<sp/>3929,<sp/>3939,<sp/>3949,<sp/>3958,<sp/>3967,<sp/>3975,<sp/>3984,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>3992,<sp/>3999,<sp/>4007,<sp/>4014,<sp/>4021,<sp/>4027,<sp/>4034,<sp/>4040,<sp/>4045,<sp/>4051,<sp/>4056,<sp/>4060,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>4065,<sp/>4069,<sp/>4073,<sp/>4076,<sp/>4080,<sp/>4083,<sp/>4085,<sp/>4087,<sp/>4089,<sp/>4091,<sp/>4093,<sp/>4094,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>4094,<sp/>4095,<sp/>4095,<sp/>};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SINSCALE(x)<sp/><sp/><sp/><sp/><sp/>(uint16_t)((((float)(x)-2047.0f)<sp/>*<sp/>TABLE2_SCALE)<sp/>+<sp/>2047.49f)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>After<sp/>noticing<sp/>on<sp/>the<sp/>oscilloscope<sp/>that<sp/>one<sp/>of<sp/>the<sp/>frequency<sp/>signals<sp/>come<sp/>accross<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>higher<sp/>amplitude<sp/>than<sp/>the<sp/>others,<sp/>I<sp/>added<sp/>the<sp/>ability<sp/>to<sp/>have<sp/>two<sp/>sine-wave<sp/>tables,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/>one<sp/>a<sp/>scale<sp/>from<sp/>the<sp/>other.<sp/>The<sp/>scale<sp/>(TABLE2_SCALE)<sp/>was<sp/>should<sp/>be<sp/>determined<sp/>experimentally.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="afsk_8cpp_1ac3632852aae8f71af6df28f23bdd2d48" kindref="member">afsk_sine_table2</ref>[129]<sp/>=<sp/>{<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2047),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2072),</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2097),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2122),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2147),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2173),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2198),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2223),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2248),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2273),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2298),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2323),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2348),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2372),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2397),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2422),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2447),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2471),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2496),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2520),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2545),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2569),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2593),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2617),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2642),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2666),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2689),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2713),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2737),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2761),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2784),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2807),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2831),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2854),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2877),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2900),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2923),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2945),</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2968),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(2990),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3012),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3035),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3056),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3078),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3100),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3121),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3143),</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3164),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3185),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3206),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3226),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3247),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3267),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3287),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3307),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3327),</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3346),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3366),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3385),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3404),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3422),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3441),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3459),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3477),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3495),</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3513),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3530),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3547),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3564),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3581),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3598),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3614),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3630),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3646),</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3662),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3677),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3692),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3707),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3721),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3736),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3750),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3764),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3777),</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3791),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3804),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3816),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3829),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3841),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3853),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3865),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3876),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3887),</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3898),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3909),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3919),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3929),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3939),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3949),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3958),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3967),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3975),</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3984),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3992),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(3999),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4007),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4014),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4021),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4027),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4034),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4040),</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4045),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4051),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4056),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4060),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4065),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4069),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4073),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4076),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4080),</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4083),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4085),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4087),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4089),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4091),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4093),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4094),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4094),<sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4095),</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1ae853839ada20fa6fce62414cb8c6217c" kindref="member">SINSCALE</ref>(4095),</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//<sp/>We<sp/>keep<sp/>potentially<sp/>2<sp/>different<sp/>tables<sp/>for<sp/>the<sp/>two<sp/>frequencies.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>idea<sp/>has<sp/>to<sp/>do<sp/>with<sp/>the<sp/>complications<sp/>of<sp/>pre-emphasis<sp/>if<sp/>this<sp/>signal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="comment">//<sp/>is<sp/>put<sp/>on<sp/>the<sp/>microphone<sp/>input<sp/>of<sp/>a<sp/>radio<sp/>that<sp/>tries<sp/>to<sp/>amplify</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>higher<sp/>frequencies<sp/>to<sp/>get<sp/>a<sp/>better<sp/>SNR.<sp/>Read<sp/>about<sp/>it<sp/>here:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://en.wikipedia.org/wiki/Preemphasis_improvement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIN_TABLE_MARK<sp/>afsk_sine_table2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SIN_TABLE_SPACE<sp/>afsk_sine_table1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">//TODO::Are<sp/>all<sp/>of<sp/>these<sp/>globals<sp/>really<sp/>needed???</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Module<sp/>globals</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1a70e323088aaa8fc65f804e5c6a1def9f" kindref="member">busy</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Modem<sp/>is<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>*afsk_sine_table;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>sin<sp/>table<sp/>we<sp/>are<sp/>going<sp/>through</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>sine_table_switcher;<sp/></highlight><highlight class="comment">//<sp/>The<sp/>bit<sp/>mask<sp/>to<sp/>switch<sp/>sin<sp/>tables<sp/>quick</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>currentSampleCount;<sp/></highlight><highlight class="comment">//<sp/>How<sp/>many<sp/>output<sp/>sample<sp/>have<sp/>been<sp/>sent<sp/>for<sp/>the<sp/>current<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/>currentStride;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1200/2200<sp/>for<sp/>standard<sp/>AX.25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/>currentSample;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fixed<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>totalSamplesSent;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>current_byte<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Buffer<sp/>of<sp/>bytes<sp/>to<sp/>send</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*afsk_packet;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>afsk_packet_size<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>How<sp/>many<sp/>bytes<sp/>in<sp/>the<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>packet_pos;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Next<sp/>bit<sp/>to<sp/>be<sp/>sent<sp/>out</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fDoTone;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>toneStop,<sp/>silenceStop;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>pttPin;<sp/></highlight><highlight class="comment">//<sp/>0<sp/>indicates<sp/>no<sp/>PTT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/>pttDelay;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>toneLength;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint32_t<sp/>silenceLength;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>TEENSY_ENABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>IntervalTimer<sp/>timer;<sp/></highlight><highlight class="comment">//TODO::Change;<sp/>functionality<sp/>only<sp/>available<sp/>on<sp/>Teensy???</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Returns<sp/>an<sp/>entry<sp/>from<sp/>the<sp/>sin<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>sin<sp/>table<sp/>is<sp/>128<sp/>elements<sp/>long,<sp/>but<sp/>it<sp/>emulates<sp/>a<sp/>512<sp/>element<sp/>table</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/>by<sp/>reflecting<sp/>and<sp/>duplicating<sp/>the<sp/>first<sp/>quarterwave</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="afsk_8cpp_1a74efd30d30f0d8274960015243d5b990" kindref="member">afsk_read_sample</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>sine_table,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>phase)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(phase<sp/>&lt;=<sp/>127)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sine_table[phase];</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(phase<sp/>&lt;=<sp/>255)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sine_table[256<sp/>-<sp/>phase];</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(phase<sp/>&lt;=<sp/>383)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(uint16_t)<sp/>4097<sp/>-<sp/>sine_table[phase<sp/>-<sp/>256];</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(uint16_t)<sp/>4097<sp/>-<sp/>sine_table[512<sp/>-<sp/>phase];</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1a77357a5be8a013d7079cc549b098e707" kindref="member">afsk_output_sample</ref>(uint16_t<sp/><ref refid="namespaceproblem2_1ad44ccbab0d36d42b502b71d8eae09308" kindref="member">b</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>analogWrite(APRS_DATA_PIN,<sp/><ref refid="namespaceproblem2_1ad44ccbab0d36d42b502b71d8eae09308" kindref="member">b</ref>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1aee2665da1e06179de2db4e81391a8aa2" kindref="member">afsk_timer_stop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//timer.end();//FIXME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1a77357a5be8a013d7079cc549b098e707" kindref="member">afsk_output_sample</ref>(2047);<sp/></highlight><highlight class="comment">//<sp/>50%</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Should<sp/>be<sp/>called<sp/>to<sp/>put<sp/>out<sp/>the<sp/>next<sp/>sample</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1a66754ba1cb64cfc1fd62c9f0dfbe0108" kindref="member">interrupt</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fDoTone)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>sound<sp/>and<sp/>the<sp/>silence.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>now<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(toneStop)<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(now<sp/>&gt;=<sp/>toneStop)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toneStop<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentSample<sp/>-=<sp/>currentStride;<sp/></highlight><highlight class="comment">//<sp/>stop<sp/>the<sp/>stride<sp/>to<sp/>create<sp/>silence</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(now<sp/>&gt;=<sp/>silenceStop)<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Times<sp/>up,<sp/>play<sp/>the<sp/>afsk<sp/>packet<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fDoTone<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentStride<sp/>=<sp/><ref refid="afsk_8cpp_1aa3e2e35dfa0aa5007f35bce9c245592f" kindref="member">SAMPLE_STRIDE_MARK_FIXED_PNT</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentSample<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>packet<sp/>one<sp/>bit<sp/>at<sp/>a<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>done<sp/>sending<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(packet_pos<sp/>==<sp/>afsk_packet_size)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1aee2665da1e06179de2db4e81391a8aa2" kindref="member">afsk_timer_stop</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>Disable<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(100);<sp/></highlight><highlight class="comment">//<sp/>Leave<sp/>key<sp/>open<sp/>for<sp/>.1<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pttPin)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pinMode(pttPin,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(pttPin,<sp/>LOW);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1a70e323088aaa8fc65f804e5c6a1def9f" kindref="member">busy</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>End<sp/>of<sp/>transmission</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Done.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>sent<sp/>SAMPLES_PER_BAUD<sp/>already,<sp/>go<sp/>to<sp/>the<sp/>next<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentSampleCount<sp/>&lt;<sp/><ref refid="afsk_8cpp_1a11970dc489a59fda76d671632912912c" kindref="member">SAMPLE_COUNTER_SCALE</ref>)<sp/>{<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>up<sp/>next<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((packet_pos<sp/>&amp;<sp/>7)<sp/>==<sp/>0)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Load<sp/>up<sp/>next<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_byte<sp/>=<sp/>afsk_packet[packet_pos<sp/>&gt;&gt;<sp/>3];</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_byte<sp/>=<sp/>current_byte<sp/>/<sp/>2;<sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;&gt;&gt;1&quot;<sp/>forces<sp/>int<sp/>conversion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((current_byte<sp/>&amp;<sp/>1)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Toggle<sp/>tone<sp/>(1200<sp/>&lt;&gt;<sp/>2200)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentStride<sp/>^=<sp/>(<ref refid="afsk_8cpp_1aa3e2e35dfa0aa5007f35bce9c245592f" kindref="member">SAMPLE_STRIDE_MARK_FIXED_PNT</ref><sp/>^<sp/><ref refid="afsk_8cpp_1a17e45d6042d3f9d6c3c9c513946ffd51" kindref="member">SAMPLE_STRIDE_SPACE_FIXED_PNT</ref>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>afsk_sine_table<sp/>=<sp/>(uint16_t<sp/>*)<sp/>((uint32_t)<sp/>afsk_sine_table<sp/>^<sp/>sine_table_switcher);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentSampleCount<sp/>+=<sp/><ref refid="afsk_8cpp_1a11970dc489a59fda76d671632912912c" kindref="member">SAMPLE_COUNTER_SCALE</ref>;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentSampleCount<sp/>&gt;=<sp/><ref refid="afsk_8cpp_1abe5e11a6e090eeb36102cf7126f122db" kindref="member">SAMPLES_PER_BIT_SCALED</ref>)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Is<sp/>this<sp/>bit<sp/>done</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentSampleCount<sp/>-=<sp/><ref refid="afsk_8cpp_1abe5e11a6e090eeb36102cf7126f122db" kindref="member">SAMPLES_PER_BIT_SCALED</ref>;<sp/></highlight><highlight class="comment">//<sp/>Leave<sp/>residual<sp/>(fractional)<sp/>count<sp/>behind<sp/>in<sp/>counter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>packet_pos++;<sp/></highlight><highlight class="comment">//<sp/>Go<sp/>to<sp/>the<sp/>next<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>currentSample<sp/>+=<sp/>currentStride;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>s<sp/>=<sp/><ref refid="afsk_8cpp_1a74efd30d30f0d8274960015243d5b990" kindref="member">afsk_read_sample</ref>(afsk_sine_table,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(uint16_t)<sp/>(<sp/>(currentSample<sp/>&gt;&gt;<sp/><ref refid="afsk_8cpp_1a2ddb43a1d7b1f9862750dfedf027b8f1" kindref="member">FIXED_PNT_BITS</ref>)<sp/>&amp;<sp/>(<ref refid="afsk_8cpp_1a98b6e204e92cc1fa897486988a77ee0a" kindref="member">SAMPLES_PER_CYCLE</ref><sp/>-<sp/>1)<sp/>));</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>totalSamplesSent<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1a77357a5be8a013d7079cc549b098e707" kindref="member">afsk_output_sample</ref>(s);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1a55d21dccf55b04ccfeaf0d46c0ffd7d9" kindref="member">afsk_timer_start</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//timer.begin(interrupt,<sp/>INTERRUPT_RATE);//FIXME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1af04b6ba0f071bd838dbe9cbbebb2da4d" kindref="member">afsk_setup</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>p_pttPin,<sp/></highlight><highlight class="comment">//<sp/>Use<sp/>PTT<sp/>pin,<sp/>0<sp/>=<sp/>do<sp/>not<sp/>use<sp/>PTT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>p_pttDelay,<sp/></highlight><highlight class="comment">//<sp/>ms<sp/>to<sp/>wait<sp/>after<sp/>PTT<sp/>to<sp/>transmit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>p_toneLength,</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t<sp/>p_silenceLength)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>pttPin<sp/>=<sp/>p_pttPin;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>pttDelay<sp/>=<sp/>p_pttDelay;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>toneLength<sp/>=<sp/>p_toneLength;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>silenceLength<sp/>=<sp/>p_silenceLength;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(p_pttPin)<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>radio</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pinMode(pttPin,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>digitalWrite(pttPin,<sp/>LOW);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//analogWriteResolution(12);/FIXME::Not<sp/>available<sp/>in<sp/>arduino???</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1a77357a5be8a013d7079cc549b098e707" kindref="member">afsk_output_sample</ref>(2047);<sp/></highlight><highlight class="comment">//<sp/>50%</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1a852f39a7ffa81b2a2e4cbdca6b004837" kindref="member">afsk_set_buffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>buffer,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>afsk_packet_size<sp/>=<sp/>len;<sp/></highlight><highlight class="comment">//<sp/>Length<sp/>in<sp/>bits</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>afsk_packet<sp/>=<sp/>buffer;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1a284c725f2b2cb0743504fbc0d0c4bf97" kindref="member">afsk_busy</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1a70e323088aaa8fc65f804e5c6a1def9f" kindref="member">busy</ref>;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="comment">//<sp/>toneLength:<sp/>How<sp/>long<sp/>to<sp/>play<sp/>the<sp/>pre<sp/>signal<sp/>tone,<sp/>(0<sp/>=<sp/>no<sp/>tone)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="comment">//<sp/>silenceLength:<sp/>How<sp/>long<sp/>of<sp/>silence<sp/>before<sp/>starting<sp/>the<sp/>packet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="afsk_8cpp_1ad7daf3efd823a9075f24b6e6d3fbe4c4" kindref="member">afsk_start</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>for<sp/>AFSK<sp/>transmission</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>afsk_sine_table<sp/>=<sp/><ref refid="afsk_8cpp_1a817810f8023aa966466a9fe12b148517" kindref="member">SIN_TABLE_MARK</ref>;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>currentSample<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>packet_pos<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>currentSampleCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/>totalSamplesSent<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1a70e323088aaa8fc65f804e5c6a1def9f" kindref="member">busy</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(toneLength<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fDoTone<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentStride<sp/>=<sp/><ref refid="afsk_8cpp_1aa3e2e35dfa0aa5007f35bce9c245592f" kindref="member">SAMPLE_STRIDE_MARK_FIXED_PNT</ref>;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fDoTone<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toneStop<sp/>=<sp/>millis()<sp/>+<sp/>toneLength;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>silenceStop<sp/>=<sp/>toneStop<sp/>+<sp/>silenceLength;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>currentStride<sp/>=<sp/><ref refid="afsk_8cpp_1a52b976e381ca95212f3088ec14e8912a" kindref="member">SAMPLE_STRIDE_TONE_FIXED_PNT</ref>;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>sine_table_switcher<sp/>=<sp/>((uint32_t)<sp/><ref refid="afsk_8cpp_1a817810f8023aa966466a9fe12b148517" kindref="member">SIN_TABLE_MARK</ref><sp/>^<sp/>(uint32_t)<sp/><ref refid="afsk_8cpp_1ade09ec3a28df6b4fb31f60201d84872f" kindref="member">SIN_TABLE_SPACE</ref>);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pttPin)<sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Key<sp/>the<sp/>radio</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>pins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pinMode(pttPin,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(pttDelay);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>transmission</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="afsk_8cpp_1a55d21dccf55b04ccfeaf0d46c0ffd7d9" kindref="member">afsk_timer_start</ref>();</highlight></codeline>
+<codeline lineno="312"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/afsk.cpp"/>
+  </compounddef>
+</doxygen>

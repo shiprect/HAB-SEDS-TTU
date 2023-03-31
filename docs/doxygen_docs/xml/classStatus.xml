@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classStatus" kind="class" language="C++" prot="public">
+    <compoundname>Status</compoundname>
+    <includes local="no">Status.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classStatus_1a93365e7591ad69f078462216b1091d7c" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t Status::TimeSinceLaunch</definition>
+        <argsstring></argsstring>
+        <name>TimeSinceLaunch</name>
+        <qualifiedname>Status::TimeSinceLaunch</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="15" column="10" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classStatus_1a0c8ca57db11fecd43b288566d98a54a2" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Status::Launched</definition>
+        <argsstring></argsstring>
+        <name>Launched</name>
+        <qualifiedname>Status::Launched</qualifiedname>
+        <initializer>= <ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="17" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classStatus_1ac6a4ec6f9dcf7c5b67866071ce46a5b9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Status::Rising</definition>
+        <argsstring></argsstring>
+        <name>Rising</name>
+        <qualifiedname>Status::Rising</qualifiedname>
+        <initializer>= <ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="18" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classStatus_1a98ee7d99f0d2f6d684a290fc2e56b459" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Status::Falling</definition>
+        <argsstring></argsstring>
+        <name>Falling</name>
+        <qualifiedname>Status::Falling</qualifiedname>
+        <initializer>= <ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="19" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classStatus_1af50272938fd3cd0352a05ad62f7c29e4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Status::Landed</definition>
+        <argsstring></argsstring>
+        <name>Landed</name>
+        <qualifiedname>Status::Landed</qualifiedname>
+        <initializer>= <ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="20" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classStatus_1a1d3e44bc051e7606d1db5a1984b6974f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Status::ValidBMP</definition>
+        <argsstring></argsstring>
+        <name>ValidBMP</name>
+        <qualifiedname>Status::ValidBMP</qualifiedname>
+        <initializer>= <ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="22" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classStatus_1af0ef38733daabe0d5010472a2585a663" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Status::ValidSD</definition>
+        <argsstring></argsstring>
+        <name>ValidSD</name>
+        <qualifiedname>Status::ValidSD</qualifiedname>
+        <initializer>= <ref refid="HardwareUtilities_8h_1aa93f0eb578d23995850d61f7d61c55c1" kindref="member">FALSE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="23" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classStatus_1a1427f1e9372bc557a6c9e3e5b4d25dbe" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Status::ServoStatus</definition>
+        <argsstring></argsstring>
+        <name>ServoStatus</name>
+        <qualifiedname>Status::ServoStatus</qualifiedname>
+        <initializer>= <ref refid="HardwareUtilities_8h_1a29e413f6725b2ba32d165ffaa35b01e5" kindref="member">OFF</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="25" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classStatus_1aaebebdc0edd540e9d20e148d9bb49418" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Status::CheckSensors</definition>
+        <argsstring>()</argsstring>
+        <name>CheckSensors</name>
+        <qualifiedname>Status::CheckSensors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="27" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="4" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1a1a8e6077ce7043d7dd948480e196554f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Status::CheckRising</definition>
+        <argsstring>()</argsstring>
+        <name>CheckRising</name>
+        <qualifiedname>Status::CheckRising</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="28" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="10" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1a932b1ca89268c7fd06e712d996551f89" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Status::CheckFalling</definition>
+        <argsstring>()</argsstring>
+        <name>CheckFalling</name>
+        <qualifiedname>Status::CheckFalling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="29" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="24" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1a1dd40d6f6d6531d36598076beea7aac7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Status::CheckLanded</definition>
+        <argsstring>()</argsstring>
+        <name>CheckLanded</name>
+        <qualifiedname>Status::CheckLanded</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="30" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="45" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1ab5bc2a572269fef3533114e5390e948e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Status::CheckAPRS</definition>
+        <argsstring>()</argsstring>
+        <name>CheckAPRS</name>
+        <qualifiedname>Status::CheckAPRS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="32" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="78" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classStatus_1a944586fb328a3524805748c8f7b17f32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Status::Status</definition>
+        <argsstring>()</argsstring>
+        <name>Status</name>
+        <qualifiedname>Status::Status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="35" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1a1b24d90ef2560afffe9d7183e279c63c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Status::~Status</definition>
+        <argsstring>()</argsstring>
+        <name>~Status</name>
+        <qualifiedname>Status::~Status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="36" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1af9976c565c17dd9c3bfc9d2cd3fa37da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Status::CheckStatus</definition>
+        <argsstring>()</argsstring>
+        <name>CheckStatus</name>
+        <qualifiedname>Status::CheckStatus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="38" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="68" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1aa0877c337ae500fa3011a162a1be2137" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Status::CheckServo</definition>
+        <argsstring>()</argsstring>
+        <name>CheckServo</name>
+        <qualifiedname>Status::CheckServo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="39" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="55" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1a7031ddc73047926323e782290029baa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Status::IsValidBMP</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidBMP</name>
+        <qualifiedname>Status::IsValidBMP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="41" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1ac0bea2e39f830f10c1c0caf7061473db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Status::IsValidSD</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidSD</name>
+        <qualifiedname>Status::IsValidSD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="42" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1a11cf5c02770e7892cc0fbf7ebd3b20e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Status::IsLaunched</definition>
+        <argsstring>()</argsstring>
+        <name>IsLaunched</name>
+        <qualifiedname>Status::IsLaunched</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="44" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1a8402d96fff53604a534819b765781006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Status::IsRising</definition>
+        <argsstring>()</argsstring>
+        <name>IsRising</name>
+        <qualifiedname>Status::IsRising</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="45" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1a4f8938037c5cbf0660e3a26e23de2130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Status::IsFalling</definition>
+        <argsstring>()</argsstring>
+        <name>IsFalling</name>
+        <qualifiedname>Status::IsFalling</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="46" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1afecee878fcb1fc6ae1250060e51dc537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Status::IsLanded</definition>
+        <argsstring>()</argsstring>
+        <name>IsLanded</name>
+        <qualifiedname>Status::IsLanded</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="47" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="104" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classStatus_1a20f2987bfc874f92bf9c363f11ae2351" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Status::IsServoOn</definition>
+        <argsstring>()</argsstring>
+        <name>IsServoOn</name>
+        <qualifiedname>Status::IsServoOn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="49" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp" bodystart="108" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" line="13" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp" bodystart="13" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classStatus_1ab5bc2a572269fef3533114e5390e948e" prot="private" virt="non-virtual"><scope>Status</scope><name>CheckAPRS</name></member>
+      <member refid="classStatus_1a932b1ca89268c7fd06e712d996551f89" prot="private" virt="non-virtual"><scope>Status</scope><name>CheckFalling</name></member>
+      <member refid="classStatus_1a1dd40d6f6d6531d36598076beea7aac7" prot="private" virt="non-virtual"><scope>Status</scope><name>CheckLanded</name></member>
+      <member refid="classStatus_1a1a8e6077ce7043d7dd948480e196554f" prot="private" virt="non-virtual"><scope>Status</scope><name>CheckRising</name></member>
+      <member refid="classStatus_1aaebebdc0edd540e9d20e148d9bb49418" prot="private" virt="non-virtual"><scope>Status</scope><name>CheckSensors</name></member>
+      <member refid="classStatus_1aa0877c337ae500fa3011a162a1be2137" prot="public" virt="non-virtual"><scope>Status</scope><name>CheckServo</name></member>
+      <member refid="classStatus_1af9976c565c17dd9c3bfc9d2cd3fa37da" prot="public" virt="non-virtual"><scope>Status</scope><name>CheckStatus</name></member>
+      <member refid="classStatus_1a98ee7d99f0d2f6d684a290fc2e56b459" prot="private" virt="non-virtual"><scope>Status</scope><name>Falling</name></member>
+      <member refid="classStatus_1a4f8938037c5cbf0660e3a26e23de2130" prot="public" virt="non-virtual"><scope>Status</scope><name>IsFalling</name></member>
+      <member refid="classStatus_1afecee878fcb1fc6ae1250060e51dc537" prot="public" virt="non-virtual"><scope>Status</scope><name>IsLanded</name></member>
+      <member refid="classStatus_1a11cf5c02770e7892cc0fbf7ebd3b20e9" prot="public" virt="non-virtual"><scope>Status</scope><name>IsLaunched</name></member>
+      <member refid="classStatus_1a8402d96fff53604a534819b765781006" prot="public" virt="non-virtual"><scope>Status</scope><name>IsRising</name></member>
+      <member refid="classStatus_1a20f2987bfc874f92bf9c363f11ae2351" prot="public" virt="non-virtual"><scope>Status</scope><name>IsServoOn</name></member>
+      <member refid="classStatus_1a7031ddc73047926323e782290029baa8" prot="public" virt="non-virtual"><scope>Status</scope><name>IsValidBMP</name></member>
+      <member refid="classStatus_1ac0bea2e39f830f10c1c0caf7061473db" prot="public" virt="non-virtual"><scope>Status</scope><name>IsValidSD</name></member>
+      <member refid="classStatus_1af50272938fd3cd0352a05ad62f7c29e4" prot="private" virt="non-virtual"><scope>Status</scope><name>Landed</name></member>
+      <member refid="classStatus_1a0c8ca57db11fecd43b288566d98a54a2" prot="private" virt="non-virtual"><scope>Status</scope><name>Launched</name></member>
+      <member refid="classStatus_1ac6a4ec6f9dcf7c5b67866071ce46a5b9" prot="private" virt="non-virtual"><scope>Status</scope><name>Rising</name></member>
+      <member refid="classStatus_1a1427f1e9372bc557a6c9e3e5b4d25dbe" prot="private" virt="non-virtual"><scope>Status</scope><name>ServoStatus</name></member>
+      <member refid="classStatus_1a944586fb328a3524805748c8f7b17f32" prot="public" virt="non-virtual"><scope>Status</scope><name>Status</name></member>
+      <member refid="classStatus_1a93365e7591ad69f078462216b1091d7c" prot="private" virt="non-virtual"><scope>Status</scope><name>TimeSinceLaunch</name></member>
+      <member refid="classStatus_1a1d3e44bc051e7606d1db5a1984b6974f" prot="private" virt="non-virtual"><scope>Status</scope><name>ValidBMP</name></member>
+      <member refid="classStatus_1af0ef38733daabe0d5010472a2585a663" prot="private" virt="non-virtual"><scope>Status</scope><name>ValidSD</name></member>
+      <member refid="classStatus_1a1b24d90ef2560afffe9d7183e279c63c" prot="public" virt="non-virtual"><scope>Status</scope><name>~Status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

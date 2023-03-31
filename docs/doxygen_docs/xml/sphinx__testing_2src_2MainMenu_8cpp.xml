@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="sphinx__testing_2src_2MainMenu_8cpp" kind="file" language="C++">
+    <compoundname>MainMenu.cpp</compoundname>
+    <includes local="no">ncurses.h</includes>
+    <includes local="yes">MainMenu.hpp</includes>
+    <includes local="yes">colors.hpp</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">map</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/src/MainMenu.cpp</label>
+        <link refid="sphinx__testing_2src_2MainMenu_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>MainMenu.hpp</label>
+      </node>
+      <node id="4">
+        <label>colors.hpp</label>
+      </node>
+      <node id="6">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>ncurses.h</label>
+      </node>
+      <node id="5">
+        <label>sstream</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sphinx__testing_2src_2MainMenu_8cpp_1acb68b8cbbd852dad6f0eb564203bf620" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref></type>
+        <definition>options operator++</definition>
+        <argsstring>(options &amp;opt)</argsstring>
+        <name>operator++</name>
+        <param>
+          <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref> &amp;</type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" line="124" column="9" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="sphinx__testing_2src_2MainMenu_8cpp_1a5cdc8484a2f3935b98567e1242114c27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref></type>
+        <definition>options operator--</definition>
+        <argsstring>(options &amp;opt)</argsstring>
+        <name>operator--</name>
+        <param>
+          <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref> &amp;</type>
+          <declname>opt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" line="128" column="9" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="128" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;ncurses.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MainMenu.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;colors.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="classMainMenu_1a53eecf9d5ffd094f54ac4193e7e57eaf" kindref="member">MainMenu::MainMenu</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>initscr();<sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Account<sp/>for<sp/>already<sp/>having<sp/>been<sp/>called<sp/>somehow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>cbreak();<sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Will<sp/>need<sp/>to<sp/>account<sp/>for<sp/>signal<sp/>handling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>noecho();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>keypad(stdscr,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>start_color();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>init_pair(<ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" kindref="member">MENU_SELECTION</ref>,<sp/>COLOR_BLACK,<sp/>COLOR_WHITE);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="classMainMenu_1a0a19ddba3ac52bf39c09b579171c98f2" kindref="member">MainMenu::~MainMenu</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>echo();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>nocbreak();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>endwin();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainMenu_1a7644a536b858b5095fd2e9915b1f10ba" kindref="member">MainMenu::display_menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="namespaceproject1_1abc4556b1e368a47ab56ada15d51c2d77" kindref="member">Y</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="namespaceproject1_1a7219682a3049738e61af24a8a4950078" kindref="member">X</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/>OPT)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>TITLE<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;MAIN<sp/>MENU&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>Y_CENTER<sp/>=<sp/><ref refid="namespaceproject1_1abc4556b1e368a47ab56ada15d51c2d77" kindref="member">Y</ref><sp/>/<sp/>2,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X_CENTER<sp/>=<sp/><ref refid="namespaceproject1_1a7219682a3049738e61af24a8a4950078" kindref="member">X</ref>/2<sp/>-<sp/>TITLE.size()/2,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NUM_OPTS<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>OPTS[NUM_OPTS]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;New<sp/>Game&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Resume<sp/>Game&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Show<sp/>#<sp/>Finished<sp/>Games&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>map&lt;uint8_t,<sp/>options&gt;<sp/>opt_map;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>opt_map[0]<sp/>=<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" kindref="member">options::NEW_GAME</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>opt_map[1]<sp/>=<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" kindref="member">options::RESUME_GAME</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>opt_map[2]<sp/>=<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" kindref="member">options::SHOW_STATS</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>mvprintw(Y_CENTER<sp/>-<sp/>2,<sp/>X_CENTER,<sp/>TITLE.c_str());</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>NUM_OPTS;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(OPT<sp/>==<sp/>opt_map[i])<sp/>attron(COLOR_PAIR(<ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" kindref="member">MENU_SELECTION</ref>));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvprintw(Y_CENTER<sp/>+<sp/>i,<sp/>X_CENTER,<sp/>OPTS[i].c_str());</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(OPT<sp/>==<sp/>opt_map[i])<sp/>attroff(COLOR_PAIR(<ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" kindref="member">MENU_SELECTION</ref>));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>refresh();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainMenu_1a81e7e504259a458f72cde734c49ead31" kindref="member">MainMenu::set_VERTICAL_DIVIDER</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>VAL)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMenu_1a593f1ec27088578ed2dbdeb7c92d222b" kindref="member">VERTICAL_DIVIDER</ref><sp/>=<sp/>VAL;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainMenu_1aedd8f211669de8140804de6668a2d669" kindref="member">MainMenu::set_IN_GAME_MENU_DISPLAY_SPACING</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>VAL)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMenu_1a26719c17d8801e207892e6ad4b8dcfa2" kindref="member">IN_GAME_MENU_DISPLAY_SPACING</ref><sp/>=<sp/>VAL;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classMainMenu_1acfe2e16a40a155b3142dde82d7bbfa47" kindref="member">MainMenu::set_WINDOW_XMIN</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a1094ba128928606faf1c771777021c25" kindref="member">WINDOW_XMIN</ref><sp/>=<sp/><ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref><sp/>+<sp/><ref refid="classMenu_1a1611ec6c672448c9f86d473a18b8bdb7" kindref="member">PUZZLE_SPACE</ref><sp/>+<sp/><ref refid="classMenu_1a593f1ec27088578ed2dbdeb7c92d222b" kindref="member">VERTICAL_DIVIDER</ref><sp/>+<sp/><ref refid="classMenu_1a26719c17d8801e207892e6ad4b8dcfa2" kindref="member">IN_GAME_MENU_DISPLAY_SPACING</ref><sp/>+</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a6b08d51b12dd836c9dac66895e71362b" kindref="member">RIGHT_PADDING</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" kindref="member">MainMenu::menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>USE_IN_GAME_MENU)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(not<sp/>USE_IN_GAME_MENU)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a81e7e504259a458f72cde734c49ead31" kindref="member">set_VERTICAL_DIVIDER</ref>(0);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1aedd8f211669de8140804de6668a2d669" kindref="member">set_IN_GAME_MENU_DISPLAY_SPACING</ref>(0);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1acfe2e16a40a155b3142dde82d7bbfa47" kindref="member">set_WINDOW_XMIN</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" kindref="member">menu</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" kindref="member">MainMenu::menu</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>x_max,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y_max;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>getmaxyx(stdscr,<sp/>y_max,<sp/>x_max);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(y_max<sp/>&lt;<sp/><ref refid="classMainMenu_1a561011b1f481daac6ee4ec6fa9f78451" kindref="member">WINDOW_YMIN</ref><sp/>or<sp/>x_max<sp/>&lt;<sp/><ref refid="classMainMenu_1a1094ba128928606faf1c771777021c25" kindref="member">WINDOW_XMIN</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>x_curr,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y_curr;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::clear();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>msg1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>current<sp/>window<sp/>is<sp/>too<sp/>small&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg4<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Resize<sp/>the<sp/>terminal<sp/>window<sp/>and<sp/>press<sp/>Enter<sp/>twice<sp/>to<sp/>continue&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringstream<sp/>msg2,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg3;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg2<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Required<sp/>dimensions:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classMainMenu_1a1094ba128928606faf1c771777021c25" kindref="member">WINDOW_XMIN</ref>+0<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>x<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classMainMenu_1a561011b1f481daac6ee4ec6fa9f78451" kindref="member">WINDOW_YMIN</ref>+0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg3<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Current<sp/>dimensions:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>x_max+0<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>x<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>y_max+0;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvprintw(y_max/2,<sp/><sp/><sp/><sp/><sp/>x_max/2<sp/>-<sp/>msg1.size()/2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg1.c_str());</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvprintw(y_max/2<sp/>+<sp/>2,<sp/>x_max/2<sp/>-<sp/>msg2.str().size()/2,<sp/>msg2.str().c_str());</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvprintw(y_max/2<sp/>+<sp/>3,<sp/>x_max/2<sp/>-<sp/>msg3.str().size()/2,<sp/>msg3.str().c_str());</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvprintw(y_max/2<sp/>+<sp/>5,<sp/>x_max/2<sp/>-<sp/>msg4.size()/2,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg4.c_str());</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>refresh();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getmaxyx(stdscr,<sp/>y_max,<sp/>x_max);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(getch()<sp/>!=<sp/><ref refid="values_8hpp_1a42616646ccdb9b49a8beb277362e08e6" kindref="member">KEY_ENTER</ref>);<sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>For<sp/>some<sp/>reason,<sp/>the<sp/>Enter<sp/>key<sp/>needs<sp/>to<sp/>be<sp/>pressed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>twice<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>::clear();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>msg1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;The<sp/>window<sp/>is<sp/>now<sp/>an<sp/>appropriate<sp/>size&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msg2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Press<sp/>Enter<sp/>to<sp/>continue&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>mvprintw(y_max/2,<sp/><sp/><sp/><sp/><sp/>x_max/2<sp/>-<sp/>msg1.size()/2,<sp/>msg1.c_str());</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>mvprintw(y_max/2<sp/>+<sp/>1,<sp/>x_max/2<sp/>-<sp/>msg2.size()/2,<sp/>msg2.c_str());</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>refresh();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(getch()<sp/>!=<sp/><ref refid="values_8hpp_1a42616646ccdb9b49a8beb277362e08e6" kindref="member">KEY_ENTER</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>::clear();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>curs_set(0);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/>opt<sp/>=<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" kindref="member">options::NEW_GAME</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a7644a536b858b5095fd2e9915b1f10ba" kindref="member">display_menu</ref>(y_max,<sp/>x_max,<sp/>opt);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>input;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input<sp/>=<sp/>getch();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(input)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>KEY_DOWN:<sp/><sp/>++opt;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a7644a536b858b5095fd2e9915b1f10ba" kindref="member">display_menu</ref>(y_max,<sp/>x_max,<sp/>opt);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>KEY_UP:<sp/><sp/><sp/><sp/>--opt;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMainMenu_1a7644a536b858b5095fd2e9915b1f10ba" kindref="member">display_menu</ref>(y_max,<sp/>x_max,<sp/>opt);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(input<sp/>!=<sp/><ref refid="values_8hpp_1a42616646ccdb9b49a8beb277362e08e6" kindref="member">KEY_ENTER</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>::clear();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>curs_set(1);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>opt;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="sphinx__testing_2src_2MainMenu_8cpp_1acb68b8cbbd852dad6f0eb564203bf620" kindref="member">operator ++ </ref>(<ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>&amp;<sp/>opt)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>opt<sp/>=<sp/>(opt<sp/>==<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" kindref="member">options::NEW_GAME</ref>)<sp/>?<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" kindref="member">options::RESUME_GAME</ref><sp/>:<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" kindref="member">options::SHOW_STATS</ref>;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="sphinx__testing_2src_2MainMenu_8cpp_1a5cdc8484a2f3935b98567e1242114c27" kindref="member">operator -- </ref>(<ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>&amp;<sp/>opt)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>opt<sp/>=<sp/>(opt<sp/>==<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da98c786f79fc1ab8be826c93115db9e17" kindref="member">options::SHOW_STATS</ref>)<sp/>?<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da47e335e6e030b7bc658f55206dea5cd5" kindref="member">options::RESUME_GAME</ref><sp/>:<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803" kindref="member">options::NEW_GAME</ref>;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_fafc07e90b89ae55fbff9dc5df260346" kind="dir">
+    <compoundname>/home/chris/Documents/HAB-SEDS-TTU/src/Status</compoundname>
+    <innerfile refid="Status_8cpp">Status.cpp</innerfile>
+    <innerfile refid="Status_8hpp">Status.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Status/"/>
+  </compounddef>
+</doxygen>

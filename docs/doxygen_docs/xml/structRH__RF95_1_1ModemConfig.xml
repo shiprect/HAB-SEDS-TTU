@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structRH__RF95_1_1ModemConfig" kind="struct" language="C++" prot="public">
+    <compoundname>RH_RF95::ModemConfig</compoundname>
+    <includes local="no">RH_RF95.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structRH__RF95_1_1ModemConfig_1a1862a90e72de936511a2418e4465ccae" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RH_RF95::ModemConfig::reg_1d</definition>
+        <argsstring></argsstring>
+        <name>reg_1d</name>
+        <qualifiedname>RH_RF95::ModemConfig::reg_1d</qualifiedname>
+        <briefdescription>
+<para>Value for register RH_RF95_REG_1D_MODEM_CONFIG1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="516" column="12" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="516" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRH__RF95_1_1ModemConfig_1a5c503a4dcc27aba5d914504e30a359dc" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RH_RF95::ModemConfig::reg_1e</definition>
+        <argsstring></argsstring>
+        <name>reg_1e</name>
+        <qualifiedname>RH_RF95::ModemConfig::reg_1e</qualifiedname>
+        <briefdescription>
+<para>Value for register RH_RF95_REG_1E_MODEM_CONFIG2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="517" column="12" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="517" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structRH__RF95_1_1ModemConfig_1a8997fc66e919e7f5f88890250b87aaee" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RH_RF95::ModemConfig::reg_26</definition>
+        <argsstring></argsstring>
+        <name>reg_26</name>
+        <qualifiedname>RH_RF95::ModemConfig::reg_26</qualifiedname>
+        <briefdescription>
+<para>Value for register RH_RF95_REG_26_MODEM_CONFIG3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="518" column="12" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines register values for a set of modem configuration registers. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Defines register values for a set of modem configuration registers that can be passed to <ref refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" kindref="member">setModemRegisters()</ref> if none of the choices in ModemConfigChoice suit your need <ref refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" kindref="member">setModemRegisters()</ref> writes the register values from this structure to the appropriate registers to set the desired spreading factor, coding rate and bandwidth </para>
+    </detaileddescription>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="514" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="515" bodyend="519"/>
+    <listofallmembers>
+      <member refid="structRH__RF95_1_1ModemConfig_1a1862a90e72de936511a2418e4465ccae" prot="public" virt="non-virtual"><scope>RH_RF95::ModemConfig</scope><name>reg_1d</name></member>
+      <member refid="structRH__RF95_1_1ModemConfig_1a5c503a4dcc27aba5d914504e30a359dc" prot="public" virt="non-virtual"><scope>RH_RF95::ModemConfig</scope><name>reg_1e</name></member>
+      <member refid="structRH__RF95_1_1ModemConfig_1a8997fc66e919e7f5f88890250b87aaee" prot="public" virt="non-virtual"><scope>RH_RF95::ModemConfig</scope><name>reg_26</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

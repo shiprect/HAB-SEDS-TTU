@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Pushbutton_8hpp" kind="file" language="C++">
+    <compoundname>Pushbutton.hpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="Config_8h" local="yes">../../../Config.h</includes>
+    <includedby refid="Pushbutton_8cpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.cpp</includedby>
+    <includedby refid="SD__card_8hpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.hpp</label>
+        <link refid="Pushbutton_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="14">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="11">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="10">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="7">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="9">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="8">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="4">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="15">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino</label>
+        <link refid="HAB-SEDS-TTU_8ino"/>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.cpp</label>
+        <link refid="Pushbutton_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.hpp</label>
+        <link refid="Pushbutton_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp</label>
+        <link refid="SD__card_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</label>
+        <link refid="SD__card_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classPUSHBUTTON" prot="public">PUSHBUTTON</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Pushbutton_8hpp_1a7f613b1920e0a8b48f10f030c42162ae" prot="public" static="no" mutable="no">
+        <type><ref refid="classPUSHBUTTON" kindref="compound">PUSHBUTTON</ref></type>
+        <definition>PUSHBUTTON pushbutton</definition>
+        <argsstring></argsstring>
+        <name>pushbutton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.hpp" line="41" column="19" declfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.hpp" declline="41" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__PUSHBUTTON_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__PUSHBUTTON_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../Config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//TODO::PUSHBUTTON<sp/>Should<sp/>have<sp/>both<sp/>Update<sp/>check<sp/>function,<sp/>and<sp/>also<sp/>have<sp/>an<sp/>interrupt<sp/>based<sp/>version<sp/>that<sp/>is<sp/>configurable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>of<sp/>this<sp/>is<sp/>not<sp/>verified<sp/>and<sp/>should<sp/>be<sp/>tested<sp/>to<sp/>see<sp/>if<sp/>it<sp/>actually<sp/>works,<sp/>including<sp/>proper<sp/>debounce</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classPUSHBUTTON" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classPUSHBUTTON" kindref="compound">PUSHBUTTON</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a6b719e917a0ad7949fb6cf1d37d1b686" kindref="member">ValidPUSHBUTTON</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Debouncing<sp/>Variables:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1afb81808f78a16d48d600bfb2b27de9b2" kindref="member">buttonState</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>current<sp/>reading<sp/>from<sp/>the<sp/>input<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a392ba8324ca9b0eae476105827d91872" kindref="member">lastButtonState</ref><sp/>=<sp/>LOW;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>previous<sp/>reading<sp/>from<sp/>the<sp/>input<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a1593dca189cb5867654c44d11075af89" kindref="member">voltage</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>following<sp/>variables<sp/>are<sp/>unsigned<sp/>longs<sp/>because<sp/>the<sp/>time,<sp/>measured<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>milliseconds,<sp/>will<sp/>quickly<sp/>become<sp/>a<sp/>bigger<sp/>number<sp/>than<sp/>can<sp/>be<sp/>stored<sp/>in<sp/>an<sp/>int.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a698c708cfc7f97628ed5c6e6a4c871f4" kindref="member">lastDebounceTime</ref><sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>last<sp/>time<sp/>the<sp/>output<sp/>pin<sp/>was<sp/>toggled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a3131a5065abece4a3d47e15e252ab19a" kindref="member">debounceDelay</ref><sp/>=<sp/>50;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>debounce<sp/>time;<sp/>increase<sp/>if<sp/>the<sp/>output<sp/>flickers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1adc06ef60c59c85b8b621403985c78eb8" kindref="member">buttonPin</ref><sp/>=<sp/>9;<sp/></highlight><highlight class="comment">//<sp/>trying<sp/>D9<sp/>as<sp/>of<sp/>20<sp/>june<sp/>2022</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>D13<sp/>on<sp/>board,<sp/>connected<sp/>to<sp/>the<sp/>momentary<sp/>PushButton<sp/>(onboard<sp/>led??)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPUSHBUTTON_1a218ce8eab2e6ca03d420683a63f4c0d7" kindref="member">PUSHBUTTON</ref><sp/>()<sp/>{};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPUSHBUTTON_1ac009ac8a74763454ceab3d9f6b76e736" kindref="member">~PUSHBUTTON</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a03b012e270f1b1f9c1b4ed215397a42f" kindref="member">PUSHBUTTON_Setup</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a5a8cdc321d16cc0c8d952463cb14668b" kindref="member">PUSHBUTTON_Update</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a221a1081d248d7c13890c403708d6933" kindref="member">IsValidPUSHBUTTON</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1adc6bc72a6da758e0fcf3534aad6e0318" kindref="member">GetVoltage</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>int<sp/>GetledState();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a295e7fa05b69b43c7f0b7bb6073ec831" kindref="member">GetbuttonState</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON_1a62b8222476c427780bce822a23b4fb4c" kindref="member">GetlastButtonState</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classPUSHBUTTON" kindref="compound">PUSHBUTTON</ref><sp/><ref refid="Pushbutton_8hpp_1a7f613b1920e0a8b48f10f030c42162ae" kindref="member">pushbutton</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/Pushbutton/Pushbutton.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_25f07d14d76ca058fc5804b0d335abe5" kind="dir">
+    <compoundname>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin</compoundname>
+    <innerfile refid="AnalogPin_8cpp">AnalogPin.cpp</innerfile>
+    <innerfile refid="AnalogPin_8hpp">AnalogPin.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/"/>
+  </compounddef>
+</doxygen>
