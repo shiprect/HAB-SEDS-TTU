@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="RadioHead_2RHSPIDriver_8h" kind="file" language="C++">
+    <compoundname>RHSPIDriver.h</compoundname>
+    <includes refid="RadioHead_2RHGenericDriver_8h" local="no">RHGenericDriver.h</includes>
+    <includes refid="RadioHead_2RHHardwareSPI_8h" local="no">RHHardwareSPI.h</includes>
+    <includedby refid="RadioHead_2RHSPIDriver_8cpp" local="no">/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.cpp</includedby>
+    <includedby refid="RadioHead_2RH__RF95_8h" local="no">/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>RHGenericDriver.h</label>
+        <link refid="RadioHead_2RHGenericDriver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>RHGenericSPI.h</label>
+        <link refid="RadioHead_2RHGenericSPI_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RHHardwareSPI.h</label>
+        <link refid="RadioHead_2RHHardwareSPI_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h</label>
+        <link refid="RadioHead_2RHSPIDriver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RadioHead.h</label>
+        <link refid="RadioHead_2RadioHead_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.cpp</label>
+        <link refid="RadioHead_2RHSPIDriver_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h</label>
+        <link refid="RadioHead_2RHSPIDriver_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.cpp</label>
+        <link refid="RadioHead_2RH__RF95_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h</label>
+        <link refid="RadioHead_2RH__RF95_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRHSPIDriver" prot="public">RHSPIDriver</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="RadioHead_2RHSPIDriver_8h_1a42f47c5b5d1be3e1b4527e7b6112004a" prot="public" static="no">
+        <name>RH_SPI_WRITE_MASK</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h" line="13" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>RHSPIDriver.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Mike<sp/>McCauley<sp/>(mikem@airspayce.com)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2014<sp/>Mike<sp/>McCauley</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>RHSPIDriver.h,v<sp/>1.10<sp/>2015/12/16<sp/>04:55:33<sp/>mikem<sp/>Exp<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RHSPIDriver_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RHSPIDriver_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="RadioHead_2RHGenericDriver_8h" kindref="compound">RHGenericDriver.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="RadioHead_2RHHardwareSPI_8h" kindref="compound">RHHardwareSPI.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>bit<sp/>in<sp/>the<sp/>SPI<sp/>address<sp/>that<sp/>marks<sp/>it<sp/>as<sp/>a<sp/>write</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_SPI_WRITE_MASK<sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRHSPIDriver" kindref="compound">RHSPIDriver</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classRHGenericDriver" kindref="compound">RHGenericDriver</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a4285d2fb96b09588556bfc4f8a143f61" kindref="member">RHSPIDriver</ref>(uint8_t<sp/>slaveSelectPin<sp/>=<sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a88f7782e210e61586baf33b93240d905" kindref="member">SS</ref>,<sp/><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref>&amp;<sp/>spi<sp/>=<sp/><ref refid="LoRaNodeV4_2RadioHead_2RHHardwareSPI_8cpp_1a9d4ea215edc388eaacbc289938bb658c" kindref="member">hardware_spi</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" kindref="member">spiRead</ref>(uint8_t<sp/>reg);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" kindref="member">spiWrite</ref>(uint8_t<sp/>reg,<sp/>uint8_t<sp/>val);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1af0ffebc1db1a6008734a37c4448fe926" kindref="member">spiBurstRead</ref>(uint8_t<sp/>reg,<sp/>uint8_t*<sp/>dest,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a559b2c489825fe1ae737cb4371956d3d" kindref="member">spiBurstWrite</ref>(uint8_t<sp/>reg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>src,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRHSPIDriver_1a89cc3ee4a7cceb8b283e2efc3f2a6362" kindref="member">setSlaveSelectPin</ref>(uint8_t<sp/>slaveSelectPin);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref>&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" kindref="member">_spi</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" kindref="member">_slaveSelectPin</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h"/>
+  </compounddef>
+</doxygen>

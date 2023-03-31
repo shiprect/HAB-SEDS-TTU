@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="sphinx__testing_2include_2SavedGameMenu_8hpp" kind="file" language="C++">
+    <compoundname>SavedGameMenu.hpp</compoundname>
+    <includes refid="sphinx__testing_2include_2Menu_8hpp" local="yes">Menu.hpp</includes>
+    <includes local="no">filesystem</includes>
+    <includes local="no">list</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>Menu.hpp</label>
+        <link refid="sphinx__testing_2include_2Menu_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/include/SavedGameMenu.hpp</label>
+        <link refid="sphinx__testing_2include_2SavedGameMenu_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>values.hpp</label>
+        <link refid="values_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="7">
+        <label>filesystem</label>
+      </node>
+      <node id="8">
+        <label>list</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classSavedGameMenu" prot="public">SavedGameMenu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SAVEDGAMEMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAVEDGAMEMENU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_2include_2Menu_8hpp" kindref="compound">Menu.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//enum<sp/>class<sp/>options<sp/>{<sp/>NONE<sp/>};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classSavedGameMenu" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSavedGameMenu" kindref="compound">SavedGameMenu</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classMenu" kindref="compound">Menu</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::list&lt;std::string&gt;::iterator<sp/><ref refid="classSavedGameMenu_1a2a7248157231ea2eafeea045a86fb75e" kindref="member">list_iter</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::list&lt;std::string&gt;<sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1a2a7248157231ea2eafeea045a86fb75e" kindref="member">list_iter</ref><sp/><ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a3897fe15acb6a9dab3206d81993a6cdf" kindref="member">display_menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a673d0e5a7a2550713f4842451c25b68c" kindref="member">generate_saved_games_list</ref><sp/>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a7e25d2e42cdd753eba2cc29423fb397d" kindref="member">select_saved_game</ref><sp/>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1ac3438ac7dc8e11aa9e4aa0505c5179b5" kindref="member">SavedGameMenu</ref><sp/>()<sp/>{}<sp/></highlight><highlight class="comment">//TODO:<sp/>Not<sp/>having<sp/>this<sp/>defined<sp/>in<sp/>SavedGameMenu.cpp<sp/>caused<sp/>a<sp/>weird<sp/>crash<sp/>before.<sp/>I<sp/>suspected<sp/>it<sp/>might<sp/>have<sp/>been<sp/>some<sp/>odd<sp/>linking<sp/>issue,<sp/>and<sp/>compiling<sp/>from<sp/>scratch<sp/>seems<sp/>to<sp/>have<sp/>fixed<sp/>it.<sp/>Delete<sp/>this<sp/>comment<sp/>later<sp/>if<sp/>no<sp/>other<sp/>problems<sp/>occur.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1a223e77f734bd5e1394c3abe0e224ddc1" kindref="member">~SavedGameMenu</ref><sp/>()<sp/>{}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classSavedGameMenu_1a0eaa9f1f96d531625764f3f472c667a6" kindref="member">menu</ref><sp/>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/sphinx_testing/include/SavedGameMenu.hpp"/>
+  </compounddef>
+</doxygen>

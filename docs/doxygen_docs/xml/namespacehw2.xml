@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacehw2" kind="namespace" language="Python">
+    <compoundname>hw2</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacehw2_1a5fb4ed9eeeb99e6e76e40c6f9ee058f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.alpha2</definition>
+        <argsstring>(float n1, float n2, float lamb0, float theta)</argsstring>
+        <name>alpha2</name>
+        <qualifiedname>hw2.alpha2</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lamb0</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="3" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="3" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1ad76181efbc2628765d7efd1f25842b6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.E_perpendicular</definition>
+        <argsstring>(float n1, float n2, float theta)</argsstring>
+        <name>E_perpendicular</name>
+        <qualifiedname>hw2.E_perpendicular</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="8" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="8" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1aea17bd8969e5b433fcab1a9b6a886bc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.E_parallel</definition>
+        <argsstring>(float n1, float n2, float theta)</argsstring>
+        <name>E_parallel</name>
+        <qualifiedname>hw2.E_parallel</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="14" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1a26cfea219e0a5b2fd12aac818b5c5f65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.phase_change_perpendicular</definition>
+        <argsstring>(float n1, float n2, float theta)</argsstring>
+        <name>phase_change_perpendicular</name>
+        <qualifiedname>hw2.phase_change_perpendicular</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="18" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1a84a63ba7d0913b5cad82d86ce848ad15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.phase_change_parallel</definition>
+        <argsstring>(float n1, float n2, float theta)</argsstring>
+        <name>phase_change_parallel</name>
+        <qualifiedname>hw2.phase_change_parallel</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>theta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="21" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1aa93f5e3232c659599d0293eba7aa9fa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.min_theta_i</definition>
+        <argsstring>(float n1, float n2)</argsstring>
+        <name>min_theta_i</name>
+        <qualifiedname>hw2.min_theta_i</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="24" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1a4aa6d777352855394448a493ffac190b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.refl_coeff</definition>
+        <argsstring>(float n1, float n2)</argsstring>
+        <name>refl_coeff</name>
+        <qualifiedname>hw2.refl_coeff</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>n1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>n2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="28" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="28" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1a4900e997846abdc9039cb7397be2ebc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.p1</definition>
+        <argsstring>()</argsstring>
+        <name>p1</name>
+        <qualifiedname>hw2.p1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="31" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="31" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1a40789d0a8dd0ce27e6641433ccb495cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.absorption_coeff</definition>
+        <argsstring>(k0, K)</argsstring>
+        <name>absorption_coeff</name>
+        <qualifiedname>hw2.absorption_coeff</qualifiedname>
+        <param>
+          <type>k0</type>
+          <defname>k0</defname>
+        </param>
+        <param>
+          <type>K</type>
+          <defname>K</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="74" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1a2395fe93fb35a3871bb527d82e2739da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.p2</definition>
+        <argsstring>()</argsstring>
+        <name>p2</name>
+        <qualifiedname>hw2.p2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="77" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="77" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1acbc136b349a010885fc54edf781ffd61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.p3</definition>
+        <argsstring>()</argsstring>
+        <name>p3</name>
+        <qualifiedname>hw2.p3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="120" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="120" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1a75f5d3fa6c6629db33c083892f9c2d9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.p4</definition>
+        <argsstring>()</argsstring>
+        <name>p4</name>
+        <qualifiedname>hw2.p4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="141" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="141" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehw2_1aed7bef681e5f0d1b3c383de1b831a588" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def hw2.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>hw2.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="168" column="1" bodyfile="/home/chris/Documents/ece5520/homework/hw2/hw2.py" bodystart="168" bodyend="174"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece5520/homework/hw2/hw2.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

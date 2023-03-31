@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_ba22f8c99084a90a9be2276df80b1e18" kind="dir">
+    <compoundname>/home/chris/Documents/sphinx_testing/docs</compoundname>
+    <innerdir refid="dir_d08b4213a4a69ce32cfa7a4910dc5916">/home/chris/Documents/sphinx_testing/docs/source</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/sphinx_testing/docs/"/>
+  </compounddef>
+</doxygen>

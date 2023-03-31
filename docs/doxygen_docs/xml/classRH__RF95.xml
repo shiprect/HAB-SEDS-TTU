@@ -1,0 +1,1705 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classRH__RF95" kind="class" language="C++" prot="public">
+    <compoundname>RH_RF95</compoundname>
+    <basecompoundref refid="classRHSPIDriver" prot="public" virt="non-virtual">RHSPIDriver</basecompoundref>
+    <basecompoundref refid="classRHSPIDriver" prot="public" virt="non-virtual">RHSPIDriver</basecompoundref>
+    <includes local="no">RH_RF95.h</includes>
+    <innerclass refid="structRH__RF95_1_1ModemConfig" prot="public">RH_RF95::ModemConfig</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ModemConfigChoice</name>
+        <qualifiedname>RH_RF95::ModemConfigChoice</qualifiedname>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a8b6aeb4bf0acd379adb2cf223110c8f7" prot="public">
+          <name>Bw125Cr45Sf128</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Bw = 125 kHz, Cr = 4/5, Sf = 128chips/symbol, CRC on. Default medium range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a83a61975fcfb1f7e6797fbecca5f1125" prot="public">
+          <name>Bw500Cr45Sf128</name>
+          <briefdescription>
+<para>Bw = 500 kHz, Cr = 4/5, Sf = 128chips/symbol, CRC on. Fast+short range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a7ca0f5e5c76cd60072772bcff7fea05f" prot="public">
+          <name>Bw31_25Cr48Sf512</name>
+          <briefdescription>
+<para>Bw = 31.25 kHz, Cr = 4/8, Sf = 512chips/symbol, CRC on. Slow+long range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a9ea440d11a8470919209bd78cb7a4515" prot="public">
+          <name>Bw125Cr48Sf4096</name>
+          <briefdescription>
+<para>Bw = 125 kHz, Cr = 4/8, Sf = 4096chips/symbol, CRC on. Slow+long range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a8b6aeb4bf0acd379adb2cf223110c8f7" prot="public">
+          <name>Bw125Cr45Sf128</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Bw = 125 kHz, Cr = 4/5, Sf = 128chips/symbol, CRC on. Default medium range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a83a61975fcfb1f7e6797fbecca5f1125" prot="public">
+          <name>Bw500Cr45Sf128</name>
+          <briefdescription>
+<para>Bw = 500 kHz, Cr = 4/5, Sf = 128chips/symbol, CRC on. Fast+short range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a7ca0f5e5c76cd60072772bcff7fea05f" prot="public">
+          <name>Bw31_25Cr48Sf512</name>
+          <briefdescription>
+<para>Bw = 31.25 kHz, Cr = 4/8, Sf = 512chips/symbol, CRC on. Slow+long range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a9ea440d11a8470919209bd78cb7a4515" prot="public">
+          <name>Bw125Cr48Sf4096</name>
+          <briefdescription>
+<para>Bw = 125 kHz, Cr = 4/8, Sf = 4096chips/symbol, CRC on. Slow+long range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Choices for <ref refid="classRH__RF95_1af6f6131a36c2a0f84a5883a6ec7acfec" kindref="member">setModemConfig()</ref> for a selected subset of common data rates. If you need another configuration, determine the necessary settings and call <ref refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" kindref="member">setModemRegisters()</ref> with your desired settings. It might be helpful to use the LoRa calculator mentioned in <ulink url="http://www.semtech.com/images/datasheet/LoraDesignGuide_STD.pdf">http://www.semtech.com/images/datasheet/LoraDesignGuide_STD.pdf</ulink> These are indexes into MODEM_CONFIG_TABLE. We strongly recommend you use these symbolic definitions and not their integer equivalents: its possible that new values will be introduced in later versions (though we will try to avoid it). Caution: if you are using slow packet rates and long packets with RHReliableDatagram or subclasses you may need to change the RHReliableDatagram timeout for reliable operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="531" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="532" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="enum" id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ModemConfigChoice</name>
+        <qualifiedname>RH_RF95::ModemConfigChoice</qualifiedname>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a8b6aeb4bf0acd379adb2cf223110c8f7" prot="public">
+          <name>Bw125Cr45Sf128</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Bw = 125 kHz, Cr = 4/5, Sf = 128chips/symbol, CRC on. Default medium range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a83a61975fcfb1f7e6797fbecca5f1125" prot="public">
+          <name>Bw500Cr45Sf128</name>
+          <briefdescription>
+<para>Bw = 500 kHz, Cr = 4/5, Sf = 128chips/symbol, CRC on. Fast+short range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a7ca0f5e5c76cd60072772bcff7fea05f" prot="public">
+          <name>Bw31_25Cr48Sf512</name>
+          <briefdescription>
+<para>Bw = 31.25 kHz, Cr = 4/8, Sf = 512chips/symbol, CRC on. Slow+long range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a9ea440d11a8470919209bd78cb7a4515" prot="public">
+          <name>Bw125Cr48Sf4096</name>
+          <briefdescription>
+<para>Bw = 125 kHz, Cr = 4/8, Sf = 4096chips/symbol, CRC on. Slow+long range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a8b6aeb4bf0acd379adb2cf223110c8f7" prot="public">
+          <name>Bw125Cr45Sf128</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Bw = 125 kHz, Cr = 4/5, Sf = 128chips/symbol, CRC on. Default medium range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a83a61975fcfb1f7e6797fbecca5f1125" prot="public">
+          <name>Bw500Cr45Sf128</name>
+          <briefdescription>
+<para>Bw = 500 kHz, Cr = 4/5, Sf = 128chips/symbol, CRC on. Fast+short range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a7ca0f5e5c76cd60072772bcff7fea05f" prot="public">
+          <name>Bw31_25Cr48Sf512</name>
+          <briefdescription>
+<para>Bw = 31.25 kHz, Cr = 4/8, Sf = 512chips/symbol, CRC on. Slow+long range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a9ea440d11a8470919209bd78cb7a4515" prot="public">
+          <name>Bw125Cr48Sf4096</name>
+          <briefdescription>
+<para>Bw = 125 kHz, Cr = 4/8, Sf = 4096chips/symbol, CRC on. Slow+long range. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Choices for <ref refid="classRH__RF95_1af6f6131a36c2a0f84a5883a6ec7acfec" kindref="member">setModemConfig()</ref> for a selected subset of common data rates. If you need another configuration, determine the necessary settings and call <ref refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" kindref="member">setModemRegisters()</ref> with your desired settings. It might be helpful to use the LoRa calculator mentioned in <ulink url="http://www.semtech.com/images/datasheet/LoraDesignGuide_STD.pdf">http://www.semtech.com/images/datasheet/LoraDesignGuide_STD.pdf</ulink> These are indexes into MODEM_CONFIG_TABLE. We strongly recommend you use these symbolic definitions and not their integer equivalents: its possible that new values will be introduced in later versions (though we will try to avoid it). Caution: if you are using slow packet rates and long packets with RHReliableDatagram or subclasses you may need to change the RHReliableDatagram timeout for reliable operations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="531" column="5" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="532" bodyend="537"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" prot="private" static="yes" mutable="no">
+        <type><ref refid="classRH__RF95" kindref="compound">RH_RF95</ref> *</type>
+        <definition>static RH_RF95 * RH_RF95::_deviceForInterrupt</definition>
+        <argsstring>[]</argsstring>
+        <name>_deviceForInterrupt</name>
+        <qualifiedname>RH_RF95::_deviceForInterrupt</qualifiedname>
+        <initializer>= {0, 0, 0}</initializer>
+        <briefdescription>
+<para>Array of instances connected to interrupts 0 and 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="693" column="24" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="693" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRH__RF95_1a2ea96ae4f1d6e510f0b527c85fa5b629" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>static uint8_t RH_RF95::_interruptCount</definition>
+        <argsstring></argsstring>
+        <name>_interruptCount</name>
+        <qualifiedname>RH_RF95::_interruptCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Index of next interrupt number to use in _deviceForInterrupt. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="696" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="696" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classRH__RF95_1a9f43cda8dd8d5edc5508937393dfce13" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RH_RF95::_interruptPin</definition>
+        <argsstring></argsstring>
+        <name>_interruptPin</name>
+        <qualifiedname>RH_RF95::_interruptPin</qualifiedname>
+        <briefdescription>
+<para>The configured interrupt pin connected to this instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="699" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="699" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRH__RF95_1a358c2394e5b1e52aa15adbff92b3e229" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RH_RF95::_myInterruptIndex</definition>
+        <argsstring></argsstring>
+        <name>_myInterruptIndex</name>
+        <qualifiedname>RH_RF95::_myInterruptIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The index into _deviceForInterrupt[] for this device (if an interrupt is already allocated) else 0xff </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="703" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="703" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRH__RF95_1aa553f8428e9528dc43a78a983b379110" prot="private" static="no" mutable="no">
+        <type>volatile uint8_t</type>
+        <definition>volatile uint8_t RH_RF95::_bufLen</definition>
+        <argsstring></argsstring>
+        <name>_bufLen</name>
+        <qualifiedname>RH_RF95::_bufLen</qualifiedname>
+        <briefdescription>
+<para>Number of octets in the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="706" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="706" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRH__RF95_1addc6c7d4b752ee8f35595ed35161908f" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RH_RF95::_buf</definition>
+        <argsstring>[RH_RF95_MAX_PAYLOAD_LEN]</argsstring>
+        <name>_buf</name>
+        <qualifiedname>RH_RF95::_buf</qualifiedname>
+        <briefdescription>
+<para>The receiver/transmitter buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="709" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="709" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRH__RF95_1a03d4a80e90eb918841c2e63d79536f5d" prot="private" static="no" mutable="no">
+        <type>volatile bool</type>
+        <definition>volatile bool RH_RF95::_rxBufValid</definition>
+        <argsstring></argsstring>
+        <name>_rxBufValid</name>
+        <qualifiedname>RH_RF95::_rxBufValid</qualifiedname>
+        <briefdescription>
+<para>True when there is a valid message in the buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="712" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="712" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRH__RF95_1a274c170acdb53f55fd45445ab7f51889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RH_RF95::RH_RF95</definition>
+        <argsstring>(uint8_t slaveSelectPin=SS, uint8_t interruptPin=2, RHGenericSPI &amp;spi=hardware_spi)</argsstring>
+        <name>RH_RF95</name>
+        <qualifiedname>RH_RF95::RH_RF95</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>slaveSelectPin</declname>
+          <defval><ref refid="RadioHead_2RadioHead_8h_1a88f7782e210e61586baf33b93240d905" kindref="member">SS</ref></defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>interruptPin</declname>
+          <defval>2</defval>
+        </param>
+        <param>
+          <type><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref> &amp;</type>
+          <declname>spi</declname>
+          <defval><ref refid="RadioHead_2RHHardwareSPI_8h_1a9d4ea215edc388eaacbc289938bb658c" kindref="member">hardware_spi</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. You can have multiple instances, but each instance must have its own interrupt and slave select pin. After constructing, you must call <ref refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" kindref="member">init()</ref> to initialise the interface and the radio module. A maximum of 3 instances can co-exist on one processor, provided there are sufficient distinct interrupt lines, one for each instance. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">slaveSelectPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Arduino pin number of the output to use to select the RH_RF22 before accessing it. Defaults to the normal SS pin for your Arduino (D10 for Diecimila, Uno etc, D53 for Mega, D10 for Maple) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interruptPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interrupt Pin number that is connected to the RFM DIO0 interrupt line. Defaults to pin 2, as required by Anarduino MinWirelessLoRa module. Caution: You must specify an interrupt capable pin. On many Arduino boards, there are limitations as to which pins may be used as interrupts. On Leonardo pins 0, 1, 2 or 3. On Mega2560 pins 2, 3, 18, 19, 20, 21. On Due and Teensy, any digital pin. On Arduino Zero from arduino.cc, any digital pin other than 4. On Arduino M0 Pro from arduino.org, any digital pin other than 2. On other Arduinos pins 2 or 3. See <ulink url="http://arduino.cc/en/Reference/attachInterrupt">http://arduino.cc/en/Reference/attachInterrupt</ulink> for more details. On Chipkit Uno32, pins 38, 2, 7, 8, 35. On other boards, any digital pin may be used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI interface object to use. Defaults to the standard Arduino hardware SPI interface </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="558" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="25" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>RH_RF95::init</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365">init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the Driver transport hardware and software. Make sure the Driver is properly configured before calling <ref refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" kindref="member">init()</ref>. <simplesect kind="return"><para>true if initialisation succeeded. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="563" column="21" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="34" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1af82a441a5946b538f60f31e727009750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::printRegisters</definition>
+        <argsstring>()</argsstring>
+        <name>printRegisters</name>
+        <qualifiedname>RH_RF95::printRegisters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the value of all chip registers to the Serial device if RH_HAVE_SERIAL is defined for the current platform For debugging purposes only. <simplesect kind="return"><para>true on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="569" column="10" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="254" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1aa191d9634325354102394b856c47b5ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setModemRegisters</definition>
+        <argsstring>(const ModemConfig *config)</argsstring>
+        <name>setModemRegisters</name>
+        <qualifiedname>RH_RF95::setModemRegisters</qualifiedname>
+        <param>
+          <type>const <ref refid="structRH__RF95_1_1ModemConfig" kindref="compound">ModemConfig</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets all the registered required to configure the data modem in the RF95/96/97/98, including the bandwidth, spreading factor etc. You can use this to configure the modem with custom configurations if none of the canned configurations in ModemConfigChoice suit you. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="structRH__RF95_1_1ModemConfig" kindref="compound">ModemConfig</ref> structure containing values for the modem configuration registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="575" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="368" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1af6f6131a36c2a0f84a5883a6ec7acfec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::setModemConfig</definition>
+        <argsstring>(ModemConfigChoice index)</argsstring>
+        <name>setModemConfig</name>
+        <qualifiedname>RH_RF95::setModemConfig</qualifiedname>
+        <param>
+          <type><ref refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3" kindref="member">ModemConfigChoice</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Select one of the predefined modem configurations. If you need a modem configuration not provided here, use <ref refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" kindref="member">setModemRegisters()</ref> with your own <ref refid="structRH__RF95_1_1ModemConfig" kindref="compound">ModemConfig</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The configuration choice. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if index is a valid choice. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="581" column="17" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="377" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a917a6b16ca2be2da530516220560cf43" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::available</definition>
+        <argsstring>()</argsstring>
+        <name>available</name>
+        <qualifiedname>RH_RF95::available</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888">available</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests whether a new message is available from the Driver. On most drivers, this will also put the Driver into RHModeRx mode until a message is actually received by the transport, when it wil be returned to RHModeIdle. This can be called multiple times in a timeout loop <simplesect kind="return"><para>true if a new, complete, error-free uncollected message is available to be retreived by <ref refid="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b" kindref="member">recv()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="589" column="21" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="197" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::recv</definition>
+        <argsstring>(uint8_t *buf, uint8_t *len)</argsstring>
+        <name>recv</name>
+        <qualifiedname>RH_RF95::recv</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a">recv</reimplements>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns the receiver on if it not already on. If there is a valid message available, copy it to buf and return true else return false. If a message is copied, *len is set to the length (Caution, 0 length messages are permitted). You should be sure to call this function frequently enough to not miss any messages It is recommended that you call it in your main loop. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location to copy the received message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to available space in buf. Set to the actual number of octets copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a valid message was copied to buf </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="600" column="21" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="213" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1ae7d3743511fdcc1b41f5f8e6b0964c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::send</definition>
+        <argsstring>(const uint8_t *data, uint8_t len)</argsstring>
+        <name>send</name>
+        <qualifiedname>RH_RF95::send</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee">send</reimplements>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits until any previous transmit packet is finished being transmitted with <ref refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" kindref="member">waitPacketSent()</ref>. Then loads a message into the transmitter and starts the transmitter. Note that a message length of 0 is permitted. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes of data to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the message length was valid and it was correctly queued for transmit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="608" column="21" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="230" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1af0f16c9b450bdd13a421d282e58a09fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setPreambleLength</definition>
+        <argsstring>(uint16_t bytes)</argsstring>
+        <name>setPreambleLength</name>
+        <qualifiedname>RH_RF95::setPreambleLength</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the length of the preamble in bytes. Caution: this should be set to the same value on all nodes in your network. Default is 8. Sets the message preamble length in RH_RF95_REG_??_PREAMBLE_?SB <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Preamble length in bytes. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="616" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="389" bodyend="393"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1af910c0670d3f3cc158355f20a2361485" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RH_RF95::maxMessageLength</definition>
+        <argsstring>()</argsstring>
+        <name>maxMessageLength</name>
+        <qualifiedname>RH_RF95::maxMessageLength</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a267459de4eb3032c5efb8b220af7d164">maxMessageLength</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the maximum message length available in this Driver. <simplesect kind="return"><para>The maximum legal message length </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="621" column="21" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="270" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a854c2eaa2f3cf9583453ff09f15e1099" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::setFrequency</definition>
+        <argsstring>(float centre)</argsstring>
+        <name>setFrequency</name>
+        <qualifiedname>RH_RF95::setFrequency</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>centre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the transmitter and receiver centre frequency. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">centre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frequency in MHz. 137.0 to 1020.0. Caution: RFM95/96/97/98 comes in several different frequency ranges, and setting a frequency outside that range of your radio will probably not work </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the selected frquency centre is within range </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="628" column="17" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="275" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setModeIdle</definition>
+        <argsstring>()</argsstring>
+        <name>setModeIdle</name>
+        <qualifiedname>RH_RF95::setModeIdle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If current mode is Rx or Tx changes it to Idle. If the transmitter or receiver is running, disables them. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="632" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="286" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1ade668dcd0730fef266c8d94c7e6e7085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setModeRx</definition>
+        <argsstring>()</argsstring>
+        <name>setModeRx</name>
+        <qualifiedname>RH_RF95::setModeRx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If current mode is Tx or Idle, changes it to Rx. Starts the receiver in the RF95/96/97/98. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="636" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="305" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a46330e9d7ec87255b91d0e4297cc8814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setModeTx</definition>
+        <argsstring>()</argsstring>
+        <name>setModeTx</name>
+        <qualifiedname>RH_RF95::setModeTx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If current mode is Rx or Idle, changes it to Rx. F Starts the transmitter in the RF95/96/97/98. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="640" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="315" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1ab273e242758e3cc2ed2679ef795a7196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setTxPower</definition>
+        <argsstring>(int8_t power, bool useRFO=false)</argsstring>
+        <name>setTxPower</name>
+        <qualifiedname>RH_RF95::setTxPower</qualifiedname>
+        <param>
+          <type>int8_t</type>
+          <declname>power</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useRFO</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the transmitter power output level, and configures the transmitter pin. Be a good neighbour and set the lowest power level you need. Some SX1276/77/78/79 and compatible modules (such as RFM95/96/97/98) use the PA_BOOST transmitter pin for high power output (and optionally the PA_DAC) while some (such as the Modtronix inAir4 and inAir9) use the RFO transmitter pin for lower power but higher efficiency. You must set the appropriate power level and useRFO argument for your module. Check with your module manufacturer which transmtter pin is used on your module to ensure you are setting useRFO correctly. Failure to do so will result in very low transmitter power output. Caution: legal power limits may apply in certain countries. After <ref refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" kindref="member">init()</ref>, the power will be set to 13dBm, with useRFO false (ie PA_BOOST enabled). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">power</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transmitter power level in dBm. For RFM95/96/97/98 LORA with useRFO false, valid values are from +5 to +23. For Modtronix inAir4 and inAir9 with useRFO true (ie RFO pins in use), valid values are from -1 to 14. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">useRFO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, enables the use of the RFO transmitter pins instead of the PA_BOOST pin (false). Choose the correct setting for your module. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="661" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="325" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1aa9184ab8aec1c3c54a275d08c7e85c66" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::sleep</definition>
+        <argsstring>()</argsstring>
+        <name>sleep</name>
+        <qualifiedname>RH_RF95::sleep</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a97050555cbf46ad723ad9c45d7f76a55">sleep</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the radio into low-power sleep mode. If successful, the transport will stay in sleep mode until woken by changing mode it idle, transmit or receive (eg by calling <ref refid="classRH__RF95_1ae7d3743511fdcc1b41f5f8e6b0964c1f" kindref="member">send()</ref>, <ref refid="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b" kindref="member">recv()</ref>, <ref refid="classRH__RF95_1a917a6b16ca2be2da530516220560cf43" kindref="member">available()</ref> etc) Caution: there is a time penalty as the radio takes a finite time to wake from sleep mode. <simplesect kind="return"><para>true if sleep mode was successfully entered. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="668" column="21" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="295" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a274c170acdb53f55fd45445ab7f51889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RH_RF95::RH_RF95</definition>
+        <argsstring>(uint8_t slaveSelectPin=SS, uint8_t interruptPin=2, RHGenericSPI &amp;spi=hardware_spi)</argsstring>
+        <name>RH_RF95</name>
+        <qualifiedname>RH_RF95::RH_RF95</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>slaveSelectPin</declname>
+          <defval><ref refid="RadioHead_2RadioHead_8h_1a88f7782e210e61586baf33b93240d905" kindref="member">SS</ref></defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>interruptPin</declname>
+          <defval>2</defval>
+        </param>
+        <param>
+          <type><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref> &amp;</type>
+          <declname>spi</declname>
+          <defval><ref refid="RadioHead_2RHHardwareSPI_8h_1a9d4ea215edc388eaacbc289938bb658c" kindref="member">hardware_spi</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. You can have multiple instances, but each instance must have its own interrupt and slave select pin. After constructing, you must call <ref refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" kindref="member">init()</ref> to initialise the interface and the radio module. A maximum of 3 instances can co-exist on one processor, provided there are sufficient distinct interrupt lines, one for each instance. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">slaveSelectPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Arduino pin number of the output to use to select the RH_RF22 before accessing it. Defaults to the normal SS pin for your Arduino (D10 for Diecimila, Uno etc, D53 for Mega, D10 for Maple) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">interruptPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The interrupt Pin number that is connected to the RFM DIO0 interrupt line. Defaults to pin 2, as required by Anarduino MinWirelessLoRa module. Caution: You must specify an interrupt capable pin. On many Arduino boards, there are limitations as to which pins may be used as interrupts. On Leonardo pins 0, 1, 2 or 3. On Mega2560 pins 2, 3, 18, 19, 20, 21. On Due and Teensy, any digital pin. On Arduino Zero from arduino.cc, any digital pin other than 4. On Arduino M0 Pro from arduino.org, any digital pin other than 2. On other Arduinos pins 2 or 3. See <ulink url="http://arduino.cc/en/Reference/attachInterrupt">http://arduino.cc/en/Reference/attachInterrupt</ulink> for more details. On Chipkit Uno32, pins 38, 2, 7, 8, 35. On other boards, any digital pin may be used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the SPI interface object to use. Defaults to the standard Arduino hardware SPI interface </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="558" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1ad889cb9f7df600336789b5a5551eb807" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RH_RF95::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>RH_RF95::init</qualifiedname>
+        <reimplements refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557">init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the Driver transport hardware and software. Make sure the Driver is properly configured before calling <ref refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" kindref="member">init()</ref>. <simplesect kind="return"><para>true if initialisation succeeded. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="563" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1af82a441a5946b538f60f31e727009750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::printRegisters</definition>
+        <argsstring>()</argsstring>
+        <name>printRegisters</name>
+        <qualifiedname>RH_RF95::printRegisters</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints the value of all chip registers to the Serial device if RH_HAVE_SERIAL is defined for the current platform For debugging purposes only. <simplesect kind="return"><para>true on success </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="569" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1aa191d9634325354102394b856c47b5ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setModemRegisters</definition>
+        <argsstring>(const ModemConfig *config)</argsstring>
+        <name>setModemRegisters</name>
+        <qualifiedname>RH_RF95::setModemRegisters</qualifiedname>
+        <param>
+          <type>const <ref refid="structRH__RF95_1_1ModemConfig" kindref="compound">ModemConfig</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets all the registered required to configure the data modem in the RF95/96/97/98, including the bandwidth, spreading factor etc. You can use this to configure the modem with custom configurations if none of the canned configurations in ModemConfigChoice suit you. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A <ref refid="structRH__RF95_1_1ModemConfig" kindref="compound">ModemConfig</ref> structure containing values for the modem configuration registers. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="575" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1af6f6131a36c2a0f84a5883a6ec7acfec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::setModemConfig</definition>
+        <argsstring>(ModemConfigChoice index)</argsstring>
+        <name>setModemConfig</name>
+        <qualifiedname>RH_RF95::setModemConfig</qualifiedname>
+        <param>
+          <type><ref refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3" kindref="member">ModemConfigChoice</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Select one of the predefined modem configurations. If you need a modem configuration not provided here, use <ref refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" kindref="member">setModemRegisters()</ref> with your own <ref refid="structRH__RF95_1_1ModemConfig" kindref="compound">ModemConfig</ref>. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The configuration choice. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if index is a valid choice. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="581" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1ad7c542975ac869bea5757cb6fb57eaf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RH_RF95::available</definition>
+        <argsstring>()</argsstring>
+        <name>available</name>
+        <qualifiedname>RH_RF95::available</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888">available</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests whether a new message is available from the Driver. On most drivers, this will also put the Driver into RHModeRx mode until a message is actually received by the transport, when it wil be returned to RHModeIdle. This can be called multiple times in a timeout loop <simplesect kind="return"><para>true if a new, complete, error-free uncollected message is available to be retreived by <ref refid="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b" kindref="member">recv()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="589" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a1fbaae6da5f98975c9c1e7bb00660271" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RH_RF95::recv</definition>
+        <argsstring>(uint8_t *buf, uint8_t *len)</argsstring>
+        <name>recv</name>
+        <qualifiedname>RH_RF95::recv</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a">recv</reimplements>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns the receiver on if it not already on. If there is a valid message available, copy it to buf and return true else return false. If a message is copied, *len is set to the length (Caution, 0 length messages are permitted). You should be sure to call this function frequently enough to not miss any messages It is recommended that you call it in your main loop. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location to copy the received message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to available space in buf. Set to the actual number of octets copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a valid message was copied to buf </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="600" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a813b52c7327355a05ff75a8248d9824b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RH_RF95::send</definition>
+        <argsstring>(const uint8_t *data, uint8_t len)</argsstring>
+        <name>send</name>
+        <qualifiedname>RH_RF95::send</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee">send</reimplements>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits until any previous transmit packet is finished being transmitted with <ref refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" kindref="member">waitPacketSent()</ref>. Then loads a message into the transmitter and starts the transmitter. Note that a message length of 0 is permitted. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes of data to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the message length was valid and it was correctly queued for transmit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="608" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1af0f16c9b450bdd13a421d282e58a09fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setPreambleLength</definition>
+        <argsstring>(uint16_t bytes)</argsstring>
+        <name>setPreambleLength</name>
+        <qualifiedname>RH_RF95::setPreambleLength</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the length of the preamble in bytes. Caution: this should be set to the same value on all nodes in your network. Default is 8. Sets the message preamble length in RH_RF95_REG_??_PREAMBLE_?SB <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Preamble length in bytes. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="616" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a478a0fc3aa7d59166f2f75c1d809524f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t RH_RF95::maxMessageLength</definition>
+        <argsstring>()</argsstring>
+        <name>maxMessageLength</name>
+        <qualifiedname>RH_RF95::maxMessageLength</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a267459de4eb3032c5efb8b220af7d164">maxMessageLength</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the maximum message length available in this Driver. <simplesect kind="return"><para>The maximum legal message length </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="621" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a854c2eaa2f3cf9583453ff09f15e1099" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RH_RF95::setFrequency</definition>
+        <argsstring>(float centre)</argsstring>
+        <name>setFrequency</name>
+        <qualifiedname>RH_RF95::setFrequency</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>centre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the transmitter and receiver centre frequency. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">centre</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frequency in MHz. 137.0 to 1020.0. Caution: RFM95/96/97/98 comes in several different frequency ranges, and setting a frequency outside that range of your radio will probably not work </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the selected frquency centre is within range </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="628" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setModeIdle</definition>
+        <argsstring>()</argsstring>
+        <name>setModeIdle</name>
+        <qualifiedname>RH_RF95::setModeIdle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If current mode is Rx or Tx changes it to Idle. If the transmitter or receiver is running, disables them. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="632" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1ade668dcd0730fef266c8d94c7e6e7085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setModeRx</definition>
+        <argsstring>()</argsstring>
+        <name>setModeRx</name>
+        <qualifiedname>RH_RF95::setModeRx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If current mode is Tx or Idle, changes it to Rx. Starts the receiver in the RF95/96/97/98. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="636" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a46330e9d7ec87255b91d0e4297cc8814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setModeTx</definition>
+        <argsstring>()</argsstring>
+        <name>setModeTx</name>
+        <qualifiedname>RH_RF95::setModeTx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If current mode is Rx or Idle, changes it to Rx. F Starts the transmitter in the RF95/96/97/98. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="640" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1ab273e242758e3cc2ed2679ef795a7196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::setTxPower</definition>
+        <argsstring>(int8_t power, bool useRFO=false)</argsstring>
+        <name>setTxPower</name>
+        <qualifiedname>RH_RF95::setTxPower</qualifiedname>
+        <param>
+          <type>int8_t</type>
+          <declname>power</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>useRFO</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the transmitter power output level, and configures the transmitter pin. Be a good neighbour and set the lowest power level you need. Some SX1276/77/78/79 and compatible modules (such as RFM95/96/97/98) use the PA_BOOST transmitter pin for high power output (and optionally the PA_DAC) while some (such as the Modtronix inAir4 and inAir9) use the RFO transmitter pin for lower power but higher efficiency. You must set the appropriate power level and useRFO argument for your module. Check with your module manufacturer which transmtter pin is used on your module to ensure you are setting useRFO correctly. Failure to do so will result in very low transmitter power output. Caution: legal power limits may apply in certain countries. After <ref refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" kindref="member">init()</ref>, the power will be set to 13dBm, with useRFO false (ie PA_BOOST enabled). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">power</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Transmitter power level in dBm. For RFM95/96/97/98 LORA with useRFO false, valid values are from +5 to +23. For Modtronix inAir4 and inAir9 with useRFO true (ie RFO pins in use), valid values are from -1 to 14. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">useRFO</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, enables the use of the RFO transmitter pins instead of the PA_BOOST pin (false). Choose the correct setting for your module. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="661" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a71f256a7d3219addc06f46b801a1c3b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RH_RF95::sleep</definition>
+        <argsstring>()</argsstring>
+        <name>sleep</name>
+        <qualifiedname>RH_RF95::sleep</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a97050555cbf46ad723ad9c45d7f76a55">sleep</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the radio into low-power sleep mode. If successful, the transport will stay in sleep mode until woken by changing mode it idle, transmit or receive (eg by calling <ref refid="classRH__RF95_1ae7d3743511fdcc1b41f5f8e6b0964c1f" kindref="member">send()</ref>, <ref refid="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b" kindref="member">recv()</ref>, <ref refid="classRH__RF95_1a917a6b16ca2be2da530516220560cf43" kindref="member">available()</ref> etc) Caution: there is a time penalty as the radio takes a finite time to wake from sleep mode. <simplesect kind="return"><para>true if sleep mode was successfully entered. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="668" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classRH__RF95_1a18191ee8063c7beec84671abb184aef4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::handleInterrupt</definition>
+        <argsstring>()</argsstring>
+        <name>handleInterrupt</name>
+        <qualifiedname>RH_RF95::handleInterrupt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a low level function to handle the interrupts for one instance of <ref refid="classRH__RF95" kindref="compound">RH_RF95</ref>. Called automatically by isr*() Should not need to be called by user code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="674" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="121" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a09086214734986feeb1e647a7820b615" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::validateRxBuf</definition>
+        <argsstring>()</argsstring>
+        <name>validateRxBuf</name>
+        <qualifiedname>RH_RF95::validateRxBuf</qualifiedname>
+        <briefdescription>
+<para>Examine the revceive buffer to determine whether the message is for this node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="677" column="10" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="179" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a1af385a295c834e88610dfcfb4112fb2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::clearRxBuf</definition>
+        <argsstring>()</argsstring>
+        <name>clearRxBuf</name>
+        <qualifiedname>RH_RF95::clearRxBuf</qualifiedname>
+        <briefdescription>
+<para>Clear our local receive buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="680" column="10" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="205" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a18191ee8063c7beec84671abb184aef4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::handleInterrupt</definition>
+        <argsstring>()</argsstring>
+        <name>handleInterrupt</name>
+        <qualifiedname>RH_RF95::handleInterrupt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a low level function to handle the interrupts for one instance of <ref refid="classRH__RF95" kindref="compound">RH_RF95</ref>. Called automatically by isr*() Should not need to be called by user code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="674" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a09086214734986feeb1e647a7820b615" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::validateRxBuf</definition>
+        <argsstring>()</argsstring>
+        <name>validateRxBuf</name>
+        <qualifiedname>RH_RF95::validateRxBuf</qualifiedname>
+        <briefdescription>
+<para>Examine the revceive buffer to determine whether the message is for this node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="677" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a1af385a295c834e88610dfcfb4112fb2" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::clearRxBuf</definition>
+        <argsstring>()</argsstring>
+        <name>clearRxBuf</name>
+        <qualifiedname>RH_RF95::clearRxBuf</qualifiedname>
+        <briefdescription>
+<para>Clear our local receive buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="680" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classRH__RF95_1a7d1d574c24de1f7d4971fa06cc166c7f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::isr0</definition>
+        <argsstring>()</argsstring>
+        <name>isr0</name>
+        <qualifiedname>RH_RF95::isr0</qualifiedname>
+        <briefdescription>
+<para>Low level interrupt service routine for device connected to interrupt 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="684" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="162" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1ae351a13bb0d022a0dbf6d55b9631195e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::isr1</definition>
+        <argsstring>()</argsstring>
+        <name>isr1</name>
+        <qualifiedname>RH_RF95::isr1</qualifiedname>
+        <briefdescription>
+<para>Low level interrupt service routine for device connected to interrupt 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="687" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="167" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a2adc0c6029b10de04bda31de199e98ed" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RH_RF95::isr2</definition>
+        <argsstring>()</argsstring>
+        <name>isr2</name>
+        <qualifiedname>RH_RF95::isr2</qualifiedname>
+        <briefdescription>
+<para>Low level interrupt service routine for device connected to interrupt 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="690" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.cpp" bodystart="172" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a18bcfbbbc9372f4668e284576185a5c8" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void RH_RF95::isr0</definition>
+        <argsstring>()</argsstring>
+        <name>isr0</name>
+        <qualifiedname>RH_RF95::isr0</qualifiedname>
+        <briefdescription>
+<para>Low level interrupt service routine for device connected to interrupt 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="684" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a9accf7d7aac5bff7b81395429a49cfc7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void RH_RF95::isr1</definition>
+        <argsstring>()</argsstring>
+        <name>isr1</name>
+        <qualifiedname>RH_RF95::isr1</qualifiedname>
+        <briefdescription>
+<para>Low level interrupt service routine for device connected to interrupt 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="687" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classRH__RF95_1a503a173684657634ac8c83dca9bebd07" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void RH_RF95::isr2</definition>
+        <argsstring>()</argsstring>
+        <name>isr2</name>
+        <qualifiedname>RH_RF95::isr2</qualifiedname>
+        <briefdescription>
+<para>Low level interrupt service routine for device connected to interrupt 1. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="690" column="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Driver to send and receive unaddressed, unreliable datagrams via a LoRa capable radio transceiver. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>For Semtech SX1276/77/78/79 and HopeRF RF95/96/97/98 and other similar LoRa capable radios. Based on <ulink url="http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf">http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf</ulink> and <ulink url="http://www.hoperf.cn/upload/rfchip/RF96_97_98.pdf">http://www.hoperf.cn/upload/rfchip/RF96_97_98.pdf</ulink> and <ulink url="http://www.semtech.com/images/datasheet/LoraDesignGuide_STD.pdf">http://www.semtech.com/images/datasheet/LoraDesignGuide_STD.pdf</ulink> and <ulink url="http://www.semtech.com/images/datasheet/sx1276.pdf">http://www.semtech.com/images/datasheet/sx1276.pdf</ulink> and <ulink url="http://www.semtech.com/images/datasheet/sx1276_77_78_79.pdf">http://www.semtech.com/images/datasheet/sx1276_77_78_79.pdf</ulink> FSK/GFSK/OOK modes are not (yet) supported.</para>
+<para>Works with<itemizedlist>
+<listitem><para>the excellent MiniWirelessLoRa from Anarduino <ulink url="http://www.anarduino.com/miniwireless">http://www.anarduino.com/miniwireless</ulink></para>
+</listitem><listitem><para>The excellent Modtronix inAir4 <ulink url="http://modtronix.com/inair4.html">http://modtronix.com/inair4.html</ulink> and inAir9 modules <ulink url="http://modtronix.com/inair9.html">http://modtronix.com/inair9.html</ulink>.</para>
+</listitem><listitem><para>the excellent Rocket Scream Mini Ultra Pro with the RFM95W <ulink url="http://www.rocketscream.com/blog/product/mini-ultra-pro-with-radio/">http://www.rocketscream.com/blog/product/mini-ultra-pro-with-radio/</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="par"><title>Overview</title><para></para>
+</simplesect>
+This class provides basic functions for sending and receiving unaddressed, unreliable datagrams of arbitrary length to 251 octets per packet.</para>
+<para>Manager classes may use this class to implement reliable, addressed datagrams and streams, mesh routers, repeaters, translators etc.</para>
+<para>Naturally, for any 2 radios to communicate that must be configured to use the same frequency and modulation scheme.</para>
+<para>This Driver provides an object-oriented interface for sending and receiving data messages with Hope-RF RFM95/96/97/98(W), Semtech SX1276/77/78/79 and compatible radio modules in LoRa mode.</para>
+<para>The Hope-RF (<ulink url="http://www.hoperf.com">http://www.hoperf.com</ulink>) RFM95/96/97/98(W) and Semtech SX1276/77/78/79 is a low-cost ISM transceiver chip. It supports FSK, GFSK, OOK over a wide range of frequencies and programmable data rates, and it also supports the proprietary LoRA (Long Range) mode, which is the only mode supported in this RadioHead driver.</para>
+<para>This Driver provides functions for sending and receiving messages of up to 251 octets on any frequency supported by the radio, in a range of predefined Bandwidths, Spreading Factors and Coding Rates. Frequency can be set with 61Hz precision to any frequency from 240.0MHz to 960.0MHz. Caution: most modules only support a more limited range of frequencies due to antenna tuning.</para>
+<para>Up to 2 modules can be connected to an Arduino (3 on a Mega), permitting the construction of translators and frequency changers, etc.</para>
+<para>Support for other features such as transmitter power control etc is also provided.</para>
+<para>Tested on MinWirelessLoRa with arduino-1.0.5 on OpenSuSE 13.1. Also tested with Teensy3.1, Modtronix inAir4 and Arduino 1.6.5 on OpenSuSE 13.1</para>
+<para><simplesect kind="par"><title>Packet Format</title><para></para>
+</simplesect>
+All messages sent and received by this <ref refid="classRH__RF95" kindref="compound">RH_RF95</ref> Driver conform to this packet format:</para>
+<para><itemizedlist>
+<listitem><para>LoRa mode:</para>
+</listitem><listitem><para>8 symbol PREAMBLE</para>
+</listitem><listitem><para>Explicit header with header CRC (handled internally by the radio)</para>
+</listitem><listitem><para>4 octets HEADER: (TO, FROM, ID, FLAGS)</para>
+</listitem><listitem><para>0 to 251 octets DATA</para>
+</listitem><listitem><para>CRC (handled internally by the radio)</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="par"><title>Connecting RFM95/96/97/98 and Semtech SX1276/77/78/79 to Arduino</title><para></para>
+</simplesect>
+We tested with Anarduino MiniWirelessLoRA, which is an Arduino Duemilanove compatible with a RFM96W module on-board. Therefore it needs no connections other than the USB programming connection and an antenna to make it work.</para>
+<para>If you have a bare RFM95/96/97/98 that you want to connect to an Arduino, you might use these connections (untested): CAUTION: you must use a 3.3V type Arduino, otherwise you will also need voltage level shifters between the Arduino and the RFM95. CAUTION, you must also ensure you connect an antenna.</para>
+<para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Arduino<sp/><sp/><sp/><sp/><sp/><sp/>RFM95/96/97/98</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GND----------GND<sp/><sp/><sp/>(ground<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3V3----------3.3V<sp/><sp/>(3.3V<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="afsk_8cpp_1a66754ba1cb64cfc1fd62c9f0dfbe0108" kindref="member">interrupt</ref><sp/>0<sp/>pin<sp/>D2-----------DIO0<sp/><sp/>(<ref refid="afsk_8cpp_1a66754ba1cb64cfc1fd62c9f0dfbe0108" kindref="member">interrupt</ref><sp/>request<sp/>out)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a88f7782e210e61586baf33b93240d905" kindref="member">SS</ref><sp/>pin<sp/>D10----------NSS<sp/><sp/><sp/>(<ref refid="SD__card_8hpp_1a50cc348a07c7843a4024743a09bed4ac" kindref="member">CS</ref><sp/>chip<sp/>select<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCK<sp/>pin<sp/>D13----------SCK<sp/><sp/><sp/>(SPI<sp/>clock<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MOSI<sp/>pin<sp/>D11----------MOSI<sp/><sp/>(SPI<sp/>Data<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MISO<sp/>pin<sp/>D12----------MISO<sp/><sp/>(SPI<sp/>Data<sp/>out)</highlight></codeline>
+</programlisting> With these connections, you can then use the default constructor <ref refid="classRH__RF95_1a274c170acdb53f55fd45445ab7f51889" kindref="member">RH_RF95()</ref>. You can override the default settings for the SS pin and the interrupt in the <ref refid="classRH__RF95" kindref="compound">RH_RF95</ref> constructor if you wish to connect the slave select SS to other than the normal one for your Arduino (D10 for Diecimila, Uno etc and D53 for Mega) or the interrupt request to other than pin D2 (Caution, different processors have different constraints as to the pins available for interrupts).</para>
+<para>You can connect a Modtronix inAir4 or inAir9 directly to a 3.3V part such as a Teensy 3.1 like this (tested). <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Teensy<sp/><sp/><sp/><sp/><sp/><sp/>inAir4<sp/>inAir9</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GND----------GND<sp/><sp/><sp/>(ground<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3V3----------3.3V<sp/><sp/>(3.3V<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="afsk_8cpp_1a66754ba1cb64cfc1fd62c9f0dfbe0108" kindref="member">interrupt</ref><sp/>0<sp/>pin<sp/>D2-----------D00<sp/><sp/><sp/>(<ref refid="afsk_8cpp_1a66754ba1cb64cfc1fd62c9f0dfbe0108" kindref="member">interrupt</ref><sp/>request<sp/>out)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a88f7782e210e61586baf33b93240d905" kindref="member">SS</ref><sp/>pin<sp/>D10----------<ref refid="SD__card_8hpp_1a50cc348a07c7843a4024743a09bed4ac" kindref="member">CS</ref><sp/><sp/><sp/><sp/>(<ref refid="SD__card_8hpp_1a50cc348a07c7843a4024743a09bed4ac" kindref="member">CS</ref><sp/>chip<sp/>select<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCK<sp/>pin<sp/>D13----------CK<sp/><sp/><sp/><sp/>(SPI<sp/>clock<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MOSI<sp/>pin<sp/>D11----------SI<sp/><sp/><sp/><sp/>(SPI<sp/>Data<sp/>in)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MISO<sp/>pin<sp/>D12----------SO<sp/><sp/><sp/><sp/>(SPI<sp/>Data<sp/>out)</highlight></codeline>
+</programlisting> With these connections, you can then use the default constructor <ref refid="classRH__RF95_1a274c170acdb53f55fd45445ab7f51889" kindref="member">RH_RF95()</ref>. you must also set the transmitter power with useRFO: driver.setTxPower(13, true);</para>
+<para>Note that if you are using Modtronix inAir4 or inAir9,or any other module which uses the transmitter RFO pins and not the PA_BOOST pins that you must configure the power transmitter power for -1 to 14 dBm and with useRFO true. Failure to do that will result in extremely low transmit powers.</para>
+<para>If you have an Arduino M0 Pro from arduino.org, you should note that you cannot use Pin 2 for the interrupt line (Pin 2 is for the NMI only). The same comments apply to Pin 4 on Arduino Zero from arduino.cc. Instead you can use any other pin (we use Pin 3) and initialise RH_RF69 like this: <programlisting><codeline><highlight class="comment">//<sp/>Slave<sp/>Select<sp/>is<sp/>pin<sp/>10,<sp/>interrupt<sp/>is<sp/>Pin<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classRH__RF95" kindref="compound">RH_RF95</ref><sp/>driver(10,<sp/>3);</highlight></codeline>
+</programlisting></para>
+<para>If you have a Rocket Scream Mini Ultra Pro with the RFM95W:<itemizedlist>
+<listitem><para>Ensure you have Arduino SAMD board support 1.6.5 or later in Arduino IDE 1.6.8 or later.</para>
+</listitem><listitem><para>The radio SS is hardwired to pin D5 and the DIO0 interrupt to pin D2, so you need to initialise the radio like this: <programlisting><codeline><highlight class="normal"><ref refid="classRH__RF95" kindref="compound">RH_RF95</ref><sp/>driver(5,<sp/>2);</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>The name of the serial port on that board is &apos;SerialUSB&apos;, not &apos;Serial&apos;, so this may be helpful at the top of our sample sketches: <programlisting><codeline><highlight class="preprocessor">#define<sp/>Serial<sp/>SerialUSB</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>You also need this in setup before radio initialisation <linebreak/>
+ <programlisting><codeline><highlight class="comment">//<sp/>Ensure<sp/>serial<sp/>flash<sp/>is<sp/>not<sp/>interfering<sp/>with<sp/>radio<sp/>communication<sp/>on<sp/>SPI<sp/>bus</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/>pinMode(4,<sp/>OUTPUT);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>digitalWrite(4,<sp/>HIGH);</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>and if you have a 915MHz part, you need this after driver/manager intitalisation: <programlisting><codeline><highlight class="normal">rf95.setFrequency(915.0);</highlight></codeline>
+</programlisting> which adds up to modifying sample sketches something like: <programlisting><codeline><highlight class="preprocessor">#include<sp/>&lt;SPI.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;RH_RF95.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classRH__RF95" kindref="compound">RH_RF95</ref><sp/>rf95(5,<sp/>2);<sp/></highlight><highlight class="comment">//<sp/>Rocket<sp/>Scream<sp/>Mini<sp/>Ultra<sp/>Pro<sp/>with<sp/>the<sp/>RFM95W</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Serial<sp/>SerialUSB</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setup()<sp/></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Ensure<sp/>serial<sp/>flash<sp/>is<sp/>not<sp/>interfering<sp/>with<sp/>radio<sp/>communication<sp/>on<sp/>SPI<sp/>bus</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>pinMode(4,<sp/>OUTPUT);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>digitalWrite(4,<sp/>HIGH);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Serial.begin(9600);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!Serial)<sp/>;<sp/></highlight><highlight class="comment">//<sp/>Wait<sp/>for<sp/>serial<sp/>port<sp/>to<sp/>be<sp/>available</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!rf95.init())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;init<sp/>failed&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>rf95.setFrequency(915.0);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<para>It is possible to have 2 or more radios connected to one Arduino, provided each radio has its own SS and interrupt line (SCK, SDI and SDO are common to all radios)</para>
+<para>Caution: on some Arduinos such as the Mega 2560, if you set the slave select pin to be other than the usual SS pin (D53 on Mega 2560), you may need to set the usual SS pin to be an output to force the Arduino into SPI master mode.</para>
+<para>Caution: Power supply requirements of the RFM module may be relevant in some circumstances: RFM95/96/97/98 modules are capable of pulling 120mA+ at full power, where Arduino&apos;s 3.3V line can give 50mA. You may need to make provision for alternate power supply for the RFM module, especially if you wish to use full transmit power, and/or you have other shields demanding power. Inadequate power for the RFM is likely to cause symptoms such as:<itemizedlist>
+<listitem><para>reset&apos;s/bootups terminate with &quot;init failed&quot; messages</para>
+</listitem><listitem><para>random termination of communication after 5-30 packets sent/received</para>
+</listitem><listitem><para>&quot;fake ok&quot; state, where initialization passes fluently, but communication doesn&apos;t happen</para>
+</listitem><listitem><para>shields hang Arduino boards, especially during the flashing</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="par"><title>Interrupts</title><para></para>
+</simplesect>
+The <ref refid="classRH__RF95" kindref="compound">RH_RF95</ref> driver uses interrupts to react to events in the RFM module, such as the reception of a new packet, or the completion of transmission of a packet. The <ref refid="classRH__RF95" kindref="compound">RH_RF95</ref> driver interrupt service routine reads status from and writes data to the the RFM module via the SPI interface. It is very important therefore, that if you are using the <ref refid="classRH__RF95" kindref="compound">RH_RF95</ref> driver with another SPI based deviced, that you disable interrupts while you transfer data to and from that other device. Use cli() to disable interrupts and sei() to reenable them.</para>
+<para><simplesect kind="par"><title>Memory</title><para></para>
+</simplesect>
+The <ref refid="classRH__RF95" kindref="compound">RH_RF95</ref> driver requires non-trivial amounts of memory. The sample programs all compile to about 8kbytes each, which will fit in the flash proram memory of most Arduinos. However, the RAM requirements are more critical. Therefore, you should be vary sparing with RAM use in programs that use the <ref refid="classRH__RF95" kindref="compound">RH_RF95</ref> driver.</para>
+<para>It is often hard to accurately identify when you are hitting RAM limits on Arduino. The symptoms can include:<itemizedlist>
+<listitem><para>Mysterious crashes and restarts</para>
+</listitem><listitem><para>Changes in behaviour when seemingly unrelated changes are made (such as adding print() statements)</para>
+</listitem><listitem><para>Hanging</para>
+</listitem><listitem><para>Output from Serial.print() not appearing</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="par"><title>Range</title><para></para>
+</simplesect>
+We have made some simple range tests under the following conditions:<itemizedlist>
+<listitem><para>rf95_client base station connected to a VHF discone antenna at 8m height above ground</para>
+</listitem><listitem><para>rf95_server mobile connected to 17.3cm 1/4 wavelength antenna at 1m height, no ground plane.</para>
+</listitem><listitem><para>Both configured for 13dBm, 434MHz, Bw = 125 kHz, Cr = 4/8, Sf = 4096chips/symbol, CRC on. Slow+long range</para>
+</listitem><listitem><para>Minimum reported RSSI seen for successful comms was about -91</para>
+</listitem><listitem><para>Range over flat ground through heavy trees and vegetation approx 2km.</para>
+</listitem><listitem><para>At 20dBm (100mW) otherwise identical conditions approx 3km.</para>
+</listitem><listitem><para>At 20dBm, along salt water flat sandy beach, 3.2km.</para>
+</listitem></itemizedlist>
+</para>
+<para>It should be noted that at this data rate, a 12 octet message takes 2 seconds to transmit.</para>
+<para>At 20dBm (100mW) with Bw = 125 kHz, Cr = 4/5, Sf = 128chips/symbol, CRC on. (Default medium range) in the conditions described above.<itemizedlist>
+<listitem><para>Range over flat ground through heavy trees and vegetation approx 2km.</para>
+</listitem></itemizedlist>
+</para>
+<para><simplesect kind="par"><title>Transmitter Power</title><para></para>
+</simplesect>
+You can control the transmitter power on the RF transceiver with the <ref refid="classRH__RF95_1ab273e242758e3cc2ed2679ef795a7196" kindref="member">RH_RF95::setTxPower()</ref> function. The argument can be any of +5 to +23 (for modules that use PA_BOOST) -1 to +14 (for modules that use RFO transmitter pin) The default is 13. Eg: <programlisting><codeline><highlight class="normal">driver.setTxPower(10);<sp/></highlight><highlight class="comment">//<sp/>use<sp/>PA_BOOST<sp/>transmitter<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">driver.setTxPower(10,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>use<sp/>PA_RFO<sp/>pin<sp/>transmitter<sp/>pin</highlight></codeline>
+</programlisting></para>
+<para>We have made some actual power measurements against programmed power for Anarduino MiniWirelessLoRa (which has RFM96W-433Mhz installed)<itemizedlist>
+<listitem><para>MiniWirelessLoRa RFM96W-433Mhz, USB power</para>
+</listitem><listitem><para>30cm RG316 soldered direct to RFM96W module ANT and GND</para>
+</listitem><listitem><para>SMA connector</para>
+</listitem><listitem><para>12db attenuator</para>
+</listitem><listitem><para>SMA connector</para>
+</listitem><listitem><para>MiniKits AD8307 HF/VHF Power Head (calibrated against Rohde&amp;Schwartz 806.2020 test set)</para>
+</listitem><listitem><para>Tektronix TDS220 scope to measure the Vout from power head <programlisting><codeline><highlight class="normal">Program<sp/>power<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Measured<sp/>Power</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>dBm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dBm</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>11</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>13<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>15<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>15</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>17<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>19<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>18</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>20<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>20<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>21<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>21<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>22<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>22<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>23<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>23<sp/></highlight></codeline>
+</programlisting></para>
+</listitem></itemizedlist>
+</para>
+<para>We have also measured the actual power output from a Modtronix inAir4 <ulink url="http://modtronix.com/inair4.html">http://modtronix.com/inair4.html</ulink> connected to a Teensy 3.1: Teensy 3.1 this is a 3.3V part, connected directly to: Modtronix inAir4 with SMA antenna connector, connected as above: 10cm SMA-SMA cable<itemizedlist>
+<listitem><para>MiniKits AD8307 HF/VHF Power Head (calibrated against Rohde&amp;Schwartz 806.2020 test set)</para>
+</listitem><listitem><para>Tektronix TDS220 scope to measure the Vout from power head <programlisting><codeline><highlight class="normal">Program<sp/>power<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Measured<sp/>Power</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>dBm<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dBm</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>-1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>10</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>11<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>14.2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>13<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>15</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>14<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>16</highlight></codeline>
+</programlisting> (Caution: we dont claim laboratory accuracy for these power measurements) You would not expect to get anywhere near these powers to air with a simple 1/4 wavelength wire antenna. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>RHGenericDriver</label>
+        <link refid="classRHGenericDriver"/>
+      </node>
+      <node id="2">
+        <label>RHSPIDriver</label>
+        <link refid="classRHSPIDriver"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>RH_RF95</label>
+        <link refid="classRH__RF95"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>RHGenericDriver</label>
+        <link refid="classRHGenericDriver"/>
+      </node>
+      <node id="4">
+        <label>RHGenericSPI</label>
+        <link refid="classRHGenericSPI"/>
+      </node>
+      <node id="2">
+        <label>RHSPIDriver</label>
+        <link refid="classRHSPIDriver"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>_spi</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>RH_RF95</label>
+        <link refid="classRH__RF95"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>_deviceForInterrupt</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" line="504" column="1" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RH_RF95.h" bodystart="505" bodyend="713"/>
+    <listofallmembers>
+      <member refid="classRH__RF95_1addc6c7d4b752ee8f35595ed35161908f" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>_buf</name></member>
+      <member refid="classRH__RF95_1aa553f8428e9528dc43a78a983b379110" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>_bufLen</name></member>
+      <member refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>_deviceForInterrupt</name></member>
+      <member refid="classRH__RF95_1a2ea96ae4f1d6e510f0b527c85fa5b629" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>_interruptCount</name></member>
+      <member refid="classRH__RF95_1a9f43cda8dd8d5edc5508937393dfce13" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>_interruptPin</name></member>
+      <member refid="classRHGenericDriver_1ae75ce1fa0448733a6e058f4c7a1ba0a7" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_lastRssi</name></member>
+      <member refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_mode</name></member>
+      <member refid="classRH__RF95_1a358c2394e5b1e52aa15adbff92b3e229" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>_myInterruptIndex</name></member>
+      <member refid="classRHGenericDriver_1a2d94c93203714ed3dd9a7434101683e9" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_promiscuous</name></member>
+      <member refid="classRHGenericDriver_1a3bafd8dc638309a473367c4ff8e59c0e" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_rxBad</name></member>
+      <member refid="classRH__RF95_1a03d4a80e90eb918841c2e63d79536f5d" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>_rxBufValid</name></member>
+      <member refid="classRHGenericDriver_1abf09ee8b0cc1bf2b64dc0d963895ff71" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_rxGood</name></member>
+      <member refid="classRHGenericDriver_1a5fd0c3bbc3cfe199924a9e1cb909f5fd" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_rxHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a7283cfec4e7c1ecf074307534592fd8f" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_rxHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1a3155557c35198acdde0ecdf58a201b19" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_rxHeaderId</name></member>
+      <member refid="classRHGenericDriver_1abff3740bc072a2d435194a7860b2bfe3" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_rxHeaderTo</name></member>
+      <member refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_slaveSelectPin</name></member>
+      <member refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_spi</name></member>
+      <member refid="classRHGenericDriver_1a6d2e9824e29c9d5e9ad28682e53ea974" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_thisAddress</name></member>
+      <member refid="classRHGenericDriver_1a5f71653ad58e35ddca7fe3e052674ca2" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_txGood</name></member>
+      <member refid="classRHGenericDriver_1abf4db9bddfee361cc44fbf4bd22202bc" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_txHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a2c7cdccccf1b17c73ef95dca6d3075f9" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_txHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1ad0eafb5a8316b90ad8cd9d42234517da" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_txHeaderId</name></member>
+      <member refid="classRHGenericDriver_1a759debcdbdb837cea024f777020203e5" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>_txHeaderTo</name></member>
+      <member refid="classRH__RF95_1a917a6b16ca2be2da530516220560cf43" prot="public" virt="virtual"><scope>RH_RF95</scope><name>available</name></member>
+      <member refid="classRH__RF95_1ad7c542975ac869bea5757cb6fb57eaf5" prot="public" virt="virtual"><scope>RH_RF95</scope><name>available</name></member>
+      <member refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a8b6aeb4bf0acd379adb2cf223110c8f7" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>Bw125Cr45Sf128</name></member>
+      <member refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a9ea440d11a8470919209bd78cb7a4515" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>Bw125Cr48Sf4096</name></member>
+      <member refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a7ca0f5e5c76cd60072772bcff7fea05f" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>Bw31_25Cr48Sf512</name></member>
+      <member refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a83a61975fcfb1f7e6797fbecca5f1125" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>Bw500Cr45Sf128</name></member>
+      <member refid="classRH__RF95_1a1af385a295c834e88610dfcfb4112fb2" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>clearRxBuf</name></member>
+      <member refid="classRH__RF95_1a1af385a295c834e88610dfcfb4112fb2" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>clearRxBuf</name></member>
+      <member refid="classRH__RF95_1a18191ee8063c7beec84671abb184aef4" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>handleInterrupt</name></member>
+      <member refid="classRH__RF95_1a18191ee8063c7beec84671abb184aef4" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>handleInterrupt</name></member>
+      <member refid="classRHGenericDriver_1a056fbd2df558971fe8a1653499a37c63" prot="public" virt="virtual"><scope>RH_RF95</scope><name>headerFlags</name></member>
+      <member refid="classRHGenericDriver_1a605594463c135160eea76df1f5b8ed91" prot="public" virt="virtual"><scope>RH_RF95</scope><name>headerFlags</name></member>
+      <member refid="classRHGenericDriver_1a8cf7a972186592c51c6fde034d17ab9f" prot="public" virt="virtual"><scope>RH_RF95</scope><name>headerFrom</name></member>
+      <member refid="classRHGenericDriver_1ac124ff3e195e604db33cd798592808f3" prot="public" virt="virtual"><scope>RH_RF95</scope><name>headerFrom</name></member>
+      <member refid="classRHGenericDriver_1a81548960bb29a3ac35325c74cd562f45" prot="public" virt="virtual"><scope>RH_RF95</scope><name>headerId</name></member>
+      <member refid="classRHGenericDriver_1a5e1db15be3fb414a1b4619939d50ea83" prot="public" virt="virtual"><scope>RH_RF95</scope><name>headerId</name></member>
+      <member refid="classRHGenericDriver_1a6f49c9fe68354b50988dec435fa8d086" prot="public" virt="virtual"><scope>RH_RF95</scope><name>headerTo</name></member>
+      <member refid="classRHGenericDriver_1a59767cf1ec9ca3e24b3f7b5610e93f46" prot="public" virt="virtual"><scope>RH_RF95</scope><name>headerTo</name></member>
+      <member refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" prot="public" virt="virtual"><scope>RH_RF95</scope><name>init</name></member>
+      <member refid="classRH__RF95_1ad889cb9f7df600336789b5a5551eb807" prot="public" virt="virtual"><scope>RH_RF95</scope><name>init</name></member>
+      <member refid="classRH__RF95_1a7d1d574c24de1f7d4971fa06cc166c7f" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>isr0</name></member>
+      <member refid="classRH__RF95_1a18bcfbbbc9372f4668e284576185a5c8" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>isr0</name></member>
+      <member refid="classRH__RF95_1ae351a13bb0d022a0dbf6d55b9631195e" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>isr1</name></member>
+      <member refid="classRH__RF95_1a9accf7d7aac5bff7b81395429a49cfc7" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>isr1</name></member>
+      <member refid="classRH__RF95_1a2adc0c6029b10de04bda31de199e98ed" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>isr2</name></member>
+      <member refid="classRH__RF95_1a503a173684657634ac8c83dca9bebd07" prot="private" virt="non-virtual"><scope>RH_RF95</scope><name>isr2</name></member>
+      <member refid="classRHGenericDriver_1ab04f2ca335d89f5fac1d213c0aea9da2" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>lastRssi</name></member>
+      <member refid="classRHGenericDriver_1ab04f2ca335d89f5fac1d213c0aea9da2" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>lastRssi</name></member>
+      <member refid="classRH__RF95_1af910c0670d3f3cc158355f20a2361485" prot="public" virt="virtual"><scope>RH_RF95</scope><name>maxMessageLength</name></member>
+      <member refid="classRH__RF95_1a478a0fc3aa7d59166f2f75c1d809524f" prot="public" virt="virtual"><scope>RH_RF95</scope><name>maxMessageLength</name></member>
+      <member refid="classRHGenericDriver_1a80ff7dfded27279332cf8fa6f15dce74" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>mode</name></member>
+      <member refid="classRHGenericDriver_1a2204ec4da2d31fba3a44dfd4b2002b81" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>mode</name></member>
+      <member refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>ModemConfigChoice</name></member>
+      <member refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>ModemConfigChoice</name></member>
+      <member refid="classRHGenericDriver_1a63915f6420833eb8ec61ee3b0610e34b" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>printBuffer</name></member>
+      <member refid="classRHGenericDriver_1a953b9a398838ce9061d71ff72effdb6f" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>printBuffer</name></member>
+      <member refid="classRH__RF95_1af82a441a5946b538f60f31e727009750" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>printRegisters</name></member>
+      <member refid="classRH__RF95_1af82a441a5946b538f60f31e727009750" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>printRegisters</name></member>
+      <member refid="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b" prot="public" virt="virtual"><scope>RH_RF95</scope><name>recv</name></member>
+      <member refid="classRH__RF95_1a1fbaae6da5f98975c9c1e7bb00660271" prot="public" virt="virtual"><scope>RH_RF95</scope><name>recv</name></member>
+      <member refid="classRH__RF95_1a274c170acdb53f55fd45445ab7f51889" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RH_RF95</name></member>
+      <member refid="classRH__RF95_1a274c170acdb53f55fd45445ab7f51889" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RH_RF95</name></member>
+      <member refid="classRHGenericDriver_1aacf1b301be4cc16800a62632df6fdd37" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHGenericDriver</name></member>
+      <member refid="classRHGenericDriver_1aacf1b301be4cc16800a62632df6fdd37" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHGenericDriver</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHMode</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHMode</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHModeIdle</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abf4722e2aaba29a678d754fc677d5a1d" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHModeInitialising</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHModeRx</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHModeSleep</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHModeTx</name></member>
+      <member refid="classRHSPIDriver_1a4285d2fb96b09588556bfc4f8a143f61" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHSPIDriver</name></member>
+      <member refid="classRHSPIDriver_1a4285d2fb96b09588556bfc4f8a143f61" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>RHSPIDriver</name></member>
+      <member refid="classRHGenericDriver_1a0163fb71dc8d0cd86136882886adba7f" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>rxBad</name></member>
+      <member refid="classRHGenericDriver_1a0163fb71dc8d0cd86136882886adba7f" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>rxBad</name></member>
+      <member refid="classRHGenericDriver_1a5f730e644ab1f5f529fdfa82fdb2ed69" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>rxGood</name></member>
+      <member refid="classRHGenericDriver_1a5f730e644ab1f5f529fdfa82fdb2ed69" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>rxGood</name></member>
+      <member refid="classRH__RF95_1ae7d3743511fdcc1b41f5f8e6b0964c1f" prot="public" virt="virtual"><scope>RH_RF95</scope><name>send</name></member>
+      <member refid="classRH__RF95_1a813b52c7327355a05ff75a8248d9824b" prot="public" virt="virtual"><scope>RH_RF95</scope><name>send</name></member>
+      <member refid="classRH__RF95_1a854c2eaa2f3cf9583453ff09f15e1099" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setFrequency</name></member>
+      <member refid="classRH__RF95_1a854c2eaa2f3cf9583453ff09f15e1099" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setFrequency</name></member>
+      <member refid="classRHGenericDriver_1acb992b3c5e360e68b67e4843558bcf3b" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a5b6db3cfd060ce9c1c8b030bfdf77a4c" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a470e67f4168dec41435dcc0e194202c8" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1a38e4901f56700a79e971a06eb6cbdf65" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1a4dd57079264bda98bc89145fe5d2eb8f" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setHeaderId</name></member>
+      <member refid="classRHGenericDriver_1ab04e89be04a0293e2cfd225e7dd45ba3" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setHeaderId</name></member>
+      <member refid="classRHGenericDriver_1a182436232f7a345bca0d1766d242f3fb" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setHeaderTo</name></member>
+      <member refid="classRHGenericDriver_1a180c8d4d0b29ccafa8e29afed332a0c2" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setHeaderTo</name></member>
+      <member refid="classRHGenericDriver_1aa1c0a94ba6414b5bbab0133c4d74e646" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setMode</name></member>
+      <member refid="classRHGenericDriver_1aa1c0a94ba6414b5bbab0133c4d74e646" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setMode</name></member>
+      <member refid="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModeIdle</name></member>
+      <member refid="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModeIdle</name></member>
+      <member refid="classRH__RF95_1af6f6131a36c2a0f84a5883a6ec7acfec" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModemConfig</name></member>
+      <member refid="classRH__RF95_1af6f6131a36c2a0f84a5883a6ec7acfec" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModemConfig</name></member>
+      <member refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModemRegisters</name></member>
+      <member refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModemRegisters</name></member>
+      <member refid="classRH__RF95_1ade668dcd0730fef266c8d94c7e6e7085" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModeRx</name></member>
+      <member refid="classRH__RF95_1ade668dcd0730fef266c8d94c7e6e7085" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModeRx</name></member>
+      <member refid="classRH__RF95_1a46330e9d7ec87255b91d0e4297cc8814" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModeTx</name></member>
+      <member refid="classRH__RF95_1a46330e9d7ec87255b91d0e4297cc8814" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setModeTx</name></member>
+      <member refid="classRH__RF95_1af0f16c9b450bdd13a421d282e58a09fb" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setPreambleLength</name></member>
+      <member refid="classRH__RF95_1af0f16c9b450bdd13a421d282e58a09fb" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setPreambleLength</name></member>
+      <member refid="classRHGenericDriver_1a2791f57538b02a73e7dbe1031048230e" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setPromiscuous</name></member>
+      <member refid="classRHGenericDriver_1af31c2d0f3e155211d0b70b923b858e11" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setPromiscuous</name></member>
+      <member refid="classRHSPIDriver_1a89cc3ee4a7cceb8b283e2efc3f2a6362" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setSlaveSelectPin</name></member>
+      <member refid="classRHSPIDriver_1a89cc3ee4a7cceb8b283e2efc3f2a6362" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setSlaveSelectPin</name></member>
+      <member refid="classRHGenericDriver_1a5e8f15e1e7480899d18c3a21248bb628" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setThisAddress</name></member>
+      <member refid="classRHGenericDriver_1aeb6222dafba9449f36799efe6c0367d9" prot="public" virt="virtual"><scope>RH_RF95</scope><name>setThisAddress</name></member>
+      <member refid="classRH__RF95_1ab273e242758e3cc2ed2679ef795a7196" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setTxPower</name></member>
+      <member refid="classRH__RF95_1ab273e242758e3cc2ed2679ef795a7196" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>setTxPower</name></member>
+      <member refid="classRH__RF95_1aa9184ab8aec1c3c54a275d08c7e85c66" prot="public" virt="virtual"><scope>RH_RF95</scope><name>sleep</name></member>
+      <member refid="classRH__RF95_1a71f256a7d3219addc06f46b801a1c3b6" prot="public" virt="virtual"><scope>RH_RF95</scope><name>sleep</name></member>
+      <member refid="classRHSPIDriver_1af0ffebc1db1a6008734a37c4448fe926" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>spiBurstRead</name></member>
+      <member refid="classRHSPIDriver_1af0ffebc1db1a6008734a37c4448fe926" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>spiBurstRead</name></member>
+      <member refid="classRHSPIDriver_1a559b2c489825fe1ae737cb4371956d3d" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>spiBurstWrite</name></member>
+      <member refid="classRHSPIDriver_1a559b2c489825fe1ae737cb4371956d3d" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>spiBurstWrite</name></member>
+      <member refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>spiRead</name></member>
+      <member refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>spiRead</name></member>
+      <member refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>spiWrite</name></member>
+      <member refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>spiWrite</name></member>
+      <member refid="classRHGenericDriver_1a66a408f88a1188a0fab458816cb705f4" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>txGood</name></member>
+      <member refid="classRHGenericDriver_1a66a408f88a1188a0fab458816cb705f4" prot="public" virt="non-virtual"><scope>RH_RF95</scope><name>txGood</name></member>
+      <member refid="classRH__RF95_1a09086214734986feeb1e647a7820b615" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>validateRxBuf</name></member>
+      <member refid="classRH__RF95_1a09086214734986feeb1e647a7820b615" prot="protected" virt="non-virtual"><scope>RH_RF95</scope><name>validateRxBuf</name></member>
+      <member refid="classRHGenericDriver_1abf108e52389353cb3658b6802b92c77c" prot="public" virt="virtual"><scope>RH_RF95</scope><name>waitAvailable</name></member>
+      <member refid="classRHGenericDriver_1a2fde1a952ade073c7eaf3ca71ccde095" prot="public" virt="virtual"><scope>RH_RF95</scope><name>waitAvailable</name></member>
+      <member refid="classRHGenericDriver_1a8ed545cecc22196a325333dc9637e4cf" prot="public" virt="virtual"><scope>RH_RF95</scope><name>waitAvailableTimeout</name></member>
+      <member refid="classRHGenericDriver_1a35c7a28e1ded4195a4fca4763a5ea2c0" prot="public" virt="virtual"><scope>RH_RF95</scope><name>waitAvailableTimeout</name></member>
+      <member refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" prot="public" virt="virtual"><scope>RH_RF95</scope><name>waitPacketSent</name></member>
+      <member refid="classRHGenericDriver_1a0feda1f5522522dc50e0c26dcdef71dd" prot="public" virt="virtual"><scope>RH_RF95</scope><name>waitPacketSent</name></member>
+      <member refid="classRHGenericDriver_1a80e395c9b0780a2b0c110198a4fc18e9" prot="public" virt="virtual"><scope>RH_RF95</scope><name>waitPacketSent</name></member>
+      <member refid="classRHGenericDriver_1aa38dda7643b28ae77530c929b737dd70" prot="public" virt="virtual"><scope>RH_RF95</scope><name>waitPacketSent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="AnalogPin_8hpp" kind="file" language="C++">
+    <compoundname>AnalogPin.hpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="Config_8h" local="yes">../../../Config.h</includes>
+    <includedby refid="AnalogPin_8cpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.cpp</includedby>
+    <includedby refid="SD__card_8hpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp</label>
+        <link refid="AnalogPin_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="14">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="11">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="10">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="7">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="9">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="8">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="4">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="15">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.cpp</label>
+        <link refid="AnalogPin_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp</label>
+        <link refid="AnalogPin_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp</label>
+        <link refid="SD__card_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</label>
+        <link refid="SD__card_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classANALOGPIN" prot="public">ANALOGPIN</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="AnalogPin_8hpp_1a0a4eb0e3119503e2db396554d2351f8d" prot="public" static="no" mutable="no">
+        <type><ref refid="classANALOGPIN" kindref="compound">ANALOGPIN</ref></type>
+        <definition>ANALOGPIN analogpin</definition>
+        <argsstring></argsstring>
+        <name>analogpin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" line="22" column="18" declfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp" declline="22" declcolumn="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>__ANALOGPIN_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ANALOGPIN_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../../Config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classANALOGPIN" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classANALOGPIN" kindref="compound">ANALOGPIN</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classANALOGPIN_1a808bb3e74c4cd7b6b23e8a17e5794766" kindref="member">analogPin</ref><sp/>=<sp/>A1;</highlight><highlight class="comment">//<sp/>A1/D15<sp/>-<sp/>green<sp/>wire<sp/>-<sp/><sp/>Sensor<sp/>to<sp/>earth,<sp/>needs<sp/>to<sp/>be<sp/>analog:<sp/>A0-7<sp/>//TODO::Should<sp/>be<sp/>specified<sp/>in<sp/>class<sp/>init<sp/>and<sp/>decontructed<sp/>appropriately</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classANALOGPIN_1a0ad5aed119038d8baabe593fb58aa649" kindref="member">analogValue</ref><sp/>=<sp/>0;<sp/><sp/></highlight><highlight class="comment">//<sp/>variable<sp/>to<sp/>store<sp/>the<sp/>value<sp/>coming<sp/>from<sp/>the<sp/>sensor<sp/>//TODO::Should<sp/>have<sp/>limited<sp/>range<sp/>based<sp/>on<sp/>pin<sp/>reading,<sp/>e.g.<sp/>0-255<sp/>for<sp/>Arduino</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classANALOGPIN_1a0b287d8a607fc61cf099da8c014e7f50" kindref="member">ANALOGPIN</ref><sp/>()<sp/>{};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classANALOGPIN_1ae69dd2f3b280cfd717deeb86474048c8" kindref="member">~ANALOGPIN</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classANALOGPIN_1a24c6a68bd13ebc58a1be187b9c37f0a5" kindref="member">ANALOGPIN_Setup</ref>();<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO::Should<sp/>return<sp/>true<sp/>if<sp/><sp/>successful,<sp/>false<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classANALOGPIN_1ab934cef5fef78b85de5e11408f0da289" kindref="member">ANALOGPIN_Update</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO::Should<sp/>return<sp/>true<sp/>if<sp/>pin<sp/>has<sp/>been<sp/>triggered</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classANALOGPIN_1a143ef46dd2732782aa869e1db1b6661f" kindref="member">getAnalogValue</ref>();<sp/><sp/><sp/></highlight><highlight class="comment">//TODO::Should<sp/>return<sp/>uint<sp/>in<sp/>specified<sp/>sensorValue<sp/>range,<sp/>sensorValue<sp/>and<sp/>function<sp/>should<sp/>be<sp/>renamed<sp/>for<sp/>clarity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classANALOGPIN" kindref="compound">ANALOGPIN</ref><sp/><ref refid="AnalogPin_8hpp_1a0a4eb0e3119503e2db396554d2351f8d" kindref="member">analogpin</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/AnalogPin/AnalogPin.hpp"/>
+  </compounddef>
+</doxygen>

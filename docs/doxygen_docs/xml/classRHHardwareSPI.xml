@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classRHHardwareSPI" kind="class" language="C++" prot="public">
+    <compoundname>RHHardwareSPI</compoundname>
+    <basecompoundref refid="classRHGenericSPI" prot="public" virt="non-virtual">RHGenericSPI</basecompoundref>
+    <basecompoundref refid="classRHGenericSPI" prot="public" virt="non-virtual">RHGenericSPI</basecompoundref>
+    <includes local="no">RHHardwareSPI.h</includes>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classRHHardwareSPI_1a3bafa40f9fee3c1648df770a8082213a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHHardwareSPI::transfer</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>transfer</name>
+        <qualifiedname>RHHardwareSPI::transfer</qualifiedname>
+        <reimplements refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24">transfer</reimplements>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Transfer a single octet to and from the SPI interface <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The octet to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The octet read from SPI while the data octet was sent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHHardwareSPI.h" line="57" column="13" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHHardwareSPI.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHHardwareSPI_1a15fe95978c03090d7a496aba577137e9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void RHHardwareSPI::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <qualifiedname>RHHardwareSPI::begin</qualifiedname>
+        <reimplements refid="classRHGenericSPI_1ab2e3de040be2bd97400a993af114d26a">begin</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the SPI library. Call this after configuring and before using the SPI library </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHHardwareSPI.h" line="58" column="10" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHHardwareSPI.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHHardwareSPI_1ad6e88ca17b63901872825a5e0a362c34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void RHHardwareSPI::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>RHHardwareSPI::end</qualifiedname>
+        <reimplements refid="classRHGenericSPI_1a06b2066e7d97941fbb70c854821fadb3">end</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disables the SPI bus (leaving pin modes unchanged). Call this after you have finished using the SPI interface </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHHardwareSPI.h" line="59" column="10" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHHardwareSPI.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHHardwareSPI_1a3bafa40f9fee3c1648df770a8082213a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHHardwareSPI::transfer</definition>
+        <argsstring>(uint8_t data)</argsstring>
+        <name>transfer</name>
+        <qualifiedname>RHHardwareSPI::transfer</qualifiedname>
+        <reimplements refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24">transfer</reimplements>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Transfer a single octet to and from the SPI interface <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The octet to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The octet read from SPI while the data octet was sent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.h" line="57" column="13" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHHardwareSPI_1a15fe95978c03090d7a496aba577137e9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void RHHardwareSPI::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <qualifiedname>RHHardwareSPI::begin</qualifiedname>
+        <reimplements refid="classRHGenericSPI_1ab2e3de040be2bd97400a993af114d26a">begin</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the SPI library. Call this after configuring and before using the SPI library </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.h" line="58" column="10" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHHardwareSPI_1ad6e88ca17b63901872825a5e0a362c34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void RHHardwareSPI::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <qualifiedname>RHHardwareSPI::end</qualifiedname>
+        <reimplements refid="classRHGenericSPI_1a06b2066e7d97941fbb70c854821fadb3">end</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disables the SPI bus (leaving pin modes unchanged). Call this after you have finished using the SPI interface </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.h" line="59" column="10" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHHardwareSPI.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Encapsulate a hardware SPI bus interface. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This concrete subclass of GenericSPIClass encapsulates the standard Arduino hardware and other hardware SPI interfaces. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>RHGenericSPI</label>
+        <link refid="classRHGenericSPI"/>
+      </node>
+      <node id="1">
+        <label>RHHardwareSPI</label>
+        <link refid="classRHHardwareSPI"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>RHGenericSPI</label>
+        <link refid="classRHGenericSPI"/>
+      </node>
+      <node id="1">
+        <label>RHHardwareSPI</label>
+        <link refid="classRHHardwareSPI"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHHardwareSPI.h" line="18" column="1" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHHardwareSPI.h" bodystart="19" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classRHGenericSPI_1aaf44bdc591031120f4fc90673aedf1c6" prot="protected" virt="non-virtual"><scope>RHHardwareSPI</scope><name>_bitOrder</name></member>
+      <member refid="classRHGenericSPI_1a13c2f2a7f75c5563125b2a697ce8b14b" prot="protected" virt="non-virtual"><scope>RHHardwareSPI</scope><name>_dataMode</name></member>
+      <member refid="classRHGenericSPI_1a0fb8976ef154c748e0d222f824e24ef6" prot="protected" virt="non-virtual"><scope>RHHardwareSPI</scope><name>_frequency</name></member>
+      <member refid="classRHGenericSPI_1ad790927c415639388bbe6a5fe99c4e13" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>attachInterrupt</name></member>
+      <member refid="classRHGenericSPI_1ad790927c415639388bbe6a5fe99c4e13" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>attachInterrupt</name></member>
+      <member refid="classRHHardwareSPI_1a15fe95978c03090d7a496aba577137e9" prot="private" virt="virtual"><scope>RHHardwareSPI</scope><name>begin</name></member>
+      <member refid="classRHHardwareSPI_1a15fe95978c03090d7a496aba577137e9" prot="private" virt="virtual"><scope>RHHardwareSPI</scope><name>begin</name></member>
+      <member refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>BitOrder</name></member>
+      <member refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>BitOrder</name></member>
+      <member refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380a367543a6b63bab953acaa74628657d48" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>BitOrderLSBFirst</name></member>
+      <member refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>BitOrderMSBFirst</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>DataMode</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>DataMode</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>DataMode0</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fad163c5586916a72c503cbc802278807f" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>DataMode1</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fafee3778c48affb675976408e3d703412" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>DataMode2</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fa7b94169eadd026d993076e462db5e3fd" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>DataMode3</name></member>
+      <member refid="classRHGenericSPI_1afe5edb725cf6b8110464a72b1e75eddc" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>detachInterrupt</name></member>
+      <member refid="classRHGenericSPI_1afe5edb725cf6b8110464a72b1e75eddc" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>detachInterrupt</name></member>
+      <member refid="classRHHardwareSPI_1ad6e88ca17b63901872825a5e0a362c34" prot="private" virt="virtual"><scope>RHHardwareSPI</scope><name>end</name></member>
+      <member refid="classRHHardwareSPI_1ad6e88ca17b63901872825a5e0a362c34" prot="private" virt="virtual"><scope>RHHardwareSPI</scope><name>end</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>Frequency</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>Frequency</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba96d32b348eeedee70c3e98e3bec00a64" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>Frequency16MHz</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>Frequency1MHz</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba1cf7ded513364cea33b664367559a7ac" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>Frequency2MHz</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba3f551d8a71f11a09286f070d6dbbfa16" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>Frequency4MHz</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bac47ec8bfc0d0940c51c953ec6e513a2c" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>Frequency8MHz</name></member>
+      <member refid="classRHGenericSPI_1a7d9a16c339ff396e259672afd226742f" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>RHGenericSPI</name></member>
+      <member refid="classRHGenericSPI_1a7d9a16c339ff396e259672afd226742f" prot="public" virt="non-virtual"><scope>RHHardwareSPI</scope><name>RHGenericSPI</name></member>
+      <member refid="classRHGenericSPI_1a76fa1e24aa0f686e66fa71f95ee7c0b4" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>setBitOrder</name></member>
+      <member refid="classRHGenericSPI_1a86be0b8aae8dcab33623f2344f6d4303" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>setBitOrder</name></member>
+      <member refid="classRHGenericSPI_1a829a6400bab6a3d09b16d82d2c940f22" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>setDataMode</name></member>
+      <member refid="classRHGenericSPI_1a391b9c51ed0d3e1046539b3db180b9fa" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>setDataMode</name></member>
+      <member refid="classRHGenericSPI_1a9eecf2a206d0c6f42ca904c8f4374e13" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>setFrequency</name></member>
+      <member refid="classRHGenericSPI_1adf3e7f4bc83c0c0234e3b3e97c876aba" prot="public" virt="virtual"><scope>RHHardwareSPI</scope><name>setFrequency</name></member>
+      <member refid="classRHHardwareSPI_1a3bafa40f9fee3c1648df770a8082213a" prot="private" virt="virtual"><scope>RHHardwareSPI</scope><name>transfer</name></member>
+      <member refid="classRHHardwareSPI_1a3bafa40f9fee3c1648df770a8082213a" prot="private" virt="virtual"><scope>RHHardwareSPI</scope><name>transfer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structTinyGPSHDOP" kind="struct" language="C++" prot="public">
+    <compoundname>TinyGPSHDOP</compoundname>
+    <basecompoundref refid="structTinyGPSDecimal" prot="public" virt="non-virtual">TinyGPSDecimal</basecompoundref>
+    <includes local="no">TinyGPS++.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structTinyGPSHDOP_1a27cd35588c96eefb690bba46497d20d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double TinyGPSHDOP::hdop</definition>
+        <argsstring>()</argsstring>
+        <name>hdop</name>
+        <qualifiedname>TinyGPSHDOP::hdop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="278" column="8" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="278" bodyend="280"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>TinyGPSDecimal</label>
+        <link refid="structTinyGPSDecimal"/>
+      </node>
+      <node id="1">
+        <label>TinyGPSHDOP</label>
+        <link refid="structTinyGPSHDOP"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>TinyGPSDecimal</label>
+        <link refid="structTinyGPSDecimal"/>
+      </node>
+      <node id="1">
+        <label>TinyGPSHDOP</label>
+        <link refid="structTinyGPSHDOP"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" line="277" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/GPS/TinyGPS++.h" bodystart="277" bodyend="281"/>
+    <listofallmembers>
+      <member refid="structTinyGPSDecimal_1a041cada3e406205d0878c9819eddbbbb" prot="public" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>age</name></member>
+      <member refid="structTinyGPSDecimal_1a37516916786d5c66990d5a1797cc8f86" prot="private" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>commit</name></member>
+      <member refid="structTinyGPSHDOP_1a27cd35588c96eefb690bba46497d20d7" prot="public" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>hdop</name></member>
+      <member refid="structTinyGPSDecimal_1a8c7fd3ccd678b195d8f23bd1cb31d9ba" prot="public" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>isUpdated</name></member>
+      <member refid="structTinyGPSDecimal_1a34e6448314c198fa204dfb22cd24fc7e" prot="public" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>isValid</name></member>
+      <member refid="structTinyGPSDecimal_1aaa47eb71175c36d4ba3ba0e94d0c752e" prot="private" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>lastCommitTime</name></member>
+      <member refid="structTinyGPSDecimal_1ad8fa7dfb23e381b2353ea4ecaeaebc8b" prot="private" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>newval</name></member>
+      <member refid="structTinyGPSDecimal_1a804fc590e73489e2f14b0daf7c8112b8" prot="private" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>set</name></member>
+      <member refid="structTinyGPSDecimal_1ae09cbb1856cd57c7dcee52fb5fb1ba16" prot="public" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>TinyGPSDecimal</name></member>
+      <member refid="structTinyGPSDecimal_1af0803d568a59f6212f2e88e2e5ee6077" prot="private" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>updated</name></member>
+      <member refid="structTinyGPSDecimal_1a187fd7724408f9828603ea4368eccb1d" prot="private" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>val</name></member>
+      <member refid="structTinyGPSDecimal_1a858e8762c24b39ee28e5076275affef2" prot="private" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>valid</name></member>
+      <member refid="structTinyGPSDecimal_1ac3ce80976e5d8456e9f211b910a6cb19" prot="public" virt="non-virtual"><scope>TinyGPSHDOP</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

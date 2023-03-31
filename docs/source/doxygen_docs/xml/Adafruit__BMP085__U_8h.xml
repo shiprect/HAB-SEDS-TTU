@@ -1,0 +1,463 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Adafruit__BMP085__U_8h" kind="file" language="C++">
+    <compoundname>Adafruit_BMP085_U.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes refid="Adafruit__Sensor_8h" local="yes">Adafruit_Sensor.h</includes>
+    <includes local="no">Wire.h</includes>
+    <includedby refid="Adafruit__BMP085__U_8cpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp</includedby>
+    <includedby refid="BMP_8hpp" local="yes">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h</label>
+        <link refid="Adafruit__BMP085__U_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Adafruit_Sensor.h</label>
+        <link refid="Adafruit__Sensor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WProgram.h</label>
+      </node>
+      <node id="5">
+        <label>Wire.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.cpp</label>
+        <link refid="APRS_8cpp"/>
+      </node>
+      <node id="8">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp</label>
+        <link refid="ax25_8cpp"/>
+      </node>
+      <node id="10">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp</label>
+        <link refid="Adafruit__BMP085__U_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h</label>
+        <link refid="Adafruit__BMP085__U_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.cpp</label>
+        <link refid="BMP_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/BMP.hpp</label>
+        <link refid="BMP_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp</label>
+        <link refid="SD__card_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp</label>
+        <link refid="SD__card_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.cpp</label>
+        <link refid="Status_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Status/Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structbmp085__calib__data" prot="public">bmp085_calib_data</innerclass>
+    <innerclass refid="classAdafruit__BMP085__Unified" prot="public">Adafruit_BMP085_Unified</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Adafruit__BMP085__U_8h_1a32a3aa8c5356736b5700f4c136fe8646" prot="public" static="no">
+        <name>BMP085_ADDRESS</name>
+        <initializer>(0x77)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="38" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@0</name>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6999200e418e683015cb4551f874948f" prot="public">
+          <name>BMP085_REGISTER_CAL_AC1</name>
+          <initializer>= 0xAA</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5e85373127fef30c83d387782d0e67d0" prot="public">
+          <name>BMP085_REGISTER_CAL_AC2</name>
+          <initializer>= 0xAC</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ecca29ffff12313238d891093af2520" prot="public">
+          <name>BMP085_REGISTER_CAL_AC3</name>
+          <initializer>= 0xAE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba295f1765768a433741186c00990955ba" prot="public">
+          <name>BMP085_REGISTER_CAL_AC4</name>
+          <initializer>= 0xB0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba37886675e54ac7a2f4c405d6515059de" prot="public">
+          <name>BMP085_REGISTER_CAL_AC5</name>
+          <initializer>= 0xB2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba7b56fbed86df839dfa7d1912171818fc" prot="public">
+          <name>BMP085_REGISTER_CAL_AC6</name>
+          <initializer>= 0xB4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba40855131031111d736eb2f30e64c533c" prot="public">
+          <name>BMP085_REGISTER_CAL_B1</name>
+          <initializer>= 0xB6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bac09c5cc5f929afb312444c2a3a604a47" prot="public">
+          <name>BMP085_REGISTER_CAL_B2</name>
+          <initializer>= 0xB8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba257fdc9a1bda05a5598b9c15da513398" prot="public">
+          <name>BMP085_REGISTER_CAL_MB</name>
+          <initializer>= 0xBA</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba7a59a9e1ac87a1dc8c85e3a708acd9be" prot="public">
+          <name>BMP085_REGISTER_CAL_MC</name>
+          <initializer>= 0xBC</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba11870ebb5e1634adb52c843b67d4f5e2" prot="public">
+          <name>BMP085_REGISTER_CAL_MD</name>
+          <initializer>= 0xBE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bac1dfc765b526b0076a4ce260697454a0" prot="public">
+          <name>BMP085_REGISTER_CHIPID</name>
+          <initializer>= 0xD0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba7932a4888055f98d39459b5f71d9bda6" prot="public">
+          <name>BMP085_REGISTER_VERSION</name>
+          <initializer>= 0xD1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bad64ffff906f0b763b6c0a29948188564" prot="public">
+          <name>BMP085_REGISTER_SOFTRESET</name>
+          <initializer>= 0xE0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6816d5e052e9d122c10b79a44c5c30e1" prot="public">
+          <name>BMP085_REGISTER_CONTROL</name>
+          <initializer>= 0xF4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55badbbe2e87f1a8877559a2212879ab0cb1" prot="public">
+          <name>BMP085_REGISTER_TEMPDATA</name>
+          <initializer>= 0xF6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bac55ff9dc9131f9e0541b51f79c50f0d2" prot="public">
+          <name>BMP085_REGISTER_PRESSUREDATA</name>
+          <initializer>= 0xF6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba32131f64f1d981a19956341f1ca7831d" prot="public">
+          <name>BMP085_REGISTER_READTEMPCMD</name>
+          <initializer>= 0x2E</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba08c1f3c0270292fca9c96df65dc603c6" prot="public">
+          <name>BMP085_REGISTER_READPRESSURECMD</name>
+          <initializer>= 0x34</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="44" column="5" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="44" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="enum" id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>bmp085_mode_t</name>
+        <enumvalue id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7baadedc159681579a4c306ebf1654c5a32" prot="public">
+          <name>BMP085_MODE_ULTRALOWPOWER</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba59b57f5bbfc7d6b8ccb13ff09ac4397c" prot="public">
+          <name>BMP085_MODE_STANDARD</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7bae939b2b687268de84d2fc27c064509e0" prot="public">
+          <name>BMP085_MODE_HIGHRES</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba6145303f80a1daa6873c32ca5fdd5b3e" prot="public">
+          <name>BMP085_MODE_ULTRAHIGHRES</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="70" column="5" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="70" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>This<sp/>is<sp/>a<sp/>library<sp/>for<sp/>the<sp/>BMP085<sp/>pressure<sp/>sensor</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>Designed<sp/>specifically<sp/>to<sp/>work<sp/>with<sp/>the<sp/>Adafruit<sp/>BMP085<sp/>or<sp/>BMP180<sp/>Breakout<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>----&gt;<sp/>http://www.adafruit.com/products/391</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>----&gt;<sp/>http://www.adafruit.com/products/1603</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>These<sp/>displays<sp/>use<sp/>I2C<sp/>to<sp/>communicate,<sp/>2<sp/>pins<sp/>are<sp/>required<sp/>to<sp/>interface.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>Adafruit<sp/>invests<sp/>time<sp/>and<sp/>resources<sp/>providing<sp/>this<sp/>open<sp/>source<sp/>code,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>please<sp/>support<sp/>Adafruit<sp/>andopen-source<sp/>hardware<sp/>by<sp/>purchasing<sp/>products</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>from<sp/>Adafruit!</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>Written<sp/>by<sp/>Kevin<sp/>Townsend<sp/>for<sp/>Adafruit<sp/>Industries.<sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>BSD<sp/>license,<sp/>all<sp/>text<sp/>above<sp/>must<sp/>be<sp/>included<sp/>in<sp/>any<sp/>redistribution</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__BMP085_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__BMP085_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(ARDUINO<sp/>&gt;=<sp/>100)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Adafruit__Sensor_8h" kindref="compound">Adafruit_Sensor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__AVR_ATtiny85__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;TinyWireM.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>Wire<sp/>TinyWireM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;Wire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/>I2C<sp/>ADDRESS/BITS</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>BMP085_ADDRESS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(0x77)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/>REGISTERS</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6999200e418e683015cb4551f874948f" kindref="member">BMP085_REGISTER_CAL_AC1</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xAA,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5e85373127fef30c83d387782d0e67d0" kindref="member">BMP085_REGISTER_CAL_AC2</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xAC,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ecca29ffff12313238d891093af2520" kindref="member">BMP085_REGISTER_CAL_AC3</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xAE,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba295f1765768a433741186c00990955ba" kindref="member">BMP085_REGISTER_CAL_AC4</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xB0,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba37886675e54ac7a2f4c405d6515059de" kindref="member">BMP085_REGISTER_CAL_AC5</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xB2,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba7b56fbed86df839dfa7d1912171818fc" kindref="member">BMP085_REGISTER_CAL_AC6</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xB4,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba40855131031111d736eb2f30e64c533c" kindref="member">BMP085_REGISTER_CAL_B1</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xB6,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bac09c5cc5f929afb312444c2a3a604a47" kindref="member">BMP085_REGISTER_CAL_B2</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xB8,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba257fdc9a1bda05a5598b9c15da513398" kindref="member">BMP085_REGISTER_CAL_MB</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xBA,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba7a59a9e1ac87a1dc8c85e3a708acd9be" kindref="member">BMP085_REGISTER_CAL_MC</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xBC,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba11870ebb5e1634adb52c843b67d4f5e2" kindref="member">BMP085_REGISTER_CAL_MD</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xBE,<sp/><sp/></highlight><highlight class="comment">//<sp/>R<sp/><sp/><sp/>Calibration<sp/>data<sp/>(16<sp/>bits)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bac1dfc765b526b0076a4ce260697454a0" kindref="member">BMP085_REGISTER_CHIPID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xD0,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba7932a4888055f98d39459b5f71d9bda6" kindref="member">BMP085_REGISTER_VERSION</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xD1,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bad64ffff906f0b763b6c0a29948188564" kindref="member">BMP085_REGISTER_SOFTRESET</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xE0,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba6816d5e052e9d122c10b79a44c5c30e1" kindref="member">BMP085_REGISTER_CONTROL</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xF4,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55badbbe2e87f1a8877559a2212879ab0cb1" kindref="member">BMP085_REGISTER_TEMPDATA</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xF6,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55bac55ff9dc9131f9e0541b51f79c50f0d2" kindref="member">BMP085_REGISTER_PRESSUREDATA</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0xF6,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba32131f64f1d981a19956341f1ca7831d" kindref="member">BMP085_REGISTER_READTEMPCMD</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x2E,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1a06fc87d81c62e9abb8790b6e5713c55ba08c1f3c0270292fca9c96df65dc603c6" kindref="member">BMP085_REGISTER_READPRESSURECMD</ref><sp/><sp/><sp/><sp/>=<sp/>0x34</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/>MODE<sp/>SETTINGS</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7baadedc159681579a4c306ebf1654c5a32" kindref="member">BMP085_MODE_ULTRALOWPOWER</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba59b57f5bbfc7d6b8ccb13ff09ac4397c" kindref="member">BMP085_MODE_STANDARD</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7bae939b2b687268de84d2fc27c064509e0" kindref="member">BMP085_MODE_HIGHRES</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba6145303f80a1daa6873c32ca5fdd5b3e" kindref="member">BMP085_MODE_ULTRAHIGHRES</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7b" kindref="member">bmp085_mode_t</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/>CALIBRATION<sp/>DATA</highlight></codeline>
+<codeline lineno="80"><highlight class="comment"><sp/><sp/><sp/><sp/>-----------------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="structbmp085__calib__data" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><sp/>ac1;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><sp/>ac2;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><sp/>ac3;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>ac4;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>ac5;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>ac6;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><sp/>b1;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><sp/>b2;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><sp/>mb;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><sp/>mc;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int16_t<sp/><sp/>md;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="structbmp085__calib__data" kindref="compound">bmp085_calib_data</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/*=========================================================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classAdafruit__BMP085__Unified" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAdafruit__BMP085__Unified" kindref="compound">Adafruit_BMP085_Unified</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__Sensor" kindref="compound">Adafruit_Sensor</ref></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAdafruit__BMP085__Unified_1a9411ffe6c882ce1aec61a6227db3e47c" kindref="member">Adafruit_BMP085_Unified</ref>(int32_t<sp/>sensorID<sp/>=<sp/>-1);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><ref refid="classAdafruit__BMP085__Unified_1a19afa291aca37fbfaa5cf02137c5777f" kindref="member">begin</ref>(<ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7b" kindref="member">bmp085_mode_t</ref><sp/>mode<sp/>=<sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba6145303f80a1daa6873c32ca5fdd5b3e" kindref="member">BMP085_MODE_ULTRAHIGHRES</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classAdafruit__BMP085__Unified_1a4d74250c9406e7360e1a8b4f13610e8d" kindref="member">getTemperature</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temp);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classAdafruit__BMP085__Unified_1abdc7b3759a57b5c03ba09873a39a1839" kindref="member">getPressure</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pressure);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1a899d8915f530ad7be9e2cab86b26d86f" kindref="member">pressureToAltitude</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>seaLevel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>atmospheric);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1aa5a5cb715d056811b1cee546997edbbc" kindref="member">seaLevelForAltitude</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>altitude,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>atmospheric);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>the<sp/>next<sp/>two<sp/>functions<sp/>are<sp/>just<sp/>for<sp/>compatibility<sp/>with<sp/>old</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>code<sp/>that<sp/>passed<sp/>the<sp/>temperature<sp/>as<sp/>a<sp/>third<sp/>parameter.<sp/><sp/>A<sp/>newer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>calculation<sp/>is<sp/>used<sp/>which<sp/>does<sp/>not<sp/>need<sp/>temperature.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1a899d8915f530ad7be9e2cab86b26d86f" kindref="member">pressureToAltitude</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>seaLevel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>atmospheric,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temp);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1aa5a5cb715d056811b1cee546997edbbc" kindref="member">seaLevelForAltitude</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>altitude,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>atmospheric,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temp);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><ref refid="classAdafruit__BMP085__Unified_1a75df7711caf4c3a80831cb9c9327aeff" kindref="member">getEvent</ref>(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>*);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><ref refid="classAdafruit__BMP085__Unified_1acb3b37e177179ebd4fc0680c188c5280" kindref="member">getSensor</ref>(<ref refid="structsensor__t" kindref="compound">sensor_t</ref>*);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="classAdafruit__BMP085__Unified_1aea3f76eb40f65b3545df730b9fe76553" kindref="member">computeB5</ref>(int32_t<sp/>ut);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="classAdafruit__BMP085__Unified_1a31f5869ed0f0ba87733e1f9ea3bc7530" kindref="member">_sensorID</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h"/>
+  </compounddef>
+</doxygen>

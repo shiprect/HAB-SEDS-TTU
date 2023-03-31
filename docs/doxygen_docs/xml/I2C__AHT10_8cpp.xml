@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="I2C__AHT10_8cpp" kind="file" language="C++">
+    <compoundname>I2C_AHT10.cpp</compoundname>
+    <includes refid="I2C__AHT10_8h" local="yes">I2C_AHT10.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/I2C_AHT10.cpp</label>
+        <link refid="I2C__AHT10_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>I2C_AHT10.h</label>
+        <link refid="I2C__AHT10_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Arduino.h</label>
+      </node>
+      <node id="4">
+        <label>Wire.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>***************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="I2C__AHT10_8h" kindref="compound">I2C_AHT10.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">/*---------------------------<sp/>Device<sp/>Status<sp/>------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a81d25f7e23385debd5bd4a67439b5753" kindref="member">AHT10::begin</ref>(TwoWire<sp/>&amp;wirePort)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref><sp/>=<sp/>&amp;wirePort;<sp/></highlight><highlight class="comment">//Grab<sp/>the<sp/>port<sp/>the<sp/>user<sp/>wants<sp/>to<sp/>communicate<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" kindref="member">_deviceAddress</ref><sp/>=<sp/><ref refid="I2C__AHT10_8h_1a3a4c01c492a7b85b9e7745203d47637b" kindref="member">AHT10_DEFAULT_ADDRESS</ref>;<sp/></highlight><highlight class="comment">//We<sp/>had<sp/>hoped<sp/>the<sp/>AHT10<sp/>would<sp/>support<sp/>two<sp/>addresses<sp/>but<sp/>it<sp/>doesn&apos;t<sp/>seem<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a1cb0b3459f6e4ae09378188f16fb3809" kindref="member">isConnected</ref>()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Wait<sp/>40<sp/>ms<sp/>after<sp/>power-on<sp/>before<sp/>reading<sp/>temp<sp/>or<sp/>humidity.<sp/>Datasheet<sp/>pg<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(40);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Check<sp/>if<sp/>the<sp/>calibrated<sp/>bit<sp/>is<sp/>set.<sp/>If<sp/>not,<sp/>init<sp/>the<sp/>sensor.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a8a38acbd63124d81d338edbc7008ba9f" kindref="member">isCalibrated</ref>()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Send<sp/>0xBE0800</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1abd652ac56666c87f44eebb21dfc88a7c" kindref="member">initialize</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Immediately<sp/>trigger<sp/>a<sp/>measurement.<sp/>Send<sp/>0xAC3300</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1ac369fae86104dbb1af0501a804ce1f5b" kindref="member">triggerMeasurement</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(75);<sp/></highlight><highlight class="comment">//Wait<sp/>for<sp/>measurement<sp/>to<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a20a9ee6af4b9af7a5842112218867701" kindref="member">isBusy</ref>())</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(1);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counter++<sp/>&gt;<sp/>100)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//Give<sp/>up<sp/>after<sp/>100ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//This<sp/>calibration<sp/>sequence<sp/>is<sp/>not<sp/>completely<sp/>proven.<sp/>It&apos;s<sp/>not<sp/>clear<sp/>how<sp/>and<sp/>when<sp/>the<sp/>cal<sp/>bit<sp/>clears</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//This<sp/>seems<sp/>to<sp/>work<sp/>but<sp/>it&apos;s<sp/>not<sp/>easily<sp/>testable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a8a38acbd63124d81d338edbc7008ba9f" kindref="member">isCalibrated</ref>()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Check<sp/>that<sp/>the<sp/>cal<sp/>bit<sp/>has<sp/>been<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a8a38acbd63124d81d338edbc7008ba9f" kindref="member">isCalibrated</ref>()<sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Mark<sp/>all<sp/>datums<sp/>as<sp/>fresh<sp/>(not<sp/>read<sp/>before)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" kindref="member">sensorQueried</ref>.temperature<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" kindref="member">sensorQueried</ref>.humidity<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//Ping<sp/>the<sp/>AHT10&apos;s<sp/>I2C<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//If<sp/>we<sp/>get<sp/>a<sp/>response,<sp/>we<sp/>are<sp/>correctly<sp/>communicating<sp/>with<sp/>the<sp/>AHT10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a1cb0b3459f6e4ae09378188f16fb3809" kindref="member">AHT10::isConnected</ref>()</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;beginTransmission(<ref refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" kindref="member">_deviceAddress</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;endTransmission()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>IC<sp/>failed<sp/>to<sp/>respond,<sp/>give<sp/>it<sp/>20ms<sp/>more<sp/>for<sp/>Power<sp/>On<sp/>Startup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Datasheet<sp/>pg<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>delay(20);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;beginTransmission(<ref refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" kindref="member">_deviceAddress</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;endTransmission()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/*------------------------<sp/>Measurement<sp/>Helpers<sp/>---------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">uint8_t<sp/><ref refid="classAHT10_1af1f5b417d05553ab168b2fc903108a02" kindref="member">AHT10::getStatus</ref>()</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;requestFrom(<ref refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" kindref="member">_deviceAddress</ref>,<sp/>(uint8_t)1);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;available())</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;read());</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(0);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//Returns<sp/>the<sp/>state<sp/>of<sp/>the<sp/>cal<sp/>bit<sp/>in<sp/>the<sp/>status<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a8a38acbd63124d81d338edbc7008ba9f" kindref="member">AHT10::isCalibrated</ref>()</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1af1f5b417d05553ab168b2fc903108a02" kindref="member">getStatus</ref>()<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>3));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//Returns<sp/>the<sp/>state<sp/>of<sp/>the<sp/>busy<sp/>bit<sp/>in<sp/>the<sp/>status<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a20a9ee6af4b9af7a5842112218867701" kindref="member">AHT10::isBusy</ref>()</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1af1f5b417d05553ab168b2fc903108a02" kindref="member">getStatus</ref>()<sp/>&amp;<sp/>(1<sp/>&lt;&lt;<sp/>7));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1abd652ac56666c87f44eebb21dfc88a7c" kindref="member">AHT10::initialize</ref>()</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;beginTransmission(<ref refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" kindref="member">_deviceAddress</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;write(<ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61aa2f0601042e05ef4eb4d245e6c1a473c6" kindref="member">sfe_aht10_reg_initialize</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;write(0x80);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;write(0x00);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;endTransmission()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1ac369fae86104dbb1af0501a804ce1f5b" kindref="member">AHT10::triggerMeasurement</ref>()</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;beginTransmission(<ref refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" kindref="member">_deviceAddress</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;write(<ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61aaa617680a3f60e428ea5746f80a36a193" kindref="member">sfe_aht10_reg_measure</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;write(0x33);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;write(0x00);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;endTransmission()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//Loads<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1ab6f09082dcca441ba7d88d4cd6390f9e" kindref="member">AHT10::readData</ref>()</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Clear<sp/>previous<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.temperature<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.humidity<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;requestFrom(<ref refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" kindref="member">_deviceAddress</ref>,<sp/>(uint8_t)6)<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>state<sp/>=<sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;read();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/>incoming<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>incoming<sp/>|=<sp/>(uint32_t)<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;read()<sp/>&lt;&lt;<sp/>(8<sp/>*<sp/>2);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>incoming<sp/>|=<sp/>(uint32_t)<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;read()<sp/>&lt;&lt;<sp/>(8<sp/>*<sp/>1);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>midByte<sp/>=<sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;read();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>incoming<sp/>|=<sp/>midByte;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.humidity<sp/>=<sp/>incoming<sp/>&gt;&gt;<sp/>4;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.temperature<sp/>=<sp/>(uint32_t)midByte<sp/>&lt;&lt;<sp/>(8<sp/>*<sp/>2);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.temperature<sp/>|=<sp/>(uint32_t)<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;read()<sp/>&lt;&lt;<sp/>(8<sp/>*<sp/>1);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.temperature<sp/>|=<sp/>(uint32_t)<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;read()<sp/>&lt;&lt;<sp/>(8<sp/>*<sp/>0);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Need<sp/>to<sp/>get<sp/>rid<sp/>of<sp/>data<sp/>in<sp/>bits<sp/>&gt;<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.temperature<sp/>=<sp/><ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.temperature<sp/>&amp;<sp/>~(0xFFF00000);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Mark<sp/>data<sp/>as<sp/>fresh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" kindref="member">sensorQueried</ref>.temperature<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" kindref="member">sensorQueried</ref>.humidity<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//Triggers<sp/>a<sp/>measurement<sp/>if<sp/>one<sp/>has<sp/>not<sp/>been<sp/>previously<sp/>started,<sp/>then<sp/>returns<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">//If<sp/>measurement<sp/>has<sp/>been<sp/>started,<sp/>checks<sp/>to<sp/>see<sp/>if<sp/>complete.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">//If<sp/>not<sp/>complete,<sp/>returns<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">//If<sp/>complete,<sp/>readData(),<sp/>mark<sp/>measurement<sp/>as<sp/>not<sp/>started,<sp/>return<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1ab4ba0b79a3926ac9a838525327d7cc0a" kindref="member">AHT10::available</ref>()</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1aa7fca3e190d6e348adf9988d46bf5e5b" kindref="member">measurementStarted</ref><sp/>==<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1ac369fae86104dbb1af0501a804ce1f5b" kindref="member">triggerMeasurement</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1aa7fca3e190d6e348adf9988d46bf5e5b" kindref="member">measurementStarted</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a20a9ee6af4b9af7a5842112218867701" kindref="member">isBusy</ref>()<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1ab6f09082dcca441ba7d88d4cd6390f9e" kindref="member">readData</ref>();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1aa7fca3e190d6e348adf9988d46bf5e5b" kindref="member">measurementStarted</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1af38e939ccebbeaa5ca04eacb665e3f8c" kindref="member">AHT10::softReset</ref>()</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;beginTransmission(<ref refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" kindref="member">_deviceAddress</ref>);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;write(<ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61aa0272fa0485eb86145d6b1ab87b96ae90" kindref="member">sfe_aht10_reg_reset</ref>);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>-&gt;endTransmission()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">/*-------------------------<sp/>Make<sp/>Measurements<sp/>----------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a8ccbe1aca533416bb31bdcd0cac05be5" kindref="member">AHT10::getTemperature</ref>()</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" kindref="member">sensorQueried</ref>.temperature<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//We&apos;ve<sp/>got<sp/>old<sp/>data<sp/>so<sp/>trigger<sp/>new<sp/>measurement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1ac369fae86104dbb1af0501a804ce1f5b" kindref="member">triggerMeasurement</ref>();</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(75);<sp/></highlight><highlight class="comment">//Wait<sp/>for<sp/>measurement<sp/>to<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a20a9ee6af4b9af7a5842112218867701" kindref="member">isBusy</ref>())</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(1);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counter++<sp/>&gt;<sp/>100)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//Give<sp/>up<sp/>after<sp/>100ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1ab6f09082dcca441ba7d88d4cd6390f9e" kindref="member">readData</ref>();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//From<sp/>datasheet<sp/>pg<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tempCelsius<sp/>=<sp/>((float)<ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.temperature<sp/>/<sp/>1048576)<sp/>*<sp/>200<sp/>-<sp/>50;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Mark<sp/>data<sp/>as<sp/>old</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" kindref="member">sensorQueried</ref>.temperature<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tempCelsius;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a68b8debcdc0bcae4046a1ff516022978" kindref="member">AHT10::getHumidity</ref>()</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" kindref="member">sensorQueried</ref>.humidity<sp/>==<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//We&apos;ve<sp/>got<sp/>old<sp/>data<sp/>so<sp/>trigger<sp/>new<sp/>measurement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1ac369fae86104dbb1af0501a804ce1f5b" kindref="member">triggerMeasurement</ref>();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(75);<sp/></highlight><highlight class="comment">//Wait<sp/>for<sp/>measurement<sp/>to<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/>counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classAHT10_1a20a9ee6af4b9af7a5842112218867701" kindref="member">isBusy</ref>())</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(1);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counter++<sp/>&gt;<sp/>100)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//Give<sp/>up<sp/>after<sp/>100ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classAHT10_1ab6f09082dcca441ba7d88d4cd6390f9e" kindref="member">readData</ref>();</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//From<sp/>datasheet<sp/>pg<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>relHumidity<sp/>=<sp/>((float)<ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>.humidity<sp/>/<sp/>1048576)<sp/>*<sp/>100;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Mark<sp/>data<sp/>as<sp/>old</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" kindref="member">sensorQueried</ref>.humidity<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>relHumidity;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp"/>
+  </compounddef>
+</doxygen>

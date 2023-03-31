@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classSD__card" kind="class" language="C++" prot="public">
+    <compoundname>SD_card</compoundname>
+    <includes local="no">SD_card.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSD__card_1a8f82967d7542661f9983d2ecd03e4a4e" prot="private" static="no" mutable="no">
+        <type>File</type>
+        <definition>File SD_card::dataFile</definition>
+        <argsstring></argsstring>
+        <name>dataFile</name>
+        <qualifiedname>SD_card::dataFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" line="27" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSD__card_1abeb839d9138b62530a855dd20e987787" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SD_card::ValidSD</definition>
+        <argsstring></argsstring>
+        <name>ValidSD</name>
+        <qualifiedname>SD_card::ValidSD</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" line="29" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSD__card_1aed903cb98def2194a5f0e892eac198a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SD_card::SD_card</definition>
+        <argsstring>()</argsstring>
+        <name>SD_card</name>
+        <qualifiedname>SD_card::SD_card</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" line="32" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" bodystart="32" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classSD__card_1a402fedfcc7a52f8137628ab2aacf136a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SD_card::~SD_card</definition>
+        <argsstring>()</argsstring>
+        <name>~SD_card</name>
+        <qualifiedname>SD_card::~SD_card</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" line="35" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" bodystart="35" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classSD__card_1a56d997c7e85b4b5b236d50d004c11e9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SD_card::SD_Setup</definition>
+        <argsstring>()</argsstring>
+        <name>SD_Setup</name>
+        <qualifiedname>SD_card::SD_Setup</qualifiedname>
+        <briefdescription>
+<para>order </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" line="38" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp" bodystart="9" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classSD__card_1a99d91435b905072ccff5e5f70974bf0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SD_card::SD_Record</definition>
+        <argsstring>()</argsstring>
+        <name>SD_Record</name>
+        <qualifiedname>SD_card::SD_Record</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" line="39" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp" bodystart="45" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classSD__card_1ae7bf0cbc04054d72ed1de7fec34ddf6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SD_card::SD_arrayPass</definition>
+        <argsstring>()</argsstring>
+        <name>SD_arrayPass</name>
+        <qualifiedname>SD_card::SD_arrayPass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" line="40" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classSD__card_1a7ec606c79c0695f91fc8c49965a6fdd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SD_card::IsValidSD</definition>
+        <argsstring>()</argsstring>
+        <name>IsValidSD</name>
+        <qualifiedname>SD_card::IsValidSD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" line="42" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.cpp" bodystart="174" bodyend="176"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" line="25" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SD_Card/SD_card.hpp" bodystart="25" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classSD__card_1a8f82967d7542661f9983d2ecd03e4a4e" prot="private" virt="non-virtual"><scope>SD_card</scope><name>dataFile</name></member>
+      <member refid="classSD__card_1a7ec606c79c0695f91fc8c49965a6fdd4" prot="public" virt="non-virtual"><scope>SD_card</scope><name>IsValidSD</name></member>
+      <member refid="classSD__card_1ae7bf0cbc04054d72ed1de7fec34ddf6a" prot="public" virt="non-virtual"><scope>SD_card</scope><name>SD_arrayPass</name></member>
+      <member refid="classSD__card_1aed903cb98def2194a5f0e892eac198a0" prot="public" virt="non-virtual"><scope>SD_card</scope><name>SD_card</name></member>
+      <member refid="classSD__card_1a99d91435b905072ccff5e5f70974bf0d" prot="public" virt="non-virtual"><scope>SD_card</scope><name>SD_Record</name></member>
+      <member refid="classSD__card_1a56d997c7e85b4b5b236d50d004c11e9d" prot="public" virt="non-virtual"><scope>SD_card</scope><name>SD_Setup</name></member>
+      <member refid="classSD__card_1abeb839d9138b62530a855dd20e987787" prot="private" virt="non-virtual"><scope>SD_card</scope><name>ValidSD</name></member>
+      <member refid="classSD__card_1a402fedfcc7a52f8137628ab2aacf136a" prot="public" virt="non-virtual"><scope>SD_card</scope><name>~SD_card</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

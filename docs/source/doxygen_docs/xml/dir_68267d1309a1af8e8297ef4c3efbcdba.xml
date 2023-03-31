@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>/home/chris/Documents/HAB-SEDS-TTU/src</compoundname>
+    <innerdir refid="dir_6b6158ffc10bb67e6b7d62eced5c0155">/home/chris/Documents/HAB-SEDS-TTU/src/Drivers</innerdir>
+    <innerdir refid="dir_ef2d6b20c40eb0825773cd4540ca39a6">/home/chris/Documents/HAB-SEDS-TTU/src/Hardware_Configuration</innerdir>
+    <innerdir refid="dir_fafc07e90b89ae55fbff9dc5df260346">/home/chris/Documents/HAB-SEDS-TTU/src/Status</innerdir>
+    <innerdir refid="dir_ff383ddf1aa4eab0c4ce7910366d05a5">/home/chris/Documents/HAB-SEDS-TTU/src/Utilities</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="I2C__AHT10_8h" kind="file" language="C++">
+    <compoundname>I2C_AHT10.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes local="no">Wire.h</includes>
+    <includedby refid="I2C__AHT10_8cpp" local="yes">/home/chris/Documents/farm-sensors/I2C_AHT10.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/I2C_AHT10.h</label>
+        <link refid="I2C__AHT10_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="3">
+        <label>Wire.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/farm-sensors/I2C_AHT10.cpp</label>
+        <link refid="I2C__AHT10_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/I2C_AHT10.h</label>
+        <link refid="I2C__AHT10_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classAHT10" prot="public">AHT10</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="I2C__AHT10_8h_1a3a4c01c492a7b85b9e7745203d47637b" prot="public" static="no">
+        <name>AHT10_DEFAULT_ADDRESS</name>
+        <initializer>0x38</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="11" column="9" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>registers</name>
+        <enumvalue id="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61aa0272fa0485eb86145d6b1ab87b96ae90" prot="public">
+          <name>sfe_aht10_reg_reset</name>
+          <initializer>= 0xBA</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61aa2f0601042e05ef4eb4d245e6c1a473c6" prot="public">
+          <name>sfe_aht10_reg_initialize</name>
+          <initializer>= 0xBE</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61aaa617680a3f60e428ea5746f80a36a193" prot="public">
+          <name>sfe_aht10_reg_measure</name>
+          <initializer>= 0xAC</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="13" column="1" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="14" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/****************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>******************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__I2C_AHT10_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__I2C_AHT10_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Wire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AHT10_DEFAULT_ADDRESS<sp/>0x38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61a" kindref="member">registers</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61aa0272fa0485eb86145d6b1ab87b96ae90" kindref="member">sfe_aht10_reg_reset</ref><sp/>=<sp/>0xBA,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61aa2f0601042e05ef4eb4d245e6c1a473c6" kindref="member">sfe_aht10_reg_initialize</ref><sp/>=<sp/>0xBE,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="I2C__AHT10_8h_1ac9227f6405d6ad3fe73aed688342c61aaa617680a3f60e428ea5746f80a36a193" kindref="member">sfe_aht10_reg_measure</ref><sp/>=<sp/>0xAC,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classAHT10" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAHT10" kindref="compound">AHT10</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>TwoWire<sp/>*<ref refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" kindref="member">_i2cPort</ref>;<sp/></highlight><highlight class="comment">//The<sp/>generic<sp/>connection<sp/>to<sp/>user&apos;s<sp/>chosen<sp/>I2C<sp/>hardware</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" kindref="member">_deviceAddress</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1aa7fca3e190d6e348adf9988d46bf5e5b" kindref="member">measurementStarted</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classAHT10_1a3dca7a7012816ba65372240fd1ade77a" kindref="member">humidity</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="classAHT10_1a0374041e8e5d89b567ffdec1d3a8ae44" kindref="member">temperature</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" kindref="member">sensorData</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classAHT10_1a0374041e8e5d89b567ffdec1d3a8ae44" kindref="member">temperature</ref><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classAHT10_1a3dca7a7012816ba65372240fd1ade77a" kindref="member">humidity</ref><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" kindref="member">sensorQueried</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Device<sp/>status</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a81d25f7e23385debd5bd4a67439b5753" kindref="member">begin</ref>(TwoWire<sp/>&amp;wirePort<sp/>=<sp/>Wire);<sp/></highlight><highlight class="comment">//Sets<sp/>the<sp/>address<sp/>of<sp/>the<sp/>device<sp/>and<sp/>opens<sp/>the<sp/>I2C<sp/>bus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a1cb0b3459f6e4ae09378188f16fb3809" kindref="member">isConnected</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Checks<sp/>if<sp/>the<sp/>AHT10<sp/>is<sp/>connected<sp/>to<sp/>the<sp/>I2C<sp/>bus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1ab4ba0b79a3926ac9a838525327d7cc0a" kindref="member">available</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Returns<sp/>true<sp/>if<sp/>new<sp/>data<sp/>is<sp/>available</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Measurement<sp/>helper<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classAHT10_1af1f5b417d05553ab168b2fc903108a02" kindref="member">getStatus</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Returns<sp/>the<sp/>status<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a8a38acbd63124d81d338edbc7008ba9f" kindref="member">isCalibrated</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Returns<sp/>true<sp/>if<sp/>the<sp/>cal<sp/>bit<sp/>is<sp/>set,<sp/>false<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a20a9ee6af4b9af7a5842112218867701" kindref="member">isBusy</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Returns<sp/>true<sp/>if<sp/>the<sp/>busy<sp/>bit<sp/>is<sp/>set,<sp/>false<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1abd652ac56666c87f44eebb21dfc88a7c" kindref="member">initialize</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>for<sp/>taking<sp/>measurement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1ac369fae86104dbb1af0501a804ce1f5b" kindref="member">triggerMeasurement</ref>();<sp/></highlight><highlight class="comment">//Trigger<sp/>the<sp/>AHT10<sp/>to<sp/>take<sp/>a<sp/>measurement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1ab6f09082dcca441ba7d88d4cd6390f9e" kindref="member">readData</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Read<sp/>and<sp/>parse<sp/>the<sp/>6<sp/>bytes<sp/>of<sp/>data<sp/>into<sp/>raw<sp/>humidity<sp/>and<sp/>temp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1af38e939ccebbeaa5ca04eacb665e3f8c" kindref="member">softReset</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Restart<sp/>the<sp/>sensor<sp/>system<sp/>without<sp/>turning<sp/>power<sp/>off<sp/>and<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Make<sp/>measurements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a8ccbe1aca533416bb31bdcd0cac05be5" kindref="member">getTemperature</ref>();<sp/></highlight><highlight class="comment">//Goes<sp/>through<sp/>the<sp/>measurement<sp/>sequence<sp/>and<sp/>returns<sp/>temperature<sp/>in<sp/>degrees<sp/>celcius</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAHT10_1a68b8debcdc0bcae4046a1ff516022978" kindref="member">getHumidity</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Goes<sp/>through<sp/>the<sp/>measurement<sp/>sequence<sp/>and<sp/>returns<sp/>humidity<sp/>in<sp/>%<sp/>RH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h"/>
+  </compounddef>
+</doxygen>

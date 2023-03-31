@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structSoftTimer__Struct" kind="struct" language="C++" prot="public">
+    <compoundname>SoftTimer_Struct</compoundname>
+    <includes local="no">TimerUtilities.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structSoftTimer__Struct_1a7d2b7bc8d6e30b308722bbb2f5a3d43e" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SoftTimer_Struct::lastMillis</definition>
+        <argsstring></argsstring>
+        <name>lastMillis</name>
+        <qualifiedname>SoftTimer_Struct::lastMillis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" line="19" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSoftTimer__Struct_1afbc58f828579173a64954fbbb8b0d89b" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SoftTimer_Struct::waitMillis</definition>
+        <argsstring></argsstring>
+        <name>waitMillis</name>
+        <qualifiedname>SoftTimer_Struct::waitMillis</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" line="20" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSoftTimer__Struct_1a148c45bf842bd8afd36d6a8d171f5299" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SoftTimer_Struct::IsRepeatable</definition>
+        <argsstring></argsstring>
+        <name>IsRepeatable</name>
+        <qualifiedname>SoftTimer_Struct::IsRepeatable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" line="21" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structSoftTimer__Struct_1a9ab742f4dcbc1dab683fe1880bd4ed93" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SoftTimer_Struct::IsEnabled</definition>
+        <argsstring></argsstring>
+        <name>IsEnabled</name>
+        <qualifiedname>SoftTimer_Struct::IsEnabled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" line="22" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structSoftTimer__Struct_1a79f30b28c5470a5b688b028fb74cb25d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SoftTimer_Struct::CheckTime</definition>
+        <argsstring>()</argsstring>
+        <name>CheckTime</name>
+        <qualifiedname>SoftTimer_Struct::CheckTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" line="24" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" bodystart="24" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" line="5" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Utilities/TimerUtilities.h" bodystart="5" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structSoftTimer__Struct_1a79f30b28c5470a5b688b028fb74cb25d" prot="public" virt="non-virtual"><scope>SoftTimer_Struct</scope><name>CheckTime</name></member>
+      <member refid="structSoftTimer__Struct_1a9ab742f4dcbc1dab683fe1880bd4ed93" prot="public" virt="non-virtual"><scope>SoftTimer_Struct</scope><name>IsEnabled</name></member>
+      <member refid="structSoftTimer__Struct_1a148c45bf842bd8afd36d6a8d171f5299" prot="public" virt="non-virtual"><scope>SoftTimer_Struct</scope><name>IsRepeatable</name></member>
+      <member refid="structSoftTimer__Struct_1a7d2b7bc8d6e30b308722bbb2f5a3d43e" prot="public" virt="non-virtual"><scope>SoftTimer_Struct</scope><name>lastMillis</name></member>
+      <member refid="structSoftTimer__Struct_1afbc58f828579173a64954fbbb8b0d89b" prot="public" virt="non-virtual"><scope>SoftTimer_Struct</scope><name>waitMillis</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

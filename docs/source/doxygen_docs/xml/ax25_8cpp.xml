@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="ax25_8cpp" kind="file" language="C++">
+    <compoundname>ax25.cpp</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="ax25_8h" local="yes">ax25.h</includes>
+    <incdepgraph>
+      <node id="7">
+        <label>../../../Config.h</label>
+        <link refid="Config_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../../ProjectConfig.hpp</label>
+        <link refid="ProjectConfig_8hpp"/>
+      </node>
+      <node id="5">
+        <label>APRS.hpp</label>
+        <link refid="APRS_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp</label>
+        <link refid="ax25_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Adafruit_BMP085_U.h</label>
+        <link refid="Adafruit__BMP085__U_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Adafruit_Sensor.h</label>
+        <link refid="Adafruit__Sensor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../Drivers/BMP/BMP.hpp</label>
+        <link refid="BMP_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../GPS/GPS.hpp</label>
+        <link refid="GPS_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>TinyGPS++.h</label>
+        <link refid="TinyGPS_09_09_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>../Drivers/SERVO/Servo.hpp</label>
+        <link refid="Servo_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>HAB_ESP32.hpp</label>
+        <link refid="HAB__ESP32_8hpp"/>
+      </node>
+      <node id="18">
+        <label>HAB_Nano.hpp</label>
+        <link refid="HAB__Nano_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>HAB_STM32.hpp</label>
+        <link refid="HAB__STM32_8hpp"/>
+      </node>
+      <node id="15">
+        <label>HAB_Teensy.hpp</label>
+        <link refid="HAB__Teensy_8hpp"/>
+      </node>
+      <node id="14">
+        <label>src/Hardware_Configuration/HardwareConfig.h</label>
+        <link refid="HardwareConfig_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../../Status/Status.hpp</label>
+        <link refid="Status_8hpp"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>DebugUtilities.h</label>
+        <link refid="DebugUtilities_8h"/>
+      </node>
+      <node id="11">
+        <label>HardwareUtilities.h</label>
+        <link refid="HardwareUtilities_8h"/>
+      </node>
+      <node id="13">
+        <label>RandNumUtilities.h</label>
+        <link refid="RandNumUtilities_8h"/>
+      </node>
+      <node id="12">
+        <label>TimerUtilities.h</label>
+        <link refid="TimerUtilities_8h"/>
+      </node>
+      <node id="8">
+        <label>src/Utilities/Utilities.h</label>
+        <link refid="Utilities_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Arduino.h</label>
+      </node>
+      <node id="26">
+        <label>SPI.h</label>
+      </node>
+      <node id="20">
+        <label>SoftwareSerial.h</label>
+      </node>
+      <node id="22">
+        <label>WProgram.h</label>
+      </node>
+      <node id="27">
+        <label>Wire.h</label>
+      </node>
+      <node id="23">
+        <label>limits.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="ax25_8cpp_1aa60093a9a5d5d17864cfda66c47733e3" prot="public" static="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t crc</definition>
+        <argsstring></argsstring>
+        <name>crc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="8" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ax25_8cpp_1aa076507468df0883dd5f0a1296794268" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t ones_in_a_row</definition>
+        <argsstring></argsstring>
+        <name>ones_in_a_row</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="10" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ax25_8cpp_1aaf8e82ad3f27d2e6839acc984ae4155b" prot="public" static="yes" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t packet_size</definition>
+        <argsstring></argsstring>
+        <name>packet_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="12" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ax25_8cpp_1a021141e4ed340d853a361edbafdc68a8" prot="public" static="yes" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t* packet</definition>
+        <argsstring></argsstring>
+        <name>packet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="13" column="16" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="ax25_8cpp_1a32b6b77e59a6e2244f7dbcd9c3e7f1e8" prot="public" static="yes" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int maxPacketSize</definition>
+        <argsstring></argsstring>
+        <name>maxPacketSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="15" column="21" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ax25_8cpp_1ad7daa7e56e4630913f5ce27b75fef0ae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void update_crc</definition>
+        <argsstring>(const uint8_t a_bit)</argsstring>
+        <name>update_crc</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>a_bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="19" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="ax25_8cpp_1a0d3ff38761ae59a6bb5c4f9afac29a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ax25_send_bit</definition>
+        <argsstring>(const uint8_t a_bit, const uint8_t bitStuff)</argsstring>
+        <name>ax25_send_bit</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>a_bit</declname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <declname>bitStuff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="31" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="31" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ax25_send_byte</definition>
+        <argsstring>(uint8_t a_byte)</argsstring>
+        <name>ax25_send_byte</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>a_byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="51" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="51" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="ax25_8cpp_1adb8f872fce5a2a7b4f0228853d69409b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ax25_send_flag</definition>
+        <argsstring>()</argsstring>
+        <name>ax25_send_flag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="60" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="60" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="ax25_8cpp_1a295f9e62a38c8eac1190df9b77c139aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int ax25_getPacketSize</definition>
+        <argsstring>()</argsstring>
+        <name>ax25_getPacketSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="70" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="ax25_8cpp_1a9cf6154e0de4ee381680d59aaff8d6e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ax25_send_string</definition>
+        <argsstring>(const char *const string)</argsstring>
+        <name>ax25_send_string</name>
+        <param>
+          <type>const char *const</type>
+          <declname>string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="75" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="75" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="ax25_8cpp_1af8f91b6c94fc7d360bcfc236c6ccc190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ax25_initBuffer</definition>
+        <argsstring>(uint8_t *buf, const int bufSize)</argsstring>
+        <name>ax25_initBuffer</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>bufSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="82" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="82" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="ax25_8cpp_1a45891ff098c74d3817d00c61b34f5780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ax25_send_header</definition>
+        <argsstring>(const struct PathAddress *const paths, const uint16_t nPaths, const uint16_t preambleFlags)</argsstring>
+        <name>ax25_send_header</name>
+        <param>
+          <type>const struct <ref refid="structPathAddress" kindref="compound">PathAddress</ref> *const</type>
+          <declname>paths</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>nPaths</declname>
+        </param>
+        <param>
+          <type>const uint16_t</type>
+          <declname>preambleFlags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="91" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="91" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="ax25_8cpp_1aa73200bd12eb56bad00541d3776ca8dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ax25_send_footer</definition>
+        <argsstring>()</argsstring>
+        <name>ax25_send_footer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" line="129" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp" bodystart="129" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ax25_8h" kindref="compound">ax25.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MODULE<sp/>GLOBALS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/>crc;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>ones_in_a_row;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/>packet_size;<sp/></highlight><highlight class="comment">//<sp/>size<sp/>in<sp/>bits<sp/>of<sp/>packets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/>*packet;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>maxPacketSize;<sp/><sp/></highlight><highlight class="comment">//<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MODULE<sp/>FUNCTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_crc(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>a_bit<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>xor_int<sp/>=<sp/>crc<sp/>^<sp/>a_bit;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>XOR<sp/>lsb<sp/>of<sp/>CRC<sp/>with<sp/>the<sp/>latest<sp/>bit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>crc<sp/>&gt;&gt;=<sp/>1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>16-bit<sp/>CRC<sp/>one<sp/>bit<sp/>to<sp/>the<sp/>right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>xor_int<sp/>&amp;<sp/>0x0001<sp/>)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>XOR<sp/>result<sp/>from<sp/>above<sp/>has<sp/>lsb<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>crc<sp/>^=<sp/>0x8408;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shift<sp/>16-bit<sp/>CRC<sp/>one<sp/>bit<sp/>to<sp/>the<sp/>right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>EXPORTED<sp/>FUNCTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ax25_8cpp_1a0d3ff38761ae59a6bb5c4f9afac29a7c" kindref="member">ax25_send_bit</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>a_bit,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>bitStuff<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>bitStuff<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>update_crc(<sp/>a_bit<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>a_bit<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>packet[<sp/>packet_size<sp/>&gt;&gt;<sp/>3<sp/>]<sp/>|=<sp/>(<sp/>1<sp/>&lt;&lt;<sp/>(<sp/>packet_size<sp/>&amp;<sp/>7<sp/>));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>packet_size++;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>bitStuff<sp/>&amp;&amp;<sp/>++ones_in_a_row<sp/>==<sp/>5<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1a0d3ff38761ae59a6bb5c4f9afac29a7c" kindref="member">ax25_send_bit</ref>(<sp/>0,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ones_in_a_row<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ones_in_a_row<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>packet[<sp/>packet_size<sp/>&gt;&gt;<sp/>3<sp/>]<sp/>&amp;=<sp/>~(<sp/>1<sp/>&lt;&lt;<sp/>(<sp/>packet_size<sp/>&amp;<sp/>7<sp/>));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>packet_size++;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>(<sp/>uint8_t<sp/>a_byte<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<sp/>i++<sp/>&lt;<sp/>8<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1a0d3ff38761ae59a6bb5c4f9afac29a7c" kindref="member">ax25_send_bit</ref>(<sp/>a_byte<sp/>&amp;<sp/>1,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a_byte<sp/>&gt;&gt;=<sp/>1;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ax25_8cpp_1adb8f872fce5a2a7b4f0228853d69409b" kindref="member">ax25_send_flag</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>0x7e<sp/>without<sp/>bit<sp/>stuffing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1a0d3ff38761ae59a6bb5c4f9afac29a7c" kindref="member">ax25_send_bit</ref>(<sp/>0,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>6;<sp/>i++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1a0d3ff38761ae59a6bb5c4f9afac29a7c" kindref="member">ax25_send_bit</ref>(<sp/>1,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1a0d3ff38761ae59a6bb5c4f9afac29a7c" kindref="member">ax25_send_bit</ref>(<sp/>0,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ax25_8cpp_1a295f9e62a38c8eac1190df9b77c139aa" kindref="member">ax25_getPacketSize</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>packet_size;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ax25_8cpp_1a9cf6154e0de4ee381680d59aaff8d6e3" kindref="member">ax25_send_string</ref>(<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">[<sp/>i<sp/>];<sp/>i++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">[<sp/>i<sp/>]<sp/>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ax25_8cpp_1af8f91b6c94fc7d360bcfc236c6ccc190" kindref="member">ax25_initBuffer</ref>(<sp/>uint8_t<sp/>*buf,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bufSize<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>packet<sp/>=<sp/>buf;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>maxPacketSize<sp/>=<sp/>bufSize;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>packet_size<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>ones_in_a_row<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>crc<sp/>=<sp/>0xffff;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ax25_8cpp_1a45891ff098c74d3817d00c61b34f5780" kindref="member">ax25_send_header</ref>(</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structPathAddress" kindref="compound">PathAddress</ref><sp/>*</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>paths,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/>nPaths,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="APRS_8cpp_1a2746207058ea5e2a2f3f26debebac10c" kindref="member">preambleFlags</ref></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>i,<sp/>j;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="APRS_8cpp_1a2746207058ea5e2a2f3f26debebac10c" kindref="member">preambleFlags</ref>;<sp/>i++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1adb8f872fce5a2a7b4f0228853d69409b" kindref="member">ax25_send_flag</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nPaths;<sp/>i++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transmit<sp/>callsign</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>j<sp/>=<sp/>0;<sp/>paths[<sp/>i<sp/>].<ref refid="structPathAddress_1a9a25917b2700ddfbcb88f5a3213d1b9a" kindref="member">callsign</ref>[<sp/>j<sp/>];<sp/>j++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>(<sp/>paths[<sp/>i<sp/>].callsign[<sp/>j<sp/>]<sp/>&lt;&lt;<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transmit<sp/>pad</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;<sp/>j<sp/>&lt;<sp/>6;<sp/>j++<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>(<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Transmit<sp/>SSID.<sp/>Termination<sp/>signaled<sp/>with<sp/>last<sp/>bit<sp/>=<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>i<sp/>==<sp/>nPaths<sp/>-<sp/>1<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>((<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal"><sp/>+<sp/>paths[<sp/>i<sp/>].ssid<sp/>)<sp/>&lt;&lt;<sp/>1<sp/>|<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>((<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal"><sp/>+<sp/>paths[<sp/>i<sp/>].ssid<sp/>)<sp/>&lt;&lt;<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Control<sp/>field:<sp/>3<sp/>=<sp/>APRS-UI<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>(<sp/>0x03<sp/>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Protocol<sp/>ID:<sp/>0xf0<sp/>=<sp/>no<sp/>layer<sp/>3<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>(<sp/>0xf0<sp/>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="ax25_8cpp_1aa73200bd12eb56bad00541d3776ca8dd" kindref="member">ax25_send_footer</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>crc<sp/>so<sp/>that<sp/>it<sp/>can<sp/>be<sp/>treated<sp/>it<sp/>atomically</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>final_crc<sp/>=<sp/>crc;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Send<sp/>the<sp/>CRC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>(<sp/>~(<sp/>final_crc<sp/>&amp;<sp/>0xff<sp/>));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>final_crc<sp/>&gt;&gt;=<sp/>8;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1ae80e2185743694cb1e289ee4d7af6c77" kindref="member">ax25_send_byte</ref>(<sp/>~(<sp/>final_crc<sp/>&amp;<sp/>0xff<sp/>));</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Signal<sp/>the<sp/>end<sp/>of<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ax25_8cpp_1adb8f872fce5a2a7b4f0228853d69409b" kindref="member">ax25_send_flag</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/APRS/ax25.cpp"/>
+  </compounddef>
+</doxygen>

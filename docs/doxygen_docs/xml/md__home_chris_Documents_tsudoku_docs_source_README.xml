@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="md__home_chris_Documents_tsudoku_docs_source_README" kind="page">
+    <compoundname>md__home_chris_Documents_tsudoku_docs_source_README</compoundname>
+    <title>tsudoku</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md7">
+<title>Description</title>
+<para>tsudoku (both short for &quot;terminal sudoku&quot; and inspired phonetically by other Japanese words such as &quot;tsunami&quot;) is a user-friendly implementation of the classic game of sudoku that you can play in your terminal.</para>
+</sect1>
+<sect1 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md8">
+<title>Supported systems</title>
+<para>The below operating systems have been tested for working condition. Other Unix-based OSs are also likely to also be supported.</para>
+<para>&gt;- Debian Linux <linebreak/>
+ &gt;- MacOS <linebreak/>
+ &gt;- WSL (Windows Subsystem for Linux)</para>
+<para><bold>Note for MacOS users</bold>: It&apos;s possible that certain (e.g. the Makefile and this README) will be marked as executable during the install process and prevent you from easily viewing the file in a text editor. Alternative ways to view the files marked this way include the Unix command line utility <computeroutput>less</computeroutput> or terminal-based text editors such as <computeroutput>vim</computeroutput>/<computeroutput>view</computeroutput> or <computeroutput>nano</computeroutput>. The easiest and simplest to use is <computeroutput>less</computeroutput>. Examples are below:</para>
+<para>&gt;<computeroutput>$ less README.md</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ view README.md</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ nano -v README.md</computeroutput></para>
+<para><bold>Note for inexperienced WSL users</bold>: tsudoku will not be compilable or playable unless a WSL shell is opened first. A WSL shell should be easily accessible from either a PowerShell or Windows Command Prompt by running <computeroutput>wsl.exe</computeroutput> at the current terminal prompt. Also see the example below. If you are unsure how to install or setup WSL, please reference <ulink url="https://learn.microsoft.com/en-us/windows/wsl/install">https://learn.microsoft.com/en-us/windows/wsl/install</ulink> .</para>
+<para><itemizedlist>
+<listitem><para>Ex: Running tsudoku from Windows Command Prompt &gt;<computeroutput>&gt;wsl.exe</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ tsudoku</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md9">
+<title>Prerequisites</title>
+<para>NOTE: These are likely already installed depending on your operating system. If not, you should be able to download them easily using your OS&apos;s package manager (see <bold>Prerequisites Installation</bold> section).</para>
+<para>&gt;- g++ (tsudoku compiles using the C++17 standard) <linebreak/>
+ &gt;- ncurses</para>
+</sect1>
+<sect1 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md10">
+<title>Prerequisites Installation</title>
+<para>If either of the prerquisites are not pre-installed by your operating system, you can install them from your package manager.</para>
+<para>&gt;<computeroutput>$ sudo apt install g++</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ sudo apt install libncurses-dev</computeroutput></para>
+</sect1>
+<sect1 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md11">
+<title>Installation</title>
+<sect2 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md12">
+<title>From source</title>
+<sect3 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md13">
+<title>Step 1: Clone the project from Github.</title>
+<para><itemizedlist>
+<listitem><para>Option 1: Git via HTTPS &gt;<computeroutput>$ git clone <ulink url="https://github.com/TheOGChips/tsudoku.git">https://github.com/TheOGChips/tsudoku.git</ulink> &amp;&amp; cd tsudoku</computeroutput></para>
+</listitem><listitem><para>Option 2: Git via SSH &gt;<computeroutput>$ git clone git@github.com:TheOGChips/tsudoku.git &amp;&amp; cd tsudoku</computeroutput></para>
+</listitem><listitem><para>Option 3: Direct download from the main branch &gt;<computeroutput>$ wget <ulink url="https://github.com/TheOGChips/tsudoku/archive/refs/heads/main.zip">https://github.com/TheOGChips/tsudoku/archive/refs/heads/main.zip</ulink> -O tsudoku.zip</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ unzip tsudoku.zip &amp;&amp; mv tsudoku-main tsudoku &amp;&amp; cd tsudoku</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md14">
+<title>Step 2: Compile the source code using the provided makefile. Performing any of the three methods above should have already placed you inside the &lt;em&gt;tsudoku&lt;/em&gt; directory of the cloned source code.</title>
+<para>&gt;<computeroutput>$ make</computeroutput></para>
+</sect3>
+<sect3 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md15">
+<title>Step 3: Source your shell&apos;s RC file to allow running &lt;em&gt;tsudoku&lt;/em&gt; in the current shell instance.</title>
+<para><itemizedlist>
+<listitem><para>Examples: &gt;<computeroutput>$ source ~/.bashrc # if using bash</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ source ~/.zshrc # if using zsh</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md16">
+<title>Usage</title>
+<sect2 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md17">
+<title>With in-game menu enabled:</title>
+<para>&gt;<computeroutput>$ tsudoku</computeroutput></para>
+</sect2>
+<sect2 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md18">
+<title>With in-game menu disabled:</title>
+<para>&gt;<computeroutput>$ tsudoku -n</computeroutput> <linebreak/>
+ &gt;or <linebreak/>
+ &gt;<computeroutput>$ tsudoku --no-in-game-menu</computeroutput></para>
+</sect2>
+<sect2 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md19">
+<title>Display usage information:</title>
+<para>&gt;<computeroutput>$ tsudoku --help</computeroutput></para>
+</sect2>
+<sect2 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md20">
+<title>Remove all saved games</title>
+<para>&gt;<computeroutput>$ tsudoku -d</computeroutput> <linebreak/>
+ &gt;or <linebreak/>
+ &gt;<computeroutput>$ tsudoku --delete-saved-games</computeroutput></para>
+</sect2>
+</sect1>
+<sect1 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md21">
+<title>Updates</title>
+<sect2 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md22">
+<title>From source</title>
+<sect3 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md23">
+<title>If installed using Git via HTTPS or SSH (options 1 or 2), navigate to the &lt;em&gt;tsudoku&lt;/em&gt; directory, then perform the following steps:</title>
+<para>&gt;<computeroutput>$ git pull</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ make upgrade</computeroutput></para>
+</sect3>
+<sect3 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md24">
+<title>If installed via direct downloaded (option 3), delete the &lt;em&gt;tsudoku&lt;/em&gt; directory and repeat the installation process as described in the &lt;strong&gt;Installation&lt;/strong&gt; section again.</title>
+<para>&gt;<computeroutput>$ rm -rf tsudoku</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ wget <ulink url="https://github.com/TheOGChips/tsudoku/archive/refs/heads/main.zip">https://github.com/TheOGChips/tsudoku/archive/refs/heads/main.zip</ulink> -O tsudoku.zip</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ unzip tsudoku.zip &amp;&amp; mv tsudoku-main tsudoku &amp;&amp; cd tsudoku</computeroutput> <linebreak/>
+ &gt;<computeroutput>$ make</computeroutput></para>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="md__home_chris_Documents_tsudoku_docs_source_README_1autotoc_md25">
+<title>Status update: 3 March 2023</title>
+<para>tsudoku is now ready for official release! Barring any potential future bug fixes, this will be the last update until either the documentation is finished or this project has been officially added to the Debian APT repository. Anyone is welcome to notify me of a bug fix by email at: <ulink url="mailto:swindell.christian.g@gmail.com">swindell.christian.g@gmail.com</ulink> . If you have played tsudoku and enjoyed your experience, and you feel obligated to compensate me for my time working on this, you can also email me to ask about setting up a one-time donation. Have fun playing! </para>
+</sect1>
+    </detaileddescription>
+    <location file="/home/chris/Documents/tsudoku/docs/source/README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespaceproject1" kind="namespace" language="Python">
+    <compoundname>project1</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproject1_1a7219682a3049738e61af24a8a4950078" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>project1.X</definition>
+        <argsstring></argsstring>
+        <name>X</name>
+        <qualifiedname>project1.X</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="12" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproject1_1abc4556b1e368a47ab56ada15d51c2d77" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>project1.Y</definition>
+        <argsstring></argsstring>
+        <name>Y</name>
+        <qualifiedname>project1.Y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="12" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproject1_1a55aeff45fb22ec2ee00b489cb0ecba91" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>project1.Z</definition>
+        <argsstring></argsstring>
+        <name>Z</name>
+        <qualifiedname>project1.Z</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="12" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproject1_1ae0c8589adc8c512dca9003f441574a45" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>project1.TAU</definition>
+        <argsstring></argsstring>
+        <name>TAU</name>
+        <qualifiedname>project1.TAU</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="12" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproject1_1a40d5908d81ccdc8bc982c49e693d7503" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.LFM_Pulse</definition>
+        <argsstring>(B, T, u, t_axis)</argsstring>
+        <name>LFM_Pulse</name>
+        <qualifiedname>project1.LFM_Pulse</qualifiedname>
+        <param>
+          <type>B</type>
+          <defname>B</defname>
+        </param>
+        <param>
+          <type>T</type>
+          <defname>T</defname>
+        </param>
+        <param>
+          <type>u</type>
+          <defname>u</defname>
+        </param>
+        <param>
+          <type>t_axis</type>
+          <defname>t_axis</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="15" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="15" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproject1_1ad7e2a1daf71a82fd9df9f4899af4df76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.filter_signal</definition>
+        <argsstring>(y, B, T, u, t_axis)</argsstring>
+        <name>filter_signal</name>
+        <qualifiedname>project1.filter_signal</qualifiedname>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>B</type>
+          <defname>B</defname>
+        </param>
+        <param>
+          <type>T</type>
+          <defname>T</defname>
+        </param>
+        <param>
+          <type>u</type>
+          <defname>u</defname>
+        </param>
+        <param>
+          <type>t_axis</type>
+          <defname>t_axis</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="26" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproject1_1af10186e711cdb5c849ac7b96357d5183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.cluster_detections</definition>
+        <argsstring>(det, p)</argsstring>
+        <name>cluster_detections</name>
+        <qualifiedname>project1.cluster_detections</qualifiedname>
+        <param>
+          <type>det</type>
+          <defname>det</defname>
+        </param>
+        <param>
+          <type>p</type>
+          <defname>p</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="31" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="31" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproject1_1a52496ed37f59f97ef49f40b7fc478d16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.cfar_mask</definition>
+        <argsstring>(n_ref, n_guard)</argsstring>
+        <name>cfar_mask</name>
+        <qualifiedname>project1.cfar_mask</qualifiedname>
+        <param>
+          <type>n_ref</type>
+          <defname>n_ref</defname>
+        </param>
+        <param>
+          <type>n_guard</type>
+          <defname>n_guard</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="59" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="59" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproject1_1a288d1445e8dcd54995b4213019c7e005" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.compute_threshold</definition>
+        <argsstring>(p, n_ref, n_guard, p_fa)</argsstring>
+        <name>compute_threshold</name>
+        <qualifiedname>project1.compute_threshold</qualifiedname>
+        <param>
+          <type>p</type>
+          <defname>p</defname>
+        </param>
+        <param>
+          <type>n_ref</type>
+          <defname>n_ref</defname>
+        </param>
+        <param>
+          <type>n_guard</type>
+          <defname>n_guard</defname>
+        </param>
+        <param>
+          <type>p_fa</type>
+          <defname>p_fa</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="68" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="68" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproject1_1aff57d4c2b2d926b40ef232920397883f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.detect_and_plot</definition>
+        <argsstring>(name, B, T, u, rx, t_mf, n_ref, n_guard, p_fa)</argsstring>
+        <name>detect_and_plot</name>
+        <qualifiedname>project1.detect_and_plot</qualifiedname>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>B</type>
+          <defname>B</defname>
+        </param>
+        <param>
+          <type>T</type>
+          <defname>T</defname>
+        </param>
+        <param>
+          <type>u</type>
+          <defname>u</defname>
+        </param>
+        <param>
+          <type>rx</type>
+          <defname>rx</defname>
+        </param>
+        <param>
+          <type>t_mf</type>
+          <defname>t_mf</defname>
+        </param>
+        <param>
+          <type>n_ref</type>
+          <defname>n_ref</defname>
+        </param>
+        <param>
+          <type>n_guard</type>
+          <defname>n_guard</defname>
+        </param>
+        <param>
+          <type>p_fa</type>
+          <defname>p_fa</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="81" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="81" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproject1_1a699863b0fcff2021579128df1d1f2608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.pulse_params_dict</definition>
+        <argsstring>()</argsstring>
+        <name>pulse_params_dict</name>
+        <qualifiedname>project1.pulse_params_dict</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="113" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="113" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproject1_1ac022ceb1e63e95e208e8d1de2317a512" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.lla2ecef</definition>
+        <argsstring>(tuple LLA)</argsstring>
+        <name>lla2ecef</name>
+        <qualifiedname>project1.lla2ecef</qualifiedname>
+        <param>
+          <type>tuple</type>
+          <declname>LLA</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="154" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="154" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproject1_1a1da05e8c1b7833ac9a11615fdd8c0de4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.residual</definition>
+        <argsstring>(tgt, xi, yi, zi, tau_i)</argsstring>
+        <name>residual</name>
+        <qualifiedname>project1.residual</qualifiedname>
+        <param>
+          <type>tgt</type>
+          <defname>tgt</defname>
+        </param>
+        <param>
+          <type>xi</type>
+          <defname>xi</defname>
+        </param>
+        <param>
+          <type>yi</type>
+          <defname>yi</defname>
+        </param>
+        <param>
+          <type>zi</type>
+          <defname>zi</defname>
+        </param>
+        <param>
+          <type>tau_i</type>
+          <defname>tau_i</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="172" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="172" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproject1_1a50796118612258bffd3064714a6a4f12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def project1.main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>project1.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="178" column="1" bodyfile="/home/chris/Documents/ece6040/projects/project1/project1.py" bodystart="178" bodyend="288"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece6040/projects/project1/project1.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

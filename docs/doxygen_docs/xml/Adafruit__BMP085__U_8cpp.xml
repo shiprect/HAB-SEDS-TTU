@@ -1,0 +1,638 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Adafruit__BMP085__U_8cpp" kind="file" language="C++">
+    <compoundname>Adafruit_BMP085_U.cpp</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes local="no">Wire.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">limits.h</includes>
+    <includes refid="Adafruit__BMP085__U_8h" local="yes">Adafruit_BMP085_U.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp</label>
+        <link refid="Adafruit__BMP085__U_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Adafruit_BMP085_U.h</label>
+        <link refid="Adafruit__BMP085__U_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Adafruit_Sensor.h</label>
+        <link refid="Adafruit__Sensor_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>WProgram.h</label>
+      </node>
+      <node id="3">
+        <label>Wire.h</label>
+      </node>
+      <node id="5">
+        <label>limits.h</label>
+      </node>
+      <node id="4">
+        <label>math.h</label>
+      </node>
+      <node id="8">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Adafruit__BMP085__U_8cpp_1a0437e0951f8a63144162d9257a497c14" prot="public" static="no">
+        <name>BMP085_USE_DATASHEET_VALS</name>
+        <initializer>(0) /* Set to 1 for sanity check */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="38" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Adafruit__BMP085__U_8cpp_1ac3c6bcb816961e6625341f124570ad14" prot="public" static="yes" mutable="no">
+        <type><ref refid="structbmp085__calib__data" kindref="compound">bmp085_calib_data</ref></type>
+        <definition>bmp085_calib_data _bmp085_coeffs</definition>
+        <argsstring></argsstring>
+        <name>_bmp085_coeffs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="35" column="26" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="Adafruit__BMP085__U_8cpp_1a18d09ff548981f6c9f8708036c9aebb5" prot="public" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t _bmp085Mode</definition>
+        <argsstring></argsstring>
+        <name>_bmp085Mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="36" column="26" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Adafruit__BMP085__U_8cpp_1a42205ae8472967e07bb7101fc5e79177" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void writeCommand</definition>
+        <argsstring>(byte reg, byte value)</argsstring>
+        <name>writeCommand</name>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Writes an 8 bit value over I2C. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="49" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="49" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="Adafruit__BMP085__U_8cpp_1a6ab58ad718367ee68eb369b32bdee8eb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void read8</definition>
+        <argsstring>(byte reg, uint8_t *value)</argsstring>
+        <name>read8</name>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Reads an 8 bit value over I2C. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="67" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="67" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="Adafruit__BMP085__U_8cpp_1ac84b910996d699ce74e3267a00f148a4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void read16</definition>
+        <argsstring>(byte reg, uint16_t *value)</argsstring>
+        <name>read16</name>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint16_t *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Reads a 16 bit value over I2C. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="90" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="90" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="Adafruit__BMP085__U_8cpp_1a93f9fefb4bca544b5e5bc51711762594" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void readS16</definition>
+        <argsstring>(byte reg, int16_t *value)</argsstring>
+        <name>readS16</name>
+        <param>
+          <type>byte</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Reads a signed 16 bit value over I2C. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="113" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="113" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="Adafruit__BMP085__U_8cpp_1aef2906629cd6037aa2e5c11786807d4f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void readCoefficients</definition>
+        <argsstring>(void)</argsstring>
+        <name>readCoefficients</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Reads the factory-set coefficients. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="125" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="125" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="Adafruit__BMP085__U_8cpp_1a7e680b4545ab0083d204af18bd8e094d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void readRawTemperature</definition>
+        <argsstring>(int32_t *temperature)</argsstring>
+        <name>readRawTemperature</name>
+        <param>
+          <type>int32_t *</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="160" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="160" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="Adafruit__BMP085__U_8cpp_1aab5639fd1ff0992822bb71b52b077cfe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void readRawPressure</definition>
+        <argsstring>(int32_t *pressure)</argsstring>
+        <name>readRawPressure</name>
+        <param>
+          <type>int32_t *</type>
+          <declname>pressure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" line="178" column="13" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="178" bodyend="212"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>This<sp/>is<sp/>a<sp/>library<sp/>for<sp/>the<sp/>BMP085<sp/>pressure<sp/>sensor</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>Designed<sp/>specifically<sp/>to<sp/>work<sp/>with<sp/>the<sp/>Adafruit<sp/>BMP085<sp/>or<sp/>BMP180<sp/>Breakout<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/>----&gt;<sp/>http://www.adafruit.com/products/391</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/>----&gt;<sp/>http://www.adafruit.com/products/1603</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>These<sp/>displays<sp/>use<sp/>I2C<sp/>to<sp/>communicate,<sp/>2<sp/>pins<sp/>are<sp/>required<sp/>to<sp/>interface.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>Adafruit<sp/>invests<sp/>time<sp/>and<sp/>resources<sp/>providing<sp/>this<sp/>open<sp/>source<sp/>code,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>please<sp/>support<sp/>Adafruit<sp/>andopen-source<sp/>hardware<sp/>by<sp/>purchasing<sp/>products</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>from<sp/>Adafruit!</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>Written<sp/>by<sp/>Kevin<sp/>Townsend<sp/>for<sp/>Adafruit<sp/>Industries.<sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>BSD<sp/>license,<sp/>all<sp/>text<sp/>above<sp/>must<sp/>be<sp/>included<sp/>in<sp/>any<sp/>redistribution</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__AVR_ATtiny85__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&quot;TinyWireM.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>Wire<sp/>TinyWireM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#include<sp/>&lt;Wire.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Adafruit__BMP085__U_8h" kindref="compound">Adafruit_BMP085_U.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structbmp085__calib__data" kindref="compound">bmp085_calib_data</ref><sp/>_bmp085_coeffs;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Last<sp/>read<sp/>accelerometer<sp/>data<sp/>will<sp/>be<sp/>available<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085Mode;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BMP085_USE_DATASHEET_VALS<sp/>(0)<sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>to<sp/>1<sp/>for<sp/>sanity<sp/>check<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>PRIVATE<sp/>FUNCTIONS</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeCommand(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg,<sp/></highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.beginTransmission((uint8_t)<ref refid="Adafruit__BMP085__U_8h_1a32a3aa8c5356736b5700f4c136fe8646" kindref="member">BMP085_ADDRESS</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.write((uint8_t)reg);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.write((uint8_t)value);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.send(reg);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.send(value);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.endTransmission();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read8(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg,<sp/>uint8_t<sp/>*value)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.beginTransmission((uint8_t)<ref refid="Adafruit__BMP085__U_8h_1a32a3aa8c5356736b5700f4c136fe8646" kindref="member">BMP085_ADDRESS</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.write((uint8_t)reg);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.send(reg);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.endTransmission();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.requestFrom((uint8_t)<ref refid="Adafruit__BMP085__U_8h_1a32a3aa8c5356736b5700f4c136fe8646" kindref="member">BMP085_ADDRESS</ref>,<sp/>(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">)1);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*value<sp/>=<sp/>Wire.read();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*value<sp/>=<sp/>Wire.receive();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.endTransmission();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>read16(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg,<sp/>uint16_t<sp/>*value)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.beginTransmission((uint8_t)<ref refid="Adafruit__BMP085__U_8h_1a32a3aa8c5356736b5700f4c136fe8646" kindref="member">BMP085_ADDRESS</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.write((uint8_t)reg);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Wire.send(reg);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.endTransmission();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.requestFrom((uint8_t)<ref refid="Adafruit__BMP085__U_8h_1a32a3aa8c5356736b5700f4c136fe8646" kindref="member">BMP085_ADDRESS</ref>,<sp/>(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal">)2);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*value<sp/>=<sp/>(Wire.read()<sp/>&lt;&lt;<sp/>8)<sp/>|<sp/>Wire.read();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*value<sp/>=<sp/>(Wire.receive()<sp/>&lt;&lt;<sp/>8)<sp/>|<sp/>Wire.receive();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.endTransmission();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readS16(</highlight><highlight class="keywordtype">byte</highlight><highlight class="normal"><sp/>reg,<sp/>int16_t<sp/>*value)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>i;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>read16(reg,<sp/>&amp;i);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>*value<sp/>=<sp/>(int16_t)i;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readCoefficients(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>BMP085_USE_DATASHEET_VALS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a8f808eba492852ca1b0a0cd61629ce5f" kindref="member">ac1</ref><sp/>=<sp/>408;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1ac9d1c1863d3a62844e516c2e3bbb5ac7" kindref="member">ac2</ref><sp/>=<sp/>-72;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a20bcdf35d893f1ded132f2645b7a6f5a" kindref="member">ac3</ref><sp/>=<sp/>-14383;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1af516b64047136528a997aa75b56f597c" kindref="member">ac4</ref><sp/>=<sp/>32741;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1aa9097616ddd245e0ccfc3ae2b0b79d24" kindref="member">ac5</ref><sp/>=<sp/>32757;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a7ece6824a6e65a631cdafdcf0f3210ed" kindref="member">ac6</ref><sp/>=<sp/>23153;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a7a2fda649e8dfb2ac8f2164ce3d02194" kindref="member">b1</ref><sp/><sp/>=<sp/>6190;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1ac0ab7a73d5b1e92a05f9bc404b6933c6" kindref="member">b2</ref><sp/><sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a7f474f6ec30b50ba31fd1f1563a96120" kindref="member">mb</ref><sp/><sp/>=<sp/>-32768;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a5b74fa720b0cece5c0f82f7efcbf4e20" kindref="member">mc</ref><sp/><sp/>=<sp/>-8711;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a15d87676d309b6f6ccc2c1b04c956cef" kindref="member">md</ref><sp/><sp/>=<sp/>2868;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085Mode<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readS16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a6999200e418e683015cb4551f874948f" kindref="member">BMP085_REGISTER_CAL_AC1</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a8f808eba492852ca1b0a0cd61629ce5f" kindref="member">ac1</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readS16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a5e85373127fef30c83d387782d0e67d0" kindref="member">BMP085_REGISTER_CAL_AC2</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1ac9d1c1863d3a62844e516c2e3bbb5ac7" kindref="member">ac2</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readS16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a5ecca29ffff12313238d891093af2520" kindref="member">BMP085_REGISTER_CAL_AC3</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a20bcdf35d893f1ded132f2645b7a6f5a" kindref="member">ac3</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>read16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a295f1765768a433741186c00990955ba" kindref="member">BMP085_REGISTER_CAL_AC4</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1af516b64047136528a997aa75b56f597c" kindref="member">ac4</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>read16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a37886675e54ac7a2f4c405d6515059de" kindref="member">BMP085_REGISTER_CAL_AC5</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1aa9097616ddd245e0ccfc3ae2b0b79d24" kindref="member">ac5</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>read16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a7b56fbed86df839dfa7d1912171818fc" kindref="member">BMP085_REGISTER_CAL_AC6</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a7ece6824a6e65a631cdafdcf0f3210ed" kindref="member">ac6</ref>);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readS16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a40855131031111d736eb2f30e64c533c" kindref="member">BMP085_REGISTER_CAL_B1</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a7a2fda649e8dfb2ac8f2164ce3d02194" kindref="member">b1</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readS16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5ac09c5cc5f929afb312444c2a3a604a47" kindref="member">BMP085_REGISTER_CAL_B2</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1ac0ab7a73d5b1e92a05f9bc404b6933c6" kindref="member">b2</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readS16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a257fdc9a1bda05a5598b9c15da513398" kindref="member">BMP085_REGISTER_CAL_MB</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a7f474f6ec30b50ba31fd1f1563a96120" kindref="member">mb</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readS16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a7a59a9e1ac87a1dc8c85e3a708acd9be" kindref="member">BMP085_REGISTER_CAL_MC</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a5b74fa720b0cece5c0f82f7efcbf4e20" kindref="member">mc</ref>);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>readS16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a11870ebb5e1634adb52c843b67d4f5e2" kindref="member">BMP085_REGISTER_CAL_MD</ref>,<sp/>&amp;_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a15d87676d309b6f6ccc2c1b04c956cef" kindref="member">md</ref>);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readRawTemperature(int32_t<sp/>*temperature)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>BMP085_USE_DATASHEET_VALS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*temperature<sp/>=<sp/>27898;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/>t;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>writeCommand(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a6816d5e052e9d122c10b79a44c5c30e1" kindref="member">BMP085_REGISTER_CONTROL</ref>,<sp/><ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a32131f64f1d981a19956341f1ca7831d" kindref="member">BMP085_REGISTER_READTEMPCMD</ref>);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(5);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>read16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5adbbe2e87f1a8877559a2212879ab0cb1" kindref="member">BMP085_REGISTER_TEMPDATA</ref>,<sp/>&amp;t);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*temperature<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>readRawPressure(int32_t<sp/>*pressure)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>BMP085_USE_DATASHEET_VALS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*pressure<sp/>=<sp/>23843;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/>p8;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>p16;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>p32;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>writeCommand(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a6816d5e052e9d122c10b79a44c5c30e1" kindref="member">BMP085_REGISTER_CONTROL</ref>,<sp/><ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5a08c1f3c0270292fca9c96df65dc603c6" kindref="member">BMP085_REGISTER_READPRESSURECMD</ref><sp/>+<sp/>(_bmp085Mode<sp/>&lt;&lt;<sp/>6));</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(_bmp085Mode)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7baadedc159681579a4c306ebf1654c5a32" kindref="member">BMP085_MODE_ULTRALOWPOWER</ref>:</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(5);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba59b57f5bbfc7d6b8ccb13ff09ac4397c" kindref="member">BMP085_MODE_STANDARD</ref>:</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(8);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7bae939b2b687268de84d2fc27c064509e0" kindref="member">BMP085_MODE_HIGHRES</ref>:</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(14);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba6145303f80a1daa6873c32ca5fdd5b3e" kindref="member">BMP085_MODE_ULTRAHIGHRES</ref>:</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(26);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>read16(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5ac55ff9dc9131f9e0541b51f79c50f0d2" kindref="member">BMP085_REGISTER_PRESSUREDATA</ref>,<sp/>&amp;p16);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>p32<sp/>=<sp/>(uint32_t)p16<sp/>&lt;&lt;<sp/>8;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>read8(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5ac55ff9dc9131f9e0541b51f79c50f0d2" kindref="member">BMP085_REGISTER_PRESSUREDATA</ref>+2,<sp/>&amp;p8);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>p32<sp/>+=<sp/>p8;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>p32<sp/>&gt;&gt;=<sp/>(8<sp/>-<sp/>_bmp085Mode);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>*pressure<sp/>=<sp/>p32;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal">int32_t<sp/><ref refid="classAdafruit__BMP085__Unified_1aea3f76eb40f65b3545df730b9fe76553" kindref="member">Adafruit_BMP085_Unified::computeB5</ref>(int32_t<sp/>ut)<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>X1<sp/>=<sp/>(ut<sp/>-<sp/>(int32_t)_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a7ece6824a6e65a631cdafdcf0f3210ed" kindref="member">ac6</ref>)<sp/>*<sp/>((int32_t)_bmp085_coeffs.<ref refid="structbmp085__calib__data_1aa9097616ddd245e0ccfc3ae2b0b79d24" kindref="member">ac5</ref>)<sp/>&gt;&gt;<sp/>15;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>X2<sp/>=<sp/>((int32_t)_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a5b74fa720b0cece5c0f82f7efcbf4e20" kindref="member">mc</ref><sp/>&lt;&lt;<sp/>11)<sp/>/<sp/>(X1+(int32_t)_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a15d87676d309b6f6ccc2c1b04c956cef" kindref="member">md</ref>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>X1<sp/>+<sp/>X2;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="227"><highlight class="comment"><sp/>CONSTRUCTOR</highlight></codeline>
+<codeline lineno="228"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><ref refid="classAdafruit__BMP085__Unified_1a9411ffe6c882ce1aec61a6227db3e47c" kindref="member">Adafruit_BMP085_Unified::Adafruit_BMP085_Unified</ref>(int32_t<sp/>sensorID)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAdafruit__BMP085__Unified_1a31f5869ed0f0ba87733e1f9ea3bc7530" kindref="member">_sensorID</ref><sp/>=<sp/>sensorID;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="comment">/***************************************************************************</highlight></codeline>
+<codeline lineno="240"><highlight class="comment"><sp/>PUBLIC<sp/>FUNCTIONS</highlight></codeline>
+<codeline lineno="241"><highlight class="comment"><sp/>***************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1a19afa291aca37fbfaa5cf02137c5777f" kindref="member">Adafruit_BMP085_Unified::begin</ref>(<ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7b" kindref="member">bmp085_mode_t</ref><sp/>mode)</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enable<sp/>I2C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>Wire.begin();</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Mode<sp/>boundary<sp/>check<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((mode<sp/>&gt;<sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba6145303f80a1daa6873c32ca5fdd5b3e" kindref="member">BMP085_MODE_ULTRAHIGHRES</ref>)<sp/>||<sp/>(mode<sp/>&lt;<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mode<sp/>=<sp/><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba6145303f80a1daa6873c32ca5fdd5b3e" kindref="member">BMP085_MODE_ULTRAHIGHRES</ref>;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Make<sp/>sure<sp/>we<sp/>have<sp/>the<sp/>right<sp/>device<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>id;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>read8(<ref refid="Adafruit__BMP085__U_8h_1a99fb83031ce9923c84392b4e92f956b5ac1dfc765b526b0076a4ce260697454a0" kindref="member">BMP085_REGISTER_CHIPID</ref>,<sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>!=<sp/>0x55)<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Set<sp/>the<sp/>mode<sp/>indicator<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>_bmp085Mode<sp/>=<sp/>mode;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Coefficients<sp/>need<sp/>to<sp/>be<sp/>read<sp/>once<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/>readCoefficients();</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1abdc7b3759a57b5c03ba09873a39a1839" kindref="member">Adafruit_BMP085_Unified::getPressure</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*pressure)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>ut<sp/>=<sp/>0,<sp/>up<sp/>=<sp/>0,<sp/>compp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/><sp/>x1,<sp/>x2,<sp/>b5,<sp/>b6,<sp/>x3,<sp/>b3,<sp/>p;</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>b4,<sp/>b7;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Get<sp/>the<sp/>raw<sp/>pressure<sp/>and<sp/>temperature<sp/>values<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>readRawTemperature(&amp;ut);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>readRawPressure(&amp;up);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Temperature<sp/>compensation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>b5<sp/>=<sp/><ref refid="classAdafruit__BMP085__Unified_1aea3f76eb40f65b3545df730b9fe76553" kindref="member">computeB5</ref>(ut);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Pressure<sp/>compensation<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>b6<sp/>=<sp/>b5<sp/>-<sp/>4000;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>(_bmp085_coeffs.<ref refid="structbmp085__calib__data_1ac0ab7a73d5b1e92a05f9bc404b6933c6" kindref="member">b2</ref><sp/>*<sp/>((b6<sp/>*<sp/>b6)<sp/>&gt;&gt;<sp/>12))<sp/>&gt;&gt;<sp/>11;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>(_bmp085_coeffs.<ref refid="structbmp085__calib__data_1ac9d1c1863d3a62844e516c2e3bbb5ac7" kindref="member">ac2</ref><sp/>*<sp/>b6)<sp/>&gt;&gt;<sp/>11;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>x3<sp/>=<sp/>x1<sp/>+<sp/>x2;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>b3<sp/>=<sp/>(((((int32_t)<sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a8f808eba492852ca1b0a0cd61629ce5f" kindref="member">ac1</ref>)<sp/>*<sp/>4<sp/>+<sp/>x3)<sp/>&lt;&lt;<sp/>_bmp085Mode)<sp/>+<sp/>2)<sp/>&gt;&gt;<sp/>2;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>(_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a20bcdf35d893f1ded132f2645b7a6f5a" kindref="member">ac3</ref><sp/>*<sp/>b6)<sp/>&gt;&gt;<sp/>13;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>(_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a7a2fda649e8dfb2ac8f2164ce3d02194" kindref="member">b1</ref><sp/>*<sp/>((b6<sp/>*<sp/>b6)<sp/>&gt;&gt;<sp/>12))<sp/>&gt;&gt;<sp/>16;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>x3<sp/>=<sp/>((x1<sp/>+<sp/>x2)<sp/>+<sp/>2)<sp/>&gt;&gt;<sp/>2;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>b4<sp/>=<sp/>(_bmp085_coeffs.<ref refid="structbmp085__calib__data_1af516b64047136528a997aa75b56f597c" kindref="member">ac4</ref><sp/>*<sp/>(uint32_t)<sp/>(x3<sp/>+<sp/>32768))<sp/>&gt;&gt;<sp/>15;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>b7<sp/>=<sp/>((uint32_t)<sp/>(up<sp/>-<sp/>b3)<sp/>*<sp/>(50000<sp/>&gt;&gt;<sp/>_bmp085Mode));</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(b7<sp/>&lt;<sp/>0x80000000)<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/>(b7<sp/>&lt;&lt;<sp/>1)<sp/>/<sp/>b4;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/>(b7<sp/>/<sp/>b4)<sp/>&lt;&lt;<sp/>1;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>(p<sp/>&gt;&gt;<sp/>8)<sp/>*<sp/>(p<sp/>&gt;&gt;<sp/>8);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>(x1<sp/>*<sp/>3038)<sp/>&gt;&gt;<sp/>16;</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>(-7357<sp/>*<sp/>p)<sp/>&gt;&gt;<sp/>16;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>compp<sp/>=<sp/>p<sp/>+<sp/>((x1<sp/>+<sp/>x2<sp/>+<sp/>3791)<sp/>&gt;&gt;<sp/>4);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Assign<sp/>compensated<sp/>pressure<sp/>value<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>*pressure<sp/>=<sp/>compp;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1a4d74250c9406e7360e1a8b4f13610e8d" kindref="member">Adafruit_BMP085_Unified::getTemperature</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*temp)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>int32_t<sp/>UT,<sp/>B5;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>following<sp/>ds<sp/>convention</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>t;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>readRawTemperature(&amp;UT);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#if<sp/>BMP085_USE_DATASHEET_VALS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>datasheet<sp/>numbers!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UT<sp/>=<sp/>27898;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a7ece6824a6e65a631cdafdcf0f3210ed" kindref="member">ac6</ref><sp/>=<sp/>23153;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1aa9097616ddd245e0ccfc3ae2b0b79d24" kindref="member">ac5</ref><sp/>=<sp/>32757;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a5b74fa720b0cece5c0f82f7efcbf4e20" kindref="member">mc</ref><sp/>=<sp/>-8711;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_bmp085_coeffs.<ref refid="structbmp085__calib__data_1a15d87676d309b6f6ccc2c1b04c956cef" kindref="member">md</ref><sp/>=<sp/>2868;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>B5<sp/>=<sp/><ref refid="classAdafruit__BMP085__Unified_1aea3f76eb40f65b3545df730b9fe76553" kindref="member">computeB5</ref>(UT);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>=<sp/>(B5+8)<sp/>&gt;&gt;<sp/>4;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>/=<sp/>10;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>*temp<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1a899d8915f530ad7be9e2cab86b26d86f" kindref="member">Adafruit_BMP085_Unified::pressureToAltitude</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>seaLevel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>atmospheric)</highlight></codeline>
+<codeline lineno="358"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Equation<sp/>taken<sp/>from<sp/>BMP180<sp/>datasheet<sp/>(page<sp/>16):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>http://www.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>using<sp/>the<sp/>equation<sp/>from<sp/>wikipedia<sp/>can<sp/>give<sp/>bad<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>at<sp/>high<sp/>altitude.<sp/><sp/>See<sp/>this<sp/>thread<sp/>for<sp/>more<sp/>information:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>http://forums.adafruit.com/viewtopic.php?f=22&amp;t=58064</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>44330.0<sp/>*<sp/>(1.0<sp/>-<sp/>pow(atmospheric<sp/>/<sp/>seaLevel,<sp/>0.1903));</highlight></codeline>
+<codeline lineno="367"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1a899d8915f530ad7be9e2cab86b26d86f" kindref="member">Adafruit_BMP085_Unified::pressureToAltitude</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>seaLevel,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>atmospheric,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temp)</highlight></codeline>
+<codeline lineno="386"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1a899d8915f530ad7be9e2cab86b26d86f" kindref="member">pressureToAltitude</ref>(seaLevel,<sp/>atmospheric);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1aa5a5cb715d056811b1cee546997edbbc" kindref="member">Adafruit_BMP085_Unified::seaLevelForAltitude</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>altitude,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>atmospheric)</highlight></codeline>
+<codeline lineno="400"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Equation<sp/>taken<sp/>from<sp/>BMP180<sp/>datasheet<sp/>(page<sp/>17):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>http://www.adafruit.com/datasheets/BST-BMP180-DS000-09.pdf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"></highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>using<sp/>the<sp/>equation<sp/>from<sp/>wikipedia<sp/>can<sp/>give<sp/>bad<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>at<sp/>high<sp/>altitude.<sp/><sp/>See<sp/>this<sp/>thread<sp/>for<sp/>more<sp/>information:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>http://forums.adafruit.com/viewtopic.php?f=22&amp;t=58064</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>atmospheric<sp/>/<sp/>pow(1.0<sp/>-<sp/>(altitude/44330.0),<sp/>5.255);</highlight></codeline>
+<codeline lineno="409"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1aa5a5cb715d056811b1cee546997edbbc" kindref="member">Adafruit_BMP085_Unified::seaLevelForAltitude</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>altitude,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>atmospheric,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temp)</highlight></codeline>
+<codeline lineno="428"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1aa5a5cb715d056811b1cee546997edbbc" kindref="member">seaLevelForAltitude</ref>(altitude,<sp/>atmospheric);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"></highlight></codeline>
+<codeline lineno="432"><highlight class="normal"></highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1acb3b37e177179ebd4fc0680c188c5280" kindref="member">Adafruit_BMP085_Unified::getSensor</ref>(<ref refid="structsensor__t" kindref="compound">sensor_t</ref><sp/>*sensor)</highlight></codeline>
+<codeline lineno="439"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Clear<sp/>the<sp/>sensor_t<sp/>object<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(sensor,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structsensor__t" kindref="compound">sensor_t</ref>));</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Insert<sp/>the<sp/>sensor<sp/>name<sp/>in<sp/>the<sp/>fixed<sp/>length<sp/>char<sp/>array<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/>strncpy<sp/>(sensor-&gt;<ref refid="structsensor__t_1a4383b68d36f9dc4096d83583c3b009bf" kindref="member">name</ref>,<sp/></highlight><highlight class="stringliteral">&quot;BMP085&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(sensor-&gt;<ref refid="structsensor__t_1a4383b68d36f9dc4096d83583c3b009bf" kindref="member">name</ref>)<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a4383b68d36f9dc4096d83583c3b009bf" kindref="member">name</ref>[</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(sensor-&gt;<ref refid="structsensor__t_1a4383b68d36f9dc4096d83583c3b009bf" kindref="member">name</ref>)-<sp/>1]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a274f12a47669fbd2b61935706339e1c2" kindref="member">version</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a224f6201d59873cc1b6e9dd8a1894736" kindref="member">sensor_id</ref><sp/><sp/><sp/>=<sp/><ref refid="classAdafruit__BMP085__Unified_1a31f5869ed0f0ba87733e1f9ea3bc7530" kindref="member">_sensorID</ref>;</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1ae1d59df64438923d3bd95f2416c32203" kindref="member">type</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a81634a16935829065d399d686c44ad86" kindref="member">SENSOR_TYPE_PRESSURE</ref>;</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a1cd271377ff25ec9ca54886f876c87ec" kindref="member">min_delay</ref><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a1a17359f1080eb169a452656f7dec1ee" kindref="member">max_value</ref><sp/><sp/><sp/>=<sp/>1100.0F;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>300..1100<sp/>hPa</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a4556ed82a0389a7f6af25a6fd0ee1431" kindref="member">min_value</ref><sp/><sp/><sp/>=<sp/>300.0F;</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/>sensor-&gt;<ref refid="structsensor__t_1a926aba3216afd50e62c0a6cdbcc7433a" kindref="member">resolution</ref><sp/><sp/>=<sp/>0.01F;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Datasheet<sp/>states<sp/>0.01<sp/>hPa<sp/>resolution</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"></highlight><highlight class="comment">/**************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classAdafruit__BMP085__Unified_1a75df7711caf4c3a80831cb9c9327aeff" kindref="member">Adafruit_BMP085_Unified::getEvent</ref>(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref><sp/>*event)</highlight></codeline>
+<codeline lineno="461"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pressure_kPa;</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Clear<sp/>the<sp/>event<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/>memset(event,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>));</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;version<sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>);</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;sensor_id<sp/>=<sp/><ref refid="classAdafruit__BMP085__Unified_1a31f5869ed0f0ba87733e1f9ea3bc7530" kindref="member">_sensorID</ref>;</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;type<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="Adafruit__Sensor_8h_1af0bc43b5dae696582a77176e6e4ff643a81634a16935829065d399d686c44ad86" kindref="member">SENSOR_TYPE_PRESSURE</ref>;</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;timestamp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classAdafruit__BMP085__Unified_1abdc7b3759a57b5c03ba09873a39a1839" kindref="member">getPressure</ref>(&amp;pressure_kPa);</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal">-&gt;pressure<sp/>=<sp/>pressure_kPa<sp/>/<sp/>100.0F;</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="475"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp"/>
+  </compounddef>
+</doxygen>

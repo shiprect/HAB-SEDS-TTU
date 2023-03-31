@@ -1,0 +1,1899 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classRHGenericDriver" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>RHGenericDriver</compoundname>
+    <derivedcompoundref refid="classRHSPIDriver" prot="public" virt="non-virtual">RHSPIDriver</derivedcompoundref>
+    <derivedcompoundref refid="classRHSPIDriver" prot="public" virt="non-virtual">RHSPIDriver</derivedcompoundref>
+    <includes local="no">RHGenericDriver.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" prot="public" static="no" strong="no">
+        <type></type>
+        <name>RHMode</name>
+        <qualifiedname>RHGenericDriver::RHMode</qualifiedname>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abf4722e2aaba29a678d754fc677d5a1d" prot="public">
+          <name>RHModeInitialising</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Transport is initialising. Initial default value until <ref refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365" kindref="member">init()</ref> is called.. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" prot="public">
+          <name>RHModeSleep</name>
+          <briefdescription>
+<para>Transport hardware is in low power sleep mode (if supported) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" prot="public">
+          <name>RHModeIdle</name>
+          <briefdescription>
+<para>Transport is idle. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" prot="public">
+          <name>RHModeTx</name>
+          <briefdescription>
+<para>Transport is in the process of transmitting a message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" prot="public">
+          <name>RHModeRx</name>
+          <briefdescription>
+<para>Transport is in the process of receiving a message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abf4722e2aaba29a678d754fc677d5a1d" prot="public">
+          <name>RHModeInitialising</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Transport is initialising. Initial default value until <ref refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365" kindref="member">init()</ref> is called.. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" prot="public">
+          <name>RHModeSleep</name>
+          <briefdescription>
+<para>Transport hardware is in low power sleep mode (if supported) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" prot="public">
+          <name>RHModeIdle</name>
+          <briefdescription>
+<para>Transport is idle. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" prot="public">
+          <name>RHModeTx</name>
+          <briefdescription>
+<para>Transport is in the process of transmitting a message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" prot="public">
+          <name>RHModeRx</name>
+          <briefdescription>
+<para>Transport is in the process of receiving a message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines different operating modes for the transport hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These are the different values that can be adopted by the _mode variable and returned by the <ref refid="classRHGenericDriver_1a80ff7dfded27279332cf8fa6f15dce74" kindref="member">mode()</ref> member function, </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="45" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="46" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="enum" id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" prot="public" static="no" strong="no">
+        <type></type>
+        <name>RHMode</name>
+        <qualifiedname>RHGenericDriver::RHMode</qualifiedname>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abf4722e2aaba29a678d754fc677d5a1d" prot="public">
+          <name>RHModeInitialising</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Transport is initialising. Initial default value until <ref refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365" kindref="member">init()</ref> is called.. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" prot="public">
+          <name>RHModeSleep</name>
+          <briefdescription>
+<para>Transport hardware is in low power sleep mode (if supported) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" prot="public">
+          <name>RHModeIdle</name>
+          <briefdescription>
+<para>Transport is idle. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" prot="public">
+          <name>RHModeTx</name>
+          <briefdescription>
+<para>Transport is in the process of transmitting a message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" prot="public">
+          <name>RHModeRx</name>
+          <briefdescription>
+<para>Transport is in the process of receiving a message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abf4722e2aaba29a678d754fc677d5a1d" prot="public">
+          <name>RHModeInitialising</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>Transport is initialising. Initial default value until <ref refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365" kindref="member">init()</ref> is called.. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" prot="public">
+          <name>RHModeSleep</name>
+          <briefdescription>
+<para>Transport hardware is in low power sleep mode (if supported) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" prot="public">
+          <name>RHModeIdle</name>
+          <briefdescription>
+<para>Transport is idle. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" prot="public">
+          <name>RHModeTx</name>
+          <briefdescription>
+<para>Transport is in the process of transmitting a message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" prot="public">
+          <name>RHModeRx</name>
+          <briefdescription>
+<para>Transport is in the process of receiving a message. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines different operating modes for the transport hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>These are the different values that can be adopted by the _mode variable and returned by the <ref refid="classRHGenericDriver_1a80ff7dfded27279332cf8fa6f15dce74" kindref="member">mode()</ref> member function, </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="45" column="5" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" bodystart="46" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" prot="protected" static="no" mutable="no">
+        <type>volatile <ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" kindref="member">RHMode</ref></type>
+        <definition>volatile RHMode RHGenericDriver::_mode</definition>
+        <argsstring></argsstring>
+        <name>_mode</name>
+        <qualifiedname>RHGenericDriver::_mode</qualifiedname>
+        <briefdescription>
+<para>The current transport operating mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="216" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1a6d2e9824e29c9d5e9ad28682e53ea974" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RHGenericDriver::_thisAddress</definition>
+        <argsstring></argsstring>
+        <name>_thisAddress</name>
+        <qualifiedname>RHGenericDriver::_thisAddress</qualifiedname>
+        <briefdescription>
+<para>This node id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="219" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1a2d94c93203714ed3dd9a7434101683e9" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RHGenericDriver::_promiscuous</definition>
+        <argsstring></argsstring>
+        <name>_promiscuous</name>
+        <qualifiedname>RHGenericDriver::_promiscuous</qualifiedname>
+        <briefdescription>
+<para>Whether the transport is in promiscuous mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="222" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1abff3740bc072a2d435194a7860b2bfe3" prot="protected" static="no" mutable="no">
+        <type>volatile uint8_t</type>
+        <definition>volatile uint8_t RHGenericDriver::_rxHeaderTo</definition>
+        <argsstring></argsstring>
+        <name>_rxHeaderTo</name>
+        <qualifiedname>RHGenericDriver::_rxHeaderTo</qualifiedname>
+        <briefdescription>
+<para>TO header in the last received mesasge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="225" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1a7283cfec4e7c1ecf074307534592fd8f" prot="protected" static="no" mutable="no">
+        <type>volatile uint8_t</type>
+        <definition>volatile uint8_t RHGenericDriver::_rxHeaderFrom</definition>
+        <argsstring></argsstring>
+        <name>_rxHeaderFrom</name>
+        <qualifiedname>RHGenericDriver::_rxHeaderFrom</qualifiedname>
+        <briefdescription>
+<para>FROM header in the last received mesasge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="228" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1a3155557c35198acdde0ecdf58a201b19" prot="protected" static="no" mutable="no">
+        <type>volatile uint8_t</type>
+        <definition>volatile uint8_t RHGenericDriver::_rxHeaderId</definition>
+        <argsstring></argsstring>
+        <name>_rxHeaderId</name>
+        <qualifiedname>RHGenericDriver::_rxHeaderId</qualifiedname>
+        <briefdescription>
+<para>ID header in the last received mesasge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="231" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1a5fd0c3bbc3cfe199924a9e1cb909f5fd" prot="protected" static="no" mutable="no">
+        <type>volatile uint8_t</type>
+        <definition>volatile uint8_t RHGenericDriver::_rxHeaderFlags</definition>
+        <argsstring></argsstring>
+        <name>_rxHeaderFlags</name>
+        <qualifiedname>RHGenericDriver::_rxHeaderFlags</qualifiedname>
+        <briefdescription>
+<para>FLAGS header in the last received mesasge. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="234" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1a759debcdbdb837cea024f777020203e5" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RHGenericDriver::_txHeaderTo</definition>
+        <argsstring></argsstring>
+        <name>_txHeaderTo</name>
+        <qualifiedname>RHGenericDriver::_txHeaderTo</qualifiedname>
+        <briefdescription>
+<para>TO header to send in all messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="237" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1a2c7cdccccf1b17c73ef95dca6d3075f9" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RHGenericDriver::_txHeaderFrom</definition>
+        <argsstring></argsstring>
+        <name>_txHeaderFrom</name>
+        <qualifiedname>RHGenericDriver::_txHeaderFrom</qualifiedname>
+        <briefdescription>
+<para>FROM header to send in all messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="240" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1ad0eafb5a8316b90ad8cd9d42234517da" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RHGenericDriver::_txHeaderId</definition>
+        <argsstring></argsstring>
+        <name>_txHeaderId</name>
+        <qualifiedname>RHGenericDriver::_txHeaderId</qualifiedname>
+        <briefdescription>
+<para>ID header to send in all messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="243" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1abf4db9bddfee361cc44fbf4bd22202bc" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RHGenericDriver::_txHeaderFlags</definition>
+        <argsstring></argsstring>
+        <name>_txHeaderFlags</name>
+        <qualifiedname>RHGenericDriver::_txHeaderFlags</qualifiedname>
+        <briefdescription>
+<para>FLAGS header to send in all messages. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="246" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1ae75ce1fa0448733a6e058f4c7a1ba0a7" prot="protected" static="no" mutable="no">
+        <type>volatile int8_t</type>
+        <definition>volatile int8_t RHGenericDriver::_lastRssi</definition>
+        <argsstring></argsstring>
+        <name>_lastRssi</name>
+        <qualifiedname>RHGenericDriver::_lastRssi</qualifiedname>
+        <briefdescription>
+<para>The value of the last received RSSI value, in some transport specific units. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="249" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1a3bafd8dc638309a473367c4ff8e59c0e" prot="protected" static="no" mutable="no">
+        <type>volatile uint16_t</type>
+        <definition>volatile uint16_t RHGenericDriver::_rxBad</definition>
+        <argsstring></argsstring>
+        <name>_rxBad</name>
+        <qualifiedname>RHGenericDriver::_rxBad</qualifiedname>
+        <briefdescription>
+<para>Count of the number of bad messages (eg bad checksum etc) received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="252" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1abf09ee8b0cc1bf2b64dc0d963895ff71" prot="protected" static="no" mutable="no">
+        <type>volatile uint16_t</type>
+        <definition>volatile uint16_t RHGenericDriver::_rxGood</definition>
+        <argsstring></argsstring>
+        <name>_rxGood</name>
+        <qualifiedname>RHGenericDriver::_rxGood</qualifiedname>
+        <briefdescription>
+<para>Count of the number of successfully transmitted messaged. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="255" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericDriver_1a5f71653ad58e35ddca7fe3e052674ca2" prot="protected" static="no" mutable="no">
+        <type>volatile uint16_t</type>
+        <definition>volatile uint16_t RHGenericDriver::_txGood</definition>
+        <argsstring></argsstring>
+        <name>_txGood</name>
+        <qualifiedname>RHGenericDriver::_txGood</qualifiedname>
+        <briefdescription>
+<para>Count of the number of bad messages (correct checksum etc) received. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="258" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRHGenericDriver_1aacf1b301be4cc16800a62632df6fdd37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RHGenericDriver::RHGenericDriver</definition>
+        <argsstring>()</argsstring>
+        <name>RHGenericDriver</name>
+        <qualifiedname>RHGenericDriver::RHGenericDriver</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="55" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="8" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RHGenericDriver::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>RHGenericDriver::init</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d">init</reimplementedby>
+        <reimplementedby refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557">init</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1ad889cb9f7df600336789b5a5551eb807">init</reimplementedby>
+        <reimplementedby refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557">init</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the Driver transport hardware and software. Make sure the Driver is properly configured before calling <ref refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365" kindref="member">init()</ref>. <simplesect kind="return"><para>true if initialisation succeeded. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="60" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::available</definition>
+        <argsstring>()=0</argsstring>
+        <name>available</name>
+        <qualifiedname>RHGenericDriver::available</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1a917a6b16ca2be2da530516220560cf43">available</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1ad7c542975ac869bea5757cb6fb57eaf5">available</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests whether a new message is available from the Driver. On most drivers, if there is an uncollected received message, and there is no message currently bing transmitted, this will also put the Driver into RHModeRx mode until a message is actually received by the transport, when it will be returned to RHModeIdle. This can be called multiple times in a timeout loop. <simplesect kind="return"><para>true if a new, complete, error-free uncollected message is available to be retreived by <ref refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" kindref="member">recv()</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="69" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::recv</definition>
+        <argsstring>(uint8_t *buf, uint8_t *len)=0</argsstring>
+        <name>recv</name>
+        <qualifiedname>RHGenericDriver::recv</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b">recv</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1a1fbaae6da5f98975c9c1e7bb00660271">recv</reimplementedby>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns the receiver on if it not already on. If there is a valid message available, copy it to buf and return true else return false. If a message is copied, *len is set to the length (Caution, 0 length messages are permitted). You should be sure to call this function frequently enough to not miss any messages It is recommended that you call it in your main loop. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location to copy the received message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to available space in buf. Set to the actual number of octets copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a valid message was copied to buf </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="80" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::send</definition>
+        <argsstring>(const uint8_t *data, uint8_t len)=0</argsstring>
+        <name>send</name>
+        <qualifiedname>RHGenericDriver::send</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1ae7d3743511fdcc1b41f5f8e6b0964c1f">send</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1a813b52c7327355a05ff75a8248d9824b">send</reimplementedby>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits until any previous transmit packet is finished being transmitted with <ref refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" kindref="member">waitPacketSent()</ref>. Then loads a message into the transmitter and starts the transmitter. Note that a message length of 0 is NOT permitted. If the message is too long for the underlying radio technology, <ref refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" kindref="member">send()</ref> will return false and will not send the message. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes of data to send (&gt; 0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the message length was valid and it was correctly queued for transmit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="89" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a267459de4eb3032c5efb8b220af7d164" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t RHGenericDriver::maxMessageLength</definition>
+        <argsstring>()=0</argsstring>
+        <name>maxMessageLength</name>
+        <qualifiedname>RHGenericDriver::maxMessageLength</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1af910c0670d3f3cc158355f20a2361485">maxMessageLength</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1a478a0fc3aa7d59166f2f75c1d809524f">maxMessageLength</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the maximum message length available in this Driver. <simplesect kind="return"><para>The maximum legal message length </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="94" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1abf108e52389353cb3658b6802b92c77c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::waitAvailable</definition>
+        <argsstring>()</argsstring>
+        <name>waitAvailable</name>
+        <qualifiedname>RHGenericDriver::waitAvailable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the receiver and blocks until a valid received message is available. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="98" column="29" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="28" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RHGenericDriver::waitPacketSent</definition>
+        <argsstring>()</argsstring>
+        <name>waitPacketSent</name>
+        <qualifiedname>RHGenericDriver::waitPacketSent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Blocks until the transmitter is no longer transmitting. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="102" column="29" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a0feda1f5522522dc50e0c26dcdef71dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RHGenericDriver::waitPacketSent</definition>
+        <argsstring>(uint16_t timeout)</argsstring>
+        <name>waitPacketSent</name>
+        <qualifiedname>RHGenericDriver::waitPacketSent</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Blocks until the transmitter is no longer transmitting. or until the timeout occuers, whichever happens first <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum time to wait in milliseconds. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the RF22 completed transmission within the timeout period. False if it timed out. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="108" column="29" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="58" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a8ed545cecc22196a325333dc9637e4cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RHGenericDriver::waitAvailableTimeout</definition>
+        <argsstring>(uint16_t timeout)</argsstring>
+        <name>waitAvailableTimeout</name>
+        <qualifiedname>RHGenericDriver::waitAvailableTimeout</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the receiver and blocks until a received message is available or a timeout <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum time to wait in milliseconds. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a message is available </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="113" column="29" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="37" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a5e8f15e1e7480899d18c3a21248bb628" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::setThisAddress</definition>
+        <argsstring>(uint8_t thisAddress)</argsstring>
+        <name>setThisAddress</name>
+        <qualifiedname>RHGenericDriver::setThisAddress</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>thisAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the address of this node. Defaults to 0xFF. Subclasses or the user may want to change this. This will be used to test the adddress in incoming messages. In non-promiscuous mode, only messages with a TO header the same as thisAddress or the broadcast addess (0xFF) will be accepted. In promiscuous mode, all messages will be accepted regardless of the TO header. In a conventional multinode system, all nodes will have a unique address (which you could store in EEPROM). You would normally set the header FROM address to be the same as thisAddress (though you dont have to, allowing the possibilty of address spoofing). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">thisAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of this node. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="124" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a182436232f7a345bca0d1766d242f3fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::setHeaderTo</definition>
+        <argsstring>(uint8_t to)</argsstring>
+        <name>setHeaderTo</name>
+        <qualifiedname>RHGenericDriver::setHeaderTo</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the TO header to be sent in all subsequent messages <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new TO header value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="128" column="28" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a470e67f4168dec41435dcc0e194202c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::setHeaderFrom</definition>
+        <argsstring>(uint8_t from)</argsstring>
+        <name>setHeaderFrom</name>
+        <qualifiedname>RHGenericDriver::setHeaderFrom</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the FROM header to be sent in all subsequent messages <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new FROM header value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="132" column="28" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a4dd57079264bda98bc89145fe5d2eb8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::setHeaderId</definition>
+        <argsstring>(uint8_t id)</argsstring>
+        <name>setHeaderId</name>
+        <qualifiedname>RHGenericDriver::setHeaderId</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the ID header to be sent in all subsequent messages <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new ID header value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="136" column="28" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1acb992b3c5e360e68b67e4843558bcf3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::setHeaderFlags</definition>
+        <argsstring>(uint8_t set, uint8_t clear=RH_FLAGS_APPLICATION_SPECIFIC)</argsstring>
+        <name>setHeaderFlags</name>
+        <qualifiedname>RHGenericDriver::setHeaderFlags</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>set</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>clear</declname>
+          <defval><ref refid="RadioHead_2RHGenericDriver_8h_1a2de7645a3f8c3f6a2a0de24924808c54" kindref="member">RH_FLAGS_APPLICATION_SPECIFIC</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets and clears bits in the FLAGS header to be sent in all subsequent messages First it clears he FLAGS according to the clear argument, then sets the flags according to the set argument. The default for clear always clears the application specific flags. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bitmask of bits to be set. Flags are cleared with the clear mask before being set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bitmask of flags to clear. Defaults to RH_FLAGS_APPLICATION_SPECIFIC which clears the application specific flags, resulting in new application specific flags identical to the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="145" column="28" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="95" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a2791f57538b02a73e7dbe1031048230e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::setPromiscuous</definition>
+        <argsstring>(bool promiscuous)</argsstring>
+        <name>setPromiscuous</name>
+        <qualifiedname>RHGenericDriver::setPromiscuous</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>promiscuous</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tells the receiver to accept messages with any TO address, not just messages addressed to thisAddress or the broadcast address <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">promiscuous</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if you wish to receive messages with any TO address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="150" column="28" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a6f49c9fe68354b50988dec435fa8d086" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHGenericDriver::headerTo</definition>
+        <argsstring>()</argsstring>
+        <name>headerTo</name>
+        <qualifiedname>RHGenericDriver::headerTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the TO header of the last received message <simplesect kind="return"><para>The TO header </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="154" column="28" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a8cf7a972186592c51c6fde034d17ab9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHGenericDriver::headerFrom</definition>
+        <argsstring>()</argsstring>
+        <name>headerFrom</name>
+        <qualifiedname>RHGenericDriver::headerFrom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the FROM header of the last received message <simplesect kind="return"><para>The FROM header </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="158" column="28" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a81548960bb29a3ac35325c74cd562f45" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHGenericDriver::headerId</definition>
+        <argsstring>()</argsstring>
+        <name>headerId</name>
+        <qualifiedname>RHGenericDriver::headerId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the ID header of the last received message <simplesect kind="return"><para>The ID header </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="162" column="28" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a056fbd2df558971fe8a1653499a37c63" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHGenericDriver::headerFlags</definition>
+        <argsstring>()</argsstring>
+        <name>headerFlags</name>
+        <qualifiedname>RHGenericDriver::headerFlags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the FLAGS header of the last received message <simplesect kind="return"><para>The FLAGS header </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="166" column="28" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1ab04f2ca335d89f5fac1d213c0aea9da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t RHGenericDriver::lastRssi</definition>
+        <argsstring>()</argsstring>
+        <name>lastRssi</name>
+        <qualifiedname>RHGenericDriver::lastRssi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the most recent RSSI (Receiver Signal Strength Indicator). Usually it is the RSSI of the last received message, which is measured when the preamble is received. If you called readRssi() more recently, it will return that more recent value. <simplesect kind="return"><para>The most recent RSSI measurement in dBm. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="172" column="19" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a80ff7dfded27279332cf8fa6f15dce74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" kindref="member">RHMode</ref></type>
+        <definition>RHGenericDriver::RHMode RHGenericDriver::mode</definition>
+        <argsstring>()</argsstring>
+        <name>mode</name>
+        <qualifiedname>RHGenericDriver::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the operating mode of the library. <simplesect kind="return"><para>the current mode, one of RF69_MODE_* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="176" column="21" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1aa1c0a94ba6414b5bbab0133c4d74e646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::setMode</definition>
+        <argsstring>(RHMode mode)</argsstring>
+        <name>setMode</name>
+        <qualifiedname>RHGenericDriver::setMode</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" kindref="member">RHMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Sets the operating mode of the transport. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="179" column="21" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a97050555cbf46ad723ad9c45d7f76a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RHGenericDriver::sleep</definition>
+        <argsstring>()</argsstring>
+        <name>sleep</name>
+        <qualifiedname>RHGenericDriver::sleep</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1aa9184ab8aec1c3c54a275d08c7e85c66">sleep</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1a71f256a7d3219addc06f46b801a1c3b6">sleep</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the transport hardware into low-power sleep mode (if supported). May be overridden by specific drivers to initialte sleep mode. If successful, the transport will stay in sleep mode until woken by changing mode it idle, transmit or receive (eg by calling <ref refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" kindref="member">send()</ref>, <ref refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" kindref="member">recv()</ref>, <ref refid="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888" kindref="member">available()</ref> etc) <simplesect kind="return"><para>true if sleep mode is supported by transport hardware and the RadioHead driver, and if sleep mode was successfully entered. If sleep mode is not suported, return false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="187" column="21" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a0163fb71dc8d0cd86136882886adba7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t RHGenericDriver::rxBad</definition>
+        <argsstring>()</argsstring>
+        <name>rxBad</name>
+        <qualifiedname>RHGenericDriver::rxBad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the count of the number of bad received packets (ie packets with bad lengths, checksum etc) which were rejected and not delivered to the application. Caution: not all drivers can correctly report this count. Some underlying hardware only report good packets. <simplesect kind="return"><para>The number of bad packets received. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="201" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a5f730e644ab1f5f529fdfa82fdb2ed69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t RHGenericDriver::rxGood</definition>
+        <argsstring>()</argsstring>
+        <name>rxGood</name>
+        <qualifiedname>RHGenericDriver::rxGood</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the count of the number of good received packets <simplesect kind="return"><para>The number of good packets received. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="206" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="167" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a66a408f88a1188a0fab458816cb705f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t RHGenericDriver::txGood</definition>
+        <argsstring>()</argsstring>
+        <name>txGood</name>
+        <qualifiedname>RHGenericDriver::txGood</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the count of the number of packets successfully transmitted (though not necessarily received by the destination) <simplesect kind="return"><para>The number of packets successfully transmitted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="211" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1aacf1b301be4cc16800a62632df6fdd37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RHGenericDriver::RHGenericDriver</definition>
+        <argsstring>()</argsstring>
+        <name>RHGenericDriver</name>
+        <qualifiedname>RHGenericDriver::RHGenericDriver</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="55" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a63133ea5bcbe2a73d56c02081cf5e199" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>RHGenericDriver::init</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d">init</reimplementedby>
+        <reimplementedby refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557">init</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1ad889cb9f7df600336789b5a5551eb807">init</reimplementedby>
+        <reimplementedby refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557">init</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the Driver transport hardware and software. Make sure the Driver is properly configured before calling <ref refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365" kindref="member">init()</ref>. <simplesect kind="return"><para>true if initialisation succeeded. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="60" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::available</definition>
+        <argsstring>()=0</argsstring>
+        <name>available</name>
+        <qualifiedname>RHGenericDriver::available</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1a917a6b16ca2be2da530516220560cf43">available</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1ad7c542975ac869bea5757cb6fb57eaf5">available</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tests whether a new message is available from the Driver. On most drivers, if there is an uncollected received message, and there is no message currently bing transmitted, this will also put the Driver into RHModeRx mode until a message is actually received by the transport, when it will be returned to RHModeIdle. This can be called multiple times in a timeout loop. <simplesect kind="return"><para>true if a new, complete, error-free uncollected message is available to be retreived by <ref refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" kindref="member">recv()</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="69" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::recv</definition>
+        <argsstring>(uint8_t *buf, uint8_t *len)=0</argsstring>
+        <name>recv</name>
+        <qualifiedname>RHGenericDriver::recv</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b">recv</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1a1fbaae6da5f98975c9c1e7bb00660271">recv</reimplementedby>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Turns the receiver on if it not already on. If there is a valid message available, copy it to buf and return true else return false. If a message is copied, *len is set to the length (Caution, 0 length messages are permitted). You should be sure to call this function frequently enough to not miss any messages It is recommended that you call it in your main loop. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location to copy the received message </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to available space in buf. Set to the actual number of octets copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a valid message was copied to buf </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="80" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::send</definition>
+        <argsstring>(const uint8_t *data, uint8_t len)=0</argsstring>
+        <name>send</name>
+        <qualifiedname>RHGenericDriver::send</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1ae7d3743511fdcc1b41f5f8e6b0964c1f">send</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1a813b52c7327355a05ff75a8248d9824b">send</reimplementedby>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Waits until any previous transmit packet is finished being transmitted with <ref refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" kindref="member">waitPacketSent()</ref>. Then loads a message into the transmitter and starts the transmitter. Note that a message length of 0 is NOT permitted. If the message is too long for the underlying radio technology, <ref refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" kindref="member">send()</ref> will return false and will not send the message. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of data to be sent </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes of data to send (&gt; 0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the message length was valid and it was correctly queued for transmit </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="89" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a267459de4eb3032c5efb8b220af7d164" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t RHGenericDriver::maxMessageLength</definition>
+        <argsstring>()=0</argsstring>
+        <name>maxMessageLength</name>
+        <qualifiedname>RHGenericDriver::maxMessageLength</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1af910c0670d3f3cc158355f20a2361485">maxMessageLength</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1a478a0fc3aa7d59166f2f75c1d809524f">maxMessageLength</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the maximum message length available in this Driver. <simplesect kind="return"><para>The maximum legal message length </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="94" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a2fde1a952ade073c7eaf3ca71ccde095" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericDriver::waitAvailable</definition>
+        <argsstring>()</argsstring>
+        <name>waitAvailable</name>
+        <qualifiedname>RHGenericDriver::waitAvailable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the receiver and blocks until a valid received message is available. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="98" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a80e395c9b0780a2b0c110198a4fc18e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::waitPacketSent</definition>
+        <argsstring>()</argsstring>
+        <name>waitPacketSent</name>
+        <qualifiedname>RHGenericDriver::waitPacketSent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Blocks until the transmitter is no longer transmitting. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="102" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1aa38dda7643b28ae77530c929b737dd70" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::waitPacketSent</definition>
+        <argsstring>(uint16_t timeout)</argsstring>
+        <name>waitPacketSent</name>
+        <qualifiedname>RHGenericDriver::waitPacketSent</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Blocks until the transmitter is no longer transmitting. or until the timeout occuers, whichever happens first <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum time to wait in milliseconds. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the RF22 completed transmission within the timeout period. False if it timed out. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="108" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a35c7a28e1ded4195a4fca4763a5ea2c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::waitAvailableTimeout</definition>
+        <argsstring>(uint16_t timeout)</argsstring>
+        <name>waitAvailableTimeout</name>
+        <qualifiedname>RHGenericDriver::waitAvailableTimeout</qualifiedname>
+        <param>
+          <type>uint16_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starts the receiver and blocks until a received message is available or a timeout <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">timeout</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum time to wait in milliseconds. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a message is available </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="113" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1aeb6222dafba9449f36799efe6c0367d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericDriver::setThisAddress</definition>
+        <argsstring>(uint8_t thisAddress)</argsstring>
+        <name>setThisAddress</name>
+        <qualifiedname>RHGenericDriver::setThisAddress</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>thisAddress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the address of this node. Defaults to 0xFF. Subclasses or the user may want to change this. This will be used to test the adddress in incoming messages. In non-promiscuous mode, only messages with a TO header the same as thisAddress or the broadcast addess (0xFF) will be accepted. In promiscuous mode, all messages will be accepted regardless of the TO header. In a conventional multinode system, all nodes will have a unique address (which you could store in EEPROM). You would normally set the header FROM address to be the same as thisAddress (though you dont have to, allowing the possibilty of address spoofing). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">thisAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The address of this node. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="124" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a180c8d4d0b29ccafa8e29afed332a0c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericDriver::setHeaderTo</definition>
+        <argsstring>(uint8_t to)</argsstring>
+        <name>setHeaderTo</name>
+        <qualifiedname>RHGenericDriver::setHeaderTo</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the TO header to be sent in all subsequent messages <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">to</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new TO header value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="128" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a38e4901f56700a79e971a06eb6cbdf65" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericDriver::setHeaderFrom</definition>
+        <argsstring>(uint8_t from)</argsstring>
+        <name>setHeaderFrom</name>
+        <qualifiedname>RHGenericDriver::setHeaderFrom</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the FROM header to be sent in all subsequent messages <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new FROM header value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="132" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1ab04e89be04a0293e2cfd225e7dd45ba3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericDriver::setHeaderId</definition>
+        <argsstring>(uint8_t id)</argsstring>
+        <name>setHeaderId</name>
+        <qualifiedname>RHGenericDriver::setHeaderId</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the ID header to be sent in all subsequent messages <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new ID header value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="136" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a5b6db3cfd060ce9c1c8b030bfdf77a4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericDriver::setHeaderFlags</definition>
+        <argsstring>(uint8_t set, uint8_t clear=RH_FLAGS_APPLICATION_SPECIFIC)</argsstring>
+        <name>setHeaderFlags</name>
+        <qualifiedname>RHGenericDriver::setHeaderFlags</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>set</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>clear</declname>
+          <defval><ref refid="RadioHead_2RHGenericDriver_8h_1a2de7645a3f8c3f6a2a0de24924808c54" kindref="member">RH_FLAGS_APPLICATION_SPECIFIC</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets and clears bits in the FLAGS header to be sent in all subsequent messages First it clears he FLAGS according to the clear argument, then sets the flags according to the set argument. The default for clear always clears the application specific flags. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bitmask of bits to be set. Flags are cleared with the clear mask before being set. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">clear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>bitmask of flags to clear. Defaults to RH_FLAGS_APPLICATION_SPECIFIC which clears the application specific flags, resulting in new application specific flags identical to the set. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="145" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1af31c2d0f3e155211d0b70b923b858e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericDriver::setPromiscuous</definition>
+        <argsstring>(bool promiscuous)</argsstring>
+        <name>setPromiscuous</name>
+        <qualifiedname>RHGenericDriver::setPromiscuous</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>promiscuous</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tells the receiver to accept messages with any TO address, not just messages addressed to thisAddress or the broadcast address <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">promiscuous</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if you wish to receive messages with any TO address </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="150" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a59767cf1ec9ca3e24b3f7b5610e93f46" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t RHGenericDriver::headerTo</definition>
+        <argsstring>()</argsstring>
+        <name>headerTo</name>
+        <qualifiedname>RHGenericDriver::headerTo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the TO header of the last received message <simplesect kind="return"><para>The TO header </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="154" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1ac124ff3e195e604db33cd798592808f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t RHGenericDriver::headerFrom</definition>
+        <argsstring>()</argsstring>
+        <name>headerFrom</name>
+        <qualifiedname>RHGenericDriver::headerFrom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the FROM header of the last received message <simplesect kind="return"><para>The FROM header </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="158" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a5e1db15be3fb414a1b4619939d50ea83" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t RHGenericDriver::headerId</definition>
+        <argsstring>()</argsstring>
+        <name>headerId</name>
+        <qualifiedname>RHGenericDriver::headerId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the ID header of the last received message <simplesect kind="return"><para>The ID header </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="162" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a605594463c135160eea76df1f5b8ed91" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t RHGenericDriver::headerFlags</definition>
+        <argsstring>()</argsstring>
+        <name>headerFlags</name>
+        <qualifiedname>RHGenericDriver::headerFlags</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the FLAGS header of the last received message <simplesect kind="return"><para>The FLAGS header </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="166" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1ab04f2ca335d89f5fac1d213c0aea9da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int8_t</type>
+        <definition>int8_t RHGenericDriver::lastRssi</definition>
+        <argsstring>()</argsstring>
+        <name>lastRssi</name>
+        <qualifiedname>RHGenericDriver::lastRssi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the most recent RSSI (Receiver Signal Strength Indicator). Usually it is the RSSI of the last received message, which is measured when the preamble is received. If you called readRssi() more recently, it will return that more recent value. <simplesect kind="return"><para>The most recent RSSI measurement in dBm. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="172" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a2204ec4da2d31fba3a44dfd4b2002b81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" kindref="member">RHMode</ref></type>
+        <definition>RHMode RHGenericDriver::mode</definition>
+        <argsstring>()</argsstring>
+        <name>mode</name>
+        <qualifiedname>RHGenericDriver::mode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the operating mode of the library. <simplesect kind="return"><para>the current mode, one of RF69_MODE_* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="176" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1aa1c0a94ba6414b5bbab0133c4d74e646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::setMode</definition>
+        <argsstring>(RHMode mode)</argsstring>
+        <name>setMode</name>
+        <qualifiedname>RHGenericDriver::setMode</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" kindref="member">RHMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Sets the operating mode of the transport. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="179" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a6dcdd0cdd137828ca334a4480eee1777" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool RHGenericDriver::sleep</definition>
+        <argsstring>()</argsstring>
+        <name>sleep</name>
+        <qualifiedname>RHGenericDriver::sleep</qualifiedname>
+        <reimplementedby refid="classRH__RF95_1aa9184ab8aec1c3c54a275d08c7e85c66">sleep</reimplementedby>
+        <reimplementedby refid="classRH__RF95_1a71f256a7d3219addc06f46b801a1c3b6">sleep</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the transport hardware into low-power sleep mode (if supported). May be overridden by specific drivers to initialte sleep mode. If successful, the transport will stay in sleep mode until woken by changing mode it idle, transmit or receive (eg by calling <ref refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" kindref="member">send()</ref>, <ref refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" kindref="member">recv()</ref>, <ref refid="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888" kindref="member">available()</ref> etc) <simplesect kind="return"><para>true if sleep mode is supported by transport hardware and the RadioHead driver, and if sleep mode was successfully entered. If sleep mode is not suported, return false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="187" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a0163fb71dc8d0cd86136882886adba7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t RHGenericDriver::rxBad</definition>
+        <argsstring>()</argsstring>
+        <name>rxBad</name>
+        <qualifiedname>RHGenericDriver::rxBad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the count of the number of bad received packets (ie packets with bad lengths, checksum etc) which were rejected and not delivered to the application. Caution: not all drivers can correctly report this count. Some underlying hardware only report good packets. <simplesect kind="return"><para>The number of bad packets received. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="201" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a5f730e644ab1f5f529fdfa82fdb2ed69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t RHGenericDriver::rxGood</definition>
+        <argsstring>()</argsstring>
+        <name>rxGood</name>
+        <qualifiedname>RHGenericDriver::rxGood</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the count of the number of good received packets <simplesect kind="return"><para>The number of good packets received. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="206" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a66a408f88a1188a0fab458816cb705f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t RHGenericDriver::txGood</definition>
+        <argsstring>()</argsstring>
+        <name>txGood</name>
+        <qualifiedname>RHGenericDriver::txGood</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the count of the number of packets successfully transmitted (though not necessarily received by the destination) <simplesect kind="return"><para>The number of packets successfully transmitted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="211" column="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classRHGenericDriver_1a63915f6420833eb8ec61ee3b0610e34b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RHGenericDriver::printBuffer</definition>
+        <argsstring>(const char *prompt, const uint8_t *buf, uint8_t len)</argsstring>
+        <name>printBuffer</name>
+        <qualifiedname>RHGenericDriver::printBuffer</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>prompt</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints a data buffer in HEX. For diagnostic use <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">prompt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to preface the print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location of the buffer to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the buffer in octets. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="194" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.cpp" bodystart="142" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericDriver_1a953b9a398838ce9061d71ff72effdb6f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void RHGenericDriver::printBuffer</definition>
+        <argsstring>(const char *prompt, const uint8_t *buf, uint8_t len)</argsstring>
+        <name>printBuffer</name>
+        <qualifiedname>RHGenericDriver::printBuffer</qualifiedname>
+        <param>
+          <type>const char *</type>
+          <declname>prompt</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prints a data buffer in HEX. For diagnostic use <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">prompt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>string to preface the print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Location of the buffer to print </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the buffer in octets. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericDriver.h" line="194" column="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract base class for a RadioHead driver. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class defines the functions that must be provided by any RadioHead driver. Different types of driver will implement all the abstract functions, and will perhaps override other functions in this subclass, or perhaps add new functions specifically required by that driver. Do not directly instantiate this class: it is only to be subclassed by driver classes.</para>
+<para>Subclasses are expected to implement a half-duplex, unreliable, error checked, unaddressed packet transport. They are expected to carry a message payload with an appropriate maximum length for the transport hardware and to also carry unaltered 4 message headers: TO, FROM, ID, FLAGS</para>
+<para><simplesect kind="par"><title>Headers</title><para></para>
+</simplesect>
+Each message sent and received by a RadioHead driver includes 4 headers: -TO The node address that the message is being sent to (broadcast RH_BROADCAST_ADDRESS (255) is permitted) -FROM The node address of the sending node -ID A message ID, distinct (over short time scales) for each message sent by a particilar node -FLAGS A bitmask of flags. The most significant 4 bits are reserved for use by RadioHead. The least significant 4 bits are reserved for applications. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RHGenericDriver</label>
+        <link refid="classRHGenericDriver"/>
+      </node>
+      <node id="2">
+        <label>RHSPIDriver</label>
+        <link refid="classRHSPIDriver"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RH_RF95</label>
+        <link refid="classRH__RF95"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" line="38" column="1" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericDriver.h" bodystart="39" bodyend="262"/>
+    <listofallmembers>
+      <member refid="classRHGenericDriver_1ae75ce1fa0448733a6e058f4c7a1ba0a7" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_lastRssi</name></member>
+      <member refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_mode</name></member>
+      <member refid="classRHGenericDriver_1a2d94c93203714ed3dd9a7434101683e9" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_promiscuous</name></member>
+      <member refid="classRHGenericDriver_1a3bafd8dc638309a473367c4ff8e59c0e" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_rxBad</name></member>
+      <member refid="classRHGenericDriver_1abf09ee8b0cc1bf2b64dc0d963895ff71" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_rxGood</name></member>
+      <member refid="classRHGenericDriver_1a5fd0c3bbc3cfe199924a9e1cb909f5fd" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_rxHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a7283cfec4e7c1ecf074307534592fd8f" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_rxHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1a3155557c35198acdde0ecdf58a201b19" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_rxHeaderId</name></member>
+      <member refid="classRHGenericDriver_1abff3740bc072a2d435194a7860b2bfe3" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_rxHeaderTo</name></member>
+      <member refid="classRHGenericDriver_1a6d2e9824e29c9d5e9ad28682e53ea974" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_thisAddress</name></member>
+      <member refid="classRHGenericDriver_1a5f71653ad58e35ddca7fe3e052674ca2" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_txGood</name></member>
+      <member refid="classRHGenericDriver_1abf4db9bddfee361cc44fbf4bd22202bc" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_txHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a2c7cdccccf1b17c73ef95dca6d3075f9" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_txHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1ad0eafb5a8316b90ad8cd9d42234517da" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_txHeaderId</name></member>
+      <member refid="classRHGenericDriver_1a759debcdbdb837cea024f777020203e5" prot="protected" virt="non-virtual"><scope>RHGenericDriver</scope><name>_txHeaderTo</name></member>
+      <member refid="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888" prot="public" virt="pure-virtual"><scope>RHGenericDriver</scope><name>available</name></member>
+      <member refid="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888" prot="public" virt="pure-virtual"><scope>RHGenericDriver</scope><name>available</name></member>
+      <member refid="classRHGenericDriver_1a056fbd2df558971fe8a1653499a37c63" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>headerFlags</name></member>
+      <member refid="classRHGenericDriver_1a605594463c135160eea76df1f5b8ed91" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>headerFlags</name></member>
+      <member refid="classRHGenericDriver_1a8cf7a972186592c51c6fde034d17ab9f" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>headerFrom</name></member>
+      <member refid="classRHGenericDriver_1ac124ff3e195e604db33cd798592808f3" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>headerFrom</name></member>
+      <member refid="classRHGenericDriver_1a81548960bb29a3ac35325c74cd562f45" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>headerId</name></member>
+      <member refid="classRHGenericDriver_1a5e1db15be3fb414a1b4619939d50ea83" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>headerId</name></member>
+      <member refid="classRHGenericDriver_1a6f49c9fe68354b50988dec435fa8d086" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>headerTo</name></member>
+      <member refid="classRHGenericDriver_1a59767cf1ec9ca3e24b3f7b5610e93f46" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>headerTo</name></member>
+      <member refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>init</name></member>
+      <member refid="classRHGenericDriver_1a63133ea5bcbe2a73d56c02081cf5e199" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>init</name></member>
+      <member refid="classRHGenericDriver_1ab04f2ca335d89f5fac1d213c0aea9da2" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>lastRssi</name></member>
+      <member refid="classRHGenericDriver_1ab04f2ca335d89f5fac1d213c0aea9da2" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>lastRssi</name></member>
+      <member refid="classRHGenericDriver_1a267459de4eb3032c5efb8b220af7d164" prot="public" virt="pure-virtual"><scope>RHGenericDriver</scope><name>maxMessageLength</name></member>
+      <member refid="classRHGenericDriver_1a267459de4eb3032c5efb8b220af7d164" prot="public" virt="pure-virtual"><scope>RHGenericDriver</scope><name>maxMessageLength</name></member>
+      <member refid="classRHGenericDriver_1a80ff7dfded27279332cf8fa6f15dce74" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>mode</name></member>
+      <member refid="classRHGenericDriver_1a2204ec4da2d31fba3a44dfd4b2002b81" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>mode</name></member>
+      <member refid="classRHGenericDriver_1a63915f6420833eb8ec61ee3b0610e34b" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>printBuffer</name></member>
+      <member refid="classRHGenericDriver_1a953b9a398838ce9061d71ff72effdb6f" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>printBuffer</name></member>
+      <member refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" prot="public" virt="pure-virtual"><scope>RHGenericDriver</scope><name>recv</name></member>
+      <member refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" prot="public" virt="pure-virtual"><scope>RHGenericDriver</scope><name>recv</name></member>
+      <member refid="classRHGenericDriver_1aacf1b301be4cc16800a62632df6fdd37" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>RHGenericDriver</name></member>
+      <member refid="classRHGenericDriver_1aacf1b301be4cc16800a62632df6fdd37" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>RHGenericDriver</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>RHMode</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>RHMode</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>RHModeIdle</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abf4722e2aaba29a678d754fc677d5a1d" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>RHModeInitialising</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>RHModeRx</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>RHModeSleep</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>RHModeTx</name></member>
+      <member refid="classRHGenericDriver_1a0163fb71dc8d0cd86136882886adba7f" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>rxBad</name></member>
+      <member refid="classRHGenericDriver_1a0163fb71dc8d0cd86136882886adba7f" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>rxBad</name></member>
+      <member refid="classRHGenericDriver_1a5f730e644ab1f5f529fdfa82fdb2ed69" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>rxGood</name></member>
+      <member refid="classRHGenericDriver_1a5f730e644ab1f5f529fdfa82fdb2ed69" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>rxGood</name></member>
+      <member refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" prot="public" virt="pure-virtual"><scope>RHGenericDriver</scope><name>send</name></member>
+      <member refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" prot="public" virt="pure-virtual"><scope>RHGenericDriver</scope><name>send</name></member>
+      <member refid="classRHGenericDriver_1acb992b3c5e360e68b67e4843558bcf3b" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a5b6db3cfd060ce9c1c8b030bfdf77a4c" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a470e67f4168dec41435dcc0e194202c8" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1a38e4901f56700a79e971a06eb6cbdf65" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1a4dd57079264bda98bc89145fe5d2eb8f" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setHeaderId</name></member>
+      <member refid="classRHGenericDriver_1ab04e89be04a0293e2cfd225e7dd45ba3" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setHeaderId</name></member>
+      <member refid="classRHGenericDriver_1a182436232f7a345bca0d1766d242f3fb" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setHeaderTo</name></member>
+      <member refid="classRHGenericDriver_1a180c8d4d0b29ccafa8e29afed332a0c2" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setHeaderTo</name></member>
+      <member refid="classRHGenericDriver_1aa1c0a94ba6414b5bbab0133c4d74e646" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>setMode</name></member>
+      <member refid="classRHGenericDriver_1aa1c0a94ba6414b5bbab0133c4d74e646" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>setMode</name></member>
+      <member refid="classRHGenericDriver_1a2791f57538b02a73e7dbe1031048230e" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setPromiscuous</name></member>
+      <member refid="classRHGenericDriver_1af31c2d0f3e155211d0b70b923b858e11" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setPromiscuous</name></member>
+      <member refid="classRHGenericDriver_1a5e8f15e1e7480899d18c3a21248bb628" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setThisAddress</name></member>
+      <member refid="classRHGenericDriver_1aeb6222dafba9449f36799efe6c0367d9" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>setThisAddress</name></member>
+      <member refid="classRHGenericDriver_1a97050555cbf46ad723ad9c45d7f76a55" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>sleep</name></member>
+      <member refid="classRHGenericDriver_1a6dcdd0cdd137828ca334a4480eee1777" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>sleep</name></member>
+      <member refid="classRHGenericDriver_1a66a408f88a1188a0fab458816cb705f4" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>txGood</name></member>
+      <member refid="classRHGenericDriver_1a66a408f88a1188a0fab458816cb705f4" prot="public" virt="non-virtual"><scope>RHGenericDriver</scope><name>txGood</name></member>
+      <member refid="classRHGenericDriver_1abf108e52389353cb3658b6802b92c77c" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>waitAvailable</name></member>
+      <member refid="classRHGenericDriver_1a2fde1a952ade073c7eaf3ca71ccde095" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>waitAvailable</name></member>
+      <member refid="classRHGenericDriver_1a8ed545cecc22196a325333dc9637e4cf" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>waitAvailableTimeout</name></member>
+      <member refid="classRHGenericDriver_1a35c7a28e1ded4195a4fca4763a5ea2c0" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>waitAvailableTimeout</name></member>
+      <member refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>waitPacketSent</name></member>
+      <member refid="classRHGenericDriver_1a0feda1f5522522dc50e0c26dcdef71dd" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>waitPacketSent</name></member>
+      <member refid="classRHGenericDriver_1a80e395c9b0780a2b0c110198a4fc18e9" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>waitPacketSent</name></member>
+      <member refid="classRHGenericDriver_1aa38dda7643b28ae77530c929b737dd70" prot="public" virt="virtual"><scope>RHGenericDriver</scope><name>waitPacketSent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

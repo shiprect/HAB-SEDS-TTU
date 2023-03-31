@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="sphinx__testing_2src_2SavedGameMenu_8cpp" kind="file" language="C++">
+    <compoundname>SavedGameMenu.cpp</compoundname>
+    <includes local="no">ncurses.h</includes>
+    <includes local="yes">SavedGameMenu.hpp</includes>
+    <includes local="yes">colors.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/src/SavedGameMenu.cpp</label>
+        <link refid="sphinx__testing_2src_2SavedGameMenu_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SavedGameMenu.hpp</label>
+      </node>
+      <node id="4">
+        <label>colors.hpp</label>
+      </node>
+      <node id="2">
+        <label>ncurses.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;ncurses.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SavedGameMenu.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;colors.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a3897fe15acb6a9dab3206d81993a6cdf" kindref="member">SavedGameMenu::display_menu</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>Y_EDGE,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>X_EDGE,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>display_line<sp/>=<sp/>Y_EDGE;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>clear();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>mvprintw(display_line++,<sp/>X_EDGE,<sp/></highlight><highlight class="stringliteral">&quot;Saved<sp/>Games:&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<ref refid="classSavedGameMenu_1a2a7248157231ea2eafeea045a86fb75e" kindref="member">list_iter</ref><sp/>iter<sp/>=<sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.begin();<sp/>iter<sp/>!=<sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.end();<sp/>iter++)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref><sp/>==<sp/>*iter)<sp/>attron(COLOR_PAIR(<ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" kindref="member">MENU_SELECTION</ref>));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvprintw(++display_line,<sp/>X_EDGE,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>iter-&gt;c_str());</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*<ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref><sp/>==<sp/>*iter)<sp/>attroff(COLOR_PAIR(<ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" kindref="member">MENU_SELECTION</ref>));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>refresh();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a673d0e5a7a2550713f4842451c25b68c" kindref="member">SavedGameMenu::generate_saved_games_list</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">filesystem;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>directory_iterator<sp/>dir_iter;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(dir_iter<sp/>iter(<ref refid="values_8hpp_1a97884cc582d09fc804ffff6b09e6c09c" kindref="member">DIR</ref>);<sp/>iter<sp/>!=<sp/>end(dir_iter());<sp/>iter++)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(iter-&gt;path().extension()<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;.txt&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.push_back(iter-&gt;path().stem().string());</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.sort();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSavedGameMenu_1a7e25d2e42cdd753eba2cc29423fb397d" kindref="member">SavedGameMenu::select_saved_game</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>input,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_offset;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref><sp/>=<sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.begin();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>curs_set(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.empty())<sp/>mvprintw(<ref refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" kindref="member">TOP_PADDING</ref>,<sp/><ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref>,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>have<sp/>no<sp/>saved<sp/>games.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1a3897fe15acb6a9dab3206d81993a6cdf" kindref="member">display_menu</ref>(<ref refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" kindref="member">TOP_PADDING</ref>,<sp/><ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref>,<sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693" kindref="member">options::NONE</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input<sp/>=<sp/>getch();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input<sp/>==<sp/>KEY_DOWN<sp/>and<sp/>*<ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref><sp/>!=<sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.back())<sp/><ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref>++;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input<sp/>==<sp/>KEY_UP<sp/>and<sp/>*<ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref><sp/>!=<sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.front())<sp/><ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref>--;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(input<sp/>!=<sp/><ref refid="values_8hpp_1a42616646ccdb9b49a8beb277362e08e6" kindref="member">KEY_ENTER</ref>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mvprintw(<ref refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" kindref="member">TOP_PADDING</ref><sp/>+<sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.size()<sp/>+<sp/>2,<sp/><ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref>,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>selected<sp/>%s&quot;</highlight><highlight class="normal">,<sp/><ref refid="classSavedGameMenu_1a03026a3281e64db3a369c66d71650b95" kindref="member">selection</ref>-&gt;c_str());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>mvprintw(<ref refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" kindref="member">TOP_PADDING</ref><sp/>+<sp/><ref refid="classSavedGameMenu_1afe517398bc5a3968b21654c7a799e26b" kindref="member">saved_games</ref>.size()<sp/>+<sp/>3,<sp/><ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Press<sp/>ENTER<sp/>to<sp/>continue...&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>refresh();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(getch()<sp/>!=<sp/><ref refid="values_8hpp_1a42616646ccdb9b49a8beb277362e08e6" kindref="member">KEY_ENTER</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>curs_set(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref><sp/><ref refid="classSavedGameMenu_1a0eaa9f1f96d531625764f3f472c667a6" kindref="member">SavedGameMenu::menu</ref><sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1a673d0e5a7a2550713f4842451c25b68c" kindref="member">generate_saved_games_list</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classSavedGameMenu_1a7e25d2e42cdd753eba2cc29423fb397d" kindref="member">select_saved_game</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Read<sp/>in<sp/>saved<sp/>game<sp/>based<sp/>on<sp/>selection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693" kindref="member">options::NONE</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/sphinx_testing/src/SavedGameMenu.cpp"/>
+  </compounddef>
+</doxygen>

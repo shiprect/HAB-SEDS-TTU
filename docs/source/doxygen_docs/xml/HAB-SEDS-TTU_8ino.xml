@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="HAB-SEDS-TTU_8ino" kind="file" language="C++">
+    <compoundname>HAB-SEDS-TTU.ino</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@file<sp/>HAB-SEDS-TTU.ino</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>The<sp/>Arduino<sp/>sketch.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;Config.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#if<sp/>PUSHBUTTON_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include&quot;src/Drivers/Pushbutton/Pushbutton.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">PUSHBUTTON<sp/>pushbutton;</highlight></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#if<sp/>PWM_ENABLE</highlight></codeline>
+<codeline><highlight class="normal">#include&quot;src/Drivers/PWM/PWM.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">PWM<sp/>pwm;</highlight></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#if<sp/>ANALOGPIN_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include&quot;src/Drivers/AnalogPin/AnalogPin.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">ANALOGPIN<sp/>analogpin;</highlight></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#if<sp/>BMP_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;src/Drivers/BMP/BMP.hpp&quot;</highlight></codeline>
+<codeline><highlight class="normal">BMP<sp/>bmp;</highlight></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#ifdef<sp/>GPS_ENABLE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;src/Drivers/GPS/GPS.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">GPS<sp/>gps(<sp/>GPS_TX1_PIN,<sp/>GPS_RX1_PIN<sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">GPS<sp/>gps2(<sp/>GPS_TX2_PIN,<sp/>GPS_RX2_PIN<sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#ifdef<sp/>SERVO_ENABLE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;src/Drivers/SERVO/Servo.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Servo<sp/>CutServo;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#ifdef<sp/>STATUS_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;src/Status/Status.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Status<sp/>status;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#ifdef<sp/>APRS_ENABLE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;src/Drivers/APRS/APRS.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">APRS<sp/>aprs;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#ifdef<sp/>SD_ENABLE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;src/Drivers/SD_Card/SD_card.hpp&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">SD_card<sp/>sd_card;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>The<sp/>initial<sp/>Arduino<sp/>setup<sp/>function.<sp/>This<sp/>function<sp/>will<sp/>only<sp/>be<sp/>run<sp/>once<sp/>at<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>the<sp/>start<sp/>of<sp/>the<sp/>program.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">void<sp/>setup()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>LED_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(RED_LED,<sp/>OUTPUT);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>pinMode(GREEN_LED,<sp/>OUTPUT);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>delay(750);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LED_ON(RED_LED);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LED_ON(GREEN_LED);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>delay(750);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LED_OFF(RED_LED);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>LED_OFF(GREEN_LED);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_UART.begin(<sp/>GPS_BAUDRATE<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>while<sp/>(<sp/>!DEBUG_UART<sp/>)<sp/>{<sp/>;<sp/>//<sp/>wait<sp/>for<sp/>serial<sp/>port<sp/>to<sp/>connect.<sp/>Needed<sp/>for<sp/>native<sp/>USB<sp/>port<sp/>only</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>delay(<sp/>750<sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>GPS_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>delay(75);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>gps.GPS_Setup();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>delay(75);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>BMP_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>delay(75);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bmp.BMP_Setup();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>delay(75);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>SERVO_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>delay(75);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CutServo.Servo_Setup();//FIXME::Naming<sp/>Convention</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>delay(75);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>ANALOGPIN_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>analogpin.ANALOGPIN_Setup();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>PWM_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>pwm.PWM_SETUP();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>PUSHBUTTON_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>pushbutton.PUSHBUTTON_Setup();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>SD_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sd_card.SD_Setup();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if(!sd_card.IsValidSD())<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//FIXME::Infinite<sp/>while<sp/>loops<sp/>are<sp/>a<sp/>bad<sp/>idea;<sp/>what<sp/>if<sp/>this<sp/>happened<sp/>mid<sp/>flight</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>while(i<sp/>&gt;<sp/>100)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>LED_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED_TOGGLE(GREEN_LED);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LED_TOGGLE(RED_LED);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(1000);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>DEBUG_PRINT(<sp/>F(<sp/>&quot;Main<sp/>Setup<sp/>successful&quot;<sp/>));</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>loop()<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>BMP_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bmp.BMP_Update();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>GPS_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>gps.GPS_Update();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>SERVO_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CutServo.Servo_Update();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>APRS_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>aprs.APRS_Update();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>STATUS_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status.CheckStatus();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>status.CheckServo();<sp/>//FIXME::This<sp/>shouldn&apos;t<sp/>be<sp/>here</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>SD_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sd_card.SD_Record();<sp/>//FIXME::<sp/>comment/uncomment</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>ANALOGPIN_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>analogpin.ANALOGPIN_Update();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>PWM_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>pwm.PWM_Update();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#if<sp/>PUSHBUTTON_ENABLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>pushbutton.PUSHBUTTON_Update();<sp/>//TODO::<sp/>button<sp/>functions<sp/>should<sp/>be<sp/>linked<sp/>to<sp/>functionality,<sp/>not<sp/>exist<sp/>as<sp/>solely<sp/>independent<sp/>units</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/HAB-SEDS-TTU.ino"/>
+  </compounddef>
+</doxygen>

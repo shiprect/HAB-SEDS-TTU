@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_1584933363f41d16cae8d1e3214cc91f" kind="dir">
+    <compoundname>/home/chris/Documents/ece6040/homework/hw4</compoundname>
+    <innerdir refid="dir_4af354d2e2533d88a55f2c84e892761d">/home/chris/Documents/ece6040/homework/hw4/soln</innerdir>
+    <innerfile refid="solution_8py">solution.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece6040/homework/hw4/"/>
+  </compounddef>
+</doxygen>

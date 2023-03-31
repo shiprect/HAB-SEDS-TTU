@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classMainMenu" kind="class" language="C++" prot="public">
+    <compoundname>MainMenu</compoundname>
+    <basecompoundref refid="classMenu" prot="public" virt="non-virtual">Menu</basecompoundref>
+    <basecompoundref refid="classMenu" prot="public" virt="non-virtual">Menu</basecompoundref>
+    <includes local="no">MainMenu.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMainMenu_1a9f8609edcd657ac3150ae948e1eaf932" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t MainMenu::BOTTOM_PADDING</definition>
+        <argsstring></argsstring>
+        <name>BOTTOM_PADDING</name>
+        <qualifiedname>MainMenu::BOTTOM_PADDING</qualifiedname>
+        <initializer>= <ref refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" kindref="member">TOP_PADDING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="10" column="23" bodyfile="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainMenu_1a6b08d51b12dd836c9dac66895e71362b" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t MainMenu::RIGHT_PADDING</definition>
+        <argsstring></argsstring>
+        <name>RIGHT_PADDING</name>
+        <qualifiedname>MainMenu::RIGHT_PADDING</qualifiedname>
+        <initializer>= <ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="11" column="23" bodyfile="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainMenu_1a2d9709d1142a5b1b9ac64fae6f1ba46c" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t MainMenu::RESULT_MSG_SPACE</definition>
+        <argsstring></argsstring>
+        <name>RESULT_MSG_SPACE</name>
+        <qualifiedname>MainMenu::RESULT_MSG_SPACE</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="12" column="23" bodyfile="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainMenu_1a561011b1f481daac6ee4ec6fa9f78451" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t MainMenu::WINDOW_YMIN</definition>
+        <argsstring></argsstring>
+        <name>WINDOW_YMIN</name>
+        <qualifiedname>MainMenu::WINDOW_YMIN</qualifiedname>
+        <initializer>= <ref refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" kindref="member">TOP_PADDING</ref> + <ref refid="classMenu_1a1611ec6c672448c9f86d473a18b8bdb7" kindref="member">PUZZLE_SPACE</ref> + <ref refid="classMainMenu_1a2d9709d1142a5b1b9ac64fae6f1ba46c" kindref="member">RESULT_MSG_SPACE</ref> + <ref refid="classMainMenu_1a9f8609edcd657ac3150ae948e1eaf932" kindref="member">BOTTOM_PADDING</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="13" column="23" bodyfile="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMainMenu_1a1094ba128928606faf1c771777021c25" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t MainMenu::WINDOW_XMIN</definition>
+        <argsstring></argsstring>
+        <name>WINDOW_XMIN</name>
+        <qualifiedname>MainMenu::WINDOW_XMIN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="14" column="17" bodyfile="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMainMenu_1a7644a536b858b5095fd2e9915b1f10ba" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MainMenu::display_menu</definition>
+        <argsstring>(const uint8_t, const uint8_t, const options) override</argsstring>
+        <name>display_menu</name>
+        <qualifiedname>MainMenu::display_menu</qualifiedname>
+        <reimplements refid="classMenu_1af1adbe6ce5816c5b99036e671862aca9">display_menu</reimplements>
+        <param>
+          <type>const uint8_t</type>
+          <defname>Y</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>const</type>
+          <declname>options</declname>
+          <defname>OPT</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="16" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="25" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1a81e7e504259a458f72cde734c49ead31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu::set_VERTICAL_DIVIDER</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>set_VERTICAL_DIVIDER</name>
+        <qualifiedname>MainMenu::set_VERTICAL_DIVIDER</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>VAL</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="17" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1aedd8f211669de8140804de6668a2d669" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu::set_IN_GAME_MENU_DISPLAY_SPACING</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>set_IN_GAME_MENU_DISPLAY_SPACING</name>
+        <qualifiedname>MainMenu::set_IN_GAME_MENU_DISPLAY_SPACING</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>VAL</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="18" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1acfe2e16a40a155b3142dde82d7bbfa47" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu::set_WINDOW_XMIN</definition>
+        <argsstring>()</argsstring>
+        <name>set_WINDOW_XMIN</name>
+        <qualifiedname>MainMenu::set_WINDOW_XMIN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="19" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1aac398578b784cd42576df302945bc55b" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MainMenu::display_menu</definition>
+        <argsstring>(const cell, const options) override</argsstring>
+        <name>display_menu</name>
+        <qualifiedname>MainMenu::display_menu</qualifiedname>
+        <reimplements refid="classMenu_1abb72073036d52f38a1c43134a71a260c">display_menu</reimplements>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>MAX</defname>
+        </param>
+        <param>
+          <type>const</type>
+          <declname>options</declname>
+          <defname>OPT</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/MainMenu.hpp" line="24" column="14" bodyfile="/home/chris/Documents/tsudoku/src/MainMenu.cpp" bodystart="94" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1a81e7e504259a458f72cde734c49ead31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu::set_VERTICAL_DIVIDER</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>set_VERTICAL_DIVIDER</name>
+        <qualifiedname>MainMenu::set_VERTICAL_DIVIDER</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/MainMenu.hpp" line="25" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1aedd8f211669de8140804de6668a2d669" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu::set_IN_GAME_MENU_DISPLAY_SPACING</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>set_IN_GAME_MENU_DISPLAY_SPACING</name>
+        <qualifiedname>MainMenu::set_IN_GAME_MENU_DISPLAY_SPACING</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/MainMenu.hpp" line="26" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1afe1eeb3b23a29c670b5ba3640154d7ae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenu::set_WINDOW_REQ</definition>
+        <argsstring>()</argsstring>
+        <name>set_WINDOW_REQ</name>
+        <qualifiedname>MainMenu::set_WINDOW_REQ</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/MainMenu.hpp" line="27" column="14" bodyfile="/home/chris/Documents/tsudoku/src/MainMenu.cpp" bodystart="143" bodyend="148"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMainMenu_1a53eecf9d5ffd094f54ac4193e7e57eaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainMenu::MainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>MainMenu</name>
+        <qualifiedname>MainMenu::MainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="22" column="9" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="9" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1a0a19ddba3ac52bf39c09b579171c98f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainMenu::~MainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>~MainMenu</name>
+        <qualifiedname>MainMenu::~MainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="23" column="9" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="19" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref></type>
+        <definition>options MainMenu::menu</definition>
+        <argsstring>() override</argsstring>
+        <name>menu</name>
+        <qualifiedname>MainMenu::menu</qualifiedname>
+        <reimplements refid="classMenu_1a19172889100b7d04a06e7e172a8db428">menu</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="24" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="68" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1ad23759c2b0ada687729c14e79001b6f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref></type>
+        <definition>options MainMenu::menu</definition>
+        <argsstring>(const bool)</argsstring>
+        <name>menu</name>
+        <qualifiedname>MainMenu::menu</qualifiedname>
+        <param>
+          <type>const bool</type>
+          <defname>USE_IN_GAME_MENU</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="25" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/MainMenu.cpp" bodystart="58" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1a53eecf9d5ffd094f54ac4193e7e57eaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainMenu::MainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>MainMenu</name>
+        <qualifiedname>MainMenu::MainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/MainMenu.hpp" line="30" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1a0a19ddba3ac52bf39c09b579171c98f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MainMenu::~MainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>~MainMenu</name>
+        <qualifiedname>MainMenu::~MainMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/MainMenu.hpp" line="31" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref></type>
+        <definition>options MainMenu::menu</definition>
+        <argsstring>() override</argsstring>
+        <name>menu</name>
+        <qualifiedname>MainMenu::menu</qualifiedname>
+        <reimplements refid="classMenu_1a19172889100b7d04a06e7e172a8db428">menu</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/MainMenu.hpp" line="32" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classMainMenu_1ad23759c2b0ada687729c14e79001b6f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref></type>
+        <definition>options MainMenu::menu</definition>
+        <argsstring>(const bool)</argsstring>
+        <name>menu</name>
+        <qualifiedname>MainMenu::menu</qualifiedname>
+        <param>
+          <type>const bool</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/MainMenu.hpp" line="33" column="17"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MainMenu</label>
+        <link refid="classMainMenu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="classMenu"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MainMenu</label>
+        <link refid="classMainMenu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="classMenu"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" line="8" column="1" bodyfile="/home/chris/Documents/sphinx_testing/include/MainMenu.hpp" bodystart="8" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classMainMenu_1a9f8609edcd657ac3150ae948e1eaf932" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>BOTTOM_PADDING</name></member>
+      <member refid="classMainMenu_1a7644a536b858b5095fd2e9915b1f10ba" prot="private" virt="virtual"><scope>MainMenu</scope><name>display_menu</name></member>
+      <member refid="classMainMenu_1aac398578b784cd42576df302945bc55b" prot="private" virt="virtual"><scope>MainMenu</scope><name>display_menu</name></member>
+      <member refid="classMenu_1a26719c17d8801e207892e6ad4b8dcfa2" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>IN_GAME_MENU_DISPLAY_SPACING</name></member>
+      <member refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>LEFT_PADDING</name></member>
+      <member refid="classMainMenu_1a53eecf9d5ffd094f54ac4193e7e57eaf" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>MainMenu</name></member>
+      <member refid="classMainMenu_1a53eecf9d5ffd094f54ac4193e7e57eaf" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>MainMenu</name></member>
+      <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>Menu</name></member>
+      <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>Menu</name></member>
+      <member refid="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" prot="public" virt="virtual"><scope>MainMenu</scope><name>menu</name></member>
+      <member refid="classMainMenu_1ad23759c2b0ada687729c14e79001b6f4" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>menu</name></member>
+      <member refid="classMainMenu_1a8a1a21016cd263c3fc3f13f76f742958" prot="public" virt="virtual"><scope>MainMenu</scope><name>menu</name></member>
+      <member refid="classMainMenu_1ad23759c2b0ada687729c14e79001b6f4" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>menu</name></member>
+      <member refid="classMenu_1a1611ec6c672448c9f86d473a18b8bdb7" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>PUZZLE_SPACE</name></member>
+      <member refid="classMainMenu_1a2d9709d1142a5b1b9ac64fae6f1ba46c" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>RESULT_MSG_SPACE</name></member>
+      <member refid="classMainMenu_1a6b08d51b12dd836c9dac66895e71362b" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>RIGHT_PADDING</name></member>
+      <member refid="classMainMenu_1aedd8f211669de8140804de6668a2d669" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>set_IN_GAME_MENU_DISPLAY_SPACING</name></member>
+      <member refid="classMainMenu_1aedd8f211669de8140804de6668a2d669" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>set_IN_GAME_MENU_DISPLAY_SPACING</name></member>
+      <member refid="classMainMenu_1a81e7e504259a458f72cde734c49ead31" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>set_VERTICAL_DIVIDER</name></member>
+      <member refid="classMainMenu_1a81e7e504259a458f72cde734c49ead31" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>set_VERTICAL_DIVIDER</name></member>
+      <member refid="classMainMenu_1afe1eeb3b23a29c670b5ba3640154d7ae" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>set_WINDOW_REQ</name></member>
+      <member refid="classMainMenu_1acfe2e16a40a155b3142dde82d7bbfa47" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>set_WINDOW_XMIN</name></member>
+      <member refid="classMenu_1a5a6fec931e1e71721d454da21cd6f9dc" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>SIGINT_handler</name></member>
+      <member refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>TOP_PADDING</name></member>
+      <member refid="classMenu_1a593f1ec27088578ed2dbdeb7c92d222b" prot="protected" virt="non-virtual"><scope>MainMenu</scope><name>VERTICAL_DIVIDER</name></member>
+      <member refid="classMainMenu_1a1094ba128928606faf1c771777021c25" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>WINDOW_XMIN</name></member>
+      <member refid="classMainMenu_1a561011b1f481daac6ee4ec6fa9f78451" prot="private" virt="non-virtual"><scope>MainMenu</scope><name>WINDOW_YMIN</name></member>
+      <member refid="classMainMenu_1a0a19ddba3ac52bf39c09b579171c98f2" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>~MainMenu</name></member>
+      <member refid="classMainMenu_1a0a19ddba3ac52bf39c09b579171c98f2" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>~MainMenu</name></member>
+      <member refid="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>~Menu</name></member>
+      <member refid="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>MainMenu</scope><name>~Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

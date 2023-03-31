@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_3f5d3cfb898d7b952f80c8722ffb624b" kind="dir">
+    <compoundname>/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead</compoundname>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RadioHead_8h">RadioHead.h</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RH__RF95_8cpp">RH_RF95.cpp</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RH__RF95_8h">RH_RF95.h</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RHGenericDriver_8cpp">RHGenericDriver.cpp</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RHGenericDriver_8h">RHGenericDriver.h</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RHGenericSPI_8cpp">RHGenericSPI.cpp</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RHGenericSPI_8h">RHGenericSPI.h</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RHHardwareSPI_8cpp">RHHardwareSPI.cpp</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RHHardwareSPI_8h">RHHardwareSPI.h</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8cpp">RHSPIDriver.cpp</innerfile>
+    <innerfile refid="LoRaNodeV4_2RadioHead_2RHSPIDriver_8h">RHSPIDriver.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/"/>
+  </compounddef>
+</doxygen>

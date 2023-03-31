@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="sudoku_8hpp" kind="file" language="C++">
+    <compoundname>sudoku.hpp</compoundname>
+    <includes refid="sphinx__testing_2include_2Grid_8hpp" local="yes">Grid.hpp</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">array</includes>
+    <includedby refid="sphinx__testing_2src_2main_8cpp" local="yes">/home/chris/Documents/sphinx_testing/src/main.cpp</includedby>
+    <includedby refid="sudoku_8cpp" local="yes">/home/chris/Documents/sphinx_testing/src/sudoku.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Container.hpp</label>
+        <link refid="sphinx__testing_2include_2Container_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Grid.hpp</label>
+        <link refid="sphinx__testing_2include_2Grid_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/include/sudoku.hpp</label>
+        <link refid="sudoku_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>values.hpp</label>
+        <link refid="values_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>array</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="10">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>random</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/sphinx_testing/include/sudoku.hpp</label>
+        <link refid="sudoku_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/sphinx_testing/src/main.cpp</label>
+        <link refid="sphinx__testing_2src_2main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/sphinx_testing/src/sudoku.cpp</label>
+        <link refid="sudoku_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSudoku" prot="public">Sudoku</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SUDOKU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUDOKU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_2include_2Grid_8hpp" kindref="compound">Grid.hpp</ref>&quot;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//cell,<sp/>std::map,<sp/>std::utility</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//uint8_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>getch<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NOTE:<sp/>Redefined<sp/>as<sp/>Sudoku::getch().<sp/>This<sp/>doesn&apos;t<sp/>appear<sp/>to<sp/>affect<sp/>the<sp/>getch()</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calls<sp/>in<sp/>main.cpp,<sp/>even<sp/>though<sp/>it<sp/>logically<sp/>should<sp/>after<sp/>seeing<sp/>how</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rearranging<sp/>#include<sp/>statements<sp/>got<sp/>the<sp/>KEY_ENTER<sp/>redefinition<sp/>to<sp/>work.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classSudoku" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSudoku" kindref="compound">Sudoku</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSudoku_1a3d889cb9858ae9b9025a24b801441ce6" kindref="member">display_matrix</ref>[27][27]<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGrid" kindref="compound">Grid</ref><sp/><ref refid="classSudoku_1a4db92378abfba69aa7e227d539e27000" kindref="member">mat</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;uint8_t,<sp/>cell&gt;<sp/><ref refid="classSudoku_1a7f9884c1ee4727ac330f930504ee1754" kindref="member">_map_</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//maps<sp/>81<sp/>positions<sp/>to<sp/>positions<sp/>in<sp/>27x27<sp/>display<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;cell,<sp/>uint8_t&gt;<sp/><ref refid="classSudoku_1a2dcddcda4905f2ae43cd316368b43b85" kindref="member">_rev_map_</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*const<sp/>uint8_t<sp/>INIT_OFFSETX<sp/>=<sp/>6,</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>INIT_OFFSETY<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>const<sp/>cell<sp/>ORIGIN<sp/>=<sp/>{INIT_OFFSETY,<sp/>INIT_OFFSETX};*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref><sp/><ref refid="classSudoku_1a80292dcc5372304be5b580bc7f8e18c7" kindref="member">ORIGIN</ref><sp/>=<sp/>{<ref refid="values_8hpp_1aa4a1e2bfbb4b6bdfc6d70f689a31810f" kindref="member">ORIGINy</ref>,<sp/><ref refid="values_8hpp_1a07d71a60201fb66046cb6293933c68dd" kindref="member">ORIGINx</ref>};<sp/></highlight><highlight class="comment">//NOTE:<sp/>Terminal<sp/>coordinates<sp/>are<sp/>in<sp/>(y,x)<sp/>format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref><sp/><ref refid="classSudoku_1ae058e28a4b54b96d2943043a466ca350" kindref="member">cursor_pos</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Origin<sp/>coordinates<sp/>found<sp/>in<sp/>values.hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;cell,<sp/>cell&gt;<sp/><ref refid="classSudoku_1a212c25a5fa11591233562f162e757d54" kindref="member">display_matrix_offset</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1ae19305b14d528804865442859cb577ef" kindref="member">border_positions</ref><sp/>{<ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadd6f7a38873f22b21473abf4c3304632" kindref="member">TL</ref><sp/>=<sp/>0,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadaaa3bcbe39b54d5d04c96e56eeb41e3" kindref="member">T</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dae5e3f061b1e9f1c06d79b1ee359998ab" kindref="member">TR</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dac3ac866fcc23bf2e61d55287b9fbbefc" kindref="member">L</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dabd1f43b8d978e2642d20ae86a4baa839" kindref="member">R</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6c27a8eff4011e3fd3dd763ef599f123" kindref="member">BL</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da34fdca3f2b8b098654911a74af8e4355" kindref="member">B</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6abbfc1b3b215edc5a40863c65bd6829" kindref="member">BR</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da8d60dcd9a6594e02635e722356a996a1" kindref="member">NUM_BORDER_POSITIONS</ref>};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//const<sp/>uint8_t<sp/>NUM_POSITIONS<sp/>=<sp/>8;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//map&lt;uint8_t,<sp/>cell&gt;<sp/>create_map();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a575451dbd2b52e533898e4126a9cde87" kindref="member">create_map</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1afcffe18cf8ada54d0b4075f2bcf31522" kindref="member">map_display_matrix_offset</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a3d20a2cddb02acb3666502f261ccf15b" kindref="member">set_color_pairs</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Start<sp/>menu,<sp/>accessed<sp/>from<sp/>constructor<sp/>before<sp/>generating<sp/>a<sp/>new<sp/>puzzle.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Can<sp/>resume<sp/>saved<sp/>puzzle<sp/>instead.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1ab1af4e3eccc4f1d96f9a16d76084458c" kindref="member">init_display_matrix</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1aeb55ca1041527f8b3e9345f067fb2955" kindref="member">printw</ref>(</highlight><highlight class="comment">/*const<sp/>bool,<sp/>const<sp/>bool*/</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1af6f100e3ba0453eafd42bce8732305ad" kindref="member">move</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1af6f100e3ba0453eafd42bce8732305ad" kindref="member">move</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a869d3cd45ea52709ea18fa23a034067a" kindref="member">refresh</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="classSudoku_1afb074824f3a0bb57d49014662362d7bf" kindref="member">getch</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a52fab0a93aee7f8589fea5181b23c813" kindref="member">clear</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a3a49e730dae2a58ee256f4d093b88344" kindref="member">is_border</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array&lt;cell,<sp/>NUM_BORDER_POSITIONS&gt;<sp/><ref refid="classSudoku_1a100cee00c94ba485c18531bc7fccd913" kindref="member">get_surrounding_cells</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a9b5f4a1b7d2a47271b7b4903965a25b1" kindref="member">do_nothing</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1af610ae4cbc7267d3f5daf8a5861a0a7b" kindref="member">clear_surrounding_cells</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a6060d3cc7de9d49d348e1e36250a33ed" kindref="member">place_value</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1ae66dfdd7f1b5f950cb1113265c211546" kindref="member">reset_cursor</ref>();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a691dc71a4e5d88fa38d810a81081ba9e" kindref="member">evaluate</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a9c79b186f06684ce288b1eabe21ef174" kindref="member">increment_completed_games</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1aac131ab29adfd3b35a7c028896f050f9" kindref="member">save_game</ref><sp/>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSudoku_1a1d17ce26fa349d09cb4a18ca7eb03771" kindref="member">Sudoku</ref><sp/>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSudoku_1a9c949b824fa3d98d3515dbecb8cf413e" kindref="member">~Sudoku</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a3d9823051a55448e7db1f9c7739e2656" kindref="member">start_game</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classAHT10" kind="class" language="C++" prot="public">
+    <compoundname>AHT10</compoundname>
+    <includes local="no">I2C_AHT10.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" prot="private" static="no" mutable="no">
+        <type>TwoWire *</type>
+        <definition>TwoWire* AHT10::_i2cPort</definition>
+        <argsstring></argsstring>
+        <name>_i2cPort</name>
+        <qualifiedname>AHT10::_i2cPort</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="23" column="13" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AHT10::_deviceAddress</definition>
+        <argsstring></argsstring>
+        <name>_deviceAddress</name>
+        <qualifiedname>AHT10::_deviceAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="24" column="13" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAHT10_1aa7fca3e190d6e348adf9988d46bf5e5b" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AHT10::measurementStarted</definition>
+        <argsstring></argsstring>
+        <name>measurementStarted</name>
+        <qualifiedname>AHT10::measurementStarted</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="25" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAHT10_1afc1e40407fc05818fff1048a903e3264" prot="private" static="no" mutable="no">
+        <type>struct AHT10::@0</type>
+        <definition>struct AHT10::@0 AHT10::sensorData</definition>
+        <argsstring></argsstring>
+        <name>sensorData</name>
+        <qualifiedname>AHT10::sensorData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="31" column="16"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" prot="private" static="no" mutable="no">
+        <type>struct AHT10::@1</type>
+        <definition>struct AHT10::@1 AHT10::sensorQueried</definition>
+        <argsstring></argsstring>
+        <name>sensorQueried</name>
+        <qualifiedname>AHT10::sensorQueried</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="37" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classAHT10_1a3dca7a7012816ba65372240fd1ade77a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AHT10::humidity</definition>
+        <argsstring></argsstring>
+        <name>humidity</name>
+        <qualifiedname>AHT10::humidity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="29" column="18" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAHT10_1a0374041e8e5d89b567ffdec1d3a8ae44" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AHT10::temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <qualifiedname>AHT10::temperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="30" column="18" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAHT10_1a412f70a9d55613dddc63453127fdab2a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AHT10::temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <qualifiedname>AHT10::temperature</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="35" column="17" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAHT10_1ad1eb3ecdc57b02bd343c87317a86ad10" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AHT10::humidity</definition>
+        <argsstring></argsstring>
+        <name>humidity</name>
+        <qualifiedname>AHT10::humidity</qualifiedname>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="36" column="17" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAHT10_1a81d25f7e23385debd5bd4a67439b5753" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AHT10::begin</definition>
+        <argsstring>(TwoWire &amp;wirePort=Wire)</argsstring>
+        <name>begin</name>
+        <qualifiedname>AHT10::begin</qualifiedname>
+        <param>
+          <type>TwoWire &amp;</type>
+          <declname>wirePort</declname>
+          <defval>Wire</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="41" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="8" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1a1cb0b3459f6e4ae09378188f16fb3809" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AHT10::isConnected</definition>
+        <argsstring>()</argsstring>
+        <name>isConnected</name>
+        <qualifiedname>AHT10::isConnected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="42" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="60" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1ab4ba0b79a3926ac9a838525327d7cc0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AHT10::available</definition>
+        <argsstring>()</argsstring>
+        <name>available</name>
+        <qualifiedname>AHT10::available</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="43" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="157" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1af1f5b417d05553ab168b2fc903108a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t AHT10::getStatus</definition>
+        <argsstring>()</argsstring>
+        <name>getStatus</name>
+        <qualifiedname>AHT10::getStatus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="46" column="13" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1a8a38acbd63124d81d338edbc7008ba9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AHT10::isCalibrated</definition>
+        <argsstring>()</argsstring>
+        <name>isCalibrated</name>
+        <qualifiedname>AHT10::isCalibrated</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="47" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1a20a9ee6af4b9af7a5842112218867701" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AHT10::isBusy</definition>
+        <argsstring>()</argsstring>
+        <name>isBusy</name>
+        <qualifiedname>AHT10::isBusy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="48" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1abd652ac56666c87f44eebb21dfc88a7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AHT10::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>AHT10::initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="49" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="99" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1ac369fae86104dbb1af0501a804ce1f5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AHT10::triggerMeasurement</definition>
+        <argsstring>()</argsstring>
+        <name>triggerMeasurement</name>
+        <qualifiedname>AHT10::triggerMeasurement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="50" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="110" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1ab6f09082dcca441ba7d88d4cd6390f9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AHT10::readData</definition>
+        <argsstring>()</argsstring>
+        <name>readData</name>
+        <qualifiedname>AHT10::readData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="51" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="122" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1af38e939ccebbeaa5ca04eacb665e3f8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool AHT10::softReset</definition>
+        <argsstring>()</argsstring>
+        <name>softReset</name>
+        <qualifiedname>AHT10::softReset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="52" column="10" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="176" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1a8ccbe1aca533416bb31bdcd0cac05be5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AHT10::getTemperature</definition>
+        <argsstring>()</argsstring>
+        <name>getTemperature</name>
+        <qualifiedname>AHT10::getTemperature</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="55" column="11" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="187" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classAHT10_1a68b8debcdc0bcae4046a1ff516022978" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float AHT10::getHumidity</definition>
+        <argsstring>()</argsstring>
+        <name>getHumidity</name>
+        <qualifiedname>AHT10::getHumidity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="56" column="11" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.cpp" bodystart="216" bodyend="243"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/farm-sensors/I2C_AHT10.h" line="20" column="1" bodyfile="/home/chris/Documents/farm-sensors/I2C_AHT10.h" bodystart="21" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classAHT10_1a548ca3f461a73982c1a9e24c26ce6b31" prot="private" virt="non-virtual"><scope>AHT10</scope><name>_deviceAddress</name></member>
+      <member refid="classAHT10_1a5ccf12f424dcdad2579c87194cea5bbb" prot="private" virt="non-virtual"><scope>AHT10</scope><name>_i2cPort</name></member>
+      <member refid="classAHT10_1ab4ba0b79a3926ac9a838525327d7cc0a" prot="public" virt="non-virtual"><scope>AHT10</scope><name>available</name></member>
+      <member refid="classAHT10_1a81d25f7e23385debd5bd4a67439b5753" prot="public" virt="non-virtual"><scope>AHT10</scope><name>begin</name></member>
+      <member refid="classAHT10_1a68b8debcdc0bcae4046a1ff516022978" prot="public" virt="non-virtual"><scope>AHT10</scope><name>getHumidity</name></member>
+      <member refid="classAHT10_1af1f5b417d05553ab168b2fc903108a02" prot="public" virt="non-virtual"><scope>AHT10</scope><name>getStatus</name></member>
+      <member refid="classAHT10_1a8ccbe1aca533416bb31bdcd0cac05be5" prot="public" virt="non-virtual"><scope>AHT10</scope><name>getTemperature</name></member>
+      <member refid="classAHT10_1a3dca7a7012816ba65372240fd1ade77a" prot="public" virt="non-virtual"><scope>AHT10</scope><name>humidity</name></member>
+      <member refid="classAHT10_1ad1eb3ecdc57b02bd343c87317a86ad10" prot="public" virt="non-virtual"><scope>AHT10</scope><name>humidity</name></member>
+      <member refid="classAHT10_1abd652ac56666c87f44eebb21dfc88a7c" prot="public" virt="non-virtual"><scope>AHT10</scope><name>initialize</name></member>
+      <member refid="classAHT10_1a20a9ee6af4b9af7a5842112218867701" prot="public" virt="non-virtual"><scope>AHT10</scope><name>isBusy</name></member>
+      <member refid="classAHT10_1a8a38acbd63124d81d338edbc7008ba9f" prot="public" virt="non-virtual"><scope>AHT10</scope><name>isCalibrated</name></member>
+      <member refid="classAHT10_1a1cb0b3459f6e4ae09378188f16fb3809" prot="public" virt="non-virtual"><scope>AHT10</scope><name>isConnected</name></member>
+      <member refid="classAHT10_1aa7fca3e190d6e348adf9988d46bf5e5b" prot="private" virt="non-virtual"><scope>AHT10</scope><name>measurementStarted</name></member>
+      <member refid="classAHT10_1ab6f09082dcca441ba7d88d4cd6390f9e" prot="public" virt="non-virtual"><scope>AHT10</scope><name>readData</name></member>
+      <member refid="classAHT10_1afc1e40407fc05818fff1048a903e3264" prot="private" virt="non-virtual"><scope>AHT10</scope><name>sensorData</name></member>
+      <member refid="classAHT10_1a063e89a7d9450bb86782e6d2d091e027" prot="private" virt="non-virtual"><scope>AHT10</scope><name>sensorQueried</name></member>
+      <member refid="classAHT10_1af38e939ccebbeaa5ca04eacb665e3f8c" prot="public" virt="non-virtual"><scope>AHT10</scope><name>softReset</name></member>
+      <member refid="classAHT10_1a0374041e8e5d89b567ffdec1d3a8ae44" prot="public" virt="non-virtual"><scope>AHT10</scope><name>temperature</name></member>
+      <member refid="classAHT10_1a412f70a9d55613dddc63453127fdab2a" prot="public" virt="non-virtual"><scope>AHT10</scope><name>temperature</name></member>
+      <member refid="classAHT10_1ac369fae86104dbb1af0501a804ce1f5b" prot="public" virt="non-virtual"><scope>AHT10</scope><name>triggerMeasurement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

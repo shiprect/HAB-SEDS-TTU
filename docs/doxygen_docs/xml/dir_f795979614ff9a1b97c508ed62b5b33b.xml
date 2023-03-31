@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_f795979614ff9a1b97c508ed62b5b33b" kind="dir">
+    <compoundname>/home/chris/Documents/ece5520/homework/hw2</compoundname>
+    <innerfile refid="hw2_8py">hw2.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece5520/homework/hw2/"/>
+  </compounddef>
+</doxygen>

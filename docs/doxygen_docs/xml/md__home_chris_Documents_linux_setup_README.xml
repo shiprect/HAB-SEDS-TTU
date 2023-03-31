@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="md__home_chris_Documents_linux_setup_README" kind="page">
+    <compoundname>md__home_chris_Documents_linux_setup_README</compoundname>
+    <title>linux-setup</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A set of scripts to install and configure system and apps for supported Linux OSs. </para>
+    </detaileddescription>
+    <location file="/home/chris/Documents/linux-setup/README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespaceproblem1" kind="namespace" language="Python">
+    <compoundname>problem1</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproblem1_1a291e769f342378b1b20b28a21c7b421d" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary problem1.notes</definition>
+        <argsstring></argsstring>
+        <name>notes</name>
+        <qualifiedname>problem1.notes</qualifiedname>
+        <initializer>=  {
+    &apos;C&apos;: (261.6256, &apos;Hz&apos;, 0),
+    &apos;D&apos;: (293.6648, &apos;Hz&apos;, 1),
+    &apos;E&apos;: (329.6276, &apos;Hz&apos;, 2),
+    &apos;F&apos;: (349.2282, &apos;Hz&apos;, 3),
+    &apos;G&apos;: (391.9954, &apos;Hz&apos;, 4),
+    &apos;A&apos;: (440, &apos;Hz&apos;, 5),
+    &apos;B&apos;: (493.8833, &apos;Hz&apos;, 6)
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem1.py" line="9" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem1.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproblem1_1a6aa91eda07741915b9b7545b99f4ab9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem1.xH</definition>
+        <argsstring>(t, int H, tuple A, tuple T)</argsstring>
+        <name>xH</name>
+        <qualifiedname>problem1.xH</qualifiedname>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>H</declname>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>tuple</type>
+          <declname>T</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw1/problem1.py" line="15" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw1/problem1.py" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem1_1aef3315a251f65cb96deeaa31c20f34ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem1::main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>problem1.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim> NOTE: Read in the song from a WAV file. This returns a tuple where the first element is the
+          sampling frequency, and the second element is the signal as a NumPy array.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw1/problem1.py" line="18" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw1/problem1.py" bodystart="18" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem1_1abef1c9cfbcb41965766bb836bcb6f70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem1.fourier_square_wave</definition>
+        <argsstring>(T, A, H)</argsstring>
+        <name>fourier_square_wave</name>
+        <qualifiedname>problem1.fourier_square_wave</qualifiedname>
+        <param>
+          <type>T</type>
+          <defname>T</defname>
+        </param>
+        <param>
+          <type>A</type>
+          <defname>A</defname>
+        </param>
+        <param>
+          <type>H</type>
+          <defname>H</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Function to generate the time-domain signal representing an H-harmonic
+approximation of a square wave using a truncated Fourier series
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw1/soln/problem1.py" line="8" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw1/soln/problem1.py" bodystart="8" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem1_1a5c61da38fa88b93e4a66be5270bc20d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem1::rect</definition>
+        <argsstring>(t)</argsstring>
+        <name>rect</name>
+        <qualifiedname>problem1.rect</qualifiedname>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem1.py" line="25" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem1.py" bodystart="25" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproblem1_1af8647f4bbe16aba3a34c1fa36490cdf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def problem1.h</definition>
+        <argsstring>(t, float freq)</argsstring>
+        <name>h</name>
+        <qualifiedname>problem1.h</qualifiedname>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw3/problem1.py" line="38" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw3/problem1.py" bodystart="38" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece6040/homework/hw1/problem1.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

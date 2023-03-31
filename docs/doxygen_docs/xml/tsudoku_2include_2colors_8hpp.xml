@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="tsudoku_2include_2colors_8hpp" kind="file" language="C++">
+    <compoundname>colors.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="DifficultyMenu_8hpp" local="yes">/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/colors.hpp</label>
+        <link refid="tsudoku_2include_2colors_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/tsudoku/include/DifficultyMenu.hpp</label>
+        <link refid="DifficultyMenu_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/colors.hpp</label>
+        <link refid="tsudoku_2include_2colors_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/tsudoku/src/DifficultyMenu.cpp</label>
+        <link refid="DifficultyMenu_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/tsudoku/src/Sudoku.cpp</label>
+        <link refid="Sudoku_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3" prot="public" static="no" strong="no">
+        <type></type>
+        <name>colors</name>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a6ce26a62afab55d7606ad4e92428b30c" prot="public">
+          <name>UNKNOWN</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a0d6cf1dce39b9aca3be47ffd1ab117f9" prot="public">
+          <name>GIVEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab3a0a49e164b5aef8cc1cda4725ef028" prot="public">
+          <name>CANDIDATES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab8c769f7e7a67d0a91a2fe34fdc5dbea" prot="public">
+          <name>GUESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" prot="public">
+          <name>MENU_SELECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a6ce26a62afab55d7606ad4e92428b30c" prot="public">
+          <name>UNKNOWN</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a0d6cf1dce39b9aca3be47ffd1ab117f9" prot="public">
+          <name>GIVEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a61bae3fe70c42bacec47f8f7fe2841d3" prot="public">
+          <name>CANDIDATES_Y</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab543069b8105f0af2defd5e19a29eb11" prot="public">
+          <name>CANDIDATES_B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab8c769f7e7a67d0a91a2fe34fdc5dbea" prot="public">
+          <name>GUESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" prot="public">
+          <name>MENU_SELECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/colors.hpp" line="12" column="1" bodyfile="/home/chris/Documents/tsudoku/include/colors.hpp" bodystart="12" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="tsudoku_2include_2colors_8hpp_1abd1399b3a26da43248638a3ffb73a0f2" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string color_code[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>color_code</name>
+        <initializer>= { &quot;n&quot;, &quot;u&quot;, &quot;r&quot;, &quot;y&quot;, &quot;b&quot;, &quot;g&quot; }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/colors.hpp" line="13" column="19" bodyfile="/home/chris/Documents/tsudoku/include/colors.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>COLORS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLORS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//std::string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:<sp/>This<sp/>file<sp/>contains<sp/>constants<sp/>used<sp/>for<sp/>identifying<sp/>NCurses<sp/>color<sp/>codes.</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/>colors<sp/>-&gt;<sp/>enum<sp/>constants<sp/>used<sp/>for<sp/>identifying<sp/>NCurses<sp/>COLOR_PAIRs<sp/>when<sp/>printing<sp/>to<sp/>the<sp/>screen</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/><sp/>color_code<sp/>-&gt;<sp/>array<sp/>used<sp/>to<sp/>identify<sp/>NCurses<sp/>COLOR_PAIRs<sp/>when<sp/>writing/reading<sp/>a<sp/>saved<sp/>game<sp/>to</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>from<sp/>a<sp/>file</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3" kindref="member">colors</ref><sp/>{<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a6ce26a62afab55d7606ad4e92428b30c" kindref="member">UNKNOWN</ref><sp/>=<sp/>1,<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a0d6cf1dce39b9aca3be47ffd1ab117f9" kindref="member">GIVEN</ref>,<sp/><ref refid="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3a61bae3fe70c42bacec47f8f7fe2841d3" kindref="member">CANDIDATES_Y</ref>,<sp/><ref refid="tsudoku_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab543069b8105f0af2defd5e19a29eb11" kindref="member">CANDIDATES_B</ref>,<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ab8c769f7e7a67d0a91a2fe34fdc5dbea" kindref="member">GUESS</ref>,<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1aedd64c3f92da850b93776c65fd1cced3ae26875fc20d12429767cd8101f356898" kindref="member">MENU_SELECTION</ref><sp/>};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="sphinx__testing_2include_2colors_8hpp_1a6f01e052fa2b5a730cb5a1e264a11be7" kindref="member">color_code</ref>[6]<sp/>=<sp/>{<sp/></highlight><highlight class="stringliteral">&quot;n&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;u&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;r&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;y&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;b&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;g&quot;</highlight><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/colors.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1046 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classRHGenericSPI" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>RHGenericSPI</compoundname>
+    <derivedcompoundref refid="classRHHardwareSPI" prot="public" virt="non-virtual">RHHardwareSPI</derivedcompoundref>
+    <derivedcompoundref refid="classRHHardwareSPI" prot="public" virt="non-virtual">RHHardwareSPI</derivedcompoundref>
+    <includes local="no">RHGenericSPI.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DataMode</name>
+        <qualifiedname>RHGenericSPI::DataMode</qualifiedname>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" prot="public">
+          <name>DataMode0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI Mode 0: CPOL = 0, CPHA = 0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fad163c5586916a72c503cbc802278807f" prot="public">
+          <name>DataMode1</name>
+          <briefdescription>
+<para>SPI Mode 1: CPOL = 0, CPHA = 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fafee3778c48affb675976408e3d703412" prot="public">
+          <name>DataMode2</name>
+          <briefdescription>
+<para>SPI Mode 2: CPOL = 1, CPHA = 0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fa7b94169eadd026d993076e462db5e3fd" prot="public">
+          <name>DataMode3</name>
+          <briefdescription>
+<para>SPI Mode 3: CPOL = 1, CPHA = 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" prot="public">
+          <name>DataMode0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI Mode 0: CPOL = 0, CPHA = 0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fad163c5586916a72c503cbc802278807f" prot="public">
+          <name>DataMode1</name>
+          <briefdescription>
+<para>SPI Mode 1: CPOL = 0, CPHA = 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fafee3778c48affb675976408e3d703412" prot="public">
+          <name>DataMode2</name>
+          <briefdescription>
+<para>SPI Mode 2: CPOL = 1, CPHA = 0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fa7b94169eadd026d993076e462db5e3fd" prot="public">
+          <name>DataMode3</name>
+          <briefdescription>
+<para>SPI Mode 3: CPOL = 1, CPHA = 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines constants for different SPI modes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines constants for different SPI modes that can be passed to the constructor or setMode() We need to define these in a device and platform independent way, because the SPI implementation is different on each platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="40" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Frequency</name>
+        <qualifiedname>RHGenericSPI::Frequency</qualifiedname>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" prot="public">
+          <name>Frequency1MHz</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI bus frequency close to 1MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba1cf7ded513364cea33b664367559a7ac" prot="public">
+          <name>Frequency2MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 2MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba3f551d8a71f11a09286f070d6dbbfa16" prot="public">
+          <name>Frequency4MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 4MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bac47ec8bfc0d0940c51c953ec6e513a2c" prot="public">
+          <name>Frequency8MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 8MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba96d32b348eeedee70c3e98e3bec00a64" prot="public">
+          <name>Frequency16MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 16MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" prot="public">
+          <name>Frequency1MHz</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI bus frequency close to 1MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba1cf7ded513364cea33b664367559a7ac" prot="public">
+          <name>Frequency2MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 2MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba3f551d8a71f11a09286f070d6dbbfa16" prot="public">
+          <name>Frequency4MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 4MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bac47ec8bfc0d0940c51c953ec6e513a2c" prot="public">
+          <name>Frequency8MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 8MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba96d32b348eeedee70c3e98e3bec00a64" prot="public">
+          <name>Frequency16MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 16MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines constants for different SPI bus frequencies. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines constants for different SPI bus frequencies that can be passed to <ref refid="classRHGenericSPI_1a9eecf2a206d0c6f42ca904c8f4374e13" kindref="member">setFrequency()</ref>. The frequency you get may not be exactly the one according to the name. We need to define these in a device and platform independent way, because the SPI implementation is different on each platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="55" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="enum" id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" prot="public" static="no" strong="no">
+        <type></type>
+        <name>BitOrder</name>
+        <qualifiedname>RHGenericSPI::BitOrder</qualifiedname>
+        <enumvalue id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" prot="public">
+          <name>BitOrderMSBFirst</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI MSB first. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380a367543a6b63bab953acaa74628657d48" prot="public">
+          <name>BitOrderLSBFirst</name>
+          <briefdescription>
+<para>SPI LSB first. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" prot="public">
+          <name>BitOrderMSBFirst</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI MSB first. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380a367543a6b63bab953acaa74628657d48" prot="public">
+          <name>BitOrderLSBFirst</name>
+          <briefdescription>
+<para>SPI LSB first. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines constants for different SPI endianness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines constants for different SPI endianness that can be passed to <ref refid="classRHGenericSPI_1a76fa1e24aa0f686e66fa71f95ee7c0b4" kindref="member">setBitOrder()</ref> We need to define these in a device and platform independent way, because the SPI implementation is different on each platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="70" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="enum" id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DataMode</name>
+        <qualifiedname>RHGenericSPI::DataMode</qualifiedname>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" prot="public">
+          <name>DataMode0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI Mode 0: CPOL = 0, CPHA = 0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fad163c5586916a72c503cbc802278807f" prot="public">
+          <name>DataMode1</name>
+          <briefdescription>
+<para>SPI Mode 1: CPOL = 0, CPHA = 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fafee3778c48affb675976408e3d703412" prot="public">
+          <name>DataMode2</name>
+          <briefdescription>
+<para>SPI Mode 2: CPOL = 1, CPHA = 0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fa7b94169eadd026d993076e462db5e3fd" prot="public">
+          <name>DataMode3</name>
+          <briefdescription>
+<para>SPI Mode 3: CPOL = 1, CPHA = 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" prot="public">
+          <name>DataMode0</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI Mode 0: CPOL = 0, CPHA = 0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fad163c5586916a72c503cbc802278807f" prot="public">
+          <name>DataMode1</name>
+          <briefdescription>
+<para>SPI Mode 1: CPOL = 0, CPHA = 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fafee3778c48affb675976408e3d703412" prot="public">
+          <name>DataMode2</name>
+          <briefdescription>
+<para>SPI Mode 2: CPOL = 1, CPHA = 0. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fa7b94169eadd026d993076e462db5e3fd" prot="public">
+          <name>DataMode3</name>
+          <briefdescription>
+<para>SPI Mode 3: CPOL = 1, CPHA = 1. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines constants for different SPI modes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines constants for different SPI modes that can be passed to the constructor or setMode() We need to define these in a device and platform independent way, because the SPI implementation is different on each platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="40" column="5" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Frequency</name>
+        <qualifiedname>RHGenericSPI::Frequency</qualifiedname>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" prot="public">
+          <name>Frequency1MHz</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI bus frequency close to 1MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba1cf7ded513364cea33b664367559a7ac" prot="public">
+          <name>Frequency2MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 2MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba3f551d8a71f11a09286f070d6dbbfa16" prot="public">
+          <name>Frequency4MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 4MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bac47ec8bfc0d0940c51c953ec6e513a2c" prot="public">
+          <name>Frequency8MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 8MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba96d32b348eeedee70c3e98e3bec00a64" prot="public">
+          <name>Frequency16MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 16MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" prot="public">
+          <name>Frequency1MHz</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI bus frequency close to 1MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba1cf7ded513364cea33b664367559a7ac" prot="public">
+          <name>Frequency2MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 2MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba3f551d8a71f11a09286f070d6dbbfa16" prot="public">
+          <name>Frequency4MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 4MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bac47ec8bfc0d0940c51c953ec6e513a2c" prot="public">
+          <name>Frequency8MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 8MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba96d32b348eeedee70c3e98e3bec00a64" prot="public">
+          <name>Frequency16MHz</name>
+          <briefdescription>
+<para>SPI bus frequency close to 16MHz. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines constants for different SPI bus frequencies. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines constants for different SPI bus frequencies that can be passed to <ref refid="classRHGenericSPI_1a9eecf2a206d0c6f42ca904c8f4374e13" kindref="member">setFrequency()</ref>. The frequency you get may not be exactly the one according to the name. We need to define these in a device and platform independent way, because the SPI implementation is different on each platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="55" column="5" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" bodystart="56" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="enum" id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" prot="public" static="no" strong="no">
+        <type></type>
+        <name>BitOrder</name>
+        <qualifiedname>RHGenericSPI::BitOrder</qualifiedname>
+        <enumvalue id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" prot="public">
+          <name>BitOrderMSBFirst</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI MSB first. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380a367543a6b63bab953acaa74628657d48" prot="public">
+          <name>BitOrderLSBFirst</name>
+          <briefdescription>
+<para>SPI LSB first. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" prot="public">
+          <name>BitOrderMSBFirst</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>SPI MSB first. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380a367543a6b63bab953acaa74628657d48" prot="public">
+          <name>BitOrderLSBFirst</name>
+          <briefdescription>
+<para>SPI LSB first. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Defines constants for different SPI endianness. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines constants for different SPI endianness that can be passed to <ref refid="classRHGenericSPI_1a76fa1e24aa0f686e66fa71f95ee7c0b4" kindref="member">setBitOrder()</ref> We need to define these in a device and platform independent way, because the SPI implementation is different on each platform. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="70" column="5" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" bodystart="71" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classRHGenericSPI_1a0fb8976ef154c748e0d222f824e24ef6" prot="protected" static="no" mutable="no">
+        <type><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">Frequency</ref></type>
+        <definition>Frequency RHGenericSPI::_frequency</definition>
+        <argsstring></argsstring>
+        <name>_frequency</name>
+        <qualifiedname>RHGenericSPI::_frequency</qualifiedname>
+        <briefdescription>
+<para>The configure SPI Bus frequency, one of <ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">RHGenericSPI::Frequency</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="129" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericSPI_1aaf44bdc591031120f4fc90673aedf1c6" prot="protected" static="no" mutable="no">
+        <type><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">BitOrder</ref></type>
+        <definition>BitOrder RHGenericSPI::_bitOrder</definition>
+        <argsstring></argsstring>
+        <name>_bitOrder</name>
+        <qualifiedname>RHGenericSPI::_bitOrder</qualifiedname>
+        <briefdescription>
+<para>Bit order, one of <ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">RHGenericSPI::BitOrder</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="132" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHGenericSPI_1a13c2f2a7f75c5563125b2a697ce8b14b" prot="protected" static="no" mutable="no">
+        <type><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">DataMode</ref></type>
+        <definition>DataMode RHGenericSPI::_dataMode</definition>
+        <argsstring></argsstring>
+        <name>_dataMode</name>
+        <qualifiedname>RHGenericSPI::_dataMode</qualifiedname>
+        <briefdescription>
+<para>SPI bus mode, one of <ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">RHGenericSPI::DataMode</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="135" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRHGenericSPI_1a7d9a16c339ff396e259672afd226742f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RHGenericSPI::RHGenericSPI</definition>
+        <argsstring>(Frequency frequency=Frequency1MHz, BitOrder bitOrder=BitOrderMSBFirst, DataMode dataMode=DataMode0)</argsstring>
+        <name>RHGenericSPI</name>
+        <qualifiedname>RHGenericSPI::RHGenericSPI</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">Frequency</ref></type>
+          <declname>frequency</declname>
+          <defval><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" kindref="member">Frequency1MHz</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">BitOrder</ref></type>
+          <declname>bitOrder</declname>
+          <defval><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" kindref="member">BitOrderMSBFirst</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">DataMode</ref></type>
+          <declname>dataMode</declname>
+          <defval><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" kindref="member">DataMode0</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor Creates an instance of an abstract SPI interface. Do not use this contructor directly: you must instead use on of the concrete subclasses provided such as <ref refid="classRHHardwareSPI" kindref="compound">RHHardwareSPI</ref> or RHSoftwareSPI <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of <ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">RHGenericSPI::Frequency</ref> to select the SPI bus frequency. The frequency is mapped to the closest available bus frequency on the platform. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bitOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Select the SPI bus bit order, one of <ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" kindref="member">RHGenericSPI::BitOrderMSBFirst</ref> or <ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380a367543a6b63bab953acaa74628657d48" kindref="member">RHGenericSPI::BitOrderLSBFirst</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selects the SPI bus data mode. One of <ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">RHGenericSPI::DataMode</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="85" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.cpp" bodystart="9" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t RHGenericSPI::transfer</definition>
+        <argsstring>(uint8_t data)=0</argsstring>
+        <name>transfer</name>
+        <qualifiedname>RHGenericSPI::transfer</qualifiedname>
+        <reimplementedby refid="classRHHardwareSPI_1a3bafa40f9fee3c1648df770a8082213a">transfer</reimplementedby>
+        <reimplementedby refid="classRHHardwareSPI_1a3bafa40f9fee3c1648df770a8082213a">transfer</reimplementedby>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Transfer a single octet to and from the SPI interface <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The octet to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The octet read from SPI while the data octet was sent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="90" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1ad790927c415639388bbe6a5fe99c4e13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::attachInterrupt</definition>
+        <argsstring>()</argsstring>
+        <name>attachInterrupt</name>
+        <qualifiedname>RHGenericSPI::attachInterrupt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SPI Configuration methods Enable SPI interrupts (if supported) This can be used in an SPI slave to indicate when an SPI message has been received </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="95" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1afe5edb725cf6b8110464a72b1e75eddc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::detachInterrupt</definition>
+        <argsstring>()</argsstring>
+        <name>detachInterrupt</name>
+        <qualifiedname>RHGenericSPI::detachInterrupt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disable SPI interrupts (if supported) This can be used to diable the SPI interrupt in slaves where that is supported. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="99" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1ab2e3de040be2bd97400a993af114d26a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::begin</definition>
+        <argsstring>()=0</argsstring>
+        <name>begin</name>
+        <qualifiedname>RHGenericSPI::begin</qualifiedname>
+        <reimplementedby refid="classRHHardwareSPI_1a15fe95978c03090d7a496aba577137e9">begin</reimplementedby>
+        <reimplementedby refid="classRHHardwareSPI_1a15fe95978c03090d7a496aba577137e9">begin</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the SPI library. Call this after configuring and before using the SPI library </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="103" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a06b2066e7d97941fbb70c854821fadb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::end</definition>
+        <argsstring>()=0</argsstring>
+        <name>end</name>
+        <qualifiedname>RHGenericSPI::end</qualifiedname>
+        <reimplementedby refid="classRHHardwareSPI_1ad6e88ca17b63901872825a5e0a362c34">end</reimplementedby>
+        <reimplementedby refid="classRHHardwareSPI_1ad6e88ca17b63901872825a5e0a362c34">end</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disables the SPI bus (leaving pin modes unchanged). Call this after you have finished using the SPI interface </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="107" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a76fa1e24aa0f686e66fa71f95ee7c0b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericSPI::setBitOrder</definition>
+        <argsstring>(BitOrder bitOrder)</argsstring>
+        <name>setBitOrder</name>
+        <qualifiedname>RHGenericSPI::setBitOrder</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">BitOrder</ref></type>
+          <declname>bitOrder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the bit order the SPI interface will use Sets the order of the bits shifted out of and into the SPI bus, either LSBFIRST (least-significant bit first) or MSBFIRST (most-significant bit first). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bitOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bit order to be used: one of <ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">RHGenericSPI::BitOrder</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="113" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.cpp" bodystart="17" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a829a6400bab6a3d09b16d82d2c940f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericSPI::setDataMode</definition>
+        <argsstring>(DataMode dataMode)</argsstring>
+        <name>setDataMode</name>
+        <qualifiedname>RHGenericSPI::setDataMode</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">DataMode</ref></type>
+          <declname>dataMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the SPI data mode: that is, clock polarity and phase. See the Wikipedia article on SPI for details. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dataMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode to use: one of <ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">RHGenericSPI::DataMode</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="118" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a9eecf2a206d0c6f42ca904c8f4374e13" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RHGenericSPI::setFrequency</definition>
+        <argsstring>(Frequency frequency)</argsstring>
+        <name>setFrequency</name>
+        <qualifiedname>RHGenericSPI::setFrequency</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">Frequency</ref></type>
+          <declname>frequency</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the SPI clock divider relative to the system clock. On AVR based boards, the dividers available are 2, 4, 8, 16, 32, 64 or 128. The default setting is SPI_CLOCK_DIV4, which sets the SPI clock to one-quarter the frequency of the system clock (4 Mhz for the boards at 16 MHz). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data rate to use: one of <ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">RHGenericSPI::Frequency</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="125" column="18" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.cpp" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a7d9a16c339ff396e259672afd226742f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RHGenericSPI::RHGenericSPI</definition>
+        <argsstring>(Frequency frequency=Frequency1MHz, BitOrder bitOrder=BitOrderMSBFirst, DataMode dataMode=DataMode0)</argsstring>
+        <name>RHGenericSPI</name>
+        <qualifiedname>RHGenericSPI::RHGenericSPI</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">Frequency</ref></type>
+          <declname>frequency</declname>
+          <defval><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" kindref="member">Frequency1MHz</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">BitOrder</ref></type>
+          <declname>bitOrder</declname>
+          <defval><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" kindref="member">BitOrderMSBFirst</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">DataMode</ref></type>
+          <declname>dataMode</declname>
+          <defval><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" kindref="member">DataMode0</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor Creates an instance of an abstract SPI interface. Do not use this contructor directly: you must instead use on of the concrete subclasses provided such as <ref refid="classRHHardwareSPI" kindref="compound">RHHardwareSPI</ref> or RHSoftwareSPI <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>One of <ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">RHGenericSPI::Frequency</ref> to select the SPI bus frequency. The frequency is mapped to the closest available bus frequency on the platform. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bitOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Select the SPI bus bit order, one of <ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" kindref="member">RHGenericSPI::BitOrderMSBFirst</ref> or <ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380a367543a6b63bab953acaa74628657d48" kindref="member">RHGenericSPI::BitOrderLSBFirst</ref>. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dataMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Selects the SPI bus data mode. One of <ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">RHGenericSPI::DataMode</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="85" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>uint8_t</type>
+        <definition>virtual uint8_t RHGenericSPI::transfer</definition>
+        <argsstring>(uint8_t data)=0</argsstring>
+        <name>transfer</name>
+        <qualifiedname>RHGenericSPI::transfer</qualifiedname>
+        <reimplementedby refid="classRHHardwareSPI_1a3bafa40f9fee3c1648df770a8082213a">transfer</reimplementedby>
+        <reimplementedby refid="classRHHardwareSPI_1a3bafa40f9fee3c1648df770a8082213a">transfer</reimplementedby>
+        <param>
+          <type>uint8_t</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Transfer a single octet to and from the SPI interface <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The octet to send </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The octet read from SPI while the data octet was sent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="90" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1ad790927c415639388bbe6a5fe99c4e13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::attachInterrupt</definition>
+        <argsstring>()</argsstring>
+        <name>attachInterrupt</name>
+        <qualifiedname>RHGenericSPI::attachInterrupt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>SPI Configuration methods Enable SPI interrupts (if supported) This can be used in an SPI slave to indicate when an SPI message has been received </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="95" column="18" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" bodystart="95" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1afe5edb725cf6b8110464a72b1e75eddc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::detachInterrupt</definition>
+        <argsstring>()</argsstring>
+        <name>detachInterrupt</name>
+        <qualifiedname>RHGenericSPI::detachInterrupt</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disable SPI interrupts (if supported) This can be used to diable the SPI interrupt in slaves where that is supported. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="99" column="18" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1ab2e3de040be2bd97400a993af114d26a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::begin</definition>
+        <argsstring>()=0</argsstring>
+        <name>begin</name>
+        <qualifiedname>RHGenericSPI::begin</qualifiedname>
+        <reimplementedby refid="classRHHardwareSPI_1a15fe95978c03090d7a496aba577137e9">begin</reimplementedby>
+        <reimplementedby refid="classRHHardwareSPI_1a15fe95978c03090d7a496aba577137e9">begin</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the SPI library. Call this after configuring and before using the SPI library </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="103" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a06b2066e7d97941fbb70c854821fadb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::end</definition>
+        <argsstring>()=0</argsstring>
+        <name>end</name>
+        <qualifiedname>RHGenericSPI::end</qualifiedname>
+        <reimplementedby refid="classRHHardwareSPI_1ad6e88ca17b63901872825a5e0a362c34">end</reimplementedby>
+        <reimplementedby refid="classRHHardwareSPI_1ad6e88ca17b63901872825a5e0a362c34">end</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disables the SPI bus (leaving pin modes unchanged). Call this after you have finished using the SPI interface </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="107" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a86be0b8aae8dcab33623f2344f6d4303" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::setBitOrder</definition>
+        <argsstring>(BitOrder bitOrder)</argsstring>
+        <name>setBitOrder</name>
+        <qualifiedname>RHGenericSPI::setBitOrder</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">BitOrder</ref></type>
+          <declname>bitOrder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the bit order the SPI interface will use Sets the order of the bits shifted out of and into the SPI bus, either LSBFIRST (least-significant bit first) or MSBFIRST (most-significant bit first). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bitOrder</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bit order to be used: one of <ref refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" kindref="member">RHGenericSPI::BitOrder</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="113" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1a391b9c51ed0d3e1046539b3db180b9fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::setDataMode</definition>
+        <argsstring>(DataMode dataMode)</argsstring>
+        <name>setDataMode</name>
+        <qualifiedname>RHGenericSPI::setDataMode</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">DataMode</ref></type>
+          <declname>dataMode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the SPI data mode: that is, clock polarity and phase. See the Wikipedia article on SPI for details. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dataMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The mode to use: one of <ref refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" kindref="member">RHGenericSPI::DataMode</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="118" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHGenericSPI_1adf3e7f4bc83c0c0234e3b3e97c876aba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void RHGenericSPI::setFrequency</definition>
+        <argsstring>(Frequency frequency)</argsstring>
+        <name>setFrequency</name>
+        <qualifiedname>RHGenericSPI::setFrequency</qualifiedname>
+        <param>
+          <type><ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">Frequency</ref></type>
+          <declname>frequency</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the SPI clock divider relative to the system clock. On AVR based boards, the dividers available are 2, 4, 8, 16, 32, 64 or 128. The default setting is SPI_CLOCK_DIV4, which sets the SPI clock to one-quarter the frequency of the system clock (4 Mhz for the boards at 16 MHz). <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data rate to use: one of <ref refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" kindref="member">RHGenericSPI::Frequency</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHGenericSPI.h" line="125" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for SPI interfaces. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This generic abstract class is used to encapsulate hardware or software SPI interfaces for a variety of platforms. The intention is so that driver classes can be configured to use hardware or software SPI without changing the main code.</para>
+<para>You must provide a subclass of this class to driver constructors that require SPI. A concrete subclass that encapsualates the standard Arduino hardware SPI and a bit-banged software implementation is included.</para>
+<para>Do not directly use this class: it must be subclassed and the following abstract functions at least must be implmented:<itemizedlist>
+<listitem><para><ref refid="classRHGenericSPI_1ab2e3de040be2bd97400a993af114d26a" kindref="member">begin()</ref></para>
+</listitem><listitem><para><ref refid="classRHGenericSPI_1a06b2066e7d97941fbb70c854821fadb3" kindref="member">end()</ref></para>
+</listitem><listitem><para><ref refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" kindref="member">transfer()</ref> </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>RHGenericSPI</label>
+        <link refid="classRHGenericSPI"/>
+      </node>
+      <node id="2">
+        <label>RHHardwareSPI</label>
+        <link refid="classRHHardwareSPI"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" line="30" column="1" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHGenericSPI.h" bodystart="31" bodyend="136"/>
+    <listofallmembers>
+      <member refid="classRHGenericSPI_1aaf44bdc591031120f4fc90673aedf1c6" prot="protected" virt="non-virtual"><scope>RHGenericSPI</scope><name>_bitOrder</name></member>
+      <member refid="classRHGenericSPI_1a13c2f2a7f75c5563125b2a697ce8b14b" prot="protected" virt="non-virtual"><scope>RHGenericSPI</scope><name>_dataMode</name></member>
+      <member refid="classRHGenericSPI_1a0fb8976ef154c748e0d222f824e24ef6" prot="protected" virt="non-virtual"><scope>RHGenericSPI</scope><name>_frequency</name></member>
+      <member refid="classRHGenericSPI_1ad790927c415639388bbe6a5fe99c4e13" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>attachInterrupt</name></member>
+      <member refid="classRHGenericSPI_1ad790927c415639388bbe6a5fe99c4e13" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>attachInterrupt</name></member>
+      <member refid="classRHGenericSPI_1ab2e3de040be2bd97400a993af114d26a" prot="public" virt="pure-virtual"><scope>RHGenericSPI</scope><name>begin</name></member>
+      <member refid="classRHGenericSPI_1ab2e3de040be2bd97400a993af114d26a" prot="public" virt="pure-virtual"><scope>RHGenericSPI</scope><name>begin</name></member>
+      <member refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>BitOrder</name></member>
+      <member refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>BitOrder</name></member>
+      <member refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380a367543a6b63bab953acaa74628657d48" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>BitOrderLSBFirst</name></member>
+      <member refid="classRHGenericSPI_1a5ab2180e32e8877ceed6e3835ede3380aa885b38d2db5599928ab7f3096d96cd3" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>BitOrderMSBFirst</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>DataMode</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66f" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>DataMode</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66faf9ff0262993fa50f551c0b042e9a47b5" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>DataMode0</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fad163c5586916a72c503cbc802278807f" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>DataMode1</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fafee3778c48affb675976408e3d703412" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>DataMode2</name></member>
+      <member refid="classRHGenericSPI_1a1664ba51a3de5e5fc10222feac23e66fa7b94169eadd026d993076e462db5e3fd" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>DataMode3</name></member>
+      <member refid="classRHGenericSPI_1afe5edb725cf6b8110464a72b1e75eddc" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>detachInterrupt</name></member>
+      <member refid="classRHGenericSPI_1afe5edb725cf6b8110464a72b1e75eddc" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>detachInterrupt</name></member>
+      <member refid="classRHGenericSPI_1a06b2066e7d97941fbb70c854821fadb3" prot="public" virt="pure-virtual"><scope>RHGenericSPI</scope><name>end</name></member>
+      <member refid="classRHGenericSPI_1a06b2066e7d97941fbb70c854821fadb3" prot="public" virt="pure-virtual"><scope>RHGenericSPI</scope><name>end</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>Frequency</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77b" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>Frequency</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba96d32b348eeedee70c3e98e3bec00a64" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>Frequency16MHz</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bad6cd3f326e111ff5189262a5dbd72184" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>Frequency1MHz</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba1cf7ded513364cea33b664367559a7ac" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>Frequency2MHz</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77ba3f551d8a71f11a09286f070d6dbbfa16" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>Frequency4MHz</name></member>
+      <member refid="classRHGenericSPI_1ae6c02cd54a3a1f1f0356a3f75cf9c77bac47ec8bfc0d0940c51c953ec6e513a2c" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>Frequency8MHz</name></member>
+      <member refid="classRHGenericSPI_1a7d9a16c339ff396e259672afd226742f" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>RHGenericSPI</name></member>
+      <member refid="classRHGenericSPI_1a7d9a16c339ff396e259672afd226742f" prot="public" virt="non-virtual"><scope>RHGenericSPI</scope><name>RHGenericSPI</name></member>
+      <member refid="classRHGenericSPI_1a76fa1e24aa0f686e66fa71f95ee7c0b4" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>setBitOrder</name></member>
+      <member refid="classRHGenericSPI_1a86be0b8aae8dcab33623f2344f6d4303" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>setBitOrder</name></member>
+      <member refid="classRHGenericSPI_1a829a6400bab6a3d09b16d82d2c940f22" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>setDataMode</name></member>
+      <member refid="classRHGenericSPI_1a391b9c51ed0d3e1046539b3db180b9fa" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>setDataMode</name></member>
+      <member refid="classRHGenericSPI_1a9eecf2a206d0c6f42ca904c8f4374e13" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>setFrequency</name></member>
+      <member refid="classRHGenericSPI_1adf3e7f4bc83c0c0234e3b3e97c876aba" prot="public" virt="virtual"><scope>RHGenericSPI</scope><name>setFrequency</name></member>
+      <member refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" prot="public" virt="pure-virtual"><scope>RHGenericSPI</scope><name>transfer</name></member>
+      <member refid="classRHGenericSPI_1a14bc6f8954d9d68c0a56319444ffdd24" prot="public" virt="pure-virtual"><scope>RHGenericSPI</scope><name>transfer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

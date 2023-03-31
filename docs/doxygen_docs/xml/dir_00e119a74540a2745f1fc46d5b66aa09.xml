@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_00e119a74540a2745f1fc46d5b66aa09" kind="dir">
+    <compoundname>/home/chris/Documents/farm-sensors/LoRaNodeV4</compoundname>
+    <innerdir refid="dir_3f5d3cfb898d7b952f80c8722ffb624b">/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,302 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="project1_8py" kind="file" language="Python">
+    <compoundname>project1.py</compoundname>
+    <innernamespace refid="namespaceproject1">project1</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceproject1" refkind="compound"><highlight class="comment">#<sp/>Project<sp/>1<sp/>(ECE<sp/>6040<sp/>-<sp/>Signal<sp/>Analysis)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Chris<sp/>Swindell</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#<sp/>Will<sp/>Stump</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>matplotlib.pyplot<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>plt</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>scipy.constants</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>scipy.optimize<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>minimize</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">#<sp/>for<sp/>pretty<sp/>fonts</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">plt.rcParams[</highlight><highlight class="stringliteral">&quot;mathtext.fontset&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;cm&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">X,<sp/>Y,<sp/>Z,<sp/>TAU<sp/>=<sp/>0,<sp/>1,<sp/>2,<sp/>3<sp/><sp/></highlight><highlight class="comment">#<sp/>For<sp/>clarity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproject1_1a40d5908d81ccdc8bc982c49e693d7503" kindref="member">LFM_Pulse</ref>(B,<sp/>T,<sp/>u,<sp/>t_axis):</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproblem1_1a5c61da38fa88b93e4a66be5270bc20d1" kindref="member">rect</ref>(t):</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>np.zeros(len(t))</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x[abs(t)<sp/>&lt;<sp/>0.5]<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>return<sp/>an<sp/>LFM<sp/>pulse<sp/>reversed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>lfm<sp/>=<sp/><ref refid="namespaceproblem1_1a5c61da38fa88b93e4a66be5270bc20d1" kindref="member">rect</ref>(t_axis<sp/>/<sp/>T)<sp/>*<sp/>np.exp(1j<sp/>*<sp/>np.pi<sp/>*<sp/>u<sp/>*<sp/>B<sp/>/<sp/>T<sp/>*<sp/>t_axis<sp/>**<sp/>2)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.conj(lfm)[::-1]</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproject1_1ad7e2a1daf71a82fd9df9f4899af4df76" kindref="member">filter_signal</ref>(y,<sp/>B,<sp/>T,<sp/>u,<sp/>t_axis):</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>h<sp/>=<sp/><ref refid="namespaceproject1_1a40d5908d81ccdc8bc982c49e693d7503" kindref="member">LFM_Pulse</ref>(B,<sp/>T,<sp/>u,<sp/>t_axis)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>abs(np.convolve(y,<sp/>h,<sp/></highlight><highlight class="stringliteral">&apos;same&apos;</highlight><highlight class="normal">))<sp/>**<sp/>2</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproject1_1af10186e711cdb5c849ac7b96357d5183" kindref="member">cluster_detections</ref>(det,<sp/>p):</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>if<sp/>detection<sp/>occurs<sp/>in<sp/>adjacent<sp/>cells,<sp/>clump<sp/>into<sp/>one<sp/>and<sp/>take</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>the<sp/>cell<sp/>with<sp/>the<sp/>highest<sp/>peak</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>len(det)<sp/>&gt;<sp/>0:</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clusters<sp/>=<sp/>np.zeros(len(det),<sp/>dtype<sp/>=<sp/>int)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>find<sp/>clusters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cluster_num<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_ind<sp/>=<sp/>det[0]</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>n,<sp/>d<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(det):</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>d<sp/>&gt;<sp/>last_ind<sp/>+<sp/>1:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cluster_num<sp/>+=<sp/>1</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clusters[n]<sp/>=<sp/>cluster_num</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_ind<sp/>=<sp/>d</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>find<sp/>peak<sp/>for<sp/>each<sp/>cluster</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_clusters<sp/>=<sp/>clusters[-1]<sp/>+<sp/>1</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ind_peak<sp/>=<sp/>np.zeros(num_clusters,<sp/>dtype<sp/>=<sp/>int)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>cluster_num<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(num_clusters):</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ind<sp/>=<sp/>det[clusters<sp/>==<sp/>cluster_num]</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ind_peak[cluster_num]<sp/>=<sp/>ind[np.argmax(p[ind])]</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ind_peak</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.array([])</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproject1_1a52496ed37f59f97ef49f40b7fc478d16" kindref="member">cfar_mask</ref>(n_ref,<sp/>n_guard):</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>moving<sp/>average<sp/>filter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>n_ref<sp/>%<sp/>2<sp/></highlight><highlight class="keywordflow">or</highlight><highlight class="normal"><sp/>n_guard<sp/>%<sp/>2:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/>Exception(</highlight><highlight class="stringliteral">&apos;n_ref<sp/>and<sp/>n_guard<sp/>must<sp/>be<sp/>even<sp/>numbers&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>half_ref<sp/>=<sp/>np.ones(n_ref<sp/>//<sp/>2)<sp/>/<sp/>n_ref</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>guard_and_cut<sp/>=<sp/>np.zeros(n_guard<sp/>+<sp/>1)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>np.concatenate((half_ref,<sp/>guard_and_cut,<sp/>half_ref))</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproject1_1a288d1445e8dcd54995b4213019c7e005" kindref="member">compute_threshold</ref>(p,<sp/>n_ref,<sp/>n_guard,<sp/>p_fa):</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>mask<sp/>=<sp/><ref refid="namespaceproject1_1a52496ed37f59f97ef49f40b7fc478d16" kindref="member">cfar_mask</ref>(n_ref,<sp/>n_guard)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>N0<sp/>=<sp/>np.convolve(p,<sp/>mask,<sp/></highlight><highlight class="stringliteral">&apos;same&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>boost<sp/>noise<sp/>estimate<sp/>to<sp/>account<sp/>for<sp/>fewer<sp/>cells</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>being<sp/>averaged<sp/>near<sp/>edges</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>mask<sp/>/=<sp/>mask.max()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>cells_averaged<sp/>=<sp/>np.convolve(np.ones(len(p)),<sp/>mask,<sp/></highlight><highlight class="stringliteral">&apos;same&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>N0<sp/>/=<sp/>cells_averaged<sp/>/<sp/>n_ref</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-np.log(p_fa)<sp/>*<sp/>N0</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproject1_1aff57d4c2b2d926b40ef232920397883f" kindref="member">detect_and_plot</ref>(name,<sp/>B,<sp/>T,<sp/>u,<sp/>rx,<sp/>t_mf,<sp/>n_ref,<sp/>n_guard,<sp/>p_fa):</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>filtering<sp/>and<sp/>computing<sp/>threshold</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>p<sp/>=<sp/><ref refid="namespaceproject1_1ad7e2a1daf71a82fd9df9f4899af4df76" kindref="member">filter_signal</ref>(rx,<sp/>B,<sp/>T,<sp/>u,<sp/>t_mf)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>thresh<sp/>=<sp/><ref refid="namespaceproject1_1a288d1445e8dcd54995b4213019c7e005" kindref="member">compute_threshold</ref>(p,<sp/>n_ref,<sp/>n_guard,<sp/>p_fa)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>detections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>det<sp/>=<sp/>np.where(p<sp/>&gt;<sp/>thresh)[0]</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>ind_peak<sp/>=<sp/><ref refid="namespaceproject1_1af10186e711cdb5c849ac7b96357d5183" kindref="member">cluster_detections</ref>(det,<sp/>p)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>plotting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>len(ind_peak):<sp/><sp/></highlight><highlight class="comment">#<sp/>don&apos;t<sp/>plot<sp/>if<sp/>no<sp/>detections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.figure()</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.plot(p)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.plot(thresh)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.plot(ind_peak,<sp/>p[ind_peak],<sp/></highlight><highlight class="stringliteral">&apos;go&apos;</highlight><highlight class="normal">,<sp/>markeredgewidth<sp/>=<sp/>3)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.xlim(0,<sp/>len(p))</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.title(</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f</highlight><highlight class="stringliteral">&apos;$B<sp/>=<sp/>{B<sp/>/<sp/>1e6}$<sp/>MHz,<sp/>$T<sp/>=<sp/>{T<sp/>*<sp/>1e6}$<sp/>us,<sp/>$u<sp/>=<sp/>{u}$;<sp/>{len(ind_peak)}<sp/>detections&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.suptitle(f</highlight><highlight class="stringliteral">&apos;{name}&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.grid()</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.xlabel(</highlight><highlight class="stringliteral">&apos;sample<sp/>index<sp/>(bin)&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.ylabel(</highlight><highlight class="stringliteral">&apos;MF<sp/>power<sp/>(W)&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plt.tight_layout()</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>peaks<sp/>=<sp/>p[ind_peak]</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>peaks<sp/>=<sp/>np.array([])</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ind_peak,<sp/>peaks</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproject1_1a699863b0fcff2021579128df1d1f2608" kindref="member">pulse_params_dict</ref>():</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Params<sp/>are:<sp/>Up/Down<sp/>Chirp,<sp/>Bandwidth</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>Derryberry<sp/>=<sp/>(1,<sp/>20<sp/>*<sp/>1e6)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>Courthouse<sp/>=<sp/>(-1,<sp/>12<sp/>*<sp/>1e6)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>Tapatio<sp/>=<sp/>(1,<sp/>14<sp/>*<sp/>1e6)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>Walmart<sp/>=<sp/>(-1,<sp/>14<sp/>*<sp/>1e6)</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>Fairgrounds<sp/>=<sp/>(1,<sp/>5<sp/>*<sp/>1e6)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{</highlight><highlight class="stringliteral">&apos;Derryberry<sp/>Hall&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Derryberry,<sp/></highlight><highlight class="stringliteral">&apos;Old<sp/>Courthouse&apos;</highlight><highlight class="normal">:<sp/>Courthouse,<sp/></highlight><highlight class="stringliteral">&apos;El<sp/>Tapatio&apos;</highlight><highlight class="normal">:<sp/>Tapatio,<sp/></highlight><highlight class="stringliteral">&apos;Walmart&apos;</highlight><highlight class="normal">:<sp/>Walmart,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Putnam<sp/>County<sp/>Fairgrounds&apos;</highlight><highlight class="normal">:<sp/>Fairgrounds</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;<sp/>NOTE:</highlight></codeline>
+<codeline lineno="127"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>origin<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/>at<sp/>earth</highlight><highlight class="stringliteral">&apos;s<sp/>core<sp/>(x=0,<sp/>z=0)</highlight></codeline>
+<codeline lineno="128"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>x-axis<sp/>goes<sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>(0N,<sp/>0E/W)<sp/>to<sp/>(0N,<sp/>180E/W)</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>y-axis<sp/>goes<sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>(90E,<sp/>90W)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>z-axis<sp/>goes<sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>(90S,<sp/>90N)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>phi<sp/>-&gt;<sp/>latitude</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>(lamb)<sp/>-&gt;<sp/>longitude</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>h<sp/>-&gt;<sp/>height</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/>(N(phi)<sp/>+<sp/>h)<sp/>*<sp/>cos(phi)<sp/>*<sp/>cos(</highlight><highlight class="keyword">lambda</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>y<sp/>=<sp/>(N(phi)<sp/>+<sp/>h)<sp/>*<sp/>cos(phi)<sp/>*<sp/>sin(</highlight><highlight class="keyword">lambda</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>z<sp/>=<sp/>((b**2/a**2)<sp/>*<sp/>N(phi)<sp/>+<sp/>h)<sp/>*<sp/>sin(phi)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>((1-e**2)<sp/>*<sp/>N(phi)<sp/>+<sp/>h)<sp/>*<sp/>sin(phi)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>((1-f)**2<sp/>*<sp/>N(phi)<sp/>+<sp/>h)<sp/>*<sp/>sin(phi)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>N(phi)<sp/>=<sp/>a**2<sp/>/<sp/>sqrt(a**2<sp/>*<sp/>cos**2(phi)<sp/>+<sp/>b**2<sp/>*<sp/>sin**2(phi))</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>a<sp/>/<sp/>sqrt(1<sp/>-<sp/>e**2<sp/>*<sp/>sin**2(phi))</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<sp/>prime<sp/>vertical<sp/>radius<sp/>of<sp/>curvature</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>-&gt;<sp/>equatorial<sp/>radius<sp/>(semi-major<sp/>axis)<sp/>-&gt;<sp/>center<sp/>of<sp/>Earth<sp/>to<sp/>equator<sp/>-&gt;<sp/>6378.1370<sp/>km</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>-&gt;<sp/>polar<sp/>radius<sp/>(semi-minor<sp/>axis)<sp/>-&gt;<sp/>center<sp/>of<sp/>Earth<sp/>to<sp/>N/S<sp/>pole<sp/>-&gt;<sp/>6356.7523<sp/>km</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>e**2<sp/>=<sp/>1<sp/>-<sp/>b**2/a**2<sp/>-&gt;<sp/>square<sp/>of<sp/>the<sp/>first<sp/>numerical<sp/>eccentricity<sp/>of<sp/>the<sp/>ellipsoid</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>f<sp/>=<sp/>1<sp/>-<sp/>b/a<sp/>-&gt;<sp/>flattening<sp/>of<sp/>the<sp/>ellipsoid</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>Source<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>LLA<sp/>to<sp/>ECEF<sp/>conversions:<sp/>https://en.wikipedia.org/wiki/Geographic_coordinate_conversion</highlight><highlight class="comment">#cite_note-gps-chap10-3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>Source<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>equatorial<sp/>radii:<sp/>https://en.wikipedia.org/wiki/Earth_radius</highlight><highlight class="comment">#cite_note-13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="152"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="153"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="154"><highlight class="stringliteral">def<sp/>lla2ecef(LLA:<sp/>tuple):</highlight></codeline>
+<codeline lineno="155"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>LAT<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="156"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>LONG<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="157"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>ELEV<sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="158"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>a<sp/>=<sp/>(6378.1370e3,<sp/>&apos;m&apos;)</highlight></codeline>
+<codeline lineno="159"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>b<sp/>=<sp/>(6356.7523e3,<sp/>&apos;m&apos;)</highlight></codeline>
+<codeline lineno="160"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>deg2rad<sp/>=<sp/>lambda<sp/>deg:<sp/>deg<sp/>*<sp/>(np.pi<sp/>/<sp/>180)</highlight></codeline>
+<codeline lineno="161"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>N<sp/>=<sp/>lambda<sp/>phi:<sp/>a[0]<sp/>**<sp/>2<sp/>/<sp/>np.sqrt(a[0]<sp/>**<sp/>2<sp/>*<sp/>np.cos(phi)<sp/>**<sp/>2<sp/>+<sp/>b[0]<sp/>**<sp/>2<sp/>*<sp/>np.sin(phi)<sp/>**<sp/>2)</highlight></codeline>
+<codeline lineno="162"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>X<sp/>=<sp/>lambda<sp/>phi,<sp/>lamb,<sp/>h:<sp/>(N(phi)<sp/>+<sp/>h)<sp/>*<sp/>np.cos(phi)<sp/>*<sp/>np.cos(lamb)</highlight></codeline>
+<codeline lineno="163"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Y<sp/>=<sp/>lambda<sp/>phi,<sp/>lamb,<sp/>h:<sp/>(N(phi)<sp/>+<sp/>h)<sp/>*<sp/>np.cos(phi)<sp/>*<sp/>np.sin(lamb)</highlight></codeline>
+<codeline lineno="164"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Z<sp/>=<sp/>lambda<sp/>phi,<sp/>h:<sp/>((b[0]<sp/>**<sp/>2<sp/>/<sp/>a[0]<sp/>**<sp/>2)<sp/>*<sp/>N(phi)<sp/>+<sp/>h)<sp/>*<sp/>np.sin(phi)</highlight></codeline>
+<codeline lineno="165"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="166"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>x<sp/>=<sp/>X(deg2rad(LLA[LAT]),<sp/>deg2rad(LLA[LONG]),<sp/>LLA[ELEV])</highlight></codeline>
+<codeline lineno="167"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>y<sp/>=<sp/>Y(deg2rad(LLA[LAT]),<sp/>deg2rad(LLA[LONG]),<sp/>LLA[ELEV])</highlight></codeline>
+<codeline lineno="168"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>z<sp/>=<sp/>Z(deg2rad(LLA[LAT]),<sp/>LLA[ELEV])</highlight></codeline>
+<codeline lineno="169"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>return<sp/>x,<sp/>y,<sp/>z</highlight></codeline>
+<codeline lineno="170"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="171"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="172"><highlight class="stringliteral">def<sp/>residual(tgt,<sp/>xi,<sp/>yi,<sp/>zi,<sp/>tau_i):</highlight></codeline>
+<codeline lineno="173"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>c<sp/>=<sp/>scipy.constants.speed_of_light</highlight></codeline>
+<codeline lineno="174"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>R<sp/>=<sp/>np.sqrt((tgt[X]<sp/>-<sp/>xi)<sp/>**<sp/>2<sp/>+<sp/>(tgt[Y]<sp/>-<sp/>yi)<sp/>**<sp/>2<sp/>+<sp/>(tgt[Z]<sp/>-<sp/>zi)<sp/>**<sp/>2)<sp/>-<sp/>c<sp/>*<sp/>(tau_i<sp/>-<sp/>tgt[TAU])</highlight></codeline>
+<codeline lineno="175"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>return<sp/>np.sum(R<sp/>**<sp/>2)<sp/><sp/></highlight><highlight class="comment">#<sp/>R</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproject1_1a50796118612258bffd3064714a6a4f12" kindref="member">main</ref>():</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>rx<sp/>=<sp/>np.load(</highlight><highlight class="stringliteral">&apos;rx.npy&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>L<sp/>=<sp/>len(rx)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>Fs<sp/>=<sp/>20e6<sp/><sp/></highlight><highlight class="comment">#<sp/>20<sp/>MHz<sp/>sample<sp/>rate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>Ts<sp/>=<sp/>1<sp/>/<sp/>Fs</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>time<sp/>axis<sp/>for<sp/>MF</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>T_max<sp/>=<sp/>Ts<sp/>*<sp/>L</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>t_mf<sp/>=<sp/>np.arange(-T_max<sp/>/<sp/>2,<sp/>T_max<sp/>/<sp/>2,<sp/>Ts)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>All<sp/>pulses<sp/>are<sp/>50us</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>T_pulse<sp/>=<sp/>50e-6</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>CFAR<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>p_fa<sp/>=<sp/>1.0e-9<sp/><sp/></highlight><highlight class="comment">#<sp/>min<sp/>pfa<sp/>for<sp/>no<sp/>missed<sp/>detection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>n_ref<sp/>=<sp/>750<sp/><sp/></highlight><highlight class="comment">#<sp/>max<sp/>n_ref<sp/>for<sp/>no<sp/>masking</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>n_guard<sp/>=<sp/>10<sp/><sp/></highlight><highlight class="comment">#<sp/>min<sp/>guard<sp/>cells<sp/>for<sp/>no<sp/>missed<sp/>detections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Calibration<sp/>pulse<sp/>setup,<sp/>we<sp/>will<sp/>use<sp/>the<sp/>first<sp/>pulse<sp/>in<sp/>our<sp/>dictionary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>The<sp/>dictionary<sp/>contains<sp/>info<sp/>for<sp/>the<sp/>signals<sp/>we<sp/>are<sp/>looking<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>pulses<sp/>=<sp/><ref refid="namespaceproject1_1a699863b0fcff2021579128df1d1f2608" kindref="member">pulse_params_dict</ref>()</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>name_cal<sp/>=<sp/>list(pulses.keys())[0]</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>U_cal<sp/>=<sp/>list(pulses.values())[0][0]</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>B_cal<sp/>=<sp/>list(pulses.values())[0][1]</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>pulse_idx<sp/>=<sp/>0<sp/><sp/></highlight><highlight class="comment">#<sp/>Use<sp/>the<sp/>index<sp/>of<sp/>the<sp/>first<sp/>detected<sp/>pulse<sp/>for<sp/>all<sp/>calculations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>cal_ind_peak,<sp/>peaks<sp/>=<sp/><ref refid="namespaceproject1_1aff57d4c2b2d926b40ef232920397883f" kindref="member">detect_and_plot</ref>(name_cal,<sp/>B_cal,<sp/>T_pulse,<sp/>U_cal,<sp/>rx,<sp/>t_mf,<sp/>n_ref,<sp/>n_guard,<sp/>p_fa)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>take<sp/>time<sp/>reference<sp/>as<sp/>location<sp/>of<sp/>start<sp/>of<sp/>cal<sp/>pulse</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>=<sp/>(np.arange(L)<sp/>-<sp/>cal_ind_peak[pulse_idx])<sp/>*<sp/>Ts<sp/>*<sp/>1e6<sp/><sp/></highlight><highlight class="comment">#<sp/>microseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>t<sp/>+=<sp/>T_pulse<sp/>/<sp/>2<sp/>*<sp/>1e6<sp/><sp/></highlight><highlight class="comment">#<sp/>rising<sp/>edge<sp/>is<sp/>half<sp/>a<sp/>pulse<sp/>width<sp/>earlier</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(&apos;cal<sp/>MF<sp/>peak<sp/>locations:&apos;,<sp/>cal_ind_peak,<sp/>&apos;samples&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(&apos;cal<sp/>MF<sp/>peak<sp/>rising<sp/>edges:&apos;,<sp/>t[cal_ind_peak]<sp/>-<sp/>T_pulse<sp/>/<sp/>2<sp/>*<sp/>1e6,<sp/>&apos;us&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>detection_list<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>name,<sp/>parameters<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>pulses.items():</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>U<sp/>=<sp/>parameters[0]</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>B<sp/>=<sp/>parameters[1]</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ind_peak,<sp/>peaks<sp/>=<sp/><ref refid="namespaceproject1_1aff57d4c2b2d926b40ef232920397883f" kindref="member">detect_and_plot</ref>(name,<sp/>B,<sp/>T_pulse,<sp/>U,<sp/>rx,<sp/>t_mf,<sp/>n_ref,<sp/>n_guard,<sp/>p_fa)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_ind_peak<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_peaks<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>n,<sp/>ind<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(ind_peak):</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_ind_peak.append(ind)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_peaks.append(peaks[n])</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ind_peak<sp/>=<sp/>new_ind_peak</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>peaks<sp/>=<sp/>new_peaks</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>len(ind_peak):</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>edge_us<sp/>=<sp/>t[new_ind_peak]<sp/>-<sp/>T_pulse<sp/>/<sp/>2</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>detection_list.append([B,<sp/>T_pulse,<sp/>U,<sp/>ind_peak,<sp/>edge_us,<sp/>peaks])</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Print<sp/>the<sp/>detection<sp/>event<sp/>information,<sp/>and<sp/>append<sp/>the<sp/>initial<sp/>detection<sp/>times<sp/>to<sp/>our<sp/>tau_init<sp/>for<sp/>the<sp/>solver<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>tau_init<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>detection_event<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>detection_list:</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(*detection_event)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tau_init.append(detection_event[4][pulse_idx]<sp/>*<sp/>1e-6)</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(tau_init)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>Initial<sp/>guesses<sp/>for<sp/>x,<sp/>y,<sp/>z,<sp/>and<sp/>dt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>initial_guess<sp/>=<sp/>np.array([404358,<sp/>-5139744,<sp/>3742990,<sp/>10e-6])<sp/><sp/></highlight><highlight class="comment">#<sp/>Cookeville<sp/>in<sp/>ECEF<sp/>according<sp/>to<sp/>Google</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NOTE:<sp/>LLA<sp/>coordinates<sp/>are<sp/>in<sp/>lat<sp/>(decimal<sp/>degrees),<sp/>lon<sp/>(decimal<sp/>degrees),<sp/>elevation<sp/>(meters<sp/>MSL)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>MSL_to_WGS84_ratio<sp/>=<sp/>sum([316.21<sp/>/<sp/>347,<sp/>309.24<sp/>/<sp/>340,<sp/>297.24<sp/>/<sp/>328,<sp/>302.28<sp/>/<sp/>333,<sp/>303.27<sp/>/<sp/>334])<sp/>/<sp/>5</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/>LLA<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Derryberry<sp/>Hall&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>(36.17450622,<sp/>-85.50403178,<sp/>316.21),<sp/><sp/></highlight><highlight class="comment">#<sp/>347<sp/>m<sp/>MSL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Old<sp/>Courthouse&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>(36.16228779,<sp/>-85.49970388,<sp/>309.24),<sp/><sp/></highlight><highlight class="comment">#<sp/>340<sp/>m<sp/>MSL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;El<sp/>Tapatio&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>(36.15887645,<sp/>-85.51269555,<sp/>297.24),<sp/><sp/></highlight><highlight class="comment">#<sp/>328<sp/>m<sp/>MSL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Walmart&apos;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>(36.1450693,<sp/>-85.49699712,<sp/>302.28),<sp/><sp/></highlight><highlight class="comment">#<sp/>333<sp/>m<sp/>MSL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;Putnam<sp/>County<sp/>Fairgrounds&apos;</highlight><highlight class="normal">:<sp/>(36.14498518,<sp/>-85.50740608,<sp/>303.27)<sp/><sp/></highlight><highlight class="comment">#<sp/>334<sp/>m<sp/>MSL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>ECEF<sp/>=<sp/>dict()</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>key,<sp/>tau<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>zip(LLA.keys(),<sp/>tau_init):<sp/>ECEF[key]<sp/>=<sp/><ref refid="namespaceproject1_1ac022ceb1e63e95e208e8d1de2317a512" kindref="member">lla2ecef</ref>(LLA[key])<sp/>+<sp/>(tau,)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>for<sp/>item<sp/>in<sp/>ECEF.values():<sp/>print(item)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>xi<sp/>=<sp/>np.array([ecef[X]<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>ecef<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>ECEF.values()])</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>yi<sp/>=<sp/>np.array([ecef[Y]<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>ecef<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>ECEF.values()])</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>zi<sp/>=<sp/>np.array([ecef[Z]<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>ecef<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>ECEF.values()])</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>tau_i<sp/>=<sp/>np.array([ecef[TAU]<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>ecef<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>ECEF.values()])</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Alternate<sp/>printing<sp/>format<sp/>for<sp/>signal<sp/>measurements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(f&quot;initial_guess:<sp/>{initial_guess}&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(f&quot;xi:<sp/>{xi}&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(f&quot;yi:<sp/>{yi}&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(f&quot;zi:<sp/>{zi}&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print(f&quot;tau_i:<sp/>{tau_i}&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>print()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>R<sp/>=<sp/>minimize(residual,<sp/>initial_guess,<sp/>args<sp/>=<sp/>(xi,<sp/>yi,<sp/>zi,<sp/>tau_i),<sp/>method<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Powell&apos;</highlight><highlight class="normal">,<sp/>options<sp/>=<sp/>{</highlight><highlight class="stringliteral">&apos;maxiter&apos;</highlight><highlight class="normal">:<sp/>5000,<sp/></highlight><highlight class="stringliteral">&apos;maxfev&apos;</highlight><highlight class="normal">:<sp/>5000})</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Print<sp/>the<sp/>full<sp/>results<sp/>from<sp/>the<sp/>solver</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&quot;Results<sp/>in<sp/>ECEF<sp/>Format&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&apos;X:<sp/>{R.x[0]}&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&apos;Y:<sp/>{R.x[1]}&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&apos;Z:<sp/>{R.x[2]}&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&apos;dt:<sp/>{R.x[3]}&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&apos;Solver<sp/>Iterations:<sp/>{R.get(&quot;nit&quot;)}&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.show()</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;__main__&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceproject1_1a50796118612258bffd3064714a6a4f12" kindref="member">main</ref>()</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/ece6040/projects/project1/project1.py"/>
+  </compounddef>
+</doxygen>

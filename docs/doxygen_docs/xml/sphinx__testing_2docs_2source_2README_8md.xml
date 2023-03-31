@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="sphinx__testing_2docs_2source_2README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>sudoku-tui</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>will<sp/>be<sp/>a<sp/>user-friendly<sp/>implementation<sp/>of<sp/>the<sp/>classic<sp/>game<sp/>of<sp/>sudoku<sp/>that<sp/>you<sp/>can<sp/>play<sp/>in<sp/>your<sp/>terminal.<sp/>As<sp/>such,<sp/>it<sp/>will<sp/>be<sp/>all<sp/>text-based,<sp/>but<sp/>should<sp/>be<sp/>extremely<sp/>easy<sp/>to<sp/>play.<sp/>More<sp/>in-depth<sp/>explanations<sp/>as<sp/>far<sp/>as<sp/>how<sp/>to<sp/>play<sp/>the<sp/>game<sp/>will<sp/>be<sp/>provided,<sp/>assuming<sp/>I<sp/>remember<sp/>to<sp/>do<sp/>so<sp/>(I&apos;m<sp/>currently<sp/>going<sp/>through<sp/>graduate<sp/>school,<sp/>so<sp/>it&apos;s<sp/>very<sp/>likely<sp/>that<sp/>I&apos;ll<sp/>forget<sp/>to<sp/>update<sp/>this<sp/>or<sp/>will<sp/>go<sp/>long<sp/>stretches<sp/>of<sp/>time<sp/>without<sp/>any<sp/>updates).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Status<sp/>update:<sp/>31<sp/>January<sp/>2023</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Games<sp/>can<sp/>now<sp/>be<sp/>saved<sp/>both<sp/>when<sp/>the<sp/>in-game<sp/>menu<sp/>is<sp/>and<sp/>isn&apos;t<sp/>enabled.<sp/>I&apos;ve<sp/>also<sp/>made<sp/>some<sp/>other<sp/>minor<sp/>adjustments<sp/>to<sp/>the<sp/>in-game<sp/>menu<sp/>display.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Next<sp/>is<sp/>adding<sp/>the<sp/>ability<sp/>to<sp/>resume<sp/>games.<sp/>This<sp/>will<sp/>(hopefully)<sp/>be<sp/>the<sp/>last<sp/>difficult<sp/>left<sp/>to<sp/>do.<sp/>After<sp/>that,<sp/>it<sp/>should<sp/>just<sp/>be<sp/>cleaning<sp/>up<sp/>some<sp/>leftover<sp/>TODOs.</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/sphinx_testing/docs/source/README.md"/>
+  </compounddef>
+</doxygen>

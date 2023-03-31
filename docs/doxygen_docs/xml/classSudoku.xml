@@ -1,0 +1,1181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classSudoku" kind="class" language="C++" prot="public">
+    <compoundname>Sudoku</compoundname>
+    <includes local="no">Sudoku.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classSudoku_1ae19305b14d528804865442859cb577ef" prot="private" static="no" strong="no">
+        <type></type>
+        <name>border_positions</name>
+        <qualifiedname>Sudoku::border_positions</qualifiedname>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadd6f7a38873f22b21473abf4c3304632" prot="private">
+          <name>TL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadaaa3bcbe39b54d5d04c96e56eeb41e3" prot="private">
+          <name>T</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dae5e3f061b1e9f1c06d79b1ee359998ab" prot="private">
+          <name>TR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dac3ac866fcc23bf2e61d55287b9fbbefc" prot="private">
+          <name>L</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dabd1f43b8d978e2642d20ae86a4baa839" prot="private">
+          <name>R</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6c27a8eff4011e3fd3dd763ef599f123" prot="private">
+          <name>BL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928da34fdca3f2b8b098654911a74af8e4355" prot="private">
+          <name>B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6abbfc1b3b215edc5a40863c65bd6829" prot="private">
+          <name>BR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928da8d60dcd9a6594e02635e722356a996a1" prot="private">
+          <name>NUM_BORDER_POSITIONS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="27" column="9" bodyfile="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="enum" id="classSudoku_1ae1e99cd9cecf03df29540de074c3928d" prot="private" static="no" strong="no">
+        <type></type>
+        <name>neighbor_cells</name>
+        <qualifiedname>Sudoku::neighbor_cells</qualifiedname>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadd6f7a38873f22b21473abf4c3304632" prot="private">
+          <name>TL</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadaaa3bcbe39b54d5d04c96e56eeb41e3" prot="private">
+          <name>T</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dae5e3f061b1e9f1c06d79b1ee359998ab" prot="private">
+          <name>TR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dac3ac866fcc23bf2e61d55287b9fbbefc" prot="private">
+          <name>L</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928dabd1f43b8d978e2642d20ae86a4baa839" prot="private">
+          <name>R</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6c27a8eff4011e3fd3dd763ef599f123" prot="private">
+          <name>BL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928da34fdca3f2b8b098654911a74af8e4355" prot="private">
+          <name>B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6abbfc1b3b215edc5a40863c65bd6829" prot="private">
+          <name>BR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSudoku_1ae1e99cd9cecf03df29540de074c3928da8d60dcd9a6594e02635e722356a996a1" prot="private">
+          <name>NUM_BORDER_POSITIONS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="56" column="9" bodyfile="/home/chris/Documents/tsudoku/include/Sudoku.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSudoku_1a3d889cb9858ae9b9025a24b801441ce6" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sudoku::display_matrix</definition>
+        <argsstring>[27][27]</argsstring>
+        <name>display_matrix</name>
+        <qualifiedname>Sudoku::display_matrix</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="17" column="17" bodyfile="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1a4db92378abfba69aa7e227d539e27000" prot="private" static="no" mutable="no">
+        <type><ref refid="classGrid" kindref="compound">Grid</ref></type>
+        <definition>Grid Sudoku::mat</definition>
+        <argsstring></argsstring>
+        <name>mat</name>
+        <qualifiedname>Sudoku::mat</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="18" column="14" bodyfile="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1a7f9884c1ee4727ac330f930504ee1754" prot="private" static="no" mutable="no">
+        <type>map&lt; uint8_t, <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref> &gt;</type>
+        <definition>map&lt;uint8_t, cell&gt; Sudoku::_map_</definition>
+        <argsstring></argsstring>
+        <name>_map_</name>
+        <qualifiedname>Sudoku::_map_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="19" column="13" bodyfile="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1a2dcddcda4905f2ae43cd316368b43b85" prot="private" static="no" mutable="no">
+        <type>map&lt; <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>, uint8_t &gt;</type>
+        <definition>map&lt;cell, uint8_t&gt; Sudoku::_rev_map_</definition>
+        <argsstring></argsstring>
+        <name>_rev_map_</name>
+        <qualifiedname>Sudoku::_rev_map_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="20" column="13" bodyfile="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1a80292dcc5372304be5b580bc7f8e18c7" prot="private" static="no" mutable="no">
+        <type>const <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref></type>
+        <definition>const cell Sudoku::ORIGIN</definition>
+        <argsstring></argsstring>
+        <name>ORIGIN</name>
+        <qualifiedname>Sudoku::ORIGIN</qualifiedname>
+        <initializer>= {<ref refid="misc_8hpp_1aa4a1e2bfbb4b6bdfc6d70f689a31810f" kindref="member">ORIGINy</ref>, <ref refid="misc_8hpp_1a07d71a60201fb66046cb6293933c68dd" kindref="member">ORIGINx</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="24" column="20" bodyfile="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1ae058e28a4b54b96d2943043a466ca350" prot="private" static="no" mutable="no">
+        <type><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref></type>
+        <definition>cell Sudoku::cursor_pos</definition>
+        <argsstring></argsstring>
+        <name>cursor_pos</name>
+        <qualifiedname>Sudoku::cursor_pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="25" column="14" bodyfile="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1a212c25a5fa11591233562f162e757d54" prot="private" static="no" mutable="no">
+        <type>map&lt; <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>, <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref> &gt;</type>
+        <definition>map&lt; cell, cell &gt; Sudoku::display_matrix_offset</definition>
+        <argsstring></argsstring>
+        <name>display_matrix_offset</name>
+        <qualifiedname>Sudoku::display_matrix_offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="26" column="13" bodyfile="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1a736123520077a90731c5a10e2f785353" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Sudoku::color_codes[DISPLAY_MATRIX_ROWS][DISPLAY_MATRIX_COLUMNS]</definition>
+        <argsstring>[DISPLAY_MATRIX_ROWS][DISPLAY_MATRIX_COLUMNS]</argsstring>
+        <name>color_codes</name>
+        <qualifiedname>Sudoku::color_codes</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="49" column="17" bodyfile="/home/chris/Documents/tsudoku/include/Sudoku.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1a8e4997900bf2899b31903f79226fade9" prot="private" static="no" mutable="no">
+        <type><ref refid="classGrid" kindref="compound">Grid</ref></type>
+        <definition>Grid Sudoku::grid</definition>
+        <argsstring></argsstring>
+        <name>grid</name>
+        <qualifiedname>Sudoku::grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="50" column="14" bodyfile="/home/chris/Documents/tsudoku/include/Sudoku.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1a5961d006dcc5cece4730de50673040ff" prot="private" static="no" mutable="no">
+        <type>map&lt; uint8_t, <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref> &gt;</type>
+        <definition>map&lt;uint8_t, cell&gt; Sudoku::grid2display_map</definition>
+        <argsstring></argsstring>
+        <name>grid2display_map</name>
+        <qualifiedname>Sudoku::grid2display_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="51" column="13" bodyfile="/home/chris/Documents/tsudoku/include/Sudoku.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSudoku_1a022dd9e87b96f4e884d1e8e895f3ea26" prot="private" static="no" mutable="no">
+        <type>map&lt; <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>, uint8_t &gt;</type>
+        <definition>map&lt;cell, uint8_t&gt; Sudoku::display2grid_map</definition>
+        <argsstring></argsstring>
+        <name>display2grid_map</name>
+        <qualifiedname>Sudoku::display2grid_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="52" column="13" bodyfile="/home/chris/Documents/tsudoku/include/Sudoku.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSudoku_1a575451dbd2b52e533898e4126a9cde87" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::create_map</definition>
+        <argsstring>()</argsstring>
+        <name>create_map</name>
+        <qualifiedname>Sudoku::create_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="31" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="94" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1afcffe18cf8ada54d0b4075f2bcf31522" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::map_display_matrix_offset</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>map_display_matrix_offset</name>
+        <qualifiedname>Sudoku::map_display_matrix_offset</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>YINDEX</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>XINDEX</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="32" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="114" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a3d20a2cddb02acb3666502f261ccf15b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::set_color_pairs</definition>
+        <argsstring>()</argsstring>
+        <name>set_color_pairs</name>
+        <qualifiedname>Sudoku::set_color_pairs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="33" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="124" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1ab1af4e3eccc4f1d96f9a16d76084458c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::init_display_matrix</definition>
+        <argsstring>()</argsstring>
+        <name>init_display_matrix</name>
+        <qualifiedname>Sudoku::init_display_matrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="36" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="147" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1aeb55ca1041527f8b3e9345f067fb2955" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::printw</definition>
+        <argsstring>()</argsstring>
+        <name>printw</name>
+        <qualifiedname>Sudoku::printw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="37" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="194" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1af6f100e3ba0453eafd42bce8732305ad" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::move</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>move</name>
+        <qualifiedname>Sudoku::move</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>YCOORD</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>XCOORD</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="38" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="240" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a5d1821a639439667772afe5ec412150f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::move</definition>
+        <argsstring>(const uint16_t)</argsstring>
+        <name>move</name>
+        <qualifiedname>Sudoku::move</qualifiedname>
+        <param>
+          <type>const uint16_t</type>
+          <defname>KEY</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="39" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="249" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a869d3cd45ea52709ea18fa23a034067a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::refresh</definition>
+        <argsstring>()</argsstring>
+        <name>refresh</name>
+        <qualifiedname>Sudoku::refresh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="40" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="299" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1afb074824f3a0bb57d49014662362d7bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t Sudoku::getch</definition>
+        <argsstring>()</argsstring>
+        <name>getch</name>
+        <qualifiedname>Sudoku::getch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="41" column="18" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="304" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a52fab0a93aee7f8589fea5181b23c813" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>Sudoku::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="42" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="309" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a3a49e730dae2a58ee256f4d093b88344" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Sudoku::is_border</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>is_border</name>
+        <qualifiedname>Sudoku::is_border</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>YCOORD</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>XCOORD</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="43" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="314" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a100cee00c94ba485c18531bc7fccd913" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>array&lt; <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>, <ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da8d60dcd9a6594e02635e722356a996a1" kindref="member">NUM_BORDER_POSITIONS</ref> &gt;</type>
+        <definition>array&lt; cell, Sudoku::NUM_BORDER_POSITIONS &gt; Sudoku::get_surrounding_cells</definition>
+        <argsstring>()</argsstring>
+        <name>get_surrounding_cells</name>
+        <qualifiedname>Sudoku::get_surrounding_cells</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="44" column="15" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="320" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a9b5f4a1b7d2a47271b7b4903965a25b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Sudoku::do_nothing</definition>
+        <argsstring>()</argsstring>
+        <name>do_nothing</name>
+        <qualifiedname>Sudoku::do_nothing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="45" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="351" bodyend="385"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1af610ae4cbc7267d3f5daf8a5861a0a7b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::clear_surrounding_cells</definition>
+        <argsstring>()</argsstring>
+        <name>clear_surrounding_cells</name>
+        <qualifiedname>Sudoku::clear_surrounding_cells</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="46" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="387" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a6060d3cc7de9d49d348e1e36250a33ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::place_value</definition>
+        <argsstring>(const uint16_t)</argsstring>
+        <name>place_value</name>
+        <qualifiedname>Sudoku::place_value</qualifiedname>
+        <param>
+          <type>const uint16_t</type>
+          <defname>VALUE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="47" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="408" bodyend="523"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1ae66dfdd7f1b5f950cb1113265c211546" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::reset_cursor</definition>
+        <argsstring>()</argsstring>
+        <name>reset_cursor</name>
+        <qualifiedname>Sudoku::reset_cursor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="48" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="527" bodyend="530"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a691dc71a4e5d88fa38d810a81081ba9e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Sudoku::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>Sudoku::evaluate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="49" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="532" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a9c79b186f06684ce288b1eabe21ef174" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::increment_completed_games</definition>
+        <argsstring>()</argsstring>
+        <name>increment_completed_games</name>
+        <qualifiedname>Sudoku::increment_completed_games</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="50" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="536" bodyend="550"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1aac131ab29adfd3b35a7c028896f050f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::save_game</definition>
+        <argsstring>()</argsstring>
+        <name>save_game</name>
+        <qualifiedname>Sudoku::save_game</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="51" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="552" bodyend="580"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a575451dbd2b52e533898e4126a9cde87" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::create_map</definition>
+        <argsstring>()</argsstring>
+        <name>create_map</name>
+        <qualifiedname>Sudoku::create_map</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="58" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1acb0a56c3463384b7d5ba293b6d7ddbe5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::map_display_matrix_offset</definition>
+        <argsstring>(const cell)</argsstring>
+        <name>map_display_matrix_offset</name>
+        <qualifiedname>Sudoku::map_display_matrix_offset</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>DISPLAY_INDECES</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="59" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="64" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a3d20a2cddb02acb3666502f261ccf15b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::set_color_pairs</definition>
+        <argsstring>()</argsstring>
+        <name>set_color_pairs</name>
+        <qualifiedname>Sudoku::set_color_pairs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="60" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a7e50ddea6823ab49f8193afdaf2a9341" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::init_display_matrix</definition>
+        <argsstring>(const SavedPuzzle *)</argsstring>
+        <name>init_display_matrix</name>
+        <qualifiedname>Sudoku::init_display_matrix</qualifiedname>
+        <param>
+          <type>const <ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref> *</type>
+          <defname>SAVED_PUZZLE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="61" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="112" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1acaf2b4022092e2bcc042cf7ac3140edf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::printw</definition>
+        <argsstring>(const SavedPuzzle *)</argsstring>
+        <name>printw</name>
+        <qualifiedname>Sudoku::printw</qualifiedname>
+        <param>
+          <type>const <ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref> *</type>
+          <defname>SAVED_PUZZLE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="62" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="256" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1aeb55ca1041527f8b3e9345f067fb2955" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::printw</definition>
+        <argsstring>()</argsstring>
+        <name>printw</name>
+        <qualifiedname>Sudoku::printw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="63" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a914dced810515b66a09046f7f8d0a5c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::move</definition>
+        <argsstring>(const cell)</argsstring>
+        <name>move</name>
+        <qualifiedname>Sudoku::move</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>COORDS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="64" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="361" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a5d1821a639439667772afe5ec412150f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::move</definition>
+        <argsstring>(const uint16_t)</argsstring>
+        <name>move</name>
+        <qualifiedname>Sudoku::move</qualifiedname>
+        <param>
+          <type>const uint16_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="65" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a869d3cd45ea52709ea18fa23a034067a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::refresh</definition>
+        <argsstring>()</argsstring>
+        <name>refresh</name>
+        <qualifiedname>Sudoku::refresh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="66" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1afb074824f3a0bb57d49014662362d7bf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t Sudoku::getch</definition>
+        <argsstring>()</argsstring>
+        <name>getch</name>
+        <qualifiedname>Sudoku::getch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="67" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a52fab0a93aee7f8589fea5181b23c813" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <qualifiedname>Sudoku::clear</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="68" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1af0970cee028c74e7840664f5032d94a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Sudoku::is_box_border</definition>
+        <argsstring>(const cell)</argsstring>
+        <name>is_box_border</name>
+        <qualifiedname>Sudoku::is_box_border</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>COORDS</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="69" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="473" bodyend="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1ac0daa8b8992e02eca0ed0180de1eb85c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>array&lt; <ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>, <ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da8d60dcd9a6594e02635e722356a996a1" kindref="member">NUM_BORDER_POSITIONS</ref> &gt;</type>
+        <definition>array&lt; cell, NUM_BORDER_POSITIONS &gt; Sudoku::get_surrounding_cells</definition>
+        <argsstring>()</argsstring>
+        <name>get_surrounding_cells</name>
+        <qualifiedname>Sudoku::get_surrounding_cells</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="70" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a9b5f4a1b7d2a47271b7b4903965a25b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Sudoku::do_nothing</definition>
+        <argsstring>()</argsstring>
+        <name>do_nothing</name>
+        <qualifiedname>Sudoku::do_nothing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="71" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1af610ae4cbc7267d3f5daf8a5861a0a7b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::clear_surrounding_cells</definition>
+        <argsstring>()</argsstring>
+        <name>clear_surrounding_cells</name>
+        <qualifiedname>Sudoku::clear_surrounding_cells</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="72" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a626c29dbf9bfc2f52081244191f617f4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::set_value</definition>
+        <argsstring>(const uint16_t)</argsstring>
+        <name>set_value</name>
+        <qualifiedname>Sudoku::set_value</qualifiedname>
+        <param>
+          <type>const uint16_t</type>
+          <defname>VALUE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="73" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="558" bodyend="669"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1ae66dfdd7f1b5f950cb1113265c211546" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::reset_cursor</definition>
+        <argsstring>()</argsstring>
+        <name>reset_cursor</name>
+        <qualifiedname>Sudoku::reset_cursor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="74" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a691dc71a4e5d88fa38d810a81081ba9e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Sudoku::evaluate</definition>
+        <argsstring>()</argsstring>
+        <name>evaluate</name>
+        <qualifiedname>Sudoku::evaluate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="75" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a9c79b186f06684ce288b1eabe21ef174" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::increment_completed_games</definition>
+        <argsstring>()</argsstring>
+        <name>increment_completed_games</name>
+        <qualifiedname>Sudoku::increment_completed_games</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="76" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a5d4023ad994ed182c3b06801969ac722" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::save_game</definition>
+        <argsstring>(const uint8_t)</argsstring>
+        <name>save_game</name>
+        <qualifiedname>Sudoku::save_game</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>DELAY</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="77" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="725" bodyend="752"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a1eaa3a6df27d5fd74ef154b431b8bae3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::display_hotkey</definition>
+        <argsstring>(const bool, const uint8_t)</argsstring>
+        <name>display_hotkey</name>
+        <qualifiedname>Sudoku::display_hotkey</qualifiedname>
+        <param>
+          <type>const bool</type>
+          <defname>USE_IN_GAME_MENU</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>LINE_OFFSET_TWEAK</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="78" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="766" bodyend="777"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSudoku_1a1d17ce26fa349d09cb4a18ca7eb03771" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sudoku::Sudoku</definition>
+        <argsstring>(bool)</argsstring>
+        <name>Sudoku</name>
+        <qualifiedname>Sudoku::Sudoku</qualifiedname>
+        <param>
+          <type>bool</type>
+          <defname>is_initscr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="54" column="9" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="15" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a9c949b824fa3d98d3515dbecb8cf413e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sudoku::~Sudoku</definition>
+        <argsstring>()</argsstring>
+        <name>~Sudoku</name>
+        <qualifiedname>Sudoku::~Sudoku</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="55" column="9" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a3d9823051a55448e7db1f9c7739e2656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::start_game</definition>
+        <argsstring>(const bool)</argsstring>
+        <name>start_game</name>
+        <qualifiedname>Sudoku::start_game</qualifiedname>
+        <param>
+          <type>const bool</type>
+          <defname>USE_IN_GAME_MENU</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="57" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/sudoku.cpp" bodystart="582" bodyend="670"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a24ffb283a509134b919ce6bd78edc8d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sudoku::Sudoku</definition>
+        <argsstring>(const SavedPuzzle *)</argsstring>
+        <name>Sudoku</name>
+        <qualifiedname>Sudoku::Sudoku</qualifiedname>
+        <param>
+          <type>const <ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref> *</type>
+          <defname>SAVED_PUZZLE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="81" column="9" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="24" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a9c949b824fa3d98d3515dbecb8cf413e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Sudoku::~Sudoku</definition>
+        <argsstring>()</argsstring>
+        <name>~Sudoku</name>
+        <qualifiedname>Sudoku::~Sudoku</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="82" column="9" bodyfile="/home/chris/Documents/tsudoku/include/Sudoku.hpp" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classSudoku_1a03ed3bf0a6bf653ab701a6c16e7336d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::start_game</definition>
+        <argsstring>(const bool, const SavedPuzzle *)</argsstring>
+        <name>start_game</name>
+        <qualifiedname>Sudoku::start_game</qualifiedname>
+        <param>
+          <type>const bool</type>
+          <defname>USE_IN_GAME_MENU</defname>
+        </param>
+        <param>
+          <type>const <ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref> *</type>
+          <defname>SAVED_PUZZLE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="84" column="14" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="795" bodyend="884"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classSudoku_1a5bc07dfc665846f5f9d8b050d5344a40" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sudoku::SIGINT_handler</definition>
+        <argsstring>(int32_t)</argsstring>
+        <name>SIGINT_handler</name>
+        <qualifiedname>Sudoku::SIGINT_handler</qualifiedname>
+        <param>
+          <type>int32_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp" line="85" column="21" bodyfile="/home/chris/Documents/tsudoku/src/Sudoku.cpp" bodystart="895" bodyend="901"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>Container</label>
+        <link refid="classContainer"/>
+      </node>
+      <node id="2">
+        <label>Grid</label>
+        <link refid="classGrid"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>boxes</edgelabel>
+          <edgelabel>cols</edgelabel>
+          <edgelabel>matrices</edgelabel>
+          <edgelabel>rows</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Sudoku</label>
+        <link refid="classSudoku"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>grid</edgelabel>
+          <edgelabel>mat</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" line="15" column="1" bodyfile="/home/chris/Documents/sphinx_testing/include/sudoku.hpp" bodystart="15" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classSudoku_1a7f9884c1ee4727ac330f930504ee1754" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>_map_</name></member>
+      <member refid="classSudoku_1a2dcddcda4905f2ae43cd316368b43b85" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>_rev_map_</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da34fdca3f2b8b098654911a74af8e4355" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>B</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6c27a8eff4011e3fd3dd763ef599f123" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>BL</name></member>
+      <member refid="classSudoku_1ae19305b14d528804865442859cb577ef" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>border_positions</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6abbfc1b3b215edc5a40863c65bd6829" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>BR</name></member>
+      <member refid="classSudoku_1a52fab0a93aee7f8589fea5181b23c813" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>clear</name></member>
+      <member refid="classSudoku_1a52fab0a93aee7f8589fea5181b23c813" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>clear</name></member>
+      <member refid="classSudoku_1af610ae4cbc7267d3f5daf8a5861a0a7b" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>clear_surrounding_cells</name></member>
+      <member refid="classSudoku_1af610ae4cbc7267d3f5daf8a5861a0a7b" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>clear_surrounding_cells</name></member>
+      <member refid="classSudoku_1a736123520077a90731c5a10e2f785353" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>color_codes</name></member>
+      <member refid="classSudoku_1a575451dbd2b52e533898e4126a9cde87" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>create_map</name></member>
+      <member refid="classSudoku_1a575451dbd2b52e533898e4126a9cde87" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>create_map</name></member>
+      <member refid="classSudoku_1ae058e28a4b54b96d2943043a466ca350" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>cursor_pos</name></member>
+      <member refid="classSudoku_1a022dd9e87b96f4e884d1e8e895f3ea26" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>display2grid_map</name></member>
+      <member refid="classSudoku_1a1eaa3a6df27d5fd74ef154b431b8bae3" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>display_hotkey</name></member>
+      <member refid="classSudoku_1a3d889cb9858ae9b9025a24b801441ce6" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>display_matrix</name></member>
+      <member refid="classSudoku_1a212c25a5fa11591233562f162e757d54" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>display_matrix_offset</name></member>
+      <member refid="classSudoku_1a9b5f4a1b7d2a47271b7b4903965a25b1" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>do_nothing</name></member>
+      <member refid="classSudoku_1a9b5f4a1b7d2a47271b7b4903965a25b1" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>do_nothing</name></member>
+      <member refid="classSudoku_1a691dc71a4e5d88fa38d810a81081ba9e" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>evaluate</name></member>
+      <member refid="classSudoku_1a691dc71a4e5d88fa38d810a81081ba9e" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>evaluate</name></member>
+      <member refid="classSudoku_1a100cee00c94ba485c18531bc7fccd913" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>get_surrounding_cells</name></member>
+      <member refid="classSudoku_1ac0daa8b8992e02eca0ed0180de1eb85c" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>get_surrounding_cells</name></member>
+      <member refid="classSudoku_1afb074824f3a0bb57d49014662362d7bf" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>getch</name></member>
+      <member refid="classSudoku_1afb074824f3a0bb57d49014662362d7bf" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>getch</name></member>
+      <member refid="classSudoku_1a8e4997900bf2899b31903f79226fade9" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>grid</name></member>
+      <member refid="classSudoku_1a5961d006dcc5cece4730de50673040ff" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>grid2display_map</name></member>
+      <member refid="classSudoku_1a9c79b186f06684ce288b1eabe21ef174" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>increment_completed_games</name></member>
+      <member refid="classSudoku_1a9c79b186f06684ce288b1eabe21ef174" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>increment_completed_games</name></member>
+      <member refid="classSudoku_1ab1af4e3eccc4f1d96f9a16d76084458c" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>init_display_matrix</name></member>
+      <member refid="classSudoku_1a7e50ddea6823ab49f8193afdaf2a9341" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>init_display_matrix</name></member>
+      <member refid="classSudoku_1a3a49e730dae2a58ee256f4d093b88344" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>is_border</name></member>
+      <member refid="classSudoku_1af0970cee028c74e7840664f5032d94a5" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>is_box_border</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dac3ac866fcc23bf2e61d55287b9fbbefc" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>L</name></member>
+      <member refid="classSudoku_1afcffe18cf8ada54d0b4075f2bcf31522" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>map_display_matrix_offset</name></member>
+      <member refid="classSudoku_1acb0a56c3463384b7d5ba293b6d7ddbe5" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>map_display_matrix_offset</name></member>
+      <member refid="classSudoku_1a4db92378abfba69aa7e227d539e27000" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>mat</name></member>
+      <member refid="classSudoku_1af6f100e3ba0453eafd42bce8732305ad" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>move</name></member>
+      <member refid="classSudoku_1a5d1821a639439667772afe5ec412150f" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>move</name></member>
+      <member refid="classSudoku_1a914dced810515b66a09046f7f8d0a5c9" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>move</name></member>
+      <member refid="classSudoku_1a5d1821a639439667772afe5ec412150f" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>move</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928d" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>neighbor_cells</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da8d60dcd9a6594e02635e722356a996a1" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>NUM_BORDER_POSITIONS</name></member>
+      <member refid="classSudoku_1a80292dcc5372304be5b580bc7f8e18c7" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>ORIGIN</name></member>
+      <member refid="classSudoku_1a6060d3cc7de9d49d348e1e36250a33ed" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>place_value</name></member>
+      <member refid="classSudoku_1aeb55ca1041527f8b3e9345f067fb2955" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>printw</name></member>
+      <member refid="classSudoku_1acaf2b4022092e2bcc042cf7ac3140edf" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>printw</name></member>
+      <member refid="classSudoku_1aeb55ca1041527f8b3e9345f067fb2955" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>printw</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dabd1f43b8d978e2642d20ae86a4baa839" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>R</name></member>
+      <member refid="classSudoku_1a869d3cd45ea52709ea18fa23a034067a" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>refresh</name></member>
+      <member refid="classSudoku_1a869d3cd45ea52709ea18fa23a034067a" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>refresh</name></member>
+      <member refid="classSudoku_1ae66dfdd7f1b5f950cb1113265c211546" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>reset_cursor</name></member>
+      <member refid="classSudoku_1ae66dfdd7f1b5f950cb1113265c211546" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>reset_cursor</name></member>
+      <member refid="classSudoku_1aac131ab29adfd3b35a7c028896f050f9" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>save_game</name></member>
+      <member refid="classSudoku_1a5d4023ad994ed182c3b06801969ac722" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>save_game</name></member>
+      <member refid="classSudoku_1a3d20a2cddb02acb3666502f261ccf15b" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>set_color_pairs</name></member>
+      <member refid="classSudoku_1a3d20a2cddb02acb3666502f261ccf15b" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>set_color_pairs</name></member>
+      <member refid="classSudoku_1a626c29dbf9bfc2f52081244191f617f4" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>set_value</name></member>
+      <member refid="classSudoku_1a5bc07dfc665846f5f9d8b050d5344a40" prot="public" virt="non-virtual"><scope>Sudoku</scope><name>SIGINT_handler</name></member>
+      <member refid="classSudoku_1a3d9823051a55448e7db1f9c7739e2656" prot="public" virt="non-virtual"><scope>Sudoku</scope><name>start_game</name></member>
+      <member refid="classSudoku_1a03ed3bf0a6bf653ab701a6c16e7336d7" prot="public" virt="non-virtual"><scope>Sudoku</scope><name>start_game</name></member>
+      <member refid="classSudoku_1a1d17ce26fa349d09cb4a18ca7eb03771" prot="public" virt="non-virtual"><scope>Sudoku</scope><name>Sudoku</name></member>
+      <member refid="classSudoku_1a24ffb283a509134b919ce6bd78edc8d7" prot="public" virt="non-virtual"><scope>Sudoku</scope><name>Sudoku</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadaaa3bcbe39b54d5d04c96e56eeb41e3" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>T</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadd6f7a38873f22b21473abf4c3304632" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>TL</name></member>
+      <member refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dae5e3f061b1e9f1c06d79b1ee359998ab" prot="private" virt="non-virtual"><scope>Sudoku</scope><name>TR</name></member>
+      <member refid="classSudoku_1a9c949b824fa3d98d3515dbecb8cf413e" prot="public" virt="non-virtual"><scope>Sudoku</scope><name>~Sudoku</name></member>
+      <member refid="classSudoku_1a9c949b824fa3d98d3515dbecb8cf413e" prot="public" virt="non-virtual"><scope>Sudoku</scope><name>~Sudoku</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

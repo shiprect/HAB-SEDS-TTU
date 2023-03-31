@@ -1,0 +1,183 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="Sudoku_8hpp" kind="file" language="C++">
+    <compoundname>Sudoku.hpp</compoundname>
+    <includes refid="tsudoku_2include_2Grid_8hpp" local="yes">Grid.hpp</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">array</includes>
+    <includedby refid="Sudoku_8cpp" local="yes">/home/chris/Documents/tsudoku/src/Sudoku.cpp</includedby>
+    <includedby refid="tsudoku_2src_2main_8cpp" local="yes">/home/chris/Documents/tsudoku/src/main.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>Container.hpp</label>
+        <link refid="tsudoku_2include_2Container_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Grid.hpp</label>
+        <link refid="tsudoku_2include_2Grid_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/Sudoku.hpp</label>
+        <link refid="Sudoku_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>array</label>
+      </node>
+      <node id="5">
+        <label>cstdint</label>
+      </node>
+      <node id="10">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>random</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/Sudoku.hpp</label>
+        <link refid="Sudoku_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/tsudoku/src/Sudoku.cpp</label>
+        <link refid="Sudoku_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/tsudoku/src/main.cpp</label>
+        <link refid="tsudoku_2src_2main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSudoku" prot="public">Sudoku</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SUDOKU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUDOKU_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="tsudoku_2include_2Grid_8hpp" kindref="compound">Grid.hpp</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//cell,<sp/>std::map,<sp/>std::utility</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//uint8_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;array&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::array</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>getch<sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>NOTE:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Redefined<sp/>as<sp/>Sudoku::getch().<sp/>This<sp/>doesn&apos;t<sp/>appear<sp/>to<sp/>affect<sp/>the<sp/>getch()<sp/>calls<sp/>in</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>main.cpp,<sp/>even<sp/>though<sp/>it<sp/>logically<sp/>should<sp/>after<sp/>seeing<sp/>how<sp/>rearranging<sp/>#include</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>statements<sp/>got<sp/>the<sp/>KEY_ENTER<sp/>redefinition<sp/>to<sp/>work.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>Class:<sp/>Sudoku</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Purpose:<sp/>Represents<sp/>an<sp/>interactive<sp/>live<sp/>game<sp/>of<sp/>sudoku.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Private<sp/>variables:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>display_matrix<sp/>-&gt;<sp/>27x27<sp/>matrix<sp/>of<sp/>8-bit<sp/>characters<sp/>that<sp/>is<sp/>displayed<sp/>to<sp/>the<sp/>screen<sp/>during</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>play.<sp/>This<sp/>is<sp/>the<sp/>data<sp/>structure<sp/>the<sp/>user<sp/>directly<sp/>interacts<sp/>with.</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>grid<sp/>-&gt;<sp/>Grid<sp/>object<sp/>representing<sp/>just<sp/>the<sp/>81<sp/>cells<sp/>of<sp/>a<sp/>sudoku<sp/>board.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>grid2display_map<sp/>-&gt;<sp/>Mapping<sp/>of<sp/>81<sp/>positions<sp/>of<sp/>a<sp/>grid<sp/>to<sp/>their<sp/>(y,<sp/>x)<sp/>coordinates<sp/>in<sp/>the</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>display<sp/>matrix.</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>display2grid_map<sp/>-&gt;<sp/>Reverse<sp/>mapping<sp/>of<sp/>_map_.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>ORIGIN<sp/>-&gt;<sp/>Starting<sp/>cell<sp/>of<sp/>the<sp/>display<sp/>matrix&apos;s<sp/>(0,<sp/>0)<sp/>position<sp/>on<sp/>the<sp/>actual<sp/>terminal</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<sp/>This<sp/>is<sp/>effectively<sp/>the<sp/>row<sp/>and<sp/>column<sp/>offset<sp/>from<sp/>the<sp/>top<sp/>left<sp/>cell<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>terminal<sp/>and<sp/>also<sp/>controls<sp/>the<sp/>size<sp/>of<sp/>the<sp/>buffers<sp/>from<sp/>the<sp/>edges<sp/>of<sp/>the<sp/>terminal</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NOTE:<sp/>Terminal<sp/>coordinates<sp/>are<sp/>in<sp/>(y,x)<sp/>format.<sp/>Origin<sp/>coordinates<sp/>can<sp/>be<sp/>found<sp/>in</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>misc.hpp</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>cursor_pos<sp/>-&gt;<sp/>The<sp/>current<sp/>position<sp/>of<sp/>the<sp/>cursor<sp/>on<sp/>the<sp/>display<sp/>matrix.<sp/>At<sp/>the<sp/>start<sp/>of<sp/>the</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>game,<sp/>this<sp/>is<sp/>equivalent<sp/>to<sp/>the<sp/>ORIGIN,<sp/>and<sp/>his<sp/>is<sp/>constantly<sp/>tracked<sp/>and</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>updated<sp/>every<sp/>time<sp/>the<sp/>cursor<sp/>moves<sp/>afterwards.<sp/>This<sp/>is<sp/>primarily<sp/>beneficial</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>resetting<sp/>(with<sp/>the<sp/>appearance<sp/>of<sp/>maintaining)<sp/>the<sp/>cursor<sp/>on<sp/>the<sp/>current</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position<sp/>after<sp/>reacting<sp/>to<sp/>user<sp/>input<sp/>(i.e.<sp/>this<sp/>object&apos;s<sp/>primary<sp/>purpose<sp/>is<sp/>to</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>make<sp/>the<sp/>cursor<sp/>appear<sp/>as<sp/>if<sp/>it<sp/>never<sp/>moved<sp/>after<sp/>the<sp/>user<sp/>inputs<sp/>a<sp/>character</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>on<sp/>the<sp/>display<sp/>matrix).</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>display_matrix_offset<sp/>-&gt;<sp/>Mapping<sp/>of<sp/>the<sp/>display<sp/>matrix&apos;s<sp/>index<sp/>pairs<sp/>to<sp/>their<sp/>(y,<sp/>x)</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>positions<sp/>displayed<sp/>in<sp/>the<sp/>terminal<sp/>window.<sp/>This<sp/>makes<sp/>the<sp/>math</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>behind<sp/>making<sp/>position-related<sp/>changes<sp/>easier.<sp/>display_matrix[0][0]</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>mapped<sp/>to<sp/>the<sp/>ORIGIN<sp/>and<sp/>so<sp/>forth.</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>neighbor_cells<sp/>-&gt;<sp/>Enumeration<sp/>of<sp/>shorthand<sp/>constants<sp/>used<sp/>when<sp/>retrieving<sp/>a<sp/>cell&apos;s<sp/>8</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>surrounding<sp/>(i.e.<sp/>border)<sp/>cells<sp/>along<sp/>with<sp/>a<sp/>constant<sp/>for<sp/>the<sp/>number<sp/>of</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>border<sp/>positions.</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSudoku" kindref="compound">Sudoku</ref><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSudoku_1a3d889cb9858ae9b9025a24b801441ce6" kindref="member">display_matrix</ref>[<ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref>][<ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref>]<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classSudoku_1a736123520077a90731c5a10e2f785353" kindref="member">color_codes</ref>[<ref refid="misc_8hpp_1a9e56c88675676964c40d1ec5a1a97d01" kindref="member">DISPLAY_MATRIX_ROWS</ref>][<ref refid="misc_8hpp_1a0796b5f220eb1b6d5629527de2d86508" kindref="member">DISPLAY_MATRIX_COLUMNS</ref>]<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGrid" kindref="compound">Grid</ref><sp/><ref refid="classSudoku_1a8e4997900bf2899b31903f79226fade9" kindref="member">grid</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;uint8_t,<sp/>cell&gt;<sp/><ref refid="classSudoku_1a5961d006dcc5cece4730de50673040ff" kindref="member">grid2display_map</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;cell,<sp/>uint8_t&gt;<sp/><ref refid="classSudoku_1a022dd9e87b96f4e884d1e8e895f3ea26" kindref="member">display2grid_map</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref><sp/><ref refid="classSudoku_1a80292dcc5372304be5b580bc7f8e18c7" kindref="member">ORIGIN</ref><sp/>=<sp/>{<sp/><ref refid="values_8hpp_1aa4a1e2bfbb4b6bdfc6d70f689a31810f" kindref="member">ORIGINy</ref>,<sp/><ref refid="values_8hpp_1a07d71a60201fb66046cb6293933c68dd" kindref="member">ORIGINx</ref><sp/>};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref><sp/><ref refid="classSudoku_1ae058e28a4b54b96d2943043a466ca350" kindref="member">cursor_pos</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;cell,<sp/>cell&gt;<sp/><ref refid="classSudoku_1a212c25a5fa11591233562f162e757d54" kindref="member">display_matrix_offset</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928d" kindref="member">neighbor_cells</ref><sp/>{<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadd6f7a38873f22b21473abf4c3304632" kindref="member">TL</ref><sp/>=<sp/>0,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dadaaa3bcbe39b54d5d04c96e56eeb41e3" kindref="member">T</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dae5e3f061b1e9f1c06d79b1ee359998ab" kindref="member">TR</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dac3ac866fcc23bf2e61d55287b9fbbefc" kindref="member">L</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928dabd1f43b8d978e2642d20ae86a4baa839" kindref="member">R</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6c27a8eff4011e3fd3dd763ef599f123" kindref="member">BL</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da34fdca3f2b8b098654911a74af8e4355" kindref="member">B</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da6abbfc1b3b215edc5a40863c65bd6829" kindref="member">BR</ref>,<sp/><ref refid="classSudoku_1ae1e99cd9cecf03df29540de074c3928da8d60dcd9a6594e02635e722356a996a1" kindref="member">NUM_BORDER_POSITIONS</ref><sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a575451dbd2b52e533898e4126a9cde87" kindref="member">create_map</ref><sp/>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1afcffe18cf8ada54d0b4075f2bcf31522" kindref="member">map_display_matrix_offset</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a3d20a2cddb02acb3666502f261ccf15b" kindref="member">set_color_pairs</ref><sp/>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1ab1af4e3eccc4f1d96f9a16d76084458c" kindref="member">init_display_matrix</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref>*);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1aeb55ca1041527f8b3e9345f067fb2955" kindref="member">printw</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref>*);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1aeb55ca1041527f8b3e9345f067fb2955" kindref="member">printw</ref><sp/>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1af6f100e3ba0453eafd42bce8732305ad" kindref="member">move</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1af6f100e3ba0453eafd42bce8732305ad" kindref="member">move</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a869d3cd45ea52709ea18fa23a034067a" kindref="member">refresh</ref><sp/>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="classSudoku_1afb074824f3a0bb57d49014662362d7bf" kindref="member">getch</ref><sp/>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a52fab0a93aee7f8589fea5181b23c813" kindref="member">clear</ref><sp/>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1af0970cee028c74e7840664f5032d94a5" kindref="member">is_box_border</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="values_8hpp_1a203969cb2eeec9a61b3882358ab94509" kindref="member">cell</ref>);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array&lt;cell,<sp/>NUM_BORDER_POSITIONS&gt;<sp/><ref refid="classSudoku_1a100cee00c94ba485c18531bc7fccd913" kindref="member">get_surrounding_cells</ref><sp/>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a9b5f4a1b7d2a47271b7b4903965a25b1" kindref="member">do_nothing</ref><sp/>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1af610ae4cbc7267d3f5daf8a5861a0a7b" kindref="member">clear_surrounding_cells</ref><sp/>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a626c29dbf9bfc2f52081244191f617f4" kindref="member">set_value</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint16_t);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1ae66dfdd7f1b5f950cb1113265c211546" kindref="member">reset_cursor</ref><sp/>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a691dc71a4e5d88fa38d810a81081ba9e" kindref="member">evaluate</ref><sp/>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a9c79b186f06684ce288b1eabe21ef174" kindref="member">increment_completed_games</ref><sp/>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1aac131ab29adfd3b35a7c028896f050f9" kindref="member">save_game</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a1eaa3a6df27d5fd74ef154b431b8bae3" kindref="member">display_hotkey</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSudoku_1a1d17ce26fa349d09cb4a18ca7eb03771" kindref="member">Sudoku</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref>*);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSudoku_1a9c949b824fa3d98d3515dbecb8cf413e" kindref="member">~Sudoku</ref><sp/>()<sp/>{}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a3d9823051a55448e7db1f9c7739e2656" kindref="member">start_game</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structSavedPuzzle" kindref="compound">SavedPuzzle</ref>*);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSudoku_1a5bc07dfc665846f5f9d8b050d5344a40" kindref="member">SIGINT_handler</ref><sp/>(int32_t);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/Sudoku.hpp"/>
+  </compounddef>
+</doxygen>

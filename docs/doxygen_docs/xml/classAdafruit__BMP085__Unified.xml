@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classAdafruit__BMP085__Unified" kind="class" language="C++" prot="public">
+    <compoundname>Adafruit_BMP085_Unified</compoundname>
+    <basecompoundref refid="classAdafruit__Sensor" prot="public" virt="non-virtual">Adafruit_Sensor</basecompoundref>
+    <includes local="no">Adafruit_BMP085_U.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAdafruit__BMP085__Unified_1a31f5869ed0f0ba87733e1f9ea3bc7530" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t Adafruit_BMP085_Unified::_sensorID</definition>
+        <argsstring></argsstring>
+        <name>_sensorID</name>
+        <qualifiedname>Adafruit_BMP085_Unified::_sensorID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="116" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1a9411ffe6c882ce1aec61a6227db3e47c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_BMP085_Unified::Adafruit_BMP085_Unified</definition>
+        <argsstring>(int32_t sensorID=-1)</argsstring>
+        <name>Adafruit_BMP085_Unified</name>
+        <qualifiedname>Adafruit_BMP085_Unified::Adafruit_BMP085_Unified</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>sensorID</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Instantiates a new <ref refid="classAdafruit__BMP085__Unified" kindref="compound">Adafruit_BMP085_Unified</ref> class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="99" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="235" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1a19afa291aca37fbfaa5cf02137c5777f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BMP085_Unified::begin</definition>
+        <argsstring>(bmp085_mode_t mode=BMP085_MODE_ULTRAHIGHRES)</argsstring>
+        <name>begin</name>
+        <qualifiedname>Adafruit_BMP085_Unified::begin</qualifiedname>
+        <param>
+          <type><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7b" kindref="member">bmp085_mode_t</ref></type>
+          <declname>mode</declname>
+          <defval><ref refid="Adafruit__BMP085__U_8h_1aea0d1b60e7739b8b9f2a2281e1680d7ba6145303f80a1daa6873c32ca5fdd5b3e" kindref="member">BMP085_MODE_ULTRAHIGHRES</ref></defval>
+        </param>
+        <briefdescription>
+<para>Setups the HW. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="101" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="248" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1a4d74250c9406e7360e1a8b4f13610e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BMP085_Unified::getTemperature</definition>
+        <argsstring>(float *temp)</argsstring>
+        <name>getTemperature</name>
+        <qualifiedname>Adafruit_BMP085_Unified::getTemperature</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+<para>Reads the temperatures in degrees Celsius. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="102" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="325" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1abdc7b3759a57b5c03ba09873a39a1839" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Adafruit_BMP085_Unified::getPressure</definition>
+        <argsstring>(float *pressure)</argsstring>
+        <name>getPressure</name>
+        <qualifiedname>Adafruit_BMP085_Unified::getPressure</qualifiedname>
+        <param>
+          <type>float *</type>
+          <declname>pressure</declname>
+        </param>
+        <briefdescription>
+<para>Gets the compensated pressure level in kPa. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="103" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="279" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1a899d8915f530ad7be9e2cab86b26d86f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Adafruit_BMP085_Unified::pressureToAltitude</definition>
+        <argsstring>(float seaLevel, float atmospheric)</argsstring>
+        <name>pressureToAltitude</name>
+        <qualifiedname>Adafruit_BMP085_Unified::pressureToAltitude</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>seaLevel</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>atmospheric</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the altitude (in meters) from the specified atmospheric pressure (in hPa), and sea-level pressure (in hPa).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seaLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sea-level pressure in hPa </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>atmospheric</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Atmospheric pressure in hPa </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="104" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="357" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1aa5a5cb715d056811b1cee546997edbbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Adafruit_BMP085_Unified::seaLevelForAltitude</definition>
+        <argsstring>(float altitude, float atmospheric)</argsstring>
+        <name>seaLevelForAltitude</name>
+        <qualifiedname>Adafruit_BMP085_Unified::seaLevelForAltitude</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>altitude</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>atmospheric</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the pressure at sea level (in hPa) from the specified altitude (in meters), and atmospheric pressure (in hPa). <linebreak/>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>altitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Altitude in meters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>atmospheric</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Atmospheric pressure in hPa </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="105" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="399" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1a5c1fe10ee79f4f7f224102f919f27e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Adafruit_BMP085_Unified::pressureToAltitude</definition>
+        <argsstring>(float seaLevel, float atmospheric, float temp)</argsstring>
+        <name>pressureToAltitude</name>
+        <qualifiedname>Adafruit_BMP085_Unified::pressureToAltitude</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>seaLevel</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>atmospheric</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the altitude (in meters) from the specified atmospheric pressure (in hPa), and sea-level pressure (in hPa). Note that this function just calls the overload of pressureToAltitude which takes seaLevel and atmospheric pressure<ndash/>temperature is ignored. The original implementation of this function was based on calculations from Wikipedia which are not accurate at higher altitudes. To keep compatibility with old code this function remains with the same interface, but it calls the more accurate calculation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>seaLevel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sea-level pressure in hPa </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>atmospheric</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Atmospheric pressure in hPa </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in degrees Celsius </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="109" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="385" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1aaf8f96a7190ab72a6de44719ebb934f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Adafruit_BMP085_Unified::seaLevelForAltitude</definition>
+        <argsstring>(float altitude, float atmospheric, float temp)</argsstring>
+        <name>seaLevelForAltitude</name>
+        <qualifiedname>Adafruit_BMP085_Unified::seaLevelForAltitude</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>altitude</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>atmospheric</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculates the pressure at sea level (in hPa) from the specified altitude (in meters), and atmospheric pressure (in hPa). Note that this function just calls the overload of seaLevelForAltitude which takes altitude and atmospheric pressure<ndash/>temperature is ignored. The original implementation of this function was based on calculations from Wikipedia which are not accurate at higher altitudes. To keep compatibility with old code this function remains with the same interface, but it calls the more accurate calculation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>altitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Altitude in meters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>atmospheric</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Atmospheric pressure in hPa </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in degrees Celsius </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="110" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="427" bodyend="430"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1a75df7711caf4c3a80831cb9c9327aeff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Adafruit_BMP085_Unified::getEvent</definition>
+        <argsstring>(sensors_event_t *)</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_BMP085_Unified::getEvent</qualifiedname>
+        <reimplements refid="classAdafruit__Sensor_1a0636562b9bc853b796ecc87b5d4b1bec">getEvent</reimplements>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+          <defname>event</defname>
+        </param>
+        <briefdescription>
+<para>Reads the sensor and returns the data as a <ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="111" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="460" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1acb3b37e177179ebd4fc0680c188c5280" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Adafruit_BMP085_Unified::getSensor</definition>
+        <argsstring>(sensor_t *)</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_BMP085_Unified::getSensor</qualifiedname>
+        <reimplements refid="classAdafruit__Sensor_1a19e844c1eb2dc37cb72705d5572c4676">getSensor</reimplements>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+          <defname>sensor</defname>
+        </param>
+        <briefdescription>
+<para>Provides the <ref refid="structsensor__t" kindref="compound">sensor_t</ref> data for this sensor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="112" column="15" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="438" bodyend="453"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classAdafruit__BMP085__Unified_1aea3f76eb40f65b3545df730b9fe76553" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t Adafruit_BMP085_Unified::computeB5</definition>
+        <argsstring>(int32_t ut)</argsstring>
+        <name>computeB5</name>
+        <qualifiedname>Adafruit_BMP085_Unified::computeB5</qualifiedname>
+        <param>
+          <type>int32_t</type>
+          <declname>ut</declname>
+        </param>
+        <briefdescription>
+<para>Compute B5 coefficient used in temperature &amp; pressure calcs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="115" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.cpp" bodystart="219" bodyend="223"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Adafruit_BMP085_Unified</label>
+        <link refid="classAdafruit__BMP085__Unified"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Adafruit_Sensor</label>
+        <link refid="classAdafruit__Sensor"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Adafruit_BMP085_Unified</label>
+        <link refid="classAdafruit__BMP085__Unified"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Adafruit_Sensor</label>
+        <link refid="classAdafruit__Sensor"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" line="96" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_BMP085_U.h" bodystart="97" bodyend="117"/>
+    <listofallmembers>
+      <member refid="classAdafruit__Sensor_1a79419e4b6898903c0de4aa80133f01ae" prot="private" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>_autoRange</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1a31f5869ed0f0ba87733e1f9ea3bc7530" prot="private" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>_sensorID</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1a9411ffe6c882ce1aec61a6227db3e47c" prot="public" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>Adafruit_BMP085_Unified</name></member>
+      <member refid="classAdafruit__Sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>Adafruit_Sensor</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1a19afa291aca37fbfaa5cf02137c5777f" prot="public" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>begin</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1aea3f76eb40f65b3545df730b9fe76553" prot="private" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>computeB5</name></member>
+      <member refid="classAdafruit__Sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" virt="virtual"><scope>Adafruit_BMP085_Unified</scope><name>enableAutoRange</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1a75df7711caf4c3a80831cb9c9327aeff" prot="public" virt="virtual"><scope>Adafruit_BMP085_Unified</scope><name>getEvent</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1abdc7b3759a57b5c03ba09873a39a1839" prot="public" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>getPressure</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1acb3b37e177179ebd4fc0680c188c5280" prot="public" virt="virtual"><scope>Adafruit_BMP085_Unified</scope><name>getSensor</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1a4d74250c9406e7360e1a8b4f13610e8d" prot="public" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>getTemperature</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1a899d8915f530ad7be9e2cab86b26d86f" prot="public" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>pressureToAltitude</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1a5c1fe10ee79f4f7f224102f919f27e41" prot="public" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>pressureToAltitude</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1aa5a5cb715d056811b1cee546997edbbc" prot="public" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>seaLevelForAltitude</name></member>
+      <member refid="classAdafruit__BMP085__Unified_1aaf8f96a7190ab72a6de44719ebb934f5" prot="public" virt="non-virtual"><scope>Adafruit_BMP085_Unified</scope><name>seaLevelForAltitude</name></member>
+      <member refid="classAdafruit__Sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_BMP085_Unified</scope><name>~Adafruit_Sensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

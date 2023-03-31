@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="tsudoku_2include_2Container_8hpp" kind="file" language="C++">
+    <compoundname>Container.hpp</compoundname>
+    <includes refid="misc_8hpp" local="yes">misc.hpp</includes>
+    <includedby refid="tsudoku_2include_2Grid_8hpp" local="yes">/home/chris/Documents/tsudoku/include/Grid.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/Container.hpp</label>
+        <link refid="tsudoku_2include_2Container_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>misc.hpp</label>
+        <link refid="misc_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>utility</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/chris/Documents/tsudoku/include/Container.hpp</label>
+        <link refid="tsudoku_2include_2Container_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/chris/Documents/tsudoku/include/Grid.hpp</label>
+        <link refid="tsudoku_2include_2Grid_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/chris/Documents/tsudoku/include/Sudoku.hpp</label>
+        <link refid="Sudoku_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/chris/Documents/tsudoku/src/Sudoku.cpp</label>
+        <link refid="Sudoku_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/chris/Documents/tsudoku/src/main.cpp</label>
+        <link refid="tsudoku_2src_2main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classContainer" prot="public">Container</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="tsudoku_2include_2Container_8hpp_1a7fa418d7102f67858e015d50256329d6" prot="public" static="no">
+        <type><ref refid="classContainer" kindref="compound">Container</ref></type>
+        <definition>typedef Container House</definition>
+        <argsstring></argsstring>
+        <name>House</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Container.hpp" line="28" column="19" bodyfile="/home/chris/Documents/tsudoku/include/Container.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tsudoku_2include_2Container_8hpp_1a28b686d142088dcdf146d2c96377f362" prot="public" static="no">
+        <type><ref refid="classContainer" kindref="compound">Container</ref></type>
+        <definition>typedef Container Box</definition>
+        <argsstring></argsstring>
+        <name>Box</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Container.hpp" line="29" column="19" bodyfile="/home/chris/Documents/tsudoku/include/Container.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tsudoku_2include_2Container_8hpp_1a613a25b77848c639c356618e73fee8c7" prot="public" static="no">
+        <type><ref refid="classContainer" kindref="compound">Container</ref></type>
+        <definition>typedef Container Column</definition>
+        <argsstring></argsstring>
+        <name>Column</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Container.hpp" line="30" column="19" bodyfile="/home/chris/Documents/tsudoku/include/Container.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="tsudoku_2include_2Container_8hpp_1a5699d63a3ce5ffb14b2ffdefbe65877f" prot="public" static="no">
+        <type><ref refid="classContainer" kindref="compound">Container</ref></type>
+        <definition>typedef Container Row</definition>
+        <argsstring></argsstring>
+        <name>Row</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/Container.hpp" line="31" column="19" bodyfile="/home/chris/Documents/tsudoku/include/Container.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CONTAINER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONTAINER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="misc_8hpp" kindref="compound">misc.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>NOTE:</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>Class:<sp/>Container</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>Purpose:<sp/>Represents<sp/>a<sp/>Sudoku<sp/>container<sp/>(i.e.<sp/>a<sp/>3x3<sp/>box,<sp/>a<sp/>column,<sp/>or<sp/>a<sp/>row).</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Private<sp/>variables:</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>arr<sp/>-&gt;<sp/>Internal<sp/>array<sp/>housing<sp/>the<sp/>container&apos;s<sp/>contents.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classContainer" kindref="compound">Container</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classContainer_1ad912f505895a2fd1db6bcb1112317cbb" kindref="member">arr</ref>[<ref refid="misc_8hpp_1aed7ea92bab2e4a8946e0a6219ddfa4af" kindref="member">CONTAINER_SIZE</ref>];</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classContainer_1a1b0c5515d6863c1bc98cc93b65952f42" kindref="member">Container</ref><sp/>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classContainer_1a1b0c5515d6863c1bc98cc93b65952f42" kindref="member">Container</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t[<ref refid="misc_8hpp_1aed7ea92bab2e4a8946e0a6219ddfa4af" kindref="member">CONTAINER_SIZE</ref>]);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classContainer_1ae9f5d07bfc3defda274aa06091c19f56" kindref="member">~Container</ref><sp/>()<sp/>{}<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>Class<sp/>Destructor:<sp/>Does<sp/>nothing.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classContainer_1a3ed853e0bc2034af0d4a021480ef9bdf" kindref="member">at</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="classContainer_1ae20f9689baca7cf4aab08badb8c52960" kindref="member">operator [] </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classContainer_1a9a773f779ea0e3d39d30db9ca8eb1a3b" kindref="member">value_exists</ref><sp/>(uint8_t)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classContainer_1a5fbc60d2a8deb5b44509c9ceff1478ac" kindref="member">set_value</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classContainer_1a85dc9a2f053e5eec2d6011a3ee28b5c3" kindref="member">evaluate</ref><sp/>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classContainer" kindref="compound">Container</ref><sp/><ref refid="sphinx__testing_2include_2Container_8hpp_1a7fa418d7102f67858e015d50256329d6" kindref="member">House</ref>;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>These<sp/>typedefs<sp/>are<sp/>provided<sp/>because<sp/>it&apos;s<sp/>easier<sp/>to<sp/>think<sp/>about</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classContainer" kindref="compound">Container</ref><sp/><ref refid="sphinx__testing_2include_2Container_8hpp_1a28b686d142088dcdf146d2c96377f362" kindref="member">Box</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>using<sp/>rows,<sp/>columns,<sp/>or<sp/>boxes<sp/>rather<sp/>than<sp/>just<sp/>general<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classContainer" kindref="compound">Container</ref><sp/><ref refid="sphinx__testing_2include_2Container_8hpp_1a613a25b77848c639c356618e73fee8c7" kindref="member">Column</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>containers,<sp/>even<sp/>though<sp/>all<sp/>three<sp/>will<sp/>behave<sp/>the<sp/>same.<sp/>A<sp/>house</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classContainer" kindref="compound">Container</ref><sp/><ref refid="sphinx__testing_2include_2Container_8hpp_1a5699d63a3ce5ffb14b2ffdefbe65877f" kindref="member">Row</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>is<sp/>just<sp/>an<sp/>alternate<sp/>name<sp/>for<sp/>a<sp/>container,<sp/>and<sp/>is<sp/>really<sp/>just</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>provided<sp/>for<sp/>posterity.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/tsudoku/include/Container.hpp"/>
+  </compounddef>
+</doxygen>

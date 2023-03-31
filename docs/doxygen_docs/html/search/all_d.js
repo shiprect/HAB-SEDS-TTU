@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['name_0',['name',['../structsensor__t.html#a4383b68d36f9dc4096d83583c3b009bf',1,'sensor_t']]],
+  ['nano_5fenable_1',['NANO_ENABLE',['../ProjectConfig_8hpp.html#ad880a735411f9c43c715b24a59ad0617',1,'ProjectConfig.hpp']]],
+  ['negative_2',['negative',['../structRawDegrees.html#a39c31d2d0332155a4d2c975cec0a796f',1,'RawDegrees']]],
+  ['neighbor_5fcells_3',['neighbor_cells',['../classSudoku.html#ae1e99cd9cecf03df29540de074c3928d',1,'Sudoku']]],
+  ['new_5fgame_4',['NEW_GAME',['../sphinx__testing_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803',1,'NEW_GAME():&#160;Menu.hpp'],['../tsudoku_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803',1,'NEW_GAME():&#160;Menu.hpp'],['../sphinx__testing_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803',1,'NEW_GAME():&#160;Menu.hpp'],['../tsudoku_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203da4dcf8e88676cfa4a0ca3483a453b3803',1,'NEW_GAME():&#160;Menu.hpp']]],
+  ['newdate_5',['newDate',['../structTinyGPSDate.html#a81d6d90be898cf44e804e86a2f4a3d2d',1,'TinyGPSDate']]],
+  ['newtime_6',['newTime',['../structTinyGPSTime.html#ab6794a7906f46e0309ffa31a3682ea92',1,'TinyGPSTime']]],
+  ['newval_7',['newval',['../structTinyGPSDecimal.html#ad8fa7dfb23e381b2353ea4ecaeaebc8b',1,'TinyGPSDecimal::newval()'],['../structTinyGPSInteger.html#a7f9bc12f55134d4b4028edca243afc87',1,'TinyGPSInteger::newval()']]],
+  ['next_8',['next',['../classTinyGPSCustom.html#a994b5ad843074007b061252293347270',1,'TinyGPSCustom']]],
+  ['nine_9',['NINE',['../values_8hpp.html#a23a01397a0a1fb98fafffd690348f5d6aea09d09b793ccc4a4b5983368d18a4ab',1,'NINE():&#160;values.hpp'],['../misc_8hpp.html#a23a01397a0a1fb98fafffd690348f5d6aea09d09b793ccc4a4b5983368d18a4ab',1,'NINE():&#160;misc.hpp']]],
+  ['no_5fsaves_10',['NO_SAVES',['../sphinx__testing_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203daf82e95a8a8acf4640c278ca92b4f1d13',1,'NO_SAVES():&#160;Menu.hpp'],['../tsudoku_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203daf82e95a8a8acf4640c278ca92b4f1d13',1,'NO_SAVES():&#160;Menu.hpp']]],
+  ['none_11',['NONE',['../sphinx__testing_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693',1,'NONE():&#160;Menu.hpp'],['../tsudoku_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693',1,'NONE():&#160;Menu.hpp'],['../sphinx__testing_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693',1,'NONE():&#160;Menu.hpp'],['../tsudoku_2include_2Menu_8hpp.html#a02eacfd40be9042ceb0f07547365203dab50339a10e1de285ac99d4c3990b8693',1,'NONE():&#160;Menu.hpp']]],
+  ['not_5fan_5finterrupt_12',['NOT_AN_INTERRUPT',['../LoRaNodeV4_2RadioHead_2RadioHead_8h.html#ace73be9d32b9ad15d9120c47304266dc',1,'NOT_AN_INTERRUPT():&#160;RadioHead.h'],['../RadioHead_2RadioHead_8h.html#ace73be9d32b9ad15d9120c47304266dc',1,'NOT_AN_INTERRUPT():&#160;RadioHead.h']]],
+  ['notes_13',['notes',['../namespaceproblem1.html#a291e769f342378b1b20b28a21c7b421d',1,'problem1']]],
+  ['ntohl_14',['ntohl',['../LoRaNodeV4_2RadioHead_2RadioHead_8h.html#ac317b3e903719ba02894f1710f7f2439',1,'ntohl():&#160;RadioHead.h'],['../RadioHead_2RadioHead_8h.html#ac317b3e903719ba02894f1710f7f2439',1,'ntohl():&#160;RadioHead.h']]],
+  ['ntohs_15',['ntohs',['../LoRaNodeV4_2RadioHead_2RadioHead_8h.html#ada37feda716b4ba89cf9dba34288141d',1,'ntohs():&#160;RadioHead.h'],['../RadioHead_2RadioHead_8h.html#ada37feda716b4ba89cf9dba34288141d',1,'ntohs():&#160;RadioHead.h']]],
+  ['num_5fborder_5fpositions_16',['NUM_BORDER_POSITIONS',['../classSudoku.html#ae1e99cd9cecf03df29540de074c3928da8d60dcd9a6594e02635e722356a996a1',1,'Sudoku']]],
+  ['num_5fcontainers_17',['NUM_CONTAINERS',['../misc_8hpp.html#a5836cfba77309360a7aef90d638da708',1,'misc.hpp']]],
+  ['num_5fopts_18',['NUM_OPTS',['../classInGameMenu.html#afc3c110ca204dee6c7959ee70c7836e1',1,'InGameMenu']]]
+];

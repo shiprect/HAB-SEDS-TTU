@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classRHSPIDriver" kind="class" language="C++" prot="public">
+    <compoundname>RHSPIDriver</compoundname>
+    <basecompoundref refid="classRHGenericDriver" prot="public" virt="non-virtual">RHGenericDriver</basecompoundref>
+    <basecompoundref refid="classRHGenericDriver" prot="public" virt="non-virtual">RHGenericDriver</basecompoundref>
+    <derivedcompoundref refid="classRH__RF95" prot="public" virt="non-virtual">RH_RF95</derivedcompoundref>
+    <derivedcompoundref refid="classRH__RF95" prot="public" virt="non-virtual">RH_RF95</derivedcompoundref>
+    <includes local="no">RHSPIDriver.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" prot="protected" static="no" mutable="no">
+        <type><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref> &amp;</type>
+        <definition>RHGenericSPI &amp; RHSPIDriver::_spi</definition>
+        <argsstring></argsstring>
+        <name>_spi</name>
+        <qualifiedname>RHSPIDriver::_spi</qualifiedname>
+        <briefdescription>
+<para>Reference to the <ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref> instance to use to transfer data with teh SPI device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="88" column="24" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" prot="protected" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t RHSPIDriver::_slaveSelectPin</definition>
+        <argsstring></argsstring>
+        <name>_slaveSelectPin</name>
+        <qualifiedname>RHSPIDriver::_slaveSelectPin</qualifiedname>
+        <briefdescription>
+<para>The pin number of the Slave Select pin that is used to select the desired device. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="91" column="25" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classRHSPIDriver_1a4285d2fb96b09588556bfc4f8a143f61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RHSPIDriver::RHSPIDriver</definition>
+        <argsstring>(uint8_t slaveSelectPin=SS, RHGenericSPI &amp;spi=hardware_spi)</argsstring>
+        <name>RHSPIDriver</name>
+        <qualifiedname>RHSPIDriver::RHSPIDriver</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>slaveSelectPin</declname>
+          <defval><ref refid="RadioHead_2RadioHead_8h_1a88f7782e210e61586baf33b93240d905" kindref="member">SS</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref> &amp;</type>
+          <declname>spi</declname>
+          <defval><ref refid="RadioHead_2RHHardwareSPI_8h_1a9d4ea215edc388eaacbc289938bb658c" kindref="member">hardware_spi</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">slaveSelectPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controler pin to use to select the desired SPI device. This pin will be driven LOW during SPI communications with the SPI device that uis iused by this Driver. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the SPI interface to use. The default is to use a default built-in Hardware interface. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="45" column="5" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp" bodystart="8" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RHSPIDriver::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>RHSPIDriver::init</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365">init</reimplements>
+        <reimplementedby refid="classRH__RF95_1ad889cb9f7df600336789b5a5551eb807">init</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the Driver transport hardware and software. Make sure the Driver is properly configured before calling <ref refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557" kindref="member">init()</ref>. <simplesect kind="return"><para>true if initialisation succeeded. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="50" column="10" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp" bodystart="15" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHSPIDriver::spiRead</definition>
+        <argsstring>(uint8_t reg)</argsstring>
+        <name>spiRead</name>
+        <qualifiedname>RHSPIDriver::spiRead</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a single register from the SPI device <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the register </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="55" column="20" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp" bodystart="30" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHSPIDriver::spiWrite</definition>
+        <argsstring>(uint8_t reg, uint8_t val)</argsstring>
+        <name>spiWrite</name>
+        <qualifiedname>RHSPIDriver::spiWrite</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes a single byte to the SPI device <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Some devices return a status byte during the first data transfer. This byte is returned. it may or may not be meaningfule depending on the the type of device being accessed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="62" column="23" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp" bodystart="42" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1af0ffebc1db1a6008734a37c4448fe926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHSPIDriver::spiBurstRead</definition>
+        <argsstring>(uint8_t reg, uint8_t *dest, uint8_t len)</argsstring>
+        <name>spiBurstRead</name>
+        <qualifiedname>RHSPIDriver::spiBurstRead</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a number of consecutive registers from the SPI device using burst read mode <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register number of the first register </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array to write the register values to. Must be at least len bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Some devices return a status byte during the first data transfer. This byte is returned. it may or may not be meaningfule depending on the the type of device being accessed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="70" column="23" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp" bodystart="54" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a559b2c489825fe1ae737cb4371956d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHSPIDriver::spiBurstWrite</definition>
+        <argsstring>(uint8_t reg, const uint8_t *src, uint8_t len)</argsstring>
+        <name>spiBurstWrite</name>
+        <qualifiedname>RHSPIDriver::spiBurstWrite</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a number of consecutive registers using burst write mode <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register number of the first register </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of new register values to write. Must be at least len bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Some devices return a status byte during the first data transfer. This byte is returned. it may or may not be meaningfule depending on the the type of device being accessed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="78" column="23" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp" bodystart="67" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a89cc3ee4a7cceb8b283e2efc3f2a6362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RHSPIDriver::setSlaveSelectPin</definition>
+        <argsstring>(uint8_t slaveSelectPin)</argsstring>
+        <name>setSlaveSelectPin</name>
+        <qualifiedname>RHSPIDriver::setSlaveSelectPin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>slaveSelectPin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set or change the pin to be used for SPI slave select. This can be called at any time to change the pin that will be used for slave select in subsquent SPI operations. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">slaveSelectPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="84" column="10" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a4285d2fb96b09588556bfc4f8a143f61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RHSPIDriver::RHSPIDriver</definition>
+        <argsstring>(uint8_t slaveSelectPin=SS, RHGenericSPI &amp;spi=hardware_spi)</argsstring>
+        <name>RHSPIDriver</name>
+        <qualifiedname>RHSPIDriver::RHSPIDriver</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>slaveSelectPin</declname>
+          <defval><ref refid="RadioHead_2RadioHead_8h_1a88f7782e210e61586baf33b93240d905" kindref="member">SS</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref> &amp;</type>
+          <declname>spi</declname>
+          <defval><ref refid="RadioHead_2RHHardwareSPI_8h_1a9d4ea215edc388eaacbc289938bb658c" kindref="member">hardware_spi</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">slaveSelectPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The controler pin to use to select the desired SPI device. This pin will be driven LOW during SPI communications with the SPI device that uis iused by this Driver. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">spi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to the SPI interface to use. The default is to use a default built-in Hardware interface. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h" line="45" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool RHSPIDriver::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <qualifiedname>RHSPIDriver::init</qualifiedname>
+        <reimplements refid="classRHGenericDriver_1a3e1cfcd4d6187702c364cf4c81e76365">init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise the Driver transport hardware and software. Make sure the Driver is properly configured before calling <ref refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557" kindref="member">init()</ref>. <simplesect kind="return"><para>true if initialisation succeeded. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h" line="50" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHSPIDriver::spiRead</definition>
+        <argsstring>(uint8_t reg)</argsstring>
+        <name>spiRead</name>
+        <qualifiedname>RHSPIDriver::spiRead</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a single register from the SPI device <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The value of the register </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h" line="55" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHSPIDriver::spiWrite</definition>
+        <argsstring>(uint8_t reg, uint8_t val)</argsstring>
+        <name>spiWrite</name>
+        <qualifiedname>RHSPIDriver::spiWrite</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes a single byte to the SPI device <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Some devices return a status byte during the first data transfer. This byte is returned. it may or may not be meaningfule depending on the the type of device being accessed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h" line="62" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1af0ffebc1db1a6008734a37c4448fe926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHSPIDriver::spiBurstRead</definition>
+        <argsstring>(uint8_t reg, uint8_t *dest, uint8_t len)</argsstring>
+        <name>spiBurstRead</name>
+        <qualifiedname>RHSPIDriver::spiBurstRead</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a number of consecutive registers from the SPI device using burst read mode <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register number of the first register </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array to write the register values to. Must be at least len bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to read </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Some devices return a status byte during the first data transfer. This byte is returned. it may or may not be meaningfule depending on the the type of device being accessed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h" line="70" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a559b2c489825fe1ae737cb4371956d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t RHSPIDriver::spiBurstWrite</definition>
+        <argsstring>(uint8_t reg, const uint8_t *src, uint8_t len)</argsstring>
+        <name>spiBurstWrite</name>
+        <qualifiedname>RHSPIDriver::spiBurstWrite</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>reg</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write a number of consecutive registers using burst write mode <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">reg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Register number of the first register </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of new register values to write. Must be at least len bytes </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of bytes to write </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Some devices return a status byte during the first data transfer. This byte is returned. it may or may not be meaningfule depending on the the type of device being accessed. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h" line="78" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classRHSPIDriver_1a89cc3ee4a7cceb8b283e2efc3f2a6362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RHSPIDriver::setSlaveSelectPin</definition>
+        <argsstring>(uint8_t slaveSelectPin)</argsstring>
+        <name>setSlaveSelectPin</name>
+        <qualifiedname>RHSPIDriver::setSlaveSelectPin</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>slaveSelectPin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set or change the pin to be used for SPI slave select. This can be called at any time to change the pin that will be used for slave select in subsquent SPI operations. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">slaveSelectPin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The pin to use </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RHSPIDriver.h" line="84" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class for a RadioHead drivers that use the SPI bus to communicate with its transport hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class can be subclassed by Drivers that require to use the SPI bus. It can be configured to use either the <ref refid="classRHHardwareSPI" kindref="compound">RHHardwareSPI</ref> class (if there is one available on the platform) of the bitbanged RHSoftwareSPI class. The default behaviour is to use a pre-instantiated built-in <ref refid="classRHHardwareSPI" kindref="compound">RHHardwareSPI</ref> interface.</para>
+<para>SPI bus access is protected by ATOMIC_BLOCK_START and ATOMIC_BLOCK_END, which will ensure interrupts are disabled during access.</para>
+<para>The read and write routines implement commonly used SPI conventions: specifically that the MSB of the first byte transmitted indicates that it is a write and the remaining bits indicate the rehgister to access) This can be overriden in subclasses if necessaryor an alternative class, RHNRFSPIDriver can be used to access devices like Nordic NRF series radios, which have different requirements.</para>
+<para>Application developers are not expected to instantiate this class directly: it is for the use of Driver developers. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>RHGenericDriver</label>
+        <link refid="classRHGenericDriver"/>
+      </node>
+      <node id="1">
+        <label>RHSPIDriver</label>
+        <link refid="classRHSPIDriver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>RH_RF95</label>
+        <link refid="classRH__RF95"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>RHGenericDriver</label>
+        <link refid="classRHGenericDriver"/>
+      </node>
+      <node id="3">
+        <label>RHGenericSPI</label>
+        <link refid="classRHGenericSPI"/>
+      </node>
+      <node id="1">
+        <label>RHSPIDriver</label>
+        <link refid="classRHSPIDriver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_spi</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" line="38" column="1" bodyfile="/home/chris/Documents/farm-sensors/LoRaNodeV4/RadioHead/RHSPIDriver.h" bodystart="39" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classRHGenericDriver_1ae75ce1fa0448733a6e058f4c7a1ba0a7" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_lastRssi</name></member>
+      <member refid="classRHGenericDriver_1a324854a5f898b0a48ec83424351730c5" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_mode</name></member>
+      <member refid="classRHGenericDriver_1a2d94c93203714ed3dd9a7434101683e9" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_promiscuous</name></member>
+      <member refid="classRHGenericDriver_1a3bafd8dc638309a473367c4ff8e59c0e" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_rxBad</name></member>
+      <member refid="classRHGenericDriver_1abf09ee8b0cc1bf2b64dc0d963895ff71" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_rxGood</name></member>
+      <member refid="classRHGenericDriver_1a5fd0c3bbc3cfe199924a9e1cb909f5fd" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_rxHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a7283cfec4e7c1ecf074307534592fd8f" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_rxHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1a3155557c35198acdde0ecdf58a201b19" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_rxHeaderId</name></member>
+      <member refid="classRHGenericDriver_1abff3740bc072a2d435194a7860b2bfe3" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_rxHeaderTo</name></member>
+      <member refid="classRHSPIDriver_1ab63525878860cc6ab6c4a994ce704735" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_slaveSelectPin</name></member>
+      <member refid="classRHSPIDriver_1a7e3c73c9da15db427c36b28c4ed68cf0" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_spi</name></member>
+      <member refid="classRHGenericDriver_1a6d2e9824e29c9d5e9ad28682e53ea974" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_thisAddress</name></member>
+      <member refid="classRHGenericDriver_1a5f71653ad58e35ddca7fe3e052674ca2" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_txGood</name></member>
+      <member refid="classRHGenericDriver_1abf4db9bddfee361cc44fbf4bd22202bc" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_txHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a2c7cdccccf1b17c73ef95dca6d3075f9" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_txHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1ad0eafb5a8316b90ad8cd9d42234517da" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_txHeaderId</name></member>
+      <member refid="classRHGenericDriver_1a759debcdbdb837cea024f777020203e5" prot="protected" virt="non-virtual"><scope>RHSPIDriver</scope><name>_txHeaderTo</name></member>
+      <member refid="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888" prot="public" virt="pure-virtual"><scope>RHSPIDriver</scope><name>available</name></member>
+      <member refid="classRHGenericDriver_1a2dd522b8eb16c51dc948b4ca4d623888" prot="public" virt="pure-virtual"><scope>RHSPIDriver</scope><name>available</name></member>
+      <member refid="classRHGenericDriver_1a056fbd2df558971fe8a1653499a37c63" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>headerFlags</name></member>
+      <member refid="classRHGenericDriver_1a605594463c135160eea76df1f5b8ed91" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>headerFlags</name></member>
+      <member refid="classRHGenericDriver_1a8cf7a972186592c51c6fde034d17ab9f" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>headerFrom</name></member>
+      <member refid="classRHGenericDriver_1ac124ff3e195e604db33cd798592808f3" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>headerFrom</name></member>
+      <member refid="classRHGenericDriver_1a81548960bb29a3ac35325c74cd562f45" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>headerId</name></member>
+      <member refid="classRHGenericDriver_1a5e1db15be3fb414a1b4619939d50ea83" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>headerId</name></member>
+      <member refid="classRHGenericDriver_1a6f49c9fe68354b50988dec435fa8d086" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>headerTo</name></member>
+      <member refid="classRHGenericDriver_1a59767cf1ec9ca3e24b3f7b5610e93f46" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>headerTo</name></member>
+      <member refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>init</name></member>
+      <member refid="classRHSPIDriver_1a7ba5e6fc53e02ff8125218bc296b4557" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>init</name></member>
+      <member refid="classRHGenericDriver_1ab04f2ca335d89f5fac1d213c0aea9da2" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>lastRssi</name></member>
+      <member refid="classRHGenericDriver_1ab04f2ca335d89f5fac1d213c0aea9da2" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>lastRssi</name></member>
+      <member refid="classRHGenericDriver_1a267459de4eb3032c5efb8b220af7d164" prot="public" virt="pure-virtual"><scope>RHSPIDriver</scope><name>maxMessageLength</name></member>
+      <member refid="classRHGenericDriver_1a267459de4eb3032c5efb8b220af7d164" prot="public" virt="pure-virtual"><scope>RHSPIDriver</scope><name>maxMessageLength</name></member>
+      <member refid="classRHGenericDriver_1a80ff7dfded27279332cf8fa6f15dce74" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>mode</name></member>
+      <member refid="classRHGenericDriver_1a2204ec4da2d31fba3a44dfd4b2002b81" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>mode</name></member>
+      <member refid="classRHGenericDriver_1a63915f6420833eb8ec61ee3b0610e34b" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>printBuffer</name></member>
+      <member refid="classRHGenericDriver_1a953b9a398838ce9061d71ff72effdb6f" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>printBuffer</name></member>
+      <member refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" prot="public" virt="pure-virtual"><scope>RHSPIDriver</scope><name>recv</name></member>
+      <member refid="classRHGenericDriver_1a58f0f64dff770bbeb1b197a5fca0579a" prot="public" virt="pure-virtual"><scope>RHSPIDriver</scope><name>recv</name></member>
+      <member refid="classRHGenericDriver_1aacf1b301be4cc16800a62632df6fdd37" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHGenericDriver</name></member>
+      <member refid="classRHGenericDriver_1aacf1b301be4cc16800a62632df6fdd37" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHGenericDriver</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHMode</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHMode</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa30073e6c7e9016d7a259541b658e87d" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHModeIdle</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abf4722e2aaba29a678d754fc677d5a1d" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHModeInitialising</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937abbe7f5a5ae7e540274bfceb8969d6fd5" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHModeRx</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937aa16112c7d809c1dd69d1c274e885a9d9" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHModeSleep</name></member>
+      <member refid="classRHGenericDriver_1a7c96558708f18937bc2fa7341f217937a34ad98de0900bce767e5c938ad991d90" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHModeTx</name></member>
+      <member refid="classRHSPIDriver_1a4285d2fb96b09588556bfc4f8a143f61" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHSPIDriver</name></member>
+      <member refid="classRHSPIDriver_1a4285d2fb96b09588556bfc4f8a143f61" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>RHSPIDriver</name></member>
+      <member refid="classRHGenericDriver_1a0163fb71dc8d0cd86136882886adba7f" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>rxBad</name></member>
+      <member refid="classRHGenericDriver_1a0163fb71dc8d0cd86136882886adba7f" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>rxBad</name></member>
+      <member refid="classRHGenericDriver_1a5f730e644ab1f5f529fdfa82fdb2ed69" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>rxGood</name></member>
+      <member refid="classRHGenericDriver_1a5f730e644ab1f5f529fdfa82fdb2ed69" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>rxGood</name></member>
+      <member refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" prot="public" virt="pure-virtual"><scope>RHSPIDriver</scope><name>send</name></member>
+      <member refid="classRHGenericDriver_1a5716069edea652af8019daaeb64357ee" prot="public" virt="pure-virtual"><scope>RHSPIDriver</scope><name>send</name></member>
+      <member refid="classRHGenericDriver_1acb992b3c5e360e68b67e4843558bcf3b" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a5b6db3cfd060ce9c1c8b030bfdf77a4c" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setHeaderFlags</name></member>
+      <member refid="classRHGenericDriver_1a470e67f4168dec41435dcc0e194202c8" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1a38e4901f56700a79e971a06eb6cbdf65" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setHeaderFrom</name></member>
+      <member refid="classRHGenericDriver_1a4dd57079264bda98bc89145fe5d2eb8f" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setHeaderId</name></member>
+      <member refid="classRHGenericDriver_1ab04e89be04a0293e2cfd225e7dd45ba3" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setHeaderId</name></member>
+      <member refid="classRHGenericDriver_1a182436232f7a345bca0d1766d242f3fb" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setHeaderTo</name></member>
+      <member refid="classRHGenericDriver_1a180c8d4d0b29ccafa8e29afed332a0c2" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setHeaderTo</name></member>
+      <member refid="classRHGenericDriver_1aa1c0a94ba6414b5bbab0133c4d74e646" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>setMode</name></member>
+      <member refid="classRHGenericDriver_1aa1c0a94ba6414b5bbab0133c4d74e646" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>setMode</name></member>
+      <member refid="classRHGenericDriver_1a2791f57538b02a73e7dbe1031048230e" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setPromiscuous</name></member>
+      <member refid="classRHGenericDriver_1af31c2d0f3e155211d0b70b923b858e11" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setPromiscuous</name></member>
+      <member refid="classRHSPIDriver_1a89cc3ee4a7cceb8b283e2efc3f2a6362" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>setSlaveSelectPin</name></member>
+      <member refid="classRHSPIDriver_1a89cc3ee4a7cceb8b283e2efc3f2a6362" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>setSlaveSelectPin</name></member>
+      <member refid="classRHGenericDriver_1a5e8f15e1e7480899d18c3a21248bb628" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setThisAddress</name></member>
+      <member refid="classRHGenericDriver_1aeb6222dafba9449f36799efe6c0367d9" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>setThisAddress</name></member>
+      <member refid="classRHGenericDriver_1a97050555cbf46ad723ad9c45d7f76a55" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>sleep</name></member>
+      <member refid="classRHGenericDriver_1a6dcdd0cdd137828ca334a4480eee1777" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>sleep</name></member>
+      <member refid="classRHSPIDriver_1af0ffebc1db1a6008734a37c4448fe926" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>spiBurstRead</name></member>
+      <member refid="classRHSPIDriver_1af0ffebc1db1a6008734a37c4448fe926" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>spiBurstRead</name></member>
+      <member refid="classRHSPIDriver_1a559b2c489825fe1ae737cb4371956d3d" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>spiBurstWrite</name></member>
+      <member refid="classRHSPIDriver_1a559b2c489825fe1ae737cb4371956d3d" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>spiBurstWrite</name></member>
+      <member refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>spiRead</name></member>
+      <member refid="classRHSPIDriver_1a275b8c3d4d27a59d8f93a036b17bbf22" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>spiRead</name></member>
+      <member refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>spiWrite</name></member>
+      <member refid="classRHSPIDriver_1a649210bd63262e23c9becabfc7142fd3" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>spiWrite</name></member>
+      <member refid="classRHGenericDriver_1a66a408f88a1188a0fab458816cb705f4" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>txGood</name></member>
+      <member refid="classRHGenericDriver_1a66a408f88a1188a0fab458816cb705f4" prot="public" virt="non-virtual"><scope>RHSPIDriver</scope><name>txGood</name></member>
+      <member refid="classRHGenericDriver_1abf108e52389353cb3658b6802b92c77c" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>waitAvailable</name></member>
+      <member refid="classRHGenericDriver_1a2fde1a952ade073c7eaf3ca71ccde095" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>waitAvailable</name></member>
+      <member refid="classRHGenericDriver_1a8ed545cecc22196a325333dc9637e4cf" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>waitAvailableTimeout</name></member>
+      <member refid="classRHGenericDriver_1a35c7a28e1ded4195a4fca4763a5ea2c0" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>waitAvailableTimeout</name></member>
+      <member refid="classRHGenericDriver_1a7506f47e9a391ffa05f7271950c26ffe" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>waitPacketSent</name></member>
+      <member refid="classRHGenericDriver_1a0feda1f5522522dc50e0c26dcdef71dd" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>waitPacketSent</name></member>
+      <member refid="classRHGenericDriver_1a80e395c9b0780a2b0c110198a4fc18e9" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>waitPacketSent</name></member>
+      <member refid="classRHGenericDriver_1aa38dda7643b28ae77530c929b737dd70" prot="public" virt="virtual"><scope>RHSPIDriver</scope><name>waitPacketSent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

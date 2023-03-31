@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacesolution" kind="namespace" language="Python">
+    <compoundname>solution</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacesolution_1a8bbc5f6e436b7329d45df5c67e349dae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def solution::rect</definition>
+        <argsstring>(t)</argsstring>
+        <name>rect</name>
+        <qualifiedname>solution.rect</qualifiedname>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw4/soln/solution.py" line="10" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw4/soln/solution.py" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesolution_1a6c13423bbb88f081373f96593b0a1b9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def solution::main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <qualifiedname>solution.main</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw4/soln/solution.py" line="16" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw4/soln/solution.py" bodystart="16" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesolution_1aa56840ff009d620a7ca74e89a96c2101" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def solution.LFMpulse</definition>
+        <argsstring>(t, complex ui, float Bi, float Ti)</argsstring>
+        <name>LFMpulse</name>
+        <qualifiedname>solution.LFMpulse</qualifiedname>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>complex</type>
+          <declname>ui</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Bi</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>Ti</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw4/solution.py" line="29" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw4/solution.py" bodystart="29" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacesolution_1aa1d60a9fd3ff41cde1c4199006c09dce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def solution.threshold</definition>
+        <argsstring>(sig, int R, int G, float PFA)</argsstring>
+        <name>threshold</name>
+        <qualifiedname>solution.threshold</qualifiedname>
+        <param>
+          <type>sig</type>
+          <defname>sig</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>R</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>G</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>PFA</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/ece6040/homework/hw4/solution.py" line="43" column="1" bodyfile="/home/chris/Documents/ece6040/homework/hw4/solution.py" bodystart="43" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/ece6040/homework/hw4/soln/solution.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

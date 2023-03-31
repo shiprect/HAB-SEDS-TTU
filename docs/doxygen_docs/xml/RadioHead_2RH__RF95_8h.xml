@@ -1,0 +1,1957 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="RadioHead_2RH__RF95_8h" kind="file" language="C++">
+    <compoundname>RH_RF95.h</compoundname>
+    <includes refid="RadioHead_2RHSPIDriver_8h" local="no">RHSPIDriver.h</includes>
+    <includedby refid="RadioHead_2RH__RF95_8cpp" local="no">/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>RHGenericDriver.h</label>
+        <link refid="RadioHead_2RHGenericDriver_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>RHGenericSPI.h</label>
+        <link refid="RadioHead_2RHGenericSPI_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>RHHardwareSPI.h</label>
+        <link refid="RadioHead_2RHHardwareSPI_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>RHSPIDriver.h</label>
+        <link refid="RadioHead_2RHSPIDriver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h</label>
+        <link refid="RadioHead_2RH__RF95_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RadioHead.h</label>
+        <link refid="RadioHead_2RadioHead_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.cpp</label>
+        <link refid="RadioHead_2RH__RF95_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h</label>
+        <link refid="RadioHead_2RH__RF95_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classRH__RF95" prot="public">RH_RF95</innerclass>
+    <innerclass refid="structRH__RF95_1_1ModemConfig" prot="public">RH_RF95::ModemConfig</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a672d1ad6cde297c54ee49577d47caddf" prot="public" static="no">
+        <name>RH_RF95_NUM_INTERRUPTS</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="19" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1afebe51979bb30d235d403ba4f18bbafd" prot="public" static="no">
+        <name>RH_RF95_FIFO_SIZE</name>
+        <initializer>255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="22" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a4ba450533ca9f5eab89b5dbb6ef11059" prot="public" static="no">
+        <name>RH_RF95_MAX_PAYLOAD_LEN</name>
+        <initializer><ref refid="RadioHead_2RH__RF95_8h_1afebe51979bb30d235d403ba4f18bbafd" kindref="member">RH_RF95_FIFO_SIZE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="26" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a0ed28dfc5bdb8a3c2ee093882ebe1e3f" prot="public" static="no">
+        <name>RH_RF95_HEADER_LEN</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="30" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ac710e297f651a9f10a5b8c7d1756278b" prot="public" static="no">
+        <name>RH_RF95_MAX_MESSAGE_LEN</name>
+        <initializer>(<ref refid="RadioHead_2RH__RF95_8h_1a4ba450533ca9f5eab89b5dbb6ef11059" kindref="member">RH_RF95_MAX_PAYLOAD_LEN</ref> - <ref refid="RadioHead_2RH__RF95_8h_1a0ed28dfc5bdb8a3c2ee093882ebe1e3f" kindref="member">RH_RF95_HEADER_LEN</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="36" column="10" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a0a9d580f7e7c46398bbf46c91f1b61f0" prot="public" static="no">
+        <name>RH_RF95_FXOSC</name>
+        <initializer>32000000.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="40" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a7da634807765f3f2025f0296b4e256d7" prot="public" static="no">
+        <name>RH_RF95_FSTEP</name>
+        <initializer>(<ref refid="RadioHead_2RH__RF95_8h_1a0a9d580f7e7c46398bbf46c91f1b61f0" kindref="member">RH_RF95_FXOSC</ref> / 524288)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="43" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a764eed31b8443c79d9a885749009d60f" prot="public" static="no">
+        <name>RH_RF95_REG_00_FIFO</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="47" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a44cfb9c1ca9f68fe1e6623415ac2fade" prot="public" static="no">
+        <name>RH_RF95_REG_01_OP_MODE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="48" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a51949dc5074c0ff92923603fb68f0be6" prot="public" static="no">
+        <name>RH_RF95_REG_02_RESERVED</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="49" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a45707b21596b9b5e0d31c66ea0a2a88c" prot="public" static="no">
+        <name>RH_RF95_REG_03_RESERVED</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="50" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad3e372c2f659137ea33456999335539a" prot="public" static="no">
+        <name>RH_RF95_REG_04_RESERVED</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="51" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a8bf6710e394f3fcd08fa0db483e0ced4" prot="public" static="no">
+        <name>RH_RF95_REG_05_RESERVED</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="52" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a90e4c782e5b84ffa4efce206fd75e6d2" prot="public" static="no">
+        <name>RH_RF95_REG_06_FRF_MSB</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="53" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad72bc6e3a53f1f2d1fb147a324aca800" prot="public" static="no">
+        <name>RH_RF95_REG_07_FRF_MID</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="54" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a65f578edcc8585fb85092aa1301872d5" prot="public" static="no">
+        <name>RH_RF95_REG_08_FRF_LSB</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="55" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a710a8fa0c7b677929d621e29a7cddacb" prot="public" static="no">
+        <name>RH_RF95_REG_09_PA_CONFIG</name>
+        <initializer>0x09</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="56" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a1a086f59c31e97e7fe7de64e7fb959bc" prot="public" static="no">
+        <name>RH_RF95_REG_0A_PA_RAMP</name>
+        <initializer>0x0a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="57" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a60e0431718f538b5aae8b510fc595fe4" prot="public" static="no">
+        <name>RH_RF95_REG_0B_OCP</name>
+        <initializer>0x0b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="58" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a847a3eb185bf951a7fd6ba8a9b69c259" prot="public" static="no">
+        <name>RH_RF95_REG_0C_LNA</name>
+        <initializer>0x0c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="59" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a6d1c9b5733d548eeb74f2981e879ea80" prot="public" static="no">
+        <name>RH_RF95_REG_0D_FIFO_ADDR_PTR</name>
+        <initializer>0x0d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="60" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad1087b3b8ccd6559653956b2ab8be2ac" prot="public" static="no">
+        <name>RH_RF95_REG_0E_FIFO_TX_BASE_ADDR</name>
+        <initializer>0x0e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="61" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad38f60787e6f18e174a0f451fd14c6d5" prot="public" static="no">
+        <name>RH_RF95_REG_0F_FIFO_RX_BASE_ADDR</name>
+        <initializer>0x0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="62" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a8d719286e4679159da4b8d70a151c3e8" prot="public" static="no">
+        <name>RH_RF95_REG_10_FIFO_RX_CURRENT_ADDR</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="63" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1adb85d5b5f91317dc8d7a0d8d4661cb99" prot="public" static="no">
+        <name>RH_RF95_REG_11_IRQ_FLAGS_MASK</name>
+        <initializer>0x11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="64" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a791e693c6ed7960d805fd4baade90517" prot="public" static="no">
+        <name>RH_RF95_REG_12_IRQ_FLAGS</name>
+        <initializer>0x12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="65" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ab4f46c60c320d68053ffd6a50ec0d8b2" prot="public" static="no">
+        <name>RH_RF95_REG_13_RX_NB_BYTES</name>
+        <initializer>0x13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="66" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aae0798d6ca40e57c8ff640e4d9980e5d" prot="public" static="no">
+        <name>RH_RF95_REG_14_RX_HEADER_CNT_VALUE_MSB</name>
+        <initializer>0x14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="67" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad105b801ef423ae2ccd76b95c015666c" prot="public" static="no">
+        <name>RH_RF95_REG_15_RX_HEADER_CNT_VALUE_LSB</name>
+        <initializer>0x15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="68" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a1bdf648a364e417ae7e0f8de6064dd46" prot="public" static="no">
+        <name>RH_RF95_REG_16_RX_PACKET_CNT_VALUE_MSB</name>
+        <initializer>0x16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="69" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1addc06a39d674e691effe47d034c3be80" prot="public" static="no">
+        <name>RH_RF95_REG_17_RX_PACKET_CNT_VALUE_LSB</name>
+        <initializer>0x17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="70" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad161315a19e62786ba04c31fb509d1d9" prot="public" static="no">
+        <name>RH_RF95_REG_18_MODEM_STAT</name>
+        <initializer>0x18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="71" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a5a0824eb5061d4a556d012f311ff4f14" prot="public" static="no">
+        <name>RH_RF95_REG_19_PKT_SNR_VALUE</name>
+        <initializer>0x19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="72" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aa1d6c2a4411227f67994c9ffe9e82c37" prot="public" static="no">
+        <name>RH_RF95_REG_1A_PKT_RSSI_VALUE</name>
+        <initializer>0x1a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="73" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1abda90cf81e5a3d45979ec65ff826e61f" prot="public" static="no">
+        <name>RH_RF95_REG_1B_RSSI_VALUE</name>
+        <initializer>0x1b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="74" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1abb140d2af029f08628caf3882fca64a5" prot="public" static="no">
+        <name>RH_RF95_REG_1C_HOP_CHANNEL</name>
+        <initializer>0x1c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="75" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a73c735dbddab9d817d5119f8ab450a52" prot="public" static="no">
+        <name>RH_RF95_REG_1D_MODEM_CONFIG1</name>
+        <initializer>0x1d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="76" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1afb03cc76781218f20015da40c5dcc257" prot="public" static="no">
+        <name>RH_RF95_REG_1E_MODEM_CONFIG2</name>
+        <initializer>0x1e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="77" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1af2059045d871d0d9e3f92e3fd9c7d770" prot="public" static="no">
+        <name>RH_RF95_REG_1F_SYMB_TIMEOUT_LSB</name>
+        <initializer>0x1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="78" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ae48fbe3de22710dde32140c10f004b52" prot="public" static="no">
+        <name>RH_RF95_REG_20_PREAMBLE_MSB</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="79" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a2f65d7f4413506d895976f7cf9ae1a3d" prot="public" static="no">
+        <name>RH_RF95_REG_21_PREAMBLE_LSB</name>
+        <initializer>0x21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="80" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ac40a89475b03c5398153fe22f6301e1a" prot="public" static="no">
+        <name>RH_RF95_REG_22_PAYLOAD_LENGTH</name>
+        <initializer>0x22</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="81" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ab567e312161c80ebfc684ec99ff34431" prot="public" static="no">
+        <name>RH_RF95_REG_23_MAX_PAYLOAD_LENGTH</name>
+        <initializer>0x23</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="82" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aaaca13e73d41527f7513bebf80051924" prot="public" static="no">
+        <name>RH_RF95_REG_24_HOP_PERIOD</name>
+        <initializer>0x24</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="83" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad7ee0fbf0c8df835ec7bd7852d6816a0" prot="public" static="no">
+        <name>RH_RF95_REG_25_FIFO_RX_BYTE_ADDR</name>
+        <initializer>0x25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="84" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a90d5c16ec66d5326649dd996b19f1c13" prot="public" static="no">
+        <name>RH_RF95_REG_26_MODEM_CONFIG3</name>
+        <initializer>0x26</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="85" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a693efa45b361cb145a8ee2bdd592ec65" prot="public" static="no">
+        <name>RH_RF95_REG_40_DIO_MAPPING1</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="87" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ab69bdc4cad6476bfee480e0f6eb13aa3" prot="public" static="no">
+        <name>RH_RF95_REG_41_DIO_MAPPING2</name>
+        <initializer>0x41</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="88" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a51915970dbc5ea2e5704488321f43f7f" prot="public" static="no">
+        <name>RH_RF95_REG_42_VERSION</name>
+        <initializer>0x42</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="89" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a790b2a6be4ac201447ccd56cfbd912b8" prot="public" static="no">
+        <name>RH_RF95_REG_4B_TCXO</name>
+        <initializer>0x4b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="91" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a2899dab48497000444e53723319cc140" prot="public" static="no">
+        <name>RH_RF95_REG_4D_PA_DAC</name>
+        <initializer>0x4d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="92" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1afd4395ebd97c0f70ef5ffdb55edb5239" prot="public" static="no">
+        <name>RH_RF95_REG_5B_FORMER_TEMP</name>
+        <initializer>0x5b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="93" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a961201dbc120cc8fb9d4196a4ab24a70" prot="public" static="no">
+        <name>RH_RF95_REG_61_AGC_REF</name>
+        <initializer>0x61</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="94" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a82b5e9ca0348f7f90225d209307b4bf8" prot="public" static="no">
+        <name>RH_RF95_REG_62_AGC_THRESH1</name>
+        <initializer>0x62</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="95" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a62416ca3a81c066aa8bec0b3581309a6" prot="public" static="no">
+        <name>RH_RF95_REG_63_AGC_THRESH2</name>
+        <initializer>0x63</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="96" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ac92dcdf26bec2b3cbcda65ff57eb1a5f" prot="public" static="no">
+        <name>RH_RF95_REG_64_AGC_THRESH3</name>
+        <initializer>0x64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="97" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1affed48173363dfd614c76084f22c1da7" prot="public" static="no">
+        <name>RH_RF95_LONG_RANGE_MODE</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="100" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a43a654efb9e7153a1a35f6f820197af4" prot="public" static="no">
+        <name>RH_RF95_ACCESS_SHARED_REG</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="101" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a512bd377fb31da8940f361ae016edd0f" prot="public" static="no">
+        <name>RH_RF95_MODE</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="102" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1acc6a3326284bdca07e6a16de48ca44ce" prot="public" static="no">
+        <name>RH_RF95_MODE_SLEEP</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="103" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1adaaba316a7eb60cceef2ac6a8649f550" prot="public" static="no">
+        <name>RH_RF95_MODE_STDBY</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="104" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a2c4477c5397ab3967f5dd7ebf2706ee3" prot="public" static="no">
+        <name>RH_RF95_MODE_FSTX</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="105" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a6f3ce4d4dbcfe5bef4083352f5243739" prot="public" static="no">
+        <name>RH_RF95_MODE_TX</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="106" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ade5701b7f18cb8d2b8f000c10e6316b0" prot="public" static="no">
+        <name>RH_RF95_MODE_FSRX</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="107" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1af09fc626786f2aadf766a857816e3289" prot="public" static="no">
+        <name>RH_RF95_MODE_RXCONTINUOUS</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="108" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1abf234b2ca631a394e21a41547129bb11" prot="public" static="no">
+        <name>RH_RF95_MODE_RXSINGLE</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="109" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a7c487bc74a9e0a99f8065c7edfd3bd49" prot="public" static="no">
+        <name>RH_RF95_MODE_CAD</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="110" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a512981100c7f281a6262fa7520f66e15" prot="public" static="no">
+        <name>RH_RF95_PA_SELECT</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="113" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a1e6c9d3a986c0de71c4e4d822108d31d" prot="public" static="no">
+        <name>RH_RF95_MAX_POWER</name>
+        <initializer>0x70</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="114" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a5b5a0a884a77b68ffc166b024e887be3" prot="public" static="no">
+        <name>RH_RF95_OUTPUT_POWER</name>
+        <initializer>0x0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="115" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a95d3f90ff3e2d22990ec6242ef635e00" prot="public" static="no">
+        <name>RH_RF95_LOW_PN_TX_PLL_OFF</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="118" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad03ad84db8621f81ce69d635644fccb1" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP</name>
+        <initializer>0x0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="119" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ac106b189a18910de5dc9b3901ad3455e" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_3_4MS</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="120" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a16350afb1216a93c8c95b96638fc8bd5" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_2MS</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="121" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aeb34d3a4d9c883dfc816677d9957e8b2" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_1MS</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="122" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1afa94554f937adbff58a5a49e055b2a7b" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_500US</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="123" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a41342175cba30aad1325793a05fce810" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_250US</name>
+        <initializer>0x0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="124" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a41ee1c8c470575ae95b96e93b03be74c" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_125US</name>
+        <initializer>0x05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="125" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a7174c13cb16e9a37fa99ee0b5a6f68d1" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_100US</name>
+        <initializer>0x06</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="126" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a5473e29872b272c81531cbc826b41ff6" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_62US</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="127" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1add340653ac5415ec487c1d71706beb4f" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_50US</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="128" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad64cbcd76a1802dbbcea989a51f2ba0d" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_40US</name>
+        <initializer>0x09</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="129" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aee06c3b89f1f566f61e100811448a9dc" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_31US</name>
+        <initializer>0x0a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="130" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a0b7606d0944cb6e07c6ec1dd3e44b550" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_25US</name>
+        <initializer>0x0b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="131" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a1e9db9c1aa87b76a908a6c63ffe625ac" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_20US</name>
+        <initializer>0x0c</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="132" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ae58298c49bcc5c83d1b213db7bf400e9" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_15US</name>
+        <initializer>0x0d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="133" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a79eff2862c908f13f6be257ccdfe74d0" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_12US</name>
+        <initializer>0x0e</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="134" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a4a24d3cd0e3ef59300da212a1a65be2c" prot="public" static="no">
+        <name>RH_RF95_PA_RAMP_10US</name>
+        <initializer>0x0f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="135" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a22552e8b595378508f9673a4e8c5280f" prot="public" static="no">
+        <name>RH_RF95_OCP_ON</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="138" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a33774e328a0fc5814f835002a189f865" prot="public" static="no">
+        <name>RH_RF95_OCP_TRIM</name>
+        <initializer>0x1f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="139" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a6397b1f131cd40e96b9822a399a6083d" prot="public" static="no">
+        <name>RH_RF95_LNA_GAIN</name>
+        <initializer>0xe0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="142" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a6fde4c6c8d1a664974f59915a9951de0" prot="public" static="no">
+        <name>RH_RF95_LNA_BOOST</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="143" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a486f3ea6c2d4a6d7b0d70f3075212133" prot="public" static="no">
+        <name>RH_RF95_LNA_BOOST_DEFAULT</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="144" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ac3495b2b2a1d5498ee4f1408e3e312ee" prot="public" static="no">
+        <name>RH_RF95_LNA_BOOST_150PC</name>
+        <initializer>0x11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="145" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a806fc664a3cc0c42e1cc92d156e4929f" prot="public" static="no">
+        <name>RH_RF95_RX_TIMEOUT_MASK</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="148" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1acf1a9a7064a93c4ed1c3d42e5bcd6a9c" prot="public" static="no">
+        <name>RH_RF95_RX_DONE_MASK</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="149" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a99314b31d26fce716a55ca7d8c025db7" prot="public" static="no">
+        <name>RH_RF95_PAYLOAD_CRC_ERROR_MASK</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="150" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a3ef42f4ba2c079bbac142cc6073bdb00" prot="public" static="no">
+        <name>RH_RF95_VALID_HEADER_MASK</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="151" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a90bb148a612ae6a86e8bc0bfda229781" prot="public" static="no">
+        <name>RH_RF95_TX_DONE_MASK</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="152" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ab141851a2a672e44e81f880bc7d77f5e" prot="public" static="no">
+        <name>RH_RF95_CAD_DONE_MASK</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="153" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ab0ed21b5caf33dd25fa66297f74fa96e" prot="public" static="no">
+        <name>RH_RF95_FHSS_CHANGE_CHANNEL_MASK</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="154" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a9c373374c8a939ddaadb267dcdeb71fa" prot="public" static="no">
+        <name>RH_RF95_CAD_DETECTED_MASK</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="155" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1abe2df377b2893d6bfdae5b42ab308f59" prot="public" static="no">
+        <name>RH_RF95_RX_TIMEOUT</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="158" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a9dbc5d3dd8c85bfa0b0c910f63f49a54" prot="public" static="no">
+        <name>RH_RF95_RX_DONE</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="159" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aa9ac844bf3e8413494cb336e789c02b3" prot="public" static="no">
+        <name>RH_RF95_PAYLOAD_CRC_ERROR</name>
+        <initializer>0x20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="160" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a98d446a495ad47833de0810d0fa9c444" prot="public" static="no">
+        <name>RH_RF95_VALID_HEADER</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="161" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1adb7abe1ae9bda956ef66168e9a370028" prot="public" static="no">
+        <name>RH_RF95_TX_DONE</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="162" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a9d2a4090c5be47fcade15f6e7f91abf7" prot="public" static="no">
+        <name>RH_RF95_CAD_DONE</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="163" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a4bec8f76c5605140cb628e7f8427aefc" prot="public" static="no">
+        <name>RH_RF95_FHSS_CHANGE_CHANNEL</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="164" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aeaf8687038c72a1a71b7964d2df1775a" prot="public" static="no">
+        <name>RH_RF95_CAD_DETECTED</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="165" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1abae609db9d8b5528da0735f03bebbcc6" prot="public" static="no">
+        <name>RH_RF95_RX_CODING_RATE</name>
+        <initializer>0xe0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="168" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a12544eb8ad98fed57ad5c47e29a2637b" prot="public" static="no">
+        <name>RH_RF95_MODEM_STATUS_CLEAR</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="169" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aa2f392184762f84f4fa213a8fe052051" prot="public" static="no">
+        <name>RH_RF95_MODEM_STATUS_HEADER_INFO_VALID</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="170" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a30a544ed9e1144f892fb9d7f4d49d470" prot="public" static="no">
+        <name>RH_RF95_MODEM_STATUS_RX_ONGOING</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="171" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aae76dd8956f0b73c00939b9e430ed07e" prot="public" static="no">
+        <name>RH_RF95_MODEM_STATUS_SIGNAL_SYNCHRONIZED</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="172" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a46fd28df973f459d16c9e7472e163408" prot="public" static="no">
+        <name>RH_RF95_MODEM_STATUS_SIGNAL_DETECTED</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="173" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1abd98af6b70e2d6edcce8ffbbc9327c05" prot="public" static="no">
+        <name>RH_RF95_PLL_TIMEOUT</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="176" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a1929fbd988ea5d0c9dadc6ec4790d44d" prot="public" static="no">
+        <name>RH_RF95_RX_PAYLOAD_CRC_IS_ON</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="177" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a5e945efd4c6ee51da8a52a19ef0b7b03" prot="public" static="no">
+        <name>RH_RF95_FHSS_PRESENT_CHANNEL</name>
+        <initializer>0x3f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="178" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ac529a0c6691781985b480b54f3e26ae6" prot="public" static="no">
+        <name>RH_RF95_BW</name>
+        <initializer>0xc0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="181" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a79b5af3c1278a1a3f6fab2cfef47a7b4" prot="public" static="no">
+        <name>RH_RF95_BW_125KHZ</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="182" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a27be3362062dbc716bf645ce069132cd" prot="public" static="no">
+        <name>RH_RF95_BW_250KHZ</name>
+        <initializer>0x40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="183" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a3ac4e80ab1e31fe2e3ddcf0d286d54a4" prot="public" static="no">
+        <name>RH_RF95_BW_500KHZ</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="184" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ab9eaf9b8e557c229b1276505a4d4bb46" prot="public" static="no">
+        <name>RH_RF95_BW_RESERVED</name>
+        <initializer>0xc0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="185" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a24827db1175a4388bb11a9a9eb1369a3" prot="public" static="no">
+        <name>RH_RF95_CODING_RATE</name>
+        <initializer>0x38</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="186" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a96ddee6c242febf0a4e4ce2db66679b2" prot="public" static="no">
+        <name>RH_RF95_CODING_RATE_4_5</name>
+        <initializer>0x00</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="187" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aa90db6d4c9922cf56bbe7cc277a12647" prot="public" static="no">
+        <name>RH_RF95_CODING_RATE_4_6</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="188" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aa5d8250e11ef9a775995124e11ad9671" prot="public" static="no">
+        <name>RH_RF95_CODING_RATE_4_7</name>
+        <initializer>0x10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="189" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad444b7bd1804a5b5e0bb4493eed74540" prot="public" static="no">
+        <name>RH_RF95_CODING_RATE_4_8</name>
+        <initializer>0x18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="190" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a1e48512435f1240c6f07ed1d29d87c18" prot="public" static="no">
+        <name>RH_RF95_IMPLICIT_HEADER_MODE_ON</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="191" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a74820df4ff6bed6d1a657970a8d339dc" prot="public" static="no">
+        <name>RH_RF95_RX_PAYLOAD_CRC_ON</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="192" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aae866349b96728949f3e4c351e6f95c1" prot="public" static="no">
+        <name>RH_RF95_LOW_DATA_RATE_OPTIMIZE</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="193" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a83896e1697619aeffbe269d96df65624" prot="public" static="no">
+        <name>RH_RF95_SPREADING_FACTOR</name>
+        <initializer>0xf0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="196" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1af822fbd859a52cd3581a01fdeb12da6d" prot="public" static="no">
+        <name>RH_RF95_SPREADING_FACTOR_64CPS</name>
+        <initializer>0x60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="197" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a153e11da97a7950b244dd1b7ddede80e" prot="public" static="no">
+        <name>RH_RF95_SPREADING_FACTOR_128CPS</name>
+        <initializer>0x70</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="198" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a4a6806f2b65872edf773baf4010ec9c8" prot="public" static="no">
+        <name>RH_RF95_SPREADING_FACTOR_256CPS</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="199" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1ad39c1990ca9aca48acaca504216561a3" prot="public" static="no">
+        <name>RH_RF95_SPREADING_FACTOR_512CPS</name>
+        <initializer>0x90</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="200" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a7d00ef3e19afd2d5bc6462c8d99da0f2" prot="public" static="no">
+        <name>RH_RF95_SPREADING_FACTOR_1024CPS</name>
+        <initializer>0xa0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="201" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a89dcfbf9919b0bcb7a8e90227c7e5b01" prot="public" static="no">
+        <name>RH_RF95_SPREADING_FACTOR_2048CPS</name>
+        <initializer>0xb0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="202" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1abee68b1c5588118fb7dbebcb06967dbc" prot="public" static="no">
+        <name>RH_RF95_SPREADING_FACTOR_4096CPS</name>
+        <initializer>0xc0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="203" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a5f2ca53f692d2451689775b03d076c52" prot="public" static="no">
+        <name>RH_RF95_TX_CONTINUOUS_MOE</name>
+        <initializer>0x08</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="204" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a49a8adb874e8660245603f204f68e609" prot="public" static="no">
+        <name>RH_RF95_AGC_AUTO_ON</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="205" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1aa6dbab3f65ab19a4d9db165375516df1" prot="public" static="no">
+        <name>RH_RF95_SYM_TIMEOUT_MSB</name>
+        <initializer>0x03</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="206" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a8aad5fd829d2400ce1c6aac8e7ee360e" prot="public" static="no">
+        <name>RH_RF95_PA_DAC_DISABLE</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="209" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="RadioHead_2RH__RF95_8h_1a1869a45eec2b937b63955687b57febb8" prot="public" static="no">
+        <name>RH_RF95_PA_DAC_ENABLE</name>
+        <initializer>0x07</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" line="210" column="9" bodyfile="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>RH_RF95.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Definitions<sp/>for<sp/>HopeRF<sp/>LoRa<sp/>radios<sp/>per:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.hoperf.com/upload/rf/RFM95_96_97_98W.pdf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://www.hoperf.cn/upload/rfchip/RF96_97_98.pdf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author:<sp/>Mike<sp/>McCauley<sp/>(mikem@airspayce.com)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2014<sp/>Mike<sp/>McCauley</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>RH_RF95.h,v<sp/>1.10<sp/>2016/04/04<sp/>01:40:12<sp/>mikem<sp/>Exp<sp/>mikem<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RH_RF95_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="RadioHead_2RHSPIDriver_8h" kindref="compound">RHSPIDriver.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>maximum<sp/>number<sp/>of<sp/>interrupts<sp/>the<sp/>driver<sp/>can<sp/>support</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Most<sp/>Arduinos<sp/>can<sp/>handle<sp/>2,<sp/>Megas<sp/>can<sp/>handle<sp/>more</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_NUM_INTERRUPTS<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Max<sp/>number<sp/>of<sp/>octets<sp/>the<sp/>LORA<sp/>Rx/Tx<sp/>FIFO<sp/>can<sp/>hold</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_FIFO_SIZE<sp/>255</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>maximum<sp/>number<sp/>of<sp/>bytes<sp/>that<sp/>can<sp/>be<sp/>carried<sp/>by<sp/>the<sp/>LORA.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>We<sp/>use<sp/>some<sp/>for<sp/>headers,<sp/>keeping<sp/>fewer<sp/>for<sp/>RadioHead<sp/>messages</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MAX_PAYLOAD_LEN<sp/>RH_RF95_FIFO_SIZE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>length<sp/>of<sp/>the<sp/>headers<sp/>we<sp/>add.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>headers<sp/>are<sp/>inside<sp/>the<sp/>LORA&apos;s<sp/>payload</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_HEADER_LEN<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>maximum<sp/>message<sp/>length<sp/>that<sp/>can<sp/>be<sp/>supported<sp/>by<sp/>this<sp/>driver.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Can<sp/>be<sp/>pre-defined<sp/>to<sp/>a<sp/>smaller<sp/>size<sp/>(to<sp/>save<sp/>SRAM)<sp/>prior<sp/>to<sp/>including<sp/>this<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Here<sp/>we<sp/>allow<sp/>for<sp/>1<sp/>byte<sp/>message<sp/>length,<sp/>4<sp/>bytes<sp/>headers,<sp/>user<sp/>data<sp/>and<sp/>2<sp/>bytes<sp/>of<sp/>FCS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RH_RF95_MAX_MESSAGE_LEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#define<sp/>RH_RF95_MAX_MESSAGE_LEN<sp/>(RH_RF95_MAX_PAYLOAD_LEN<sp/>-<sp/>RH_RF95_HEADER_LEN)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>crystal<sp/>oscillator<sp/>frequency<sp/>of<sp/>the<sp/>module</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_FXOSC<sp/>32000000.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>Frequency<sp/>Synthesizer<sp/>step<sp/>=<sp/>RH_RF95_FXOSC<sp/>/<sp/>2^^19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_FSTEP<sp/><sp/>(RH_RF95_FXOSC<sp/>/<sp/>524288)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Register<sp/>names<sp/>(LoRa<sp/>Mode,<sp/>from<sp/>table<sp/>85)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_00_FIFO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_01_OP_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_02_RESERVED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_03_RESERVED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_04_RESERVED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_05_RESERVED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_06_FRF_MSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x06</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_07_FRF_MID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_08_FRF_LSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_09_PA_CONFIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x09</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_0A_PA_RAMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_0B_OCP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_0C_LNA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_0D_FIFO_ADDR_PTR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_0E_FIFO_TX_BASE_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0e</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_0F_FIFO_RX_BASE_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_10_FIFO_RX_CURRENT_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_11_IRQ_FLAGS_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_12_IRQ_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_13_RX_NB_BYTES<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_14_RX_HEADER_CNT_VALUE_MSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_15_RX_HEADER_CNT_VALUE_LSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_16_RX_PACKET_CNT_VALUE_MSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_17_RX_PACKET_CNT_VALUE_LSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_18_MODEM_STAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_19_PKT_SNR_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_1A_PKT_RSSI_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_1B_RSSI_VALUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_1C_HOP_CHANNEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_1D_MODEM_CONFIG1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_1E_MODEM_CONFIG2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1e</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_1F_SYMB_TIMEOUT_LSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_20_PREAMBLE_MSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_21_PREAMBLE_LSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x21</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_22_PAYLOAD_LENGTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x22</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_23_MAX_PAYLOAD_LENGTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x23</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_24_HOP_PERIOD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_25_FIFO_RX_BYTE_ADDR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x25</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_26_MODEM_CONFIG3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x26</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_40_DIO_MAPPING1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_41_DIO_MAPPING2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x41</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_42_VERSION<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_4B_TCXO<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x4b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_4D_PA_DAC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x4d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_5B_FORMER_TEMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x5b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_61_AGC_REF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x61</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_62_AGC_THRESH1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x62</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_63_AGC_THRESH2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x63</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_REG_64_AGC_THRESH3<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_01_OP_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_LONG_RANGE_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_ACCESS_SHARED_REG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODE_SLEEP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODE_STDBY<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODE_FSTX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODE_TX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODE_FSRX<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODE_RXCONTINUOUS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODE_RXSINGLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x06</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODE_CAD<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_09_PA_CONFIG<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x09</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_SELECT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MAX_POWER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x70</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_OUTPUT_POWER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_0A_PA_RAMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_LOW_PN_TX_PLL_OFF<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_3_4MS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_2MS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_1MS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_500US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_250US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_125US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_100US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x06</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_62US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_50US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_40US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x09</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_31US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_25US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_20US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_15US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_12US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0e</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_RAMP_10US<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_0B_OCP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0b</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_OCP_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_OCP_TRIM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_0C_LNA<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x0c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_LNA_GAIN<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xe0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_LNA_BOOST<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_LNA_BOOST_DEFAULT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_LNA_BOOST_150PC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_11_IRQ_FLAGS_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_RX_TIMEOUT_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_RX_DONE_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PAYLOAD_CRC_ERROR_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_VALID_HEADER_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_TX_DONE_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_CAD_DONE_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_FHSS_CHANGE_CHANNEL_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_CAD_DETECTED_MASK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_12_IRQ_FLAGS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_RX_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_RX_DONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PAYLOAD_CRC_ERROR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_VALID_HEADER<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_TX_DONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_CAD_DONE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_FHSS_CHANGE_CHANNEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_CAD_DETECTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_18_MODEM_STAT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_RX_CODING_RATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xe0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODEM_STATUS_CLEAR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODEM_STATUS_HEADER_INFO_VALID<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODEM_STATUS_RX_ONGOING<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODEM_STATUS_SIGNAL_SYNCHRONIZED<sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_MODEM_STATUS_SIGNAL_DETECTED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_1C_HOP_CHANNEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PLL_TIMEOUT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_RX_PAYLOAD_CRC_IS_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_FHSS_PRESENT_CHANNEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x3f</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_1D_MODEM_CONFIG1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_BW<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xc0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_BW_125KHZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_BW_250KHZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x40</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_BW_500KHZ<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_BW_RESERVED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xc0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_CODING_RATE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x38</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_CODING_RATE_4_5<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x00</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_CODING_RATE_4_6<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_CODING_RATE_4_7<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_CODING_RATE_4_8<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_IMPLICIT_HEADER_MODE_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_RX_PAYLOAD_CRC_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x02</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_LOW_DATA_RATE_OPTIMIZE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x01</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_1E_MODEM_CONFIG2<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x1e</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_SPREADING_FACTOR<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xf0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_SPREADING_FACTOR_64CPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_SPREADING_FACTOR_128CPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x70</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_SPREADING_FACTOR_256CPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_SPREADING_FACTOR_512CPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x90</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_SPREADING_FACTOR_1024CPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xa0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_SPREADING_FACTOR_2048CPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xb0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_SPREADING_FACTOR_4096CPS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xc0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_TX_CONTINUOUS_MOE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_AGC_AUTO_ON<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_SYM_TIMEOUT_MSB<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RH_RF95_REG_4D_PA_DAC<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x4d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_DAC_DISABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RH_RF95_PA_DAC_ENABLE<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0x07</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classRH__RF95" kindref="compound">RH_RF95</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classRHSPIDriver" kindref="compound">RHSPIDriver</ref></highlight></codeline>
+<codeline lineno="505"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="515"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/>reg_1d;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/>reg_1e;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/>reg_26;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>ModemConfig;</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="532"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a8b6aeb4bf0acd379adb2cf223110c8f7" kindref="member">Bw125Cr45Sf128</ref><sp/>=<sp/>0,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a83a61975fcfb1f7e6797fbecca5f1125" kindref="member">Bw500Cr45Sf128</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a7ca0f5e5c76cd60072772bcff7fea05f" kindref="member">Bw31_25Cr48Sf512</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3a9ea440d11a8470919209bd78cb7a4515" kindref="member">Bw125Cr48Sf4096</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3" kindref="member">ModemConfigChoice</ref>;</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"></highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a274c170acdb53f55fd45445ab7f51889" kindref="member">RH_RF95</ref>(uint8_t<sp/>slaveSelectPin<sp/>=<sp/><ref refid="LoRaNodeV4_2RadioHead_2RadioHead_8h_1a88f7782e210e61586baf33b93240d905" kindref="member">SS</ref>,<sp/>uint8_t<sp/>interruptPin<sp/>=<sp/>2,<sp/><ref refid="classRHGenericSPI" kindref="compound">RHGenericSPI</ref>&amp;<sp/>spi<sp/>=<sp/><ref refid="LoRaNodeV4_2RadioHead_2RHHardwareSPI_8cpp_1a9d4ea215edc388eaacbc289938bb658c" kindref="member">hardware_spi</ref>);</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1aa7bee6fb7ad0e0d0ae5e04ed27cfd79d" kindref="member">init</ref>();</highlight></codeline>
+<codeline lineno="564"><highlight class="normal"></highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1af82a441a5946b538f60f31e727009750" kindref="member">printRegisters</ref>();</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"></highlight></codeline>
+<codeline lineno="575"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1aa191d9634325354102394b856c47b5ba" kindref="member">setModemRegisters</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ModemConfig*<sp/>config);</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"></highlight></codeline>
+<codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1af6f6131a36c2a0f84a5883a6ec7acfec" kindref="member">setModemConfig</ref>(<ref refid="classRH__RF95_1ab9605810c11c025758ea91b2813666e3" kindref="member">ModemConfigChoice</ref><sp/>index);</highlight></codeline>
+<codeline lineno="582"><highlight class="normal"></highlight></codeline>
+<codeline lineno="589"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a917a6b16ca2be2da530516220560cf43" kindref="member">available</ref>();</highlight></codeline>
+<codeline lineno="590"><highlight class="normal"></highlight></codeline>
+<codeline lineno="600"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a8bca98b1e9abd1c55aaa32d10ea9631b" kindref="member">recv</ref>(uint8_t*<sp/>buf,<sp/>uint8_t*<sp/>len);</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"></highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ae7d3743511fdcc1b41f5f8e6b0964c1f" kindref="member">send</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>data,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"></highlight></codeline>
+<codeline lineno="616"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1af0f16c9b450bdd13a421d282e58a09fb" kindref="member">setPreambleLength</ref>(uint16_t<sp/>bytes);</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"></highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="classRH__RF95_1af910c0670d3f3cc158355f20a2361485" kindref="member">maxMessageLength</ref>();</highlight></codeline>
+<codeline lineno="622"><highlight class="normal"></highlight></codeline>
+<codeline lineno="628"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a854c2eaa2f3cf9583453ff09f15e1099" kindref="member">setFrequency</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>centre);</highlight></codeline>
+<codeline lineno="629"><highlight class="normal"></highlight></codeline>
+<codeline lineno="632"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a44b9fd0c59274f5d0bfcc622757c2eeb" kindref="member">setModeIdle</ref>();</highlight></codeline>
+<codeline lineno="633"><highlight class="normal"></highlight></codeline>
+<codeline lineno="636"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ade668dcd0730fef266c8d94c7e6e7085" kindref="member">setModeRx</ref>();</highlight></codeline>
+<codeline lineno="637"><highlight class="normal"></highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a46330e9d7ec87255b91d0e4297cc8814" kindref="member">setModeTx</ref>();</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ab273e242758e3cc2ed2679ef795a7196" kindref="member">setTxPower</ref>(int8_t<sp/>power,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useRFO<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="662"><highlight class="normal"></highlight></codeline>
+<codeline lineno="668"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1aa9184ab8aec1c3c54a275d08c7e85c66" kindref="member">sleep</ref>();</highlight></codeline>
+<codeline lineno="669"><highlight class="normal"></highlight></codeline>
+<codeline lineno="670"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a18191ee8063c7beec84671abb184aef4" kindref="member">handleInterrupt</ref>();</highlight></codeline>
+<codeline lineno="675"><highlight class="normal"></highlight></codeline>
+<codeline lineno="677"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a09086214734986feeb1e647a7820b615" kindref="member">validateRxBuf</ref>();</highlight></codeline>
+<codeline lineno="678"><highlight class="normal"></highlight></codeline>
+<codeline lineno="680"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95_1a1af385a295c834e88610dfcfb4112fb2" kindref="member">clearRxBuf</ref>();</highlight></codeline>
+<codeline lineno="681"><highlight class="normal"></highlight></codeline>
+<codeline lineno="682"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="684"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a7d1d574c24de1f7d4971fa06cc166c7f" kindref="member">isr0</ref>();</highlight></codeline>
+<codeline lineno="685"><highlight class="normal"></highlight></codeline>
+<codeline lineno="687"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1ae351a13bb0d022a0dbf6d55b9631195e" kindref="member">isr1</ref>();</highlight></codeline>
+<codeline lineno="688"><highlight class="normal"></highlight></codeline>
+<codeline lineno="690"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a2adc0c6029b10de04bda31de199e98ed" kindref="member">isr2</ref>();</highlight></codeline>
+<codeline lineno="691"><highlight class="normal"></highlight></codeline>
+<codeline lineno="693"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classRH__RF95" kindref="compound">RH_RF95</ref>*<sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a7cb62737b3734a113a385574666a07f7" kindref="member">_deviceForInterrupt</ref>[];</highlight></codeline>
+<codeline lineno="694"><highlight class="normal"></highlight></codeline>
+<codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a2ea96ae4f1d6e510f0b527c85fa5b629" kindref="member">_interruptCount</ref>;</highlight></codeline>
+<codeline lineno="697"><highlight class="normal"></highlight></codeline>
+<codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a9f43cda8dd8d5edc5508937393dfce13" kindref="member">_interruptPin</ref>;</highlight></codeline>
+<codeline lineno="700"><highlight class="normal"></highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a358c2394e5b1e52aa15adbff92b3e229" kindref="member">_myInterruptIndex</ref>;</highlight></codeline>
+<codeline lineno="704"><highlight class="normal"></highlight></codeline>
+<codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1aa553f8428e9528dc43a78a983b379110" kindref="member">_bufLen</ref>;</highlight></codeline>
+<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1addc6c7d4b752ee8f35595ed35161908f" kindref="member">_buf</ref>[<ref refid="RadioHead_2RH__RF95_8h_1a4ba450533ca9f5eab89b5dbb6ef11059" kindref="member">RH_RF95_MAX_PAYLOAD_LEN</ref>];</highlight></codeline>
+<codeline lineno="710"><highlight class="normal"></highlight></codeline>
+<codeline lineno="712"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classRH__RF95_1a03d4a80e90eb918841c2e63d79536f5d" kindref="member">_rxBufValid</ref>;</highlight></codeline>
+<codeline lineno="713"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="714"><highlight class="normal"></highlight></codeline>
+<codeline lineno="719"><highlight class="normal"></highlight></codeline>
+<codeline lineno="720"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="721"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/chris/Documents/farm-sensors/RadioHead/RH_RF95.h"/>
+  </compounddef>
+</doxygen>

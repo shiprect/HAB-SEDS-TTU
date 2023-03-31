@@ -1,0 +1,574 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classInGameMenu" kind="class" language="C++" prot="public">
+    <compoundname>InGameMenu</compoundname>
+    <basecompoundref refid="classMenu" prot="public" virt="non-virtual">Menu</basecompoundref>
+    <basecompoundref refid="classMenu" prot="public" virt="non-virtual">Menu</basecompoundref>
+    <includes local="no">InGameMenu.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classInGameMenu_1a02e84b187e7377b0d51183a379fba270" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t InGameMenu::IN_GAME_MENU_TITLE_SPACING</definition>
+        <argsstring></argsstring>
+        <name>IN_GAME_MENU_TITLE_SPACING</name>
+        <qualifiedname>InGameMenu::IN_GAME_MENU_TITLE_SPACING</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="10" column="23" bodyfile="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInGameMenu_1a936ac63d64322d05e0b3984ff6c28171" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t InGameMenu::IN_GAME_MENU_LEFT_EDGE</definition>
+        <argsstring></argsstring>
+        <name>IN_GAME_MENU_LEFT_EDGE</name>
+        <qualifiedname>InGameMenu::IN_GAME_MENU_LEFT_EDGE</qualifiedname>
+        <initializer>= <ref refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" kindref="member">LEFT_PADDING</ref> + <ref refid="classMenu_1a1611ec6c672448c9f86d473a18b8bdb7" kindref="member">PUZZLE_SPACE</ref> + <ref refid="classMenu_1a593f1ec27088578ed2dbdeb7c92d222b" kindref="member">VERTICAL_DIVIDER</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="11" column="23" bodyfile="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInGameMenu_1a6cf40d34d30e80412986547841d075eb" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>uint8_t * InGameMenu::display_matrix</definition>
+        <argsstring>[27]</argsstring>
+        <name>display_matrix</name>
+        <qualifiedname>InGameMenu::display_matrix</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="12" column="17" bodyfile="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInGameMenu_1afc3c110ca204dee6c7959ee70c7836e1" prot="private" static="no" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t InGameMenu::NUM_OPTS</definition>
+        <argsstring></argsstring>
+        <name>NUM_OPTS</name>
+        <qualifiedname>InGameMenu::NUM_OPTS</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="24" column="23" bodyfile="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classInGameMenu_1a0f272ee193572ee12d3ac418adaecacc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool InGameMenu::window_resized</definition>
+        <argsstring></argsstring>
+        <name>window_resized</name>
+        <qualifiedname>InGameMenu::window_resized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="26" column="14" bodyfile="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classInGameMenu_1af78a7555ea064eb8197037e64781b990" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void InGameMenu::display_menu</definition>
+        <argsstring>(const uint8_t, const uint8_t, const options) override</argsstring>
+        <name>display_menu</name>
+        <qualifiedname>InGameMenu::display_menu</qualifiedname>
+        <reimplements refid="classMenu_1af1adbe6ce5816c5b99036e671862aca9">display_menu</reimplements>
+        <param>
+          <type>const uint8_t</type>
+          <defname>Y_EDGE</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>X_EDGE</defname>
+        </param>
+        <param>
+          <type>const</type>
+          <declname>options</declname>
+          <defname>OPT</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="14" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/InGameMenu.cpp" bodystart="16" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a8e904a1e9bd8ec79719608119c18187c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::clear</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>clear</name>
+        <qualifiedname>InGameMenu::clear</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>Y_EDGE</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>X_EDGE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="15" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/InGameMenu.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a5200f4723a180fa3978f1146750a280a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::display_rules</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>display_rules</name>
+        <qualifiedname>InGameMenu::display_rules</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>Y_EDGE</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>X_EDGE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="16" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/InGameMenu.cpp" bodystart="43" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a5c8628563c1226bf9a09a4a7748789b3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::display_manual</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>display_manual</name>
+        <qualifiedname>InGameMenu::display_manual</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>Y_EDGE</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>X_EDGE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="17" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/InGameMenu.cpp" bodystart="65" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a20a72ac9a3b4aab551e00865bfcbff23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::screen_reader</definition>
+        <argsstring>(const uint8_t, const uint8_t, std::string, uint8_t &amp;)</argsstring>
+        <name>screen_reader</name>
+        <qualifiedname>InGameMenu::screen_reader</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+        </param>
+        <param>
+          <type>std::string</type>
+        </param>
+        <param>
+          <type>uint8_t &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="18" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a15de1aedfac9528b5e7a31644cc6f32a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::save_game</definition>
+        <argsstring>(const uint8_t, const uint8_t)</argsstring>
+        <name>save_game</name>
+        <qualifiedname>InGameMenu::save_game</qualifiedname>
+        <param>
+          <type>const uint8_t</type>
+          <defname>Y_EDGE</defname>
+        </param>
+        <param>
+          <type>const uint8_t</type>
+          <defname>X_EDGE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="19" column="14" bodyfile="/home/chris/Documents/sphinx_testing/src/InGameMenu.cpp" bodystart="131" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a9a99650491f516493925c093968fc0d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void InGameMenu::display_menu</definition>
+        <argsstring>(const cell, const options) override</argsstring>
+        <name>display_menu</name>
+        <qualifiedname>InGameMenu::display_menu</qualifiedname>
+        <reimplements refid="classMenu_1abb72073036d52f38a1c43134a71a260c">display_menu</reimplements>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>EDGE</defname>
+        </param>
+        <param>
+          <type>const</type>
+          <declname>options</declname>
+          <defname>OPT</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="28" column="14" bodyfile="/home/chris/Documents/tsudoku/src/InGameMenu.cpp" bodystart="54" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a7f824f1fca81b8b9d43222735e3c7fbc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::clear</definition>
+        <argsstring>(const cell)</argsstring>
+        <name>clear</name>
+        <qualifiedname>InGameMenu::clear</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>EDGE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="29" column="14" bodyfile="/home/chris/Documents/tsudoku/src/InGameMenu.cpp" bodystart="81" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a3fc50e85b4646d69d39a559aabca3bfd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::display_rules</definition>
+        <argsstring>(const cell)</argsstring>
+        <name>display_rules</name>
+        <qualifiedname>InGameMenu::display_rules</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>EDGE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="30" column="14" bodyfile="/home/chris/Documents/tsudoku/src/InGameMenu.cpp" bodystart="95" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a81febef76ded1f92430337020d19e863" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::display_manual</definition>
+        <argsstring>(const cell)</argsstring>
+        <name>display_manual</name>
+        <qualifiedname>InGameMenu::display_manual</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>EDGE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="31" column="14" bodyfile="/home/chris/Documents/tsudoku/src/InGameMenu.cpp" bodystart="125" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a94fc65ebc3fc84a9186800a39bbceafb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::screen_reader</definition>
+        <argsstring>(const cell, std::string, uint8_t &amp;)</argsstring>
+        <name>screen_reader</name>
+        <qualifiedname>InGameMenu::screen_reader</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+        </param>
+        <param>
+          <type>uint8_t &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="32" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a3843b742c36315ca00871ab4a1a5e6dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::save_game</definition>
+        <argsstring>(const cell)</argsstring>
+        <name>save_game</name>
+        <qualifiedname>InGameMenu::save_game</qualifiedname>
+        <param>
+          <type>const</type>
+          <declname>cell</declname>
+          <defname>EDGE</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="33" column="14" bodyfile="/home/chris/Documents/tsudoku/src/InGameMenu.cpp" bodystart="219" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1ac17f03775063a51d64a801e4dccd75af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InGameMenu::set_window_resized</definition>
+        <argsstring>(const bool)</argsstring>
+        <name>set_window_resized</name>
+        <qualifiedname>InGameMenu::set_window_resized</qualifiedname>
+        <param>
+          <type>const bool</type>
+          <defname>WINDOW_RESIZED</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="34" column="14" bodyfile="/home/chris/Documents/tsudoku/src/InGameMenu.cpp" bodystart="308" bodyend="310"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classInGameMenu_1a4232e0b611c806c13260e6fbca3e7e0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InGameMenu::InGameMenu</definition>
+        <argsstring>(uint8_t[27][27])</argsstring>
+        <name>InGameMenu</name>
+        <qualifiedname>InGameMenu::InGameMenu</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <array>[27][27]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="22" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1afe83efb63a3ddd1ab538c66f8bb3ed5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>InGameMenu::~InGameMenu</definition>
+        <argsstring>()</argsstring>
+        <name>~InGameMenu</name>
+        <qualifiedname>InGameMenu::~InGameMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="23" column="9" bodyfile="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a798c63ddd821e2bce03d7fb6d3df4309" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref></type>
+        <definition>options InGameMenu::menu</definition>
+        <argsstring>() override</argsstring>
+        <name>menu</name>
+        <qualifiedname>InGameMenu::menu</qualifiedname>
+        <reimplements refid="classMenu_1a19172889100b7d04a06e7e172a8db428">menu</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="24" column="17" bodyfile="/home/chris/Documents/sphinx_testing/src/InGameMenu.cpp" bodystart="176" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a6328bc35927467e24e86b66c5101ee19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>InGameMenu::InGameMenu</definition>
+        <argsstring>(uint8_t[DISPLAY_MATRIX_ROWS][DISPLAY_MATRIX_COLUMNS])</argsstring>
+        <name>InGameMenu</name>
+        <qualifiedname>InGameMenu::InGameMenu</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <defname>display_matrix</defname>
+          <array>[DISPLAY_MATRIX_ROWS][DISPLAY_MATRIX_COLUMNS]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="37" column="9" bodyfile="/home/chris/Documents/tsudoku/src/InGameMenu.cpp" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1afe83efb63a3ddd1ab538c66f8bb3ed5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>InGameMenu::~InGameMenu</definition>
+        <argsstring>()</argsstring>
+        <name>~InGameMenu</name>
+        <qualifiedname>InGameMenu::~InGameMenu</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="38" column="9" bodyfile="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a798c63ddd821e2bce03d7fb6d3df4309" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="sphinx__testing_2include_2Menu_8hpp_1a02eacfd40be9042ceb0f07547365203d" kindref="member">options</ref></type>
+        <definition>options InGameMenu::menu</definition>
+        <argsstring>() override</argsstring>
+        <name>menu</name>
+        <qualifiedname>InGameMenu::menu</qualifiedname>
+        <reimplements refid="classMenu_1a19172889100b7d04a06e7e172a8db428">menu</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="39" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classInGameMenu_1a527b5f83d496aa103cbf0a3eb53c49e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool InGameMenu::get_window_resized</definition>
+        <argsstring>() const</argsstring>
+        <name>get_window_resized</name>
+        <qualifiedname>InGameMenu::get_window_resized</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="41" column="14" bodyfile="/home/chris/Documents/tsudoku/src/InGameMenu.cpp" bodystart="379" bodyend="381"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classInGameMenu_1ae7d6cbbd0a01048c7dd14948fa7ee022" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>string InGameMenu::save_game</definition>
+        <argsstring>(uint8_t *[DISPLAY_MATRIX_COLUMNS])</argsstring>
+        <name>save_game</name>
+        <qualifiedname>InGameMenu::save_game</qualifiedname>
+        <param>
+          <type>uint8_t *</type>
+          <defname>display_matrix</defname>
+          <array>[DISPLAY_MATRIX_COLUMNS]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/tsudoku/include/InGameMenu.hpp" line="40" column="28" bodyfile="/home/chris/Documents/tsudoku/src/InGameMenu.cpp" bodystart="247" bodyend="298"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>InGameMenu</label>
+        <link refid="classInGameMenu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="classMenu"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>InGameMenu</label>
+        <link refid="classInGameMenu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Menu</label>
+        <link refid="classMenu"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" line="8" column="1" bodyfile="/home/chris/Documents/sphinx_testing/include/InGameMenu.hpp" bodystart="8" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classInGameMenu_1a8e904a1e9bd8ec79719608119c18187c" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>clear</name></member>
+      <member refid="classInGameMenu_1a7f824f1fca81b8b9d43222735e3c7fbc" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>clear</name></member>
+      <member refid="classInGameMenu_1a5c8628563c1226bf9a09a4a7748789b3" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>display_manual</name></member>
+      <member refid="classInGameMenu_1a81febef76ded1f92430337020d19e863" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>display_manual</name></member>
+      <member refid="classInGameMenu_1a6cf40d34d30e80412986547841d075eb" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>display_matrix</name></member>
+      <member refid="classInGameMenu_1af78a7555ea064eb8197037e64781b990" prot="private" virt="virtual"><scope>InGameMenu</scope><name>display_menu</name></member>
+      <member refid="classInGameMenu_1a9a99650491f516493925c093968fc0d2" prot="private" virt="virtual"><scope>InGameMenu</scope><name>display_menu</name></member>
+      <member refid="classInGameMenu_1a5200f4723a180fa3978f1146750a280a" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>display_rules</name></member>
+      <member refid="classInGameMenu_1a3fc50e85b4646d69d39a559aabca3bfd" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>display_rules</name></member>
+      <member refid="classInGameMenu_1a527b5f83d496aa103cbf0a3eb53c49e5" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>get_window_resized</name></member>
+      <member refid="classMenu_1a26719c17d8801e207892e6ad4b8dcfa2" prot="protected" virt="non-virtual"><scope>InGameMenu</scope><name>IN_GAME_MENU_DISPLAY_SPACING</name></member>
+      <member refid="classInGameMenu_1a936ac63d64322d05e0b3984ff6c28171" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>IN_GAME_MENU_LEFT_EDGE</name></member>
+      <member refid="classInGameMenu_1a02e84b187e7377b0d51183a379fba270" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>IN_GAME_MENU_TITLE_SPACING</name></member>
+      <member refid="classInGameMenu_1a4232e0b611c806c13260e6fbca3e7e0a" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>InGameMenu</name></member>
+      <member refid="classInGameMenu_1a6328bc35927467e24e86b66c5101ee19" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>InGameMenu</name></member>
+      <member refid="classMenu_1a915a04c1c6155d443de649d71b02f17a" prot="protected" virt="non-virtual"><scope>InGameMenu</scope><name>LEFT_PADDING</name></member>
+      <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>Menu</name></member>
+      <member refid="classMenu_1ad466dd83355124a6ed958430450bfe94" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>Menu</name></member>
+      <member refid="classInGameMenu_1a798c63ddd821e2bce03d7fb6d3df4309" prot="public" virt="virtual"><scope>InGameMenu</scope><name>menu</name></member>
+      <member refid="classInGameMenu_1a798c63ddd821e2bce03d7fb6d3df4309" prot="public" virt="virtual"><scope>InGameMenu</scope><name>menu</name></member>
+      <member refid="classInGameMenu_1afc3c110ca204dee6c7959ee70c7836e1" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>NUM_OPTS</name></member>
+      <member refid="classMenu_1a1611ec6c672448c9f86d473a18b8bdb7" prot="protected" virt="non-virtual"><scope>InGameMenu</scope><name>PUZZLE_SPACE</name></member>
+      <member refid="classInGameMenu_1a15de1aedfac9528b5e7a31644cc6f32a" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>save_game</name></member>
+      <member refid="classInGameMenu_1a3843b742c36315ca00871ab4a1a5e6dc" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>save_game</name></member>
+      <member refid="classInGameMenu_1ae7d6cbbd0a01048c7dd14948fa7ee022" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>save_game</name></member>
+      <member refid="classInGameMenu_1a20a72ac9a3b4aab551e00865bfcbff23" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>screen_reader</name></member>
+      <member refid="classInGameMenu_1a94fc65ebc3fc84a9186800a39bbceafb" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>screen_reader</name></member>
+      <member refid="classInGameMenu_1ac17f03775063a51d64a801e4dccd75af" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>set_window_resized</name></member>
+      <member refid="classMenu_1a5a6fec931e1e71721d454da21cd6f9dc" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>SIGINT_handler</name></member>
+      <member refid="classMenu_1a99e559b50fcd2a307bbce97e27b842d8" prot="protected" virt="non-virtual"><scope>InGameMenu</scope><name>TOP_PADDING</name></member>
+      <member refid="classMenu_1a593f1ec27088578ed2dbdeb7c92d222b" prot="protected" virt="non-virtual"><scope>InGameMenu</scope><name>VERTICAL_DIVIDER</name></member>
+      <member refid="classInGameMenu_1a0f272ee193572ee12d3ac418adaecacc" prot="private" virt="non-virtual"><scope>InGameMenu</scope><name>window_resized</name></member>
+      <member refid="classInGameMenu_1afe83efb63a3ddd1ab538c66f8bb3ed5a" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>~InGameMenu</name></member>
+      <member refid="classInGameMenu_1afe83efb63a3ddd1ab538c66f8bb3ed5a" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>~InGameMenu</name></member>
+      <member refid="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>~Menu</name></member>
+      <member refid="classMenu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>InGameMenu</scope><name>~Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

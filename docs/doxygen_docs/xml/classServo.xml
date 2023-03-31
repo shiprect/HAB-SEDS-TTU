@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classServo" kind="class" language="C++" prot="public">
+    <compoundname>Servo</compoundname>
+    <includes local="no">Servo.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classServo_1a341d171f1406c9b9d2f4e7605dd8a03a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Servo::ServoStatus</definition>
+        <argsstring></argsstring>
+        <name>ServoStatus</name>
+        <qualifiedname>Servo::ServoStatus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="29" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classServo_1a5cf38360cbb219e754afe442ab43d2f4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Servo::CurrPosition</definition>
+        <argsstring></argsstring>
+        <name>CurrPosition</name>
+        <qualifiedname>Servo::CurrPosition</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="30" column="5" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classServo_1a70b2b17657cf258cdcb57503bcf62cd2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Servo::Servo</definition>
+        <argsstring>()</argsstring>
+        <name>Servo</name>
+        <qualifiedname>Servo::Servo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="39" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classServo_1acb51bf4d970b071741ba76349a431fb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Servo::~Servo</definition>
+        <argsstring>()</argsstring>
+        <name>~Servo</name>
+        <qualifiedname>Servo::~Servo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="40" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classServo_1ad271c3a14f793213d74d47be31a04fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Servo::Servo_Setup</definition>
+        <argsstring>()</argsstring>
+        <name>Servo_Setup</name>
+        <qualifiedname>Servo::Servo_Setup</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="42" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp" bodystart="4" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classServo_1a49ac4edc49bfd90f2522e6ff4b08a7b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Servo::Servo_Status</definition>
+        <argsstring>(bool Status)</argsstring>
+        <name>Servo_Status</name>
+        <qualifiedname>Servo::Servo_Status</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>Status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="44" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classServo_1ac3985ecf37998a3da508d46bf74b0a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Servo::Servo_Move</definition>
+        <argsstring>(uint8_t Position)</argsstring>
+        <name>Servo_Move</name>
+        <qualifiedname>Servo::Servo_Move</qualifiedname>
+        <param>
+          <type>uint8_t</type>
+          <declname>Position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="45" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classServo_1ad9b5f20cad519f2e8b8f6e4f7c19ad80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Servo::Servo_Update</definition>
+        <argsstring>()</argsstring>
+        <name>Servo_Update</name>
+        <qualifiedname>Servo::Servo_Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="47" column="6" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.cpp" bodystart="19" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" line="25" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/SERVO/Servo.hpp" bodystart="26" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classServo_1a5cf38360cbb219e754afe442ab43d2f4" prot="private" virt="non-virtual"><scope>Servo</scope><name>CurrPosition</name></member>
+      <member refid="classServo_1a70b2b17657cf258cdcb57503bcf62cd2" prot="public" virt="non-virtual"><scope>Servo</scope><name>Servo</name></member>
+      <member refid="classServo_1ac3985ecf37998a3da508d46bf74b0a36" prot="public" virt="non-virtual"><scope>Servo</scope><name>Servo_Move</name></member>
+      <member refid="classServo_1ad271c3a14f793213d74d47be31a04fe8" prot="public" virt="non-virtual"><scope>Servo</scope><name>Servo_Setup</name></member>
+      <member refid="classServo_1a49ac4edc49bfd90f2522e6ff4b08a7b8" prot="public" virt="non-virtual"><scope>Servo</scope><name>Servo_Status</name></member>
+      <member refid="classServo_1ad9b5f20cad519f2e8b8f6e4f7c19ad80" prot="public" virt="non-virtual"><scope>Servo</scope><name>Servo_Update</name></member>
+      <member refid="classServo_1a341d171f1406c9b9d2f4e7605dd8a03a" prot="private" virt="non-virtual"><scope>Servo</scope><name>ServoStatus</name></member>
+      <member refid="classServo_1acb51bf4d970b071741ba76349a431fb0" prot="public" virt="non-virtual"><scope>Servo</scope><name>~Servo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

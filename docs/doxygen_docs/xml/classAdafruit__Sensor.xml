@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classAdafruit__Sensor" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Adafruit_Sensor</compoundname>
+    <derivedcompoundref refid="classAdafruit__BMP085__Unified" prot="public" virt="non-virtual">Adafruit_BMP085_Unified</derivedcompoundref>
+    <includes local="no">Adafruit_Sensor.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classAdafruit__Sensor_1a79419e4b6898903c0de4aa80133f01ae" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Adafruit_Sensor::_autoRange</definition>
+        <argsstring></argsstring>
+        <name>_autoRange</name>
+        <qualifiedname>Adafruit_Sensor::_autoRange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" line="153" column="14" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classAdafruit__Sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Adafruit_Sensor::Adafruit_Sensor</definition>
+        <argsstring>()</argsstring>
+        <name>Adafruit_Sensor</name>
+        <qualifiedname>Adafruit_Sensor::Adafruit_Sensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" line="144" column="9" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__Sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Adafruit_Sensor::~Adafruit_Sensor</definition>
+        <argsstring>()</argsstring>
+        <name>~Adafruit_Sensor</name>
+        <qualifiedname>Adafruit_Sensor::~Adafruit_Sensor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" line="145" column="17" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__Sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Adafruit_Sensor::enableAutoRange</definition>
+        <argsstring>(bool enabled)</argsstring>
+        <name>enableAutoRange</name>
+        <qualifiedname>Adafruit_Sensor::enableAutoRange</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" line="148" column="22" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__Sensor_1a0636562b9bc853b796ecc87b5d4b1bec" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Adafruit_Sensor::getEvent</definition>
+        <argsstring>(sensors_event_t *)=0</argsstring>
+        <name>getEvent</name>
+        <qualifiedname>Adafruit_Sensor::getEvent</qualifiedname>
+        <reimplementedby refid="classAdafruit__BMP085__Unified_1a75df7711caf4c3a80831cb9c9327aeff">getEvent</reimplementedby>
+        <param>
+          <type><ref refid="structsensors__event__t" kindref="compound">sensors_event_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" line="149" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classAdafruit__Sensor_1a19e844c1eb2dc37cb72705d5572c4676" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Adafruit_Sensor::getSensor</definition>
+        <argsstring>(sensor_t *)=0</argsstring>
+        <name>getSensor</name>
+        <qualifiedname>Adafruit_Sensor::getSensor</qualifiedname>
+        <reimplementedby refid="classAdafruit__BMP085__Unified_1acb3b37e177179ebd4fc0680c188c5280">getSensor</reimplementedby>
+        <param>
+          <type><ref refid="structsensor__t" kindref="compound">sensor_t</ref> *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" line="150" column="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Adafruit_BMP085_Unified</label>
+        <link refid="classAdafruit__BMP085__Unified"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Adafruit_Sensor</label>
+        <link refid="classAdafruit__Sensor"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" line="141" column="1" bodyfile="/home/chris/Documents/HAB-SEDS-TTU/src/Drivers/BMP/Adafruit_Sensor.h" bodystart="141" bodyend="154"/>
+    <listofallmembers>
+      <member refid="classAdafruit__Sensor_1a79419e4b6898903c0de4aa80133f01ae" prot="private" virt="non-virtual"><scope>Adafruit_Sensor</scope><name>_autoRange</name></member>
+      <member refid="classAdafruit__Sensor_1a1d06c6f2b9d014894f47102fc1effddf" prot="public" virt="non-virtual"><scope>Adafruit_Sensor</scope><name>Adafruit_Sensor</name></member>
+      <member refid="classAdafruit__Sensor_1ace6c1f26eeb956f95801b9fc1841f3a0" prot="public" virt="virtual"><scope>Adafruit_Sensor</scope><name>enableAutoRange</name></member>
+      <member refid="classAdafruit__Sensor_1a0636562b9bc853b796ecc87b5d4b1bec" prot="public" virt="pure-virtual"><scope>Adafruit_Sensor</scope><name>getEvent</name></member>
+      <member refid="classAdafruit__Sensor_1a19e844c1eb2dc37cb72705d5572c4676" prot="public" virt="pure-virtual"><scope>Adafruit_Sensor</scope><name>getSensor</name></member>
+      <member refid="classAdafruit__Sensor_1ac98df73e0cd9367a226b96668417e2e6" prot="public" virt="virtual"><scope>Adafruit_Sensor</scope><name>~Adafruit_Sensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
