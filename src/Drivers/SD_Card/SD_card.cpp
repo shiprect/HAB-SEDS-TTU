@@ -48,7 +48,7 @@ void SD_card::SD_Record() {
 	if (( int32_t )( millis() - sd_timer ) >= 0 ) {
 		sd_timer += 1000;
 
-		dataFile = SD.open( "data.csv", FILE_WRITE ); //opens file to write too
+		dataFile = SD.open( "data.csv", FILE_WRITE ); //opens file to write to
 		if ( dataFile ) {
 			dataFile.println( F( "" ));
 
@@ -117,9 +117,9 @@ void SD_card::SD_Record() {
             //Print #20
             dataFile.print(gps.GetHour());
             dataFile.print(",");
-			dataFile.print(gps.GetMinute());
+	    dataFile.print(gps.GetMinute());
             dataFile.print(",");
-			dataFile.print(gps.GetSecond());
+	    dataFile.print(gps.GetSecond());
             dataFile.print(",");
 
 
